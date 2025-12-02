@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokumenter - Hovfaret 13</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-hover: #f1f5f9;
+      --bg-selected: #eff6ff;
+      --bg-accent: #dbeafe;
+
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --text-accent: #2563eb;
+
+      --border-light: #e2e8f0;
+      --border-medium: #cbd5e1;
+
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+
+      --radius-sm: 6px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.5;
+      font-size: 14px;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Header */
+    .app-header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-light);
+      padding: var(--space-4) var(--space-6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-sm);
+      transition: all 0.15s;
+    }
+
+    .back-link:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .header-stats {
+      display: flex;
+      gap: var(--space-6);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-accent);
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Main Content */
+    .main-content {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* Left Panel */
+    .list-panel {
+      width: 420px;
+      min-width: 420px;
+      background: var(--bg-card);
+      border-right: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .list-controls {
+      padding: var(--space-4);
+      border-bottom: 1px solid var(--border-light);
+      background: var(--bg-card);
+    }
+
+    .search-container {
+      position: relative;
+      margin-bottom: var(--space-3);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: var(--space-3);
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: var(--space-3) var(--space-3) var(--space-3) 2.5rem;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      transition: all 0.15s;
+      background: var(--bg-main);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--text-accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      background: var(--bg-card);
+    }
+
+    .filter-row {
+      display: flex;
+      gap: var(--space-2);
+    }
+
+    .filter-select {
+      flex: 1;
+      padding: var(--space-2) var(--space-3);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+      cursor: pointer;
+    }
+
+    .filter-select:focus {
+      outline: none;
+      border-color: var(--text-accent);
+    }
+
+    .results-info {
+      padding: var(--space-2) var(--space-4);
+      background: var(--bg-main);
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Document List */
+    .document-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: var(--space-2);
+    }
+
+    .category-group {
+      margin-bottom: var(--space-4);
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: sticky;
+      top: 0;
+      background: var(--bg-main);
+      z-index: 10;
+    }
+
+    .category-count {
+      background: var(--border-light);
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    .document-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3);
+      margin: var(--space-1) 0;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.15s;
+      border: 1px solid transparent;
+    }
+
+    .document-item:hover {
+      background: var(--bg-hover);
+    }
+
+    .document-item.selected {
+      background: var(--bg-selected);
+      border-color: var(--text-accent);
+    }
+
+    .document-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .document-icon.pdf { background: #fef2f2; }
+    .document-icon.doc { background: #eff6ff; }
+    .document-icon.xls { background: #f0fdf4; }
+    .document-icon.img { background: #fefce8; }
+    .document-icon.other { background: var(--bg-main); }
+
+    .document-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .document-name {
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: 0.875rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .document-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Right Panel */
+    .detail-panel {
+      flex: 1;
+      overflow-y: auto;
+      background: var(--bg-main);
+    }
+
+    .detail-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: var(--text-muted);
+      text-align: center;
+      padding: var(--space-8);
+    }
+
+    .detail-empty-icon {
+      font-size: 4rem;
+      margin-bottom: var(--space-4);
+      opacity: 0.3;
+    }
+
+    .detail-empty h3 {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-2);
+    }
+
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--space-6);
+    }
+
+    .detail-header {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin-bottom: var(--space-4);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-icon {
+      font-size: 3rem;
+      margin-bottom: var(--space-4);
+    }
+
+    .detail-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--space-3);
+      word-break: break-word;
+    }
+
+    .detail-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .meta-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-value {
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .category-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: var(--bg-accent);
+      color: var(--text-accent);
+    }
+
+    /* Detail Section */
+    .detail-section {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-4);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4) var(--space-5);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .section-header:hover {
+      background: var(--bg-hover);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .section-title svg {
+      color: var(--text-accent);
+    }
+
+    .section-toggle {
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+
+    .detail-section.expanded .section-toggle {
+      transform: rotate(180deg);
+    }
+
+    .section-content {
+      display: none;
+      padding: var(--space-5);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .detail-section.expanded .section-content {
+      display: block;
+    }
+
+    .source-path {
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      background: var(--bg-main);
+      padding: var(--space-3);
+      border-radius: var(--radius-sm);
+      word-break: break-all;
+    }
+
+    /* Loading */
+    .loading-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-8);
+      color: var(--text-muted);
+    }
+
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid var(--border-light);
+      border-top-color: var(--text-accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: var(--space-4);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-medium);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--text-muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .list-panel {
+        width: 360px;
+        min-width: 360px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .list-panel {
+        width: 100%;
+        min-width: 100%;
+        max-height: 50vh;
+      }
+
+      .header-stats {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <a href="index.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Dashboard
+        </a>
+        <h1 class="page-title">Dokumenter</h1>
+      </div>
+      <div class="header-stats">
+        <div class="stat">
+          <div class="stat-value" id="stat-total">-</div>
+          <div class="stat-label">Totalt</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="stat-categories">-</div>
+          <div class="stat-label">Kategorier</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Left Panel -->
+      <aside class="list-panel">
+        <div class="list-controls">
+          <div class="search-container">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="text" class="search-input" id="search-input" placeholder="Søk i dokumenter...">
+          </div>
+          <div class="filter-row">
+            <select class="filter-select" id="filter-category">
+              <option value="all">Alle kategorier</option>
+            </select>
+            <select class="filter-select" id="filter-type">
+              <option value="all">Alle typer</option>
+            </select>
+          </div>
+        </div>
+        <div class="results-info" id="results-info">Laster dokumenter...</div>
+        <div class="document-list" id="document-list">
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <span>Laster dokumenter...</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Panel -->
+      <section class="detail-panel" id="detail-panel">
+        <div class="detail-empty">
+          <div class="detail-empty-icon">📄</div>
+          <h3>Velg et dokument</h3>
+          <p>Velg et dokument fra listen for å se detaljer</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="lib/data-loader.js"></script>
+  <script>
+    // ===== STATE =====
+    let allDocuments = [];
+    let filteredDocuments = [];
+    let selectedDocId = null;
+    let searchQuery = '';
+    let categoryFilter = 'all';
+    let typeFilter = 'all';
+
+    // ===== HELPERS =====
+    function getFileExtension(filename) {
+      if (!filename) return '';
+      const parts = filename.split('.');
+      return parts.length > 1 ? parts.pop().toLowerCase() : '';
+    }
+
+    function getFileIcon(filename) {
+      const ext = getFileExtension(filename);
+      const icons = {
+        'pdf': '📕',
+        'doc': '📘', 'docx': '📘',
+        'xls': '📗', 'xlsx': '📗',
+        'ppt': '📙', 'pptx': '📙',
+        'jpg': '🖼️', 'jpeg': '🖼️', 'png': '🖼️', 'gif': '🖼️',
+        'zip': '📦', 'rar': '📦',
+        'txt': '📝',
+        'default': '📄'
+      };
+      return icons[ext] || icons['default'];
+    }
+
+    function getFileTypeClass(filename) {
+      const ext = getFileExtension(filename);
+      if (['pdf'].includes(ext)) return 'pdf';
+      if (['doc', 'docx'].includes(ext)) return 'doc';
+      if (['xls', 'xlsx'].includes(ext)) return 'xls';
+      if (['jpg', 'jpeg', 'png', 'gif'].includes(ext)) return 'img';
+      return 'other';
+    }
+
+    function getCategoryMeta(category) {
+      const meta = {
+        'correspondence': { label: 'Korrespondanse', emoji: '📧' },
+        'technical': { label: 'Teknisk', emoji: '🔧' },
+        'meeting': { label: 'Møte', emoji: '📋' },
+        'report': { label: 'Rapport', emoji: '📊' },
+        'image': { label: 'Bilde', emoji: '🖼️' },
+        'contract': { label: 'Kontrakt', emoji: '📝' },
+        'financial': { label: 'Økonomi', emoji: '💰' },
+        'legal': { label: 'Juridisk', emoji: '⚖️' },
+        'default': { label: category || 'Ukategorisert', emoji: '📄' }
+      };
+      return meta[category] || meta['default'];
+    }
+
+    function sanitize(str) {
+      if (!str) return '';
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function truncate(str, maxLength) {
+      if (!str || str.length <= maxLength) return str;
+      return str.substring(0, maxLength) + '...';
+    }
+
+    // ===== FILTERING =====
+    function applyFilters() {
+      let docs = [...allDocuments];
+
+      // Search
+      if (searchQuery) {
+        const query = searchQuery.toLowerCase();
+        docs = docs.filter(d =>
+          (d.filename || '').toLowerCase().includes(query) ||
+          (d.category || '').toLowerCase().includes(query) ||
+          (d.source_folder || '').toLowerCase().includes(query)
+        );
+      }
+
+      // Category filter
+      if (categoryFilter !== 'all') {
+        docs = docs.filter(d => d.category === categoryFilter);
+      }
+
+      // Type filter
+      if (typeFilter !== 'all') {
+        docs = docs.filter(d => getFileExtension(d.filename) === typeFilter);
+      }
+
+      // Sort by date (newest first)
+      docs.sort((a, b) => {
+        const dateA = a.date_modified || a.date_created || '';
+        const dateB = b.date_modified || b.date_created || '';
+        return dateB.localeCompare(dateA);
+      });
+
+      filteredDocuments = docs;
+      renderDocumentList();
+    }
+
+    // ===== RENDERING =====
+    function renderDocumentList() {
+      const container = document.getElementById('document-list');
+      const resultsInfo = document.getElementById('results-info');
+
+      resultsInfo.textContent = `Viser ${filteredDocuments.length} av ${allDocuments.length} dokumenter`;
+
+      if (filteredDocuments.length === 0) {
+        container.innerHTML = '<div class="loading-state"><span>Ingen dokumenter funnet</span></div>';
+        return;
+      }
+
+      // Group by category
+      const groups = {};
+      filteredDocuments.forEach(doc => {
+        const cat = doc.category || 'uncategorized';
+        if (!groups[cat]) {
+          groups[cat] = [];
+        }
+        groups[cat].push(doc);
+      });
+
+      // Sort categories by count
+      const sortedCategories = Object.keys(groups).sort((a, b) => groups[b].length - groups[a].length);
+
+      let html = '';
+      sortedCategories.forEach(category => {
+        const meta = getCategoryMeta(category);
+        html += `
+          <div class="category-group">
+            <div class="category-header">
+              <span>${meta.emoji} ${meta.label}</span>
+              <span class="category-count">${groups[category].length}</span>
+            </div>
+            ${groups[category].slice(0, 50).map(doc => renderDocumentItem(doc)).join('')}
+            ${groups[category].length > 50 ? `<div style="padding: 0.5rem 1rem; color: var(--text-muted); font-size: 0.75rem;">+ ${groups[category].length - 50} flere...</div>` : ''}
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+
+      // Add click handlers
+      container.querySelectorAll('.document-item').forEach(item => {
+        item.addEventListener('click', () => {
+          selectDocument(item.dataset.id);
+        });
+      });
+
+      // Re-select if needed
+      if (selectedDocId) {
+        const selectedItem = container.querySelector(`[data-id="${selectedDocId}"]`);
+        if (selectedItem) {
+          selectedItem.classList.add('selected');
+        }
+      }
+    }
+
+    function renderDocumentItem(doc) {
+      const isSelected = doc.id === selectedDocId;
+      const icon = getFileIcon(doc.filename);
+      const typeClass = getFileTypeClass(doc.filename);
+      const ext = getFileExtension(doc.filename);
+
+      return `
+        <div class="document-item ${isSelected ? 'selected' : ''}" data-id="${doc.id}">
+          <div class="document-icon ${typeClass}">${icon}</div>
+          <div class="document-content">
+            <div class="document-name">${sanitize(doc.filename)}</div>
+            <div class="document-meta">${ext.toUpperCase()} ${doc.date_modified ? '• ' + doc.date_modified : ''}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function selectDocument(docId) {
+      selectedDocId = docId;
+
+      // Update list selection
+      document.querySelectorAll('.document-item').forEach(item => {
+        item.classList.toggle('selected', item.dataset.id === docId);
+      });
+
+      // Render detail
+      const doc = allDocuments.find(d => d.id === docId);
+      if (doc) {
+        renderDocumentDetail(doc);
+      }
+    }
+
+    function renderDocumentDetail(doc) {
+      const panel = document.getElementById('detail-panel');
+      const icon = getFileIcon(doc.filename);
+      const catMeta = getCategoryMeta(doc.category);
+      const ext = getFileExtension(doc.filename);
+
+      let html = `
+        <div class="detail-content">
+          <div class="detail-header">
+            <div class="detail-icon">${icon}</div>
+            <h2 class="detail-title">${sanitize(doc.filename)}</h2>
+
+            <div class="detail-meta-grid">
+              <div class="meta-item">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">${ext.toUpperCase() || 'Ukjent'}</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Kategori</span>
+                <span class="category-badge">${catMeta.emoji} ${catMeta.label}</span>
+              </div>
+              ${doc.date_modified ? `
+                <div class="meta-item">
+                  <span class="meta-label">Sist endret</span>
+                  <span class="meta-value">${doc.date_modified}</span>
+                </div>
+              ` : ''}
+              ${doc.date_created ? `
+                <div class="meta-item">
+                  <span class="meta-label">Opprettet</span>
+                  <span class="meta-value">${doc.date_created}</span>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+
+          ${doc.source_folder ? `
+            <div class="detail-section expanded">
+              <div class="section-header" onclick="toggleSection(this)">
+                <span class="section-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                  </svg>
+                  Kildemappe
+                </span>
+                <svg class="section-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+              <div class="section-content">
+                <div class="source-path">${sanitize(doc.source_folder)}</div>
+              </div>
+            </div>
+          ` : ''}
+
+          ${doc.description ? `
+            <div class="detail-section">
+              <div class="section-header" onclick="toggleSection(this)">
+                <span class="section-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="16" x2="12" y2="12"/>
+                    <line x1="12" y1="8" x2="12.01" y2="8"/>
+                  </svg>
+                  Beskrivelse
+                </span>
+                <svg class="section-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+              <div class="section-content">
+                <p style="color: var(--text-secondary); line-height: 1.6;">${sanitize(doc.description)}</p>
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      `;
+
+      panel.innerHTML = html;
+    }
+
+    function toggleSection(header) {
+      const section = header.parentElement;
+      section.classList.toggle('expanded');
+    }
+
+    // ===== INITIALIZATION =====
+    async function init() {
+      try {
+        const data = await DataLoader.loadAllData();
+        allDocuments = data.documents || [];
+
+        // Update stats
+        document.getElementById('stat-total').textContent = allDocuments.length;
+        const categories = new Set(allDocuments.map(d => d.category).filter(Boolean));
+        document.getElementById('stat-categories').textContent = categories.size;
+
+        // Populate filters
+        populateFilters();
+
+        // Apply initial filters
+        applyFilters();
+
+        // Setup event listeners
+        setupEventListeners();
+
+        // Auto-select first document
+        if (filteredDocuments.length > 0) {
+          selectDocument(filteredDocuments[0].id);
+        }
+
+      } catch (error) {
+        console.error('Error loading data:', error);
+        document.getElementById('document-list').innerHTML =
+          '<div class="loading-state"><span>Feil ved lasting av dokumenter</span></div>';
+      }
+    }
+
+    function populateFilters() {
+      // Categories
+      const categories = [...new Set(allDocuments.map(d => d.category).filter(Boolean))].sort();
+      const categorySelect = document.getElementById('filter-category');
+      categories.forEach(cat => {
+        const meta = getCategoryMeta(cat);
+        const option = document.createElement('option');
+        option.value = cat;
+        option.textContent = meta.label;
+        categorySelect.appendChild(option);
+      });
+
+      // File types
+      const types = [...new Set(allDocuments.map(d => getFileExtension(d.filename)).filter(Boolean))].sort();
+      const typeSelect = document.getElementById('filter-type');
+      types.forEach(type => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type.toUpperCase();
+        typeSelect.appendChild(option);
+      });
+    }
+
+    function setupEventListeners() {
+      // Search
+      let searchTimeout;
+      document.getElementById('search-input').addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          searchQuery = e.target.value;
+          applyFilters();
+        }, 200);
+      });
+
+      // Category filter
+      document.getElementById('filter-category').addEventListener('change', (e) => {
+        categoryFilter = e.target.value;
+        applyFilters();
+      });
+
+      // Type filter
+      document.getElementById('filter-type').addEventListener('change', (e) => {
+        typeFilter = e.target.value;
+        applyFilters();
+      });
+    }
+
+    // Start
+    init();
+  </script>
+</body>
+</html>

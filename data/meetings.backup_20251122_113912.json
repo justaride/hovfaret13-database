@@ -1,0 +1,1458 @@
+{
+  "metadata": {
+    "version": "2.1",
+    "created": "2025-11-21",
+    "last_updated": "2025-11-22",
+    "description": "Meetings log for Hovfaret 13 project",
+    "total_meetings": 45,
+    "quality_review": {
+      "status": "reviewed",
+      "date": "2025-11-21",
+      "fixes_applied": 5,
+      "notes": "Fixed 5 meetings with corrupted participant data from original extraction"
+    },
+    "last_enrichment": {
+      "date": "2025-11-22T10:28:28.253641",
+      "meetings_enriched": 16,
+      "new_meetings_created": 8,
+      "high_confidence_matches": 9,
+      "script": "apply-note-matches.py"
+    },
+    "polished_notes_linked": 23
+  },
+  "meetings": [
+    {
+      "id": "m_2024-03-11_urbania_hovfaret_13_konseptskisse_1_0",
+      "date": "2024-03-11",
+      "title": "Urbania Hovfaret 13 - Konseptskisse 1.0",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ],
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2024-03-11_m_2024-03-11__11_mars_2024_POLISHED.md",
+      "report_metadata": {
+        "word_count": 356,
+        "people_mentioned": [
+          "Urbania Eiendom",
+          "Natural State"
+        ],
+        "organizations_mentioned": [
+          "Urbania Eiendom",
+          "R21",
+          "Natural State",
+          "Urbania"
+        ],
+        "extraction_date": "2025-11-20T16:03:21.786124",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE  11 MARS 2024.md"
+    },
+    {
+      "id": "m_2024-03-11__11_mars_2024",
+      "date": "2024-03-11",
+      "title": "MØTE  11 MARS 2024",
+      "organizer": null,
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ],
+      "data_quality_note": "Participants reconstructed from duplicate meeting entry",
+      "action_items": [],
+      "topics_discussed": [
+        "1\\. Demonstrere prosjektets verdi:",
+        "2\\. Regulatoriske utfordringer og godkjenninger:",
+        "3\\. Interessentengasjement og kommunikasjon:",
+        "4\\. Tekniske og designmessige hensyn:",
+        "5\\. Neste steg og tidslinje:"
+      ],
+      "decisions": [],
+      "report_link": "data/polished_notes/2024-03-11_m_2024-03-11__11_mars_2024_POLISHED.md",
+      "report_metadata": {
+        "word_count": 356,
+        "matched_from_note": "MØTE  11 MARS   2024.md",
+        "match_date": "2025-11-22T10:28:28.248150",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2024-03-11_MØTE  11 MARS   2024.md"
+    },
+    {
+      "id": "m_2024-04-03_urbania_leveransem_te_konsepskisse_og_st",
+      "date": "2024-04-03",
+      "title": "Urbania - Leveransemøte Konsepskisse og Strategi Hovfaret 13.",
+      "organizer": "einar@naturalstate.no",
+      "location": null,
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        }
+      ],
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2024-04-03_m_unknown_date_notat_hva_skal_vi_mles_mot_POLISHED.md",
+      "report_metadata": {
+        "word_count": 402,
+        "people_mentioned": [],
+        "organizations_mentioned": [],
+        "extraction_date": "2025-11-20T16:03:21.785278",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE  3  April 2024 .md"
+    },
+    {
+      "id": "m_2024-04-03__3_april_2024_",
+      "date": "2024-04-03",
+      "title": "MØTE  3  April 2024 ",
+      "organizer": null,
+      "location": "Hovfaret 13",
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2024-04-03_m_unknown_date_notat_hva_skal_vi_mles_mot_POLISHED.md",
+      "report_metadata": {
+        "word_count": 402,
+        "people_mentioned": [],
+        "organizations_mentioned": [],
+        "extraction_date": "2025-11-20T16:03:21.785278",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE  3  April 2024 .md"
+    },
+    {
+      "id": "m_2024-05-06_hovfaret_13_med_r21",
+      "date": "2024-05-06",
+      "title": "Hovfaret 13 med R21",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ],
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2024-05-06_m_2024-05-06__6_mai_2024_POLISHED.md",
+      "report_metadata": {
+        "word_count": 300,
+        "people_mentioned": [
+          "Vestre Aker"
+        ],
+        "organizations_mentioned": [],
+        "extraction_date": "2025-11-20T16:03:21.786671",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE  6  MAI 2024.md"
+    },
+    {
+      "id": "m_2024-05-06__6_mai_2024",
+      "date": "2024-05-06",
+      "title": "MØTE  6  MAI 2024",
+      "organizer": null,
+      "location": "St. Halvards gate 33, Oslo",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ],
+      "data_quality_note": "Participants reconstructed from duplicate meeting entry",
+      "action_items": [],
+      "topics_discussed": [
+        "Utdanningstilbud og samfunnsfunksjoner",
+        "Transformasjon fra Områdetype 2 til Områdetype 1",
+        "Bevaring av grøntområder",
+        "Innspill mot områdeplan",
+        "Trinnvis realisering"
+      ],
+      "decisions": [],
+      "report_link": "data/polished_notes/2024-05-06_m_2024-05-06__6_mai_2024_POLISHED.md",
+      "report_metadata": {
+        "word_count": 300,
+        "matched_from_note": "MØTE  6  MAI   2024.md",
+        "match_date": "2025-11-22T10:28:28.248148",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2024-05-06_MØTE  6  MAI   2024.md"
+    },
+    {
+      "id": "m_2024-06-03_hovfaret_13_stand_up_",
+      "date": "2024-06-03",
+      "title": "Hovfaret 13 Stand Up ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-09-09_l_renveien_hovfaret_13",
+      "date": "2024-09-09",
+      "title": "Lørenveien + Hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-09-19_laara_gabriel_a_closer_look_hovfaret_13",
+      "date": "2024-09-19",
+      "title": "Laara / Gabriel - A closer look - Hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-09-24_laara_gabriel_urbania_hovfaret_13_coms_t",
+      "date": "2024-09-24",
+      "title": "Laara / Gabriel URBANIA HOVFARET 13 COMS TALK ?",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-09-27_urbania_r21_natural_state_hovfaret_13",
+      "date": "2024-09-27",
+      "title": "Urbania/R21/Natural State - Hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-10-15_hovfaret_13_oppf_lging_",
+      "date": "2024-10-15",
+      "title": "Hovfaret 13 Oppfølging ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        }
+      ],
+      "action_items": [],
+      "topics_discussed": [
+        "Hovedpunkter fra diskusjonen",
+        "Strategiske grep",
+        "Veien videre"
+      ],
+      "decisions": [],
+      "report_link": "data/polished_notes/2024_10_15_m_2024-10-15_hovfaret_13_oppf_lging__POLISHED.md",
+      "report_metadata": {
+        "word_count": 547,
+        "matched_from_note": "MØTE  15 okt  2024.md",
+        "match_date": "2025-11-22T10:28:28.248018",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2024-10-15_MØTE  15 okt  2024.md"
+    },
+    {
+      "id": "m_2024-10-31_hovfaret_13_nettside_workshop_",
+      "date": "2024-10-31",
+      "title": "Hovfaret 13 - Nettside Workshop ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Severin",
+          "organization": "Natural State AS",
+          "email": "severin@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-11-06_rask_avklaring_hovfaret_13_elementer_",
+      "date": "2024-11-06",
+      "title": "Rask Avklaring . Hovfaret 13 elementer ",
+      "organizer": "",
+      "location": null,
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2024-11-12_hovfaret_13_website_framework_",
+      "date": "2024-11-12",
+      "title": "Hovfaret 13 Website  ( framework ) ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Severin",
+          "organization": "Natural State AS",
+          "email": "severin@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-11-27__27_november_24",
+      "date": "2024-11-27",
+      "title": "MØTE  27 November 24",
+      "organizer": null,
+      "location": null,
+      "participant_count": 0,
+      "participants": [],
+      "data_quality_note": "Original data corrupted - participants unknown, needs manual verification",
+      "action_items": [
+        "srom:"
+      ],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE  27 November 24.md",
+      "report_metadata": {
+        "word_count": 455,
+        "people_mentioned": [
+          "Konklusjon\n\nProsjektet"
+        ],
+        "organizations_mentioned": [],
+        "extraction_date": "2025-11-20T16:04:26.584853"
+      }
+    },
+    {
+      "id": "m_2024-12-10_snakke_med_akt_r_for_1_etg_hovfaret_13_",
+      "date": "2024-12-10",
+      "title": "Snakke med Aktør for 1 etg  Hovfaret 13 - ",
+      "organizer": "",
+      "location": null,
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2024-12-11_befaring_hovfaret_13_energikartlegging_m",
+      "date": "2024-12-11",
+      "title": "Befaring Hovfaret 13 - Energikartlegging mm. ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "Hovfaret 13, 0275 Oslo, Norway",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Petter",
+          "organization": "Vill Energi AS",
+          "email": "petter@villenergi.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Trym",
+          "organization": "Natural State AS",
+          "email": "trym@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-12-19_oppf_lging_og_status_m_te_veien_videre_h",
+      "date": "2024-12-19",
+      "title": "Oppfølging og Status møte veien videre Hovfaret 13  - 2025",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        }
+      ],
+      "report_link": "data/polished_notes/2024_12_19_m_2024-12-19_oppf_lging_og_status_m_te_veien_videre_h_POLISHED.md",
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_metadata": {
+        "word_count": 7260,
+        "matched_from_note": "MØTE  19 Desember   2024.md",
+        "match_date": "2025-11-22T10:28:28.253026",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2024-12-19_MØTE  19 Desember   2024.md"
+    },
+    {
+      "id": "m_2025-01-08_hovfaret_13",
+      "date": "2025-01-08",
+      "title": "Hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Khh",
+          "organization": "Bykon AS",
+          "email": "khh@bykon.no"
+        }
+      ],
+      "report_link": "data/polished_notes/2025_01_08_m_2025-01-08_hovfaret_13_POLISHED.md",
+      "action_items": [
+        "Leietakerne inviteres til å dele logo og beskrivelse for nettsiden",
+        "Oppfølgingsmøter planlegges individuelt med interesserte leietakere",
+        "Videre arbeid med utviklingsscenarier basert på tilbakemeldinger",
+        "Søknad om støtte til energikartlegging sendes inn",
+        "Konseptutvikling for første etasje igangsettes"
+      ],
+      "topics_discussed": [
+        "Prosjektets innhold",
+        "Bærekraftsperspektiv",
+        "Prosess fremover",
+        "Spørsmål fra leietakere",
+        "Neste steg",
+        "Hovedpunkter fra diskusjonen",
+        "Kommunikasjonsstrategi",
+        "Arrangementer og møteaktivitet",
+        "Oppfølgingspunkter",
+        "Gabriel Freeman \\(Natural State\\) og Andreas Thorsnes \\(Urbania Eiendom\\)",
+        "**SAMMENDRAG**",
+        "**1\\. AKUTT BANKSITUASJON**",
+        "**2\\. TRE\\-SPORET VERDIVURDERINGSSTRATEGI**",
+        "**3\\. ØKONOMISK STATUS**",
+        "**4\\. ARBEIDSFORDELING**",
+        "**5\\. DOKUMENTASJONSKRAV FRA BER**",
+        "**6\\. STRATEGISKE UTFORDRINGER**",
+        "**7\\. ANDREAS&#39; FRUSTRASJON**",
+        "**9\\. RISIKOVURDERING**",
+        "**VEDLEGG: NØKKELTALL**",
+        "**DEL 1: FORBEREDELSER FØR MØTET**",
+        "**DEL 2: HOVEDMØTET MED INGRID HOPP OG TORE STRANDSKOG**",
+        "**DEL 3: DEBRIEF ETTER MØTET**",
+        "1\\. Konseptutvikling \\(Januar\\-Mars\\)",
+        "2\\. Leietakerhåndtering",
+        "3\\. Interessentkartlegging og dialog",
+        "4\\. Politiske prosesser",
+        "5\\. Teknisk dokumentasjon",
+        "6\\. Bruksendringsprosess",
+        "7\\. Umiddelbare aksjoner \\(januar\\-februar\\)",
+        "8\\. Langsiktige mål"
+      ],
+      "decisions": [
+        "at prosjektet har alle forutsetninger for å lykkes, gitt den tydelige politiske støtten, det dokumenterte behovet og den solide økonomiske grunnkalkylen\\"
+      ],
+      "report_metadata": {
+        "word_count": 507,
+        "matched_from_note": "Januar 2025.md",
+        "match_date": "2025-11-22T10:28:28.253622",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2025-01-01_Januar 2025.md"
+    },
+    {
+      "id": "m_2025-01-09_status_hovfaret_13_web",
+      "date": "2025-01-09",
+      "title": "Status Hovfaret 13 web",
+      "organizer": "laara@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-10__hovfaret_13_leietaker_m_te_",
+      "date": "2025-01-10",
+      "title": " HOVFARET 13 - LEIETAKER MØTE ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        },
+        {
+          "name": "Severin",
+          "organization": "Natural State AS",
+          "email": "severin@naturalstate.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-17_hovfaret_13_status_m_te_",
+      "date": "2025-01-17",
+      "title": "Hovfaret 13 Status Møte ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 6,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Knuthalvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Khh",
+          "organization": "Bykon AS",
+          "email": "khh@bykon.no"
+        }
+      ],
+      "action_items": [
+        "hos statsforvalteren"
+      ],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE 17  Januar 25.md",
+      "report_metadata": {
+        "word_count": 507,
+        "people_mentioned": [
+          "Knut Halvor",
+          "Nordic Circular Construction",
+          "Vill Energi",
+          "European Sustainability Reporting Standards"
+        ],
+        "organizations_mentioned": [],
+        "extraction_date": "2025-11-20T16:03:21.781995"
+      }
+    },
+    {
+      "id": "m_2025-01-17_17_januar_25",
+      "date": "2025-01-17",
+      "title": "MØTE 17  Januar 25",
+      "organizer": null,
+      "location": "St. Halvards gate 33, Oslo",
+      "participant_count": 6,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Knut Halvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Khh",
+          "organization": "Bykon AS",
+          "email": "khh@bykon.no"
+        }
+      ],
+      "data_quality_note": "Participants reconstructed from duplicate meeting entry m_2025-01-17_hovfaret_13_status_m_te_",
+      "action_items": [
+        "hos statsforvalteren"
+      ],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE 17  Januar 25.md",
+      "report_metadata": {
+        "word_count": 507,
+        "people_mentioned": [
+          "Knut Halvor",
+          "Nordic Circular Construction",
+          "Vill Energi",
+          "European Sustainability Reporting Standards"
+        ],
+        "organizations_mentioned": [],
+        "extraction_date": "2025-11-20T16:03:21.781995"
+      }
+    },
+    {
+      "id": "m_2025-01-27_viderefakturering_hovfaret_13",
+      "date": "2025-01-27",
+      "title": "viderefakturering hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Kristian",
+          "organization": "Natural State AS",
+          "email": "kristian@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-30_placeholder_samtaler_leietakere_hovfaret",
+      "date": "2025-01-30",
+      "title": "Placeholder Samtaler Leietakere Hovfaret 13",
+      "organizer": "",
+      "location": null,
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2025-01-31_placeholder_samtaler_leietakere_hovfaret",
+      "date": "2025-01-31",
+      "title": "Placeholder  Samtaler Leietakere Hovfaret 13 ",
+      "organizer": "",
+      "location": null,
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2025-02-11_milj_risiko_kartlegging_hovfaret_13_i_sa",
+      "date": "2025-02-11",
+      "title": "Miljørisiko kartlegging Hovfaret 13 ( I sammeheng med arbeidet til Vill Energi ) ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Khh",
+          "organization": "Bykon AS",
+          "email": "khh@bykon.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Trym",
+          "organization": "Natural State AS",
+          "email": "trym@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-03-07_hovfaret_13_statusm_tet",
+      "date": "2025-03-07",
+      "title": "Hovfaret 13 - Statusmøtet",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Knuthalvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        }
+      ],
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_03_07_m_unknown_date_detaljert_sammendrag_av_samtalen_om_skolebygget_POLISHED.md",
+      "report_metadata": {
+        "word_count": 488,
+        "people_mentioned": [
+          "Vill Energi",
+          "Bente Otto",
+          "Tore Strandskog",
+          "Ullern Frivilligsentral",
+          "Byplangrep Skøyen"
+        ],
+        "organizations_mentioned": [],
+        "extraction_date": "2025-11-20T16:03:21.785452",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE 7  Mars 25.md"
+    },
+    {
+      "id": "m_2025-03-07_7_mars_25",
+      "date": "2025-03-07",
+      "title": "MØTE 7  Mars 25",
+      "organizer": null,
+      "location": "St. Halvards gate 33, Oslo",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Knut Halvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        }
+      ],
+      "topics_discussed": [
+        "Status og fremdrift i prosjektet",
+        "Strategiske aktiviteter framover"
+      ],
+      "data_quality_note": "Participants reconstructed from duplicate meeting entry m_2025-03-07_hovfaret_13_statusm_tet",
+      "action_items": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_03_07_m_2025-03-07_7_mars_25_POLISHED.md",
+      "report_metadata": {
+        "word_count": 488,
+        "matched_from_note": "MØTE 7  Mars  2025.md",
+        "match_date": "2025-11-22T10:28:28.204690",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2025-03-07_MØTE 7  Mars  2025.md"
+    },
+    {
+      "id": "m_2025-05-05_m_te_med_bente_otto_bydel_ullern_",
+      "date": "2025-05-05",
+      "title": "Møte med Bente Otto Bydel Ullern - ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "Hoffsveien 48, 0377 Oslo, Norway",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ],
+      "report_link": "data/polished_notes/2025_05_05_m_unknown_date_rapport_mte_om_utviklingsprosjekt_p_skyen_POLISHED.md",
+      "report_metadata": {
+        "polished": true,
+        "polished_date": "2025-11-22"
+      }
+    },
+    {
+      "id": "m_2025-05-22_m_te_med_bydels_leder_p_hovfaret_13_vi_m",
+      "date": "2025-05-22",
+      "title": "Møte med Bydels leder på Hovfaret 13 ( Vi møtes en 1 time før ) ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        }
+      ],
+      "report_link": "data/polished_notes/2025_05_22_m_2025-05-22_m_te_med_bydels_leder_p_hovfaret_13_vi_m_POLISHED.md",
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_metadata": {
+        "word_count": 1087,
+        "matched_from_note": "06 August 2025.md",
+        "match_date": "2025-11-22T10:28:28.253019",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2025-08-06_06 August 2025.md"
+    },
+    {
+      "id": "m_2025-06-03_oppf_lging_prosjekt_gruppen_hovfaret_13_",
+      "date": "2025-06-03",
+      "title": "Oppfølging Prosjekt Gruppen Hovfaret 13 ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ],
+      "report_link": "data/polished_notes/2025_06_03_m_2025-06-03_oppf_lging_prosjekt_gruppen_hovfaret_13__POLISHED.md",
+      "action_items": [],
+      "topics_discussed": [
+        "Sammendrag",
+        "Detaljert Temaanalyse",
+        "Detaljerte observasjoner og underliggende dynamikker"
+      ],
+      "decisions": [],
+      "report_metadata": {
+        "word_count": 1923,
+        "matched_from_note": "MØTE 03.06  2025.md",
+        "match_date": "2025-11-22T10:28:28.253024",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2025-06-03_MØTE 03.06  2025.md"
+    },
+    {
+      "id": "m_2025-07-04_b_rekraftsrapport_hovfaret_13",
+      "date": "2025-07-04",
+      "title": "Bærekraftsrapport - Hovfaret 13",
+      "organizer": "linda@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Linda",
+          "organization": "Natural State AS",
+          "email": "linda@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-08-25_energikartlegging_hovfaret_13_avklaringe",
+      "date": "2025-08-25",
+      "title": "Energikartlegging Hovfaret 13 - Avklaringer ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Trym",
+          "organization": "Natural State AS",
+          "email": "trym@naturalstate.no"
+        }
+      ],
+      "report_link": "data/polished_notes/2025_08_25_m_2025-08-25_energikartlegging_hovfaret_13_avklaringe_POLISHED.md",
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_metadata": {
+        "word_count": 5553,
+        "matched_from_note": "25 August 2025.md",
+        "match_date": "2025-11-22T10:28:28.204488",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "original_report_link": "data/restructured_notes/2025-08-25_25 August 2025.md"
+    },
+    {
+      "id": "m_2025-08-28_kort_brief_om_utviklingsprosess_hovfaret",
+      "date": "2025-08-28",
+      "title": "Kort Brief om Utviklingsprosess Hovfaret 13 - ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Nec",
+          "organization": "BER AS",
+          "email": "nec@ber.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-09-04_hovfaret_13_koordinere_rammes_knad",
+      "date": "2025-09-04",
+      "title": "Hovfaret 13 , koordinere rammesøknad",
+      "organizer": "thomas@r21.no",
+      "location": "Møterom Rådhusgata 21 (Rådhusgata 21, Oslo 0158, NO), Møterom Rådhusgata 21",
+      "participant_count": 6,
+      "participants": [
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Francisco",
+          "organization": "R21 Arkitekter AS",
+          "email": "francisco@r21.no"
+        },
+        {
+          "name": "Liv",
+          "organization": "Bsrg",
+          "email": "liv@bsrg.no"
+        },
+        {
+          "name": "Moterom",
+          "organization": "R21 Arkitekter AS",
+          "email": "moterom@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_unknown_date_umiddelbare_oppgaver_denne_uken",
+      "date": "2025-05-22",
+      "title": "Umiddelbare oppgaver \\(denne uken\\):",
+      "organizer": null,
+      "location": null,
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [
+        "Møter og oppfølging \\(neste uke\\):",
+        "Strategiske grep:",
+        "Dokumentasjon som må utarbeides:",
+        "Viktige hensyn:",
+        "Natural States spesifikke rolle:"
+      ],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_05_22_m_unknown_date_umiddelbare_oppgaver_denne_uken_POLISHED.md",
+      "report_metadata": {
+        "word_count": 431,
+        "source": "Downloaded meeting notes - auto-created",
+        "needs_review": true,
+        "created_date": "2025-11-22T10:28:28.204591",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
+      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  22 MAI   notater.md"
+    },
+    {
+      "id": "m_unknown_date_notat_hva_skal_vi_mles_mot",
+      "date": "2025-04-03",
+      "title": "Notat: Hva skal vi måles mot?",
+      "organizer": null,
+      "location": "sidentitet**: Bygget representerer en viktig del av områdets historie og kan styrke stedets identitet gjennom transformasjon\\.",
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [
+        "Områdeplanens motsetninger",
+        "Verdi versus rivekrav",
+        "Områdeplanens målsetninger versus realitet",
+        "Mål, ambisjoner og premisser for utviklingen",
+        "Strategisk kommunikasjon",
+        "Neste steg"
+      ],
+      "decisions": [],
+      "report_link": "data/polished_notes/2024-04-03_m_unknown_date_notat_hva_skal_vi_mles_mot_POLISHED.md",
+      "report_metadata": {
+        "word_count": 736,
+        "source": "Downloaded meeting notes - auto-created",
+        "needs_review": true,
+        "created_date": "2025-11-22T10:28:28.204685",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
+      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  3  April  .md"
+    },
+    {
+      "id": "m_unknown_date_rapport_bydelsledernes_uttalelser_mte_om_omsorg",
+      "date": "2025-05-22",
+      "title": "Rapport: Bydelsledernes Uttalelser \\- Møte om Omsorg Pluss i Ullern Bydel",
+      "organizer": null,
+      "location": null,
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [
+        "Bydelsledernes Hovedbudskap"
+      ],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_05_22_m_2025-05-22_m_te_med_bydels_leder_p_hovfaret_13_vi_m_POLISHED.md",
+      "report_metadata": {
+        "word_count": 727,
+        "source": "Downloaded meeting notes - auto-created",
+        "needs_review": true,
+        "created_date": "2025-11-22T10:28:28.204869",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
+      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  22 MAI  .md"
+    },
+    {
+      "id": "m_unknown_date_detaljert_sammendrag_av_samtalen_om_skolebygget",
+      "date": "2025-03-07",
+      "title": "Detaljert sammendrag av samtalen om skolebygget",
+      "organizer": null,
+      "location": null,
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_03_07_m_unknown_date_detaljert_sammendrag_av_samtalen_om_skolebygget_POLISHED.md",
+      "report_metadata": {
+        "word_count": 582,
+        "source": "Downloaded meeting notes - auto-created",
+        "needs_review": true,
+        "created_date": "2025-11-22T10:28:28.204946",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
+      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  7 MARS   skoletomten.md"
+    },
+    {
+      "id": "m_unknown_date_det_er_jo_det",
+      "date": "2025-03-07",
+      "title": "Det er jo det\\.",
+      "organizer": null,
+      "location": ", sånn\\.",
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_03_07_m_unknown_date_det_er_jo_det_POLISHED.md",
+      "report_metadata": {
+        "word_count": 5420,
+        "source": "Downloaded meeting notes - auto-created",
+        "needs_review": true,
+        "created_date": "2025-11-22T10:28:28.247644",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
+      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  7 MARS   Nabolagsfabrikken .md"
+    },
+    {
+      "id": "m_2025_06_24_med_james_lorentzen",
+      "date": "2025-06-24",
+      "title": "med James Lorentzen",
+      "organizer": null,
+      "location": "e så det blir\\. Det blir å konsentrere seg om det vesentligste\\. Der er det gode ja\\.",
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_06_24_m_2025_06_24_med_james_lorentzen_POLISHED.md",
+      "report_metadata": {
+        "word_count": 5147,
+        "source": "Downloaded meeting notes - auto-created",
+        "needs_review": true,
+        "created_date": "2025-11-22T10:28:28.247921",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "data_quality_note": "Auto-generated from meeting notes - needs manual review",
+      "original_report_link": "data/restructured_notes/2025-06-24_MØTE 24.06 2025 - avklaringer før møte med james .md"
+    },
+    {
+      "id": "m_unknown_date_rapport_mte_om_utviklingsprosjekt_p_skyen",
+      "date": "2025-05-05",
+      "title": "Rapport: Møte om utviklingsprosjekt på Skøyen",
+      "organizer": null,
+      "location": "**: Ikke spesifisert<br>**Deltakere**:",
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [
+        "Sammendrag",
+        "Møteinformasjon",
+        "Reguleringsmessig kontekst",
+        "Bygningsanalyse",
+        "Foreslått utvikling",
+        "Utviklingsstrategi",
+        "Boligbehov i bydelen",
+        "Finansiell og forretningsmessig kontekst",
+        "Bærekraftperspektiver",
+        "Lokale forhold og utfordringer",
+        "Interessentperspektiver",
+        "Veien videre"
+      ],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_05_05_m_unknown_date_rapport_mte_om_utviklingsprosjekt_p_skyen_POLISHED.md",
+      "report_metadata": {
+        "word_count": 1570,
+        "source": "Downloaded meeting notes - auto-created",
+        "needs_review": true,
+        "created_date": "2025-11-22T10:28:28.248014",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
+      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  5 MAI  .md"
+    },
+    {
+      "id": "m_unknown_date_rapport_fra_pent_mte_bydel_ullern",
+      "date": "2025-05-13",
+      "title": "Rapport fra åpent møte: Bydel Ullern 2035",
+      "organizer": null,
+      "location": "** Laboratoriet, Harbitz torg<br>**Arrangører:** Ullern Arbeiderparti, Nabolagsfabrikken og Ullern Høyre",
+      "participant_count": 0,
+      "participants": [],
+      "action_items": [],
+      "topics_discussed": [
+        "Introduksjon og åpning",
+        "Presentasjon av Smestad\\-reguleringen",
+        "Fornebubanen \\- presentasjon av T\\-banestasjonene",
+        "Panelsamtale",
+        "Publikumsresponser og utdypende diskusjoner",
+        "Avsluttende kommentarer"
+      ],
+      "decisions": [],
+      "report_link": "data/polished_notes/2025_05_13_m_unknown_date_rapport_fra_pent_mte_bydel_ullern_POLISHED.md",
+      "report_metadata": {
+        "word_count": 3669,
+        "source": "Downloaded meeting notes - auto-created",
+        "needs_review": true,
+        "created_date": "2025-11-22T10:28:28.248145",
+        "polished": true,
+        "polished_date": "2025-11-22"
+      },
+      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
+      "original_report_link": "data/restructured_notes/UKJENT_DATO_Rapport-fra-pent-mte-Bydel-UllernMØTE  13 MAI  -2035.md"
+    }
+  ]
+}

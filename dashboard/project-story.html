@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosjekthistorie - Hovfaret 13</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-main: #fafafa;
+      --bg-card: #ffffff;
+      --bg-accent: #f0f7ff;
+      --bg-dark: #0f172a;
+
+      --text-primary: #1a1a2e;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --text-accent: #2563eb;
+
+      --border-light: #e2e8f0;
+
+      /* Fasefarger */
+      --phase-1: #9CA3AF;
+      --phase-2: #EF4444;
+      --phase-3: #3B82F6;
+      --phase-4: #8B5CF6;
+      --phase-5: #10B981;
+      --phase-6: #F59E0B;
+
+      /* Temafarger */
+      --green-primary: #059669;
+      --green-light: #d1fae5;
+      --blue-primary: #2563eb;
+      --blue-light: #dbeafe;
+      --orange-primary: #d97706;
+      --orange-light: #fef3c7;
+      --red-primary: #dc2626;
+      --red-light: #fee2e2;
+
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 25px -5px rgba(0,0,0,0.1);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      padding: 0 2rem;
+    }
+
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .nav-brand-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--blue-primary), var(--green-primary));
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .nav-brand-text {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .nav-chapters {
+      display: flex;
+      gap: 0.25rem;
+      overflow-x: auto;
+      max-width: 60%;
+    }
+
+    .nav-chapter {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .nav-chapter:hover {
+      background: var(--bg-accent);
+      color: var(--text-accent);
+    }
+
+    .nav-chapter.active {
+      background: var(--blue-light);
+      color: var(--blue-primary);
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .nav-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      border: 1px solid var(--border-light);
+      background: white;
+      color: var(--text-secondary);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--bg-accent);
+      border-color: var(--text-accent);
+      color: var(--text-accent);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+      color: white;
+      padding: 8rem 2rem 6rem;
+      margin-top: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-label {
+      display: inline-block;
+      padding: 0.5rem 1.25rem;
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #4ade80;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.35rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+
+    .hero-stat-value span {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main-content {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* ===== CHAPTERS ===== */
+    .chapter {
+      margin-bottom: 5rem;
+      scroll-margin-top: 80px;
+    }
+
+    .chapter-header {
+      margin-bottom: 2rem;
+    }
+
+    .chapter-number {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-title {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .chapter-intro {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--blue-primary);
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .section-content {
+      color: var(--text-secondary);
+    }
+
+    .section-content p {
+      margin-bottom: 1rem;
+    }
+
+    .section-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .lead {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ===== PULL QUOTE ===== */
+    .pull-quote {
+      background: linear-gradient(135deg, var(--bg-accent) 0%, white 100%);
+      border-left: 4px solid var(--blue-primary);
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    }
+
+    .pull-quote-text {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .pull-quote-source {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== INFO CARDS ===== */
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .info-card-icon.green { background: var(--green-light); }
+    .info-card-icon.blue { background: var(--blue-light); }
+    .info-card-icon.orange { background: var(--orange-light); }
+    .info-card-icon.red { background: var(--red-light); }
+
+    .info-card-title {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .info-card-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== KEY FACTS ===== */
+    .key-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .key-fact {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .key-fact-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-accent);
+      line-height: 1;
+    }
+
+    .key-fact-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ===== TIMELINE INLINE ===== */
+    .inline-timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 2rem 0;
+    }
+
+    .inline-timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-light);
+    }
+
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .timeline-event:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .timeline-event::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0.35rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--blue-primary);
+      border: 3px solid var(--bg-main);
+    }
+
+    .timeline-event.critical::before {
+      background: var(--red-primary);
+    }
+
+    .timeline-event.success::before {
+      background: var(--green-primary);
+    }
+
+    .timeline-date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-title {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== DATA TABLE ===== */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .data-table th {
+      background: var(--bg-accent);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .data-table tr:hover td {
+      background: rgba(37, 99, 235, 0.03);
+    }
+
+    .data-table .highlight-row {
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    .data-table .highlight-row td {
+      font-weight: 600;
+      color: var(--green-primary);
+    }
+
+    /* ===== COMPARISON BOX ===== */
+    .comparison-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .comparison-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+
+    .comparison-item.negative {
+      border-color: rgba(239, 68, 68, 0.3);
+      background: rgba(239, 68, 68, 0.03);
+    }
+
+    .comparison-item.positive {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: rgba(16, 185, 129, 0.03);
+    }
+
+    .comparison-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .comparison-icon {
+      font-size: 1.25rem;
+    }
+
+    .comparison-title {
+      font-weight: 600;
+    }
+
+    .comparison-value {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .comparison-item.negative .comparison-value { color: var(--red-primary); }
+    .comparison-item.positive .comparison-value { color: var(--green-primary); }
+
+    .comparison-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== PERSON CARDS ===== */
+    .person-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .person-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .person-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-primary), var(--green-primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .person-info {
+      flex: 1;
+    }
+
+    .person-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .person-role {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .person-org {
+      font-size: 0.8rem;
+      color: var(--text-accent);
+      margin-top: 0.25rem;
+    }
+
+    /* ===== PHASE INDICATOR ===== */
+    .phase-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.375rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .phase-indicator.phase-1 { background: rgba(156, 163, 175, 0.2); color: #6b7280; }
+    .phase-indicator.phase-2 { background: rgba(239, 68, 68, 0.15); color: #dc2626; }
+    .phase-indicator.phase-3 { background: rgba(59, 130, 246, 0.15); color: #2563eb; }
+    .phase-indicator.phase-4 { background: rgba(139, 92, 246, 0.15); color: #7c3aed; }
+    .phase-indicator.phase-5 { background: rgba(16, 185, 129, 0.15); color: #059669; }
+    .phase-indicator.phase-6 { background: rgba(245, 158, 11, 0.15); color: #d97706; }
+
+    .phase-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .phase-1 .phase-dot { background: var(--phase-1); }
+    .phase-2 .phase-dot { background: var(--phase-2); }
+    .phase-3 .phase-dot { background: var(--phase-3); }
+    .phase-4 .phase-dot { background: var(--phase-4); }
+    .phase-5 .phase-dot { background: var(--phase-5); }
+    .phase-6 .phase-dot { background: var(--phase-6); }
+
+    /* ===== CHAPTER DIVIDER ===== */
+    .chapter-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 4rem 0;
+    }
+
+    .chapter-divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    .chapter-divider-icon {
+      font-size: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== FOOTER ===== */
+    .story-footer {
+      background: var(--bg-dark);
+      color: white;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-title {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-text {
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      padding: 0.75rem 1.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-md);
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .footer-link:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.25rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .hero-stats {
+        gap: 1.5rem;
+      }
+
+      .hero-stat-value {
+        font-size: 1.75rem;
+      }
+
+      .chapter-title {
+        font-size: 1.5rem;
+      }
+
+      .nav-chapters {
+        display: none;
+      }
+
+      .comparison-box {
+        grid-template-columns: 1fr;
+      }
+
+      .key-facts {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+      .nav-bar {
+        display: none;
+      }
+
+      .hero {
+        margin-top: 0;
+        padding: 2rem;
+        background: white;
+        color: black;
+      }
+
+      .hero-title, .hero-subtitle {
+        color: black;
+      }
+
+      .chapter {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="nav-content">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon">H13</div>
+        <span class="nav-brand-text">Prosjekthistorie</span>
+      </a>
+      <div class="nav-chapters" id="nav-chapters">
+        <a href="#innledning" class="nav-chapter active">Innledning</a>
+        <a href="#stedshistorie" class="nav-chapter">Stedshistorie</a>
+        <a href="#vendepunktet" class="nav-chapter">Vendepunktet</a>
+        <a href="#prosjektoppstart" class="nav-chapter">Oppstart</a>
+        <a href="#scenarier" class="nav-chapter">Scenarier</a>
+        <a href="#dokumentasjon" class="nav-chapter">Dokumentasjon</a>
+        <a href="#interessenter" class="nav-chapter">Interessenter</a>
+        <a href="#omsorg-plus" class="nav-chapter">Omsorg+</a>
+        <a href="#baerekraft" class="nav-chapter">Bærekraft</a>
+        <a href="#teamet" class="nav-chapter">Teamet</a>
+        <a href="#veien-videre" class="nav-chapter">Veien videre</a>
+      </div>
+      <div class="nav-actions">
+        <a href="timeline.html" class="nav-btn">Tidslinje</a>
+        <button class="nav-btn" onclick="window.print()">Skriv ut</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-label">Hovfaret 13 Transformasjonsprosjekt</div>
+      <h1 class="hero-title">Fra rivingstrussel til<br>bærekraftig transformasjon</h1>
+      <p class="hero-subtitle">
+        Historien om hvordan et kontorbygg fra 1989 ble midtpunkt i en kamp
+        for bærekraftig byutvikling - og hvordan rehabilitering vant over riving.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value">1989</div>
+          <div class="hero-stat-label">Bygget oppført</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">5<span>→12</span></div>
+          <div class="hero-stat-label">Etasjer (bygget → fundamentert)</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">48<span>%</span></div>
+          <div class="hero-stat-label">CO₂ spart vs. riving</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">73</div>
+          <div class="hero-stat-label">Omsorg+ boliger</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Kapittel 1: Innledning -->
+    <article class="chapter" id="innledning">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 1</div>
+        <h2 class="chapter-title">Prosjektets essens</h2>
+      </header>
+
+      <p class="lead">
+        Hovfaret 13 er et kontorbygg på Skøyen i Oslo, bygget i 1989 med en robust
+        betongkonstruksjon dimensjonert for 12 etasjer - men bare 5 ble bygget.
+        I september 2023 vedtok Oslo bystyre en områderegulering som krevde riving
+        av bygget. Dette er historien om hvordan prosjektteamet mobiliserte for å
+        bevise at <strong>transformasjon er bedre enn riving</strong>.
+      </p>
+
+      <div class="pull-quote">
+        <div class="pull-quote-text">
+          "Rehabilitering reduserer klimautslippene med 48% sammenlignet med riving og nybygg.
+          Det handler ikke bare om å spare et bygg - det handler om å spare planeten."
+        </div>
+        <div class="pull-quote-source">— Klimagassberegninger Hovfaret 13 v2, Vill Energi</div>
+      </div>
+
+      <div class="key-facts">
+        <div class="key-fact">
+          <div class="key-fact-value">6.100</div>
+          <div class="key-fact-label">m² BTA</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">65</div>
+          <div class="key-fact-label">prosjektmøter</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">108</div>
+          <div class="key-fact-label">beslutninger fattet</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">271</div>
+          <div class="key-fact-label">dokumenter</div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🎯</span>
+          Kjerneargumentet
+        </h3>
+        <div class="section-content">
+          <p>
+            Prosjektets hovedargument er enkelt men kraftfullt: Bygget har allerede
+            et fundament og en bærende konstruksjon dimensjonert for 12 etasjer.
+            Å rive dette for å bygge nytt er <strong>klimamessig uansvarlig</strong>
+            når rehabilitering og påbygg kan oppnå samme resultater med langt lavere utslipp.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">🏛️</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 2: Stedshistorie -->
+    <article class="chapter" id="stedshistorie">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 2</div>
+        <h2 class="chapter-title">Stedshistorie</h2>
+        <p class="chapter-intro">
+          Fra byggets opprinnelse i 1989 til regulatorisk kontekst -
+          bakgrunnen som formet prosjektets mulighetsrom.
+        </p>
+      </header>
+
+      <span class="phase-indicator phase-1">
+        <span class="phase-dot"></span>
+        Fase 1: Historisk kontekst (1989-2023)
+      </span>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🏗️</span>
+          Byggets opprinnelse (1989)
+        </h3>
+        <div class="section-content">
+          <p>
+            Hovfaret 13 ble oppført i 1989 som et moderne kontorbygg med en
+            <strong>betongstruktur dimensjonert for 12 etasjer</strong>, selv om
+            bare 5 etasjer ble bygget. Dette var ikke en tilfeldighet - fundamentet
+            og de bærende konstruksjonene ble designet med fremtidig utvidelse i tankene.
+          </p>
+          <p>
+            Bygget har forspente hulldekker og en robust grunnmur som tåler
+            betydelig mer belastning enn dagens bruk krever. Denne overkapasiteten
+            er nøkkelen til transformasjonsprosjektet.
+          </p>
+        </div>
+      </section>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <div class="info-card-icon blue">📍</div>
+          <div>
+            <div class="info-card-title">Beliggenhet</div>
+            <div class="info-card-subtitle">Skøyen, Oslo - ved Hoffselva</div>
+          </div>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Bygget ligger sentralt på Skøyen med god kollektivtilgang og direkte
+          tilknytning til Hoffselva - en grønn korridor som gir naturkvaliteter
+          midt i byutviklingsområdet.
+        </p>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">📜</span>
+          Regulatorisk utvikling
+        </h3>
+        <div class="section-content">
+          <div class="inline-timeline">
+            <div class="timeline-event">
+              <div class="timeline-date">1. september 2010</div>
+              <div class="timeline-title">Energimerke utstedt</div>
+              <div class="timeline-desc">Bygget får energikarakter F - den dårligste kategorien. Dette understreker behovet for oppgradering.</div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-date">23. september 2015</div>
+              <div class="timeline-title">Byplangrep Skøyen vedtatt</div>
+              <div class="timeline-desc">Oslo vedtar visjon for Skøyen som "flerfunksjonell, tett 24-timers by som åpner seg mot fjorden".</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🌿</span>
+          Hoffselva - økologisk kontekst
+        </h3>
+        <div class="section-content">
+          <p>
+            Byggets plassering ved Hoffselva gir både muligheter og begrensninger.
+            Elven fungerer som en <strong>økologisk korridor</strong> gjennom
+            bylandskapet, og områdeplanen setter derfor krav om byggegrense
+            10 meter fra elven.
+          </p>
+          <p>
+            Denne bestemmelsen er et av kjernepunktene i konflikten: Eksisterende
+            bygg ligger nærmere enn 10 meter. For å oppfylle kravet måtte bygget
+            rives og settes opp på nytt lenger fra elven - med alle de
+            klimakonsekvensene det innebærer.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">⚠️</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 3: Vendepunktet -->
+    <article class="chapter" id="vendepunktet">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 3</div>
+        <h2 class="chapter-title">Vendepunktet</h2>
+        <p class="chapter-intro">
+          September 2023: Oslo bystyre vedtar områderegulering med rivingskrav.
+          Prosjektets mobilisering begynner.
+        </p>
+      </header>
+
+      <span class="phase-indicator phase-2">
+        <span class="phase-dot"></span>
+        Fase 2: Kritisk vendepunkt (2023)
+      </span>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🚨</span>
+          Rivingskravet
+        </h3>
+        <div class="section-content">
+          <p>
+            I september 2023 fattet Oslo bystyre et vedtak som sendte sjokkbølger
+            gjennom prosjektet: <strong>Områderegulering for Skøyen med krav om
+            riving av Hovfaret 13</strong> og 10 meter byggegrense fra Hoffselva.
+          </p>
+          <p>
+            Vedtaket valgte "Alternativ 2" - riving og nybygg - over transformasjon.
+            For eier Urbania Eiendom var dette et veiskille: Skulle de akseptere
+            rivingskravet, eller kjempe for en annen løsning?
+          </p>
+        </div>
+      </section>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <div class="info-card-icon orange">⚖️</div>
+          <div>
+            <div class="info-card-title">Juridisk status</div>
+            <div class="info-card-subtitle">Plan ikke rettskraftig</div>
+          </div>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Kritisk viktig: Planen er <strong>ikke juridisk bindende</strong> på grunn av
+          uavklarte innsigelser fra Bane NOR og Statens vegvesen. Planen ligger hos
+          Statsforvalteren i Oslo og Viken for avklaring. Dette åpner et mulighetsrom
+          for alternativ tilnærming.
+        </p>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">💡</span>
+          Beslutningen om å kjempe
+        </h3>
+        <div class="section-content">
+          <p>
+            Urbania Eiendom bestemte seg for å utfordre premisset. Hvis de kunne
+            dokumentere at transformasjon var <strong>klimamessig, økonomisk og
+            sosialt bedre</strong> enn riving, kunne de søke om dispensasjon fra
+            områdeplanen gjennom byggesaksbehandling.
+          </p>
+          <p>
+            For å lykkes trengte de et sterkt faglig grunnlag. De kontaktet
+            Natural State for å lede prosjektkoordinering og bærekraftsstrategi.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">🚀</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 4: Prosjektoppstart -->
+    <article class="chapter" id="prosjektoppstart">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 4</div>
+        <h2 class="chapter-title">Prosjektoppstart</h2>
+        <p class="chapter-intro">
+          Q1-Q2 2024: Teamet samles, strategi utvikles, og arkitektene engasjeres.
+        </p>
+      </header>
+
+      <span class="phase-indicator phase-3">
+        <span class="phase-dot"></span>
+        Fase 3: Prosjektmobilisering (Q1-Q2 2024)
+      </span>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">📅</span>
+          11. mars 2024: Prosjektstart
+        </h3>
+        <div class="section-content">
+          <p>
+            Det første formelle prosjektmøtet markerte startskuddet. Rundt bordet
+            satt representanter fra <strong>Urbania Eiendom</strong> (eier),
+            <strong>Natural State</strong> (prosjektkoordinator og bærekraftsstrategi)
+            og arkitektkollegaer.
+          </p>
+          <p>
+            Fokus var klart: Utvikle et solid konsept for transformasjon som kunne
+            stå seg mot rivingsalternativet - både teknisk, økonomisk og klimamessig.
+          </p>
+        </div>
+      </section>
+
+      <div class="inline-timeline">
+        <div class="timeline-event">
+          <div class="timeline-date">15. januar 2024</div>
+          <div class="timeline-title">Møte med byråd James Lorentzen</div>
+          <div class="timeline-desc">Første politiske dialog. Byråden uttrykte interesse for transformasjonstilnærmingen som modell for bærekraftig byutvikling i Oslo.</div>
+        </div>
+        <div class="timeline-event success">
+          <div class="timeline-date">11. mars 2024</div>
+          <div class="timeline-title">Prosjektoppstart - Konseptskisse 1.0</div>
+          <div class="timeline-desc">Første formelle prosjektmøte mellom Urbania, Natural State og arkitekter. Systematisk arbeid med transformasjonskonsepter starter.</div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-date">3. april 2024</div>
+          <div class="timeline-title">Leveransemøte konseptskisse og strategi</div>
+          <div class="timeline-desc">Første konseptleveranse presenteres med overordnet strategi for prosjektet.</div>
+        </div>
+        <div class="timeline-event success">
+          <div class="timeline-date">6. mai 2024</div>
+          <div class="timeline-title">R21 Arkitekter engasjeres</div>
+          <div class="timeline-desc">R21 kommer inn som hovedarkitekt med ansvar for transformasjonsdesign og scenarioutvikling.</div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🎯</span>
+          Strategisk tilnærming
+        </h3>
+        <div class="section-content">
+          <p>
+            Prosjektstrategien bygget på Natural States konsept om
+            <strong>"omtenksom verdiutvikling"</strong> - en tilnærming som ser
+            på eiendomsutvikling gjennom linsene av langsiktig verdiskaping for
+            alle interessenter, ikke bare kortsiktig profitt.
+          </p>
+          <p>
+            Kjerneelementene i strategien:
+          </p>
+          <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+            <li>Dokumentere klimafordeler ved transformasjon vs. riving</li>
+            <li>Utvikle scenarier som viser fleksibilitet i bruk</li>
+            <li>Bygge allianser med offentlige myndigheter</li>
+            <li>Presentere sosial verdi (Omsorg+) som tilleggsargument</li>
+          </ul>
+        </div>
+      </section>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">📐</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 5: Scenarieutvikling -->
+    <article class="chapter" id="scenarier">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 5</div>
+        <h2 class="chapter-title">Seks scenarier</h2>
+        <p class="chapter-intro">
+          R21 Arkitekter leverer omfattende plantegninger for seks utviklingsalternativer.
+        </p>
+      </header>
+
+      <span class="phase-indicator phase-4">
+        <span class="phase-dot"></span>
+        Fase 4: Dokumentasjon og analyse (Q3-Q4 2024)
+      </span>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">📋</span>
+          14. oktober 2024: Scenarioleveranse
+        </h3>
+        <div class="section-content">
+          <p>
+            R21 Arkitekter leverte et gjennomarbeidet sett med plantegninger
+            (A20-serien) som viste hvordan bygget kunne utvikles i seks
+            forskjellige retninger. Hvert scenario ble vurdert for klimaavtrykk,
+            økonomi og sosial verdi.
+          </p>
+        </div>
+      </section>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Beskrivelse</th>
+            <th>CO₂/m²</th>
+            <th>Vurdering</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Riving og nybygg</strong></td>
+            <td>Rive eksisterende, bygge nytt 2m fra elv</td>
+            <td>631 kg</td>
+            <td style="color: var(--red-primary);">Baseline - ikke anbefalt</td>
+          </tr>
+          <tr>
+            <td><strong>2. Rehabilitering</strong></td>
+            <td>Bevare og oppgradere eksisterende</td>
+            <td>456 kg</td>
+            <td style="color: var(--green-primary);">Anbefalt minimumsnivå</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>3. Rehabilitering + påbygg</strong></td>
+            <td>Oppgradere + 3 nye etasjer (Omsorg+)</td>
+            <td>491 kg</td>
+            <td>Foretrukket - maksimal sosial verdi</td>
+          </tr>
+          <tr>
+            <td><strong>4. Blandet bruk</strong></td>
+            <td>Kontor + noe bolig</td>
+            <td>~470 kg</td>
+            <td>Alternativ</td>
+          </tr>
+          <tr>
+            <td><strong>5. Hotell/servering</strong></td>
+            <td>Ombygging til hotellbruk</td>
+            <td>~500 kg</td>
+            <td>Alternativ</td>
+          </tr>
+          <tr>
+            <td><strong>6. Maksimal utvidelse</strong></td>
+            <td>Full utnyttelse av 12-etasjekapasitet</td>
+            <td>~520 kg</td>
+            <td>Teknisk mulig, regulatorisk utfordrende</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pull-quote">
+        <div class="pull-quote-text">
+          "Scenario 3 - Omsorg+ med påbygg - gir den beste balansen mellom
+          klimagevinst, sosial verdi og økonomisk gjennomførbarhet."
+        </div>
+        <div class="pull-quote-source">— Prosjektanbefaling</div>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🏛️</span>
+          Byggets strukturelle kapasitet
+        </h3>
+        <div class="section-content">
+          <p>
+            En viktig teknisk innsikt fra scenarioarbeidet: Byggets bærende
+            konstruksjon og fundament er <strong>dimensjonert for 12 etasjer</strong>,
+            selv om bare 5 ble bygget. Dette betyr at påbygg er teknisk mulig
+            uten nytt fundamenteringsarbeid - en betydelig besparelse både
+            økonomisk og klimamessig.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">📊</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 6: Dokumentasjon -->
+    <article class="chapter" id="dokumentasjon">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 6</div>
+        <h2 class="chapter-title">Dokumentasjon og analyse</h2>
+        <p class="chapter-intro">
+          Det faglige grunnlaget bygges: Energikartlegging, klimagassberegninger og
+          miljørisikovurdering.
+        </p>
+      </header>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">⚡</span>
+          Energikartlegging
+        </h3>
+        <div class="section-content">
+          <p>
+            I desember 2024 gjennomførte Vill Energi befaring på bygget, og
+            11. april 2025 ble den fullstendige energirapporten levert.
+          </p>
+        </div>
+      </section>
+
+      <div class="comparison-box">
+        <div class="comparison-item negative">
+          <div class="comparison-header">
+            <span class="comparison-icon">📉</span>
+            <span class="comparison-title">Nåværende tilstand</span>
+          </div>
+          <div class="comparison-value">232 kWh/m²</div>
+          <div class="comparison-label">Energikarakter F (dårligst)</div>
+        </div>
+        <div class="comparison-item positive">
+          <div class="comparison-header">
+            <span class="comparison-icon">📈</span>
+            <span class="comparison-title">Etter oppgradering</span>
+          </div>
+          <div class="comparison-value">116 kWh/m²</div>
+          <div class="comparison-label">Energikarakter C (50% reduksjon)</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <div class="info-card-icon green">💰</div>
+          <div>
+            <div class="info-card-title">Enova-støtte</div>
+            <div class="info-card-subtitle">Kvalifiserer for støtte ved 20%+ forbedring</div>
+          </div>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Med 50% energireduksjon kvalifiserer prosjektet for betydelig Enova-støtte.
+          Anbefalt tiltakspakke med varmepumpe har NPV på 3,8 MNOK over 25 år.
+        </p>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🌱</span>
+          Klimagassberegninger
+        </h3>
+        <div class="section-content">
+          <p>
+            22. april 2025 leverte Vill Energi ved Trym Osborg den kritiske
+            rapporten <em>Klimagassberegninger Hovfaret 13 v2</em>. Denne
+            LCA-analysen (livsløpsanalyse) ga det vitenskapelige grunnlaget
+            for hele prosjektets bærekraftsargument.
+          </p>
+        </div>
+      </section>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Indikator</th>
+            <th>Riving/nybygg</th>
+            <th>Rehabilitering</th>
+            <th>Besparelse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Total CO₂</td>
+            <td>5.340 tonn</td>
+            <td>2.800 tonn</td>
+            <td style="color: var(--green-primary); font-weight: 600;">-48%</td>
+          </tr>
+          <tr>
+            <td>CO₂ per m² BTA</td>
+            <td>631 kg</td>
+            <td>456 kg</td>
+            <td style="color: var(--green-primary); font-weight: 600;">-28%</td>
+          </tr>
+          <tr>
+            <td>Materialutslipp per m²</td>
+            <td>312 kg</td>
+            <td>62 kg</td>
+            <td style="color: var(--green-primary); font-weight: 600;">-80%</td>
+          </tr>
+          <tr>
+            <td>Bygge- og riveavfall</td>
+            <td>5-7.000 tonn</td>
+            <td>500-1.000 tonn</td>
+            <td style="color: var(--green-primary); font-weight: 600;">-85%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pull-quote">
+        <div class="pull-quote-text">
+          "Materialutslipp (A1-A3) er den største differensiatoren mellom scenariene.
+          Ved rehabilitering unngår man det meste av utslippene fra produksjon
+          av nye byggematerialer."
+        </div>
+        <div class="pull-quote-source">— Klimagassberegninger Hovfaret 13 v2</div>
+      </div>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">👥</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 7: Interessentarbeid -->
+    <article class="chapter" id="interessenter">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 7</div>
+        <h2 class="chapter-title">Interessentdialog</h2>
+        <p class="chapter-intro">
+          Fra leietakere til bydelsledelse: Å bygge forståelse og allianser.
+        </p>
+      </header>
+
+      <span class="phase-indicator phase-5">
+        <span class="phase-dot"></span>
+        Fase 5: Interessentintensivering (Q1-Q2 2025)
+      </span>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🏢</span>
+          Leietakerdialog
+        </h3>
+        <div class="section-content">
+          <p>
+            10. januar 2025 ble transformasjonsplanene presentert for byggets
+            eksisterende leietakere. Møtet etablerte en åpen dialog om
+            overgangsperioden og fremtidige muligheter.
+          </p>
+          <p>
+            7. mars fulgte et nytt møte med fokus på dispensasjonsstrategi og
+            konkrete planer for leietakerovergangen, hvor 6 viktige beslutninger
+            ble fattet.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🏛️</span>
+          Bydel Ullern - Omsorg+ partnerskap
+        </h3>
+        <div class="section-content">
+          <p>
+            Den kanskje viktigste interessentdialogen foregikk med Bydel Ullern,
+            som ville være naturlig partner for Omsorg+-konseptet.
+          </p>
+        </div>
+      </section>
+
+      <div class="inline-timeline">
+        <div class="timeline-event">
+          <div class="timeline-date">5. mai 2025</div>
+          <div class="timeline-title">Møte med Bente Otto</div>
+          <div class="timeline-desc">Innledende møte med avdelingsdirektør for helse og omsorg. Interesse for Omsorg+-konseptet bekreftet.</div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-date">13. mai 2025</div>
+          <div class="timeline-title">Åpent møte: Bydel Ullern 2035</div>
+          <div class="timeline-desc">Deltakelse på bydelens åpne møte om fremtidsvisjon. Prosjektet satt i kontekst av bydelens langsiktige planer.</div>
+        </div>
+        <div class="timeline-event success">
+          <div class="timeline-date">22. mai 2025</div>
+          <div class="timeline-title">Presentasjon for bydelsledelsen</div>
+          <div class="timeline-desc">Formell presentasjon for bydelsdirektør Ingrid Hopp og Tore Strandskog. Sterk støtte fra ledelsen. Bydelen bekreftet behov for 70+ eldreboliger.</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <div class="info-card-icon green">✅</div>
+          <div>
+            <div class="info-card-title">Nøkkelfunn fra bydelsdialogen</div>
+            <div class="info-card-subtitle">Mai 2025</div>
+          </div>
+        </div>
+        <ul style="color: var(--text-secondary); font-size: 0.95rem; margin-left: 1.5rem;">
+          <li>Bydel Ullern har dokumentert behov for <strong>70+ nye eldreboliger</strong></li>
+          <li>Omsorg+-konseptet passer bydelens strategi for aldring i eget hjem</li>
+          <li>Sentral beliggenhet ved Hoffselva er attraktiv for målgruppen</li>
+          <li>Bydelsledelsen uttrykte sterk støtte til prosjektet</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">🏠</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 8: Omsorg+ -->
+    <article class="chapter" id="omsorg-plus">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 8</div>
+        <h2 class="chapter-title">Omsorg+-konseptet</h2>
+        <p class="chapter-intro">
+          73 eldreboliger med fellesfasiliteter og omsorgstjenester -
+          det foretrukne scenariet for Hovfaret 13.
+        </p>
+      </header>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">💡</span>
+          Hva er Omsorg+?
+        </h3>
+        <div class="section-content">
+          <p>
+            Omsorg+ er Oslo kommunes konsept for <strong>seniorboliger som kombinerer
+            selvstendige leiligheter med fellestjenester og omsorg</strong>. Beboerne
+            har egne leiligheter med universell utforming, men deler fellesarealer
+            som kantine, bibliotek og aktivitetsrom. Hjemmetjenester er tilgjengelig
+            på stedet.
+          </p>
+        </div>
+      </section>
+
+      <div class="key-facts">
+        <div class="key-fact">
+          <div class="key-fact-value">73</div>
+          <div class="key-fact-label">Leiligheter</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">45-55</div>
+          <div class="key-fact-label">m² per enhet</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">7</div>
+          <div class="key-fact-label">Etasjer totalt</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">24/7</div>
+          <div class="key-fact-label">Bemanning</div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🏗️</span>
+          Planlagt fordeling
+        </h3>
+        <div class="section-content">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Etasje</th>
+                <th>Funksjon</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kjeller -2</td>
+                <td>Parkering, boder, sykkelparkering</td>
+              </tr>
+              <tr>
+                <td>Kjeller -1</td>
+                <td>Teknisk, lager, ekstra parkering</td>
+              </tr>
+              <tr>
+                <td>1. etasje</td>
+                <td>Resepsjon, kantine/restaurant, tjenester (frisør, fysioterapi), hjemmetjenestebase</td>
+              </tr>
+              <tr>
+                <td>2.-5. etasje</td>
+                <td>Omsorg+ leiligheter (eksisterende bygg)</td>
+              </tr>
+              <tr>
+                <td>6. etasje</td>
+                <td>Omsorg+ leiligheter + fellesrom (påbygg)</td>
+              </tr>
+              <tr>
+                <td>7. etasje</td>
+                <td>Omsorg+ leiligheter med tilbaketrekning (påbygg)</td>
+              </tr>
+              <tr>
+                <td>Tak</td>
+                <td>Felleshage med parseller, aktivitetsområde</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <div class="info-card-icon blue">🌿</div>
+          <div>
+            <div class="info-card-title">Takhage og aktiviteter</div>
+            <div class="info-card-subtitle">Helsebringende uteområder</div>
+          </div>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Forskning viser at hagearbeid og kontakt med natur kan forsinke
+          demensutvikling. Takhagen planlegges med opphøyde parsellbedd
+          tilpasset rullestolbrukere, sitteplasser og utsikt mot Hoffselva.
+        </p>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">💰</span>
+          Finansiering
+        </h3>
+        <div class="section-content">
+          <p>
+            Omsorg+-boliger kvalifiserer for <strong>Husbanken-støtte</strong>
+            gjennom programmet for heldøgns omsorgsboliger (HDO). Dette kan
+            dekke opptil 50% av byggekostnadene for kvalifiserende prosjekter,
+            forutsatt avtale med kommunen om omsorgstjenester.
+          </p>
+        </div>
+      </section>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">🌍</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 9: Bærekraft -->
+    <article class="chapter" id="baerekraft">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 9</div>
+        <h2 class="chapter-title">Bærekraftsargumentet</h2>
+        <p class="chapter-intro">
+          Det vitenskapelige grunnlaget: Hvorfor transformasjon slår riving på alle målbare indikatorer.
+        </p>
+      </header>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🎯</span>
+          Hovedargumentet i tall
+        </h3>
+        <div class="section-content">
+          <p>
+            Klimagassberegningene viser entydig at rehabilitering er overlegen
+            på alle miljøindikatorer:
+          </p>
+        </div>
+      </section>
+
+      <div class="comparison-box">
+        <div class="comparison-item positive">
+          <div class="comparison-header">
+            <span class="comparison-icon">🌱</span>
+            <span class="comparison-title">CO₂-besparelse</span>
+          </div>
+          <div class="comparison-value">48%</div>
+          <div class="comparison-label">Lavere klimautslipp vs. riving</div>
+        </div>
+        <div class="comparison-item positive">
+          <div class="comparison-header">
+            <span class="comparison-icon">♻️</span>
+            <span class="comparison-title">Materialbesparelse</span>
+          </div>
+          <div class="comparison-value">80%</div>
+          <div class="comparison-label">Lavere materialutslipp</div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">♻️</span>
+          Sirkulær økonomi
+        </h3>
+        <div class="section-content">
+          <p>
+            Forskjellen i avfallsmengder er dramatisk:
+          </p>
+          <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+            <li><strong>Riving:</strong> 5.000-7.000 tonn bygge- og riveavfall</li>
+            <li><strong>Rehabilitering:</strong> 500-1.000 tonn avfall</li>
+            <li><strong>Besparelse:</strong> 85% avfallsreduksjon</li>
+          </ul>
+          <p style="margin-top: 1rem;">
+            I tillegg bevares den <em>lagrede karbonet</em> i eksisterende
+            betongkonstruksjon - karbon som allerede er "investert" og som
+            ville slippes fri ved riving.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🌿</span>
+          Biologisk mangfold
+        </h3>
+        <div class="section-content">
+          <p>
+            Byggets plassering ved Hoffselva gjør naturhensyn ekstra viktig.
+            Rehabilitering gir betydelige fordeler:
+          </p>
+          <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+            <li>Minimal forstyrrelse av elveøkosystemet under bygging</li>
+            <li>Mulighet for grønn infrastruktur (grønne tak, regnbed)</li>
+            <li>Redusert anleggstrafikk og støy</li>
+            <li>Bevaring av eksisterende vegetasjon rundt bygget</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <div class="info-card-icon green">📋</div>
+          <div>
+            <div class="info-card-title">ESRS-rapportering</div>
+            <div class="info-card-subtitle">Bærekraftsrapport levert 4. juli 2025</div>
+          </div>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Prosjektet har utarbeidet en komplett bærekraftsrapport etter
+          <strong>ESRS (European Sustainability Reporting Standards)</strong>,
+          som dekker klimaendringer (E1), biologisk mangfold (E4), sirkulær
+          økonomi (E5) og berørte samfunn (S3).
+        </p>
+      </div>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">👤</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 10: Teamet -->
+    <article class="chapter" id="teamet">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 10</div>
+        <h2 class="chapter-title">Prosjektteamet</h2>
+        <p class="chapter-intro">
+          Menneskene bak transformasjonen - fra strategisk ledelse til teknisk ekspertise.
+        </p>
+      </header>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">⭐</span>
+          Kjernegruppen
+        </h3>
+        <div class="person-grid">
+          <div class="person-card">
+            <div class="person-avatar">GB</div>
+            <div class="person-info">
+              <div class="person-name">Gabriel Bøen</div>
+              <div class="person-role">Prosjektkoordinator</div>
+              <div class="person-org">Natural State AS</div>
+            </div>
+          </div>
+          <div class="person-card">
+            <div class="person-avatar">EH</div>
+            <div class="person-info">
+              <div class="person-name">Einar Kleppe Holthe</div>
+              <div class="person-role">Strategisk leder / CEO</div>
+              <div class="person-org">Natural State AS</div>
+            </div>
+          </div>
+          <div class="person-card">
+            <div class="person-avatar">AT</div>
+            <div class="person-info">
+              <div class="person-name">Andreas Thorsnes</div>
+              <div class="person-role">Prosjektutvikler / Eier</div>
+              <div class="person-org">Urbania Eiendom AS</div>
+            </div>
+          </div>
+          <div class="person-card">
+            <div class="person-avatar">TT</div>
+            <div class="person-info">
+              <div class="person-name">Thomas Thorsen</div>
+              <div class="person-role">Hovedarkitekt</div>
+              <div class="person-org">R21 Arkitekter</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🔧</span>
+          Tekniske konsulenter
+        </h3>
+        <div class="person-grid">
+          <div class="person-card">
+            <div class="person-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">TO</div>
+            <div class="person-info">
+              <div class="person-name">Trym Osborg</div>
+              <div class="person-role">Klimaberegninger / LCA</div>
+              <div class="person-org">Vill Energi AS</div>
+            </div>
+          </div>
+          <div class="person-card">
+            <div class="person-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">KH</div>
+            <div class="person-info">
+              <div class="person-name">Knut Halvor Høgseth</div>
+              <div class="person-role">Byggeteknisk rådgiver</div>
+              <div class="person-org">Bykon AS</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">🏛️</span>
+          Offentlige kontakter
+        </h3>
+        <div class="person-grid">
+          <div class="person-card">
+            <div class="person-avatar" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">IH</div>
+            <div class="person-info">
+              <div class="person-name">Ingrid Hopp</div>
+              <div class="person-role">Bydelsdirektør</div>
+              <div class="person-org">Bydel Ullern</div>
+            </div>
+          </div>
+          <div class="person-card">
+            <div class="person-avatar" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">BO</div>
+            <div class="person-info">
+              <div class="person-name">Bente Otto</div>
+              <div class="person-role">Avd.dir. Helse og omsorg</div>
+              <div class="person-org">Bydel Ullern</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="key-facts">
+        <div class="key-fact">
+          <div class="key-fact-value">12</div>
+          <div class="key-fact-label">Organisasjoner involvert</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">22</div>
+          <div class="key-fact-label">Nøkkelpersoner</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">65</div>
+          <div class="key-fact-label">Prosjektmøter</div>
+        </div>
+        <div class="key-fact">
+          <div class="key-fact-value">18</div>
+          <div class="key-fact-label">Måneders arbeid</div>
+        </div>
+      </div>
+    </article>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-icon">🚀</div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Kapittel 11: Veien videre -->
+    <article class="chapter" id="veien-videre">
+      <header class="chapter-header">
+        <div class="chapter-number">Kapittel 11</div>
+        <h2 class="chapter-title">Veien videre</h2>
+        <p class="chapter-intro">
+          Fra søknad til realisering - neste steg i transformasjonen.
+        </p>
+      </header>
+
+      <span class="phase-indicator phase-6">
+        <span class="phase-dot"></span>
+        Fase 6: Før-søknadsfase (Q3 2025 - pågår)
+      </span>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">📋</span>
+          Nåværende status
+        </h3>
+        <div class="section-content">
+          <p>
+            Prosjektet er i <strong>fase 6: Før-søknadsfase</strong>. Alle
+            hoveddokumenter er ferdigstilt eller under ferdigstilling:
+          </p>
+          <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+            <li>✅ Klimagassberegninger (april 2025)</li>
+            <li>✅ Energikartlegging (april 2025)</li>
+            <li>✅ Bærekraftsrapport (juli 2025)</li>
+            <li>✅ R21 plantegninger og renders (oktober 2025)</li>
+            <li>🔄 Rammesøknad under koordinering</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="inline-timeline">
+        <div class="timeline-event">
+          <div class="timeline-date">Q4 2025</div>
+          <div class="timeline-title">Mål: Rammesøknad innsendes</div>
+          <div class="timeline-desc">Søknad om dispensasjon fra områdeplan sendes til Plan- og bygningsetaten.</div>
+        </div>
+        <div class="timeline-event">
+          <div class="timeline-date">2026</div>
+          <div class="timeline-title">Behandling og beslutning</div>
+          <div class="timeline-desc">PBE-behandling (6-12 måneder). Dialog med Husbanken om Omsorg+-finansiering.</div>
+        </div>
+        <div class="timeline-event success">
+          <div class="timeline-date">Fremtid</div>
+          <div class="timeline-title">Realisering</div>
+          <div class="timeline-desc">73 nye hjem for eldre på Skøyen - et bidrag til bærekraftig byutvikling i Oslo.</div>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <div class="pull-quote-text">
+          "Dette er ikke bare et eiendomsprosjekt. Det er en test av om Oslo
+          kommune mener alvor med sine klimaambisjoner - om de vil velge
+          transformasjon over riving når tallene viser veien."
+        </div>
+        <div class="pull-quote-source">— Prosjektteamet</div>
+      </div>
+
+      <section class="section">
+        <h3 class="section-title">
+          <span class="section-icon">⚖️</span>
+          Juridisk strategi
+        </h3>
+        <div class="section-content">
+          <p>
+            Prosjektet søker dispensasjon fra områdeplanen gjennom byggesøknad,
+            basert på flere juridiske grunnlag:
+          </p>
+          <ul style="margin-left: 1.5rem; color: var(--text-secondary);">
+            <li>Unntaksbestemmelser i Plan- og bygningsloven</li>
+            <li>Nye krav om vurdering av ombruksalternativ</li>
+            <li>Kommunalt skjønn for bærekraftige prosjekter</li>
+            <li>Områdeplanens status som ikke rettskraftig</li>
+          </ul>
+        </div>
+      </section>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="story-footer">
+    <div class="footer-content">
+      <h2 class="footer-title">Utforsk mer</h2>
+      <p class="footer-text">
+        Denne historien er basert på 271 dokumenter, 65 møter og 18 måneders
+        prosjektarbeid. Utforsk dataene i detalj:
+      </p>
+      <div class="footer-links">
+        <a href="timeline.html" class="footer-link">📅 Prosjekthistorikk</a>
+        <a href="stakeholder-journey.html" class="footer-link">👥 Interessentreise</a>
+        <a href="meetings.html" class="footer-link">📋 Alle møter</a>
+        <a href="command-center.html" class="footer-link">🎯 Command Center</a>
+        <a href="index.html" class="footer-link">🏠 Dashboard</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll spy for navigation
+    const chapters = document.querySelectorAll('.chapter');
+    const navLinks = document.querySelectorAll('.nav-chapter');
+
+    function updateActiveNav() {
+      let current = '';
+
+      chapters.forEach(chapter => {
+        const rect = chapter.getBoundingClientRect();
+        if (rect.top <= 150) {
+          current = chapter.id;
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
+  </script>
+</body>
+</html>

@@ -1,0 +1,933 @@
+{
+  "metadata": {
+    "version": "2.1",
+    "created": "2025-11-21",
+    "last_updated": "2025-11-21",
+    "description": "Meetings log for Hovfaret 13 project",
+    "total_meetings": 37,
+    "quality_review": {
+      "status": "reviewed",
+      "date": "2025-11-21",
+      "fixes_applied": 5,
+      "notes": "Fixed 5 meetings with corrupted participant data from original extraction"
+    }
+  },
+  "meetings": [
+    {
+      "id": "m_2024-03-11_urbania_hovfaret_13_konseptskisse_1_0",
+      "date": "2024-03-11",
+      "title": "Urbania Hovfaret 13 - Konseptskisse 1.0",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-03-11__11_mars_2024",
+      "date": "2024-03-11",
+      "title": "MØTE  11 MARS 2024",
+      "organizer": null,
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ],
+      "data_quality_note": "Participants reconstructed from duplicate meeting entry"
+    },
+    {
+      "id": "m_2024-04-03_urbania_leveransem_te_konsepskisse_og_st",
+      "date": "2024-04-03",
+      "title": "Urbania - Leveransemøte Konsepskisse og Strategi Hovfaret 13.",
+      "organizer": "einar@naturalstate.no",
+      "location": null,
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-04-03__3_april_2024_",
+      "date": "2024-04-03",
+      "title": "MØTE  3  April 2024 ",
+      "organizer": null,
+      "location": "Hovfaret 13",
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2024-05-06_hovfaret_13_med_r21",
+      "date": "2024-05-06",
+      "title": "Hovfaret 13 med R21",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-05-06__6_mai_2024",
+      "date": "2024-05-06",
+      "title": "MØTE  6  MAI 2024",
+      "organizer": null,
+      "location": "St. Halvards gate 33, Oslo",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ],
+      "data_quality_note": "Participants reconstructed from duplicate meeting entry"
+    },
+    {
+      "id": "m_2024-06-03_hovfaret_13_stand_up_",
+      "date": "2024-06-03",
+      "title": "Hovfaret 13 Stand Up ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-09-09_l_renveien_hovfaret_13",
+      "date": "2024-09-09",
+      "title": "Lørenveien + Hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-09-19_laara_gabriel_a_closer_look_hovfaret_13",
+      "date": "2024-09-19",
+      "title": "Laara / Gabriel - A closer look - Hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-09-24_laara_gabriel_urbania_hovfaret_13_coms_t",
+      "date": "2024-09-24",
+      "title": "Laara / Gabriel URBANIA HOVFARET 13 COMS TALK ?",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-09-27_urbania_r21_natural_state_hovfaret_13",
+      "date": "2024-09-27",
+      "title": "Urbania/R21/Natural State - Hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-10-15_hovfaret_13_oppf_lging_",
+      "date": "2024-10-15",
+      "title": "Hovfaret 13 Oppfølging ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-10-31_hovfaret_13_nettside_workshop_",
+      "date": "2024-10-31",
+      "title": "Hovfaret 13 - Nettside Workshop ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Severin",
+          "organization": "Natural State AS",
+          "email": "severin@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-11-06_rask_avklaring_hovfaret_13_elementer_",
+      "date": "2024-11-06",
+      "title": "Rask Avklaring . Hovfaret 13 elementer ",
+      "organizer": "",
+      "location": null,
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2024-11-12_hovfaret_13_website_framework_",
+      "date": "2024-11-12",
+      "title": "Hovfaret 13 Website  ( framework ) ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Severin",
+          "organization": "Natural State AS",
+          "email": "severin@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-11-27__27_november_24",
+      "date": "2024-11-27",
+      "title": "MØTE  27 November 24",
+      "organizer": null,
+      "location": null,
+      "participant_count": 0,
+      "participants": [],
+      "data_quality_note": "Original data corrupted - participants unknown, needs manual verification"
+    },
+    {
+      "id": "m_2024-12-10_snakke_med_akt_r_for_1_etg_hovfaret_13_",
+      "date": "2024-12-10",
+      "title": "Snakke med Aktør for 1 etg  Hovfaret 13 - ",
+      "organizer": "",
+      "location": null,
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2024-12-11_befaring_hovfaret_13_energikartlegging_m",
+      "date": "2024-12-11",
+      "title": "Befaring Hovfaret 13 - Energikartlegging mm. ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "Hovfaret 13, 0275 Oslo, Norway",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Petter",
+          "organization": "Vill Energi AS",
+          "email": "petter@villenergi.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Trym",
+          "organization": "Natural State AS",
+          "email": "trym@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2024-12-19_oppf_lging_og_status_m_te_veien_videre_h",
+      "date": "2024-12-19",
+      "title": "Oppfølging og Status møte veien videre Hovfaret 13  - 2025",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-08_hovfaret_13",
+      "date": "2025-01-08",
+      "title": "Hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Khh",
+          "organization": "Bykon AS",
+          "email": "khh@bykon.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-09_status_hovfaret_13_web",
+      "date": "2025-01-09",
+      "title": "Status Hovfaret 13 web",
+      "organizer": "laara@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Laara",
+          "organization": "Natural State AS",
+          "email": "laara@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-10__hovfaret_13_leietaker_m_te_",
+      "date": "2025-01-10",
+      "title": " HOVFARET 13 - LEIETAKER MØTE ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        },
+        {
+          "name": "Severin",
+          "organization": "Natural State AS",
+          "email": "severin@naturalstate.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-17_hovfaret_13_status_m_te_",
+      "date": "2025-01-17",
+      "title": "Hovfaret 13 Status Møte ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 6,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Knuthalvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Khh",
+          "organization": "Bykon AS",
+          "email": "khh@bykon.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-17_17_januar_25",
+      "date": "2025-01-17",
+      "title": "MØTE 17  Januar 25",
+      "organizer": null,
+      "location": "St. Halvards gate 33, Oslo",
+      "participant_count": 6,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Knut Halvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
+        },
+        {
+          "name": "Andrea",
+          "organization": "R21 Arkitekter AS",
+          "email": "andrea@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Khh",
+          "organization": "Bykon AS",
+          "email": "khh@bykon.no"
+        }
+      ],
+      "data_quality_note": "Participants reconstructed from duplicate meeting entry m_2025-01-17_hovfaret_13_status_m_te_"
+    },
+    {
+      "id": "m_2025-01-27_viderefakturering_hovfaret_13",
+      "date": "2025-01-27",
+      "title": "viderefakturering hovfaret 13",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Kristian",
+          "organization": "Natural State AS",
+          "email": "kristian@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-01-30_placeholder_samtaler_leietakere_hovfaret",
+      "date": "2025-01-30",
+      "title": "Placeholder Samtaler Leietakere Hovfaret 13",
+      "organizer": "",
+      "location": null,
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2025-01-31_placeholder_samtaler_leietakere_hovfaret",
+      "date": "2025-01-31",
+      "title": "Placeholder  Samtaler Leietakere Hovfaret 13 ",
+      "organizer": "",
+      "location": null,
+      "participant_count": 0,
+      "participants": []
+    },
+    {
+      "id": "m_2025-02-11_milj_risiko_kartlegging_hovfaret_13_i_sa",
+      "date": "2025-02-11",
+      "title": "Miljørisiko kartlegging Hovfaret 13 ( I sammeheng med arbeidet til Vill Energi ) ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Khh",
+          "organization": "Bykon AS",
+          "email": "khh@bykon.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Trym",
+          "organization": "Natural State AS",
+          "email": "trym@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-03-07_hovfaret_13_statusm_tet",
+      "date": "2025-03-07",
+      "title": "Hovfaret 13 - Statusmøtet",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Knuthalvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-03-07_7_mars_25",
+      "date": "2025-03-07",
+      "title": "MØTE 7  Mars 25",
+      "organizer": null,
+      "location": "St. Halvards gate 33, Oslo",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Knut Halvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        }
+      ],
+      "topics_discussed": [
+        "Tore Strandskog (Bydel Ullern)",
+        "Bente Otto (Bydel Ullern)",
+        "Vill Energi",
+        "Byplangrep Skøyen",
+        "Ullern Frivilligsentral"
+      ],
+      "data_quality_note": "Participants reconstructed from duplicate meeting entry m_2025-03-07_hovfaret_13_statusm_tet"
+    },
+    {
+      "id": "m_2025-05-05_m_te_med_bente_otto_bydel_ullern_",
+      "date": "2025-05-05",
+      "title": "Møte med Bente Otto Bydel Ullern - ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "Hoffsveien 48, 0377 Oslo, Norway",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-05-22_m_te_med_bydels_leder_p_hovfaret_13_vi_m",
+      "date": "2025-05-22",
+      "title": "Møte med Bydels leder på Hovfaret 13 ( Vi møtes en 1 time før ) ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-06-03_oppf_lging_prosjekt_gruppen_hovfaret_13_",
+      "date": "2025-06-03",
+      "title": "Oppfølging Prosjekt Gruppen Hovfaret 13 ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "St. Halvards gate 33, 0192 Oslo, Norway",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-07-04_b_rekraftsrapport_hovfaret_13",
+      "date": "2025-07-04",
+      "title": "Bærekraftsrapport - Hovfaret 13",
+      "organizer": "linda@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Linda",
+          "organization": "Natural State AS",
+          "email": "linda@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-08-25_energikartlegging_hovfaret_13_avklaringe",
+      "date": "2025-08-25",
+      "title": "Energikartlegging Hovfaret 13 - Avklaringer ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Andreas",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Trym",
+          "organization": "Natural State AS",
+          "email": "trym@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-08-28_kort_brief_om_utviklingsprosess_hovfaret",
+      "date": "2025-08-28",
+      "title": "Kort Brief om Utviklingsprosess Hovfaret 13 - ",
+      "organizer": "gabriel@naturalstate.no",
+      "location": null,
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Nec",
+          "organization": "BER AS",
+          "email": "nec@ber.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        }
+      ]
+    },
+    {
+      "id": "m_2025-09-04_hovfaret_13_koordinere_rammes_knad",
+      "date": "2025-09-04",
+      "title": "Hovfaret 13 , koordinere rammesøknad",
+      "organizer": "thomas@r21.no",
+      "location": "Møterom Rådhusgata 21 (Rådhusgata 21, Oslo 0158, NO), Møterom Rådhusgata 21",
+      "participant_count": 6,
+      "participants": [
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter AS",
+          "email": "thomas@r21.no"
+        },
+        {
+          "name": "Gabriel",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Einar",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Francisco",
+          "organization": "R21 Arkitekter AS",
+          "email": "francisco@r21.no"
+        },
+        {
+          "name": "Liv",
+          "organization": "Bsrg",
+          "email": "liv@bsrg.no"
+        },
+        {
+          "name": "Moterom",
+          "organization": "R21 Arkitekter AS",
+          "email": "moterom@r21.no"
+        }
+      ]
+    }
+  ]
+}

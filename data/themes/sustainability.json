@@ -1,0 +1,546 @@
+{
+  "metadata": {
+    "version": "3.0",
+    "created": "2025-11-21",
+    "updated": "2025-12-02",
+    "description": "Complete sustainability data for Hovfaret 13 transformation project - verified against Vill Energi reports",
+    "sources": [
+      {
+        "id": "energikartlegging",
+        "title": "Energikartlegging Hovfaret 13",
+        "date": "2025-04-11",
+        "author": "Vill Energi AS",
+        "pages": 14,
+        "type": "Technical Report"
+      },
+      {
+        "id": "klimagassberegninger",
+        "title": "Klimagassberegninger Hovfaret 13 v2",
+        "date": "2025-04-22",
+        "author": "Vill Energi AS - Martin Skjøstad Andersen og Malene E. Leirpoll",
+        "pages": 18,
+        "type": "LCA Report"
+      }
+    ]
+  },
+  "executive_summary": {
+    "recommendation": "Rehabilitering (Scenario 2) eller Påbygg (Scenario 3)",
+    "key_finding": "Rehabilitering reduserer klimautslipp med 48% sammenlignet med riving og nybygg",
+    "co2_savings_tonnes": 2549,
+    "material_savings_percent": 80,
+    "waste_reduction_percent": 85
+  },
+
+  "klimagassberegninger": {
+    "_source": "Klimagassberegninger Hovfaret 13 v2 (22.04.2025)",
+    "_methodology": "LCA (Life Cycle Assessment) over 50 år",
+    "_lifecycle_modules_included": ["A1-A3", "A4", "A5", "B1-B5", "B6", "C1-C4"],
+    "_emission_factor": "Europeisk forbruksmiks (EU28+NO)",
+
+    "scenarios": {
+      "scenario_1": {
+        "id": "scenario_1",
+        "name": "Nybygg og riving",
+        "description": "Dagens eksisterende bygg rives og det settes opp et nybygg to meter lenger bort fra elven. Materialbruk iht. Reduzers mal og energibehov iht. TEK17.",
+        "totals": {
+          "materials_tonnes": 2641,
+          "energy_tonnes": 2702,
+          "total_tonnes": 5343
+        },
+        "per_bta": {
+          "materials_kg_m2": 312,
+          "energy_kg_m2": 319,
+          "total_kg_m2": 631
+        },
+        "per_hbra": {
+          "materials_kg_m2": 326,
+          "energy_kg_m2": 334,
+          "total_kg_m2": 660
+        },
+        "energy_consumption_kwh_m2": 115,
+        "status": "Ikke anbefalt",
+        "note": "Massebehandling ikke inkludert - faktiske utslipp vil være høyere"
+      },
+      "scenario_2": {
+        "id": "scenario_2",
+        "name": "Rehabilitering",
+        "description": "Dagens eksisterende bygg bevares og rehabiliteres. Alt av bærende konstruksjon bevares, men innervegger, himling, gulv og kledning er nytt.",
+        "totals": {
+          "materials_tonnes": 377,
+          "energy_tonnes": 2417,
+          "total_tonnes": 2794
+        },
+        "per_bta": {
+          "materials_kg_m2": 62,
+          "energy_kg_m2": 395,
+          "total_kg_m2": 456
+        },
+        "per_hbra": {
+          "materials_kg_m2": 64,
+          "energy_kg_m2": 413,
+          "total_kg_m2": 477
+        },
+        "energy_consumption_kwh_m2": 161,
+        "vs_scenario_1": {
+          "total_reduction_percent": 48,
+          "material_reduction_percent": 80
+        },
+        "status": "Anbefalt"
+      },
+      "scenario_3": {
+        "id": "scenario_3",
+        "name": "Påbygg",
+        "description": "Dagens eksisterende bygg bevares og rehabiliteres (samme som Scenario 2). I tillegg bygges tre etasjer bolig på toppen.",
+        "totals": {
+          "materials_tonnes": 1043,
+          "energy_tonnes": 3118,
+          "total_tonnes": 4161
+        },
+        "per_bta": {
+          "materials_kg_m2": 123,
+          "energy_kg_m2": 368,
+          "total_kg_m2": 491
+        },
+        "per_hbra": {
+          "materials_kg_m2": 129,
+          "energy_kg_m2": 385,
+          "total_kg_m2": 514
+        },
+        "energy_consumption_kwh_m2": {
+          "new_floors": 95,
+          "existing_floors": 161
+        },
+        "vs_scenario_1": {
+          "total_reduction_percent": 22,
+          "material_reduction_percent": 60
+        },
+        "status": "Foretrukket - maksimerer samfunnsnytte"
+      }
+    },
+
+    "lifecycle_modules": {
+      "description": "Utslipp per livsløpsfase (kg CO₂-ekv./m² BTA)",
+      "modules": {
+        "A1-A3": { "name": "Produksjon av materialer", "scenario_1": 180, "scenario_2": 35, "scenario_3": 85 },
+        "A4": { "name": "Transport av materialer", "scenario_1": 25, "scenario_2": 8, "scenario_3": 15 },
+        "A5": { "name": "Bygge- og anleggsarbeid", "scenario_1": 45, "scenario_2": 12, "scenario_3": 18 },
+        "B1": { "name": "Bruk", "scenario_1": 5, "scenario_2": 3, "scenario_3": 4 },
+        "B2": { "name": "Vedlikehold", "scenario_1": 15, "scenario_2": 8, "scenario_3": 10 },
+        "B4": { "name": "Utskifting", "scenario_1": 25, "scenario_2": 12, "scenario_3": 15 },
+        "C1": { "name": "Riving", "scenario_1": 8, "scenario_2": 2, "scenario_3": 3 },
+        "C2": { "name": "Transport (avfall)", "scenario_1": 5, "scenario_2": 1, "scenario_3": 2 },
+        "C3": { "name": "Avfallsbehandling", "scenario_1": 3, "scenario_2": 1, "scenario_3": 1 },
+        "C4": { "name": "Deponering", "scenario_1": -10, "scenario_2": -5, "scenario_3": -7 }
+      }
+    },
+
+    "building_parts": {
+      "description": "Utslipp per bygningsdel (kg CO₂-ekv./m² BTA)",
+      "parts": [
+        { "name": "Grunn og fundamenter", "scenario_1": 100, "scenario_2": 5, "scenario_3": 15 },
+        { "name": "Bæresystem", "scenario_1": 80, "scenario_2": 8, "scenario_3": 25 },
+        { "name": "Yttervegger", "scenario_1": 35, "scenario_2": 12, "scenario_3": 18 },
+        { "name": "Innervegger", "scenario_1": 25, "scenario_2": 15, "scenario_3": 35 },
+        { "name": "Dekker", "scenario_1": 45, "scenario_2": 8, "scenario_3": 20 },
+        { "name": "Yttertak", "scenario_1": 15, "scenario_2": 8, "scenario_3": 12 },
+        { "name": "Fast inventar", "scenario_1": 8, "scenario_2": 5, "scenario_3": 6 },
+        { "name": "Andre bygningsdeler", "scenario_1": 4, "scenario_2": 2, "scenario_3": 3 }
+      ]
+    },
+
+    "key_insights": [
+      "Produksjon av materialer (A1-A3) er den største forskjellen mellom scenarioene",
+      "Scenario 1 har betydelig større utslipp for grunn/fundamenter og dekker pga. betong og stål",
+      "Scenario 3 har høyest utslipp for innervegger da bolig har høyere areal innervegger enn kontor",
+      "Massebehandling er ikke inkludert - Scenario 1 har høyere faktiske utslipp",
+      "Ved riving skal bygget graves opp og flyttes 2m fra elven - betydelige tilleggsutslipp"
+    ]
+  },
+
+  "energikartlegging": {
+    "_source": "Energikartlegging Hovfaret 13 (11.04.2025)",
+    "_standard": "SN-NSPEK 3031:2023",
+
+    "building_technical": {
+      "general": {
+        "year_built": 1989,
+        "building_type": "Kontorbygg",
+        "location": "Skøyen, Oslo",
+        "owner": "Urbania Eiendom AS"
+      },
+      "dimensions": {
+        "heated_floor_area_bra_m2": 6177,
+        "heated_air_volume_m3": 18531,
+        "external_wall_area_m2": 492,
+        "roof_area_m2": 1079,
+        "floor_area_m2": 1079,
+        "window_door_area_m2": 858,
+        "window_door_percentage": 13.9
+      },
+      "envelope": {
+        "u_value_external_walls": 0.18,
+        "u_value_roof": 0.22,
+        "u_value_floor": 0.10,
+        "u_value_windows_doors": 2.59,
+        "air_leakage_n50": 3.0,
+        "unit": "W/m²K"
+      },
+      "systems": {
+        "heating": {
+          "source": "Fjernvarme",
+          "distribution": "Vannbårent",
+          "emitters": ["Radiatorer", "Varmebatteri ventilasjon"]
+        },
+        "cooling": {
+          "system": "Kjølebafler",
+          "distribution": "Vannbårent"
+        },
+        "ventilation": {
+          "type": "CAV (konstante luftmengder)",
+          "heat_recovery_type": "Plateveksler",
+          "heat_recovery_efficiency_percent": 60,
+          "sfp_kw_per_m3_s": 2.0
+        }
+      }
+    },
+
+    "current_state": {
+      "energy_rating": "F",
+      "consumption_kwh_m2_year": 232,
+      "total_consumption_kwh_year": 1425000,
+      "primary_heating": "Fjernvarme og elektrisk",
+      "ventilation_system": "CAV (Konstant luftmengde)",
+      "issues": [
+        "Dårlige vinduer i deler av 1. etasje",
+        "Medfører trekk, høyt energibruk og dårlig energimerke",
+        "Parkeringskjeller varmes med avkastluft - svært lite effektivt"
+      ]
+    },
+
+    "measures": {
+      "description": "10 vurderte energitiltak med kostnader og lønnsomhet",
+      "assumptions": {
+        "interest_rate_percent": 4,
+        "electricity_price_nok_kwh": 1.2,
+        "npv_horizon_years": 25
+      },
+      "all_measures": [
+        {
+          "id": 1,
+          "name": "VAV og nye aggregater",
+          "description": "Behovsstyrt ventilasjon med nye ventilasjonsaggregater. Usikkert om eksisterende aggregater kan benyttes i VAV-anlegg.",
+          "investment_nok": 6025000,
+          "energy_savings_kwh_year": 475000,
+          "annual_savings_nok": 570000,
+          "npv_25_years_nok": 2880000,
+          "lifetime_years": 25,
+          "lcoe": 0.51,
+          "energy_rating_after": { "current": "D", "2026": "C" },
+          "consumption_after_kwh_m2": 155
+        },
+        {
+          "id": 2,
+          "name": "VAV ombygging eksisterende aggregater",
+          "description": "Installere etasje-/sonespjeld og innblåsningsventiler uten å skifte aggregater.",
+          "investment_nok": 1598000,
+          "energy_savings_kwh_year": 444000,
+          "annual_savings_nok": 343000,
+          "npv_25_years_nok": 3760000,
+          "lifetime_years": 25,
+          "lcoe": 0.22,
+          "energy_rating_after": { "current": "E", "2026": "C" },
+          "consumption_after_kwh_m2": 186
+        },
+        {
+          "id": 3,
+          "name": "Oppgradere til roterende varmegjenvinner",
+          "description": "Varmetap fra ventilasjon er største varmetapet. Oppgradering kan være lønnsomt.",
+          "investment_nok": 150000,
+          "energy_savings_kwh_year": 307000,
+          "annual_savings_nok": 368000,
+          "npv_25_years_nok": 5599000,
+          "lifetime_years": 25,
+          "lcoe": 0.02,
+          "energy_rating_after": { "current": "E", "2026": "C" },
+          "consumption_after_kwh_m2": 183
+        },
+        {
+          "id": 4,
+          "name": "Etterisolere yttervegg",
+          "description": "Tilføre 50 mm isolasjon på innsiden. U-verdi forbedres til 0,18.",
+          "investment_nok": 4074000,
+          "energy_savings_kwh_year": 5000,
+          "annual_savings_nok": 10000,
+          "npv_25_years_nok": -3918000,
+          "lifetime_years": 50,
+          "lcoe": 9.78,
+          "energy_rating_after": { "current": "F", "2026": "D" },
+          "consumption_after_kwh_m2": 231,
+          "recommended": false
+        },
+        {
+          "id": 5,
+          "name": "LED-belysning",
+          "description": "Svært energieffektivt, men produserer mindre varme så oppvarmingsbehov øker noe.",
+          "investment_nok": 303000,
+          "energy_savings_kwh_year": 1000,
+          "annual_savings_nok": 1000,
+          "npv_25_years_nok": -287000,
+          "lifetime_years": 20,
+          "lcoe": 18.19,
+          "energy_rating_after": { "current": "F", "2026": "D" },
+          "consumption_after_kwh_m2": 232,
+          "recommended": false
+        },
+        {
+          "id": 6,
+          "name": "Nattkjøling",
+          "description": "Utnytter naturlig kjøligere utetemperatur om natten. Inkluderer motoriserte spjeld, bypass og sensorer.",
+          "investment_nok": 250000,
+          "energy_savings_kwh_year": 1000,
+          "annual_savings_nok": 1000,
+          "npv_25_years_nok": -234000,
+          "lifetime_years": 25,
+          "lcoe": 12.00,
+          "energy_rating_after": { "current": "F", "2026": "D" },
+          "consumption_after_kwh_m2": 232,
+          "recommended": false
+        },
+        {
+          "id": 7,
+          "name": "Utskifting av vinduer",
+          "description": "Nest største varmetapet. Nye vinduer med U-verdi 1 W/m²K.",
+          "investment_nok": 8000000,
+          "energy_savings_kwh_year": 176000,
+          "annual_savings_nok": 211000,
+          "npv_25_years_nok": -4704000,
+          "lifetime_years": 25,
+          "lcoe": 1.82,
+          "energy_rating_after": { "current": "E", "2026": "D" },
+          "consumption_after_kwh_m2": 204,
+          "recommended": false
+        },
+        {
+          "id": 8,
+          "name": "Oppgradere glassvinduer plan 1",
+          "description": "Enkelte glassruter i 1. etasje er i dårlig stand. Bedrer energi og inneklima.",
+          "investment_nok": 150000,
+          "energy_savings_kwh_year": 18000,
+          "annual_savings_nok": 21000,
+          "npv_25_years_nok": 178000,
+          "lifetime_years": 25,
+          "lcoe": 0.34,
+          "energy_rating_after": { "current": "F", "2026": "D" },
+          "consumption_after_kwh_m2": 229,
+          "recommended": true
+        },
+        {
+          "id": 9,
+          "name": "Luft til vann varmepumpe",
+          "description": "Dekker 90% av romoppvarming og varmebatterier. Varmtvann fortsatt fra fjernvarme.",
+          "investment_nok": 3492000,
+          "energy_savings_kwh_year": 478000,
+          "annual_savings_nok": 574000,
+          "npv_25_years_nok": 5475000,
+          "lifetime_years": 30,
+          "lcoe": 0.24,
+          "energy_rating_after": { "current": "D", "2026": "C" },
+          "consumption_after_kwh_m2": 155,
+          "recommended": true,
+          "condition": "Forutsetter at eksisterende vannbårne system kan benyttes"
+        },
+        {
+          "id": 10,
+          "name": "Varmepumpe med ombygging vannbårent system",
+          "description": "Hvis eksisterende system ikke er rigget for lavtemperatur. Krever flere/nye radiatorer.",
+          "investment_nok": 9941000,
+          "energy_savings_kwh_year": 478000,
+          "annual_savings_nok": 574000,
+          "npv_25_years_nok": -974000,
+          "lifetime_years": 30,
+          "lcoe": 0.69,
+          "energy_rating_after": { "current": "D", "2026": "C" },
+          "consumption_after_kwh_m2": 155,
+          "recommended": false
+        }
+      ]
+    },
+
+    "recommended_packages": [
+      {
+        "id": "package_1",
+        "name": "VAV + nye aggregater + vinduer plan 1",
+        "measures": [1, 8],
+        "investment_nok": 6175000,
+        "consumption_after_kwh_m2": 153,
+        "annual_savings_nok": 588000,
+        "npv_25_years_nok": 3010000,
+        "energy_rating": { "current": "D", "2026": "C" }
+      },
+      {
+        "id": "package_2",
+        "name": "VAV + aggregater + vinduer + varmepumpe",
+        "measures": [1, 8, 9],
+        "investment_nok": 9667000,
+        "consumption_after_kwh_m2": 116,
+        "annual_savings_nok": 862000,
+        "npv_25_years_nok": 3800000,
+        "energy_rating": { "current": "C", "2026": "B" }
+      }
+    ],
+
+    "energy_rating_impact": {
+      "current_regulation": {
+        "description": "Dagens energimerkeordning",
+        "thresholds": {
+          "E": "< 220 kWh/m²",
+          "D": "< 180 kWh/m²",
+          "C": "< 145 kWh/m²"
+        },
+        "by_measure": [
+          { "measure": "Dagens situasjon", "consumption": 232, "rating": "F" },
+          { "measure": "VAV + nye aggregat", "consumption": 155, "rating": "D" },
+          { "measure": "VAV", "consumption": 186, "rating": "E" },
+          { "measure": "Roterende varmegjenvinner", "consumption": 183, "rating": "E" },
+          { "measure": "Etterisolere yttervegg", "consumption": 231, "rating": "F" },
+          { "measure": "LED-belysning", "consumption": 232, "rating": "F" },
+          { "measure": "Nattkjøling", "consumption": 232, "rating": "F" },
+          { "measure": "Oppgradere vinduer", "consumption": 204, "rating": "E" },
+          { "measure": "Glassvinduer plan 1", "consumption": 229, "rating": "F" },
+          { "measure": "Varmepumpe", "consumption": 155, "rating": "D" },
+          { "measure": "Varmepumpe + ombygging", "consumption": 155, "rating": "D" },
+          { "measure": "VAV + varmegjenv. + vinduer 1", "consumption": 158, "rating": "D" }
+        ]
+      },
+      "regulation_2026": {
+        "description": "Fra 1. januar 2026 - fjernvarme vektes 0,45",
+        "note": "1 kWh brukt fjernvarme telles som 0,45 kWh i energimerkeberegning",
+        "by_measure": [
+          { "measure": "Dagens situasjon", "consumption": 166, "rating": "D" },
+          { "measure": "VAV + nye aggregat", "consumption": 119, "rating": "C" },
+          { "measure": "VAV", "consumption": 124, "rating": "C" },
+          { "measure": "Roterende varmegjenvinner", "consumption": 139, "rating": "C" },
+          { "measure": "Etterisolere yttervegg", "consumption": 166, "rating": "D" },
+          { "measure": "LED-belysning", "consumption": 166, "rating": "D" },
+          { "measure": "Nattkjøling", "consumption": 166, "rating": "D" },
+          { "measure": "Oppgradere vinduer", "consumption": 154, "rating": "D" },
+          { "measure": "Glassvinduer plan 1", "consumption": 165, "rating": "D" },
+          { "measure": "Varmepumpe", "consumption": 145, "rating": "C" },
+          { "measure": "Varmepumpe + ombygging", "consumption": 145, "rating": "C" }
+        ]
+      }
+    },
+
+    "sensitivity_analysis": {
+      "description": "Følsomhetsanalyse for anbefalte tiltak",
+      "measure_1_vav_nye_aggregater": {
+        "base_npv": 2879586,
+        "by_interest_rate": [
+          { "rate": 0.02, "npv": 5103370 },
+          { "rate": 0.03, "npv": 3900494 },
+          { "rate": 0.04, "npv": 2879586 },
+          { "rate": 0.05, "npv": 2008548 },
+          { "rate": 0.06, "npv": 1261513 }
+        ],
+        "by_electricity_price": [
+          { "price": 0.2, "npv": -4540902 },
+          { "price": 0.7, "npv": -830658 },
+          { "price": 1.2, "npv": 2879586 },
+          { "price": 1.7, "npv": 6589830 },
+          { "price": 2.2, "npv": 10300074 }
+        ],
+        "by_investment_change": [
+          { "change": -0.25, "npv": 4385836 },
+          { "change": -0.10, "npv": 3482086 },
+          { "change": 0.00, "npv": 2879586 },
+          { "change": 0.10, "npv": 2277086 },
+          { "change": 0.25, "npv": 1373336 }
+        ]
+      },
+      "measure_2_vav_existing": {
+        "base_npv": 3760373,
+        "by_interest_rate": [
+          { "rate": 0.02, "npv": 5098546 },
+          { "rate": 0.03, "npv": 4374710 },
+          { "rate": 0.04, "npv": 3760373 },
+          { "rate": 0.05, "npv": 3236223 },
+          { "rate": 0.06, "npv": 2786691 }
+        ],
+        "by_electricity_price": [
+          { "price": 0.2, "npv": -704938 },
+          { "price": 0.7, "npv": 1527718 },
+          { "price": 1.2, "npv": 3760373 },
+          { "price": 1.7, "npv": 5993029 },
+          { "price": 2.2, "npv": 8225685 }
+        ]
+      }
+    },
+
+    "enova_eligibility": {
+      "requirement": "20% energiforbedring",
+      "achievable": true,
+      "potential_support": "Betydelig - eksakt beløp avhenger av valgte tiltak"
+    }
+  },
+
+  "circular_economy": {
+    "embodied_carbon": {
+      "existing_structure": "Betydelig karbon allerede investert i eksisterende betongstruktur",
+      "preservation_benefit": "Unngår frigjøring av innbygget karbon og generering av avfall"
+    },
+    "waste_reduction": {
+      "demolition_waste_tonnes": "5000-7000",
+      "rehabilitation_waste_tonnes": "500-1000",
+      "reduction_percent": 85
+    },
+    "material_reuse": [
+      "Bærende konstruksjoner",
+      "Yttervegger og fasader",
+      "Fundamenter",
+      "Tekniske installasjoner (delvis)"
+    ]
+  },
+
+  "biodiversity": {
+    "context": "Bygget ligger ved Hoffselva - økologisk korridor",
+    "concerns_with_demolition": [
+      "Forstyrrelse av elveøkosystem under bygging",
+      "Økt avrenning under konstruksjon",
+      "Midlertidig tap av buffervegetasjon"
+    ],
+    "benefits_of_rehabilitation": [
+      "Minimal forstyrrelse av Hoffselva",
+      "Mulighet for å styrke grønn infrastruktur",
+      "Redusert byggeplassareal"
+    ],
+    "proposed_measures": [
+      "Styrke riparvegetasjon langs Hoffselva",
+      "Grønt tak på påbygg (Scenario 3)",
+      "Regnhager for overvannshåndtering",
+      "Pollinatorvennlige beplantninger"
+    ]
+  },
+
+  "reporting_framework": {
+    "standard": "ESRS (European Sustainability Reporting Standards)",
+    "relevant_standards": [
+      { "code": "ESRS E1", "name": "Klimaendring", "coverage": "Detaljerte klimagassberegninger og LCA-analyse" },
+      { "code": "ESRS E4", "name": "Biologisk mangfold", "coverage": "Vurdering av påvirkning på Hoffselva og forbedringstiltak" },
+      { "code": "ESRS E5", "name": "Ressursbruk og sirkulær økonomi", "coverage": "Materialgjenbruk og avfallsreduksjon" },
+      { "code": "ESRS S3", "name": "Berørte samfunn", "coverage": "Sosial påvirkning og samfunnsnytte (Omsorg+ konsept)" }
+    ]
+  },
+
+  "report_files": {
+    "energikartlegging": {
+      "pdf_path": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/Klimagass og energi beregninger/20250411 Energikartlegging Hovfaret 13.pdf",
+      "total_pages": 14,
+      "images_folder": "assets/reports/energikartlegging/"
+    },
+    "klimagassberegninger": {
+      "pdf_path": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/Klimagass og energi beregninger/Klimagassberegninger Hovfaret 13 v2.pdf",
+      "total_pages": 18,
+      "images_folder": "assets/reports/klimagassberegninger/"
+    }
+  }
+}

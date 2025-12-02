@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "version": "2.1",
+    "created": "2025-11-21",
+    "last_updated": "2025-11-21",
+    "description": "People involved in Hovfaret 13 project - enriched with bios from source documents",
+    "source": "STAKEHOLDER_PROFILES_360.json from h13-project-database",
+    "enrichment_sources": [
+      "Preprosjekt Natural State for Urbania Eiendom proposal (Feb 2024)",
+      "Klimagassberegninger Hovfaret 13 v2 (April 2025)",
+      "Omsorg+ presentations (May 2025)",
+      "Meeting transcripts and notes"
+    ]
+  },
+  "people": {
+    "gabriel_boen": {
+      "id": "gabriel_boen",
+      "name": "Gabriel Bøen",
+      "email": "gabriel@naturalstate.no",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "Project Lead / Digital Strategy",
+      "role_in_project": "Project Coordinator - leads day-to-day coordination, digital strategy, and stakeholder communications",
+      "expertise": ["Digital strategy", "Project management", "Sustainability", "Web development"],
+      "engagement": {
+        "total_meetings": 27,
+        "first_meeting": "2024-03-11",
+        "last_meeting": "2025-09-04"
+      },
+      "key_collaborators": ["einar_holthe", "andreas_thorsnes", "thomas_thorsen"],
+      "category": "Core Team"
+    },
+    "einar_holthe": {
+      "id": "einar_holthe",
+      "name": "Einar Kleppe Holthe",
+      "email": "einar@naturalstate.no",
+      "phone": "+47 986 00 718",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "CEO / Strategy Lead",
+      "role_in_project": "Strategic leadership, high-level stakeholder engagement, sustainability strategy",
+      "bio": "CEO of Natural State AS and strategic leader with expertise in place economics (stedsøkonomi) and market economics. Initiated the Hovfaret 13 preproject in February 2024 with a vision for 'omtenksom verdiutvikling' (thoughtful value development). Key architect of the transformation strategy arguing against demolition in favor of rehabilitation. Leads client relationships with Urbania Eiendom.",
+      "expertise": ["Strategy", "Leadership", "Sustainability", "Stakeholder relations", "Place economics"],
+      "engagement": {
+        "total_meetings": 15,
+        "first_meeting": "2024-03-11"
+      },
+      "key_collaborators": ["gabriel_boen", "andreas_thorsnes"],
+      "category": "Core Team"
+    },
+    "andreas_thorsnes": {
+      "id": "andreas_thorsnes",
+      "name": "Andreas Thorsnes",
+      "email": "andreas@urbania.no",
+      "organization_id": "urbania_eiendom",
+      "organization": "Urbania Eiendom AS",
+      "title": "Project Developer",
+      "role_in_project": "Client representative - owns project decisions, financial oversight, developer perspective",
+      "bio": "Project developer at Urbania Eiendom AS, property owner of Hovfaret 13. Key decision-maker on project direction and financial investments. Has been actively involved since project inception in March 2024. Responsible for evaluating development scenarios and making final calls on transformation vs. demolition approach. Works closely with R21 Arkitekter on architectural solutions.",
+      "expertise": ["Real estate development", "Project financing", "Property management"],
+      "engagement": {
+        "total_meetings": 12,
+        "first_meeting": "2024-03-11"
+      },
+      "key_collaborators": ["gabriel_boen", "einar_holthe", "thomas_thorsen"],
+      "category": "Core Team"
+    },
+    "thomas_thorsen": {
+      "id": "thomas_thorsen",
+      "name": "Thomas Thorsen",
+      "email": "thomas@r21.no",
+      "organization_id": "r21_arkitekter",
+      "organization": "R21 Arkitekter",
+      "title": "Architect",
+      "role_in_project": "Lead architect - transformation design, scenario development, regulatory drawings",
+      "bio": "Lead architect from R21 Arkitekter (Rådhusgata 21, 0158 Oslo). Responsible for all architectural design work on Hovfaret 13 transformation. Developed multiple development scenarios including the Omsorg+ concept with 70-100 elderly care units. Created comprehensive floor plans (A20 series) showing rehabilitation and extension options. Key technical contributor on building assessment showing the structure was designed for 12 floors but built with only 5, supporting the extension argument.",
+      "expertise": ["Architecture", "Urban planning", "Sustainable building design", "Building transformation"],
+      "engagement": {
+        "total_meetings": 10,
+        "first_meeting": "2024-05-06"
+      },
+      "key_deliverables": [
+        "6 development scenario designs",
+        "Omsorg+ 73-unit concept",
+        "A20-series floor plans",
+        "Building technical assessment"
+      ],
+      "category": "Core Team"
+    },
+    "andrea": {
+      "id": "andrea",
+      "name": "Andrea",
+      "email": "andrea@r21.no",
+      "organization_id": "r21_arkitekter",
+      "organization": "R21 Arkitekter",
+      "title": "Architect",
+      "role_in_project": "Supporting architect",
+      "engagement": {
+        "total_meetings": 5
+      },
+      "category": "Extended Team"
+    },
+    "francisco": {
+      "id": "francisco",
+      "name": "Francisco",
+      "email": "francisco@r21.no",
+      "organization_id": "r21_arkitekter",
+      "organization": "R21 Arkitekter",
+      "title": "Architect",
+      "role_in_project": "Supporting architect",
+      "engagement": {
+        "total_meetings": 1
+      },
+      "category": "Extended Team"
+    },
+    "laara": {
+      "id": "laara",
+      "name": "Laara",
+      "email": "laara@naturalstate.no",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "Communications",
+      "role_in_project": "Communications strategy and external messaging",
+      "expertise": ["Communications", "PR", "Content strategy"],
+      "engagement": {
+        "total_meetings": 5
+      },
+      "category": "Extended Team"
+    },
+    "severin": {
+      "id": "severin",
+      "name": "Severin",
+      "email": "severin@naturalstate.no",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "Developer",
+      "role_in_project": "Technical development support",
+      "engagement": {
+        "total_meetings": 3
+      },
+      "category": "Extended Team"
+    },
+    "trym": {
+      "id": "trym",
+      "name": "Trym",
+      "email": "trym@naturalstate.no",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "Environmental Consultant",
+      "role_in_project": "Environmental and sustainability analysis support",
+      "expertise": ["Environmental consulting", "Sustainability analysis"],
+      "engagement": {
+        "total_meetings": 3
+      },
+      "category": "Extended Team"
+    },
+    "knut_halvor": {
+      "id": "knut_halvor",
+      "name": "Knut Halvor",
+      "email": "knuthalvor@naturalstate.no",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "Team Member",
+      "role_in_project": "Project support",
+      "engagement": {
+        "total_meetings": 2
+      },
+      "category": "Extended Team"
+    },
+    "kristian": {
+      "id": "kristian",
+      "name": "Kristian",
+      "email": "kristian@naturalstate.no",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "Finance",
+      "role_in_project": "Financial analysis support",
+      "expertise": ["Finance", "Financial modeling"],
+      "engagement": {
+        "total_meetings": 1
+      },
+      "category": "Extended Team"
+    },
+    "linda_aas": {
+      "id": "linda_aas",
+      "name": "Linda Aas",
+      "email": "linda@naturalstate.no",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "Sustainability Lead",
+      "role_in_project": "Sustainability reporting and documentation",
+      "expertise": ["Sustainability", "ESG reporting", "Climate strategy"],
+      "engagement": {
+        "total_meetings": 1
+      },
+      "category": "Extended Team"
+    },
+    "knut_halvor_hogseth": {
+      "id": "knut_halvor_hogseth",
+      "name": "Knut Halvor Høgseth",
+      "email": "khh@bykon.no",
+      "organization_id": "byggekonsulent",
+      "organization": "Byggekonsulent / Bykon",
+      "title": "Building Consultant",
+      "role_in_project": "Technical building consultant - structural and construction advice",
+      "expertise": ["Building technology", "Structural assessment", "Construction"],
+      "engagement": {
+        "total_meetings": 3
+      },
+      "category": "Consultant"
+    },
+    "petter": {
+      "id": "petter",
+      "name": "Petter",
+      "email": "petter@villenergi.no",
+      "organization_id": "vill_energi",
+      "organization": "Vill Energi",
+      "title": "Energy Consultant",
+      "role_in_project": "Energy mapping and analysis",
+      "expertise": ["Energy analysis", "Building energy systems"],
+      "engagement": {
+        "total_meetings": 1
+      },
+      "key_deliverables": ["Energikartlegging Hovfaret 13"],
+      "category": "Consultant"
+    },
+    "trym_osborg": {
+      "id": "trym_osborg",
+      "name": "Trym Osborg",
+      "organization_id": "vill_energi",
+      "organization": "Vill Energi AS",
+      "title": "Climate Consultant",
+      "role_in_project": "Climate calculations and LCA analysis - key contact person for Natural State",
+      "bio": "Climate consultant at Vill Energi AS (St. Olavs plass 2, 0165 Oslo). Served as Natural State's primary contact person for climate calculations on Hovfaret 13. Coordinated the critical 'Klimagassberegninger Hovfaret 13 v2' report (April 2025) that proved rehabilitation has 48% lower CO2 emissions than demolition/rebuild. This analysis became the cornerstone of the project's sustainability argument.",
+      "expertise": ["Climate calculations", "LCA", "Carbon accounting", "Building energy analysis"],
+      "key_deliverables": ["Klimagassberegninger Hovfaret 13 v2 (April 2025)"],
+      "category": "Consultant",
+      "notes": "Key technical contributor whose work provided the scientific basis for the transformation argument"
+    },
+    "liv": {
+      "id": "liv",
+      "name": "Liv",
+      "email": "liv@bsrg.no",
+      "organization_id": "bsrg",
+      "organization": "BSRG",
+      "title": "Consultant",
+      "role_in_project": "Sustainability consulting",
+      "engagement": {
+        "total_meetings": 1
+      },
+      "category": "Consultant"
+    },
+    "nec": {
+      "id": "nec",
+      "name": "NEC",
+      "email": "nec@ber.no",
+      "organization_id": "ber_consulting",
+      "organization": "BER Consulting",
+      "title": "Consultant",
+      "role_in_project": "Consulting support",
+      "engagement": {
+        "total_meetings": 1
+      },
+      "category": "Consultant"
+    },
+    "ingrid_hopp": {
+      "id": "ingrid_hopp",
+      "name": "Ingrid Hopp",
+      "organization_id": "bydel_ullern",
+      "organization": "Bydel Ullern",
+      "title": "Bydelsdirektør",
+      "role_in_project": "Key government contact for Omsorg+ partnership discussions",
+      "bio": "District Director (Bydelsdirektør) of Bydel Ullern. Met with project team on May 22, 2025 together with Tore Strandskog. Critical contact for evaluating Omsorg+ scenario viability, as Bydel Ullern would be the potential partner/client for elderly housing units. Her support is essential for the Omsorg+ concept to move forward.",
+      "notes": "Met with project team May 2025. Critical for Omsorg+ scenario viability.",
+      "category": "Government Stakeholder"
+    },
+    "tore_strandskog": {
+      "id": "tore_strandskog",
+      "name": "Tore Strandskog",
+      "organization_id": "bydel_ullern",
+      "organization": "Bydel Ullern",
+      "title": "Official",
+      "role_in_project": "Government contact",
+      "category": "Government Stakeholder"
+    },
+    "bente_otto": {
+      "id": "bente_otto",
+      "name": "Bente Otto",
+      "organization_id": "bydel_ullern",
+      "organization": "Bydel Ullern",
+      "title": "Avdelingsdirektør - Helse, mestring og tilrettelagte tjenester",
+      "role_in_project": "Key contact for health and care services - directly relevant to Omsorg+ concept",
+      "bio": "Department Director for Health, Coping and Adapted Services at Bydel Ullern. Has direct oversight of elderly care needs in the district, making her a crucial stakeholder for validating demand for Omsorg+ housing. Met with project team to discuss specific requirements for elderly housing and care services that would align with Husbanken standards.",
+      "notes": "Meeting May 5, 2025 to discuss Omsorg+ housing needs",
+      "category": "Government Stakeholder"
+    },
+    "james_lorentzen": {
+      "id": "james_lorentzen",
+      "name": "James Stove Lorentzen",
+      "organization_id": "oslo_kommune",
+      "organization": "Oslo Kommune",
+      "title": "Byråd for byutvikling",
+      "role_in_project": "Political contact - city development policy",
+      "bio": "City Councillor for Urban Development (Byråd for byutvikling) in Oslo. Met with project team in January 2024 and initially expressed interest in the transformation approach as a potential model for sustainable building reuse in Oslo. However, later withdrew active support, leaving the project to navigate the area plan (områdeplan) requirements through other channels.",
+      "notes": "Met January 2024. Expressed interest in transformation approach but later withdrew active support.",
+      "category": "Government Stakeholder"
+    },
+    "martin_smedsrud": {
+      "id": "martin_smedsrud",
+      "name": "Martin Smedsrud",
+      "organization_id": "r21_arkitekter",
+      "organization": "R21 Arkitekter",
+      "title": "Architect",
+      "role_in_project": "Architecture team member",
+      "notes": "Mentioned in milestone documentation",
+      "category": "Extended Team"
+    }
+  },
+  "people_categories": {
+    "Core Team": {
+      "description": "Primary project team members with regular involvement",
+      "count": 4
+    },
+    "Extended Team": {
+      "description": "Team members with supporting roles",
+      "count": 9
+    },
+    "Consultant": {
+      "description": "External consultants and specialists",
+      "count": 5
+    },
+    "Government Stakeholder": {
+      "description": "Government officials and contacts",
+      "count": 4
+    }
+  }
+}

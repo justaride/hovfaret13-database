@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "created": "2025-11-21",
+    "description": "Regulatory context and status for Hovfaret 13 project"
+  },
+  "current_status": {
+    "summary": "Area plan adopted September 2023 requires demolition, but plan is not legally binding due to objections. Project pursuing exemption through building permit process.",
+    "plan_status": "Not rettskraftig (legally binding)",
+    "reason": "Objections from Bane NOR and Statens vegvesen pending at Statsforvalteren"
+  },
+  "area_planning": {
+    "byplangrep_skoyen_2015": {
+      "adopted": "2015-09-23",
+      "description": "Skøyen designated as development hub - 'flerfunksjonell, tett 24-timers by som åpner seg mot fjorden'",
+      "impact": "Sets framework for area development including Hovfaret 13"
+    },
+    "omraaderegulering_skoyen_2023": {
+      "adopted": "2023-09",
+      "description": "Area regulation requiring demolition of Hovfaret 13 and 10m setback from Hoffselva",
+      "alternative_selected": "Alternative 2 (demolition)",
+      "status": "Sent to Statsforvalteren October 2023",
+      "legally_binding": false,
+      "blocking_issues": [
+        "Bane NOR objection (railway-related)",
+        "Statens vegvesen objection (road-related)"
+      ]
+    }
+  },
+  "hovfaret_13_specific": {
+    "current_zoning": "S1 (Sentrumsformål)",
+    "permitted_use": "Kontor, handel, min. 20% bolig i feltet",
+    "height_restriction_plan": "Maks 7 etasjer",
+    "height_restriction_issue": "Building fundamented for 12 floors but limited to 7 - regulatory mismatch",
+    "setback_requirement": {
+      "current": "Building at river edge",
+      "required_by_plan": "10m setback from Hoffselva",
+      "implication": "Would require demolition and rebuild"
+    },
+    "utilization": {
+      "current": "~200%",
+      "plan_maximum": "420%",
+      "comment": "Significant development headroom if height restrictions changed"
+    }
+  },
+  "project_strategy": {
+    "approach": "Seek exemption through building permit (rammesøknad) process",
+    "key_arguments": [
+      "Transformation is more sustainable than demolition (48% lower CO₂)",
+      "Building already structurally designed for 12 floors",
+      "Circular economy principles favor rehabilitation",
+      "Minimal impact on Hoffselva ecosystem",
+      "Social value through Omsorg+ housing"
+    ],
+    "legal_basis": [
+      "Exception provisions in Plan- og bygningsloven",
+      "New requirement to assess reuse alternatives (ombruksalternativ)",
+      "Municipality discretion for smaller extensions meeting sustainability goals"
+    ],
+    "timeline": {
+      "rammesøknad_target": "Q4 2025",
+      "expected_processing": "6-12 months"
+    }
+  },
+  "stakeholder_engagement": {
+    "oslo_kommune": {
+      "pbe_plan_og_bygningsetaten": {
+        "role": "Regulatory authority for building permits",
+        "engagement": "Ongoing dialogue through consultant team"
+      },
+      "byraad_james_lorentzen": {
+        "role": "City Councillor for Urban Development",
+        "engagement": "Meeting January 2024 - initial interest in transformation approach",
+        "status": "Withdrew active support"
+      }
+    },
+    "bydel_ullern": {
+      "role": "Local district administration",
+      "key_contacts": ["Ingrid Hopp (Bydelsdirektør)", "Bente Otto (Helse og omsorg)"],
+      "interest": "Potential Omsorg+ partnership - need for 70+ elderly housing units",
+      "meetings": ["2025-05-05", "2025-05-22"]
+    },
+    "skoyen_omradeforum": {
+      "role": "Local area stakeholder forum",
+      "engagement": "Submitted joint input to Oslo KPS (October 2024)"
+    }
+  },
+  "neighboring_properties": {
+    "context": "Part of coordinated area development on Skøyen/Hoff",
+    "relevant_properties": [
+      {
+        "address": "Hovfaret 10",
+        "owner": "Fram Hovfaret 10 AS",
+        "status": "Also fundamented for 12 floors, limited to 7 by regulations",
+        "relevance": "Similar regulatory challenge"
+      },
+      {
+        "address": "Hovfaret 17",
+        "owner": "Fram H 17 AS",
+        "relevance": "Part of Hovfaret 10-14 cluster"
+      }
+    ]
+  },
+  "key_documents": [
+    {
+      "title": "241106 H13 plan forutsetninger",
+      "date": "2024-11-06",
+      "description": "Documentation of planning prerequisites and historical context"
+    },
+    {
+      "title": "Protokoll Områdeforum Skøyen 29.11.23",
+      "date": "2023-11-29",
+      "description": "Area forum meeting protocol"
+    },
+    {
+      "title": "241024 Innspill Oslo KPS fra Skøyen Områdeforum",
+      "date": "2024-10-24",
+      "description": "Joint input to Oslo municipality planning strategy"
+    }
+  ]
+}

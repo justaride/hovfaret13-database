@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bærekraftsrapport - Hovfaret 13</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-dark: #3d4a3a;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-light: #94a3b8;
+            --accent-green: #3d4a3a;
+            --accent-red: #dc2626;
+            --border-color: #e2e8f0;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent-green);
+        }
+
+        .header h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .draft-badge {
+            background: var(--accent-red);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .view-toggle {
+            display: flex;
+            background: var(--bg-main);
+            border-radius: 8px;
+            padding: 4px;
+        }
+
+        .view-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .view-btn.active {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            box-shadow: var(--shadow);
+        }
+
+        .view-btn:hover:not(.active) {
+            color: var(--text-primary);
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .progress-track {
+            flex: 1;
+            height: 6px;
+            background: var(--border-color);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--accent-green);
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+
+        .progress-text {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            min-width: 100px;
+            text-align: right;
+        }
+
+        /* Main content */
+        .main-content {
+            padding: 2rem;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        /* Chapter navigation */
+        .chapter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .chapter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            background: var(--bg-main);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .chapter-btn:hover, .chapter-btn.active {
+            background: var(--accent-green);
+            color: white;
+            border-color: var(--accent-green);
+        }
+
+        /* Grid view */
+        .grid-view {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .page-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .page-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .page-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .chapter-divider {
+            grid-column: 1 / -1;
+            background: var(--accent-green);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        /* Single page view */
+        .single-view {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .single-view.active {
+            display: flex;
+        }
+
+        .grid-view.hidden {
+            display: none;
+        }
+
+        .page-display {
+            max-width: 100%;
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 1.5rem;
+        }
+
+        .page-display img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .page-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: var(--accent-green);
+            color: white;
+            border-color: var(--accent-green);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .page-indicator {
+            font-size: 1rem;
+            font-weight: 500;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        /* Fullscreen modal */
+        .fullscreen-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .fullscreen-modal.active {
+            display: flex;
+        }
+
+        .fullscreen-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .fullscreen-title {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .fullscreen-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .fullscreen-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: transparent;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .fullscreen-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .fullscreen-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+            padding: 2rem;
+        }
+
+        .fullscreen-image {
+            max-width: 100%;
+            max-height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .fullscreen-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 2rem 1rem;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+            transition: all 0.2s;
+        }
+
+        .fullscreen-nav:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .fullscreen-nav.prev { left: 0; border-radius: 0 8px 8px 0; }
+        .fullscreen-nav.next { right: 0; border-radius: 8px 0 0 8px; }
+
+        .fullscreen-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .page-dots {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 80%;
+        }
+
+        .page-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .page-dot:hover {
+            background: rgba(255,255,255,0.6);
+        }
+
+        .page-dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        .page-dot.chapter-start {
+            background: var(--accent-green);
+        }
+
+        .zoom-controls {
+            display: flex;
+            gap: 0.5rem;
+            color: white;
+            align-items: center;
+        }
+
+        .zoom-btn {
+            width: 32px;
+            height: 32px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: transparent;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .zoom-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .zoom-level {
+            min-width: 50px;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Keyboard hints */
+        .keyboard-hints {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--bg-card);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .keyboard-hints kbd {
+            background: var(--bg-main);
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-family: inherit;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .grid-view {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-view {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .chapter-nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid-view {
+                grid-template-columns: 1fr;
+            }
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <a href="sustainability.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Tilbake til Bærekraft
+            </a>
+            <h1>
+                Bærekraftsrapport
+                <span class="draft-badge">UTKAST</span>
+            </h1>
+        </div>
+        <div class="header-right">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+                    </svg>
+                    Grid
+                </button>
+                <button class="view-btn" data-view="single">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    </svg>
+                    Enkeltside
+                </button>
+            </div>
+            <button class="nav-btn" onclick="openFullscreen(1)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+                Fullskjerm
+            </button>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <span style="font-size: 0.875rem; color: var(--text-secondary);">Fremdrift:</span>
+        <div class="progress-track">
+            <div class="progress-fill" style="width: 75%;"></div>
+        </div>
+        <span class="progress-text">75% ferdig</span>
+    </div>
+
+    <main class="main-content">
+        <nav class="chapter-nav" id="chapterNav">
+            <!-- Genereres av JavaScript -->
+        </nav>
+
+        <div class="grid-view" id="gridView">
+            <!-- Genereres av JavaScript -->
+        </div>
+
+        <div class="single-view" id="singleView">
+            <div class="page-display">
+                <img id="singlePageImg" src="" alt="Side">
+            </div>
+            <div class="page-nav">
+                <button class="nav-btn" id="prevBtn" onclick="navigatePage(-1)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Forrige
+                </button>
+                <span class="page-indicator" id="pageIndicator">Side 1 av 83</span>
+                <button class="nav-btn" id="nextBtn" onclick="navigatePage(1)">
+                    Neste
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Fullscreen modal -->
+    <div class="fullscreen-modal" id="fullscreenModal">
+        <div class="fullscreen-header">
+            <span class="fullscreen-title" id="fullscreenTitle">Bærekraftsrapport - Side 1</span>
+            <div class="fullscreen-controls">
+                <div class="zoom-controls">
+                    <button class="zoom-btn" onclick="zoomOut()">−</button>
+                    <span class="zoom-level" id="zoomLevel">100%</span>
+                    <button class="zoom-btn" onclick="zoomIn()">+</button>
+                    <button class="zoom-btn" onclick="resetZoom()">⟲</button>
+                </div>
+                <button class="fullscreen-btn" onclick="closeFullscreen()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                    Lukk (ESC)
+                </button>
+            </div>
+        </div>
+        <div class="fullscreen-content" id="fullscreenContent">
+            <button class="fullscreen-nav prev" onclick="navigateFullscreen(-1)">‹</button>
+            <img class="fullscreen-image" id="fullscreenImg" src="" alt="Side">
+            <button class="fullscreen-nav next" onclick="navigateFullscreen(1)">›</button>
+        </div>
+        <div class="fullscreen-footer">
+            <div class="page-dots" id="pageDots">
+                <!-- Genereres av JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div class="keyboard-hints">
+        <span><kbd>←</kbd><kbd>→</kbd> Navigere</span>
+        <span><kbd>+</kbd><kbd>−</kbd> Zoom</span>
+        <span><kbd>0</kbd> Tilbakestill</span>
+        <span><kbd>F</kbd> Fullskjerm</span>
+        <span><kbd>ESC</kbd> Lukk</span>
+    </div>
+
+    <script>
+        // Rapportdata
+        const report = {
+            title: "Bærekraftsrapport - Hovfaret 13",
+            status: "UTKAST",
+            totalPages: 83,
+            imageFolder: "assets/reports/barekraftsrapport-utkast",
+            chapters: [
+                { id: "forside", title: "Forside", startPage: 1 },
+                { id: "sammendrag", title: "Sammendrag", startPage: 2 },
+                { id: "innledning", title: "Innledning", startPage: 3 },
+                { id: "bakgrunn", title: "Bakgrunn for vurderingen", startPage: 4 },
+                { id: "rammeverk", title: "Rammeverk (TBL)", startPage: 6 },
+                { id: "hovfaret", title: "Hovfaret 13", startPage: 7 },
+                { id: "regulatorisk", title: "Regulatorisk kontekst", startPage: 11 },
+                { id: "demografi", title: "Demografiske og sosiale behov", startPage: 19 },
+                { id: "konsept", title: "Konsept og stedsutvikling", startPage: 20 },
+                { id: "klima-lca", title: "Klima - LCA klimagassberegninger", startPage: 27 },
+                { id: "klima-natur", title: "Klima - Natur og biodiversitet", startPage: 48 },
+                { id: "sosial", title: "Sosial bærekraft", startPage: 57 },
+                { id: "samfunn", title: "Samfunnsinvolvering og medvirkning", startPage: 60 },
+                { id: "kumulative", title: "Kumulative konsekvenser", startPage: 67 },
+                { id: "geoteknisk", title: "Geotekniske risikoer", startPage: 73 },
+                { id: "helhetlig", title: "Helhetlig vurdering", startPage: 80 },
+                { id: "avslutning", title: "Avslutning", startPage: 83 }
+            ]
+        };
+
+        // State
+        let currentPage = 1;
+        let currentView = 'grid';
+        let fullscreenZoom = 1;
+        let isFullscreen = false;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderChapterNav();
+            renderGridView();
+            renderPageDots();
+            setupEventListeners();
+        });
+
+        // Render chapter navigation
+        function renderChapterNav() {
+            const nav = document.getElementById('chapterNav');
+            nav.innerHTML = report.chapters.map(ch =>
+                `<button class="chapter-btn" data-page="${ch.startPage}" onclick="goToPage(${ch.startPage})">${ch.title}</button>`
+            ).join('');
+        }
+
+        // Render grid view
+        function renderGridView() {
+            const grid = document.getElementById('gridView');
+            let html = '';
+
+            for (let page = 1; page <= report.totalPages; page++) {
+                // Check if this is a chapter start
+                const chapter = report.chapters.find(ch => ch.startPage === page);
+                if (chapter && page > 1) {
+                    html += `<div class="chapter-divider">${chapter.title}</div>`;
+                }
+
+                html += `
+                    <div class="page-card" onclick="openFullscreen(${page})">
+                        <img src="${report.imageFolder}/page_${String(page).padStart(2, '0')}.jpg"
+                             alt="Side ${page}" loading="lazy">
+                        <span class="page-number">${page}</span>
+                    </div>
+                `;
+            }
+
+            grid.innerHTML = html;
+        }
+
+        // Render page dots for fullscreen
+        function renderPageDots() {
+            const dots = document.getElementById('pageDots');
+            const chapterStarts = report.chapters.map(ch => ch.startPage);
+
+            dots.innerHTML = Array.from({ length: report.totalPages }, (_, i) => {
+                const page = i + 1;
+                const isChapterStart = chapterStarts.includes(page);
+                return `<div class="page-dot ${isChapterStart ? 'chapter-start' : ''}"
+                            data-page="${page}" onclick="goToFullscreenPage(${page})"></div>`;
+            }).join('');
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // View toggle
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentView = btn.dataset.view;
+                    updateView();
+                });
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (isFullscreen) {
+                    switch(e.key) {
+                        case 'ArrowLeft': navigateFullscreen(-1); break;
+                        case 'ArrowRight': navigateFullscreen(1); break;
+                        case 'Escape': closeFullscreen(); break;
+                        case '+': case '=': zoomIn(); break;
+                        case '-': zoomOut(); break;
+                        case '0': resetZoom(); break;
+                    }
+                } else {
+                    switch(e.key) {
+                        case 'ArrowLeft': if (currentView === 'single') navigatePage(-1); break;
+                        case 'ArrowRight': if (currentView === 'single') navigatePage(1); break;
+                        case 'f': case 'F': openFullscreen(currentPage); break;
+                    }
+                }
+            });
+
+            // Mouse wheel zoom in fullscreen
+            document.getElementById('fullscreenContent').addEventListener('wheel', (e) => {
+                if (isFullscreen && e.ctrlKey) {
+                    e.preventDefault();
+                    if (e.deltaY < 0) zoomIn();
+                    else zoomOut();
+                }
+            });
+        }
+
+        // Update view
+        function updateView() {
+            const gridView = document.getElementById('gridView');
+            const singleView = document.getElementById('singleView');
+
+            if (currentView === 'grid') {
+                gridView.classList.remove('hidden');
+                singleView.classList.remove('active');
+            } else {
+                gridView.classList.add('hidden');
+                singleView.classList.add('active');
+                updateSingleView();
+            }
+        }
+
+        // Update single page view
+        function updateSingleView() {
+            const img = document.getElementById('singlePageImg');
+            const indicator = document.getElementById('pageIndicator');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            img.src = `${report.imageFolder}/page_${String(currentPage).padStart(2, '0')}.jpg`;
+            indicator.textContent = `Side ${currentPage} av ${report.totalPages}`;
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === report.totalPages;
+        }
+
+        // Navigate pages
+        function navigatePage(direction) {
+            const newPage = currentPage + direction;
+            if (newPage >= 1 && newPage <= report.totalPages) {
+                currentPage = newPage;
+                updateSingleView();
+            }
+        }
+
+        // Go to specific page
+        function goToPage(page) {
+            currentPage = page;
+            if (currentView === 'single') {
+                updateSingleView();
+            } else {
+                // Scroll to page in grid
+                const cards = document.querySelectorAll('.page-card');
+                if (cards[page - 1]) {
+                    cards[page - 1].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            // Update chapter buttons
+            document.querySelectorAll('.chapter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.dataset.page) === page) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Fullscreen functions
+        function openFullscreen(page) {
+            isFullscreen = true;
+            currentPage = page;
+            const modal = document.getElementById('fullscreenModal');
+            modal.classList.add('active');
+            updateFullscreenView();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFullscreen() {
+            isFullscreen = false;
+            const modal = document.getElementById('fullscreenModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            resetZoom();
+        }
+
+        function updateFullscreenView() {
+            const img = document.getElementById('fullscreenImg');
+            const title = document.getElementById('fullscreenTitle');
+
+            img.src = `${report.imageFolder}/page_${String(currentPage).padStart(2, '0')}.jpg`;
+
+            // Find chapter name
+            let chapterName = '';
+            for (let i = report.chapters.length - 1; i >= 0; i--) {
+                if (currentPage >= report.chapters[i].startPage) {
+                    chapterName = report.chapters[i].title;
+                    break;
+                }
+            }
+            title.textContent = `${chapterName} - Side ${currentPage} av ${report.totalPages}`;
+
+            // Update dots
+            document.querySelectorAll('.page-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i + 1 === currentPage);
+            });
+        }
+
+        function navigateFullscreen(direction) {
+            const newPage = currentPage + direction;
+            if (newPage >= 1 && newPage <= report.totalPages) {
+                currentPage = newPage;
+                updateFullscreenView();
+            }
+        }
+
+        function goToFullscreenPage(page) {
+            currentPage = page;
+            updateFullscreenView();
+        }
+
+        // Zoom functions
+        function zoomIn() {
+            fullscreenZoom = Math.min(fullscreenZoom + 0.25, 3);
+            applyZoom();
+        }
+
+        function zoomOut() {
+            fullscreenZoom = Math.max(fullscreenZoom - 0.25, 0.5);
+            applyZoom();
+        }
+
+        function resetZoom() {
+            fullscreenZoom = 1;
+            applyZoom();
+        }
+
+        function applyZoom() {
+            const img = document.getElementById('fullscreenImg');
+            img.style.transform = `scale(${fullscreenZoom})`;
+            document.getElementById('zoomLevel').textContent = `${Math.round(fullscreenZoom * 100)}%`;
+        }
+    </script>
+</body>
+</html>

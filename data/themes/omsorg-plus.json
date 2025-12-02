@@ -1,0 +1,494 @@
+{
+  "metadata": {
+    "version": "3.0",
+    "created": "2025-11-21",
+    "updated": "2025-12-02",
+    "description": "Komplett Omsorg+ konseptdata for Hovfaret 13",
+    "source": "R21 Arkitekter presentasjon 21. mai 2025, Husbanken krav, Oslo kommune data",
+    "data_quality": "HIGH - Verifisert mot originaldokumenter"
+  },
+
+  "concept": {
+    "name": "Omsorg+ Eldreomsorgsboliger",
+    "name_en": "Omsorg+ Senior Care Housing",
+    "purpose": "70-100 samlokaliserte omsorgsboliger med fellesarealer og service",
+    "target_group": {
+      "description": "Eldre over 67 år med behov for heldøgns helse- og sosialtjenester",
+      "age_minimum": 67,
+      "care_level": "24-hour health and social services",
+      "eligibility": "Vedtak på hjemmetjenester fra bydelen"
+    },
+    "key_features": [
+      "Fellesrom for sosialisering i hver boligetasje",
+      "Servicearealer (kafé, aktivitetsrom, bibliotek)",
+      "Døgnbemannet husverttjeneste",
+      "Middagsservering alle dager i uken året rundt",
+      "Hjemmetjenestebase i bygget",
+      "Universell utforming i alle leiligheter"
+    ],
+    "regulatory_framework": "Husbanken krav til boliger, serviceareal og sosiale møteplasser",
+    "ownership_model": "Typically rental or borettslag with municipal partnership",
+    "collaborators": [
+      "Urbania Eiendom AS",
+      "R21 Arkitekter",
+      "Natural State"
+    ]
+  },
+
+  "proposed_design": {
+    "scenario": "Scenario 3 - Rehabilitering med 3-etasjes påbygg",
+    "architect": "R21 Arkitekter",
+    "unit_count": 73,
+    "total_bta_m2": 8472,
+    "floor_distribution": {
+      "existing_building": {
+        "basement_2": "Parkering, boder, teknisk",
+        "basement_1": "Treningsrom, sykkelparkering, boder",
+        "ground_floor": "Resepsjon, kafé/restaurant, tjenester, hjemmetjenestebase",
+        "floor_1_to_5": "Omsorg+ leiligheter (48 enheter)"
+      },
+      "extension": {
+        "floor_6_to_8": "Omsorg+ leiligheter (25 enheter)",
+        "roof": "Felles takterrasse med plantekasser"
+      }
+    }
+  },
+
+  "units": [
+    {
+      "id": "single_42",
+      "type": "2 roms enkeltrom",
+      "name_no": "Enkeltrom",
+      "total_area_m2": 42.1,
+      "distribution_percent": 90,
+      "target_occupants": 1,
+      "count_in_project": 66,
+      "rooms": {
+        "living_room_kitchen": {
+          "area_m2": 18.2,
+          "features": [
+            "Spisebord for 2-4 personer",
+            "Liten sofagruppe med TV-område",
+            "Skrivebord for PC",
+            "Minimum 3 løpemeter kjøkkeninnredning",
+            "Kjøleskap med frysedel",
+            "Komfyr med komfyrvakt",
+            "Oppvaskmaskin",
+            "Kjøkkenventilator med lys",
+            "Uttrekkbar kildesorteringsmodul"
+          ]
+        },
+        "bedroom": {
+          "area_m2": 15.6,
+          "features": [
+            "Enkelseng 1.0m x 2.0m",
+            "Tilrettelagt for pleiestilling",
+            "1 løpemeter garderobe (2m høy, 60cm dyp)",
+            "Visuell kontakt med toalett mulig",
+            "Forsterket tak for takheis"
+          ]
+        },
+        "bathroom": {
+          "area_m2": 6.9,
+          "features": [
+            "Rullestoltilpasset",
+            "Nedfellbare støttehåndtak ved toalett",
+            "Trinnfri dusjsone",
+            "Plass til vaskemaskin/tørketrommel",
+            "Gulvvarme",
+            "Tilrettelagt for spyl/tørk-toalett"
+          ]
+        },
+        "entrance": {
+          "area_m2": 7.8,
+          "features": [
+            "Garderobe for yttertøy",
+            "Skooppbevaring",
+            "Plass til rullator"
+          ]
+        },
+        "balcony": {
+          "area_m2": 8.1,
+          "features": [
+            "Trinnfri adkomst",
+            "Delvis overdekket",
+            "Plass til sittegruppe for 2"
+          ]
+        }
+      }
+    },
+    {
+      "id": "double_66",
+      "type": "2 roms dobbeltrom",
+      "name_no": "Dobbeltrom",
+      "total_area_m2": 66.5,
+      "distribution_percent": 10,
+      "target_occupants": 2,
+      "count_in_project": 7,
+      "rooms": {
+        "living_room_kitchen": {
+          "area_m2": 32.2,
+          "features": [
+            "Spisebord for 4-6 personer",
+            "Full sofagruppe med TV-område",
+            "Skrivebord for PC",
+            "Minimum 3 løpemeter kjøkkeninnredning",
+            "Stort kjøleskap med frysedel",
+            "Komfyr med komfyrvakt",
+            "Oppvaskmaskin",
+            "Kjøkkenventilator med lys",
+            "Uttrekkbar kildesorteringsmodul"
+          ]
+        },
+        "bedroom": {
+          "area_m2": 18.0,
+          "features": [
+            "Dobbeltseng 1.8m x 2.0m",
+            "2 løpemeter garderobe",
+            "Tilrettelagt for pleiestilling",
+            "Forsterket tak for takheis"
+          ]
+        },
+        "bathroom": {
+          "area_m2": 6.9,
+          "features": [
+            "Rullestoltilpasset",
+            "Nedfellbare støttehåndtak ved toalett",
+            "Trinnfri dusjsone",
+            "Plass til vaskemaskin/tørketrommel",
+            "Gulvvarme",
+            "Tilrettelagt for spyl/tørk-toalett"
+          ]
+        },
+        "balcony": {
+          "area_m2": 29.0,
+          "features": [
+            "Trinnfri adkomst",
+            "Delvis overdekket",
+            "Plass til større sittegruppe og spisebord"
+          ]
+        }
+      }
+    }
+  ],
+
+  "areas": {
+    "hovfaret_13": {
+      "units_bra_m2": 2958,
+      "units_percent": 56,
+      "balconies_m2": 662,
+      "service_areas_m2": 2068,
+      "service_percent": 31,
+      "communication_technical_m2": 834,
+      "communication_technical_percent": 13,
+      "basement_bta_m2": 2400,
+      "basement_bike_storage_bra_m2": 624,
+      "basement_parking_bra_m2": 742
+    },
+    "typical_100_unit": {
+      "units_area_m2_range": "5000-5500",
+      "service_areas_m2_range": "1000-1300",
+      "total_building_m2_range": "6500-7300",
+      "units_percent_range": "75-80",
+      "service_percent_range": "15-20",
+      "communication_percent": 5
+    },
+    "comparison_note": "Hovfaret 13 har 31% serviceareal vs 15-20% typisk - gir bedre servicetilbud"
+  },
+
+  "floors": [
+    {
+      "floor": "U2",
+      "name_no": "Kjeller 2",
+      "type": "technical",
+      "functions": [
+        "Redskapsbod",
+        "Vaktmesterverksted",
+        "Heis",
+        "Maskinrom for heis",
+        "Ventilasjonsrom",
+        "Hobbyrom/Verksted"
+      ]
+    },
+    {
+      "floor": "U1",
+      "name_no": "Kjeller 1",
+      "type": "storage_activity",
+      "functions": ["Trim/Treningsrom", "Boder/Sykkelparkering", "Ventilasjonsrom"],
+      "bike_storage_m2": 624,
+      "parking_m2": 742
+    },
+    {
+      "floor": "1",
+      "name_no": "1. etasje",
+      "type": "service",
+      "service_area_m2": 125.9,
+      "functions": {
+        "entrance": ["Vestibyle", "Inngang"],
+        "cafe": ["Kjøkken", "Kafé"],
+        "activities": ["Bibliotek", "Aktivitetsrom"],
+        "services": ["Kontor", "Møterom", "Fysioterapi", "Fotpleierom", "Frisør"],
+        "outdoor": ["Eksisterende terrasse"]
+      }
+    },
+    {
+      "floor": "2-4",
+      "name_no": "2.-4. etasje",
+      "type": "residential",
+      "units_per_floor": 12,
+      "unit_distribution": {
+        "42.1m2": 11,
+        "77.7m2": 1
+      },
+      "common_area_m2": 62.6
+    },
+    {
+      "floor": "5",
+      "name_no": "5. etasje",
+      "type": "residential",
+      "units_per_floor": 12,
+      "unit_distribution": {
+        "42.1m2": 11,
+        "77.7m2": 1
+      },
+      "common_area_m2": 72.6
+    },
+    {
+      "floor": "6-8",
+      "name_no": "6.-8. etasje (påbygg)",
+      "type": "residential",
+      "units_per_floor": 12,
+      "unit_distribution": {
+        "42.1m2": 11,
+        "66.5m2": 1
+      },
+      "common_area_m2": 72.6
+    },
+    {
+      "floor": "roof",
+      "name_no": "Takterrasse",
+      "type": "common",
+      "functions": ["Felles takterrasse", "Plantekasser", "Sittegrupper"],
+      "area_m2": 72.6
+    }
+  ],
+
+  "common_facilities": {
+    "aktivitetssenter": {
+      "components": [
+        {"name": "Aktivitetsrom", "capacity_persons": "10-20"},
+        {"name": "Hobbyverksted", "capacity_persons": 20},
+        {"name": "Møterom", "capacity_persons": "8-10"},
+        {"name": "Bibliotek/musikkrom", "capacity_persons": 10},
+        {"name": "Trim/treningsrom", "capacity_persons": 10, "location": "Kjeller 1"}
+      ]
+    },
+    "cafe": {
+      "service": "Middagsservering alle dager året rundt",
+      "components": [
+        "Kjøkken for matproduksjon",
+        "Serveringsområde",
+        "Spise/oppholdsområde",
+        "Lager for matvarer",
+        "Oppvaskområde"
+      ]
+    },
+    "servicedel": {
+      "components": [
+        {"name": "Fysioterapi", "type": "healthcare"},
+        {"name": "Frisørsalong", "minimum_capacity": 3},
+        {"name": "Fotpleierom", "type": "healthcare"}
+      ]
+    },
+    "social_meeting_places": {
+      "location": "I hver etasje",
+      "description": "Fellesrom ved heis/trapp for sosialisering"
+    },
+    "elevators": {
+      "minimum": 2,
+      "size": "Båre/rullestol-dimensjonert",
+      "emergency_power": true
+    }
+  },
+
+  "requirements": {
+    "husbanken_compliance": {
+      "status": "FULL_COMPLIANCE",
+      "total_categories": 12,
+      "categories_compliant": 12
+    },
+    "location": {
+      "status": "COMPLIANT",
+      "items": [
+        "Nær kollektivtransport",
+        "Nær kommersiell og offentlig service",
+        "Mulighet for biltransport helt frem til bygningen"
+      ]
+    },
+    "building_construction": {
+      "status": "COMPLIANT",
+      "items": [
+        "Areal for oppbevaring og lading av rullestol og hjelpemidler",
+        "Forsterket tak mellom soveplass/stue og bad for eventuell takheis",
+        "Korridorer utformet for spaserturer og sosiale møteplasser",
+        "Tekniske sjakter tilgjengelige fra utsiden av leiligheten",
+        "Alle dører skal være lette å åpne/lukke for beboere"
+      ]
+    },
+    "installations": {
+      "status": "COMPLIANT",
+      "items": [
+        {"system": "Temperaturstyring", "specification": "22-26°C i beboerområder"},
+        {"system": "Kjøleanlegg", "specification": "Hele bygget"},
+        {"system": "Trådløst nettverk", "specification": "WiFi i hele bygget"},
+        {"system": "Ledelys", "specification": "Mellom soverom og bad om natten"},
+        {"system": "Lekkasjedeteksjon", "specification": "Automatisk varsling ved vannlekkasje"},
+        {"system": "Signalsystem", "specification": "Sensorer for dør, seng, komfyr, vindu"}
+      ]
+    },
+    "energy": {
+      "status": "COMPLIANT",
+      "minimum_standard": "Passivhus",
+      "preferred_standard": "Plusshus",
+      "items": [
+        "System for vannbåren varme",
+        "Lokal energiproduksjon der det er mulig",
+        "Bærekraftige materialvalg"
+      ]
+    },
+    "security": {
+      "status": "COMPLIANT",
+      "items": [
+        "Soneinndeling med adgangskontroll",
+        "Elektronisk låssystem tilrettelagt for fremtidig integrasjon med kommunale systemer"
+      ],
+      "zones": ["Offentlig", "Beboer", "Service", "Teknisk"]
+    }
+  },
+
+  "stakeholder_engagement": {
+    "bydel_ullern": {
+      "contacts": [
+        {
+          "name": "Ingrid Hopp",
+          "title": "Bydelsdirektør",
+          "engagement": "Innledende samtaler mai 2025"
+        },
+        {
+          "name": "Bente Otto",
+          "title": "Avdelingsdirektør - Helse, mestring og tilrettelagte tjenester",
+          "engagement": "Møte 5. mai 2025 - detaljerte Omsorg+ diskusjoner"
+        },
+        {
+          "name": "Tore Strandskog",
+          "title": "Official",
+          "engagement": "Møte 22. mai 2025"
+        }
+      ],
+      "interest_level": "Høy - bydelen har dokumentert behov for eldreboliger",
+      "key_discussions": [
+        "Boligbehov: 70+ enheter trengs de kommende årene",
+        "Tidslinjeavklaring med prosjektleveranse",
+        "Servicemodell og bemanning",
+        "Husleienivåer og rimelighet"
+      ]
+    }
+  },
+
+  "financing": {
+    "husbanken_support": {
+      "program": "Heldøgns omsorgsboliger (HDO)",
+      "coverage": "Inntil 50% av byggekostnader for kvalifiserende prosjekter",
+      "requirement": "Kommunal omsorgsavtale"
+    }
+  },
+
+  "comparables": [
+    {"name": "Diakonveien Omsorg+", "address": "Diakonveien 2, 0370 OSLO", "phone": "23 47 60 97", "area": "Majorstuen"},
+    {"name": "Ensjøtunet Omsorg+", "address": "Malerhaugveien 10 b, 0661 OSLO", "area": "Ensjø"},
+    {"name": "Grorudhuset Omsorg+", "address": "Martin Skatvedts vei 1, 0950 OSLO", "phone": "90 20 17 36", "area": "Grorud"},
+    {"name": "Kampen Omsorg+", "address": "Brinken 35, 0654 OSLO", "phone": "47 47 52 99", "area": "Kampen"},
+    {"name": "Ljabrubakken Omsorg+", "address": "Ljabrubakken 9, 1165 OSLO", "phone": "47 66 55 71", "area": "Nordstrand"},
+    {"name": "Lovisenberg Omsorg+", "address": "Lovisenberggata 5, 0456 OSLO", "phone": "45 22 31 14", "area": "St. Hanshaugen"},
+    {"name": "Myrer Omsorg+", "address": "Hareveien 10, 0491 OSLO", "phone": "94 82 42 02", "area": "Nydalen"},
+    {"name": "Rodeløkka Omsorg+", "address": "Helgesens gate 58, 0558 OSLO", "phone": "23 42 36 50", "area": "Grünerløkka"},
+    {"name": "Skøyen terrasse Omsorg+", "address": "Skøyen terrasse 1, 0276 OSLO", "area": "Skøyen", "note": "Nærmeste sammenlignbare - eksisterende anlegg på Skøyen"},
+    {"name": "Teisen Omsorg+", "address": "Teisenveien 5F, 0664 Oslo", "area": "Teisen"},
+    {"name": "Treschows Hus Omsorg+", "address": "Treschows gate 2A, 0477 OSLO", "area": "Sagene"},
+    {"name": "Utmarkveien Omsorg+", "address": "Utmarkveien 2, 0689 OSLO", "phone": "22 26 26 43", "area": "Lambertseter"},
+    {"name": "Årvoll Omsorg+", "address": "Øivinds vei 2, 0590 OSLO", "phone": "23 43 93 00", "area": "Årvoll"}
+  ],
+
+  "market_position": {
+    "total_oslo_facilities": 13,
+    "hovfaret_13_position": 14,
+    "skoyen_area_facilities": 1,
+    "hovfaret_13_skoyen_position": 2,
+    "key_insight": "Hovfaret 13 blir det 14. Omsorg+-anlegget i Oslo, og det 2. på Skøyen (etter Skøyen terrasse)"
+  },
+
+  "competitive_advantages": {
+    "vs_demolition_rebuild": [
+      "Raskere levering - ingen riving/fundamentering",
+      "Lavere totalkostnad",
+      "Bedre miljøprofil (48% lavere CO₂)",
+      "Bevarer eksisterende samfunnstilknytning"
+    ],
+    "vs_other_sites": [
+      "Sentral beliggenhet med kollektivtilgang",
+      "Kvalitets uteområde ved Hoffselva",
+      "Bygningsstruktur allerede egnet",
+      "Utvikler (Urbania) forpliktet til sosial verdi"
+    ],
+    "key_differentiators": {
+      "service_area_ratio": {
+        "hovfaret_13": "31%",
+        "typical": "15-20%",
+        "advantage": "Mer omfattende servicetilbud"
+      },
+      "energy_standard": {
+        "minimum": "Passivhus",
+        "target": "Plusshus",
+        "advantage": "Lavere driftskostnader, bærekraft"
+      },
+      "location": {
+        "area": "Skøyen",
+        "transit": "Skøyen stasjon < 500m",
+        "advantage": "Sentralt, etablert område med full infrastruktur"
+      }
+    }
+  },
+
+  "key_documents": [
+    {
+      "title": "250521 presentasjon (Omsorg+)",
+      "date": "2025-05-21",
+      "author": "R21 Arkitekter",
+      "description": "73-enheters Omsorg+ konseptpresentasjon",
+      "pages": 10
+    },
+    {
+      "title": "Presentasjon Avdelingsdirektør - Helse, mestring og tilrettelagte tjenester",
+      "date": "2025",
+      "author": "Bydel Ullern",
+      "description": "Bydelens behovspresentasjon"
+    },
+    {
+      "title": "Forskrift om tildeling av bolig i Omsorg+",
+      "source": "Lovdata",
+      "description": "Oslo kommunes forskrift for Omsorg+ tildeling"
+    },
+    {
+      "title": "Oversikt over Omsorg+-boliger - Oslo kommune",
+      "source": "Oslo kommune",
+      "description": "Komplett liste over eksisterende Omsorg+ anlegg"
+    }
+  ],
+
+  "next_steps": [
+    "Fortsette dialog med Bydel Ullern om partnerskapsmodell",
+    "Utvikle detaljert finansmodell med Husbanken-støtte",
+    "Finjustere design basert på kommunekrav",
+    "Inkludere Omsorg+-scenario fremtredende i rammesøknad"
+  ]
+}

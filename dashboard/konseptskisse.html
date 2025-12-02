@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konseptskisser - Hovfaret 13</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #3b82f6;
+        }
+
+        .header h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .header-badge {
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Main content */
+        .main {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            opacity: 0.9;
+            font-size: 1rem;
+            max-width: 600px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .hero-stat-label {
+            font-size: 0.75rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Timeline navigation */
+        .timeline-nav {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .timeline-btn {
+            padding: 0.625rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background: white;
+            color: #64748b;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-btn:hover {
+            border-color: #3b82f6;
+            color: #3b82f6;
+        }
+
+        .timeline-btn.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+        }
+
+        .timeline-btn .date {
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        /* Sketch sections */
+        .sketch-section {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .sketch-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .sketch-header:hover {
+            background: #f8fafc;
+        }
+
+        .sketch-info h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .sketch-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .sketch-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .sketch-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .sketch-badge.current {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .sketch-badge.archived {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+
+        .sketch-badge.draft {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .expand-icon {
+            color: #94a3b8;
+            transition: transform 0.3s;
+            font-size: 1.25rem;
+        }
+
+        .sketch-section.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Pages grid */
+        .pages-container {
+            display: none;
+            padding: 1.5rem;
+            background: #f8fafc;
+        }
+
+        .sketch-section.expanded .pages-container {
+            display: block;
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 1200px) {
+            .pages-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .pages-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .pages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .page-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .page-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .page-card img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+        }
+
+        .page-card .page-num {
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #64748b;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* Placeholder for missing images */
+        .page-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+        }
+
+        .page-placeholder svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 0.5rem;
+            opacity: 0.5;
+        }
+
+        .page-placeholder span {
+            font-size: 0.75rem;
+        }
+
+        /* Fullscreen modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            padding: 1rem;
+        }
+
+        .modal.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            color: white;
+        }
+
+        .modal-title {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .modal-controls {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .modal-btn {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .modal-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .modal-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .modal-nav:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .modal-nav.prev {
+            left: 1rem;
+        }
+
+        .modal-nav.next {
+            right: 1rem;
+        }
+
+        .zoom-level {
+            color: white;
+            font-size: 0.875rem;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #64748b;
+        }
+
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .empty-state p {
+            font-size: 0.875rem;
+        }
+
+        .empty-state code {
+            background: #f1f5f9;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Loading spinner */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid #e2e8f0;
+            border-top-color: #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Notes section */
+        .sketch-notes {
+            padding: 1rem 1.5rem;
+            background: #fffbeb;
+            border-top: 1px solid #fde68a;
+            font-size: 0.875rem;
+            color: #92400e;
+        }
+
+        .sketch-notes strong {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Tilbake til dashboard
+            </a>
+            <h1>Konseptskisser</h1>
+            <span class="header-badge">Historisk oversikt</span>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h2>Konseptskisse-historikk</h2>
+            <p>Oversikt over alle konseptskisser utviklet gjennom prosjektperioden. Brukes som grunnlag for iterasjon mot Konseptskisse 2.0.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value" id="total-sketches">0</div>
+                    <div class="hero-stat-label">Konseptskisser</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value" id="total-pages">0</div>
+                    <div class="hero-stat-label">Totalt sider</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value" id="date-range">-</div>
+                    <div class="hero-stat-label">Tidsperiode</div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="timeline-nav" id="timeline-nav">
+            <!-- Populated by JavaScript -->
+        </nav>
+
+        <div id="sketches-container">
+            <div class="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Fullscreen modal -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <span class="modal-title" id="modal-title">Side 1 av 10</span>
+            <div class="modal-controls">
+                <button class="modal-btn" id="zoom-out" title="Zoom ut (-)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M8 11h6"/>
+                    </svg>
+                </button>
+                <span class="zoom-level" id="zoom-level">100%</span>
+                <button class="modal-btn" id="zoom-in" title="Zoom inn (+)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/>
+                    </svg>
+                </button>
+                <button class="modal-btn" id="modal-close" title="Lukk (ESC)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <img id="modal-image" class="modal-image" src="" alt="">
+        </div>
+        <button class="modal-nav prev" id="modal-prev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="modal-nav next" id="modal-next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        // Configuration - Add your concept sketches here
+        // Each sketch needs: id, title, date, status, folder, pages, and optional notes
+        const sketchesConfig = [
+            // Example structure - replace with actual data
+            /*
+            {
+                id: "konsept-v1",
+                title: "Konseptskisse v1.0",
+                date: "2024-03-15",
+                status: "archived", // archived, draft, current
+                author: "R21 Arkitekter",
+                folder: "assets/konseptskisser/v1",
+                pages: 12,
+                notes: "Første utkast med fokus på Omsorg+ konsept"
+            },
+            */
+        ];
+
+        // State
+        let currentSketch = null;
+        let currentPageIndex = 0;
+        let zoomLevel = 1;
+        const zoomLevels = [0.5, 0.75, 1, 1.25, 1.5, 2, 3];
+
+        // DOM elements
+        const container = document.getElementById('sketches-container');
+        const timelineNav = document.getElementById('timeline-nav');
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalTitle = document.getElementById('modal-title');
+        const zoomLevelDisplay = document.getElementById('zoom-level');
+
+        // Initialize
+        function init() {
+            if (sketchesConfig.length === 0) {
+                renderEmptyState();
+            } else {
+                renderSketches();
+                renderTimelineNav();
+                updateStats();
+            }
+            setupEventListeners();
+        }
+
+        function renderEmptyState() {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/>
+                        <path d="M8.5 10a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                    <h3>Ingen konseptskisser lagt til ennå</h3>
+                    <p>Legg til JPG-filer i mappene og oppdater konfigurasjonen.</p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Mappestruktur:</strong><br>
+                        <code>assets/konseptskisser/[versjon]/page_01.jpg</code>
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Oppdater <code>sketchesConfig</code> i denne filen for å legge til konseptskisser.
+                    </p>
+                </div>
+            `;
+        }
+
+        function renderSketches() {
+            container.innerHTML = sketchesConfig.map(sketch => `
+                <section class="sketch-section" data-sketch-id="${sketch.id}">
+                    <div class="sketch-header" onclick="toggleSketch('${sketch.id}')">
+                        <div class="sketch-info">
+                            <h3>${sketch.title}</h3>
+                            <div class="sketch-meta">
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    ${formatDate(sketch.date)}
+                                </span>
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                        <polyline points="14 2 14 8 20 8"/>
+                                    </svg>
+                                    ${sketch.pages} sider
+                                </span>
+                                ${sketch.author ? `<span>${sketch.author}</span>` : ''}
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span class="sketch-badge ${sketch.status}">${getStatusLabel(sketch.status)}</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    ${sketch.notes ? `<div class="sketch-notes"><strong>Notater:</strong> ${sketch.notes}</div>` : ''}
+                    <div class="pages-container">
+                        <div class="pages-grid" id="pages-${sketch.id}">
+                            ${renderPages(sketch)}
+                        </div>
+                    </div>
+                </section>
+            `).join('');
+        }
+
+        function renderPages(sketch) {
+            let html = '';
+            for (let i = 1; i <= sketch.pages; i++) {
+                const pageNum = String(i).padStart(2, '0');
+                const imgSrc = `${sketch.folder}/page_${pageNum}.jpg`;
+                html += `
+                    <div class="page-card" onclick="openModal('${sketch.id}', ${i - 1})">
+                        <img src="${imgSrc}" alt="Side ${i}"
+                             onerror="this.parentElement.innerHTML='<div class=\\'page-placeholder\\'><svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'1.5\\'><path d=\\'M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z\\'/><path d=\\'M8.5 10a1.5 1.5 0 100-3 1.5 1.5 0 000 3z\\'/><path d=\\'M21 15l-5-5L5 21\\'/></svg><span>Mangler</span></div><div class=\\'page-num\\'>Side ${i}</div>'">
+                        <div class="page-num">Side ${i}</div>
+                    </div>
+                `;
+            }
+            return html;
+        }
+
+        function renderTimelineNav() {
+            if (sketchesConfig.length <= 1) {
+                timelineNav.style.display = 'none';
+                return;
+            }
+
+            timelineNav.innerHTML = `
+                <button class="timeline-btn active" onclick="scrollToSketch('all')">
+                    Alle
+                </button>
+                ${sketchesConfig.map(sketch => `
+                    <button class="timeline-btn" onclick="scrollToSketch('${sketch.id}')">
+                        ${sketch.title}
+                        <span class="date">${formatDate(sketch.date)}</span>
+                    </button>
+                `).join('')}
+            `;
+        }
+
+        function updateStats() {
+            document.getElementById('total-sketches').textContent = sketchesConfig.length;
+            document.getElementById('total-pages').textContent = sketchesConfig.reduce((sum, s) => sum + s.pages, 0);
+
+            if (sketchesConfig.length > 0) {
+                const dates = sketchesConfig.map(s => s.date).sort();
+                const first = new Date(dates[0]);
+                const last = new Date(dates[dates.length - 1]);
+                const months = Math.round((last - first) / (1000 * 60 * 60 * 24 * 30));
+                document.getElementById('date-range').textContent = months > 0 ? `${months} mnd` : '< 1 mnd';
+            }
+        }
+
+        function toggleSketch(id) {
+            const section = document.querySelector(`[data-sketch-id="${id}"]`);
+            section.classList.toggle('expanded');
+        }
+
+        function scrollToSketch(id) {
+            // Update nav buttons
+            document.querySelectorAll('.timeline-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (id === 'all') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+
+            const section = document.querySelector(`[data-sketch-id="${id}"]`);
+            if (section) {
+                section.classList.add('expanded');
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function openModal(sketchId, pageIndex) {
+            currentSketch = sketchesConfig.find(s => s.id === sketchId);
+            currentPageIndex = pageIndex;
+            zoomLevel = 1;
+
+            updateModalImage();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateModalImage() {
+            const pageNum = String(currentPageIndex + 1).padStart(2, '0');
+            const imgSrc = `${currentSketch.folder}/page_${pageNum}.jpg`;
+
+            modalImage.src = imgSrc;
+            modalImage.style.transform = `scale(${zoomLevel})`;
+            modalTitle.textContent = `${currentSketch.title} - Side ${currentPageIndex + 1} av ${currentSketch.pages}`;
+            zoomLevelDisplay.textContent = `${Math.round(zoomLevel * 100)}%`;
+        }
+
+        function navigateModal(direction) {
+            currentPageIndex += direction;
+            if (currentPageIndex < 0) currentPageIndex = currentSketch.pages - 1;
+            if (currentPageIndex >= currentSketch.pages) currentPageIndex = 0;
+            updateModalImage();
+        }
+
+        function changeZoom(direction) {
+            const currentIndex = zoomLevels.indexOf(zoomLevel);
+            let newIndex = currentIndex + direction;
+            newIndex = Math.max(0, Math.min(newIndex, zoomLevels.length - 1));
+            zoomLevel = zoomLevels[newIndex];
+            updateModalImage();
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('no-NO', { day: 'numeric', month: 'short', year: 'numeric' });
+        }
+
+        function getStatusLabel(status) {
+            const labels = {
+                'current': 'Gjeldende',
+                'archived': 'Arkivert',
+                'draft': 'Utkast'
+            };
+            return labels[status] || status;
+        }
+
+        function setupEventListeners() {
+            // Modal controls
+            document.getElementById('modal-close').addEventListener('click', closeModal);
+            document.getElementById('modal-prev').addEventListener('click', () => navigateModal(-1));
+            document.getElementById('modal-next').addEventListener('click', () => navigateModal(1));
+            document.getElementById('zoom-in').addEventListener('click', () => changeZoom(1));
+            document.getElementById('zoom-out').addEventListener('click', () => changeZoom(-1));
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!modal.classList.contains('active')) return;
+
+                switch(e.key) {
+                    case 'Escape': closeModal(); break;
+                    case 'ArrowLeft': navigateModal(-1); break;
+                    case 'ArrowRight': navigateModal(1); break;
+                    case '+': case '=': changeZoom(1); break;
+                    case '-': changeZoom(-1); break;
+                    case '0': zoomLevel = 1; updateModalImage(); break;
+                }
+            });
+
+            // Click outside to close
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal || e.target.classList.contains('modal-content')) {
+                    closeModal();
+                }
+            });
+        }
+
+        // Initialize on load
+        init();
+    </script>
+</body>
+</html>
