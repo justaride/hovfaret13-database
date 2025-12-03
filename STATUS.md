@@ -1,11 +1,51 @@
 # Project Status
 
 **Last Updated:** 2025-12-03
-**Status:** ✅ Phase 30 COMPLETE - Bærekraftsrapport 2.0 Arbeidsrom
+**Status:** ✅ Phase 31 COMPLETE - Konseptskisse 2.0 Kvalitetssikring
 
 ---
 
 ## Current Phase
+
+**Phase 31: Konseptskisse 2.0 Kvalitetssikring ✅ COMPLETE**
+
+Grundig gjennomgang og korrigering av konseptskisse-2.html med fokus på datanøyaktighet, språk og profesjonell fremstilling.
+
+### Datafeil korrigert
+| Element | Før | Etter |
+|---------|-----|-------|
+| Møter totalt | 69 | **70** |
+| Footer årstall | © 2024 | **© 2025** |
+| Bydelsbehov | 160 enheter | **150-200 enheter mot 2040** |
+| Leilighetsfordeling | 1-roms 47m² (23), 2-roms 57m² (44), 3-roms 72m² (6) | **Enkeltrom 42m² (66), Dobbeltrom 67m² (7)** |
+| Prosjektdatabase interessenter | 40 | **22 personer + 13 organisasjoner** |
+| Side 119 footer | 118 | **119** |
+| R21 slide data-page | 119 (duplikat) | **120** |
+| JavaScript pages array | Manglet 126 | **Inkluderer 126** |
+| Bruksendringssøknad status | "pågår" | **"sendt"** |
+| Konseptskisse 2.0 status | "Pågår" | **"Ferdig"** |
+
+### Språkforbedringer
+- "Droppe studiokontor-fasen" → "Gå forbi studiokontor-fasen"
+- "Markedsbehov for eldreboliger" → "Samfunnsbehovet for omsorgsboliger"
+- "Å la betongen stå" → "Å bevare bærekonstruksjonen"
+- "Implikasjoner" → "Konsekvenser"
+- "Energimerke-forbedring" → "Energiklasseforbedring"
+
+### Nytt innhold lagt til
+- James Lorentzen-møte (24. juni 2025) i interessent-timeline
+- Nordic Circle Hotspot integrert i interessentdialog-sliden
+- Husbanken 50% støtte spesifisert
+- BTA 8 472 m² lagt til i leilighetsfordeling
+- Kafé m/daglig middagsservering i Husbanken-krav
+- 20 måneder prosjektvarighet i oppsummering
+
+### Strukturelle forbedringer
+- Alle footer med korrekt årstall (2025)
+- Alle sidetall konsistente
+- Fellesarealer endret til "31% (>typisk 15-20%)"
+
+---
 
 **Phase 30: Bærekraftsrapport 2.0 Arbeidsrom ✅ COMPLETE**
 
