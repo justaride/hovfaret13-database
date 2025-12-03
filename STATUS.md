@@ -1,11 +1,27 @@
 # Project Status
 
 **Last Updated:** 2025-12-03
-**Status:** ✅ Phase 32 COMPLETE - Konseptskisse 2.0 Grafiske Elementer
+**Status:** ✅ Phase 33 COMPLETE - Bærekraftsrapport 2.0 Grafiske Elementer
 
 ---
 
 ## Current Phase
+
+**Phase 33: Bærekraftsrapport 2.0 Grafiske Elementer ✅ COMPLETE**
+
+Implementert 6 SVG/CSS-baserte infografikker i bærekraftsrapport-2.html arbeidsrommet.
+
+### Grafiske elementer implementert
+| Side | Element | Beskrivelse |
+|------|---------|-------------|
+| **84** | Hero-infografikk | 3 sirkeldiagrammer (møter, behov 46%, nabovarsel) + badges |
+| **86** | Strategidiagram | Gammel vs ny strategi med piler og besparelse-badge |
+| **88** | Interessent-tidslinje | Forbedret vertikal gradient-tidslinje med 6 hendelser |
+| **91** | Regulatorisk prosess | 3-stegs horisontal prosess med status-sirkler |
+| **93** | Etasjediagram + Husbanken | 8 etasjer visualisert + 12/12 radial progress |
+| **19** | Før/etter sammenligning | 70→160 med sirkler, pil og +129% badge |
+
+---
 
 **Phase 32: Konseptskisse 2.0 Grafiske Elementer ✅ COMPLETE**
 
