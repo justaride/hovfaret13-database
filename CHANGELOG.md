@@ -2,6 +2,43 @@
 
 All notable changes to this project database.
 
+## [2.44.0] - 2025-12-03
+
+### Phase 32: Konseptskisse 2.0 Grafiske Elementer
+
+**Status:** ✅ COMPLETE
+
+#### 5 SVG/CSS-baserte infografikker implementert
+
+Erstattet placeholder-bokser med profesjonelle datavisualiseringer.
+
+**Side 115 - Vertikal tidslinje:**
+- 6 milepæler (apr→nov 2025)
+- Fargekodede kategorier (blå/lilla/oransje/grønn)
+- Gradient-linje og prikker med box-shadow
+
+**Side 116 - Strategidiagram:**
+- Gammel strategi (gjennomstreket, faded)
+- Ny strategi med SVG-pil
+- "2-3 år raskere realisering" badge
+
+**Side 117 - Energimerke-skala:**
+- A-G skala med offisielle EU-farger
+- "I DAG" (F) og "MÅL" (C) markører
+- SVG-pil med "50% reduksjon"
+
+**Side 118 - CO₂ bar chart:**
+- 3 gradient-søyler (rød/grønn/blå)
+- Prosentvise besparelser (-48%, -22%)
+- Responsive høyder basert på data
+
+**Side 122 - Etasjediagram:**
+- 8 etasjer visualisert
+- Fargekoding: Takhage (grønn) / Nytt (mørk blå) / Rehab (lys blå) / Service (oransje)
+- Integrert i eksisterende three-column layout
+
+---
+
 ## [2.43.0] - 2025-12-03
 
 ### Phase 31: Konseptskisse 2.0 Kvalitetssikring
