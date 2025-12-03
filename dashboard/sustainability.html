@@ -935,6 +935,303 @@
       .main-content { padding: 0; }
       .section { break-inside: avoid; }
     }
+
+    /* === BÆREKRAFTSREISE SIDEBAR === */
+    .page-layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 1200px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+      .journey-sidebar {
+        order: -1;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+    }
+
+    .journey-sidebar {
+      position: sticky;
+      top: 80px;
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+      padding-right: 1rem;
+    }
+
+    .journey-sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .journey-sidebar::-webkit-scrollbar-track {
+      background: var(--bg-tertiary);
+      border-radius: 3px;
+    }
+
+    .journey-sidebar::-webkit-scrollbar-thumb {
+      background: var(--accent-green);
+      border-radius: 3px;
+    }
+
+    .journey-header {
+      background: linear-gradient(135deg, var(--accent-green) 0%, #059669 100%);
+      color: white;
+      padding: 1.25rem;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      margin-bottom: 0;
+    }
+
+    .journey-header h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .journey-header p {
+      font-size: 0.75rem;
+      opacity: 0.9;
+    }
+
+    .journey-stats {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .journey-stat {
+      text-align: center;
+    }
+
+    .journey-stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .journey-stat-label {
+      font-size: 0.65rem;
+      opacity: 0.8;
+    }
+
+    .journey-container {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-top: none;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      padding: 1rem;
+    }
+
+    .journey-timeline {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .journey-timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-green) 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+    }
+
+    .journey-item {
+      position: relative;
+      padding-bottom: 1.25rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .journey-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .journey-item:hover .journey-content {
+      background: var(--bg-tertiary);
+    }
+
+    .journey-dot {
+      position: absolute;
+      left: -20px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 3px solid var(--accent-green);
+      z-index: 1;
+    }
+
+    .journey-item.deliverable .journey-dot { border-color: var(--accent-blue); }
+    .journey-item.decision .journey-dot { border-color: var(--accent-purple); }
+    .journey-item.engagement .journey-dot { border-color: var(--accent-orange); }
+    .journey-item.technical .journey-dot { border-color: #64748b; }
+
+    .journey-content {
+      padding: 0.75rem;
+      border-radius: var(--radius-sm);
+      transition: background 0.2s;
+    }
+
+    .journey-date {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .journey-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .journey-desc {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      display: none;
+    }
+
+    .journey-item.expanded .journey-desc {
+      display: block;
+    }
+
+    .journey-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+      margin-top: 0.35rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .journey-tag.strategy { background: #dcfce7; color: #166534; }
+    .journey-tag.deliverable { background: #dbeafe; color: #1e40af; }
+    .journey-tag.technical { background: #f1f5f9; color: #475569; }
+    .journey-tag.decision { background: #f3e8ff; color: #7c3aed; }
+    .journey-tag.engagement { background: #fef3c7; color: #92400e; }
+    .journey-tag.regulatory { background: #fce7f3; color: #be185d; }
+    .journey-tag.partnership { background: #cffafe; color: #0e7490; }
+
+    .journey-metrics {
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-sm);
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    .journey-item.expanded .journey-metrics {
+      display: block;
+    }
+
+    .journey-metric-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      padding: 0.2rem 0;
+    }
+
+    .journey-metric-label {
+      color: var(--text-muted);
+    }
+
+    .journey-metric-value {
+      font-weight: 600;
+      color: var(--accent-green);
+    }
+
+    .main-column {
+      min-width: 0;
+    }
+
+    /* Year dividers in timeline */
+    .journey-year {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-green);
+      padding: 0.5rem 0;
+      margin-left: -24px;
+      padding-left: 24px;
+      background: linear-gradient(90deg, var(--accent-green-light) 0%, transparent 100%);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.5rem;
+    }
+
+    .journey-subtitle {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .journey-icon {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .journey-description {
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin-top: 0.25rem;
+    }
+
+    .journey-summary {
+      display: flex;
+      justify-content: space-around;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-top: none;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      padding: 1rem;
+      margin-top: 0;
+    }
+
+    .journey-summary-stat {
+      text-align: center;
+    }
+
+    .journey-summary-stat .stat-value {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-green);
+    }
+
+    .journey-summary-stat .stat-label {
+      display: block;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .journey-metrics .metric {
+      display: inline-block;
+      background: var(--accent-green-light);
+      color: var(--accent-green);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      margin-right: 0.25rem;
+    }
+
+    .journey-timeline {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-top: none;
+      padding: 1rem 1rem 1rem 2rem;
+      max-height: calc(100vh - 280px);
+      overflow-y: auto;
+    }
   </style>
 </head>
 <body>
@@ -955,9 +1252,36 @@
     </div>
   </header>
 
-  <main class="main-content">
-    <!-- Hero Section -->
-    <section class="hero">
+  <div class="page-layout">
+    <!-- Bærekraftsreise Sidebar -->
+    <aside class="journey-sidebar">
+      <div class="journey-header">
+        <h3>🌱 Bærekraftsreisen</h3>
+        <p class="journey-subtitle">25 måneder med bærekraftsarbeid</p>
+      </div>
+      <div class="journey-timeline" id="journey-timeline">
+        <!-- Timeline items loaded dynamically -->
+      </div>
+      <div class="journey-summary">
+        <div class="journey-summary-stat">
+          <span class="stat-value">17</span>
+          <span class="stat-label">Milepæler</span>
+        </div>
+        <div class="journey-summary-stat">
+          <span class="stat-value">48%</span>
+          <span class="stat-label">CO₂ spart</span>
+        </div>
+        <div class="journey-summary-stat">
+          <span class="stat-value">3</span>
+          <span class="stat-label">Rapporter</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-column">
+      <!-- Hero Section -->
+      <section class="hero">
       <h2 class="hero-title">Transformasjon sparer 48% CO₂</h2>
       <p class="hero-subtitle">Livsløpsanalyse viser at rehabilitering er betydelig bedre for klimaet enn riving og nybygg</p>
       <a href="sustainability-report-full.html" class="report-link-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #3d4a3a, #4a5a47); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; margin-bottom: 1.5rem; transition: all 0.2s; box-shadow: 0 4px 12px rgba(61,74,58,0.3);">
@@ -1225,7 +1549,8 @@
         </div>
       </div>
     </section>
-  </main>
+    </main>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -1550,6 +1875,74 @@
       });
     });
 
+    // JOURNEY DATA
+    const journeyData = [
+      { id: 's_001', date: '2023-11-21', type: 'foundation', title: 'Bærekraft som grunnprinsipp',
+        description: 'Første strategimøte etablerer bærekraft og sirkulær økonomi som kjerneargumentasjon.', category: 'strategy', icon: '🌱' },
+      { id: 's_002', date: '2024-03-11', type: 'strategy', title: 'Miljøgevinster som politisk verktøy',
+        description: 'Bærekraft etablert som hovedargument for områdeplan-endring.', category: 'strategy', icon: '📋' },
+      { id: 's_003', date: '2024-04-12', type: 'strategy', title: 'Referanseprosjekt posisjonert',
+        description: 'Strateginotat posisjonerer Hovfaret 13 som katalysator for bærekraftig byutvikling.', category: 'strategy', icon: '🎯' },
+      { id: 's_004', date: '2024-05-08', type: 'content', title: 'Sirkulære slides utviklet',
+        description: '11 strategiske hovedpunkter for sirkulær stedsutvikling.', category: 'content', icon: '♻️' },
+      { id: 's_005', date: '2024-05-30', type: 'analysis', title: 'Geoteknisk analyse startet',
+        description: 'Kvikkleire og grunnvannsforhold kartlagt - rehabilitering anbefalt.', category: 'technical', icon: '🔍' },
+      { id: 's_006', date: '2024-06-03', type: 'milestone', title: 'Energimerke F utstedt',
+        description: 'Nåværende energiforbruk: 232 kWh/m²/år dokumentert.', category: 'technical', icon: '⚡' },
+      { id: 's_007', date: '2024-12-11', type: 'milestone', title: 'Vill Energi-samarbeid',
+        description: 'Befaring med Vill Energi AS for teknisk energikartlegging.', category: 'technical', icon: '🤝' },
+      { id: 's_008', date: '2025-01-23', type: 'analysis', title: 'Miljørisiko kartlagt',
+        description: 'ROS-analyse og kvikkleirevurdering - rehabilitering avlaster området.', category: 'technical', icon: '⚠️' },
+      { id: 's_009', date: '2025-04-11', type: 'deliverable', title: 'Energikartlegging ferdig',
+        description: '14 siders rapport: 50% energireduksjon mulig, F → C.', category: 'deliverable', icon: '📊',
+        metrics: { rating: 'F → C', savings: '50%' } },
+      { id: 's_010', date: '2025-04-22', type: 'deliverable', title: 'Klimagassberegninger ferdig',
+        description: '18 siders LCA-rapport: 48% CO₂-besparelse, 2 549 tonn spart.', category: 'deliverable', icon: '🌍',
+        metrics: { co2: '48%', tonnes: '2 549' } },
+      { id: 's_011', date: '2025-07-04', type: 'deliverable', title: 'Bærekraftsrapport levert',
+        description: '83-siders ESRS-rapport med Triple Bottom Line-analyse.', category: 'deliverable', icon: '📚',
+        metrics: { pages: '83', framework: 'ESRS' } },
+      { id: 's_012', date: '2025-09-05', type: 'decision', title: 'Strategisk akselerasjon',
+        description: 'Beslutning om direkte Omsorg+-strategi basert på bærekraftscasen.', category: 'decision', icon: '🚀' },
+      { id: 's_013', date: '2025-09-05', type: 'partnership', title: 'Nordic Circle Hotspot',
+        description: 'Pilot-partner for sirkulære byggematerialer.', category: 'partnership', icon: '🔗' },
+      { id: 's_014', date: '2025-10-14', type: 'engagement', title: 'Nabolagsmøte',
+        description: '~30 naboer informert om bærekraftscase og transformasjon.', category: 'engagement', icon: '👥' },
+      { id: 's_015', date: '2025-10-16', type: 'regulatory', title: 'Nabovarsel sendt',
+        description: 'Formelt nabovarsel sendt til alle berørte naboer.', category: 'regulatory', icon: '📬' },
+      { id: 's_016', date: '2025-10-30', type: 'regulatory', title: 'Bruksendringssøknad pågår',
+        description: 'Søknad under utarbeidelse hos Byggesaksrådgivning AS.', category: 'regulatory', icon: '📝' },
+      { id: 's_017', date: '2025-12-01', type: 'milestone', title: 'Konseptskisse 2.0',
+        description: 'Alle bærekraftsleveranser integrert i oppdatert konseptskisse.', category: 'deliverable', icon: '✅' }
+    ];
+
+    // JOURNEY RENDERING
+    function renderJourney() {
+      const container = document.getElementById('journey-timeline');
+      if (!container) return;
+
+      container.innerHTML = journeyData.map((item, index) => {
+        const date = new Date(item.date);
+        const monthYear = date.toLocaleDateString('no-NO', { month: 'short', year: 'numeric' });
+        const metricsHtml = item.metrics ? `
+          <div class="journey-metrics">
+            ${Object.entries(item.metrics).map(([key, val]) => `<span class="metric">${val}</span>`).join('')}
+          </div>` : '';
+
+        return `
+          <div class="journey-item ${item.category}" data-id="${item.id}">
+            <div class="journey-dot ${item.category}"></div>
+            <div class="journey-content">
+              <div class="journey-date">${monthYear}</div>
+              <div class="journey-icon">${item.icon}</div>
+              <div class="journey-title">${item.title}</div>
+              <div class="journey-description">${item.description}</div>
+              ${metricsHtml}
+            </div>
+          </div>`;
+      }).join('');
+    }
+
     // INIT
     document.addEventListener('DOMContentLoaded', () => {
       initCarousels();
@@ -1559,6 +1952,7 @@
       renderInsights();
       renderPackages();
       renderMeasuresTable();
+      renderJourney();
     });
   </script>
 </body>

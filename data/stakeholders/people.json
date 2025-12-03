@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "version": "2.1",
+    "version": "2.2",
     "created": "2025-11-21",
-    "last_updated": "2025-11-21",
+    "last_updated": "2025-12-03",
     "description": "People involved in Hovfaret 13 project - enriched with bios from source documents",
     "source": "STAKEHOLDER_PROFILES_360.json from h13-project-database",
     "enrichment_sources": [
@@ -23,9 +23,9 @@
       "role_in_project": "Project Coordinator - leads day-to-day coordination, digital strategy, and stakeholder communications",
       "expertise": ["Digital strategy", "Project management", "Sustainability", "Web development"],
       "engagement": {
-        "total_meetings": 27,
+        "total_meetings": 66,
         "first_meeting": "2024-03-11",
-        "last_meeting": "2025-09-04"
+        "last_meeting": "2025-10-14"
       },
       "key_collaborators": ["einar_holthe", "andreas_thorsnes", "thomas_thorsen"],
       "category": "Core Team"
@@ -42,8 +42,9 @@
       "bio": "CEO of Natural State AS and strategic leader with expertise in place economics (stedsøkonomi) and market economics. Initiated the Hovfaret 13 preproject in February 2024 with a vision for 'omtenksom verdiutvikling' (thoughtful value development). Key architect of the transformation strategy arguing against demolition in favor of rehabilitation. Leads client relationships with Urbania Eiendom.",
       "expertise": ["Strategy", "Leadership", "Sustainability", "Stakeholder relations", "Place economics"],
       "engagement": {
-        "total_meetings": 15,
-        "first_meeting": "2024-03-11"
+        "total_meetings": 29,
+        "first_meeting": "2024-03-11",
+        "last_meeting": "2025-10-14"
       },
       "key_collaborators": ["gabriel_boen", "andreas_thorsnes"],
       "category": "Core Team"
@@ -59,8 +60,9 @@
       "bio": "Project developer at Urbania Eiendom AS, property owner of Hovfaret 13. Key decision-maker on project direction and financial investments. Has been actively involved since project inception in March 2024. Responsible for evaluating development scenarios and making final calls on transformation vs. demolition approach. Works closely with R21 Arkitekter on architectural solutions.",
       "expertise": ["Real estate development", "Project financing", "Property management"],
       "engagement": {
-        "total_meetings": 12,
-        "first_meeting": "2024-03-11"
+        "total_meetings": 11,
+        "first_meeting": "2024-03-11",
+        "last_meeting": "2025-10-14"
       },
       "key_collaborators": ["gabriel_boen", "einar_holthe", "thomas_thorsen"],
       "category": "Core Team"
@@ -76,8 +78,9 @@
       "bio": "Lead architect from R21 Arkitekter (Rådhusgata 21, 0158 Oslo). Responsible for all architectural design work on Hovfaret 13 transformation. Developed multiple development scenarios including the Omsorg+ concept with 70-100 elderly care units. Created comprehensive floor plans (A20 series) showing rehabilitation and extension options. Key technical contributor on building assessment showing the structure was designed for 12 floors but built with only 5, supporting the extension argument.",
       "expertise": ["Architecture", "Urban planning", "Sustainable building design", "Building transformation"],
       "engagement": {
-        "total_meetings": 10,
-        "first_meeting": "2024-05-06"
+        "total_meetings": 16,
+        "first_meeting": "2024-05-06",
+        "last_meeting": "2025-10-14"
       },
       "key_deliverables": [
         "6 development scenario designs",
@@ -127,17 +130,23 @@
       },
       "category": "Extended Team"
     },
-    "severin": {
-      "id": "severin",
-      "name": "Severin",
+    "severin_docker": {
+      "id": "severin_docker",
+      "name": "Severin Døcker",
       "email": "severin@naturalstate.no",
       "organization_id": "natural_state",
       "organization": "Natural State AS",
-      "title": "Developer",
-      "role_in_project": "Technical development support",
+      "title": "Communications / Developer",
+      "role_in_project": "Communications support and technical development. Contributed to SoMe posts for Hovfaret 13 and nabolagsmøte communications.",
+      "expertise": ["Communications", "Social media", "Technical development"],
       "engagement": {
-        "total_meetings": 3
+        "total_meetings": 5,
+        "first_meeting": "2025-09-05"
       },
+      "key_deliverables": [
+        "Post SoMe Natural state / NCC - Hovfaret",
+        "Oppsummering nabolagsmøte communications"
+      ],
       "category": "Extended Team"
     },
     "trym": {
@@ -181,19 +190,52 @@
       },
       "category": "Extended Team"
     },
-    "linda_aas": {
-      "id": "linda_aas",
-      "name": "Linda Aas",
+    "linda_marie_aas": {
+      "id": "linda_marie_aas",
+      "name": "Linda Marie Aas",
       "email": "linda@naturalstate.no",
       "organization_id": "natural_state",
       "organization": "Natural State AS",
-      "title": "Sustainability Lead",
-      "role_in_project": "Sustainability reporting and documentation",
-      "expertise": ["Sustainability", "ESG reporting", "Climate strategy"],
+      "title": "Project Manager / Sustainability Lead",
+      "role_in_project": "Project management for Hovfaret 13 - responsible for deliverables, stakeholder coordination, nabolagsmøte planning, and sustainability documentation. Key coordinator for Notion-based project tracking.",
+      "bio": "Project manager at Natural State AS with focus on sustainability and stakeholder engagement. Led the planning and execution of the neighborhood meeting (nabolagsmøte) on October 14, 2025. Primary responsible for leietaker dialogues, presentation development, and project deliverables tracking. Works closely with Kamran Surizehi on operational project management.",
+      "expertise": ["Sustainability", "ESG reporting", "Climate strategy", "Project management", "Stakeholder engagement"],
       "engagement": {
-        "total_meetings": 1
+        "total_meetings": 15,
+        "first_meeting": "2025-09-03",
+        "last_meeting": "2025-10-15"
       },
-      "category": "Extended Team"
+      "key_deliverables": [
+        "Nabolagsmøte planning and execution",
+        "Leietakersamtaler",
+        "Presentasjon development",
+        "Nettside content"
+      ],
+      "category": "Core Team"
+    },
+    "kamran_surizehi": {
+      "id": "kamran_surizehi",
+      "name": "Kamran Surizehi",
+      "email": "kamran@naturalstate.no",
+      "organization_id": "natural_state",
+      "organization": "Natural State AS",
+      "title": "Architect / Project Coordinator",
+      "role_in_project": "Operational project coordinator for Hovfaret 13 - responsible for visual production, nabolagsmøte materials, stakeholder mapping, and coordination with R21 Arkitekter. Key contributor to Notion-based project tracking.",
+      "bio": "Architect at Natural State AS with background in project coordination and visual communication. Primary responsible for creating presentation materials, plakater, and visual assets for the Hovfaret 13 project. Led stakeholder mapping and neighbor coordination. Works closely with Linda Marie Aas on operational project management. Coordinates with R21 Arkitekter on architectural deliverables.",
+      "expertise": ["Architecture", "Visual communication", "Project coordination", "Stakeholder mapping", "Design production"],
+      "engagement": {
+        "total_meetings": 20,
+        "first_meeting": "2025-09-03",
+        "last_meeting": "2025-10-29"
+      },
+      "key_deliverables": [
+        "Nabolagsmøte materials and presentations",
+        "Stakeholder mapping",
+        "Social media posts",
+        "Invitasjoner and plakater",
+        "Temastasjon setup"
+      ],
+      "category": "Core Team"
     },
     "knut_halvor_hogseth": {
       "id": "knut_halvor_hogseth",

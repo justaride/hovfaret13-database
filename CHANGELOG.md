@@ -2,6 +2,431 @@
 
 All notable changes to this project database.
 
+## [2.41.0] - 2025-12-03
+
+### Phase 29: Dashboard Polish & GitHub Push
+
+**Status:** ✅ COMPLETE
+
+#### Omfattende faktakorreksjon og ny slide-versjon
+
+Gjennomgang av project-story.html og stakeholder-journey.html med verifisering mot meetings.json. Alle data nå konsistente.
+
+**project-story.html - 10+ korreksjoner:**
+| Element | Før | Etter |
+|---------|-----|-------|
+| Møtetall | 65 | 70 |
+| Organisasjoner | 12 | 13 |
+| Måneders arbeid | 18 | 20 |
+| Omsorg+ enhetsstørrelse | 45-55 m² | 42-67 m² |
+| Omsorg+ etasjer | 7 | 8 |
+| Bydel Ullern behov | 70+ | 160 enheter |
+| Ingrid Hopp tittel | Bydelsdirektør | Leder Bydelsutvalget |
+
+**project-story.html - Nye hendelser lagt til:**
+- ✅ Nabovarsel sendt (16. oktober 2025)
+- 🔄 Bruksendringssøknad pågår
+- Nabolagsmøte (14. okt 2025)
+- Bydelsutvalgsmøte (29. okt 2025)
+
+**stakeholder-journey.html - Fullstendig datakorreksjon:**
+- Fjernet fiktive hendelser (James jan 2024, nettside-workshop okt 2024)
+- Korrigert James Lorentzen-møte til 24. juni 2025
+- 13 verifiserte interessent-hendelser (jan-nov 2025)
+- Lagt til "Naboer" som filterkategori
+- Lagt til strategisk skifte 5. sept 2025
+
+**Nye filer:**
+| Fil | Beskrivelse |
+|-----|-------------|
+| `dashboard/stakeholder-journey-slides.html` | Google Slides-optimalisert versjon (5 slides, 960x540px) |
+
+**index.html - Ny "Presentasjoner" seksjon:**
+- Konseptskisse 1.0
+- Konseptskisse 2.0 (merket NY)
+- Bærekraftsrapport Viewer (83 sider)
+- Presentasjonsmodus
+- Møtetall i header oppdatert (65→70)
+
+---
+
+## [2.40.0] - 2025-12-03
+
+### Phase 28b: Medium-Term Improvements
+
+**Status:** COMPLETE
+
+#### Nye dashboards og datasynkronisering
+
+Implementert short-term og medium-term forbedringer fra integritetsanalysen.
+
+**Short-term fikser (fullført):**
+| Oppgave | Status |
+|---------|--------|
+| Oppdater stakeholder engagement-tall | 70 møter totalt |
+| Bydelsutvalgsmøte 29/10 lagt til | Meeting #70 |
+| Møtetall synkronisert | project.json, config.json, index.html |
+
+**Nye dashboards:**
+| Dashboard | Beskrivelse |
+|-----------|-------------|
+| `dashboard/deliverables.html` | 75 leveranser med status og ansvarlige |
+| `dashboard/regulatory-status.html` | Regulatorisk status, tidslinje og strategi |
+
+**Oppdaterte filer:**
+| Fil | Endring |
+|-----|---------|
+| `data/meetings.json` | +1 møte (bydelsutvalgsmøte) |
+| `data/config.json` | meetings_total: 70 |
+| `data/project.json` | meetings_tracked: 70 |
+| `data/stakeholders/people.json` | Oppdaterte engagement-tall |
+| `dashboard/index.html` | Nye moduler, oppdaterte tall |
+
+**Config.json integrasjonsplan opprettet:**
+- `analysis/config-dashboard-integration-plan.md`
+- 4-fase implementering for single source of truth
+- Prioritert liste over dashboards
+
+**Nøkkeltall oppdatert:**
+- Møter: 70 (var 69)
+- Leveranser: 75
+- Stakeholders: 22 personer, 13 organisasjoner
+
+---
+
+## [2.39.0] - 2025-12-03
+
+### Phase 28: Prosjekt Integritetsanalyse
+
+**Status:** ✅ COMPLETE
+
+#### Komplett gjennomgang og korrigering av prosjektdata
+
+Systematisk analyse av alle JSON-filer og dashboards for å identifisere faktafeil, inkonsistenser og manglende koblinger.
+
+**Kritiske Fikser:**
+| Feil | Lokasjon | Korrigert |
+|------|----------|-----------|
+| CO₂ "28%" | project.json | → 48% |
+| Møtetall 47 | project.json | → 69 |
+| Dokumenttall 307 | project.json | → 271 |
+| Event count 22 | timeline-enhanced.json | → 27 |
+
+**Nye filer:**
+| Fil | Beskrivelse |
+|-----|-------------|
+| `data/config.json` | Sentral konfigurasjon - single source of truth for alle nøkkeltall |
+| `analysis/project-integrity-analysis.md` | Komplett integritetsrapport |
+
+**Oppdaterte filer:**
+| Fil | Endring |
+|-----|---------|
+| `data/project.json` | Korrigert CO₂, møter, dokumenter, metadata |
+| `data/timeline-enhanced.json` | Version 2.3, oppdatert metadata |
+
+**Identifiserte Dependencies:**
+- Møtetall må synkroniseres: project.json, timeline-enhanced.json, index.html
+- CO₂-tall må synkroniseres: project.json, sustainability.html, konseptskisse-2.html
+- Omsorg+-enheter må standardiseres: 73 enheter (fra R21 tegninger)
+
+**Anbefalinger for fremtidige oppdateringer:**
+1. Oppdater `config.json` først
+2. Kjør gjennom alle avhengige filer
+3. Verifiser dashboards viser korrekte tall
+
+**Datakvalitet:** 7.1/10 (før: ikke målt)
+
+---
+
+## [2.38.1] - 2025-12-03
+
+### Phase 27: Bærekraftsreise Sidebar (med korreksjoner)
+
+**Status:** ✅ COMPLETE
+
+#### Kronologisk bærekraftslogg implementert + datakorreksjoner
+
+Implementert sidebar på venstre side av bærekraftssiden med korrigert regulatorisk status etter datavalidering.
+
+**Korreksjoner gjort:**
+| Feil | Korrigert til |
+|------|---------------|
+| "Bruksendringssøknad sendt" | "Bruksendringssøknad pågår" (status: PÅGÅR) |
+| Manglende nabovarsel-hendelse | Lagt til: Nabovarsel sendt 16/10/2025 |
+
+**Verifisert regulatorisk status:**
+| Element | Status | Kilde |
+|---------|--------|-------|
+| Nabovarsel | ✅ FULLFØRT 16/10/2025 | Notion deliverables |
+| Bruksendringssøknad | ⏳ PÅGÅR (mål nov 2025) | Notion deliverables |
+| Rammesøknad | ❌ IKKE STARTET | Notion deliverables |
+
+**Oppdaterte filer:**
+| Fil | Endring |
+|-----|---------|
+| `data/themes/sustainability-journey.json` | +1 hendelse (nabovarsel), korrigert bruksendring-status |
+| `dashboard/sustainability.html` | Korrigert timeline-data |
+| `dashboard/konseptskisse-2.html` | Korrigert tekst om bruksendringssøknad |
+| `data/themes/konseptskisse-2.0-tillegg.json` | Korrigert status-tekst |
+
+**Bærekraftsreise-struktur (oppdatert):**
+| Element | Verdi |
+|---------|-------|
+| Totale milepæler | 17 (ikke 16) |
+| Regulatory-hendelser | 2 (nabovarsel + bruksendring) |
+| Tidsperiode | 25 måneder (nov 2023 - des 2025) |
+
+---
+
+## [2.38.0] - 2025-12-03
+
+### Phase 27: Bærekraftsreise Sidebar (initial)
+
+**Status:** ✅ COMPLETE → Korrigert i 2.38.1
+
+#### Kronologisk bærekraftslogg implementert på sustainability.html
+
+Implementert sidebar på venstre side av bærekraftssiden som dokumenterer hele prosjektets bærekraftsreise fra november 2023 til desember 2025.
+
+**Nye filer:**
+| Fil | Beskrivelse |
+|-----|-------------|
+| `data/themes/sustainability-journey.json` | Kronologiske bærekraftshendelser med metadata |
+
+**Oppdaterte filer:**
+| Fil | Endring |
+|-----|---------|
+| `dashboard/sustainability.html` | +To-kolonne layout, +Sticky sidebar, +JavaScript rendering |
+
+**Sidebar-funksjoner:**
+- Sticky posisjon med scroll
+- Fargekodet tidslinje per kategori
+- Kompakte kort med ikon, dato, tittel og beskrivelse
+- Oppsummeringsstatistikk nederst
+- Responsiv (kollapser på mobil)
+
+---
+
+## [2.37.0] - 2025-12-03
+
+### Phase 26: Konseptskisse 2.0 Dashboard Implementering
+
+**Status:** ✅ COMPLETE
+
+#### Implementert alle Konseptskisse 2.0 endringer i dashboard
+
+Full implementering av Konseptskisse 2.0 tilleggsarbeid i dashboard HTML-filen med ny slide og oppdaterte data.
+
+**Nye filer:**
+| Fil | Beskrivelse |
+|-----|-------------|
+| `analysis/konseptskisse-2.0-analyse.md` | Komplett analyse av konseptskisse-arbeidet |
+
+**Oppdaterte filer:**
+| Fil | Endring |
+|-----|---------|
+| `data/themes/konseptskisse-2.0-tillegg.json` | v2.0 - ny side 116, renummerert 114-126, oppdaterte tall |
+| `dashboard/konseptskisse-2.html` | +1 slide (13 totalt), oppdaterte data |
+
+**Ny slide lagt til:**
+| Side | Tittel | Innhold |
+|------|--------|---------|
+| 116 | Strategisk Akselerasjon | 5. sept 2025 beslutning om å gå direkte til Omsorg+ |
+
+**Oppdaterte slides:**
+| Side | Endring |
+|------|---------|
+| 115 | 69 møter, strategisk skifte nevnt, 6 milepæler i tidslinje |
+| 121 | Nabolagsmøte 14. okt med ~30 deltakere, bydelsutvalgsmøte 29. okt |
+| 124 | 69 møter, 39 milepæler, 40 interessenter, 75 leveranser |
+| 125 | Nabovarsel fullført, bruksendringssøknad sendt |
+| 126 | 6 nøkkeltall (48% CO₂, 73 enheter, 12/12, 69 møter, ~30 naboer, 75 leveranser) |
+
+**Konseptskisse 2.0 nå komplett:**
+- 13 nye sider (114-126)
+- 4 endringer til eksisterende sider (2, 88, 92-93)
+- Alle tall synkronisert med prosjektdatabase
+- Klar for design og produksjon
+
+---
+
+## [2.36.0] - 2025-12-03
+
+### Phase 25: Notion Gap-analyse og Konsolidering
+
+**Status:** ✅ COMPLETE
+
+#### Systematisk gap-analyse og datakonsolidering etter Notion-integrering
+
+Full gjennomgang av prosjektet etter Notion-integrering for å sikre alle elementer er korrekt oppdatert.
+
+**Nye filer:**
+| Fil | Beskrivelse |
+|-----|-------------|
+| `analysis/notion-integration-gap-analysis.md` | Komplett gap-analyse med 8 seksjoner |
+| `data/deliverables.json` | 75 leveranser med struktur, IDs og koblinger |
+
+**Oppdaterte filer:**
+| Fil | Endring |
+|-----|---------|
+| `data/meetings.json` | +4 møter merget (65→69 møter totalt) |
+| `data/timeline-enhanced.json` | +2 strategiske hendelser (s_010, s_011), event_count 10→12 |
+
+**Møter merget fra Notion til meetings.json:**
+| ID | Dato | Tittel | Deltakere |
+|----|------|--------|-----------|
+| m_2025-09-05_hovfaret_13_strategimote | 2025-09-05 | Strategimøte Hovfaret 13 | 4 |
+| m_2025-09-08_nce_soknad_oppfolging | 2025-09-08 | NCE søknad oppfølging | 3 |
+| m_2025-09-19_tlf_thomas_nabolagsmote | 2025-09-19 | Tlf Thomas - nabolagsmøte | 2 |
+| m_2025-10-14_nabolagsmote_hovfaret | 2025-10-14 | Nabolagsmøte Hovfaret 13 | ~30 |
+
+**Strategiske hendelser lagt til:**
+| ID | Dato | Tittel | Betydning |
+|----|------|--------|-----------|
+| s_010 | 2025-09-05 | Strategisk skifte til Omsorg+ | Kritisk akselerasjon av strategi |
+| s_011 | 2025-10-14 | Nabolagsmøte gjennomført | Første offentlige presentasjon |
+
+**deliverables.json - Struktur:**
+- 75 leveranser med unike IDs (d_001 - d_037+)
+- 11 kategorier (cat_01 - cat_11)
+- 5 key milestones med datoer
+- Koblinger til stakeholders, møter og timeline
+- Ansvarlig-oversikt med leveransestall
+
+**Datakvalitet forbedret:**
+| Kategori | Før | Etter |
+|----------|-----|-------|
+| Møter totalt | 65 | 69 |
+| Strategiske hendelser | 10 | 12 |
+| Leveranser (strukturert) | 0 | 75 |
+
+---
+
+## [2.35.0] - 2025-12-03
+
+### Phase 24: Notion Integrering
+
+**Status:** ✅ COMPLETE
+
+#### Integrert data fra Notion prosjekteksport
+
+Full integrering av Notion-eksport med 171 filer og 75 Hovfaret-spesifikke leveranser.
+
+**Nye filer:**
+| Fil | Beskrivelse |
+|-----|-------------|
+| `data/notion-import/meetings-from-notion.json` | 4 nye møter med fullstendige rapporter |
+| `data/notion-import/deliverables-from-notion.json` | 75 leveranser strukturert i 11 kategorier |
+
+**Oppdaterte filer:**
+| Fil | Endring |
+|-----|---------|
+| `data/stakeholders/people.json` | +Kamran Surizehi, Linda Marie Aas utvidet, Severin Døcker utvidet |
+| `data/stakeholders/organizations.json` | +Byggesaksrådgivning AS, +Parabol, +Nordic Circle Hotspot |
+| `data/timeline-enhanced.json` | +5 nye hendelser (o_023-o_027) |
+
+**Nye møter ekstrahert:**
+| Dato | Møte | Kilde |
+|------|------|-------|
+| 2025-09-05 | Strategimøte Hovfaret 13 | 522-linjers transkript |
+| 2025-09-08 | NCE søknad oppfølging | Nordic Innovation strategi |
+| 2025-09-19 | Tlf Thomas - nabolagsmøte | Planlegging |
+| 2025-10-14 | Nabolagsmøte (detaljert) | Oppsummering |
+
+**Leveranser fra Notion (75 totalt):**
+| Status | Antall |
+|--------|--------|
+| FULLFØRT | 48 |
+| PÅGÅR | 6 |
+| IKKE STARTET | 17 |
+| I PLANLEGGING/PRODUKSJON | 4 |
+
+**Nye stakeholders:**
+- Kamran Surizehi - Arkitekt/Prosjektkoordinator (35 leveranser)
+- Linda Marie Aas - Prosjektleder/Bærekraft (15 leveranser, utvidet profil)
+- Severin Døcker - Kommunikasjon (utvidet profil)
+
+**Nye organisasjoner:**
+- Byggesaksrådgivning AS - Ansvarlig søker for bruksendring
+- Parabol - Nettside-utvikling hovfaret13.no
+- Nordic Circle Hotspot - Pilotpartner sirkulær økonomi
+
+**Nye timeline-hendelser (o_023-o_027):**
+- 2025-10-14: Nabolagsmøte (~30 deltakere)
+- 2025-10-16: Nabovarsel sendt formelt
+- 2025-10-29: Bydelsutvalgsmøte
+- 2025-11-07: Bruksendringssøknad deadline
+- 2025-12-01: Konseptskisse 2.0 ferdig
+
+---
+
+## [2.34.0] - 2025-12-03
+
+### Phase 23: Konseptskisse 2.0 Arbeidsrom
+
+**Status:** ✅ COMPLETE
+
+#### Komplett arbeidsrom for Konseptskisse 2.0 tillegg
+
+Utviklet fullstendig arbeidsrom for planlegging og implementering av Konseptskisse 2.0 oppdateringer.
+
+**Nye filer:**
+| Fil | Beskrivelse |
+|-----|-------------|
+| `data/themes/konseptskisse.json` | Strukturert data fra 113-siders konseptskisse |
+| `data/themes/konseptskisse-2.0-tillegg.json` | Komplett spesifikasjon for 12 nye sider |
+| `dashboard/konseptskisse.html` | Hovedside med 7 faner |
+| `dashboard/konseptskisse-2.html` | HTML-arbeidsrom for nye slides |
+| `dashboard/assets/konseptskisser/v1-sept-2025/` | 113 JPG-filer (66 MB) |
+
+**konseptskisse.html - 7 faner:**
+1. Oversikt - Sammendrag og nøkkeldata
+2. Alle sider - 113 sider i grid (5 per rad)
+3. Innhold - 16 kapitler strukturert
+4. Funksjoner - 7 planlagte funksjoner
+5. Scenarioer - 3 utviklingsscenarier
+6. Interessenter - Stakeholder-oversikt
+7. Progresjon - Oppdateringer sept-des 2025
+
+**konseptskisse-2.html - Arbeidsrom features:**
+- 12 slides (side 114-125) i Natural State stil
+- Navigasjon med piltaster og knapper
+- Bildeprompts i placeholder-bokser
+- Endringsdokumentasjon for eksisterende sider
+- 16:9 landskapsformat
+
+**12 nye slides spesifisert:**
+| Side | Tittel | Del |
+|------|--------|-----|
+| 114 | Bærekraftsrapport - sammendrag | Del 5 |
+| 115 | CO₂-analyse - hovedfunn | Del 5 |
+| 116 | Materialbruk - 85% bevaring | Del 5 |
+| 117 | LCA-metodikk | Del 5 |
+| 118 | R21 Arkitekter - kompetanse | Del 5 |
+| 119 | R21 Leveranse - omsorg+ | Del 5 |
+| 120 | Omsorg+ konsept - 73 boliger | Del 5 |
+| 121 | Programplan - 17.700 m² | Del 5 |
+| 122 | Fremdriftsplan 2025-2030 | Del 5 |
+| 123 | Interessentdialog - status | Del 5 |
+| 124 | Veien videre - neste steg | Del 5 |
+| 125 | Avslutning | Del 5 |
+
+**Endringer til eksisterende sider:**
+- Side 2: Oppdater med 2025-milepæler
+- Side 88: Oppdater tidslinje med fase 5
+- Side 92: Legg til fase 5 i fremdriftsplan
+- Side 93: Oppdater interessentstatus
+
+**konseptskisse-2.0-tillegg.json innhold:**
+- Metadata og status
+- 12 nye sider med komplett innhold
+- Layout-beskrivelser per side
+- Bildeprompts for grafikk
+- Endringer til eksisterende sider
+- Produksjonsnotater
+
+---
+
 ## [2.33.0] - 2025-12-02
 
 ### Phase 22: Bærekraftsrapport Full Side

@@ -625,6 +625,10 @@
       <span class="legend-dot leietaker"></span>
       Leietakere
     </div>
+    <div class="legend-item" data-category="nabo" onclick="filterCategory('nabo')">
+      <span class="legend-dot nabo"></span>
+      Naboer
+    </div>
     <div class="legend-item" data-category="workshop" onclick="filterCategory('workshop')">
       <span class="legend-dot workshop"></span>
       Workshops
@@ -650,42 +654,24 @@
     let activeCategory = 'all';
 
     // ===== STAKEHOLDER DATA =====
-    // Hardkodet interessentdata basert på analyse
+    // Verifisert interessentdata basert på meetings.json
     const stakeholderData = [
-      {
-        id: 'sh_2024-01-15',
-        date: '2024-01-15',
-        category: 'politiker',
-        title: 'Møte med Byråd James Lorentzen',
-        description: 'Første politiske møte om transformasjonsprosjektet. Presentasjon av bærekraftsargumenter og potensial for Omsorg+ konsept.',
-        participants: ['James Lorentzen (Byråd)', 'Urbania Eiendom', 'Natural State'],
-        outcome: 'Positiv respons på transformasjonskonseptet'
-      },
-      {
-        id: 'sh_2024-10-31',
-        date: '2024-10-31',
-        category: 'workshop',
-        title: 'Nettside Workshop',
-        description: 'Intern workshop for å utvikle kommunikasjonsstrategi og nettsideinnhold for prosjektet.',
-        participants: ['Natural State', 'Prosjektteam'],
-        outcome: 'Kommunikasjonsstrategi definert'
-      },
       {
         id: 'sh_2025-01-10',
         date: '2025-01-10',
         category: 'leietaker',
         title: 'Leietakermøte - Hovfaret 13',
-        description: 'Transformasjonsplanene presentert for eksisterende leietakere. Dialog om overgangsperiode og fremtidige muligheter etablert.',
-        participants: ['Eksisterende leietakere', 'Urbania Eiendom', 'Natural State', 'R21 Arkitekter'],
+        description: 'Transformasjonsplanene presentert for eksisterende leietakere. Representanter fra Economa, Sprinklerselskap, Asylrådgivning, Innsbyråden og flere deltok. Dialog om overgangsperiode etablert.',
+        participants: ['Andreas Thorsnes', 'Gabriel Bøen', 'Einar Holthe', 'Eksisterende leietakere'],
         outcome: 'Åpen dialog etablert med leietakere'
       },
       {
         id: 'sh_2025-03-07',
         date: '2025-03-07',
         category: 'leietaker',
-        title: 'Dispensasjonsstrategi og Leietakerdialog',
+        title: 'Dispensasjonsstrategi og leietakerdialog',
         description: 'Workshop om dispensasjonsstrategi fra områdeplanen og videre dialog med leietakere om overgangsløsninger.',
-        participants: ['Urbania Eiendom', 'Natural State', 'Ekstern rådgiver'],
+        participants: ['Urbania Eiendom', 'Natural State'],
         outcome: '6 beslutninger fattet om videre strategi'
       },
       {
@@ -693,8 +679,8 @@
         date: '2025-05-05',
         category: 'bydel',
         title: 'Møte med Bente Otto, Bydel Ullern',
-        description: 'Innledende møte med bydelens representant om Omsorg+ konseptet og lokale behov for eldreboliger.',
-        participants: ['Bente Otto (Bydel Ullern)', 'Urbania Eiendom', 'Natural State'],
+        description: 'Innledende møte med avdelingsdirektør for helse og omsorg om Omsorg+ konseptet og lokale behov for eldreboliger.',
+        participants: ['Bente Otto (Avd.dir. Helse og omsorg)', 'Urbania Eiendom', 'Natural State'],
         outcome: 'Interesse for Omsorg+ konseptet bekreftet'
       },
       {
@@ -702,7 +688,7 @@
         date: '2025-05-13',
         category: 'bydel',
         title: 'Åpent møte: Bydel Ullern 2035',
-        description: 'Deltakelse på bydelens åpne møte om fremtidig utvikling. Presentasjon av transformasjonsprosjektet i kontekst av bydelens behov.',
+        description: 'Deltakelse på bydelens åpne møte om fremtidig utvikling på Laboratoriet, Harbitz torg. Arrangert av Ullern Arbeiderparti, Nabolagsfabrikken og Ullern Høyre.',
         participants: ['Bydel Ullern', 'Diverse interessenter', 'Natural State'],
         outcome: 'Prosjektet satt i kontekst av bydelens planer'
       },
@@ -711,27 +697,81 @@
         date: '2025-05-22',
         category: 'bydel',
         title: 'Presentasjon for Bydelsledere Ullern',
-        description: 'Formell presentasjon av Omsorg+ konseptet for Ingrid Hopp og Tore Strandskog. Bydelen har identifisert behov for 70+ eldreboliger.',
-        participants: ['Ingrid Hopp (Bydelsleder)', 'Tore Strandskog', 'R21 Arkitekter', 'Urbania Eiendom', 'Natural State'],
+        description: 'Formell presentasjon av Omsorg+ konseptet for bydelsledelsen på Hovfaret 13.',
+        participants: ['Ingrid Hopp (Leder Bydelsutvalget)', 'Tore Strandskog', 'R21 Arkitekter', 'Urbania Eiendom', 'Natural State'],
         outcome: 'Sterk støtte fra bydelsledelsen'
       },
       {
         id: 'sh_2025-06-24',
         date: '2025-06-24',
         category: 'politiker',
-        title: 'Oppfølgingsmøte med James Lorentzen',
-        description: 'Oppfølging av tidligere politisk dialog. Oppdatering om prosjektfremdrift og planlagt søknadsprosess.',
-        participants: ['James Lorentzen', 'Natural State'],
-        outcome: 'Fortsatt politisk støtte'
+        title: 'Møte med James Lorentzen (Byutviklingsbyråd)',
+        description: 'Møte med byutviklingsbyråden om transformasjonsprosjektet. Diskusjon om hvordan bruksendring/dispensasjon kan løftes politisk.',
+        participants: ['James Lorentzen (Byutviklingsbyråd)', 'Gabriel Bøen', 'Thomas Thorsen'],
+        outcome: 'Politisk dialog etablert'
+      },
+      {
+        id: 'sh_2025-09-05',
+        date: '2025-09-05',
+        category: 'workshop',
+        title: 'Strategimøte - Akselerert Omsorg+ strategi',
+        description: 'Omfattende strategimøte. Hovedbeslutning: akselerere strategien ved å gå direkte på bruksendring til Omsorg+ (steg 2), i stedet for først studiokontor (steg 1). Skøyen Aktivitetssenter har rivningsvedtak - bydelen trenger Omsorg+ boliger.',
+        participants: ['Urbania Eiendom', 'Natural State', 'R21 Arkitekter'],
+        outcome: 'Strategisk skifte til Omsorg+ besluttet'
+      },
+      {
+        id: 'sh_2025-09-19',
+        date: '2025-09-19',
+        category: 'nabo',
+        title: 'Planlegging av nabolagsmøte',
+        description: 'Telefonsamtale med Thomas om planlegging av nabolagsmøte i forbindelse med nabovarsel.',
+        participants: ['Linda Marie Aas', 'Thomas Thorsen'],
+        outcome: 'Nabolagsmøte planlagt'
       },
       {
         id: 'sh_2025-09-27',
         date: '2025-09-27',
         category: 'workshop',
         title: 'Konseptworkshop med R21',
-        description: 'Intensiv workshop for å finpusse konseptet før søknadsinnsending. Gjennomgang av alle 6 scenarier.',
+        description: 'Intensiv workshop for å finpusse konseptet før søknadsinnsending.',
         participants: ['R21 Arkitekter', 'Urbania Eiendom', 'Natural State'],
         outcome: 'Konsept klar for søknad'
+      },
+      {
+        id: 'sh_2025-10-14',
+        date: '2025-10-14',
+        category: 'nabo',
+        title: 'Nabolagsmøte Hovfaret 13',
+        description: 'Informasjonsmøte for naboer i forbindelse med nabovarsel. Presentasjon av Omsorg+ konseptet og transformasjonsplaner.',
+        participants: ['Naboer', 'Urbania Eiendom', 'Natural State'],
+        outcome: 'Naboer informert om prosjektet'
+      },
+      {
+        id: 'sh_2025-10-16',
+        date: '2025-10-16',
+        category: 'kommune',
+        title: 'Nabovarsel sendt',
+        description: 'Formelt nabovarsel sendt til alle berørte naboer som del av bruksendringsprosessen. Viktig regulatorisk milepæl.',
+        participants: ['Byggesaksrådgivning AS', 'Urbania Eiendom'],
+        outcome: 'Nabovarsel fullført - forutsetning for søknad oppfylt'
+      },
+      {
+        id: 'sh_2025-10-29',
+        date: '2025-10-29',
+        category: 'bydel',
+        title: 'Bydelsutvalgsmøte - Presentasjon',
+        description: 'Prosjektet presentert for Bydelsutvalget i Bydel Ullern. Bydelen bekreftet behov for 160 nye omsorgsboliger.',
+        participants: ['Bydelsutvalget Ullern', 'Ingrid Hopp', 'Urbania Eiendom', 'Natural State'],
+        outcome: 'Politisk støtte fra Bydelsutvalget bekreftet'
+      },
+      {
+        id: 'sh_2025-11',
+        date: '2025-11-01',
+        category: 'kommune',
+        title: 'Bruksendringssøknad pågår',
+        description: 'Søknad om bruksendring fra kontor til Omsorg+ eldreboliger under utarbeidelse med Byggesaksrådgivning AS.',
+        participants: ['Byggesaksrådgivning AS', 'Urbania Eiendom'],
+        outcome: 'Søknadsprosess i gang'
       }
     ];
 

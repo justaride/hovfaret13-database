@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "version": "2.2",
+    "version": "2.3",
     "created": "2025-11-21",
-    "last_updated": "2025-11-21",
+    "last_updated": "2025-12-03",
     "description": "Enhanced timeline with meeting links and executive summaries",
     "source": "PROJECT_MILESTONES.json from h13-project-database",
     "verification_status": "verified",
-    "verification_date": "2025-11-21",
+    "verification_date": "2025-12-03",
     "verification_notes": "Dates verified against source documents including energy reports, climate calculations, architectural drawings, and meeting files",
     "enhancement_notes": "Strategic events have exec_summary arrays. Events with meetings have linked_meetings arrays."
   },
@@ -16,7 +16,7 @@
       "name": "Strategic Overview",
       "name_no": "Strategisk oversikt",
       "description": "Major milestones for executive summaries and external stakeholders",
-      "event_count": 10,
+      "event_count": 12,
       "use_case": "Board presentations, investor updates, public communications"
     },
     "operational": {
@@ -24,7 +24,7 @@
       "name": "Operational Timeline",
       "name_no": "Operasjonell tidslinje",
       "description": "Key decisions, deliverables, and stakeholder engagements",
-      "event_count": 22,
+      "event_count": 27,
       "use_case": "Project management, team updates, progress tracking"
     },
     "detailed": {
@@ -32,7 +32,7 @@
       "name": "Detailed Activity Log",
       "name_no": "Detaljert aktivitetslogg",
       "description": "All meetings, documents, and activities",
-      "event_count": "47+ meetings",
+      "event_count": "69 meetings",
       "use_case": "Complete audit trail, reference, due diligence",
       "note": "Links to meetings.json for full detail"
     }
@@ -236,6 +236,59 @@
       },
       {
         "id": "s_010",
+        "date": "2025-09-05",
+        "title": "Strategic Shift to Omsorg+",
+        "title_no": "Strategisk skifte til Omsorg+",
+        "description": "Critical decision to accelerate strategy by going directly to Omsorg+ transformation instead of phased studiokontor approach. Response to bydel's concrete need for elderly housing.",
+        "phase": "phase_6",
+        "importance": "critical",
+        "icon": "strategy",
+        "tags": [
+          "turning_point",
+          "strategy"
+        ],
+        "exec_summary": [
+          "Decision to go directly to Omsorg+ (skipping studiokontor phase)",
+          "Response to Bydel Ullern's concrete need for elderly housing",
+          "Skøyen Aktivitetssenter replacement opportunity identified",
+          "Engages Byggesaksrådgivning AS as ansvarlig søker"
+        ],
+        "linked_meetings": [
+          {
+            "id": "m_2025-09-05_hovfaret_13_strategimote",
+            "title": "Hovfaret 13 - Strategimøte og prosjektgjennomgang",
+            "participant_count": 4
+          }
+        ]
+      },
+      {
+        "id": "s_011",
+        "date": "2025-10-14",
+        "title": "Nabolagsmøte",
+        "title_no": "Nabolagsmøte gjennomført",
+        "description": "Public neighborhood meeting at Hovfaret 13 with approximately 30 attendees. First public presentation of Omsorg+ transformation plans.",
+        "phase": "phase_6",
+        "importance": "high",
+        "icon": "users",
+        "tags": [
+          "stakeholder_engagement"
+        ],
+        "exec_summary": [
+          "Public meeting with ~30 neighborhood attendees",
+          "Positive reception of transformation concept",
+          "Concern about traffic from Skøyen station passengers",
+          "Strong interest in Omsorg+ elderly housing concept"
+        ],
+        "linked_meetings": [
+          {
+            "id": "m_2025-10-14_nabolagsmote_hovfaret",
+            "title": "Nabolagsmøte Hovfaret 13",
+            "participant_count": 30
+          }
+        ]
+      },
+      {
+        "id": "s_012",
         "date": "2025-Q4",
         "title": "TARGET: Application Submission",
         "title_no": "MÅL: Søknad innsendt",
@@ -505,6 +558,73 @@
         "title": "Final R21 Delivery (Renders & Plans)",
         "phase": "phase_6",
         "category": "technical"
+      },
+      {
+        "id": "o_023",
+        "date": "2025-10-14",
+        "title": "Neighborhood Meeting (Nabolagsmøte)",
+        "title_no": "Nabolagsmøte Hovfaret 13",
+        "phase": "phase_6",
+        "category": "stakeholder",
+        "description": "Public meeting presenting Omsorg+ transformation concept. ~30 attendees including neighbors, bydel representatives (Ingrid Løfsgaard Hopp), and project team. Positive response from community.",
+        "outcomes": [
+          "Project concept presented to public",
+          "Bydel presented need for 150-200 Omsorg+ units by 2040",
+          "Community input on first floor functions collected",
+          "General positive reception"
+        ],
+        "linked_meetings": [
+          {
+            "id": "m_2025-10-14_nabolagsmote_hovfaret",
+            "title": "Nabolagsmøte Hovfaret 13",
+            "participant_count": 30
+          }
+        ],
+        "source": "notion_export"
+      },
+      {
+        "id": "o_024",
+        "date": "2025-10-16",
+        "title": "Nabovarsel Sent Out",
+        "title_no": "Nabovarsel sendt ut",
+        "phase": "phase_6",
+        "category": "regulatory",
+        "description": "Formal neighbor notification sent out as required by law.",
+        "source": "notion_export"
+      },
+      {
+        "id": "o_025",
+        "date": "2025-10-29",
+        "title": "Bydelsutvalg Meeting",
+        "title_no": "Bydelsutvalgsmøte",
+        "phase": "phase_6",
+        "category": "stakeholder",
+        "description": "Presentation to Ullern bydelsutvalg about project status and Omsorg+ need.",
+        "responsible": "Kamran Surizehi",
+        "source": "notion_export"
+      },
+      {
+        "id": "o_026",
+        "date": "2025-11-07",
+        "title": "Bruksendringssøknad Deadline",
+        "title_no": "Bruksendringssøknad innsendes",
+        "phase": "phase_6",
+        "category": "regulatory",
+        "description": "Target date for submitting bruksendringssøknad (user change application) to convert from office to Omsorg+ housing.",
+        "status": "in_progress",
+        "responsible": "Byggesaksrådgivning AS",
+        "source": "notion_export"
+      },
+      {
+        "id": "o_027",
+        "date": "2025-12-01",
+        "title": "Konseptskisse 2.0 Target",
+        "title_no": "Konseptskisse 2.0 ferdigstilles",
+        "phase": "phase_6",
+        "category": "deliverable",
+        "description": "Target completion date for updated Konseptskisse 2.0 with all post-September 2025 developments.",
+        "status": "in_progress",
+        "source": "notion_export"
       }
     ]
   },

@@ -488,7 +488,7 @@
       </div>
       <div class="header-stats">
         <div class="stat">
-          <div class="stat-value" id="stat-meetings">65</div>
+          <div class="stat-value" id="stat-meetings">70</div>
           <div class="stat-label">Møter</div>
         </div>
         <div class="stat">
@@ -554,7 +554,7 @@
                 <div class="module-name">Møteoversikt</div>
                 <div class="module-desc">Søkbar database med rapporter</div>
               </div>
-              <span class="module-badge count">65</span>
+              <span class="module-badge count">70</span>
             </a>
 
             <a href="stakeholders.html" class="module-item" data-module="stakeholders">
@@ -612,6 +612,62 @@
                 <div class="module-desc">Helhetlig prosjektstatus</div>
               </div>
             </a>
+
+            <a href="deliverables.html" class="module-item" data-module="deliverables">
+              <div class="module-icon deliverables">📋</div>
+              <div class="module-info">
+                <div class="module-name">Leveranser</div>
+                <div class="module-desc">Prosjektleveranser og status</div>
+              </div>
+              <span class="module-badge count">75</span>
+            </a>
+
+            <a href="regulatory-status.html" class="module-item" data-module="regulatory">
+              <div class="module-icon regulatory">⚖️</div>
+              <div class="module-info">
+                <div class="module-name">Regulatorisk Status</div>
+                <div class="module-desc">Søknadsprosess og regelverk</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Presentasjoner -->
+          <div class="module-group">
+            <div class="group-header">Presentasjoner</div>
+
+            <a href="konseptskisse.html" class="module-item" data-module="konseptskisse">
+              <div class="module-icon konseptskisse" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">📑</div>
+              <div class="module-info">
+                <div class="module-name">Konseptskisse 1.0</div>
+                <div class="module-desc">Original konseptpresentasjon</div>
+              </div>
+            </a>
+
+            <a href="konseptskisse-2.html" class="module-item" data-module="konseptskisse2">
+              <div class="module-icon konseptskisse2" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe);">📘</div>
+              <div class="module-info">
+                <div class="module-name">Konseptskisse 2.0</div>
+                <div class="module-desc">Oppdatert presentasjon des 2025</div>
+              </div>
+              <span class="module-badge new">NY</span>
+            </a>
+
+            <a href="sustainability-report.html" class="module-item" data-module="sustainability-report">
+              <div class="module-icon sustainability-report" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">📊</div>
+              <div class="module-info">
+                <div class="module-name">Bærekraftsrapport Viewer</div>
+                <div class="module-desc">83-siders rapport med navigasjon</div>
+              </div>
+              <span class="module-badge count">83</span>
+            </a>
+
+            <a href="stakeholder-journey.html" class="module-item" data-module="stakeholder-journey">
+              <div class="module-icon stakeholder-journey" style="background: linear-gradient(135deg, #ede9fe, #ddd6fe);">🎭</div>
+              <div class="module-info">
+                <div class="module-name">Presentasjonsmodus</div>
+                <div class="module-desc">Interessentreise visualisering</div>
+              </div>
+            </a>
           </div>
         </div>
       </aside>
@@ -640,7 +696,7 @@
         title: 'Command Center',
         description: 'Komplett oversikt over prosjektets diskusjoner, beslutninger, prosesser og status. Master dashboard som knytter sammen alle prosjektressurser.',
         stats: [
-          { value: '65', label: 'Møter' },
+          { value: '70', label: 'Møter' },
           { value: '108', label: 'Beslutninger' },
           { value: '119', label: 'Handlinger' }
         ],
@@ -675,9 +731,9 @@
         title: 'Møteoversikt',
         description: 'Komplett database over alle prosjektmøter med detaljerte rapporter, deltakerlister, beslutninger og handlingspunkter. Integrert med Google Kalender.',
         stats: [
-          { value: '65', label: 'Møter' },
-          { value: '30', label: 'Deltakere' },
-          { value: '11', label: 'Organisasjoner' }
+          { value: '70', label: 'Møter' },
+          { value: '22', label: 'Deltakere' },
+          { value: '13', label: 'Organisasjoner' }
         ],
         features: [
           'Fullstendige møterapporter',
@@ -761,7 +817,7 @@
         description: 'Statistikk og innsikt på tvers av prosjektdata. Trender, mønstre og nøkkeltall.',
         stats: [
           { value: '16', label: 'Måneder' },
-          { value: '65', label: 'Møter' },
+          { value: '70', label: 'Møter' },
           { value: '271', label: 'Dokumenter' }
         ],
         features: [
@@ -788,6 +844,108 @@
           'Milepæler'
         ],
         href: 'overview.html'
+      },
+      deliverables: {
+        icon: '📋',
+        title: 'Leveranser',
+        description: 'Oversikt over alle prosjektleveranser med status, ansvarlige og tidslinjer.',
+        stats: [
+          { value: '75', label: 'Leveranser' },
+          { value: '48', label: 'Fullført' },
+          { value: '6', label: 'Pågår' }
+        ],
+        features: [
+          'Kategoriserte leveranser',
+          'Statussporing',
+          'Ansvarlige personer',
+          'Tidslinje og frister'
+        ],
+        href: 'deliverables.html'
+      },
+      regulatory: {
+        icon: '⚖️',
+        title: 'Regulatorisk Status',
+        description: 'Komplett oversikt over søknadsprosessen, regelverksforutsetninger og strategi for Hovfaret 13.',
+        stats: [
+          { value: '1', label: 'Fullført' },
+          { value: '1', label: 'Pågår' },
+          { value: '2', label: 'Planlagt' }
+        ],
+        features: [
+          'Søknadstidslinje',
+          'Reguleringsplanstatus',
+          'Juridiske argumenter',
+          'Interessentoversikt'
+        ],
+        href: 'regulatory-status.html'
+      },
+      konseptskisse: {
+        icon: '📑',
+        title: 'Konseptskisse 1.0',
+        description: 'Original konseptpresentasjon for Hovfaret 13 transformasjonsprosjekt. Dokumenterer visjonen for Omsorg+ eldreboliger.',
+        stats: [
+          { value: '73', label: 'Boliger' },
+          { value: '8', label: 'Etasjer' },
+          { value: '2025', label: 'Ferdig' }
+        ],
+        features: [
+          'Prosjektvisjon og konsept',
+          'Arkitektoniske tegninger',
+          'Bærekraftsargumentasjon',
+          'Omsorg+ programbeskrivelse'
+        ],
+        href: 'konseptskisse.html'
+      },
+      konseptskisse2: {
+        icon: '📘',
+        title: 'Konseptskisse 2.0',
+        description: 'Oppdatert presentasjon med nyeste data, strategisk skifte til Omsorg+, og ferske bærekraftsberegninger.',
+        stats: [
+          { value: '48%', label: 'CO₂-reduksjon' },
+          { value: '160', label: 'Bydelbehov' },
+          { value: '70', label: 'Møter' }
+        ],
+        features: [
+          'Strategisk skifte dokumentert',
+          'Oppdaterte klimaberegninger',
+          'Bydelsdialog og støtte',
+          'Nabovarsel og søknadsstatus'
+        ],
+        href: 'konseptskisse-2.html'
+      },
+      'sustainability-report': {
+        icon: '📊',
+        title: 'Bærekraftsrapport Viewer',
+        description: '83-siders komplett bærekraftsrapport med navigering, kapitteloversikt og eksporterte data.',
+        stats: [
+          { value: '83', label: 'Sider' },
+          { value: '10', label: 'Kapitler' },
+          { value: 'Jul 2025', label: 'Ferdig' }
+        ],
+        features: [
+          'Full rapport med navigasjon',
+          'Kapittelbasert lesing',
+          'Klimagassberegninger',
+          'ESRS-rapportering'
+        ],
+        href: 'sustainability-report.html'
+      },
+      'stakeholder-journey': {
+        icon: '🎭',
+        title: 'Presentasjonsmodus',
+        description: 'Interaktiv visualisering av interessentreisen gjennom prosjektet. Perfekt for presentasjoner.',
+        stats: [
+          { value: '22', label: 'Personer' },
+          { value: '13', label: 'Organisasjoner' },
+          { value: '70', label: 'Møter' }
+        ],
+        features: [
+          'Visuell tidslinje',
+          'Interessentkart',
+          'Presentasjonsmodus',
+          'Animert navigasjon'
+        ],
+        href: 'stakeholder-journey.html'
       }
     };
 

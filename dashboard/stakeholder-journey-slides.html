@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interessentreise - Google Slides versjon</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-main: #ffffff;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --color-bydel: #0891b2;
+      --color-kommune: #7c3aed;
+      --color-politiker: #db2777;
+      --color-leietaker: #16a34a;
+      --color-nabo: #d97706;
+      --color-workshop: #ea580c;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.4;
+      padding: 2rem;
+    }
+
+    .controls {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 100;
+    }
+
+    .controls button {
+      padding: 0.5rem 1rem;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #2563eb;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    /* ===== SLIDE CONTAINER ===== */
+    .slide {
+      width: 960px;
+      min-height: 540px;
+      margin: 0 auto 3rem;
+      padding: 2.5rem;
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      page-break-after: always;
+    }
+
+    .slide-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .slide-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    /* ===== TITLE SLIDE ===== */
+    .title-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .title-slide .main-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #0891b2, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title-slide .main-subtitle {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .title-slide .stats-row {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .title-slide .stat {
+      text-align: center;
+    }
+
+    .title-slide .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #0891b2;
+    }
+
+    .title-slide .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== TIMELINE SLIDE ===== */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      border-left: 4px solid;
+    }
+
+    .timeline-item.bydel { border-left-color: var(--color-bydel); }
+    .timeline-item.kommune { border-left-color: var(--color-kommune); }
+    .timeline-item.politiker { border-left-color: var(--color-politiker); }
+    .timeline-item.leietaker { border-left-color: var(--color-leietaker); }
+    .timeline-item.nabo { border-left-color: var(--color-nabo); }
+    .timeline-item.workshop { border-left-color: var(--color-workshop); }
+
+    .timeline-date {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      min-width: 70px;
+    }
+
+    .timeline-content h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-content p {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.3;
+    }
+
+    /* ===== CATEGORY BADGE ===== */
+    .category-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.25rem;
+    }
+
+    .category-badge.bydel { background: #e0f2fe; color: var(--color-bydel); }
+    .category-badge.kommune { background: #ede9fe; color: var(--color-kommune); }
+    .category-badge.politiker { background: #fce7f3; color: var(--color-politiker); }
+    .category-badge.leietaker { background: #dcfce7; color: var(--color-leietaker); }
+    .category-badge.nabo { background: #fef3c7; color: var(--color-nabo); }
+    .category-badge.workshop { background: #ffedd5; color: var(--color-workshop); }
+
+    /* ===== LEGEND ===== */
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .legend-dot.bydel { background: var(--color-bydel); }
+    .legend-dot.kommune { background: var(--color-kommune); }
+    .legend-dot.politiker { background: var(--color-politiker); }
+    .legend-dot.leietaker { background: var(--color-leietaker); }
+    .legend-dot.nabo { background: var(--color-nabo); }
+    .legend-dot.workshop { background: var(--color-workshop); }
+
+    /* ===== SUMMARY SLIDE ===== */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .summary-card {
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .summary-card h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .summary-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .summary-card.bydel h3 { color: var(--color-bydel); }
+    .summary-card.politiker h3 { color: var(--color-politiker); }
+    .summary-card.leietaker h3 { color: var(--color-leietaker); }
+    .summary-card.nabo h3 { color: var(--color-nabo); }
+    .summary-card.workshop h3 { color: var(--color-workshop); }
+    .summary-card.kommune h3 { color: var(--color-kommune); }
+
+    /* ===== PRINT ===== */
+    @media print {
+      .controls, .back-link { display: none; }
+      .slide {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="stakeholder-journey.html" class="back-link">← Tilbake til full versjon</a>
+
+  <div class="controls">
+    <button onclick="window.print()">Skriv ut / PDF</button>
+  </div>
+
+  <!-- SLIDE 1: Tittel -->
+  <div class="slide title-slide">
+    <div class="main-title">Interessentreisen</div>
+    <div class="main-subtitle">Hovfaret 13 Transformasjonsprosjekt</div>
+    <p style="color: #64748b; max-width: 600px;">
+      Kronologisk oversikt over dialoger med bydel, politikere, leietakere og naboer
+    </p>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-value">13</div>
+        <div class="stat-label">Interessentmøter</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">4</div>
+        <div class="stat-label">Bydel Ullern</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">2</div>
+        <div class="stat-label">Leietakere</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">2</div>
+        <div class="stat-label">Naboer</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: Tidslinje Jan-Mai 2025 -->
+  <div class="slide">
+    <h1 class="slide-title">Januar - Mai 2025</h1>
+    <p class="slide-subtitle">Leietakerdialog og Bydelskontakt etablert</p>
+
+    <div class="legend">
+      <div class="legend-item"><span class="legend-dot bydel"></span> Bydel Ullern</div>
+      <div class="legend-item"><span class="legend-dot leietaker"></span> Leietakere</div>
+      <div class="legend-item"><span class="legend-dot politiker"></span> Politikere</div>
+    </div>
+
+    <div class="timeline-grid">
+      <div class="timeline-item leietaker">
+        <div class="timeline-date">10. jan</div>
+        <div class="timeline-content">
+          <span class="category-badge leietaker">Leietaker</span>
+          <h4>Leietakermøte Hovfaret 13</h4>
+          <p>Transformasjonsplaner presentert. Dialog om overgangsperiode etablert.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item leietaker">
+        <div class="timeline-date">7. mar</div>
+        <div class="timeline-content">
+          <span class="category-badge leietaker">Leietaker</span>
+          <h4>Dispensasjonsstrategi</h4>
+          <p>Workshop om dispensasjon og leietakerdialog. 6 beslutninger fattet.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item bydel">
+        <div class="timeline-date">5. mai</div>
+        <div class="timeline-content">
+          <span class="category-badge bydel">Bydel</span>
+          <h4>Møte med Bente Otto</h4>
+          <p>Avd.dir. Helse og omsorg. Interesse for Omsorg+ bekreftet.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item bydel">
+        <div class="timeline-date">13. mai</div>
+        <div class="timeline-content">
+          <span class="category-badge bydel">Bydel</span>
+          <h4>Åpent møte: Bydel Ullern 2035</h4>
+          <p>Deltakelse på bydelens fremtidsmøte på Laboratoriet, Harbitz torg.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item bydel">
+        <div class="timeline-date">22. mai</div>
+        <div class="timeline-content">
+          <span class="category-badge bydel">Bydel</span>
+          <h4>Presentasjon for Bydelsledere</h4>
+          <p>Ingrid Hopp og Tore Strandskog. <strong>Sterk støtte fra ledelsen.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: Tidslinje Jun-Sep 2025 -->
+  <div class="slide">
+    <h1 class="slide-title">Juni - September 2025</h1>
+    <p class="slide-subtitle">Politisk dialog og strategisk skifte</p>
+
+    <div class="legend">
+      <div class="legend-item"><span class="legend-dot politiker"></span> Politikere</div>
+      <div class="legend-item"><span class="legend-dot workshop"></span> Workshops</div>
+      <div class="legend-item"><span class="legend-dot nabo"></span> Naboer</div>
+    </div>
+
+    <div class="timeline-grid">
+      <div class="timeline-item politiker">
+        <div class="timeline-date">24. jun</div>
+        <div class="timeline-content">
+          <span class="category-badge politiker">Politiker</span>
+          <h4>Møte med James Lorentzen</h4>
+          <p>Byutviklingsbyråd. Diskusjon om politisk løft av bruksendring.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item workshop">
+        <div class="timeline-date">5. sep</div>
+        <div class="timeline-content">
+          <span class="category-badge workshop">Workshop</span>
+          <h4>Strategisk skifte til Omsorg+</h4>
+          <p>Beslutning: Gå direkte på bruksendring til Omsorg+ (steg 2).</p>
+        </div>
+      </div>
+
+      <div class="timeline-item nabo">
+        <div class="timeline-date">19. sep</div>
+        <div class="timeline-content">
+          <span class="category-badge nabo">Nabo</span>
+          <h4>Planlegging nabolagsmøte</h4>
+          <p>Forberedelse av naboinformasjon i forbindelse med nabovarsel.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item workshop">
+        <div class="timeline-date">27. sep</div>
+        <div class="timeline-content">
+          <span class="category-badge workshop">Workshop</span>
+          <h4>Konseptworkshop med R21</h4>
+          <p>Finpussing av konsept før søknadsinnsending.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: Tidslinje Okt-Nov 2025 -->
+  <div class="slide">
+    <h1 class="slide-title">Oktober - November 2025</h1>
+    <p class="slide-subtitle">Nabovarsel og politisk forankring</p>
+
+    <div class="legend">
+      <div class="legend-item"><span class="legend-dot nabo"></span> Naboer</div>
+      <div class="legend-item"><span class="legend-dot kommune"></span> Kommune</div>
+      <div class="legend-item"><span class="legend-dot bydel"></span> Bydel</div>
+    </div>
+
+    <div class="timeline-grid">
+      <div class="timeline-item nabo">
+        <div class="timeline-date">14. okt</div>
+        <div class="timeline-content">
+          <span class="category-badge nabo">Nabo</span>
+          <h4>Nabolagsmøte Hovfaret 13</h4>
+          <p>Informasjonsmøte for naboer. Omsorg+ konseptet presentert.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item kommune">
+        <div class="timeline-date">16. okt</div>
+        <div class="timeline-content">
+          <span class="category-badge kommune">Kommune</span>
+          <h4>Nabovarsel sendt</h4>
+          <p>Formelt nabovarsel. Viktig regulatorisk milepæl oppnådd.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item bydel">
+        <div class="timeline-date">29. okt</div>
+        <div class="timeline-content">
+          <span class="category-badge bydel">Bydel</span>
+          <h4>Bydelsutvalgsmøte</h4>
+          <p>Presentasjon for Bydelsutvalget. <strong>Behov: 160 omsorgsboliger bekreftet.</strong></p>
+        </div>
+      </div>
+
+      <div class="timeline-item kommune">
+        <div class="timeline-date">Nov</div>
+        <div class="timeline-content">
+          <span class="category-badge kommune">Kommune</span>
+          <h4>Bruksendringssøknad pågår</h4>
+          <p>Søknad under utarbeidelse med Byggesaksrådgivning AS.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: Oppsummering -->
+  <div class="slide">
+    <h1 class="slide-title">Oppsummering</h1>
+    <p class="slide-subtitle">Interessentdialog Januar - November 2025</p>
+
+    <div class="summary-grid">
+      <div class="summary-card bydel">
+        <h3>4</h3>
+        <p>Bydel Ullern<br>møter</p>
+      </div>
+      <div class="summary-card leietaker">
+        <h3>2</h3>
+        <p>Leietaker-<br>dialoger</p>
+      </div>
+      <div class="summary-card politiker">
+        <h3>1</h3>
+        <p>Byråds-<br>møte</p>
+      </div>
+      <div class="summary-card nabo">
+        <h3>2</h3>
+        <p>Nabo-<br>møter</p>
+      </div>
+      <div class="summary-card workshop">
+        <h3>2</h3>
+        <p>Strategi-<br>workshops</p>
+      </div>
+      <div class="summary-card kommune">
+        <h3>2</h3>
+        <p>Regulatoriske<br>milepæler</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem; text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #f0fdf4, #ecfeff); border-radius: 12px;">
+      <h3 style="color: #0891b2; font-size: 1.25rem; margin-bottom: 0.5rem;">Nøkkelresultater</h3>
+      <p style="color: #475569; font-size: 0.95rem; line-height: 1.6;">
+        <strong>Bydel Ullern:</strong> Sterk politisk støtte bekreftet<br>
+        <strong>Behov dokumentert:</strong> 160 nye omsorgsboliger<br>
+        <strong>Nabovarsel:</strong> Fullført 16. oktober 2025<br>
+        <strong>Neste steg:</strong> Bruksendringssøknad under utarbeidelse
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

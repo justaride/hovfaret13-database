@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-12-03",
+    "last_updated": "2025-12-03",
+    "description": "Central configuration - single source of truth for key metrics",
+    "purpose": "All dashboards and JSON files should reference these values for consistency"
+  },
+  "project": {
+    "name": "Hovfaret 13 Transformation",
+    "short_name": "H13",
+    "current_phase": "phase_6",
+    "status": "Active - Pre-submission Phase"
+  },
+  "metrics": {
+    "meetings_total": 70,
+    "documents_total": 271,
+    "deliverables_total": 75,
+    "stakeholders": {
+      "people": 22,
+      "organizations": 13,
+      "total": 35
+    },
+    "timeline": {
+      "strategic_events": 12,
+      "operational_events": 27,
+      "sustainability_events": 17
+    }
+  },
+  "sustainability": {
+    "co2_savings_percent": 48,
+    "co2_saved_tonnes": 2549,
+    "material_savings_percent": 80,
+    "waste_reduction_percent": 85,
+    "energy": {
+      "current_rating": "F",
+      "target_rating": "C",
+      "current_consumption_kwh_m2": 232,
+      "target_consumption_kwh_m2": 116,
+      "reduction_percent": 50
+    }
+  },
+  "building": {
+    "address": "Hovfaret 13",
+    "district": "Skøyen",
+    "city": "Oslo",
+    "construction_year": 1989,
+    "current_floors": 5,
+    "design_capacity_floors": 12,
+    "area_bta_m2": 6100,
+    "area_bra_m2": 5800
+  },
+  "omsorg_plus": {
+    "planned_units": 73,
+    "district_need": 160,
+    "coverage_percent": 46
+  },
+  "scenarios": {
+    "scenario_1": {
+      "name": "Nybygg og riving",
+      "total_co2_tonnes": 5343,
+      "status": "not_recommended"
+    },
+    "scenario_2": {
+      "name": "Rehabilitering",
+      "total_co2_tonnes": 2794,
+      "status": "recommended"
+    },
+    "scenario_3": {
+      "name": "Påbygg (Omsorg+)",
+      "total_co2_tonnes": 4161,
+      "status": "preferred"
+    }
+  },
+  "key_dates": {
+    "building_constructed": "1989",
+    "demolition_requirement": "2023-09",
+    "project_start": "2024-03-11",
+    "energy_report": "2025-04-11",
+    "climate_report": "2025-04-22",
+    "sustainability_report": "2025-07-04",
+    "strategic_shift": "2025-09-05",
+    "neighborhood_meeting": "2025-10-14",
+    "neighbor_notice": "2025-10-16",
+    "konseptskisse_2": "2025-12-01"
+  },
+  "regulatory_status": {
+    "nabovarsel": {
+      "status": "completed",
+      "date": "2025-10-16"
+    },
+    "bruksendringssoknad": {
+      "status": "in_progress",
+      "target_date": "2025-11",
+      "responsible": "Byggesaksrådgivning AS"
+    },
+    "rammesoknad": {
+      "status": "not_started",
+      "target_date": null
+    }
+  },
+  "key_deliverables": {
+    "energy_report": {
+      "title": "Energikartlegging Hovfaret 13",
+      "date": "2025-04-11",
+      "source": "Vill Energi AS",
+      "pages": 14
+    },
+    "climate_report": {
+      "title": "Klimagassberegninger Hovfaret 13 v2",
+      "date": "2025-04-22",
+      "source": "Vill Energi AS",
+      "pages": 18
+    },
+    "sustainability_report": {
+      "title": "Bærekraftsrapport - Hovfaret 13",
+      "date": "2025-07-04",
+      "source": "Natural State AS",
+      "pages": 83
+    }
+  }
+}

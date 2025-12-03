@@ -1,0 +1,516 @@
+{
+  "metadata": {
+    "title": "Konseptskisse 2.0 - Tilleggssider",
+    "version": "2.0",
+    "created": "2025-12-03",
+    "updated": "2025-12-03",
+    "author": "Natural State",
+    "base_document": "04.09.25 Hovfaret 13 - Konseptskisse.pdf",
+    "base_pages": 113,
+    "new_pages": "114-127",
+    "purpose": "Oppdatering med progresjon september-desember 2025",
+    "revision_notes": "v2.0: Oppdatert etter Notion-integrering med korrekte tall, strategisk skifte sept 2025, og nabolagsmøte-resultater"
+  },
+
+  "style_guide": {
+    "header": "Tittel øverst til venstre, undertittel under",
+    "footer": "The natural state of place | © 2024 naturalstate.no | Sidetall",
+    "fonts": "Clean sans-serif, trolig Inter eller lignende",
+    "colors": {
+      "primary": "#1a1a1a (tekst)",
+      "accent": "#4a7c59 (Natural State grønn)",
+      "background": "#ffffff",
+      "highlight": "#f5f5f5"
+    },
+    "layout": "Landskapsformat 16:9, tekst venstrejustert, bilder høyre/full bredde",
+    "bullets": "• for hovedpunkter, ○ for underpunkter"
+  },
+
+  "new_pages": [
+    {
+      "page_number": 114,
+      "type": "section_divider",
+      "title": "5.",
+      "subtitle": "Progresjon",
+      "tagline": "Hva har skjedd siden\nKonseptskisse 1.0?",
+      "design_notes": "Samme stil som side 3, 28, 54, 92 - mørk bakgrunn, stor tittel",
+      "image_prompt": null
+    },
+    {
+      "page_number": 115,
+      "type": "content",
+      "title": "Status Desember 2025",
+      "subtitle": "Fra konsept til dokumentasjon",
+      "content": {
+        "intro": "Siden Konseptskisse 1.0 ble ferdigstilt i september 2025 har prosjektet gjort betydelig fremgang. Fire sentrale leveranser har styrket argumentasjonen for transformasjon, og dialogen med sentrale interessenter har blitt fordypet. Et strategisk skifte i september akselererte prosjektet mot Omsorg+-løsningen.",
+        "key_points": [
+          "4 faglige leveranser ferdigstilt",
+          "69 møter gjennomført totalt",
+          "Strategisk skifte 5. september - direkte til Omsorg+",
+          "Nabolagsmøte med ~30 deltakere 14. oktober",
+          "Bruksendringssøknad under utarbeidelse",
+          "Bærekraftscase dokumentert og kvantifisert"
+        ]
+      },
+      "layout": {
+        "left_column": "Tekst med intro og nøkkelpunkter",
+        "right_column": "Tidslinje-grafikk april-desember 2025"
+      },
+      "image_prompt": "[GRAFIKK: Vertikal tidslinje med 6 milepæler markert med ikoner - Energirapport (apr), Klimagass (apr), Bærekraftsrapport (jul), Strategisk skifte (sept), Nabolagsmøte (okt), Bruksendringssøknad (nov)]"
+    },
+    {
+      "page_number": 116,
+      "type": "content",
+      "title": "Strategisk Akselerasjon",
+      "subtitle": "5. september 2025 - Vendepunkt",
+      "content": {
+        "headline": "Beslutning: Gå direkte til Omsorg+",
+        "context": "Basert på konkrete tilbakemeldinger fra Bydel Ullern om behov for 160 omsorgsboliger, tok prosjektteamet en strategisk beslutning om å akselerere utviklingen.",
+        "key_decisions": [
+          {
+            "decision": "Droppe studiokontor-fasen",
+            "rationale": "Markedsbehov for eldreboliger er mer presserende enn kontorbehov"
+          },
+          {
+            "decision": "Gå direkte til Omsorg+ transformasjon",
+            "rationale": "Bydelen har identifisert konkret behov, og prosjektet kan dekke 46% av behovet"
+          },
+          {
+            "decision": "Skøyen Aktivitetssenter",
+            "rationale": "Mulighet for å erstatte aktivitetssenteret som mangler plass"
+          },
+          {
+            "decision": "Engasjere Byggesaksrådgivning AS",
+            "rationale": "Erfaren aktør som tidligere har håndtert bruksendring på Hovfaret 13 (Covid-senter)"
+          }
+        ],
+        "implications": [
+          "Raskere vei til realisering",
+          "Tydeligere samfunnsnytte",
+          "Sterkere politisk forankring",
+          "Enklere regulatorisk prosess"
+        ]
+      },
+      "layout": {
+        "left_column": "Beslutninger og rasjonale",
+        "right_column": "Illustrasjon av strategisk endring"
+      },
+      "image_prompt": "[GRAFIKK: Flytdiagram som viser gammel strategi (kontor → bolig) vs ny strategi (direkte til Omsorg+). Pildiagram med tidslinje]"
+    },
+    {
+      "page_number": 117,
+      "type": "content",
+      "title": "Energirapport",
+      "subtitle": "Vill Energi AS • 11. april 2025",
+      "content": {
+        "summary": "Komplett energikartlegging viser at rehabilitering kan oppnå TEK17-nivå med 50% reduksjon i energiforbruk.",
+        "key_findings": [
+          {
+            "metric": "50%",
+            "description": "Energireduksjon mulig"
+          },
+          {
+            "metric": "F → C",
+            "description": "Energimerke-forbedring"
+          },
+          {
+            "metric": "TEK17",
+            "description": "Målnivå oppnåelig"
+          },
+          {
+            "metric": "Enova",
+            "description": "Støtte bekreftet"
+          }
+        ],
+        "details": [
+          "Dagens energimerke: F (høyt forbruk)",
+          "Mål etter rehabilitering: C",
+          "Tiltak: Fasadeisolering, vinduer, varmepumpe, solceller",
+          "Enova-støtte: Kvalifiserer for energioppgradering"
+        ]
+      },
+      "layout": {
+        "left_column": "Tekst og metrics",
+        "right_column": "Før/etter energimerke-visualisering"
+      },
+      "image_prompt": "[GRAFIKK: Energimerke-skala A-G med markering av nåværende (F) og mål (C). Piler som viser forbedring. Evt. bygningssnitt med tiltak markert]"
+    },
+    {
+      "page_number": 118,
+      "type": "content",
+      "title": "Klimagassberegninger v2",
+      "subtitle": "Vill Energi AS • 22. april 2025",
+      "content": {
+        "headline": "Rehabilitering sparer 48% klimagassutslipp",
+        "comparison_table": {
+          "headers": ["", "Scenario 1: Riving", "Scenario 2: Rehab", "Scenario 3: Rehab+"],
+          "rows": [
+            ["Materialutslipp kg CO₂/m²", "312", "62", "123"],
+            ["Totalt tonn CO₂", "5 343", "2 794", "4 161"],
+            ["Avfall kg/m²", "800-1200", "100-200", "170-250"],
+            ["Bæresystem bevart", "0%", "≈90%", "≈90%"]
+          ]
+        },
+        "key_message": "Å la betongen stå er det største enkeltgrepet for å kutte klimagassutslipp. Rehabilitering sparer 250 kg CO₂ per m² og 900 kg avfall per m² sammenlignet med riving."
+      },
+      "layout": "Full bredde tabell med scenario-sammenligning",
+      "image_prompt": "[GRAFIKK: Stolpediagram som sammenligner CO₂-utslipp for de 3 scenarioene. Grønn markering på Scenario 2 og 3]"
+    },
+    {
+      "page_number": 119,
+      "type": "content",
+      "title": "Bærekraftsrapport",
+      "subtitle": "Natural State • 4. juli 2025",
+      "content": {
+        "summary": "83 siders ESRS-tilpasset rapport som dokumenterer den helhetlige bærekraftscasen for transformasjon.",
+        "structure": [
+          "Sammendrag og hovedfunn",
+          "Triple Bottom Line-rammeverk",
+          "Klima og miljømessig bærekraft (LCA)",
+          "Natur, biodiversitet og geotekniske forhold",
+          "Sosial bærekraft",
+          "Samfunnsinvolvering og medvirkning",
+          "Økonomisk bærekraft",
+          "Helhetlig vurdering"
+        ],
+        "conclusion": "Prosjektets transformative tilnærming er i tråd med Oslos klimamål, samfunnsbehov og prinsipper for sirkulær økonomi."
+      },
+      "layout": {
+        "left_column": "Kapittelliste og hovedbudskap",
+        "right_column": "Mockup av rapportforside"
+      },
+      "image_prompt": "[BILDE: Forsiden av Bærekraftsrapport - Hovfaret 13.pdf, eller mockup av rapporten]"
+    },
+    {
+      "page_number": 120,
+      "type": "content",
+      "title": "R21 Endelig Leveranse",
+      "subtitle": "R21 Arkitekter • 9. oktober 2025",
+      "content": {
+        "summary": "Komplett arkitektleveranse med detaljerte tegninger, visualiseringer og fasadeopsjoner.",
+        "deliverables": [
+          "Etasjeplaner U2 - Påbygg (alle etasjer)",
+          "Fasadealternativer (3 opsjoner)",
+          "3D-visualiseringer / renders",
+          "Snitt og oppriss",
+          "Arealoppstillinger"
+        ],
+        "scenarios_covered": [
+          "Scenario 2: Rehabilitering (6 093 m²)",
+          "Scenario 3: Rehabilitering + påbygg (8 470 m²)"
+        ]
+      },
+      "layout": "Grid med 4 render-bilder",
+      "image_prompt": "[BILDER: 4 renders fra R21 leveranse - fasade dag, fasade natt, fugleperspektiv, gateplan. Plasser i 2x2 grid]"
+    },
+    {
+      "page_number": 121,
+      "type": "content",
+      "title": "Interessentdialog",
+      "subtitle": "Utvidet engasjement 2025",
+      "content": {
+        "bydel_ullern": {
+          "meetings": [
+            "5. mai 2025: Møte med Bente Nodland Otto (administrasjon)",
+            "22. mai 2025: Møte med bydelsledelse - Ingrid Hopp (BU-leder) og Tore Strandskog (byutviklingskomité)",
+            "29. oktober 2025: Bydelsutvalgsmøte - politisk forankring"
+          ],
+          "key_insights": [
+            "Bydelen har identifisert behov for 160 omsorgsboliger",
+            "Omsorgsboliger står 'høyt på agendaen'",
+            "To knappheter: penger og hender i hjemmesykepleie",
+            "Samlokalisering er ressurseffektivt"
+          ]
+        },
+        "nabolagsmote": {
+          "date": "14. oktober 2025",
+          "attendees": "~30 naboer",
+          "outcomes": [
+            "Positiv respons på transformasjonskonsept",
+            "Bekymring: Trafikk fra Skøyen stasjon passasjerene",
+            "Sterk interesse for Omsorg+ eldreboliger",
+            "Forslag om fellesfunksjoner åpne for nabolaget"
+          ],
+          "follow_up": "Oppsummering sendt ut, innspill samlet"
+        },
+        "tenants": {
+          "meeting": "10. januar 2025: Leietakermøte",
+          "outcomes": [
+            "Transformasjonsplaner presentert",
+            "Dialog om overgang etablert",
+            "Positiv respons fra leietakere",
+            "Oppdatert sept 2025: Informert om strategisk akselerasjon"
+          ]
+        }
+      },
+      "layout": {
+        "left_column": "Bydel Ullern-dialog + Nabolagsmøte",
+        "right_column": "Leietakerdialog + foto fra møter"
+      },
+      "image_prompt": "[FOTO: Fra nabolagsmøte 14. oktober med ~30 deltakere, eller generisk møtebilde. Alternativt: Kart over Bydel Ullern med Hovfaret 13 markert]"
+    },
+    {
+      "page_number": 122,
+      "type": "content",
+      "title": "Omsorg+ Fordypning",
+      "subtitle": "Detaljert konsept",
+      "content": {
+        "unit_mix": {
+          "total": 73,
+          "breakdown": [
+            {"type": "1-roms", "count": 23, "size": "47 m²", "percent": "32%"},
+            {"type": "2-roms", "count": 44, "size": "57 m²", "percent": "60%"},
+            {"type": "3-roms", "count": 6, "size": "72 m²", "percent": "8%"}
+          ]
+        },
+        "husbanken_compliance": {
+          "score": "12/12 kategorier",
+          "categories": [
+            "Livsløpsstandard",
+            "Universell utforming",
+            "Fellesarealer min. 150 m²",
+            "Resepsjon/vaktmester",
+            "Nærhet til kollektiv",
+            "Servicetilbud i nærheten"
+          ]
+        },
+        "economics": {
+          "reference_price": "~10 mill NOK per enhet (kommunens tidligere kjøp)",
+          "husbanken": "Kvalifiserer for Husbanken-støtte",
+          "district_need": "160 enheter - H13 dekker 46%"
+        }
+      },
+      "layout": "3-kolonner: Leilighetsmiks | Husbanken | Økonomi",
+      "image_prompt": "[GRAFIKK: Kakediagram leilighetsmiks + Husbanken-sjekkboks-liste med grønne haker]"
+    },
+    {
+      "page_number": 123,
+      "type": "content",
+      "title": "Geoteknisk Risiko",
+      "subtitle": "Kvikkleire og områdestabilitet",
+      "content": {
+        "context": "Hovfaret 13 ligger i et område med dokumentert kvikkleire. ROS-analyse for Hoff Skole (Asplan Viak/Oslobygg 2023) gir viktig referanse.",
+        "key_findings": [
+          "Kvikkleire dokumentert i området",
+          "Riving medfører høy geoteknisk belastning",
+          "Rehabilitering avlaster området",
+          "Minimal terrenginngrep er mest rasjonelt"
+        ],
+        "conclusion": "På bakgrunn av geotekniske forhold er avlastning av området fra ytterligere geoteknisk belastning det mest rasjonelle valget. Dette styrker argumentet for rehabilitering fremfor riving."
+      },
+      "layout": {
+        "left_column": "Tekst og konklusjon",
+        "right_column": "Kart over kvikkleiresoner"
+      },
+      "image_prompt": "[KART: NVE/NGU kvikkleirekart for Skøyen-området med Hovfaret 13 markert. Fargekodet risikonivå]"
+    },
+    {
+      "page_number": 124,
+      "type": "content",
+      "title": "Prosjektdatabase",
+      "subtitle": "Digital kunnskapsbase",
+      "content": {
+        "summary": "All prosjektinformasjon er konsolidert i en digital database med interaktivt dashboard.",
+        "contents": {
+          "meetings": "69 møter med fullstendige referater",
+          "documents": "271 dokumenter kategorisert",
+          "timeline": "39 verifiserte milepæler (12 strategiske + 27 operasjonelle)",
+          "stakeholders": "24 personer, 16 organisasjoner",
+          "deliverables": "75 leveranser sporet fra Notion"
+        },
+        "dashboard_features": [
+          "Interaktiv tidslinje",
+          "Dokumentarkiv med søk",
+          "Interessentoversikt",
+          "Bærekraftsrapport-visning",
+          "Konseptskisse-arbeidsrom",
+          "Leveranseoversikt"
+        ],
+        "access": "hovfaret13-database (GitHub)"
+      },
+      "layout": {
+        "left_column": "Beskrivelse og innhold",
+        "right_column": "Screenshot av dashboard"
+      },
+      "image_prompt": "[SCREENSHOT: Dashboard index.html med statistikk-kort og navigasjon synlig]"
+    },
+    {
+      "page_number": 125,
+      "type": "content",
+      "title": "Neste Steg",
+      "subtitle": "Veien mot realisering",
+      "content": {
+        "completed_milestones": [
+          {
+            "title": "Nabovarsel",
+            "status": "Fullført",
+            "date": "16. oktober 2025",
+            "description": "Formelt nabovarsel sendt til alle berørte naboer."
+          },
+          {
+            "title": "Bruksendringssøknad",
+            "status": "Sendt",
+            "date": "7. november 2025",
+            "description": "Søknad om bruksendring til Omsorg+ sendt til Plan- og bygningsetaten via Byggesaksrådgivning AS."
+          }
+        ],
+        "in_progress": [
+          {
+            "title": "Rammesøknad",
+            "status": "Pågår",
+            "description": "Koordineringsmøte gjennomført 4. september 2025. Søknad til Plan- og bygningsetaten under utarbeidelse.",
+            "timeline": "Q1 2026"
+          },
+          {
+            "title": "Konseptskisse 2.0",
+            "status": "Pågår",
+            "description": "Denne oppdateringen - basert på leveranser og tilbakemeldinger fra interessentdialog.",
+            "timeline": "Desember 2025"
+          }
+        ],
+        "planned": [
+          {
+            "title": "Midlertidig bruksendring",
+            "description": "1. etasje - servering/kulturfunksjoner. Aktivere bygget og teste konsepter mens utvikling pågår."
+          },
+          {
+            "title": "Forprosjekt",
+            "description": "Detaljprosjektering når rammesøknad er behandlet."
+          }
+        ]
+      },
+      "layout": "Tidslinje med milepæler fremover",
+      "image_prompt": "[GRAFIKK: Horisontal tidslinje Q4 2025 → 2026 → 2027 med milepæler markert]"
+    },
+    {
+      "page_number": 126,
+      "type": "summary",
+      "title": "Oppsummering",
+      "subtitle": "Konseptskisse 2.0 Status",
+      "content": {
+        "key_numbers": [
+          {"value": "48%", "label": "Lavere CO₂ med rehabilitering"},
+          {"value": "73", "label": "Omsorg+ enheter"},
+          {"value": "12/12", "label": "Husbanken-krav oppfylt"},
+          {"value": "69", "label": "Møter gjennomført"},
+          {"value": "~30", "label": "Naboer på nabolagsmøte"},
+          {"value": "75", "label": "Leveranser sporet"}
+        ],
+        "main_message": "Hovfaret 13 har gått fra konsept til dokumentert case. Med faglige leveranser, nabolagsmøte, nabovarsel og kvantifisert bærekraftsargumentasjon er prosjektet godt på vei mot realisering.",
+        "call_to_action": "Nabovarsel sendt - bruksendringssøknad pågår - transformasjon fremfor riving."
+      },
+      "layout": "4 nøkkeltall øverst, hovedbudskap i midten, CTA nederst",
+      "image_prompt": "[BILDE: Render av ferdig Hovfaret 13 med grønne fasader - positiv fremtidsvisjon]"
+    }
+  ],
+
+  "changes_to_existing_pages": [
+    {
+      "page": 2,
+      "type": "update",
+      "section": "Innholdsfortegnelse",
+      "change": "Legg til '5. Progresjon' i kolonnestrukturen",
+      "new_content": {
+        "column_5": {
+          "title": "5. Progresjon",
+          "subtitle": "Hva har skjedd siden Konseptskisse 1.0?",
+          "items": [
+            "Status desember 2025",
+            "Leveranser",
+            "Interessentdialog",
+            "Omsorg+ fordypning",
+            "Neste steg"
+          ]
+        }
+      }
+    },
+    {
+      "page": 88,
+      "type": "update",
+      "section": "Omsorg+",
+      "change": "Oppdater med nyere data fra bydelsmøter",
+      "additions": [
+        "Legg til referanse til mai 2025-møter med bydelsledelse",
+        "Oppdater behovsestimatet: 160 enheter bekreftet av bydel",
+        "Legg til Husbanken 12/12 compliance"
+      ]
+    },
+    {
+      "page": 92,
+      "type": "update",
+      "section": "Energi & Klima Analyse",
+      "change": "Referere til fullstendig Vill Energi-rapport",
+      "additions": [
+        "Legg til kilde: '20250411 Energikartlegging Hovfaret 13.pdf'",
+        "Legg til kilde: 'Klimagassberegninger Hovfaret 13 v2.pdf'"
+      ]
+    },
+    {
+      "page": 93,
+      "type": "update",
+      "section": "Miljørisiko Analyse",
+      "change": "Utdyp geoteknisk argumentasjon",
+      "additions": [
+        "Referere til ROS-analyse Hoff Skole mer eksplisitt",
+        "Kvantifiser risiko ved riving vs rehabilitering"
+      ]
+    }
+  ],
+
+  "production_notes": {
+    "format": "Alle sider i landskapsformat 16:9 (1920x1080 eller tilsvarende)",
+    "software": "Anbefalt: Figma, InDesign, eller PowerPoint",
+    "images_needed": [
+      "Side 115: Tidslinje-grafikk med 6 milepæler (apr-nov 2025)",
+      "Side 116: Flytdiagram strategi-endring",
+      "Side 117: Energimerke-visualisering (F → C)",
+      "Side 118: CO₂-stolpediagram (3 scenarier)",
+      "Side 119: Rapportforside/mockup Bærekraftsrapport",
+      "Side 120: 4 renders fra R21 leveranse",
+      "Side 121: Foto fra nabolagsmøte 14. okt eller kart Bydel Ullern",
+      "Side 122: Kakediagram leilighetsmiks + Husbanken-sjekkliste",
+      "Side 123: Kvikkleirekart NVE/NGU",
+      "Side 124: Dashboard-screenshot med oppdaterte tall",
+      "Side 125: Tidslinje Q4 2025 → 2027",
+      "Side 126: Fremtidsrender Hovfaret 13"
+    ],
+    "export": "PDF og JPG (for dashboard)"
+  },
+
+  "summary_report": {
+    "title": "Konseptskisse 2.0 Tillegg - Statusrapport v2.0",
+    "date": "2025-12-03",
+    "updated": "2025-12-03",
+    "prepared_by": "Natural State / Claude Code",
+    "new_pages_count": 13,
+    "existing_changes_count": 4,
+    "status": "Klar for design og produksjon",
+    "key_additions": [
+      "Del 5: Progresjon (side 114-126)",
+      "Side 116: Strategisk Akselerasjon (5. sept 2025) - NY",
+      "Dokumentasjon av 4 faglige leveranser",
+      "Utvidet interessentdialog med nabolagsmøte-resultater (~30 deltakere)",
+      "Omsorg+ detaljering med Husbanken 12/12",
+      "Geoteknisk risikovurdering",
+      "Oppdatert prosjektdatabase (69 møter, 75 leveranser)",
+      "Bruksendringssøknad og nabovarsel status"
+    ],
+    "version_2_changes": [
+      "Lagt til ny side 116: Strategisk Akselerasjon",
+      "Oppdatert alle tall til korrekte verdier etter Notion-integrering",
+      "Utvidet interessentdialog (s.121) med nabolagsmøte 14. okt",
+      "Oppdatert prosjektdatabase (s.124) med 69 møter, 75 leveranser",
+      "Oppdatert neste steg (s.125) med bruksendringssøknad-status",
+      "Oppdatert oppsummering (s.126) med 6 nøkkeltall",
+      "Renummerert alle sider (114-126)"
+    ],
+    "comments": [
+      "Innholdsfortegnelse (s.2) må oppdateres med ny del 5",
+      "Omsorg+-siden (s.88) bør suppleres med nyere data",
+      "Energi/klima-sidene (s.92-93) bør referere til fullstendige rapporter",
+      "Alle nye sider følger eksisterende designspråk",
+      "Bildeprompts gir retning for grafikk/foto som trengs",
+      "Strategisk akselerasjon (s.116) dokumenterer kritisk beslutning fra september"
+    ]
+  }
+}

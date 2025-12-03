@@ -177,6 +177,44 @@
       "role_in_project": "Regulatory oversight - handling objections from Bane NOR and Statens vegvesen",
       "key_context": "Plan not legally binding due to pending objections",
       "engagement_level": "regulatory"
+    },
+    "byggesaksradgivning": {
+      "id": "byggesaksradgivning",
+      "name": "Byggesaksrådgivning AS",
+      "type": "consultant",
+      "category": "Technical Consultants",
+      "description": "Building permit consultancy with 25+ years experience in Oslo. Specializes in building permits, user change applications, and sectioning cases. Previously handled the Covid-center conversion at Hovfaret 13.",
+      "role_in_project": "Responsible Applicant (Ansvarlig søker) - handles bruksendringssøknad to Omsorg+ and regulatory process with PBE",
+      "website": "byggesaksradgivning.com",
+      "key_context": "Has previous experience with Hovfaret 13 - handled conversion to Skøyen Covid-senter and back. Key expertise in navigating PBE processes.",
+      "engagement_level": "active",
+      "first_involvement": "2025-09-05"
+    },
+    "parabol": {
+      "id": "parabol",
+      "name": "Parabol",
+      "type": "consultant",
+      "category": "Technical Consultants",
+      "description": "Digital agency responsible for building and hosting the Hovfaret13.no website.",
+      "role_in_project": "Website development and hosting for hovfaret13.no",
+      "website": null,
+      "key_deliverables": [
+        "hovfaret13.no website development",
+        "Landing page for nabolagsmøte"
+      ],
+      "engagement_level": "support",
+      "first_involvement": "2025-05-01"
+    },
+    "nordic_circle_hotspot": {
+      "id": "nordic_circle_hotspot",
+      "name": "Nordic Circle Hotspot / NCC",
+      "type": "network",
+      "category": "Strategic Partners",
+      "description": "Network for circular economy in construction. Hovfaret 13 serves as a pilot project for testing circular building principles and materials.",
+      "role_in_project": "Strategic partner - Hovfaret 13 is pilot customer for circular economy testing",
+      "key_context": "Part of Nordic Circle Construction initiative. Project will test sirkulære byggematerialer and become living laboratory for circular principles.",
+      "engagement_level": "strategic",
+      "first_involvement": "2025-09-05"
     }
   },
   "organization_categories": {
