@@ -1,28 +1,31 @@
 # Project Status
 
 **Last Updated:** 2025-12-04
-**Status:** ✅ Phase 41 COMPLETE - Tekstbibliotek
+**Status:** ✅ Phase 42 COMPLETE - Tidslinjebibliotek
 
 ---
 
 ## Current Phase
 
-**Phase 41: Tekstbibliotek ✅ COMPLETE**
+**Phase 42: Tidslinjebibliotek ✅ COMPLETE**
 
-Laget bibliotek med ferdigskrevne tekster i 6 ulike stemmer og toner for bruk i søknader, presentasjoner, presse og sosiale medier.
+Samlet alle prosjekttidslinjer i ett bibliotek med visuelle forhåndsvisninger.
 
 ### Nye filer
 | Fil | Beskrivelse |
 |-----|-------------|
-| `text-library.html` | 20+ tekster i 6 kategorier |
+| `timelines.html` | 9 tidslinjer i 3 kategorier |
 
-### Kategorier
-1. Formell (søknader)
-2. Konverserende (nettside, SoMe)
-3. Narrativ/Poetisk (presentasjoner)
-4. Søknadsspesifikk (bruksendring, dispensasjon)
-5. Presse (pressemeldinger)
-6. Korte formuleringer (taglines)
+### Tidslinjer samlet
+1. **Hoveddashboards:** Prosjekthistorikk, Interessentreise
+2. **Formålsspesifikke:** Visuell reise, Kompakt slide, Finansiering
+3. **Innebygde:** Konseptskisse (2), Bærekraftsrapport, Regulatory
+
+---
+
+**Phase 41: Tekstbibliotek ✅ COMPLETE**
+
+Laget bibliotek med 20+ tekster i 6 toner (formell, konverserende, poetisk, søknad, presse, SoMe).
 
 ---
 

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidslinjebibliotek - Hovfaret 13</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --text-accent: #2563eb;
+            --border-light: #e2e8f0;
+            --green: #22c55e;
+            --orange: #f59e0b;
+            --blue: #3b82f6;
+            --purple: #8b5cf6;
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .app-header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.875rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .page-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .page-subtitle {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Main */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Intro */
+        .intro-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .intro-section h2 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-section p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Category Headers */
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        .category-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .category-icon.existing { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+        .category-icon.purpose { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
+        .category-icon.embedded { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+
+        .category-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .category-count {
+            font-size: 0.75rem;
+            background: var(--bg-main);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            color: var(--text-muted);
+        }
+
+        /* Timeline Cards Grid */
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .timeline-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .timeline-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .timeline-card.featured {
+            border: 2px solid var(--text-accent);
+        }
+
+        /* Card Preview */
+        .card-preview {
+            height: 180px;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-preview.light {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .card-preview.green {
+            background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+        }
+
+        .card-preview.blue {
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+        }
+
+        /* Mini Timeline Previews */
+        .preview-timeline-horizontal {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            height: 80px;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+
+        .preview-bar {
+            flex: 1;
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px 3px 0 0;
+            position: relative;
+        }
+
+        .preview-bar.active {
+            background: var(--green);
+        }
+
+        .preview-bar span {
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.6rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .preview-timeline-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 1rem 1.5rem;
+        }
+
+        .preview-event {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .preview-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+            flex-shrink: 0;
+        }
+
+        .preview-dot.orange { background: var(--orange); }
+        .preview-dot.blue { background: var(--blue); }
+
+        .preview-line {
+            width: 2px;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            margin-left: 3px;
+        }
+
+        .preview-text {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .preview-date {
+            font-size: 0.55rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Gantt preview */
+        .preview-gantt {
+            width: 100%;
+            padding: 1rem 1.5rem;
+        }
+
+        .gantt-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .gantt-label {
+            font-size: 0.55rem;
+            color: rgba(255,255,255,0.6);
+            width: 60px;
+            text-align: right;
+        }
+
+        .gantt-bar-container {
+            flex: 1;
+            height: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+            position: relative;
+        }
+
+        .gantt-bar {
+            position: absolute;
+            height: 100%;
+            border-radius: 6px;
+        }
+
+        .gantt-bar.green { background: var(--green); }
+        .gantt-bar.blue { background: var(--blue); }
+        .gantt-bar.orange { background: var(--orange); }
+
+        /* Card Info */
+        .card-info {
+            padding: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .card-tag {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: var(--bg-main);
+            color: var(--text-muted);
+        }
+
+        .card-tag.primary {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .card-tag.green {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.6rem 1rem;
+            border-radius: var(--radius-md);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.15s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--text-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: var(--bg-main);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-light);
+        }
+
+        .btn-secondary:hover {
+            background: var(--border-light);
+        }
+
+        /* New Timeline Placeholder */
+        .new-timeline-card {
+            background: var(--bg-card);
+            border: 2px dashed var(--border-light);
+            border-radius: var(--radius-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .new-timeline-card:hover {
+            border-color: var(--text-accent);
+            background: #f8fafc;
+        }
+
+        .new-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--bg-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .new-timeline-card:hover .new-icon {
+            background: #dbeafe;
+            color: var(--text-accent);
+        }
+
+        .new-title {
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .new-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Tilbake
+            </a>
+            <div style="text-align: center;">
+                <h1 class="page-title">Tidslinjebibliotek</h1>
+                <p class="page-subtitle">Alle prosjekttidslinjer samlet</p>
+            </div>
+            <div style="width: 80px;"></div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="intro-section">
+            <h2>Tidslinjer for ulike formål</h2>
+            <p>Prosjektet har utviklet flere tidslinjer for ulike bruksområder - fra komplett historikk til fokuserte uttak for presentasjoner og søknader. Her finner du alle samlet, med mulighet til å lage nye formålsspesifikke versjoner.</p>
+        </section>
+
+        <!-- Eksisterende Hovedtidslinjer -->
+        <div class="category-header">
+            <div class="category-icon existing">📊</div>
+            <span class="category-title">Hoveddashboards med tidslinje</span>
+            <span class="category-count">2 tidslinjer</span>
+        </div>
+
+        <div class="timeline-grid">
+            <!-- Prosjekthistorikk -->
+            <div class="timeline-card featured">
+                <div class="card-preview">
+                    <div class="preview-timeline-horizontal">
+                        <div class="preview-bar active" style="height: 20%;"><span>1989</span></div>
+                        <div class="preview-bar active" style="height: 25%;"><span>2020</span></div>
+                        <div class="preview-bar active" style="height: 40%;"><span>2023</span></div>
+                        <div class="preview-bar active" style="height: 65%;"><span>2024</span></div>
+                        <div class="preview-bar active" style="height: 85%;"><span>2025</span></div>
+                        <div class="preview-bar" style="height: 100%;"><span>2026</span></div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Prosjekthistorikk</div>
+                    <div class="card-desc">Komplett tidslinje fra 1989 til i dag med 32 verifiserte hendelser. Strategiske milepæler og operasjonelle detaljer.</div>
+                    <div class="card-meta">
+                        <span class="card-tag primary">Hoveddashboard</span>
+                        <span class="card-tag">32 hendelser</span>
+                        <span class="card-tag">1989-2025</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="timeline.html" class="btn btn-primary">Åpne</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interessentreise -->
+            <div class="timeline-card">
+                <div class="card-preview blue">
+                    <div class="preview-timeline-vertical">
+                        <div class="preview-event">
+                            <div class="preview-dot"></div>
+                            <div>
+                                <div class="preview-text">Første bydelsmøte</div>
+                                <div class="preview-date">Mai 2025</div>
+                            </div>
+                        </div>
+                        <div class="preview-event">
+                            <div class="preview-dot orange"></div>
+                            <div>
+                                <div class="preview-text">NCC partnerskap</div>
+                                <div class="preview-date">Sept 2025</div>
+                            </div>
+                        </div>
+                        <div class="preview-event">
+                            <div class="preview-dot blue"></div>
+                            <div>
+                                <div class="preview-text">Nabolagsmøte</div>
+                                <div class="preview-date">Nov 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Interessentreise</div>
+                    <div class="card-desc">Visuell tidslinje over dialog med bydel, naboer og partnere. Animert presentasjonsmodus.</div>
+                    <div class="card-meta">
+                        <span class="card-tag primary">Presentasjon</span>
+                        <span class="card-tag">13 hendelser</span>
+                        <span class="card-tag">2025</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="stakeholder-journey.html" class="btn btn-primary">Åpne</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formålsspesifikke uttak -->
+        <div class="category-header">
+            <div class="category-icon purpose">🎯</div>
+            <span class="category-title">Formålsspesifikke uttak</span>
+            <span class="category-count">3 uttak</span>
+        </div>
+
+        <div class="timeline-grid">
+            <!-- Visuell historier - tidslinje -->
+            <div class="timeline-card">
+                <div class="card-preview" style="background: #111;">
+                    <div class="preview-timeline-horizontal">
+                        <div class="preview-bar active" style="height: 30%;"><span>2023</span></div>
+                        <div class="preview-bar active" style="height: 50%;"><span>2024</span></div>
+                        <div class="preview-bar active" style="height: 70%;"><span>Q1</span></div>
+                        <div class="preview-bar active" style="height: 85%;"><span>Q2</span></div>
+                        <div class="preview-bar active" style="height: 95%;"><span>Q3</span></div>
+                        <div class="preview-bar" style="height: 100%;"><span>Q4</span></div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Visuell prosjektreise</div>
+                    <div class="card-desc">Minimalistisk bar-tidslinje. Fra rivningsvedtak til transformasjon. Del av visual-stories.</div>
+                    <div class="card-meta">
+                        <span class="card-tag green">Storytelling</span>
+                        <span class="card-tag">6 faser</span>
+                        <span class="card-tag">Minimalistisk</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="visual-stories.html#timeline" class="btn btn-primary">Åpne</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide-bibliotek tidslinje -->
+            <div class="timeline-card">
+                <div class="card-preview" style="background: linear-gradient(135deg, #1e293b, #334155);">
+                    <div style="display: flex; gap: 4px; padding: 0 1rem;">
+                        <div style="flex: 1; background: var(--green); padding: 0.5rem; border-radius: 4px; text-align: center;">
+                            <div style="font-size: 0.6rem; color: white; font-weight: 700;">2023</div>
+                            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7);">Rivning</div>
+                        </div>
+                        <div style="flex: 1; background: var(--green); padding: 0.5rem; border-radius: 4px; text-align: center;">
+                            <div style="font-size: 0.6rem; color: white; font-weight: 700;">2024</div>
+                            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7);">Mobil.</div>
+                        </div>
+                        <div style="flex: 1; background: var(--green); padding: 0.5rem; border-radius: 4px; text-align: center;">
+                            <div style="font-size: 0.6rem; color: white; font-weight: 700;">Q1-Q2</div>
+                            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7);">Dok.</div>
+                        </div>
+                        <div style="flex: 1; background: var(--green); padding: 0.5rem; border-radius: 4px; text-align: center;">
+                            <div style="font-size: 0.6rem; color: white; font-weight: 700;">Q3</div>
+                            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7);">Aksel.</div>
+                        </div>
+                        <div style="flex: 1; background: rgba(255,255,255,0.2); padding: 0.5rem; border-radius: 4px; text-align: center;">
+                            <div style="font-size: 0.6rem; color: white; font-weight: 700;">Q4</div>
+                            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.7);">Søknad</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Kompakt prosjekttidslinje</div>
+                    <div class="card-desc">Kopiérbar slide med 5 faser. Perfekt for presentasjoner og pitch-deck.</div>
+                    <div class="card-meta">
+                        <span class="card-tag green">Slide</span>
+                        <span class="card-tag">5 faser</span>
+                        <span class="card-tag">Kopiérbar</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="slides-library.html" class="btn btn-primary">Åpne</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Husbanken tidslinje -->
+            <div class="timeline-card">
+                <div class="card-preview green">
+                    <div class="preview-gantt">
+                        <div class="gantt-row">
+                            <span class="gantt-label">Prosjektering</span>
+                            <div class="gantt-bar-container">
+                                <div class="gantt-bar green" style="left: 0; width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="gantt-row">
+                            <span class="gantt-label">Byggesøknad</span>
+                            <div class="gantt-bar-container">
+                                <div class="gantt-bar blue" style="left: 25%; width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="gantt-row">
+                            <span class="gantt-label">Bygging</span>
+                            <div class="gantt-bar-container">
+                                <div class="gantt-bar orange" style="left: 45%; width: 45%;"></div>
+                            </div>
+                        </div>
+                        <div class="gantt-row">
+                            <span class="gantt-label">Innflytting</span>
+                            <div class="gantt-bar-container">
+                                <div class="gantt-bar green" style="left: 85%; width: 15%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Finansiering & Fremdrift</div>
+                    <div class="card-desc">Gantt-stil tidslinje for finansieringssøknader. Husbanken, Enova, byggestart.</div>
+                    <div class="card-meta">
+                        <span class="card-tag green">Søknad</span>
+                        <span class="card-tag">4 faser</span>
+                        <span class="card-tag">2025-2028</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="slides-library.html" class="btn btn-primary">Åpne</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Innebygde tidslinjer i andre dashboards -->
+        <div class="category-header">
+            <div class="category-icon embedded">📑</div>
+            <span class="category-title">Innebygd i andre dashboards</span>
+            <span class="category-count">4 tidslinjer</span>
+        </div>
+
+        <div class="timeline-grid">
+            <!-- Konseptskisse interessentdialog -->
+            <div class="timeline-card">
+                <div class="card-preview light">
+                    <div class="preview-timeline-vertical" style="color: #1e293b;">
+                        <div class="preview-event">
+                            <div class="preview-dot"></div>
+                            <div>
+                                <div class="preview-text" style="color: #334155;">Bente Otto (admin)</div>
+                                <div class="preview-date" style="color: #64748b;">5. mai 2025</div>
+                            </div>
+                        </div>
+                        <div class="preview-event">
+                            <div class="preview-dot"></div>
+                            <div>
+                                <div class="preview-text" style="color: #334155;">Bydelsledelse</div>
+                                <div class="preview-date" style="color: #64748b;">22. mai 2025</div>
+                            </div>
+                        </div>
+                        <div class="preview-event">
+                            <div class="preview-dot orange"></div>
+                            <div>
+                                <div class="preview-text" style="color: #334155;">James Lorentzen</div>
+                                <div class="preview-date" style="color: #64748b;">24. juni 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Interessentdialog (Konseptskisse)</div>
+                    <div class="card-desc">Tidslinje over dialog med Bydel Ullern. Side 108 i konseptskisse 2.0.</div>
+                    <div class="card-meta">
+                        <span class="card-tag">Konseptskisse 2.0</span>
+                        <span class="card-tag">Side 108</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="konseptskisse-2.html" class="btn btn-secondary">Gå til side</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Konseptskisse søknadsprosess -->
+            <div class="timeline-card">
+                <div class="card-preview light">
+                    <div class="preview-gantt" style="color: #1e293b;">
+                        <div class="gantt-row">
+                            <span class="gantt-label" style="color: #64748b;">Nabovarsel</span>
+                            <div class="gantt-bar-container" style="background: rgba(0,0,0,0.1);">
+                                <div class="gantt-bar green" style="left: 0; width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="gantt-row">
+                            <span class="gantt-label" style="color: #64748b;">Bruksendring</span>
+                            <div class="gantt-bar-container" style="background: rgba(0,0,0,0.1);">
+                                <div class="gantt-bar blue" style="left: 0; width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="gantt-row">
+                            <span class="gantt-label" style="color: #64748b;">Dispensasjon</span>
+                            <div class="gantt-bar-container" style="background: rgba(0,0,0,0.1);">
+                                <div class="gantt-bar orange" style="left: 30%; width: 30%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Søknadsprosess (Konseptskisse)</div>
+                    <div class="card-desc">Regulatorisk prosess-tidslinje. Nabovarsel, bruksendring, dispensasjon.</div>
+                    <div class="card-meta">
+                        <span class="card-tag">Konseptskisse 2.0</span>
+                        <span class="card-tag">Side 109-110</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="konseptskisse-2.html" class="btn btn-secondary">Gå til side</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bærekraftsrapport 2.0 tidslinje -->
+            <div class="timeline-card">
+                <div class="card-preview green">
+                    <div class="preview-timeline-vertical">
+                        <div class="preview-event">
+                            <div class="preview-dot"></div>
+                            <div>
+                                <div class="preview-text">Strategisk akselerasjon</div>
+                                <div class="preview-date">Sept 2025</div>
+                            </div>
+                        </div>
+                        <div class="preview-event">
+                            <div class="preview-dot"></div>
+                            <div>
+                                <div class="preview-text">Nordic Circle Hotspot</div>
+                                <div class="preview-date">Okt 2025</div>
+                            </div>
+                        </div>
+                        <div class="preview-event">
+                            <div class="preview-dot blue"></div>
+                            <div>
+                                <div class="preview-text">Status desember</div>
+                                <div class="preview-date">Des 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Status 2025 (Bærekraftsrapport)</div>
+                    <div class="card-desc">Tidslinje over hendelser siden juli 2025. Del av bærekraftsrapport 2.0 arbeidsrom.</div>
+                    <div class="card-meta">
+                        <span class="card-tag">Bærekraftsrapport 2.0</span>
+                        <span class="card-tag">Slide 2</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="barekraftsrapport-2.html" class="btn btn-secondary">Gå til side</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regulatory status -->
+            <div class="timeline-card">
+                <div class="card-preview" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
+                    <div class="preview-gantt">
+                        <div class="gantt-row">
+                            <span class="gantt-label">Forhåndskonf.</span>
+                            <div class="gantt-bar-container">
+                                <div class="gantt-bar green" style="left: 0; width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="gantt-row">
+                            <span class="gantt-label">Nabovarsel</span>
+                            <div class="gantt-bar-container">
+                                <div class="gantt-bar green" style="left: 0; width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="gantt-row">
+                            <span class="gantt-label">Bruksendring</span>
+                            <div class="gantt-bar-container">
+                                <div class="gantt-bar blue" style="left: 0; width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="gantt-row">
+                            <span class="gantt-label">Byggesøknad</span>
+                            <div class="gantt-bar-container">
+                                <div class="gantt-bar" style="left: 0; width: 0%; background: rgba(255,255,255,0.3);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="card-title">Regulatorisk prosess</div>
+                    <div class="card-desc">Komplett oversikt over søknadsstatus og neste steg i den regulatoriske prosessen.</div>
+                    <div class="card-meta">
+                        <span class="card-tag">Regulatory Status</span>
+                        <span class="card-tag">4 faser</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="regulatory-status.html" class="btn btn-secondary">Gå til side</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lag ny tidslinje -->
+        <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #e0e7ff, #c7d2fe);">➕</div>
+            <span class="category-title">Lag ny tidslinje</span>
+        </div>
+
+        <div class="timeline-grid">
+            <div class="new-timeline-card" onclick="alert('Kommer snart: Tidslinjegenerator')">
+                <div class="new-icon">+</div>
+                <div class="new-title">Ny formålsspesifikk tidslinje</div>
+                <div class="new-desc">Lag tilpasset uttak for søknad, presentasjon eller rapport</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        Hovfaret 13 Prosjektdatabase v2.54 &bull; Tidslinjebibliotek &bull; Oppdatert 2025-12-04
+    </footer>
+</body>
+</html>

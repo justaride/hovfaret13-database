@@ -2,6 +2,46 @@
 
 All notable changes to this project database.
 
+## [2.54.0] - 2025-12-04
+
+### Phase 42: Tidslinjebibliotek
+
+**Status:** ✅ COMPLETE
+
+#### Samling av alle prosjekttidslinjer
+
+Laget ny side som samler alle tidslinjer på ett sted med visuelle forhåndsvisninger.
+
+**Ny fil:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `timelines.html` | Bibliotek med 9 tidslinjer i 3 kategorier |
+
+**Kategorier:**
+
+1. **Hoveddashboards** (2)
+   - Prosjekthistorikk (32 hendelser, 1989-2025)
+   - Interessentreise (13 hendelser, 2025)
+
+2. **Formålsspesifikke uttak** (3)
+   - Visuell prosjektreise (visual-stories)
+   - Kompakt prosjekttidslinje (slides-library)
+   - Finansiering & Fremdrift (Gantt-stil)
+
+3. **Innebygd i andre dashboards** (4)
+   - Interessentdialog (konseptskisse s.108)
+   - Søknadsprosess (konseptskisse s.109-110)
+   - Status 2025 (bærekraftsrapport 2.0)
+   - Regulatorisk prosess (regulatory-status)
+
+**Funksjonalitet:**
+- Visuelle forhåndsvisninger av hver tidslinje
+- Direkte lenker til kilde-dashboards
+- Placeholder for fremtidig tidslinjegenerator
+
+---
+
 ## [2.53.0] - 2025-12-04
 
 ### Phase 41: Tekstbibliotek
