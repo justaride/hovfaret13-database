@@ -96,7 +96,7 @@
 | 14.10.25 | Nabo | Nabolagsmøte (~30 pers) | Naboer informert |
 | 16.10.25 | Regulatorisk | Nabovarsel sendt | Milepæl fullført |
 | 29.10.25 | Bydel | Bydelsutvalgsmøte | 160 enheter bekreftet |
-| Nov 25 | Regulatorisk | Bruksendringssøknad | Pågår |
+| Nov 25 | Regulatorisk | Rammesøknad | Pågår |
 
 ---
 
@@ -118,8 +118,8 @@
 | Element | Status | Dato |
 |---------|--------|------|
 | Nabovarsel | ✅ Fullført | 16.10.2025 |
-| Bruksendringssøknad | 🔄 Pågår | Mål nov 2025 |
-| Rammesøknad | ⏳ Planlagt | 2026 |
+| Rammesøknad | 🔄 Pågår | Q1 2026 |
+| Igangsettingssøknad | ⏳ Planlagt | 2026 |
 
 **Ansvarlig søker:** Byggesaksrådgivning AS
 
