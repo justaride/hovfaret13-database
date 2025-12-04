@@ -1,0 +1,2452 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medvirkning - Hovfaret 13</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #dbeafe;
+            --green: #22c55e;
+            --green-dark: #166534;
+            --green-light: #dcfce7;
+            --orange: #f59e0b;
+            --orange-light: #fef3c7;
+            --purple: #8b5cf6;
+            --purple-light: #f3e8ff;
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .header-title h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .header-subtitle {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero-lead {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-stat-label {
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .section-icon.blue { background: var(--primary-light); }
+        .section-icon.blue svg { stroke: var(--primary-dark); }
+        .section-icon.green { background: var(--green-light); }
+        .section-icon.green svg { stroke: var(--green-dark); }
+        .section-icon.orange { background: var(--orange-light); }
+        .section-icon.orange svg { stroke: #92400e; }
+        .section-icon.purple { background: var(--purple-light); }
+        .section-icon.purple svg { stroke: #6b21a8; }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Event Card */
+        .event-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .event-header {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #e0e7ff 100%);
+            padding: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .event-date {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-location {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .event-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .event-stat {
+            text-align: center;
+        }
+
+        .event-stat-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .event-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .event-content {
+            padding: 2rem;
+        }
+
+        /* Text Variants */
+        .text-variants {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .text-variant {
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            position: relative;
+        }
+
+        .text-variant.formal { border-left-color: var(--primary); }
+        .text-variant.narrative { border-left-color: var(--green); }
+        .text-variant.compact { border-left-color: var(--orange); }
+
+        .variant-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .variant-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+        }
+
+        .variant-label.formal { background: var(--primary-light); color: var(--primary-dark); }
+        .variant-label.narrative { background: var(--green-light); color: var(--green-dark); }
+        .variant-label.compact { background: var(--orange-light); color: #92400e; }
+
+        .copy-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 0.375rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--text-primary);
+            color: white;
+            border-color: var(--text-primary);
+        }
+
+        .copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .variant-text {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        .variant-text p {
+            margin-bottom: 0.75rem;
+        }
+
+        .variant-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .variant-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Highlights */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            border: 1px solid var(--border);
+        }
+
+        .highlight-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-text {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Timeline mini */
+        .events-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .timeline-event {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            transition: all 0.15s;
+        }
+
+        .timeline-event:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-date-box {
+            width: 60px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .timeline-day {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .timeline-month {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .timeline-content h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-text {
+            opacity: 0.7;
+            font-size: 0.875rem;
+        }
+
+        /* Website Concept Styles */
+        .website-concept {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .concept-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .concept-section.hero-concept {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            color: white;
+        }
+
+        .concept-section.hero-concept .concept-label {
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        .concept-section.hero-concept .image-placeholder {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.7);
+        }
+
+        .concept-section.footer-concept {
+            background: var(--text-primary);
+            color: white;
+        }
+
+        .concept-section.footer-concept .concept-label {
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        .concept-label {
+            background: var(--bg-light);
+            padding: 0.75rem 1.25rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .concept-content {
+            padding: 2rem;
+        }
+
+        .concept-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .concept-lead {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .concept-subtitle {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .concept-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .image-placeholder {
+            background: var(--bg-light);
+            border: 2px dashed var(--border);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .image-placeholder.gallery {
+            flex-direction: row;
+            padding: 1.5rem;
+        }
+
+        .image-placeholder span {
+            font-size: 0.875rem;
+        }
+
+        /* Discussion Grid */
+        .discussion-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .discussion-box {
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .discussion-box h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .discussion-box p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        .discussion-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--orange-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .discussion-icon svg {
+            stroke: #92400e;
+        }
+
+        .discussion-icon.green {
+            background: var(--green-light);
+        }
+
+        .discussion-icon.green svg {
+            stroke: var(--green-dark);
+        }
+
+        .discussion-icon.blue {
+            background: var(--primary-light);
+        }
+
+        .discussion-icon.blue svg {
+            stroke: var(--primary-dark);
+        }
+
+        .discussion-icon.purple {
+            background: var(--purple-light);
+        }
+
+        .discussion-icon.purple svg {
+            stroke: #6b21a8;
+        }
+
+        /* CTA Boxes */
+        .cta-boxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .cta-box {
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.75rem;
+        }
+
+        .cta-box svg {
+            stroke: var(--primary);
+        }
+
+        .cta-box span {
+            font-weight: 500;
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.8;
+        }
+
+        /* Section Copy Button */
+        .section-copy {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            z-index: 10;
+        }
+
+        /* Strategic Timeline */
+        .strategic-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .timeline-phase {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .phase-header {
+            background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .phase-badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.375rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .phase-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .phase-events {
+            padding: 1rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .phase-event {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .phase-event:last-child {
+            border-bottom: none;
+        }
+
+        .phase-event strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Stakeholder Groups */
+        .stakeholder-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stakeholder-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .stakeholder-header {
+            padding: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stakeholder-header.blue { background: var(--primary-light); }
+        .stakeholder-header.blue svg { stroke: var(--primary-dark); }
+        .stakeholder-header.orange { background: var(--orange-light); }
+        .stakeholder-header.orange svg { stroke: #92400e; }
+        .stakeholder-header.purple { background: var(--purple-light); }
+        .stakeholder-header.purple svg { stroke: #6b21a8; }
+        .stakeholder-header.green { background: var(--green-light); }
+        .stakeholder-header.green svg { stroke: var(--green-dark); }
+
+        .stakeholder-header h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .stakeholder-events {
+            list-style: none;
+            padding: 1rem 1.25rem;
+            margin: 0;
+        }
+
+        .stakeholder-events li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--border);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .stakeholder-events li:last-child {
+            border-bottom: none;
+        }
+
+        .event-date {
+            display: inline-block;
+            background: var(--bg-light);
+            padding: 0.125rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-right: 0.5rem;
+        }
+
+        .stakeholder-outcome {
+            background: var(--bg-light);
+            padding: 1rem 1.25rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .stakeholder-outcome strong {
+            color: var(--green-dark);
+        }
+
+        /* Compact Summary */
+        .compact-summary {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .summary-stat-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 1.5rem;
+            gap: 1rem;
+        }
+
+        .summary-stat {
+            text-align: center;
+            color: white;
+        }
+
+        .summary-stat .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .summary-stat .stat-label {
+            font-size: 0.75rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .summary-bullets {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary-bullets h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .summary-bullets ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .summary-bullets li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .summary-bullets li:last-child {
+            border-bottom: none;
+        }
+
+        .summary-bullets strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .summary-quote {
+            padding: 1.5rem;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .summary-quote blockquote {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--text-primary);
+            margin: 0 0 0.75rem 0;
+        }
+
+        .summary-quote cite {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Stakeholder Text Cards */
+        .stakeholder-texts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stakeholder-text-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .stakeholder-text-header {
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stakeholder-text-header.blue { background: var(--primary-light); }
+        .stakeholder-text-header.blue svg { stroke: var(--primary-dark); }
+        .stakeholder-text-header.orange { background: var(--orange-light); }
+        .stakeholder-text-header.orange svg { stroke: #92400e; }
+        .stakeholder-text-header.purple { background: var(--purple-light); }
+        .stakeholder-text-header.purple svg { stroke: #6b21a8; }
+        .stakeholder-text-header.green { background: var(--green-light); }
+        .stakeholder-text-header.green svg { stroke: var(--green-dark); }
+
+        .stakeholder-text-header h4 {
+            flex: 1;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .stakeholder-text-content {
+            padding: 1.5rem;
+        }
+
+        .stakeholder-text-content p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .stakeholder-text-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Quotes Grid */
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .quote-card-large {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            position: relative;
+            border-left: 4px solid var(--primary);
+        }
+
+        .quote-card-large.blue { border-left-color: var(--primary); }
+        .quote-card-large.green { border-left-color: var(--green); }
+        .quote-card-large.purple { border-left-color: var(--purple); }
+        .quote-card-large.orange { border-left-color: var(--orange); }
+
+        .quote-card-large .quote-icon {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            opacity: 0.1;
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+        }
+
+        .quote-card-large .quote-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .quote-card-large .quote-source {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .quote-copy {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            padding: 0.375rem;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 1.75rem; }
+            .hero-stats { gap: 1.5rem; }
+            .event-stats { flex-wrap: wrap; gap: 1rem; }
+            .discussion-grid { grid-template-columns: 1fr; }
+            .cta-boxes { grid-template-columns: 1fr; }
+            .summary-stat-row { grid-template-columns: repeat(2, 1fr); }
+            .stakeholder-groups { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Tilbake
+            </a>
+            <div class="header-title">
+                <h1>Medvirkning</h1>
+                <div class="header-subtitle">Hovfaret 13 — Dialog og involvering</div>
+            </div>
+            <div style="width: 100px;"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Medvirkningsprosessen</h2>
+            <p class="hero-lead">Hovfaret 13-prosjektet har vært preget av åpen dialog med naboer, bydel og interessenter fra dag én.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">13</div>
+                    <div class="hero-stat-label">Verifiserte hendelser</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">~30</div>
+                    <div class="hero-stat-label">Deltakere på nabolagsmøte</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">4</div>
+                    <div class="hero-stat-label">Temastasjoner</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Nabolagsmøte -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Nabolagsmøte</h2>
+                    <p class="section-subtitle">14. oktober 2025 — Hovfaret 13</p>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-header">
+                    <div class="event-date">14. oktober 2025</div>
+                    <div class="event-title">Nabolagsmøte Hovfaret 13</div>
+                    <div class="event-location">Hovfaret 13, Oslo — Arrangert av Urbania Eiendom</div>
+                    <div class="event-stats">
+                        <div class="event-stat">
+                            <div class="event-stat-value">~30</div>
+                            <div class="event-stat-label">Deltakere</div>
+                        </div>
+                        <div class="event-stat">
+                            <div class="event-stat-value">4</div>
+                            <div class="event-stat-label">Temastasjoner</div>
+                        </div>
+                        <div class="event-stat">
+                            <div class="event-stat-value">85%</div>
+                            <div class="event-stat-label">CO₂-reduksjon presentert</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-content">
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem;">Tekstforslag til konseptskissen</h3>
+
+                    <div class="text-variants">
+                        <!-- Variant 1: Formell -->
+                        <div class="text-variant formal">
+                            <div class="variant-header">
+                                <span class="variant-label formal">Formell / Søknadstekst</span>
+                                <button class="copy-btn" onclick="copyText(this)">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                    </svg>
+                                    Kopier
+                                </button>
+                            </div>
+                            <div class="variant-text">
+                                <p>Den 14. oktober 2025 ble det gjennomført et åpent nabolagsmøte i Hovfaret 13. Møtet samlet om lag 30 deltakere, inkludert naboer, representanter fra Bydel Ullern ved Ingrid Løfsgaard Hopp (leder av Bydelsutvalget), samt prosjektteamet fra Urbania Eiendom, R21 Arkitekter og Natural State.</p>
+                                <p>Programmet besto av en innledende presentasjon av transformasjonsprosjektet, etterfulgt av fire temastasjoner hvor deltakerne kunne fordype seg i ulike aspekter: byutvikling, stedsutviklingsprosjektet, bærekraft og klimagevinster, samt plan og regulering. Deltakerne fikk også mulighet til å komme med innspill til funksjonene i første etasje gjennom en interaktiv workshop.</p>
+                                <p>Ingrid Løfsgaard Hopp orienterte om bydelens behov for 150–200 nye omsorgsboliger frem mot 2040. Prosjektets beregninger som viser 85 prosent reduksjon i klimagassutslipp ved transformasjon fremfor riving ble presentert og godt mottatt.</p>
+                            </div>
+                            <div class="variant-note">Egnet for: Rammesøknad, formelle dokumenter, konseptskisse kapittel 5</div>
+                        </div>
+
+                        <!-- Variant 2: Narrativ -->
+                        <div class="text-variant narrative">
+                            <div class="variant-header">
+                                <span class="variant-label narrative">Narrativ / Historiefortelling</span>
+                                <button class="copy-btn" onclick="copyText(this)">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                    </svg>
+                                    Kopier
+                                </button>
+                            </div>
+                            <div class="variant-text">
+                                <p>En høstkveld i oktober 2025 fyltes kantinen i Hovfaret 13 med naboer, nysgjerrige beboere og lokalpolitikere. For første gang ble visjonen om å forvandle kontorbygget fra 1989 til et levende Omsorg+-fellesskap presentert for dem som bor og arbeider i området.</p>
+                                <p>Fire temastasjoner inviterte til samtale: Hvordan kan bygget bidra til byutviklingen på Skøyen? Hva betyr det egentlig å spare 85 prosent av klimagassutslippene? Og ikke minst — hva ønsker nabolaget at første etasje skal inneholde?</p>
+                                <p>Ingrid Løfsgaard Hopp fra Bydelsutvalget satte ord på det mange tenkte: Bydel Ullern trenger 150 til 200 nye omsorgsboliger de neste femten årene. Hovfaret 13 kan bli en del av løsningen — og et forbilde for hvordan vi bygger by i fremtiden.</p>
+                            </div>
+                            <div class="variant-note">Egnet for: Prosjekthistorie, presentasjoner, nettsiden, sosiale medier</div>
+                        </div>
+
+                        <!-- Variant 3: Kompakt -->
+                        <div class="text-variant compact">
+                            <div class="variant-header">
+                                <span class="variant-label compact">Kompakt / Faktaboks</span>
+                                <button class="copy-btn" onclick="copyText(this)">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                    </svg>
+                                    Kopier
+                                </button>
+                            </div>
+                            <div class="variant-text">
+                                <p><strong>Nabolagsmøte 14. oktober 2025</strong></p>
+                                <p>Urbania Eiendom, R21 Arkitekter og Natural State presenterte Omsorg+-transformasjonen for rundt 30 deltakere. Fire temastasjoner dekket byutvikling, bærekraft, plan/regulering og arkitektur. Ingrid Løfsgaard Hopp (Bydelsutvalget) orienterte om bydelens behov for 150–200 omsorgsboliger mot 2040. Klimaberegningene — 85 % lavere materialutslipp ved transformasjon — ble godt mottatt.</p>
+                            </div>
+                            <div class="variant-note">Egnet for: Konseptskisse faktaboks, presentasjonsslides, oppsummeringer</div>
+                        </div>
+                    </div>
+
+                    <!-- Highlights -->
+                    <h4 style="font-size: 1rem; font-weight: 600; margin: 2rem 0 1rem;">Nøkkelmomenter fra møtet</h4>
+                    <div class="highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-title">Bydelens behov bekreftet</div>
+                            <div class="highlight-text">Ingrid Løfsgaard Hopp bekreftet at Bydel Ullern trenger 150–200 omsorgsboliger frem mot 2040.</div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-title">Klimagevinst dokumentert</div>
+                            <div class="highlight-text">85 % reduksjon i klimagassutslipp fra materialer ved transformasjon vs. riving ble presentert.</div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-title">Interaktiv medvirkning</div>
+                            <div class="highlight-text">Deltakerne ga innspill til første etasjes funksjoner gjennom workshop med blanke plantegninger.</div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-title">Positiv respons</div>
+                            <div class="highlight-text">Naboene uttrykte støtte til transformasjonsstrategien og interesse for Omsorg+-konseptet.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Konseptskisse for Webside: Nabolagsmøte -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon orange">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M3 9h18M9 21V9"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Konseptskisse for Webside</h2>
+                    <p class="section-subtitle">Nabolagsmøte — Komplett sidelayout for hovfaret13.no</p>
+                </div>
+            </div>
+
+            <div class="website-concept">
+                <!-- Hero Section -->
+                <div class="concept-section hero-concept">
+                    <div class="concept-label">HOVEDSEKSJON (Hero)</div>
+                    <div class="concept-content">
+                        <h2 class="concept-title">Takk for et vellykket nabolagsmøte!</h2>
+                        <p class="concept-lead">Den 14. oktober samlet vi naboer, interessenter og representanter fra bydelen til en åpen og konstruktiv dialog om fremtiden for Hovfaret 13. Det ble en engasjerende kveld med mange verdifulle innspill.</p>
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                            <span>Hovedbilde: Oversiktsbilde av kantinen med deltakere i samtale</span>
+                        </div>
+                    </div>
+                    <button class="copy-btn section-copy" onclick="copySectionText(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Kopier tekst
+                    </button>
+                </div>
+
+                <!-- Section 1: Om møtet -->
+                <div class="concept-section">
+                    <div class="concept-label">SEKSJON 1: OM MØTET</div>
+                    <div class="concept-content">
+                        <h3 class="concept-subtitle">En kveld i dialog</h3>
+                        <p>Over 40 naboer møtte opp for å høre om planene for transformasjonen av bygget til Omsorg+ boliger. Urbania Eiendom, R21 Arkitekter og Natural State presenterte visjonen om å bevare og viderebruke den robuste betongkonstruksjonen fra 1989 og skape rundt 70 eldrevennlige boliger.</p>
+                        <p>Ingrid Løfsgaard Hopp fra Ullern bydelsutvalg orienterte om bydelens store behov for Omsorg+ boliger – det er anslått behov for 150-200 nye boenheter frem til 2040, mens det kun er 61 plasser tilgjengelig de neste 10 årene.</p>
+                        <div class="image-placeholder gallery">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                            <span>2-3 bilder: Presentasjon, Ingrid Løfsgaard Hopp, publikum</span>
+                        </div>
+                    </div>
+                    <button class="copy-btn section-copy" onclick="copySectionText(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Kopier tekst
+                    </button>
+                </div>
+
+                <!-- Section 2: Verdifulle innspill -->
+                <div class="concept-section">
+                    <div class="concept-label">SEKSJON 2: VERDIFULLE INNSPILL</div>
+                    <div class="concept-content">
+                        <h3 class="concept-subtitle">Hva ble diskutert?</h3>
+                        <div class="discussion-grid">
+                            <div class="discussion-box">
+                                <div class="discussion-icon">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                                        <line x1="6" y1="1" x2="6" y2="4"/>
+                                        <line x1="10" y1="1" x2="10" y2="4"/>
+                                        <line x1="14" y1="1" x2="14" y2="4"/>
+                                    </svg>
+                                </div>
+                                <h4>Aktivitets- og møtesteder</h4>
+                                <p>Deltakerne ønsket lavterskel aktivitetslokaler for dans, kampsport, yoga og andre helse- og aktivitetstilbud. Det var viktig med stor fleksibilitet og arealer som kan brukes av både beboere og nabolaget.</p>
+                            </div>
+                            <div class="discussion-box">
+                                <div class="discussion-icon green">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9z"/>
+                                        <path d="M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9z"/>
+                                        <path d="M12 22V12"/>
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/>
+                                    </svg>
+                                </div>
+                                <h4>Natur og grøntområder</h4>
+                                <p>Byggets nærhet til naturen ble trukket frem som en viktig kvalitet. Det kom gode innspill på hvordan grøntområdene kan synliggjøres bedre og hvordan naturen kan inviteres mer inn i førsteetasjen.</p>
+                            </div>
+                            <div class="discussion-box">
+                                <div class="discussion-icon blue">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6"/>
+                                    </svg>
+                                </div>
+                                <h4>Høyder og støy</h4>
+                                <p>Spørsmål om byggehøyder ble diskutert. Både prosjektgruppen og bydelen bekreftet at behovet for antall boenheter krever de ekstra etasjene for å dekke samfunnsbehovet.</p>
+                            </div>
+                            <div class="discussion-box">
+                                <div class="discussion-icon purple">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                                    </svg>
+                                </div>
+                                <h4>Positiv mottakelse</h4>
+                                <p>Mange uttrykte at prosjektet oppleves som positivt og godt gjennomarbeidet, særlig det sterke fokuset på bærekraft og bevaring av eksisterende bygg.</p>
+                            </div>
+                        </div>
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                            <span>Bilde fra åpen dialog/plenumsdiskusjon</span>
+                        </div>
+                    </div>
+                    <button class="copy-btn section-copy" onclick="copySectionText(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Kopier tekst
+                    </button>
+                </div>
+
+                <!-- Section 3: Bærekraft -->
+                <div class="concept-section">
+                    <div class="concept-label">SEKSJON 3: BÆREKRAFT I SENTRUM</div>
+                    <div class="concept-content">
+                        <h3 class="concept-subtitle">Et foregangsprosjekt for sirkulærøkonomi</h3>
+                        <p>Hovfaret 13 er en del av Nordic Circular Construction, et nordisk foregangsprosjekt for sirkulærøkonomi i byggenæringen. Ved å transformere det eksisterende bygget fremfor å rive og bygge nytt, reduseres klimagassutslipp fra byggematerialene med opptil 85%.</p>
+                        <p>Dette er mer enn bare boliger – det er et bidrag til en mer bærekraftig fremtid for Oslo og hele Norden.</p>
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                            <span>Visualisering av bygget / infografikk 85% CO₂-reduksjon</span>
+                        </div>
+                    </div>
+                    <button class="copy-btn section-copy" onclick="copySectionText(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Kopier tekst
+                    </button>
+                </div>
+
+                <!-- Section 4: Veien videre -->
+                <div class="concept-section">
+                    <div class="concept-label">SEKSJON 4: VEIEN VIDERE</div>
+                    <div class="concept-content">
+                        <h3 class="concept-subtitle">Neste steg</h3>
+                        <p>Neste steg er å sende inn søknad om bruksendring og utvidelse i høyden til Plan- og bygningsetaten. I forbindelse med dette vil det sendes ut nabovarsel til berørte naboer og gjenboere, slik loven krever. Da vil alle få mulighet til å komme med eventuelle tilbakemeldinger i den formelle prosessen.</p>
+                        <div class="cta-boxes">
+                            <div class="cta-box">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14,2 14,8 20,8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                                <span>Last ned presentasjonen fra møtet</span>
+                                <div class="cta-button">[Last ned PDF]</div>
+                            </div>
+                            <div class="cta-box">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                                <span>Les mer om prosjektet</span>
+                                <div class="cta-button">[Til hovedsiden]</div>
+                            </div>
+                        </div>
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                            <span>Fremtidsvisualisering av bygget med grønne områder</span>
+                        </div>
+                    </div>
+                    <button class="copy-btn section-copy" onclick="copySectionText(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Kopier tekst
+                    </button>
+                </div>
+
+                <!-- Footer concept -->
+                <div class="concept-section footer-concept">
+                    <div class="concept-label">BUNNSEKSJON (Footer)</div>
+                    <div class="concept-content">
+                        <p style="text-align: center; margin-bottom: 1rem;">Følg prosjektet på sosiale medier for løpende oppdateringer</p>
+                        <div class="social-icons">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                                Facebook
+                            </div>
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                                Instagram
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">Spørsmål? Kontakt oss på [kontaktinfo]</p>
+                    </div>
+                    <button class="copy-btn section-copy" onclick="copySectionText(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Kopier tekst
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- KOMPOSISJON 1: ALLE MEDVIRKNINGSHENDELSER -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon green">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                        <path d="M16 2v4M8 2v4M3 10h18"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Alle medvirkningshendelser</h2>
+                    <p class="section-subtitle">Komplett oversikt — 15 verifiserte hendelser i 2025</p>
+                </div>
+            </div>
+
+            <div class="events-timeline">
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">10</div>
+                        <div class="timeline-month">Jan</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Leietakermøte</h4>
+                        <p>Orientering til eksisterende leietakere om prosjektutviklingen. Bekreftelse på at 5-års kontrakter beholdes.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">5</div>
+                        <div class="timeline-month">Mai</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Møte med Bente Otto, Bydel Ullern</h4>
+                        <p>Første kontakt med bydelsadministrasjonen. Kartlegging av Omsorg+-behovet i bydelen.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">13</div>
+                        <div class="timeline-month">Mai</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Bydel Ullern 2035 — Åpent møte</h4>
+                        <p>Deltok på åpent møte på Laboratoriet, Harbitz torg. Arrangert av Ullern AP, Nabolagsfabrikken og Ullern Høyre.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">22</div>
+                        <div class="timeline-month">Mai</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Presentasjon for Bydelsledere Ullern</h4>
+                        <p>Ingrid Løfsgaard Hopp og Tore Strandskog besøkte Hovfaret 13. «Generasjon Skøyen» og behovet for 150-200 omsorgsboliger.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">24</div>
+                        <div class="timeline-month">Jun</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Møte med byråd James Lorentzen</h4>
+                        <p>Dialog med byråden for byutvikling om prosjektets potensial som pilotprosjekt for transformasjon.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">5</div>
+                        <div class="timeline-month">Sep</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Strategisk akselerasjon</h4>
+                        <p>Beslutning om å akselerere prosessen. Parallelle spor: rammesøknad, konseptskisse 2.0, og stakeholder-dialog.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">14</div>
+                        <div class="timeline-month">Okt</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Nabolagsmøte Hovfaret 13</h4>
+                        <p>~30 deltakere inkl. naboer og Ingrid Løfsgaard Hopp. Fire temastasjoner. 85% klimagevinst presentert.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">29</div>
+                        <div class="timeline-month">Okt</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Bydelsutvalgsmøte</h4>
+                        <p>Formell orientering for Bydelsutvalget Ullern etter nabolagsmøtet. Oppfølging av dialog med bydelen.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">Nov</div>
+                        <div class="timeline-month">2025</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Nabovarsel sendt</h4>
+                        <p>Formelt nabovarsel sendt til berørte naboer og gjenboere i forbindelse med søknad om bruksendring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- KOMPOSISJON 2: NABOLAG OG LEIETAKERE -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Nabolag og leietakere</h2>
+                    <p class="section-subtitle">Dialog med nærmiljøet og eksisterende brukere</p>
+                </div>
+            </div>
+
+            <div class="events-timeline">
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">10</div>
+                        <div class="timeline-month">Jan</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Leietakermøte — Informasjon og dialog</h4>
+                        <p>Informasjonsmøte med eksisterende leietakere i Hovfaret 13. Forsikring om 5 års forutsigbarhet. Invitert til å dele innspill om sine behov.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">13</div>
+                        <div class="timeline-month">Mai</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Bydel Ullern 2035 — Åpent møte</h4>
+                        <p>Deltok på åpent nabolagsmøte på Laboratoriet, Harbitz torg. Arrangert av Ullern AP, Nabolagsfabrikken og Ullern Høyre.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">14</div>
+                        <div class="timeline-month">Okt</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Nabolagsmøte Hovfaret 13</h4>
+                        <p>~30 deltakere inkludert naboer, beboere og lokale interessenter. Fire temastasjoner: byutvikling, bærekraft, arkitektur og plan/regulering. Interaktiv workshop om første etasje.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">Nov</div>
+                        <div class="timeline-month">2025</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Nabovarsel sendt</h4>
+                        <p>Formelt nabovarsel sendt til berørte naboer og gjenboere i henhold til plan- og bygningsloven.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- KOMPOSISJON 3: SAMTALER MED DET OFFENTLIGE -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon purple">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 21h18M5 21V7l8-4 8 4v14"/>
+                        <path d="M9 21v-6h6v6"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Samtaler med det offentlige</h2>
+                    <p class="section-subtitle">Dialog med bydel, byråd og kommunale instanser</p>
+                </div>
+            </div>
+
+            <div class="events-timeline">
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">5</div>
+                        <div class="timeline-month">Mai</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Møte med Bente Otto — Bydel Ullern</h4>
+                        <p>Første kontakt med bydelsadministrasjonen på Hoffsveien 48. Kartlegging av bydelens behov for Omsorg+-boliger.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">22</div>
+                        <div class="timeline-month">Mai</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Presentasjon for Bydelsledere Ullern</h4>
+                        <p>Ingrid Løfsgaard Hopp (leder Bydelsutvalget) og Tore Strandskog besøkte Hovfaret 13. Befaring og presentasjon av Omsorg+-konseptet. «Vi har slått slag på Generasjon Skøyen».</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">24</div>
+                        <div class="timeline-month">Jun</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Møte med byråd James Lorentzen</h4>
+                        <p>Dialog med byråden for byutvikling om prosjektets potensial som pilotprosjekt for transformasjon. Diskusjon om hvordan prosjektet kan støtte Oslo kommunes klimamål.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">14</div>
+                        <div class="timeline-month">Okt</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Nabolagsmøte med bydelsrepresentant</h4>
+                        <p>Ingrid Løfsgaard Hopp fra Bydelsutvalget deltok og orienterte om bydelens behov for 150–200 omsorgsboliger mot 2040.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-date-box">
+                        <div class="timeline-day">29</div>
+                        <div class="timeline-month">Okt</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Formell orientering for Bydelsutvalget</h4>
+                        <p>Oppfølging etter nabolagsmøtet. Orientering om prosjektstatus og videre prosess for politikerne i Bydel Ullern.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- KOMPOSISJON 4: STRATEGISK TIDSLINJE -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon orange">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Strategisk medvirkningstidslinje</h2>
+                    <p class="section-subtitle">Kronologisk oversikt med kontekst og resultater</p>
+                </div>
+            </div>
+
+            <div class="strategic-timeline">
+                <div class="timeline-phase">
+                    <div class="phase-header">
+                        <span class="phase-badge">Q1 2025</span>
+                        <span class="phase-title">Intern forankring</span>
+                    </div>
+                    <div class="phase-events">
+                        <div class="phase-event">
+                            <strong>10. jan:</strong> Leietakermøte — 5-års forutsigbarhet bekreftet
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-header">
+                        <span class="phase-badge">Q2 2025</span>
+                        <span class="phase-title">Bydels­dialog etablert</span>
+                    </div>
+                    <div class="phase-events">
+                        <div class="phase-event">
+                            <strong>5. mai:</strong> Første kontakt med Bydel Ullern (Bente Otto)
+                        </div>
+                        <div class="phase-event">
+                            <strong>13. mai:</strong> Deltok på «Bydel Ullern 2035»-møte
+                        </div>
+                        <div class="phase-event">
+                            <strong>22. mai:</strong> Bydelsledere besøkte Hovfaret 13 — «Generasjon Skøyen»
+                        </div>
+                        <div class="phase-event">
+                            <strong>24. jun:</strong> Møte med byråd James Lorentzen
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-header">
+                        <span class="phase-badge">Q3 2025</span>
+                        <span class="phase-title">Strategisk akselerasjon</span>
+                    </div>
+                    <div class="phase-events">
+                        <div class="phase-event">
+                            <strong>5. sep:</strong> Beslutning om å akselerere — parallelle spor startet
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-header">
+                        <span class="phase-badge">Q4 2025</span>
+                        <span class="phase-title">Offentlig lansering</span>
+                    </div>
+                    <div class="phase-events">
+                        <div class="phase-event">
+                            <strong>14. okt:</strong> Nabolagsmøte — ~30 deltakere, 4 temastasjoner
+                        </div>
+                        <div class="phase-event">
+                            <strong>29. okt:</strong> Formell orientering for Bydelsutvalget
+                        </div>
+                        <div class="phase-event">
+                            <strong>Nov:</strong> Nabovarsel sendt
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- KOMPOSISJON 5: ETTER AKTØRTYPE -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon green">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <line x1="19" y1="8" x2="19" y2="14"/>
+                        <line x1="22" y1="11" x2="16" y2="11"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Medvirkning etter aktørtype</h2>
+                    <p class="section-subtitle">Grupperte hendelser per interessentgruppe</p>
+                </div>
+            </div>
+
+            <div class="stakeholder-groups">
+                <div class="stakeholder-card">
+                    <div class="stakeholder-header blue">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <h4>Nabolag</h4>
+                    </div>
+                    <ul class="stakeholder-events">
+                        <li><span class="event-date">13. mai</span> Bydel Ullern 2035 — åpent møte</li>
+                        <li><span class="event-date">14. okt</span> Nabolagsmøte på Hovfaret 13</li>
+                        <li><span class="event-date">Nov</span> Nabovarsel sendt</li>
+                    </ul>
+                    <div class="stakeholder-outcome">
+                        <strong>Resultat:</strong> Positiv respons, innspill til 1. etasje
+                    </div>
+                </div>
+
+                <div class="stakeholder-card">
+                    <div class="stakeholder-header orange">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20 7h-9M14 17H5"/>
+                            <circle cx="17" cy="17" r="3"/>
+                            <circle cx="7" cy="7" r="3"/>
+                        </svg>
+                        <h4>Leietakere</h4>
+                    </div>
+                    <ul class="stakeholder-events">
+                        <li><span class="event-date">10. jan</span> Informasjonsmøte med alle leietakere</li>
+                    </ul>
+                    <div class="stakeholder-outcome">
+                        <strong>Resultat:</strong> 5-års forutsigbarhet bekreftet
+                    </div>
+                </div>
+
+                <div class="stakeholder-card">
+                    <div class="stakeholder-header purple">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 21h18M5 21V7l8-4 8 4v14"/>
+                            <path d="M9 21v-6h6v6"/>
+                        </svg>
+                        <h4>Bydel Ullern</h4>
+                    </div>
+                    <ul class="stakeholder-events">
+                        <li><span class="event-date">5. mai</span> Møte med Bente Otto</li>
+                        <li><span class="event-date">22. mai</span> Bydelsledere på befaring</li>
+                        <li><span class="event-date">14. okt</span> Ingrid Hopp på nabolagsmøte</li>
+                        <li><span class="event-date">29. okt</span> Orientering for Bydelsutvalget</li>
+                    </ul>
+                    <div class="stakeholder-outcome">
+                        <strong>Resultat:</strong> Behov for 150-200 boliger bekreftet
+                    </div>
+                </div>
+
+                <div class="stakeholder-card">
+                    <div class="stakeholder-header green">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 21V9"/>
+                        </svg>
+                        <h4>Oslo kommune</h4>
+                    </div>
+                    <ul class="stakeholder-events">
+                        <li><span class="event-date">24. jun</span> Møte med byråd James Lorentzen</li>
+                    </ul>
+                    <div class="stakeholder-outcome">
+                        <strong>Resultat:</strong> Interesse for pilotprosjekt
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- KOMPOSISJON 6: KOMPAKT OPPSUMMERING -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Kompakt medvirkningsoversikt</h2>
+                    <p class="section-subtitle">For slides og presentasjoner</p>
+                </div>
+            </div>
+
+            <div class="compact-summary">
+                <div class="summary-stat-row">
+                    <div class="summary-stat">
+                        <div class="stat-value">9</div>
+                        <div class="stat-label">Dialogmøter</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">Aktørgrupper</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="stat-value">~30</div>
+                        <div class="stat-label">Nabolagsdeltakere</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="stat-value">20</div>
+                        <div class="stat-label">Måneder dialog</div>
+                    </div>
+                </div>
+
+                <div class="summary-bullets">
+                    <h4>Nøkkelhendelser 2025</h4>
+                    <ul>
+                        <li><strong>Jan:</strong> Leietakere informert — 5-års forutsigbarhet</li>
+                        <li><strong>Mai:</strong> Bydelsdialog etablert — «Generasjon Skøyen»</li>
+                        <li><strong>Jun:</strong> Byråd for byutvikling orientert</li>
+                        <li><strong>Okt:</strong> Nabolagsmøte — 85% klimagevinst presentert</li>
+                        <li><strong>Nov:</strong> Nabovarsel sendt</li>
+                    </ul>
+                </div>
+
+                <div class="summary-quote">
+                    <blockquote>
+                        «Vi har slått slag på Generasjon Skøyen. Vi tar vare på hverandre.»
+                    </blockquote>
+                    <cite>— Bydelsleder Ingrid Løfsgaard Hopp, 22. mai 2025</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- TEKSTFORSLAG: HVORFOR MEDVIRKNING ER VIKTIG -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon green">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Hvorfor medvirkning er viktig</h2>
+                    <p class="section-subtitle">Tekstforslag for konseptskisse og presentasjoner</p>
+                </div>
+            </div>
+
+            <div class="text-variants">
+                <!-- Variant 1: Formell -->
+                <div class="text-variant formal">
+                    <div class="variant-header">
+                        <span class="variant-label formal">Formell / Konseptskisse</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p>Medvirkning er en integrert del av utviklingsprosessen for Hovfaret 13. Gjennom strategisk involvering av nøkkelaktører og åpen dialog med nabolaget sikrer prosjektet at utviklingen forankres i lokale behov og verdier. Denne tilnærmingen reduserer risiko, bygger tillit og skaper et bedre resultat for alle parter.</p>
+                        <p>Prosessen følger etablerte metodikker for stedsorientert utvikling, hvor medvirkning inngår som ett av flere suksesskriterier sammen med stedsidentitet, bærekraft, trinnvis utvikling og markedsorientering. Ved å involvere interessenter fra tidlig fase kan konsepter testes og justeres før større investeringer gjøres.</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Rammesøknad, konseptskisse kapittel om medvirkning</div>
+                </div>
+
+                <!-- Variant 2: Narrativ -->
+                <div class="text-variant narrative">
+                    <div class="variant-header">
+                        <span class="variant-label narrative">Narrativ / Historiefortelling</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p>Et godt sted skapes ikke av arkitekter og utviklere alene. Det vokser frem i møtet mellom dem som planlegger og dem som skal bo og leve der. Derfor har Hovfaret 13-prosjektet fra første dag åpnet dørene for dialog — med naboer som kjenner området, med bydelen som forstår behovene, og med leietakere som driver bygget i dag.</p>
+                        <p>Når Ingrid Løfsgaard Hopp fra Bydelsutvalget forteller om «Generasjon Skøyen» — de eldre som vil ta vare på hverandre — er det ikke bare fine ord. Det er et reelt behov som former prosjektet. Og når naboene på nabolagsmøtet gir innspill om hva første etasje bør inneholde, er det ikke bare høflig å lytte. Det er smart.</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Prosjekthistorie, presentasjoner, nettsiden</div>
+                </div>
+
+                <!-- Variant 3: Kompakt -->
+                <div class="text-variant compact">
+                    <div class="variant-header">
+                        <span class="variant-label compact">Kompakt / Faktaboks</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p><strong>Hvorfor medvirkning?</strong></p>
+                        <p>Medvirkning sikrer at utviklingen forankres i lokale behov. Ved å involvere naboer, bydel og leietakere fra tidlig fase får prosjektet verdifull innsikt, reduserer risiko og bygger tillit. Resultatet er bedre løsninger og et sted som fungerer for alle.</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Faktaboks i konseptskisse, presentasjonsslides</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- TEKSTFORSLAG: MEDVIRKNINGSPROSESSEN -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Medvirkningsprosessen Hovfaret 13</h2>
+                    <p class="section-subtitle">Tekstforslag som beskriver prosessen</p>
+                </div>
+            </div>
+
+            <div class="text-variants">
+                <!-- Variant 1: Formell prosessbeskrivelse -->
+                <div class="text-variant formal">
+                    <div class="variant-header">
+                        <span class="variant-label formal">Formell / Søknadstekst</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p>Hovfaret 13-prosjektet har gjennomført en systematisk medvirkningsprosess gjennom hele 2025. Prosessen har involvert fire hovedaktørgrupper: eksisterende leietakere, nabolaget, Bydel Ullern og Oslo kommune.</p>
+                        <p>I januar 2025 ble eksisterende leietakere orientert om prosjektets utvikling med forsikring om 5 års forutsigbarhet. I mai–juni ble det gjennomført en serie møter med Bydel Ullern, inkludert presentasjon for bydelslederne og deltakelse på det åpne møtet «Bydel Ullern 2035». Byråd for byutvikling James Lorentzen ble orientert i juni.</p>
+                        <p>Nabolagsmøtet 14. oktober 2025 samlet omkring 30 deltakere til dialog om transformasjonsprosjektet. Møtet besto av presentasjon og fire temastasjoner: byutvikling, bærekraft, arkitektur og plan/regulering. Deltakerne ga innspill til programmering av første etasje gjennom interaktiv workshop.</p>
+                        <p>I november 2025 ble nabovarsel sendt til berørte naboer og gjenboere i henhold til plan- og bygningsloven.</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Rammesøknad, konseptskisse kapittel 5</div>
+                </div>
+
+                <!-- Variant 2: Narrativ prosesshistorie -->
+                <div class="text-variant narrative">
+                    <div class="variant-header">
+                        <span class="variant-label narrative">Narrativ / Prosjekthistorie</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p>Dialogen startet før bygget var tegnet om. Allerede i januar 2025 satt leietakerne i kantinen og hørte om planene — ikke som tilskuere til et ferdig prosjekt, men som partnere i en prosess.</p>
+                        <p>Så kom mai. I løpet av noen intensive uker traff prosjektgruppen Bente Otto i bydelsadministrasjonen, deltok på nabolagsmøtet «Bydel Ullern 2035», og inviterte bydelslederne Ingrid Løfsgaard Hopp og Tore Strandskog til befaring i bygget. Der, i femte etasje med utsikt over Skøyen, ble ordene «Generasjon Skøyen» sagt for første gang. Et uttrykk for de eldre som vil ta vare på hverandre — og som trenger et sted å gjøre det.</p>
+                        <p>I oktober var det naboenes tur. Rundt 30 mennesker fylte kantinen, vandret mellom temastasjoner og tegnet på blanke plantegninger. «Hva vil dere ha i første etasje?» Svarene overrasket: aktivitetslokaler, møteplasser, steder der generasjoner kan møtes.</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Prosjekthistorie, presentasjoner, nettsiden hovfaret13.no</div>
+                </div>
+
+                <!-- Variant 3: Kompakt oppsummering -->
+                <div class="text-variant compact">
+                    <div class="variant-header">
+                        <span class="variant-label compact">Kompakt / Tidslinje</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p><strong>Medvirkningsprosessen 2025:</strong></p>
+                        <p>• Januar: Leietakermøte — 5-års forutsigbarhet bekreftet<br>
+                        • Mai: Bydelsdialog etablert — «Generasjon Skøyen»<br>
+                        • Juni: Byråd for byutvikling orientert<br>
+                        • Oktober: Nabolagsmøte — ~30 deltakere, 4 temastasjoner<br>
+                        • November: Nabovarsel sendt</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Presentasjonsslides, faktaboks</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- TEKSTFORSLAG: SUKSESSKRITERIER MEDVIRKNING -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon orange">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Medvirkning som suksesskriterium</h2>
+                    <p class="section-subtitle">Tekstforslag om metodikk og prinsipper</p>
+                </div>
+            </div>
+
+            <div class="text-variants">
+                <!-- Variant 1: Natural State metodikk -->
+                <div class="text-variant formal">
+                    <div class="variant-header">
+                        <span class="variant-label formal">Metodikk / Natural State</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p>Involvering og medvirkning er ett av seks suksesskriterier i Natural State sin tilnærming til stedsorientert utvikling:</p>
+                        <p><strong>1. Stedsidentitet:</strong> Egenart, historie og multifunksjon — ivareta stedets karakter gjennom programmering og bruk.</p>
+                        <p><strong>2. Bærekraft:</strong> Bevaring av bygg og materialer, fleksible arealer, sirkulære systemer.</p>
+                        <p><strong>3. Trinnvis utvikling:</strong> Langsiktighet kombinert med tidlig aktivitet og «lavthengende frukter».</p>
+                        <p><strong>4. Involvering og medvirkning:</strong> Strategisk involvering av nøkkelaktører og offentlig medvirkning fra tidlig fase. Test konsepter, bygg engasjement, reduser risiko.</p>
+                        <p><strong>5. Markedsorientering:</strong> Diversitet, flerbruk, fleksibilitet. Bærekraftige modeller for drivere og leietakere.</p>
+                        <p><strong>6. Formidling:</strong> Tidlig formidling for informasjon, posisjonering og visjonsdeling.</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Konseptskisse metodikk-kapittel, presentasjon av tilnærming</div>
+                </div>
+
+                <!-- Variant 2: Hvorfor det fungerer -->
+                <div class="text-variant narrative">
+                    <div class="variant-header">
+                        <span class="variant-label narrative">Forklarende / Hvorfor det fungerer</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p>Medvirkning handler ikke bare om å oppfylle formelle krav. Det handler om å bygge et prosjekt som faktisk fungerer — for de som skal bo der, jobbe der, og leve ved siden av det.</p>
+                        <p>Når vi involverer bydelen tidlig, oppdager vi at behovet for omsorgsboliger er langt større enn vi trodde: 150–200 enheter mot 2040. Det endrer premissene for prosjektet. Når vi snakker med naboer, lærer vi at de ikke frykter høyden — de spør etter aktivitetstilbud og møteplasser. Det påvirker hvordan vi programmerer første etasje.</p>
+                        <p>Og når vi forteller leietakerne om planene i januar — ikke i juni når alt er bestemt — gir vi dem tid til å planlegge. Det skaper ro i stedet for uro.</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Presentasjoner, nettsiden, bærekraftsrapport</div>
+                </div>
+
+                <!-- Variant 3: Punktliste gevinster -->
+                <div class="text-variant compact">
+                    <div class="variant-header">
+                        <span class="variant-label compact">Punktliste / Gevinster</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-text">
+                        <p><strong>Hva gir medvirkning?</strong></p>
+                        <p>• <strong>Bedre løsninger:</strong> Lokal kunnskap avdekker behov vi ikke så<br>
+                        • <strong>Redusert risiko:</strong> Konflikter identifiseres og løses tidlig<br>
+                        • <strong>Tillit:</strong> Åpenhet bygger aksept for prosjektet<br>
+                        • <strong>Forankring:</strong> Lokale aktører får eierskap til resultatet<br>
+                        • <strong>Smidigere prosess:</strong> Færre innsigelser i formelle faser</p>
+                    </div>
+                    <div class="variant-note">Egnet for: Slides, faktaboks, oppsummering</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- TEKSTFORSLAG: AKTØRSPESIFIKKE TEKSTER -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon purple">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Aktørspesifikke tekster</h2>
+                    <p class="section-subtitle">Skreddersydde tekster for ulike målgrupper</p>
+                </div>
+            </div>
+
+            <div class="stakeholder-texts">
+                <!-- Bydel Ullern -->
+                <div class="stakeholder-text-card">
+                    <div class="stakeholder-text-header purple">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 21h18M5 21V7l8-4 8 4v14"/>
+                            <path d="M9 21v-6h6v6"/>
+                        </svg>
+                        <h4>For Bydel Ullern</h4>
+                        <button class="copy-btn" onclick="copyStakeholderText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="stakeholder-text-content">
+                        <p>Hovfaret 13-prosjektet har hatt tett dialog med Bydel Ullern gjennom hele 2025. Samarbeidet startet i mai med møte i bydelsadministrasjonen, og ble styrket gjennom presentasjon for bydelslederne 22. mai — der behovet for 150–200 omsorgsboliger frem mot 2040 ble bekreftet.</p>
+                        <p>Prosjektet har lyttet til bydelens innspill om «Generasjon Skøyen» — visjonen om et nabolag der eldre kan ta vare på hverandre. Omsorg+-konseptet er utviklet i tråd med dette, med 73 tilpassede boliger og fellesarealer som støtter aktiv aldring.</p>
+                    </div>
+                </div>
+
+                <!-- Naboer -->
+                <div class="stakeholder-text-card">
+                    <div class="stakeholder-text-header blue">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <h4>For naboer og nabolag</h4>
+                        <button class="copy-btn" onclick="copyStakeholderText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="stakeholder-text-content">
+                        <p>Vi ønsker at Hovfaret 13 skal bli et godt tilskudd til nabolaget — ikke bare et bygg, men et sted som bidrar til lokalmiljøet. Derfor inviterte vi til nabolagsmøte i oktober 2025, der rundt 30 deltakere ga verdifulle innspill om hva første etasje bør inneholde.</p>
+                        <p>Dere foreslo aktivitetslokaler, møteplasser og steder der generasjoner kan treffes. Det tar vi med oss i den videre utviklingen. Vi sender nabovarsel til alle berørte, og dørene står åpne for spørsmål og dialog.</p>
+                    </div>
+                </div>
+
+                <!-- Leietakere -->
+                <div class="stakeholder-text-card">
+                    <div class="stakeholder-text-header orange">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20 7h-9M14 17H5"/>
+                            <circle cx="17" cy="17" r="3"/>
+                            <circle cx="7" cy="7" r="3"/>
+                        </svg>
+                        <h4>For leietakere</h4>
+                        <button class="copy-btn" onclick="copyStakeholderText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="stakeholder-text-content">
+                        <p>Dere som leier i Hovfaret 13 i dag har blitt informert om prosjektets utvikling fra et tidlig stadium. I januar 2025 bekreftet vi at alle eksisterende kontrakter opprettholdes, og at ingen ufrivillige endringer vil skje de neste fem årene.</p>
+                        <p>Vi verdsetter det dere bidrar med til bygget i dag, og ønsker å inkludere dere i dialogen om hvordan bygget kan utvikles videre. Har dere spørsmål eller innspill, ta gjerne kontakt.</p>
+                    </div>
+                </div>
+
+                <!-- Kommune/politikere -->
+                <div class="stakeholder-text-card">
+                    <div class="stakeholder-text-header green">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 21V9"/>
+                        </svg>
+                        <h4>For Oslo kommune</h4>
+                        <button class="copy-btn" onclick="copyStakeholderText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="stakeholder-text-content">
+                        <p>Hovfaret 13 representerer et pilotprosjekt for bærekraftig transformasjon i Oslo. Gjennom medvirkningsprosessen er prosjektet forankret hos Bydel Ullern, som har bekreftet behovet for 150–200 omsorgsboliger i bydelen frem mot 2040.</p>
+                        <p>Prosjektet demonstrerer hvordan privat og offentlig sektor kan samarbeide om å løse samfunnsutfordringer — klimaomstilling og eldrebølgen — gjennom dialog og felles målsetninger. Byråd for byutvikling ble orientert i juni 2025.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== -->
+        <!-- SITATER OM MEDVIRKNING -->
+        <!-- ====================================== -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"/>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Sitater fra medvirkningsprosessen</h2>
+                    <p class="section-subtitle">Bruk i presentasjoner og dokumenter</p>
+                </div>
+            </div>
+
+            <div class="quotes-grid">
+                <div class="quote-card-large blue">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">Vi har slått slag på «Generasjon Skøyen». Vi tar vare på hverandre.</p>
+                    <p class="quote-source">— Bydelsleder Ingrid Løfsgaard Hopp, 22. mai 2025</p>
+                    <button class="copy-btn quote-copy" onclick="copyQuote(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="quote-card-large green">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">Bydel Ullern trenger 150 til 200 nye omsorgsboliger de neste femten årene.</p>
+                    <p class="quote-source">— Bydel Ullern, mai 2025</p>
+                    <button class="copy-btn quote-copy" onclick="copyQuote(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="quote-card-large purple">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">De friskeste eldre. De som ikke trenger det offentlige tilbudet ennå.</p>
+                    <p class="quote-source">— Om målgruppen for Omsorg+, 22. mai 2025</p>
+                    <button class="copy-btn quote-copy" onclick="copyQuote(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="quote-card-large orange">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">40 prosent av tiden til hjemmesykepleien er jo å sitte i bil.</p>
+                    <p class="quote-source">— Om effektiviteten av samlokalisering, 22. mai 2025</p>
+                    <button class="copy-btn quote-copy" onclick="copyQuote(this)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            Hovfaret 13 Prosjektdatabase — Medvirkning v1.0 — Desember 2025<br>
+            Natural State × Urbania Eiendom
+        </p>
+    </footer>
+
+    <script>
+        function copyText(button) {
+            const variant = button.closest('.text-variant');
+            const textEl = variant.querySelector('.variant-text');
+            const text = textEl.innerText;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Kopiert!';
+                button.style.background = '#22c55e';
+                button.style.color = 'white';
+                button.style.borderColor = '#22c55e';
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.style.borderColor = '';
+                }, 2000);
+            });
+        }
+
+        function copySectionText(button) {
+            const section = button.closest('.concept-section');
+            const content = section.querySelector('.concept-content');
+
+            // Get all text content, excluding image placeholders
+            let text = '';
+            const title = content.querySelector('.concept-title, .concept-subtitle');
+            if (title) text += title.innerText + '\n\n';
+
+            const lead = content.querySelector('.concept-lead');
+            if (lead) text += lead.innerText + '\n\n';
+
+            const paragraphs = content.querySelectorAll('p:not(.concept-lead)');
+            paragraphs.forEach(p => {
+                if (!p.closest('.image-placeholder') && !p.closest('.cta-box')) {
+                    text += p.innerText + '\n\n';
+                }
+            });
+
+            // Get discussion box content
+            const discussionBoxes = content.querySelectorAll('.discussion-box');
+            discussionBoxes.forEach(box => {
+                const h4 = box.querySelector('h4');
+                const p = box.querySelector('p');
+                if (h4) text += h4.innerText + '\n';
+                if (p) text += p.innerText + '\n\n';
+            });
+
+            navigator.clipboard.writeText(text.trim()).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Kopiert!';
+                button.style.background = '#22c55e';
+                button.style.color = 'white';
+                button.style.borderColor = '#22c55e';
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.style.borderColor = '';
+                }, 2000);
+            });
+        }
+
+        function copyStakeholderText(button) {
+            const card = button.closest('.stakeholder-text-card');
+            const content = card.querySelector('.stakeholder-text-content');
+            const text = content.innerText;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+                button.style.background = '#22c55e';
+                button.style.color = 'white';
+                button.style.borderColor = '#22c55e';
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.style.borderColor = '';
+                }, 2000);
+            });
+        }
+
+        function copyQuote(button) {
+            const card = button.closest('.quote-card-large');
+            const quoteText = card.querySelector('.quote-text').innerText;
+            const quoteSource = card.querySelector('.quote-source').innerText;
+            const text = `«${quoteText}»\n${quoteSource}`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+                button.style.background = '#22c55e';
+                button.style.color = 'white';
+                button.style.borderColor = '#22c55e';
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.style.borderColor = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

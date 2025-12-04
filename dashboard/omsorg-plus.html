@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omsorg+ - Hovfaret 13</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #7c3aed;
+            --primary-dark: #5b21b6;
+            --primary-light: #ede9fe;
+            --green: #22c55e;
+            --green-dark: #166534;
+            --green-light: #dcfce7;
+            --blue: #3b82f6;
+            --blue-dark: #1e40af;
+            --blue-light: #dbeafe;
+            --orange: #f59e0b;
+            --orange-light: #fef3c7;
+            --rose: #f43f5e;
+            --rose-light: #ffe4e6;
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-dark: #0f172a;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .header-title h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .header-subtitle {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--bg-dark) 100%);
+            color: white;
+            padding: 5rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-text h2 span {
+            background: linear-gradient(135deg, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-lead {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 0.25rem;
+        }
+
+        .hero-visual {
+            background: rgba(255,255,255,0.05);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .building-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .floor {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        .floor.extension {
+            background: linear-gradient(135deg, rgba(167, 139, 250, 0.2), rgba(96, 165, 250, 0.2));
+            border: 1px solid rgba(167, 139, 250, 0.3);
+        }
+
+        .floor.existing {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .floor.service {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .floor-label {
+            width: 60px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .floor-content {
+            flex: 1;
+            opacity: 0.7;
+        }
+
+        .floor-units {
+            font-weight: 600;
+            color: #a78bfa;
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .section-icon.purple { background: var(--primary-light); }
+        .section-icon.purple svg { stroke: var(--primary-dark); }
+        .section-icon.green { background: var(--green-light); }
+        .section-icon.green svg { stroke: var(--green-dark); }
+        .section-icon.blue { background: var(--blue-light); }
+        .section-icon.blue svg { stroke: var(--blue-dark); }
+        .section-icon.orange { background: var(--orange-light); }
+        .section-icon.orange svg { stroke: #92400e; }
+        .section-icon.rose { background: var(--rose-light); }
+        .section-icon.rose svg { stroke: #be123c; }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Quote Cards */
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .quote-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            border-left: 4px solid var(--primary);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .quote-card.green { border-left-color: var(--green); }
+        .quote-card.blue { border-left-color: var(--blue); }
+        .quote-card.orange { border-left-color: var(--orange); }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: var(--primary-light);
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            opacity: 0.5;
+        }
+
+        .quote-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-source {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Text Variants */
+        .text-variants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .text-variant-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .variant-header {
+            background: var(--bg-light);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .variant-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+        }
+
+        .variant-label.short { background: var(--green-light); color: var(--green-dark); }
+        .variant-label.medium { background: var(--blue-light); color: var(--blue-dark); }
+        .variant-label.long { background: var(--primary-light); color: var(--primary-dark); }
+        .variant-label.narrative { background: var(--orange-light); color: #92400e; }
+        .variant-label.political { background: var(--rose-light); color: #be123c; }
+
+        .variant-content {
+            padding: 1.5rem;
+        }
+
+        .variant-text {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        .variant-text p {
+            margin-bottom: 0.75rem;
+        }
+
+        .variant-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .variant-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        .copy-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 0.375rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--text-primary);
+            color: white;
+            border-color: var(--text-primary);
+        }
+
+        .copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Info Cards Grid */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .info-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .info-card-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .info-card-icon.purple { background: var(--primary-light); }
+        .info-card-icon.purple svg { stroke: var(--primary-dark); }
+        .info-card-icon.green { background: var(--green-light); }
+        .info-card-icon.green svg { stroke: var(--green-dark); }
+        .info-card-icon.blue { background: var(--blue-light); }
+        .info-card-icon.blue svg { stroke: var(--blue-dark); }
+        .info-card-icon.orange { background: var(--orange-light); }
+        .info-card-icon.orange svg { stroke: #92400e; }
+
+        .info-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2rem;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--bg-light);
+        }
+
+        .timeline-dot.green { background: var(--green); }
+        .timeline-dot.blue { background: var(--blue); }
+        .timeline-dot.orange { background: var(--orange); }
+
+        .timeline-date {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr.highlight {
+            background: var(--primary-light);
+        }
+
+        .comparison-table tr.highlight td {
+            font-weight: 500;
+        }
+
+        /* Unit Types */
+        .unit-types {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .unit-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .unit-header {
+            background: linear-gradient(135deg, var(--primary-light), var(--blue-light));
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .unit-type {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .unit-size {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .unit-count {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        .unit-details {
+            padding: 1.5rem;
+        }
+
+        .unit-rooms {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .room-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+        }
+
+        .room-name {
+            font-weight: 500;
+        }
+
+        .room-size {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Key Messages */
+        .key-messages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .message-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .message-audience {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .message-text {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+
+        /* Slides Section */
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .slide-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .slide-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .slide-preview {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--primary-dark), var(--bg-dark));
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+
+        .slide-preview.green-grad {
+            background: linear-gradient(135deg, var(--green-dark), #064e3b);
+        }
+
+        .slide-preview.blue-grad {
+            background: linear-gradient(135deg, var(--blue-dark), #1e3a5f);
+        }
+
+        .slide-preview.orange-grad {
+            background: linear-gradient(135deg, #92400e, #78350f);
+        }
+
+        .slide-number {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-subtitle {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .slide-info {
+            padding: 1rem 1.5rem;
+        }
+
+        .slide-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Community Impact */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .impact-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .impact-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .impact-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .impact-icon.purple { background: var(--primary-light); }
+        .impact-icon.purple svg { stroke: var(--primary-dark); }
+        .impact-icon.green { background: var(--green-light); }
+        .impact-icon.green svg { stroke: var(--green-dark); }
+        .impact-icon.blue { background: var(--blue-light); }
+        .impact-icon.blue svg { stroke: var(--blue-dark); }
+        .impact-icon.orange { background: var(--orange-light); }
+        .impact-icon.orange svg { stroke: #92400e; }
+
+        .impact-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-text {
+            opacity: 0.7;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; }
+            .hero-visual { display: none; }
+            .unit-types { grid-template-columns: 1fr; }
+            .slides-grid { grid-template-columns: repeat(2, 1fr); }
+            .impact-grid { grid-template-columns: repeat(2, 1fr); }
+            .key-messages { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h2 { font-size: 2rem; }
+            .hero-stats { grid-template-columns: 1fr; gap: 1rem; }
+            .quotes-grid { grid-template-columns: 1fr; }
+            .text-variants-grid { grid-template-columns: 1fr; }
+            .slides-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Tilbake
+            </a>
+            <div class="header-title">
+                <h1>Omsorg+</h1>
+                <div class="header-subtitle">Hovfaret 13 — Eldreomsorgsboliger</div>
+            </div>
+            <div style="width: 100px;"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Et hjem for <span>Generasjon Skøyen</span></h2>
+                <p class="hero-lead">Hovfaret 13 kan bli Oslos 14. Omsorg+-anlegg og det andre på Skøyen. 73 moderne eldreboliger i et bærekraftig transformasjonsprosjekt som møter bydelens akutte behov.</p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">73</div>
+                        <div class="hero-stat-label">Omsorg+ enheter</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">150-200</div>
+                        <div class="hero-stat-label">Bydelens behov mot 2040</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">31%</div>
+                        <div class="hero-stat-label">Serviceareal (vs 15-20% typisk)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="building-diagram">
+                    <div class="floor extension">
+                        <span class="floor-label">8. etg</span>
+                        <span class="floor-content">Omsorg+ leiligheter</span>
+                        <span class="floor-units">12 enheter</span>
+                    </div>
+                    <div class="floor extension">
+                        <span class="floor-label">7. etg</span>
+                        <span class="floor-content">Omsorg+ leiligheter</span>
+                        <span class="floor-units">12 enheter</span>
+                    </div>
+                    <div class="floor extension">
+                        <span class="floor-label">6. etg</span>
+                        <span class="floor-content">Omsorg+ leiligheter</span>
+                        <span class="floor-units">12 enheter</span>
+                    </div>
+                    <div class="floor existing">
+                        <span class="floor-label">5. etg</span>
+                        <span class="floor-content">Omsorg+ leiligheter</span>
+                        <span class="floor-units">12 enheter</span>
+                    </div>
+                    <div class="floor existing">
+                        <span class="floor-label">4. etg</span>
+                        <span class="floor-content">Omsorg+ leiligheter</span>
+                        <span class="floor-units">12 enheter</span>
+                    </div>
+                    <div class="floor existing">
+                        <span class="floor-label">3. etg</span>
+                        <span class="floor-content">Omsorg+ leiligheter</span>
+                        <span class="floor-units">12 enheter</span>
+                    </div>
+                    <div class="floor existing">
+                        <span class="floor-label">2. etg</span>
+                        <span class="floor-content">Omsorg+ leiligheter</span>
+                        <span class="floor-units">12 enheter</span>
+                    </div>
+                    <div class="floor service">
+                        <span class="floor-label">1. etg</span>
+                        <span class="floor-content">Kafé, aktiviteter, hjemmetjeneste</span>
+                        <span class="floor-units">Service</span>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem; font-size: 0.75rem; opacity: 0.6; text-align: center;">
+                    <span style="color: #a78bfa;">■</span> Påbygg (3 etasjer) &nbsp;
+                    <span style="color: rgba(255,255,255,0.5);">■</span> Eksisterende &nbsp;
+                    <span style="color: #22c55e;">■</span> Service
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Sitater fra Bydelen -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon purple">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"/>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Bydelens stemme</h2>
+                    <p class="section-subtitle">Sitater fra møter med Bydel Ullern</p>
+                </div>
+            </div>
+
+            <div class="quotes-grid">
+                <div class="quote-card">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">Vi har ikke bare behov for 80 boliger, vi har helst behov for det dobbelte.</p>
+                    <p class="quote-source">— Bydelsledere, Ullern</p>
+                </div>
+                <div class="quote-card green">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">Ullern har høyest gjennomsnittsalder og de fleste eldre. Men samtidig de friskeste eldre. Det er viktig å si da.</p>
+                    <p class="quote-source">— Bydelsleder, 22. mai 2025</p>
+                </div>
+                <div class="quote-card blue">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">Vi har slått slag på «Generasjon Skøyen». Vi tar vare på hverandre.</p>
+                    <p class="quote-source">— Bydelsleder, 22. mai 2025</p>
+                </div>
+                <div class="quote-card orange">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">40% av tiden til hjemmesykepleie er jo å sitte i bil i en kø. Med Omsorg+ kan vi spare og investere smartere.</p>
+                    <p class="quote-source">— Bydelsleder om alternativkostnader</p>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">Alternative kostnadene våre hvis ikke vi har Omsorg+, de er veldig høye. Her må vi investere for å spare.</p>
+                    <p class="quote-source">— Bydelsleder, økonomisk argument</p>
+                </div>
+                <div class="quote-card green">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">Det kan bli et foregangseksempel på hva Oslo-kommunen gjør. Som offentlig og privat... Det kan virkelig bli noe bra.</p>
+                    <p class="quote-source">— Bydelsleder om potensialet</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tekstforslag for Konseptskisse -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Tekstforslag for Konseptskisse</h2>
+                    <p class="section-subtitle">Kopierbare tekster i ulike lengder og stiler</p>
+                </div>
+            </div>
+
+            <div class="text-variants-grid">
+                <!-- Kort -->
+                <div class="text-variant-card">
+                    <div class="variant-header">
+                        <span class="variant-label short">Kort — Søknadstekst</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-content">
+                        <div class="variant-text">
+                            <p>Hovfaret 13 transformeres til 73 Omsorg+-boliger som møter Bydel Ullerns behov for 150-200 eldreboliger mot 2040. Konseptet innfrir alle 12 Husbanken-kategorier og tilbyr 31% serviceareal — vesentlig over bransjens 15-20%.</p>
+                        </div>
+                        <div class="variant-note">Egnet for: Søknader, faktabokser, korte presentasjoner</div>
+                    </div>
+                </div>
+
+                <!-- Medium -->
+                <div class="text-variant-card">
+                    <div class="variant-header">
+                        <span class="variant-label medium">Medium — Presentasjon</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-content">
+                        <div class="variant-text">
+                            <p>Bydel Ullern har Oslos høyeste gjennomsnittsalder og et akutt behov for omsorgsboliger. Eksisterende anlegg på Skøyen terrasse må rives innen 10 år, og bydelen trenger 150-200 nye plasser mot 2040.</p>
+                            <p>Hovfaret 13 kan bli løsningen: 73 moderne Omsorg+-leiligheter med kafé, aktivitetsrom, hjemmetjenestebase og takterrasse. Ved å transformere det eksisterende bygget sparer vi 48% CO₂ sammenlignet med riving og nybygg.</p>
+                        </div>
+                        <div class="variant-note">Egnet for: Presentasjonsslides, konseptskisse hovedtekst</div>
+                    </div>
+                </div>
+
+                <!-- Lang -->
+                <div class="text-variant-card">
+                    <div class="variant-header">
+                        <span class="variant-label long">Lang — Kontekst</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-content">
+                        <div class="variant-text">
+                            <p>Omsorg+ er Oslo kommunes boligkonsept for eldre over 67 år som trenger heldøgns helse- og omsorgstjenester. Konseptet fyller gapet mellom hjemmetjenester og sykehjem — et mellomnivå med 16 års erfaring i hovedstaden.</p>
+                            <p>Bydel Ullern har et «vanvittig behov» for slike boliger, ifølge bydelslederne selv. Med 35.000 innbyggere hvorav 18% er over 67 år, og kun 61 tilgjengelige plasser de neste 10 årene, står bydelen overfor en kritisk mangel.</p>
+                            <p>Hovfaret 13 tilbyr en unik løsning: Et eksisterende kontorbygg fra 1989 som kan transformeres til 73 Omsorg+-leiligheter. Bygget ligger sentralt på Skøyen med kort vei til kollektivtransport, butikker og grøntområder langs Hoffselva.</p>
+                        </div>
+                        <div class="variant-note">Egnet for: Rapporter, bakgrunnsdokumenter, nettsideinnhold</div>
+                    </div>
+                </div>
+
+                <!-- Narrativ -->
+                <div class="text-variant-card">
+                    <div class="variant-header">
+                        <span class="variant-label narrative">Narrativ — Fortelling</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-content">
+                        <div class="variant-text">
+                            <p>De kaller seg selv «Generasjon Skøyen» — Oslos friskeste eldre som bor i bydelen med høyest gjennomsnittsalder. De tar vare på hverandre, men snart trenger noen av dem litt mer støtte i hverdagen.</p>
+                            <p>I dag kjører hjemmesykepleien fra hus til hus. 40% av tiden går med i kø. Men hva om de friskeste eldre på Skøyen kunne bo sammen, med kafé og aktiviteter i første etasje, og hjemmetjenesten rett nede i gangen?</p>
+                            <p>Hovfaret 13 kan bli hjemmet deres — et sted der selvstendighet og fellesskap går hånd i hånd.</p>
+                        </div>
+                        <div class="variant-note">Egnet for: Prosjekthistorie, nettsiden, presentasjoner</div>
+                    </div>
+                </div>
+
+                <!-- Politikertekst -->
+                <div class="text-variant-card">
+                    <div class="variant-header">
+                        <span class="variant-label political">Politikertekst</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-content">
+                        <div class="variant-text">
+                            <p>Bydel Ullern står overfor en samfunnsutfordring: Behovet for omsorgsboliger overstiger tilbudet med god margin. Bydelslederne selv bekrefter at de trenger «minst det dobbelte» av dagens kapasitet.</p>
+                            <p>Hovfaret 13 representerer en mulighet for Oslo kommune til å vise vei — både i eldrepolitikken og klimapolitikken. Ved å transformere fremfor å rive, sparer vi 48% CO₂ og leverer 73 boliger til en bydel som sårt trenger dem.</p>
+                            <p>Som bydelslederne sa: «Her må vi investere for å spare.»</p>
+                        </div>
+                        <div class="variant-note">Egnet for: Politikermøter, byrådsavdelingen, kommunikasjonsmateriell</div>
+                    </div>
+                </div>
+
+                <!-- Bærekraft-vinkel -->
+                <div class="text-variant-card">
+                    <div class="variant-header">
+                        <span class="variant-label medium">Bærekraft-vinkel</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-content">
+                        <div class="variant-text">
+                            <p>Omsorg+ i Hovfaret 13 er mer enn eldreboliger — det er et bærekraftsprosjekt. Ved å bevare betongkonstruksjonen fra 1989 i stedet for å rive, reduserer vi klimagassutslippene med 48%.</p>
+                            <p>Bygget er dimensjonert for 12 etasjer, men kun 5 er bygget. Vi kan utvide uten ny fundamentering — sirkulær økonomi i praksis. Materialet har gjort jobben sin, og kan fortsette å gjøre den i generasjoner fremover.</p>
+                        </div>
+                        <div class="variant-note">Egnet for: Miljørapporter, bærekraftskapittel i konseptskisse</div>
+                    </div>
+                </div>
+
+                <!-- Husbanken-tekst -->
+                <div class="text-variant-card">
+                    <div class="variant-header">
+                        <span class="variant-label short">Husbanken-søknad</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-content">
+                        <div class="variant-text">
+                            <p>Prosjektet innfrir alle 12 Husbanken-kategorier for Omsorg+-boliger: beliggenhet, bygningskonstruksjon, installasjoner, energi og sikkerhet. 73 enheter fordelt på 66 enkeltrom (42 m²) og 7 dobbeltrom (67 m²), med 31% serviceareal og full universell utforming.</p>
+                            <p>Med 45% investeringstilskudd og maks 2,1 MNOK per enhet i pressområde, representerer Hovfaret 13 en effektiv bruk av offentlige midler for å møte bydelens dokumenterte behov.</p>
+                        </div>
+                        <div class="variant-note">Egnet for: Husbanken-søknad, finansieringsdokumenter</div>
+                    </div>
+                </div>
+
+                <!-- Kompakt figurtekst -->
+                <div class="text-variant-card">
+                    <div class="variant-header">
+                        <span class="variant-label short">Kompakt — Figurtekst</span>
+                        <button class="copy-btn" onclick="copyText(this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Kopier
+                        </button>
+                    </div>
+                    <div class="variant-content">
+                        <div class="variant-text">
+                            <p>Omsorg+ Hovfaret 13: 73 eldreboliger i transformert kontorbygg. 66 enkeltrom (42 m²) + 7 dobbeltrom (67 m²). Kafé, aktivitetsrom, hjemmetjenestebase i 1. etasje. Husbanken 12/12 kategorier.</p>
+                        </div>
+                        <div class="variant-note">Egnet for: Figurtekster, bildetekster, tegningsforklaringer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hva betyr Omsorg+ for lokalsamfunnet -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon green">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Betydning for lokalsamfunnet</h2>
+                    <p class="section-subtitle">Hva Omsorg+ i Hovfaret 13 kan bety for Skøyen</p>
+                </div>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon purple">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h4 class="impact-title">Nærhet til familie</h4>
+                    <p class="impact-desc">Eldre kan bo i nærheten av barn og barnebarn som allerede bor på Skøyen, i stedet for å flytte til andre bydeler.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon green">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h4 class="impact-title">Sosialt fellesskap</h4>
+                    <p class="impact-desc">Kafé og aktivitetsrom i første etasje kan bli et naturlig møtested — også for naboer og besøkende fra nærområdet.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon blue">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h4 class="impact-title">Effektiv hjemmetjeneste</h4>
+                    <p class="impact-desc">Med hjemmetjenestebase i bygget kan pleiere bruke mer tid på omsorg og mindre tid i bil — bedre for alle.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon orange">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9z"/>
+                            <path d="M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9z"/>
+                            <path d="M12 22V12"/>
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"/>
+                        </svg>
+                    </div>
+                    <h4 class="impact-title">Grønt nabolag</h4>
+                    <p class="impact-desc">Bevaring av bygget sparer 48% CO₂. Et bærekraftig valg for et nabolag som setter miljø høyt.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leilighetstyper -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon orange">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M3 9h18"/>
+                        <path d="M9 21V9"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Leilighetstyper</h2>
+                    <p class="section-subtitle">To typer universelt utformede Omsorg+-boliger</p>
+                </div>
+            </div>
+
+            <div class="unit-types">
+                <div class="unit-card">
+                    <div class="unit-header">
+                        <div class="unit-type">Enkeltrom — 2 roms</div>
+                        <div class="unit-size">42 m²</div>
+                        <div class="unit-count">66 enheter (90%)</div>
+                    </div>
+                    <div class="unit-details">
+                        <div class="unit-rooms">
+                            <div class="room-item">
+                                <span class="room-name">Stue/kjøkken</span>
+                                <span class="room-size">18,2 m²</span>
+                            </div>
+                            <div class="room-item">
+                                <span class="room-name">Soverom</span>
+                                <span class="room-size">15,6 m²</span>
+                            </div>
+                            <div class="room-item">
+                                <span class="room-name">Bad (rullestoltilpasset)</span>
+                                <span class="room-size">6,9 m²</span>
+                            </div>
+                            <div class="room-item">
+                                <span class="room-name">Balkong</span>
+                                <span class="room-size">8,1 m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="unit-card">
+                    <div class="unit-header">
+                        <div class="unit-type">Dobbeltrom — 2 roms</div>
+                        <div class="unit-size">67 m²</div>
+                        <div class="unit-count">7 enheter (10%)</div>
+                    </div>
+                    <div class="unit-details">
+                        <div class="unit-rooms">
+                            <div class="room-item">
+                                <span class="room-name">Stue/kjøkken</span>
+                                <span class="room-size">32,2 m²</span>
+                            </div>
+                            <div class="room-item">
+                                <span class="room-name">Soverom (dobbeltseng)</span>
+                                <span class="room-size">18,0 m²</span>
+                            </div>
+                            <div class="room-item">
+                                <span class="room-name">Bad (rullestoltilpasset)</span>
+                                <span class="room-size">6,9 m²</span>
+                            </div>
+                            <div class="room-item">
+                                <span class="room-name">Balkong</span>
+                                <span class="room-size">29,0 m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tidslinje -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Omsorg+-prosessen</h2>
+                    <p class="section-subtitle">Tidslinje for utviklingen av Omsorg+-konseptet</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mai 2025</div>
+                    <div class="timeline-title">Møte med Bente Otto, Bydel Ullern</div>
+                    <div class="timeline-desc">Første møte med bydelens avdelingsdirektør for helse og omsorg. Bekreftet behov for 70+ enheter.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot green"></div>
+                    <div class="timeline-date">21. Mai 2025</div>
+                    <div class="timeline-title">R21 Arkitekter: Omsorg+-presentasjon</div>
+                    <div class="timeline-desc">73-enheters konsept presentert. Detaljerte plantegninger for alle etasjer.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot blue"></div>
+                    <div class="timeline-date">22. Mai 2025</div>
+                    <div class="timeline-title">Presentasjon for bydelsledere Ullern</div>
+                    <div class="timeline-desc">Tore Strandskog og Ingrid Hopp bekreftet bydelens behov. «Vi har slått slag på Generasjon Skøyen.»</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot orange"></div>
+                    <div class="timeline-date">Juni 2025</div>
+                    <div class="timeline-title">Møte med byråd James Lorentzen</div>
+                    <div class="timeline-desc">Dialog med byråden for byutvikling om prosjektets potensial.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">14. Oktober 2025</div>
+                    <div class="timeline-title">Nabolagsmøte Hovfaret 13</div>
+                    <div class="timeline-desc">~30 deltakere. Ingrid Løfsgaard Hopp orienterte om bydelens behov for 150-200 enheter mot 2040.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot green"></div>
+                    <div class="timeline-date">29. Oktober 2025</div>
+                    <div class="timeline-title">Bydelsutvalgsmøte</div>
+                    <div class="timeline-desc">Formell orientering for Bydelsutvalget Ullern etter nabolagsmøtet.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nøkkelbudskap -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon rose">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Nøkkelbudskap</h2>
+                    <p class="section-subtitle">Tilpasset ulike målgrupper</p>
+                </div>
+            </div>
+
+            <div class="key-messages">
+                <div class="message-card">
+                    <div class="message-audience">For Bydelen</div>
+                    <p class="message-text">«Hovfaret 13 løser bydelens akutte behov for 150-200 Omsorg+-boliger mot 2040 — med et prosjekt som kan stå ferdig raskere enn alternativene.»</p>
+                </div>
+                <div class="message-card">
+                    <div class="message-audience">For Naboer</div>
+                    <p class="message-text">«Dette er boliger for de som allerede bor på Skøyen. Generasjon Skøyen fortjener å bli gamle i sitt eget nabolag.»</p>
+                </div>
+                <div class="message-card">
+                    <div class="message-audience">For Kommune/Husbanken</div>
+                    <p class="message-text">«Offentlig-privat samarbeid som innfrir alle Husbanken-krav, med 45% støtte og dokumentert klimagevinst på 48% lavere CO₂.»</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentasjonsslides -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon purple">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Presentasjonsslides</h2>
+                    <p class="section-subtitle">6 slides for Omsorg+-presentasjoner (16:9)</p>
+                </div>
+            </div>
+
+            <div class="slides-grid">
+                <div class="slide-card">
+                    <div class="slide-preview">
+                        <div class="slide-number">Slide 1</div>
+                        <div class="slide-title">Generasjon Skøyen</div>
+                        <div class="slide-subtitle">Et hjem for bydelens friskeste eldre</div>
+                    </div>
+                    <div class="slide-info">
+                        <p class="slide-desc">Introduksjon med nøkkeltall og posisjonering</p>
+                    </div>
+                </div>
+
+                <div class="slide-card">
+                    <div class="slide-preview green-grad">
+                        <div class="slide-number">Slide 2</div>
+                        <div class="slide-title">Bydelens behov</div>
+                        <div class="slide-subtitle">150-200 enheter mot 2040</div>
+                    </div>
+                    <div class="slide-info">
+                        <p class="slide-desc">Sitater fra bydelsledere, demografisk analyse</p>
+                    </div>
+                </div>
+
+                <div class="slide-card">
+                    <div class="slide-preview blue-grad">
+                        <div class="slide-number">Slide 3</div>
+                        <div class="slide-title">73 Omsorg+ enheter</div>
+                        <div class="slide-subtitle">Konseptoversikt</div>
+                    </div>
+                    <div class="slide-info">
+                        <p class="slide-desc">Bygningsdiagram, etasjefordeling, areal</p>
+                    </div>
+                </div>
+
+                <div class="slide-card">
+                    <div class="slide-preview orange-grad">
+                        <div class="slide-number">Slide 4</div>
+                        <div class="slide-title">Servicetilbudet</div>
+                        <div class="slide-subtitle">31% serviceareal</div>
+                    </div>
+                    <div class="slide-info">
+                        <p class="slide-desc">Kafé, aktivitetsrom, hjemmetjeneste, takterrasse</p>
+                    </div>
+                </div>
+
+                <div class="slide-card">
+                    <div class="slide-preview">
+                        <div class="slide-number">Slide 5</div>
+                        <div class="slide-title">Husbanken-samsvar</div>
+                        <div class="slide-subtitle">12/12 kategorier</div>
+                    </div>
+                    <div class="slide-info">
+                        <p class="slide-desc">Finansieringsmodell, 45% tilskudd</p>
+                    </div>
+                </div>
+
+                <div class="slide-card">
+                    <div class="slide-preview green-grad">
+                        <div class="slide-number">Slide 6</div>
+                        <div class="slide-title">Bærekraft + Omsorg</div>
+                        <div class="slide-subtitle">48% lavere CO₂</div>
+                    </div>
+                    <div class="slide-info">
+                        <p class="slide-desc">Transformasjon vs riving, klimagevinst</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sammenligning med andre -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24">
+                        <line x1="18" y1="20" x2="18" y2="10"/>
+                        <line x1="12" y1="20" x2="12" y2="4"/>
+                        <line x1="6" y1="20" x2="6" y2="14"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Markedsposisjon</h2>
+                    <p class="section-subtitle">Hovfaret 13 i Oslo-kontekst</p>
+                </div>
+            </div>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Omsorg+ anlegg</th>
+                            <th>Bydel</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Skøyen terrasse Omsorg+</td>
+                            <td>Skøyen (Ullern)</td>
+                            <td>Eksisterende — rives innen 10 år</td>
+                        </tr>
+                        <tr>
+                            <td>Diakonveien Omsorg+</td>
+                            <td>Majorstuen</td>
+                            <td>Eksisterende</td>
+                        </tr>
+                        <tr>
+                            <td>Myrer Omsorg+</td>
+                            <td>Nydalen</td>
+                            <td>Eksisterende</td>
+                        </tr>
+                        <tr>
+                            <td>Lovisenberg Omsorg+</td>
+                            <td>St. Hanshaugen</td>
+                            <td>Eksisterende</td>
+                        </tr>
+                        <tr>
+                            <td>... + 9 andre i Oslo</td>
+                            <td>Diverse</td>
+                            <td>Eksisterende</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><strong>Hovfaret 13 Omsorg+</strong></td>
+                            <td><strong>Skøyen (Ullern)</strong></td>
+                            <td><strong>#14 i Oslo, #2 på Skøyen</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Fordeler -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon green">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Konkurransefordeler</h2>
+                    <p class="section-subtitle">Hvorfor Hovfaret 13 skiller seg ut</p>
+                </div>
+            </div>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-card-icon green">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h4>Raskere levering</h4>
+                    <p>Ingen riving, ingen fundamentering. Bygget står klart — vi transformerer.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon blue">
+                        <svg viewBox="0 0 24 24">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h4>Lavere totalkostnad</h4>
+                    <p>Transformasjon koster mindre enn riving og nybygg. Bærekraftig også for budsjettet.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon purple">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9z"/>
+                            <path d="M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9z"/>
+                            <path d="M12 22V12"/>
+                        </svg>
+                    </div>
+                    <h4>48% lavere CO₂</h4>
+                    <p>Bevarer betongkonstruksjonen. Nordic Circle Hotspot-prosjekt for sirkulær bygging.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-icon orange">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h4>Sentral beliggenhet</h4>
+                    <p>Skøyen stasjon < 500m. Butikker, grøntområder ved Hoffselva, full infrastruktur.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            Hovfaret 13 Prosjektdatabase — Omsorg+ v1.0 — Desember 2025<br>
+            Basert på R21 Arkitekter presentasjon 21. mai 2025 og dialog med Bydel Ullern
+        </p>
+    </footer>
+
+    <script>
+        function copyText(button) {
+            const card = button.closest('.text-variant-card');
+            const textEl = card.querySelector('.variant-text');
+            const text = textEl.innerText;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Kopiert!';
+                button.style.background = '#22c55e';
+                button.style.color = 'white';
+                button.style.borderColor = '#22c55e';
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.style.borderColor = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

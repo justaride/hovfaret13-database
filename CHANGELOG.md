@@ -2,6 +2,330 @@
 
 All notable changes to this project database.
 
+## [2.62.0] - 2025-12-04
+
+### Phase 50: Omsorg+ Dashboard + Medvirkning Webkonsept
+
+**Status:** ✅ COMPLETE
+
+#### Omfattende Omsorg+-side
+
+Laget komplett Omsorg+-dashboard med sitater, tekster, prosess og lokalsamfunnsbetydning.
+
+**Nye filer:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `omsorg-plus.html` | Omfattende Omsorg+-side med alt innhold |
+
+**Innhold:**
+
+- **Hero:** "Generasjon Skøyen" — 73 enheter, bygningsdiagram
+- **6 sitater** fra bydelsledere (22. mai 2025 møtet)
+- **8 tekstvarianter** for konseptskisse (kort, medium, lang, narrativ, politikertekst, bærekraft, Husbanken, kompakt)
+- **Betydning for lokalsamfunnet:** Nærhet til familie, sosialt fellesskap, effektiv hjemmetjeneste, grønt nabolag
+- **Leilighetstyper:** Enkeltrom 42m² (66 stk) + Dobbeltrom 67m² (7 stk)
+- **Omsorg+-tidslinje:** Mai - Oktober 2025
+- **Nøkkelbudskap** for 3 målgrupper
+- **6 presentasjonsslides** for Omsorg+
+- **Markedsposisjon:** 14 Omsorg+ i Oslo, konkurransetabell
+
+**Design:**
+- Lilla tema (gradient #7c3aed → #5b21b6)
+- Bygningsdiagram med etasjefordeling
+- Sitatkort med fargeaksenter
+- Tidslinje med fargede prikker
+
+#### Medvirkning Webkonsept
+
+Lagt til komplett webside-konsept for nabolagsmøtet på participation.html.
+
+**6 seksjoner:**
+1. Hero — "Takk for et vellykket nabolagsmøte!"
+2. Om møtet — "En kveld i dialog" (40+ deltakere)
+3. Verdifulle innspill — 4 diskusjonstemaer i grid
+4. Bærekraft — Nordic Circular Construction
+5. Veien videre — Neste steg + CTA-bokser
+6. Footer — Sosiale medier
+
+**Funksjoner:**
+- Kopier-knapp på hver seksjon
+- Bildeplassholdere med beskrivelser
+- DiskusjonsGrid med SVG-ikoner
+
+---
+
+## [2.61.0] - 2025-12-04
+
+### Phase 49: Markedsinnsikt — Demografi og Posisjonering
+
+**Status:** ✅ COMPLETE
+
+#### Komplett Markedsinnsikt-side
+
+Laget omfattende side for markedsinnsikt med demografi, konkurranseanalyse og kopierbare tekster for konseptskisse.
+
+**Nye filer:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `market-insight.html` | Markedsinnsikt med demografi, slides og tekster |
+
+**Demografisk Analyse:**
+- Bydel Ullern: 35 000 innbyggere
+- 18% over 67 år (høyt)
+- 150-200 omsorgsboliger behov mot 2040
+- "Generasjon Skøyen" — Friske, ressurssterke eldre
+
+**Konkurranseanalyse:**
+- 13 eksisterende Omsorg+ i Oslo
+- Kun 1 på Skøyen (Stasjonsveien)
+- Hovfaret 13 blir #14 i Oslo, #2 på Skøyen
+
+**6 Presentasjonsslides:**
+1. Markedsoversikt — Posisjonering
+2. Demografi — Bydel Ullern tall
+3. Behovsanalyse — Politiske mål
+4. Posisjonering — "Generasjon Skøyen"
+5. Lokal kontekst — Skøyen-fordeler
+6. Oppsummering — Nøkkeltall
+
+**8 Tekstvarianter for Konseptskisse:**
+1. Kort — Søknadstekst
+2. Medium — Presentasjon
+3. Lang — Kontekst
+4. Narrativ — Fortelling
+5. Statistisk — Faktatung
+6. Politikertekst — Politisk vinkel
+7. Bærekraft-vinkel — Sirkulær økonomi
+8. Kompakt — Figurtekst
+
+**Nøkkelbudskap for 3 målgrupper:**
+- Bydelen: Løser behovet for 150-200 enheter
+- Naboer: Bygging for de som allerede bor her
+- Investorer: Underserved marked, stabil leietaker
+
+**Design:**
+- Blått tema (gradient fra #1e40af til #3b82f6)
+- Visuelt søylediagram for demografi
+- Sitat-kort fra bydelsmøter
+- Konkurransetabell med Hovfaret 13 fremhevet
+
+---
+
+## [2.60.0] - 2025-12-04
+
+### Phase 48: Status Desember 2025 — Grafiske Uttak
+
+**Status:** ✅ COMPLETE
+
+#### Ny Status-side med Visuelle Slides
+
+Laget dedikert side med grafiske uttak for presentasjoner i 16:9 format.
+
+**Nye filer:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `status-december-2025.html` | Grafiske slides og visuelle fremstillinger |
+
+**6 Presentasjonsslides:**
+1. **Prosjekttidslinje** — Visuell tidslinje fra Apr 2024 til Q2 2026
+2. **Klimagevinst** — Donut-chart med 48% CO₂-reduksjon
+3. **Interessentnettverk** — Stakeholder-visualisering (35 interessenter)
+4. **Fremdrift** — Milepæler med status-ikoner
+5. **Omsorg+ Konsept** — 73 enheter, etasjer, Husbanken-støtte
+6. **Nøkkeltall** — Komplett prosjektoversikt
+
+**Visuelle elementer:**
+- Hero-seksjon med 4 nøkkeltall
+- Timeline-visual med prikker og datoer
+- Donut-chart for klimagevinst
+- Stakeholder-sirkler med farger
+- Fremdriftsbarer per område
+- Status-kort med fargekoding
+
+**Design:**
+- Mørkt tema (bg-dark: #0f172a)
+- Gradient-bakgrunner for slides
+- 16:9 aspect ratio på slide-previews
+- Fargekodet statuser (grønn/oransje/blå)
+
+---
+
+## [2.59.0] - 2025-12-04
+
+### Phase 47: Medvirkning Dashboard + Stedsøkonomi-tekster
+
+**Status:** ✅ COMPLETE
+
+#### Ny Medvirkningsside
+
+Laget dedikert side for dokumentasjon av medvirkningsprosesser med kopierbare tekster for konseptskisse.
+
+**Nye filer:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `participation.html` | Medvirkning og deltakelsesprosesser |
+
+**Nabolagsmøte 14. oktober 2025:**
+- 3 tekstvarianter (formell, narrativ, kompakt)
+- Kopier-funksjon for hver tekst
+- Nøkkeltall: ~30 deltakere, 4 temastasjoner, 85% CO₂-reduksjon
+- Høydepunkter fra møtet
+- Tidslinje for andre medvirkningsprosesser
+
+**Tekstvarianter:**
+1. **Formell** (søknader, rapporter) - Saklig dokumentasjon med alle fakta
+2. **Narrativ** (konseptskisse, presentasjoner) - Stemningsskapende fortelling
+3. **Kompakt** (figurtekst, bildetekst) - Kort og informativ
+
+**Andre prosesser planlagt:**
+- Bydelsdialog (23 sep - 5 nov 2025)
+- Politisk dialog (sep - nov 2025)
+- Leietakerdialog (løpende)
+
+#### Stedsøkonomi Konseptskisse-tekster
+
+Lagt til ny seksjon på `place-economy.html` med 5 korte tekster for bruk i konseptskissen.
+Tekstene forklarer stedsøkonomisk logikk uten å bruke tall.
+
+**5 tekstvarianter:**
+1. **Potensialet** — Byggets skjulte kapasitet og fundamentets dimensjonering
+2. **Markedslogikken** — Identitetsverdi og bærekraftspremie
+3. **Den sirkulære logikken** — Betongen har gjort jobben, kan fortsette
+4. **Fremtidsrettet** — Leietakere betaler for troverdighet
+5. **Det verdifulle i det** — Sitat fra prosjektmøte om fleksibilitet
+
+**Funksjoner:**
+- Kopier-knapp for hver tekst
+- CSS for tekst-variant-kort
+- Gul info-boks som introduksjon
+
+---
+
+## [2.58.0] - 2025-12-04
+
+### Phase 46: Profesjonell Designoppgradering
+
+**Status:** ✅ COMPLETE
+
+#### Emoji-fri Design — Inspirert av hovfaret13.no
+
+Erstattet alle emojis med profesjonelle SVG-ikoner på begge nye sider.
+Designstilen matcher nå hovfaret13.no sin minimalistiske, arkitektoniske estetikk.
+
+**ncc-partnership.html — Oppdatert:**
+- Alle section-ikoner: SVG (sirkel-piler, kalender, dokument, folk)
+- Card-ikoner: SVG (bygg, lab, innovasjon)
+- 6 principle-ikoner: SVG (bevaring, ombruk, fornybart, lavenergi, naturpositiv, deling)
+- Slide-seksjon: Ren tekst uten emojis
+- Living lab slide: Elegant sirkel-SVG i stedet for emoji
+- Sirkulære prinsipper: 3×2 grid-layout (3 per rad)
+
+**place-economy.html — Oppdatert:**
+- Søylediagram-ikon for økonomisk oversikt
+- Bygnings-grid-ikon for etasjefordeling
+- Trend-pil-ikon for verdiskaping
+- Hus-ikon for Omsorg+ seksjon
+- Mål-sirkler for presentasjonsmateriell
+- Snakkeboble for nøkkelbudskap
+- Mappe-ikon for datakilder
+
+**Designprinsipper:**
+- Minimalistiske stroke-ikoner (1.5px stroke-width)
+- Fargekodet etter seksjon (grønn, blå, lilla, oransje)
+- Responsivt grid for sirkulære prinsipper
+- Ingen emojis — kun rene geometriske former
+
+---
+
+## [2.57.0] - 2025-12-04
+
+### Phase 45: Stedsøkonomi Dashboard + Utadvendt Kommunikasjon
+
+**Status:** ✅ COMPLETE
+
+#### Stedsøkonomisk Prognose - Ny Side
+
+Laget komplett stedsøkonomi-side med økonomisk verdimodell for transformasjon.
+
+**Nye filer:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `place-economy.html` | Stedsøkonomi og økonomisk verdimodell |
+
+**Stedsøkonomi innhold:**
+- Alt 1: Næring/Studiokontor beregning (fra PDF)
+  - 4 666 m² totalt areal
+  - 12,4 M/år i leieinntekter
+  - 247 M over 20 år
+  - +89 M identitetsverdi vs dagens
+- Alt 3: Omsorg+ påbygg økonomi
+  - 73 enheter × ~10 MNOK = ~730 MNOK
+  - 45% Husbanken-støtte (maks 2,1 MNOK/enhet)
+  - ~153 M potensiell støtte
+- Etasjefordeling visuelt
+- Arealregnskap for Omsorg+
+- 6 profesjonelle presentasjonsslides
+- Nøkkelbudskap for 3 målgrupper
+
+#### Utadvendt Kommunikasjon Forbedret
+
+Begge nye sider oppdatert med profesjonelt, utadvendt språk:
+
+**place-economy.html:**
+- 6 slides med målgrupperettet kommunikasjon
+- Pitch-varianter for investorer, politikere, naboer
+- Mer smidd språk for ekstern presentasjon
+
+**ncc-partnership.html:**
+- 6 slides (2 nye: Visjon, Verdiforslag)
+- Nøkkelbudskap for byggherrer, investorer, politikere
+- Profesjonelt språk for utadvendt bruk
+
+**Datakilde:**
+- Stedsøkonomisk Prognose PDF (Natural State, sept 2025)
+- konseptskisse-2.0-tillegg.json side 119, 122
+- meetings.json (møte 2. sept 2025)
+
+---
+
+## [2.56.0] - 2025-12-04
+
+### Phase 44: NCC Partnership Dashboard
+
+**Status:** ✅ COMPLETE
+
+#### Hovfaret 13 × Nordic Circle Hotspot
+
+Laget dedikert side for NCC-partnerskapet og sirkulær økonomi.
+
+**Ny fil:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `ncc-partnership.html` | NCC-partnerskap og sirkulær økonomi |
+
+**Innhold:**
+- Hva er Nordic Circle Construction
+- Hotspot-konseptet (living laboratory)
+- Nordic Innovation finansieringsmuligheter
+- Sirkulære prinsipper i praksis
+- Tidslinje for NCC-samarbeidet
+- 4 presentasjonsslides
+- Møtereferanser (5 nøkkelmøter)
+- Nøkkelpersoner (Jan Thomas, Andreas, Gabriel)
+
+**Datakilde:**
+- 5 møter fra meetings.json (des 2024 - sep 2025)
+- sustainability-journey.json
+- deliverables.json
+
+---
+
 ## [2.55.0] - 2025-12-04
 
 ### Phase 43: Kvalitetssikring — Etasjepåstand korrigert

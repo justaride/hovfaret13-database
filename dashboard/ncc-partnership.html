@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCC Partnership - Hovfaret 13 × Nordic Circle</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ncc-primary: #0066cc;
+            --ncc-secondary: #004d99;
+            --ncc-accent: #00a3e0;
+            --green: #22c55e;
+            --green-dark: #166534;
+            --bg-light: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--ncc-primary) 0%, var(--ncc-secondary) 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .header-title {
+            text-align: center;
+        }
+
+        .header-title h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .header-subtitle {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .partnership-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo-box {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem 2rem;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-box.hovfaret {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-box.ncc {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--ncc-accent);
+        }
+
+        .logo-connector {
+            font-size: 2rem;
+            opacity: 0.5;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero-lead {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--ncc-accent);
+        }
+
+        .hero-stat-label {
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-icon.blue { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+        .section-icon.green { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
+        .section-icon.orange { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+        .section-icon.purple { background: linear-gradient(135deg, #e9d5ff, #d8b4fe); }
+
+        .section-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .section-icon.blue svg { stroke: #1e40af; }
+        .section-icon.green svg { stroke: #166534; }
+        .section-icon.orange svg { stroke: #92400e; }
+        .section-icon.purple svg { stroke: #6b21a8; }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            transition: all 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .card-icon.blue { background: #dbeafe; }
+        .card-icon.green { background: #dcfce7; }
+        .card-icon.orange { background: #fef3c7; }
+
+        .card-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .card-icon.blue svg { stroke: #1e40af; }
+        .card-icon.green svg { stroke: #166534; }
+        .card-icon.orange svg { stroke: #92400e; }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .card-content {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .card-content ul {
+            margin-left: 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .card-content li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--ncc-primary), var(--green));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--ncc-primary);
+            border: 3px solid var(--bg-light);
+        }
+
+        .timeline-dot.green { background: var(--green); }
+        .timeline-dot.orange { background: #f59e0b; }
+
+        .timeline-date {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--ncc-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid var(--ncc-primary);
+            padding: 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 1.5rem 0;
+        }
+
+        .quote-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .quote-source {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Principles Grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .principles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .principle-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .principle-card:hover {
+            border-color: var(--ncc-primary);
+            background: #f0f9ff;
+        }
+
+        .principle-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: 12px;
+        }
+
+        .principle-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #0066cc;
+        }
+
+        .principle-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .principle-desc {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Slide Preview Section */
+        .slides-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .slide-preview {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-preview.ncc-blue {
+            background: linear-gradient(135deg, var(--ncc-primary) 0%, var(--ncc-secondary) 100%);
+        }
+
+        .slide-preview.green-gradient {
+            background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+        }
+
+        .slide-headline {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-subline {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .slide-logo {
+            position: absolute;
+            bottom: 0.75rem;
+            right: 0.75rem;
+            font-size: 0.6rem;
+            opacity: 0.5;
+        }
+
+        .slide-info {
+            margin-top: 1rem;
+        }
+
+        .slide-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .slide-desc {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            padding: 0.4rem 0.75rem;
+            border-radius: 4px;
+            color: white;
+            font-size: 0.7rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .slide-preview:hover .copy-btn {
+            opacity: 1;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Meeting Reference */
+        .meetings-list {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .meeting-item {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.15s;
+        }
+
+        .meeting-item:last-child {
+            border-bottom: none;
+        }
+
+        .meeting-item:hover {
+            background: var(--bg-light);
+        }
+
+        .meeting-date {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--ncc-primary);
+            min-width: 80px;
+        }
+
+        .meeting-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .meeting-badge {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 1.75rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .partnership-logos {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo-connector {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Tilbake
+            </a>
+            <div class="header-title">
+                <h1>NCC Partnership</h1>
+                <p class="header-subtitle">Sirkulær økonomi i praksis</p>
+            </div>
+            <div style="width: 80px;"></div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="partnership-logos">
+                <div class="logo-box hovfaret">Hovfaret 13</div>
+                <span class="logo-connector">×</span>
+                <div class="logo-box ncc">Nordic Circle<br>Construction</div>
+            </div>
+            <h2>Pilotkunde for sirkulær bygging</h2>
+            <p class="hero-lead">
+                Hovfaret 13 er utpekt som pilotkunde for Nordic Circle Hotspot —
+                et laboratorium for å teste sirkulære byggematerialer og løsninger i praksis.
+            </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">48%</div>
+                    <div class="hero-stat-label">CO₂-reduksjon</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">80%</div>
+                    <div class="hero-stat-label">Materialbesparelse</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">2024</div>
+                    <div class="hero-stat-label">Partnerskap etablert</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+
+        <!-- Hva er Nordic Circle -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 12a8 8 0 0 1 8-8V2m0 2a8 8 0 0 1 8 8h2m-2 0a8 8 0 0 1-8 8v2m0-2a8 8 0 0 1-8-8H2"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Hva er Nordic Circle?</h2>
+                    <p class="section-subtitle">Nettverk for sirkulær bygging i Norden</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 20h20M5 20V8l7-5 7 5v12M9 20v-6h6v6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="card-title">Nordic Circle Construction</div>
+                            <div class="card-subtitle">Sirkulære byggeløsninger</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Nordisk nettverk som utvikler og tester sirkulære løsninger for byggebransjen:</p>
+                        <ul>
+                            <li>Massivtre og lavkarbon-konstruksjoner</li>
+                            <li>Nordic Circle stål (resirkulert)</li>
+                            <li>Gjenbruksbetong</li>
+                            <li>Sirkulære verdikjeder</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 3h6v2H9zm0 16h6v2H9zm-4-6H3v-2h2zm16 0h2v-2h-2z"/>
+                                <rect x="6" y="6" width="12" height="12" rx="1"/>
+                                <path d="M9 10h6M9 14h4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="card-title">Hotspot-konseptet</div>
+                            <div class="card-subtitle">Living laboratory</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Hovfaret 13 blir et "living lab" — et levende laboratorium der sirkulære prinsipper testes i virkeligheten:</p>
+                        <ul>
+                            <li>Teste nye materialer i reelt prosjekt</li>
+                            <li>Dokumentere erfaringer og resultater</li>
+                            <li>Dele kunnskap med bransjen</li>
+                            <li>Referanseprosjekt for fremtiden</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon orange">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="card-title">Nordic Innovation</div>
+                            <div class="card-subtitle">Finansieringsmuligheter</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Koblingen til Nordic Circle åpner for finansieringsmuligheter gjennom nordisk innovasjonsstøtte:</p>
+                        <ul>
+                            <li>NCE-søknad september 2025</li>
+                            <li>Nordisk innovasjonsprogram</li>
+                            <li>Industripartnerskap</li>
+                            <li>FoU-samarbeid</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sirkulære prinsipper -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/>
+                        <path d="m7 12 3 3 7-7"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Sirkulære prinsipper i praksis</h2>
+                    <p class="section-subtitle">Hvordan Hovfaret 13 implementerer sirkulær økonomi</p>
+                </div>
+            </div>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="8" width="18" height="12" rx="1"/>
+                            <path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+                        </svg>
+                    </div>
+                    <div class="principle-title">Bevaring</div>
+                    <div class="principle-desc">Bevare eksisterende betongkonstruksjon</div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12a8 8 0 0 1 8-8V2m0 2a8 8 0 0 1 8 8h2m-2 0a8 8 0 0 1-8 8v2m0-2a8 8 0 0 1-8-8H2"/>
+                        </svg>
+                    </div>
+                    <div class="principle-title">Ombruk</div>
+                    <div class="principle-desc">Ombrukskartlegging av materialer</div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22V8M5 12l7-10 7 10M5 12l7 3 7-3"/>
+                        </svg>
+                    </div>
+                    <div class="principle-title">Fornybart</div>
+                    <div class="principle-desc">Massivtre i påbygg</div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div class="principle-title">Lavenergi</div>
+                    <div class="principle-desc">50% reduksjon i energibruk</div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="principle-title">Naturpositiv</div>
+                    <div class="principle-desc">Styrke Hoffselva-biotopen</div>
+                </div>
+                <div class="principle-card">
+                    <div class="principle-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="principle-title">Deling</div>
+                    <div class="principle-desc">Fellesfunksjoner for nabolaget</div>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                <div class="quote-text">
+                    "Andreas er på motsatt side av skalaen — han kunne ikke brydd seg mindre om BREEAM eller Futurebuilt. Det er 'reell bærekraft' som gjelder."
+                </div>
+                <div class="quote-source">— Fra møte med Jan Thomas (Nordic Circle), 6. mai 2025</div>
+            </div>
+        </section>
+
+        <!-- Tidslinje -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                        <path d="M16 2v4M8 2v4M3 10h18"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">NCC-samarbeid tidslinje</h2>
+                    <p class="section-subtitle">Utviklingen av partnerskapet</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Desember 2024</div>
+                    <div class="timeline-title">Første NCC-kobling</div>
+                    <div class="timeline-content">
+                        Oppfølgingssamtale om NCC-kobling og ombrukskartlegging. Identifiserte mulighet for lab-leietaker og etablerte grunnlag for sirkulært samarbeid.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mai 2025</div>
+                    <div class="timeline-title">Møte med Jan Thomas (NCC)</div>
+                    <div class="timeline-content">
+                        Detaljert diskusjon om sirkulære byggeløsninger. Diskuterte massivtre, Nordic Circle stål, og gjenbruksbetong. Andreas bekreftet interesse for "reell bærekraft" fremfor sertifiseringer.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot green"></div>
+                    <div class="timeline-date">September 2025</div>
+                    <div class="timeline-title">Nordic Circle Hotspot etablert</div>
+                    <div class="timeline-content">
+                        Hovfaret 13 utpekt som pilotkunde for Nordic Circle Hotspot. Prosjektet blir living laboratory for sirkulære prinsipper. Del av Nordic Innovation-søknad.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot orange"></div>
+                    <div class="timeline-date">Neste steg</div>
+                    <div class="timeline-title">Teoretisk prosjektering</div>
+                    <div class="timeline-content">
+                        Detaljert prosjektering med NCC-materialer og -løsninger planlegges som neste fase i samarbeidet.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slides -->
+        <section class="slides-section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Presentasjonsmateriell — Utadvendt Kommunikasjon</h2>
+                    <p class="section-subtitle">Profesjonelle slides for NCC-partnerskapet</p>
+                </div>
+            </div>
+
+            <div class="slides-grid">
+                <div>
+                    <div class="slide-preview ncc-blue">
+                        <button class="copy-btn">Kopier</button>
+                        <div class="slide-headline">Nordic Circle Hotspot</div>
+                        <div class="slide-subline">Pilotkunde for sirkulær bygging</div>
+                        <div style="margin-top: 1rem; display: flex; gap: 1.5rem; font-size: 0.7rem;">
+                            <span>Living lab</span>
+                            <span>Testing</span>
+                            <span>Dokumentasjon</span>
+                        </div>
+                        <span class="slide-logo">Hovfaret 13 × NCC</span>
+                    </div>
+                    <div class="slide-info">
+                        <div class="slide-title">Hotspot-introduksjon</div>
+                        <div class="slide-desc">Hovedslide for NCC-samarbeidet</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide-preview green-gradient">
+                        <button class="copy-btn">Kopier</button>
+                        <div class="slide-headline">Reell bærekraft</div>
+                        <div class="slide-subline">Ikke sertifiseringer — faktisk klimaeffekt</div>
+                        <div style="margin-top: 1rem; font-size: 0.75rem; opacity: 0.9;">
+                            <div>48% lavere CO₂-utslipp</div>
+                            <div>80% materialbesparelse</div>
+                            <div>Sirkulære verdikjeder</div>
+                        </div>
+                        <span class="slide-logo">Hovfaret 13</span>
+                    </div>
+                    <div class="slide-info">
+                        <div class="slide-title">Bærekraftprofil</div>
+                        <div class="slide-desc">Fokus på reell klimaeffekt</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide-preview">
+                        <button class="copy-btn">Kopier</button>
+                        <div class="slide-headline">Sirkulære materialer</div>
+                        <div class="slide-subline">Fra Nordic Circle-nettverket</div>
+                        <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.65rem;">
+                            <div style="background: rgba(255,255,255,0.1); padding: 0.4rem; border-radius: 4px;">
+                                <div style="font-weight: 600;">Massivtre</div>
+                                <div style="opacity: 0.7;">Påbygg etasjer</div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.1); padding: 0.4rem; border-radius: 4px;">
+                                <div style="font-weight: 600;">NC Stål</div>
+                                <div style="opacity: 0.7;">Resirkulert</div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.1); padding: 0.4rem; border-radius: 4px;">
+                                <div style="font-weight: 600;">Gjenbruksbetong</div>
+                                <div style="opacity: 0.7;">Fasade/gulv</div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.1); padding: 0.4rem; border-radius: 4px;">
+                                <div style="font-weight: 600;">Ombruk</div>
+                                <div style="opacity: 0.7;">Eksisterende</div>
+                            </div>
+                        </div>
+                        <span class="slide-logo">Nordic Circle</span>
+                    </div>
+                    <div class="slide-info">
+                        <div class="slide-title">Materialoversikt</div>
+                        <div class="slide-desc">NCC-materialer i prosjektet</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide-preview ncc-blue">
+                        <button class="copy-btn">Kopier</button>
+                        <div style="text-align: center;">
+                            <div style="width: 64px; height: 64px; margin: 0 auto 0.75rem; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 12a8 8 0 0 1 8-8V2m0 2a8 8 0 0 1 8 8h2m-2 0a8 8 0 0 1-8 8v2m0-2a8 8 0 0 1-8-8H2"/>
+                                </svg>
+                            </div>
+                            <div class="slide-headline">Living Laboratory</div>
+                            <div class="slide-subline">Teste • Dokumentere • Dele</div>
+                        </div>
+                        <span class="slide-logo">Hovfaret 13 × NCC</span>
+                    </div>
+                    <div class="slide-info">
+                        <div class="slide-title">Lab-konsept</div>
+                        <div class="slide-desc">Hovfaret 13 som living lab</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide-preview green-gradient">
+                        <button class="copy-btn">Kopier</button>
+                        <div class="slide-headline">Fremtidens byggebransje</div>
+                        <div class="slide-subline">Sirkulær økonomi i praksis</div>
+                        <div style="margin-top: 0.75rem; font-size: 0.7rem; opacity: 0.9; line-height: 1.4;">
+                            «Vi viser at transformasjon ikke bare er miljøriktig — det er også lønnsomt. Hovfaret 13 blir et referanseprosjekt for hele bransjen.»
+                        </div>
+                        <span class="slide-logo">Natural State</span>
+                    </div>
+                    <div class="slide-info">
+                        <div class="slide-title">Visjon</div>
+                        <div class="slide-desc">Utadvendt budskap</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="slide-preview ncc-blue">
+                        <button class="copy-btn">Kopier</button>
+                        <div class="slide-headline">Hvorfor Nordic Circle?</div>
+                        <div class="slide-subline">Verdien av partnerskapet</div>
+                        <div style="margin-top: 0.75rem; font-size: 0.65rem; opacity: 0.9;">
+                            <div style="padding: 0.25rem 0;">• Tilgang til lavutslippsmaterialer</div>
+                            <div style="padding: 0.25rem 0;">• Dokumentert klimaeffekt</div>
+                            <div style="padding: 0.25rem 0;">• Nordisk nettverk og kompetanse</div>
+                            <div style="padding: 0.25rem 0;">• Finansieringsmuligheter</div>
+                        </div>
+                        <span class="slide-logo">NCC Partnership</span>
+                    </div>
+                    <div class="slide-info">
+                        <div class="slide-title">Verdiforslag</div>
+                        <div class="slide-desc">For potensielle partnere</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pitch Variants -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Nøkkelbudskap — Ulike Målgrupper</h2>
+                    <p class="section-subtitle">Tilpasset kommunikasjon for ulike interessenter</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h4 style="color: var(--ncc-primary); margin-bottom: 0.75rem;">For Byggherrer & Utviklere</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+                        «Nordic Circle Hotspot gir tilgang til <strong>dokumenterte lavutslippsløsninger</strong>.
+                        Hovfaret 13 beviser at sirkulær bygging ikke bare er miljøriktig —
+                        det gir også <strong>bedre økonomi</strong> og styrket markedsposisjon.»
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--green-dark); margin-bottom: 0.75rem;">For Investorer</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+                        «ESG-profilen som Nordic Circle-partnerskapet gir, tiltrekker <strong>kvalitetsleietakere</strong>
+                        og reduserer langsiktig risiko. Prosjektet demonstrerer hvordan
+                        <strong>bærekraft og avkastning</strong> går hånd i hånd.»
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: #7c3aed; margin-bottom: 0.75rem;">For Politikere</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+                        «Hovfaret 13 blir et <strong>referanseprosjekt</strong> for hvordan Oslo kan nå klimamålene
+                        innen bygg og anlegg. Living laboratory-konseptet skaper <strong>kunnskap som kan deles</strong>
+                        med andre prosjekter i kommunen.»
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Møtereferanser -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon orange">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <line x1="10" y1="9" x2="8" y2="9"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Møter og dokumentasjon</h2>
+                    <p class="section-subtitle">Relevante møter fra prosjektdatabasen</p>
+                </div>
+            </div>
+
+            <div class="meetings-list">
+                <div class="meeting-item">
+                    <span class="meeting-date">3. des 2024</span>
+                    <span class="meeting-title">Hovfaret 13 - NCC og ombrukskartlegging</span>
+                    <span class="meeting-badge">NCC</span>
+                </div>
+                <div class="meeting-item">
+                    <span class="meeting-date">6. mai 2025</span>
+                    <span class="meeting-title">Jan Thomas - Nordic Circle Construction</span>
+                    <span class="meeting-badge">Nøkkelmøte</span>
+                </div>
+                <div class="meeting-item">
+                    <span class="meeting-date">22. mai 2025</span>
+                    <span class="meeting-title">Bydelsmøte - Sirkulær økonomi presentert</span>
+                    <span class="meeting-badge">Bydel</span>
+                </div>
+                <div class="meeting-item">
+                    <span class="meeting-date">5. sep 2025</span>
+                    <span class="meeting-title">Strategimøte - Nordic Circle Hotspot etablert</span>
+                    <span class="meeting-badge">Hotspot</span>
+                </div>
+                <div class="meeting-item">
+                    <span class="meeting-date">8. sep 2025</span>
+                    <span class="meeting-title">Nordic Innovation - NCE søknad</span>
+                    <span class="meeting-badge">Finansiering</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nøkkelpersoner -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Nøkkelpersoner</h2>
+                    <p class="section-subtitle">Involverte i NCC-samarbeidet</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon blue">👤</div>
+                        <div>
+                            <div class="card-title">Jan Thomas</div>
+                            <div class="card-subtitle">Nordic Circle Construction</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        Representerer NCC og sirkulære byggeløsninger. Hovedkontakt for tekniske løsninger og materialer.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon green">👤</div>
+                        <div>
+                            <div class="card-title">Andreas Thorsnes</div>
+                            <div class="card-subtitle">Urbania Eiendom AS</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        Prosjekteier med fokus på "reell bærekraft". Involvert i NCC-nettverket og interessert i å investere i løsninger med faktisk klimaeffekt.
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon orange">👤</div>
+                        <div>
+                            <div class="card-title">Gabriel Freeman</div>
+                            <div class="card-subtitle">Natural State AS</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        Koordinerer sirkulær stedsutvikling og kobling mellom prosjekt og NCC. Helhetlig tilnærming til bærekraft og sirkulærøkonomi.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Hovfaret 13 Prosjektdatabase v2.56 &bull; NCC Partnership &bull; Oppdatert 2025-12-04
+    </footer>
+
+    <script>
+        // Copy button functionality
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const slide = this.closest('.slide-preview');
+                const headline = slide.querySelector('.slide-headline')?.textContent || '';
+                const subline = slide.querySelector('.slide-subline')?.textContent || '';
+                const text = `${headline}\n${subline}`;
+
+                navigator.clipboard.writeText(text).then(() => {
+                    this.textContent = 'Kopiert!';
+                    setTimeout(() => {
+                        this.textContent = 'Kopier';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
