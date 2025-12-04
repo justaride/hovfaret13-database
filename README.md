@@ -1,116 +1,110 @@
-# Hovfaret 13 Project Database v2.28
+# Hovfaret 13 Prosjektdatabase v2.49
 
 Komplett prosjektdatabase med interaktivt dashboard for Hovfaret 13 transformasjonsprosjektet.
 
-## Project Overview
+## Prosjektoversikt
 
-**Hovfaret 13** er et eiendomstransformasjonsprosjekt på Skøyen i Oslo. Bygningen (bygget 1989) er planlagt for riving under gjeldende områdereguleringer, men prosjektteamet jobber for å demonstrere at rehabilitering/transformasjon er den overlegne tilnærmingen fra bærekraft, sosiale og økonomiske perspektiver.
+**Hovfaret 13** er et eiendomstransformasjonsprosjekt på Skøyen i Oslo. Bygningen (bygget 1989) er planlagt for riving under gjeldende områderegulering, men prosjektteamet demonstrerer at rehabilitering/transformasjon er den overlegne tilnærmingen.
 
 **Nøkkelargument:** Bygningen ble strukturelt designet for 12 etasjer, men bare 5 ble bygget. Transformasjon sparer 48% CO₂-utslipp sammenlignet med riving.
 
-## Dashboard
+## Nøkkeltall
 
-Start dashboardet:
+| Metrikk | Verdi |
+|---------|-------|
+| Møter | 70 |
+| Dokumenter | 271 |
+| Leveranser | 75 |
+| Personer | 22 |
+| Organisasjoner | 13 |
+| CO₂-besparelse | 48% |
+| Omsorg+ enheter | 73 |
+
+## Kom i gang
+
 ```bash
-cd dashboard
+cd /Users/gabrielboen/2.0-Hovfaret13-NewStructureSimplified/dashboard
 python3 -m http.server 8888
-# Åpne http://localhost:8888/index.html
+open http://localhost:8888/index.html
 ```
 
-### Tilgjengelige sider
-| Side | Beskrivelse |
-|------|-------------|
-| `index.html` | Hjemmeside med navigasjonskort |
-| `meetings.html` | 65 møter med master-detail layout |
-| `timeline.html` | Prosjekttidslinje |
-| `stakeholders.html` | 22 personer, 13 organisasjoner |
-| `documents.html` | 271 dokumenter |
-| `scenarios.html` | 3 utviklingsscenarier |
-| `sustainability.html` | Bærekraftsrapport |
-| `analytics.html` | Prosjektanalyse |
-| `overview.html` | Prosjektoversikt |
+## Dashboards
 
-## Data Structure
+| Dashboard | Fil | Beskrivelse |
+|-----------|-----|-------------|
+| Hjemmeside | `index.html` | Navigasjon til alle dashboards |
+| Oversikt | `overview.html` | Prosjekthelse og KPIer |
+| Møter | `meetings.html` | 70 møter med notater |
+| Tidslinje | `timeline.html` | Kronologisk oversikt |
+| Dokumenter | `documents.html` | 271 dokumenter |
+| Interessenter | `stakeholders.html` | 22 personer, 13 organisasjoner |
+| Scenarier | `scenarios.html` | 3 utviklingsscenarier |
+| Bærekraft | `sustainability.html` | Miljø og klima |
+| Konseptskisse 2.0 | `konseptskisse-2.html` | 123 sider presentasjon |
+
+## Datastruktur
 
 ```
 data/
-├── project.json              # Master project file (building, phases, scenarios)
-├── timeline.json             # Multi-layer timeline (strategic/operational/detailed)
-├── meetings.json             # 65 meetings with participants and reports
-├── documents.json            # 271 document registry with categories
+├── project.json              # Masterprosjekt
+├── meetings.json             # 70 møter
+├── documents.json            # 271 dokumenter
+├── config.json               # Sentralkonfigurasjon
+├── deliverables.json         # 75 leveranser
+├── timeline.json             # Tidslinje
 ├── stakeholders/
-│   ├── organizations.json    # 13 organizations (owner, consultants, government)
-│   └── people.json           # 22 people with roles and engagement
+│   ├── organizations.json    # 13 organisasjoner
+│   └── people.json           # 22 personer
 └── themes/
-    ├── sustainability.json   # Energy, climate, circular economy data
-    ├── regulatory.json       # Planning status, permits, strategy
-    └── omsorg-plus.json      # Elderly housing concept details
+    ├── sustainability.json   # Energi, klima, sirkulært
+    ├── regulatory.json       # Søknader, regulering
+    ├── omsorg-plus.json      # Eldreboliger (73 enheter)
+    └── konseptskisse-2.0-tillegg.json  # Del 5: Progresjon
 ```
 
-## Timeline Layers
+## Dokumentasjon
 
-1. **Strategic** (10 events) - For board/investor presentations
-2. **Operational** (22 events) - For project management
-3. **Detailed** - Links to meetings.json (65 meetings)
+| Fil | Beskrivelse |
+|-----|-------------|
+| `README.md` | Denne filen |
+| `STATUS.md` | Gjeldende status (Phase 37) |
+| `CHANGELOG.md` | Endringshistorikk |
+| `ARCHITECTURE.md` | Komplett prosjektarkitektur |
+| `QUICKSTART.md` | Hurtigstart-guide |
+| `QUICK_ACCESS.md` | Dashboard-lenker |
 
-## Key Stakeholders
+## Hovedinteressenter
 
-### Core Project Team
-- **Urbania Eiendom AS** - Property owner (Andreas Thorsnes)
-- **Natural State AS** - Project coordination, sustainability (Gabriel Bøen, Einar Holthe)
-- **R21 Arkitekter** - Architecture (Thomas Thorsen)
+### Prosjektteam
+- **Urbania Eiendom AS** - Eier (Andreas Thorsnes)
+- **Natural State AS** - Prosjektkoordinering, bærekraft (Gabriel Bøen, Einar Holthe)
+- **R21 Arkitekter** - Arkitektur (Thomas Thorsen)
 
-### Key Consultants
-- **Vill Energi** - Energy/climate analysis (Trym Osborg)
-- **Byggekonsulent** - Technical building advice
+### Konsulenter
+- **Vill Energi** - Energi/klimaanalyse (Trym Osborg)
+- **Byggesaksrådgivning AS** - Ansvarlig søker
 
-### Government
-- **Oslo Kommune** - Regulatory authority
-- **Bydel Ullern** - Potential Omsorg+ partner
+### Myndigheter
+- **Oslo Kommune** - Reguleringsmyndighet
+- **Bydel Ullern** - Omsorg+ partner (150-200 enheter behov)
 
-## Source Data
+## Konseptskisse 2.0
 
-The `source/` folder contains symlinks to:
-- `extraction-cache/` - 458 extracted document files from original processing
-- `original-documents/` - Google Drive folder with 349 source files
-
-## Usage
-
-This data is designed to be:
-1. **Read by Claude Code** for generating reports, analysis, updates
-2. **Consumed by a future dashboard** (to be built iteratively)
-3. **Version controlled in Git** as single source of truth
-
-### Example Queries
-
-```bash
-# Get project status
-cat data/project.json | jq '.project.status'
-
-# List strategic timeline events
-cat data/timeline.json | jq '.events.strategic[].title'
-
-# Find meetings with Bydel Ullern
-cat data/meetings.json | jq '.meetings[] | select(.title | contains("Bydel"))'
-
-# Get all people from Natural State
-cat data/stakeholders/people.json | jq '.people | to_entries[] | select(.value.organization == "Natural State AS") | .value.name'
 ```
-
-## Migration from v1
-
-This structure consolidates data from `/Users/gabrielboen/h13-project-database/` which had:
-- Multiple overlapping JSON files
-- Uncurated timeline with document-date noise
-- 12+ dashboard pages (too fragmented)
-
-v2.0 provides:
-- Single source of truth per entity type
-- Curated, multi-layer timeline
-- Simplified structure for iterative dashboard development
+Konseptskisse 2.0 (123 sider)
+├── Del 1: Bakgrunn (s. 1-27)
+├── Del 2: Stedsutvikling (s. 28-53)
+├── Del 3: Konseptskisse 1.0 (s. 54-91)
+├── Del 4: Utviklingsstrategi (s. 92-99)
+└── Del 5: Progresjon (s. 100-123) ← 24 NYE SIDER
+    ├── 100-119: Leveranser, metodikk, prosesser
+    ├── 120: Nettside & Digital (hovfaret13.no)
+    ├── 121: Markedsinnsikt (Bydel Ullern)
+    ├── 122: Stedsøkonomi (arealregnskap)
+    └── 123: Medvirkningsdokumentasjon
+```
 
 ---
 
 *Opprettet: 2025-11-21*
-*Sist oppdatert: 2025-12-02 (v2.28 - Dashboard Redesign)*
-*Kilde: h13-project-database + Google Drive H13 Backup*
+*Sist oppdatert: 2025-12-03 (v2.49 - Phase 37: Benchmark-implementering)*

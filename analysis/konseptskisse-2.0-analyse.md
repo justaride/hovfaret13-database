@@ -1,313 +1,202 @@
 # Konseptskisse 2.0 - Komplett Analyse
 
 **Dato:** 2025-12-03
-**Formål:** Analyse av konseptskisse-arbeidet og identifisering av nødvendige oppdateringer
+**Versjon:** 3.0 (etter restrukturering)
+**Formål:** Analyse av konseptskisse-arbeidet og dokumentasjon av ny struktur
 
 ---
 
-## 1. OVERSIKT OVER EKSISTERENDE DOKUMENTER
+## 1. STRUKTUROVERSIKT
 
-### konseptskisse.json (v1.0 - September 2025)
-- **Totalt sider:** 113
+### Original Konseptskisse (side 1-99)
+- **Kilde:** 04.09.25 Hovfaret 13 - Konseptskisse.pdf
+- **Totalt sider:** 99 (ikke 113 som tidligere antatt)
 - **4 hoveddeler:**
   1. Bakgrunn (s. 1-27)
   2. Stedsutvikling (s. 28-53)
   3. Konseptskisse 1.0 (s. 54-91)
-  4. Utviklingsstrategi (s. 92-113)
-- **16 kapitler** dokumentert
-- **7 funksjoner** beskrevet (Møtested, Arrangementer, Kontor, Uterom, Servering, Bolig, Omsorg+)
-- **3 scenarier** med CO₂-data
+  4. Utviklingsstrategi (s. 92-99)
+- **Slutter på:** Side 99 "Strategisk Akselerasjon"
 
-### konseptskisse-2.0-tillegg.json (v1.0 - Desember 2025)
-- **12 nye sider** planlagt (114-125)
-- **4 eksisterende sider** som skal oppdateres (2, 88, 92, 93)
-- **Del 5: Progresjon** - Ny del som dekker sept-des 2025
-
----
-
-## 2. HVA HAR SKJEDD SIDEN KONSEPTSKISSE 1.0?
-
-### Kritiske hendelser (september-desember 2025)
-
-| Dato | Hendelse | Betydning | Dokumentert i tillegg? |
-|------|----------|-----------|------------------------|
-| 2025-09-05 | **Strategisk skifte til Omsorg+** | Akselerert strategi, dropper studiokontor-fase | ❌ MANGLER |
-| 2025-09-08 | NCE/Nordic Innovation søknadsstrategi | Finansieringsmuligheter | ❌ MANGLER |
-| 2025-09-19 | Planlegging nabolagsmøte (Thomas) | Forberedelse stakeholder-dialog | ❌ MANGLER |
-| 2025-09-27 | Konseptworkshop med R21 | Utvidet arkitektleveranse | ⚠️ Delvis (s.119) |
-| 2025-10-14 | **Nabolagsmøte (~30 deltakere)** | Første offentlige presentasjon | ⚠️ Delvis (s.120) |
-| 2025-10-16 | Nabovarsel sendt formelt | Regulatorisk milepæl | ❌ MANGLER |
-| 2025-10-29 | Bydelsutvalgsmøte | Politisk forankring | ❌ MANGLER |
-| 2025-11-07 | Bruksendringssøknad sendt | Kritisk søknad | ⚠️ Nevnt (s.124) |
-| 2025-12-01 | Konseptskisse 2.0 deadline | Denne oppdateringen | ✅ Dekket |
-
-### Nye leveranser fra Notion (75 totalt)
-
-| Kategori | Fullført | Pågår | Ikke startet |
-|----------|----------|-------|--------------|
-| Nabolagsmøte | 28 | 0 | 2 |
-| Nettside/kommunikasjon | 4 | 3 | 4 |
-| Sosiale medier | 8 | 1 | 1 |
-| Leietakere | 3 | 0 | 1 |
-| Søknader/regulering | 1 | 1 | 1 |
-| Bærekraft/analyse | 0 | 0 | 3 |
-| Omsorg+ | 1 | 0 | 2 |
-| Finans | 1 | 1 | 1 |
-
-### Nye møter etter 4. september 2025
-
-| Dato | Møte | Deltakere | I tillegg? |
-|------|------|-----------|------------|
-| 2025-09-02 | Stedsøkonomi Andreas/Einar | 3 | ❌ |
-| 2025-09-04 | Koordinering rammesøknad | 5 | ⚠️ Nevnt |
-| 2025-09-05 | Strategimøte Hovfaret 13 | 4 | ❌ KRITISK |
-| 2025-09-08 | NCE søknad oppfølging | 3 | ❌ |
-| 2025-09-19 | Tlf Thomas nabolagsmøte | 2 | ❌ |
-| 2025-09-27 | Konseptworkshop R21 | 6+ | ⚠️ Delvis |
-| 2025-10-14 | Befaring og diskusjon | 3 | ❌ |
-| 2025-10-14 | Nabolagsmøte | ~30 | ⚠️ Delvis |
+### Del 5: Progresjon (side 100-119) - NYE SIDER
+- **Kilde:** konseptskisse-2.html arbeidsrom
+- **Totalt nye sider:** 20
+- **Formål:** Dokumentere faglige leveranser, metodikk og veien videre
+- **Fortsetter etter:** Side 99 (Strategisk Akselerasjon)
 
 ---
 
-## 3. GAP-ANALYSE: HVA MANGLER I TILLEGGET?
+## 2. RESTRUKTURERING (Phase 35)
 
-### 3.1 Kritiske mangler (MÅ legges til)
+### Problemet (før restrukturering)
+Våre tilleggssider startet på side 114 og inkluderte:
+- Side 114: Del 5 divider (duplikat)
+- Side 115: Status Desember 2025 (duplikat av original s.98)
+- Side 116: Strategisk Akselerasjon (duplikat av original s.99)
 
-#### A. Strategisk skifte (5. sept 2025) - MANGLER HELT
-**Problem:** Den viktigste strategiske beslutningen i 2025 er ikke dokumentert.
+### Løsningen
+| Før | Etter | Beskrivelse |
+|-----|-------|-------------|
+| Side 114-116 | Fjernet | Duplikater av original |
+| Side 117 | Side 101 | Energirapport |
+| Side 118 | Side 102 | Klimagass |
+| ... | ... | ... |
+| Side 135 | Side 119 | Stedsøkonomi |
+| (ny) | Side 100 | Del 5 Divider |
 
-**Hva skjedde:**
-- Beslutning om å droppe studiokontor-fasen
-- Gå direkte til Omsorg+ transformasjon
-- Skøyen Aktivitetssenter erstatning identifisert
-- Byggesaksrådgivning AS engasjert som ansvarlig søker
-
-**Anbefaling:** Legg til ny side eller integrer i s.115 "Status Desember 2025"
-
-#### B. Nabolagsmøte-resultater (14. okt 2025) - DELVIS
-**Problem:** Side 120 nevner interessentdialog, men mangler:
-- ~30 deltakere på møtet
-- Konkrete tilbakemeldinger
-- Bekymring om trafikk fra Skøyen stasjon
-- Positiv respons på Omsorg+
-
-**Anbefaling:** Utvid s.120 med konkrete resultater
-
-#### C. Bruksendringssøknad (7. nov 2025) - DELVIS
-**Problem:** Side 124 nevner rammesøknad, men:
-- Bruksendringssøknad er egen prosess
-- Allerede sendt/under behandling
-- Kritisk regulatorisk milepæl
-
-**Anbefaling:** Oppdater s.124 med bruksendringssøknad-status
-
-#### D. Bydelsutvalgsmøte (29. okt 2025) - MANGLER HELT
-**Problem:** Politisk forankring i bydelen ikke dokumentert.
-
-**Hva skjedde:**
-- Presentasjon for bydelsutvalget
-- Politisk støtte for Omsorg+
-- Kamran Surizehi deltok
-
-**Anbefaling:** Integrer i s.120 eller ny side
-
-### 3.2 Mangler i eksisterende sider
-
-#### Side 115: Status Desember 2025
-**Nåværende:**
-- 4 faglige leveranser
-- 65+ møter
-
-**Bør oppdateres til:**
-- "69 møter" (etter Notion-merge)
-- Nevne strategisk skifte 5. sept
-- Nevne nabolagsmøte 14. okt
-- Oppdatere tidslinje-grafikk
-
-#### Side 120: Interessentdialog
-**Nåværende:**
-- Bydel Ullern møter (mai 2025)
-- Leietakermøte (januar 2025)
-
-**Bør legge til:**
-- Nabolagsmøte 14. oktober (~30 deltakere)
-- Bydelsutvalgsmøte 29. oktober
-- Tlf-samtaler med Thomas (R21)
-
-#### Side 123: Prosjektdatabase
-**Nåværende:**
-- 65+ møter
-- 271 dokumenter
-- 32 milepæler
-- 22 personer, 13 organisasjoner
-
-**Bør oppdateres til:**
-- **69 møter** (etter merge)
-- **39 milepæler** (etter timeline-oppdatering)
-- **24 personer** (Kamran + Linda utvidet)
-- **16 organisasjoner** (+Byggesaksrådgivning, Parabol, NCC)
-- **75 leveranser** (ny data fra Notion)
-
-#### Side 124: Neste Steg
-**Nåværende:**
-- Rammesøknad Q1 2026
-- Konseptskisse 2.0
-- Midlertidig bruksendring
-
-**Bør oppdateres:**
-- Bruksendringssøknad status (sendt nov 2025)
-- Nabovarsel sendt (okt 2025)
-- Konkret fremdrift fra Notion-leveranser
-
-### 3.3 Tall som må oppdateres
-
-| Tall | I tillegg | Korrekt verdi | Hvor |
-|------|-----------|---------------|------|
-| Møter | 65+ | 69 | s.115, s.123 |
-| Timeline events | 32 | 39 | s.123 |
-| Stakeholders | 22+13 | 24+16 | s.123 |
-| Leveranser | - | 75 | s.123 (ny) |
-| Nabolagsmøte deltakere | - | ~30 | s.120 |
-
----
-
-## 4. NYE SIDER SOM BØR VURDERES
-
-### 4.1 Side om Strategisk Skifte (ny s.115b eller integrer)
-
-**Forslag til innhold:**
+### Ny struktur
 ```
-Tittel: Strategisk Akselerasjon
-Undertittel: September 2025
+Original konseptskisse: Side 1-99
+  └── Del 4 ender på side 99 (Strategisk Akselerasjon)
 
-Hovedpunkter:
-• Beslutning: Gå direkte til Omsorg+ (droppe studiokontor)
-• Bakgrunn: Bydel Ullerns konkrete behov for eldreboliger
-• Mulighet: Erstatning for Skøyen Aktivitetssenter
-• Handling: Engasjert Byggesaksrådgivning AS som ansvarlig søker
-```
-
-### 4.2 Side om Nabolagsmøte-resultater (utvid s.120)
-
-**Forslag til tillegg:**
-```
-Nabolagsmøte 14. oktober 2025:
-• ~30 naboer deltok
-• Positiv respons på transformasjonskonsept
-• Bekymring: Trafikk fra Skøyen stasjon
-• Interesse: Omsorg+ for eldre
-• Oppfølging: Bydelsutvalgsmøte 29. oktober
-```
-
-### 4.3 Side om Leveranser (ny s.123b)
-
-**Forslag:**
-```
-Tittel: Leveranseoversikt
-Undertittel: Høst 2025
-
-75 leveranser sporet i Notion:
-• 48 fullført (64%)
-• 6 pågår
-• 17 ikke startet
-
-Hovedkategorier:
-• Nabolagsmøte: 30 leveranser ✅
-• Kommunikasjon: 11 leveranser
-• Søknader: 3 leveranser (kritisk)
+Del 5: Progresjon: Side 100-119
+  ├── 100: Del 5 Section Divider
+  ├── 101: Energirapport
+  ├── 102: Klimagass
+  ├── 103: Bærekraftsvurdering
+  ├── 104: R21 Leveranse
+  ├── 105: Interessentdialog
+  ├── 106: Omsorg+ Fordypning
+  ├── 107: Geoteknisk
+  ├── 108: Prosjektdatabase
+  ├── 109: Neste steg
+  ├── 110: Oppsummering
+  ├── 111: Natural State Metodikk (ref. Godsløkka)
+  ├── 112: Helhetlige Verdier (ref. Godsløkka)
+  ├── 113: Suksesskriterier (ref. Godsløkka)
+  ├── 114: Formidlingsstrategi (ref. Godsløkka)
+  ├── 115: Politisk Dialog
+  ├── 116: Nordic Innovation
+  ├── 117: Konseptworkshop R21
+  ├── 118: Regulatorisk Prosess
+  └── 119: Stedsøkonomi
 ```
 
 ---
 
-## 5. OPPDATERT STRUKTUR FOR TILLEGGET
+## 3. INNHOLDSANALYSE
 
-### Gjeldende struktur (12 sider)
-| Side | Tittel | Status |
-|------|--------|--------|
-| 114 | Del 5 Divider | OK |
-| 115 | Status Desember 2025 | ⚠️ Trenger oppdatering |
-| 116 | Energirapport | OK |
-| 117 | Klimagassberegninger | OK |
-| 118 | Bærekraftsrapport | OK |
-| 119 | R21 Leveranse | OK |
-| 120 | Interessentdialog | ⚠️ Trenger utvidelse |
-| 121 | Omsorg+ Fordypning | OK |
-| 122 | Geoteknisk Risiko | OK |
-| 123 | Prosjektdatabase | ⚠️ Trenger oppdatering |
-| 124 | Neste Steg | ⚠️ Trenger oppdatering |
-| 125 | Oppsummering | ⚠️ Trenger oppdatering |
+### Faglige leveranser (side 101-104)
+| Side | Tittel | Kilde | Dato |
+|------|--------|-------|------|
+| 101 | Energirapport | Vill Energi AS | 11. apr 2025 |
+| 102 | Klimagassberegninger v2 | Vill Energi AS | 22. apr 2025 |
+| 103 | Bærekraftsvurdering | Natural State | 4. jul 2025 |
+| 104 | R21 Leveranse | R21 Arkitekter | Okt 2025 |
 
-### Anbefalt oppdatert struktur (14 sider)
-| Side | Tittel | Endring |
-|------|--------|---------|
-| 114 | Del 5 Divider | Uendret |
-| 115 | Status Desember 2025 | Oppdater tall |
-| **115b** | **Strategisk Akselerasjon** | **NY SIDE** |
-| 116 | Energirapport | Uendret |
-| 117 | Klimagassberegninger | Uendret |
-| 118 | Bærekraftsrapport | Uendret |
-| 119 | R21 Leveranse | Uendret |
-| 120 | Interessentdialog | Utvid med nabolagsmøte |
-| **120b** | **Nabolagsmøte Resultater** | **NY SIDE** |
-| 121 | Omsorg+ Fordypning | Uendret |
-| 122 | Geoteknisk Risiko | Uendret |
-| 123 | Prosjektdatabase | Oppdater tall |
-| 124 | Neste Steg | Oppdater med bruksendring |
-| 125 | Oppsummering | Oppdater nøkkeltall |
+### Interessentdialog (side 105)
+13 verifiserte hendelser dokumentert:
+1. Leietakermøte (10. jan)
+2. Dispensasjonsstrategi (7. mar)
+3. Møte Bente Otto (5. mai)
+4. Åpent møte Bydel Ullern (13. mai)
+5. Presentasjon Bydelsledere (22. mai)
+6. James Lorentzen (24. jun)
+7. Strategisk skifte (5. sep)
+8. Planlegging nabolagsmøte (19. sep)
+9. Konseptworkshop R21 (27. sep)
+10. Nabolagsmøte (~30 deltakere) (14. okt)
+11. Nabovarsel sendt (16. okt)
+12. Bydelsutvalgsmøte (29. okt)
+13. Bruksendringssøknad (nov)
 
----
+### Konsept og analyse (side 106-108)
+| Side | Fokus | Nøkkeldata |
+|------|-------|------------|
+| 106 | Omsorg+ Fordypning | 73 enheter, 66+7, Husbanken 12/12 |
+| 107 | Geoteknisk | Kvikkleire-argument for bevaring |
+| 108 | Prosjektdatabase | 70 møter, 271 dok, 75 leveranser |
 
-## 6. PRIORITERT HANDLINGSPLAN
+### Metodikk fra Godsløkka (side 111-114)
+Referanser til Natural State metodikk fra Godsløkka-konseptskisse:
+| Side | Tittel | Godsløkka-ref |
+|------|--------|---------------|
+| 111 | Natural State Metodikk | s.7 |
+| 112 | Helhetlige Verdier | s.8-11 |
+| 113 | Suksesskriterier | s.12 |
+| 114 | Formidlingsstrategi | s.24-28 |
 
-### Fase 1: Kritiske oppdateringer (UMIDDELBART)
-
-1. **Oppdater side 115** - Korrekt antall møter (69), nevn strategisk skifte
-2. **Oppdater side 120** - Legg til nabolagsmøte 14. okt med resultater
-3. **Oppdater side 123** - Korrekte tall for database
-4. **Oppdater side 125** - Korrekte nøkkeltall
-
-### Fase 2: Nye sider (HØY PRIORITET)
-
-5. **Legg til side 115b** - Strategisk akselerasjon sept 2025
-6. **Legg til side 120b** - Nabolagsmøte resultater (valgfritt, kan integreres)
-
-### Fase 3: Eksisterende sider i originalen
-
-7. **Side 2** - Legg til Del 5 i innholdsfortegnelse
-8. **Side 88** - Oppdater Omsorg+ med nyere data
-9. **Side 92-93** - Referanser til rapporter
+### Prosesser fra møter (side 115-119)
+Nye sider basert på møtegjennomgang:
+| Side | Prosess | Møtereferanse |
+|------|---------|---------------|
+| 115 | Politisk Dialog | #38 James Lorentzen 24. jun |
+| 116 | Nordic Innovation | #67 NCE søknad 8. sep |
+| 117 | Konseptworkshop R21 | #57 Workshop 27. sep |
+| 118 | Regulatorisk Prosess | Nabovarsel, bruksendring |
+| 119 | Stedsøkonomi | #55 Andreas/Einar 2. sep |
 
 ---
 
-## 7. KONKLUSJON
+## 4. ENDRINGER TIL EKSISTERENDE SIDER
 
-### Hovedfunn
-
-Konseptskisse 2.0-tillegget har et godt grunnlag, men mangler dokumentasjon av:
-
-1. **Strategisk skifte 5. september** - Den viktigste beslutningen i 2025
-2. **Nabolagsmøte-resultater** - Konkrete tilbakemeldinger fra 30 deltakere
-3. **Oppdaterte tall** - Møter, stakeholders, timeline-hendelser
-
-### Anbefaling
-
-Oppdater `konseptskisse-2.0-tillegg.json` med:
-- Korrigerte tall på side 115, 123, 125
-- Utvidet interessentdialog på side 120
-- Vurder ny side om strategisk skifte
-- Oppdater neste-steg med bruksendringssøknad-status
-
-### Datagrunnlag etter Notion-integrering
-
-| Kategori | September 2025 | Desember 2025 | Endring |
-|----------|----------------|---------------|---------|
-| Møter | ~60 | 69 | +9 |
-| Stakeholders | 22 | 24 | +2 |
-| Organisasjoner | 13 | 16 | +3 |
-| Timeline events | 32 | 39 | +7 |
-| Leveranser | 0 | 75 | +75 |
+### Side 2: Innholdsfortegnelse
+Må oppdateres med:
+```
+5. Progresjon (side 100-119)
+   • Faglige leveranser
+   • Interessentdialog
+   • Metodikk
+   • Veien videre
+```
 
 ---
 
-*Analyse utført: 2025-12-03*
-*Basert på: konseptskisse.json, konseptskisse-2.0-tillegg.json, meetings.json, deliverables.json, timeline-enhanced.json*
+## 5. NØKKELTALL
+
+### Prosjektstatistikk
+| Kategori | Antall |
+|----------|--------|
+| Møter gjennomført | 70 |
+| Dokumenter | 271 |
+| Leveranser | 75 |
+| Personer | 22 |
+| Organisasjoner | 13 |
+| Interessent-hendelser | 13 |
+
+### Bærekraft
+| Metrikk | Verdi |
+|---------|-------|
+| CO₂-reduksjon | 48% |
+| Materialbesparelse | 80% |
+| Energiforbedring | F → C |
+| Avfallsreduksjon | 85% |
+
+### Omsorg+
+| Metrikk | Verdi |
+|---------|-------|
+| Enheter | 73 |
+| Bydelsbehov | 150-200 |
+| Dekning | ~46% |
+| Husbanken | 12/12 |
+
+---
+
+## 6. FILER OPPDATERT
+
+| Fil | Versjon | Endring |
+|-----|---------|---------|
+| `konseptskisse-2.html` | - | 20 sider (100-119), JavaScript oppdatert |
+| `konseptskisse-2.0-tillegg.json` | v3.0 | Komplett restrukturering |
+| `STATUS.md` | - | Phase 35 dokumentert |
+| `CHANGELOG.md` | v2.47.0 | Restrukturering dokumentert |
+| `konseptskisse-2.0-analyse.md` | v3.0 | Denne filen |
+
+---
+
+## 7. NESTE STEG
+
+### For design/produksjon
+1. Eksportere alle 20 sider som PDF/JPG
+2. Legge til Del 5 i innholdsfortegnelse (original s.2)
+3. Produsere ferdig Konseptskisse 2.0 (119 sider totalt)
+
+### For prosjektet
+- Nabovarsel: ✅ Fullført (16. okt)
+- Bruksendringssøknad: ✅ Sendt (nov)
+- Rammesøknad: 📋 Planlagt (Q1 2026)
+
+---
+
+*Analyse oppdatert: 2025-12-03 (Phase 35)*
+*Basert på: original konseptskisse PDF/TXT, meetings.json, konseptskisse-2.html*

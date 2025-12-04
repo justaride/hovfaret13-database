@@ -1,16 +1,24 @@
 {
   "metadata": {
-    "version": "1.0",
+    "version": "2.49",
     "created": "2025-12-03",
     "last_updated": "2025-12-03",
     "description": "Central configuration - single source of truth for key metrics",
-    "purpose": "All dashboards and JSON files should reference these values for consistency"
+    "purpose": "All dashboards and JSON files should reference these values for consistency",
+    "database_phase": 37
   },
   "project": {
     "name": "Hovfaret 13 Transformation",
     "short_name": "H13",
     "current_phase": "phase_6",
     "status": "Active - Pre-submission Phase"
+  },
+  "konseptskisse": {
+    "version": "2.0",
+    "total_pages": 123,
+    "original_pages": 99,
+    "del_5_pages": "100-123",
+    "del_5_count": 24
   },
   "metrics": {
     "meetings_total": 70,

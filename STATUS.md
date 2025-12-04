@@ -1,11 +1,191 @@
 # Project Status
 
-**Last Updated:** 2025-12-03
-**Status:** ✅ Phase 33 COMPLETE - Bærekraftsrapport 2.0 Grafiske Elementer
+**Last Updated:** 2025-12-04
+**Status:** ✅ Phase 41 COMPLETE - Tekstbibliotek
 
 ---
 
 ## Current Phase
+
+**Phase 41: Tekstbibliotek ✅ COMPLETE**
+
+Laget bibliotek med ferdigskrevne tekster i 6 ulike stemmer og toner for bruk i søknader, presentasjoner, presse og sosiale medier.
+
+### Nye filer
+| Fil | Beskrivelse |
+|-----|-------------|
+| `text-library.html` | 20+ tekster i 6 kategorier |
+
+### Kategorier
+1. Formell (søknader)
+2. Konverserende (nettside, SoMe)
+3. Narrativ/Poetisk (presentasjoner)
+4. Søknadsspesifikk (bruksendring, dispensasjon)
+5. Presse (pressemeldinger)
+6. Korte formuleringer (taglines)
+
+---
+
+**Phase 40: Standalone presentasjonsmateriell ✅ COMPLETE**
+
+Laget slides-library.html (15 slides) og visual-stories.html (minimalistisk storytelling).
+
+---
+
+**Phase 39: Møteanalyse og konseptskisse-utvidelse ✅ COMPLETE**
+
+Grundig gjennomgang av alle 70 møter i prosjektdatabasen. Identifisert nøkkelinnsikter, sitater og argumenter som manglet i konseptskissen.
+
+### Nye sider (124-126)
+| Side | Tittel | Innhold |
+|------|--------|---------|
+| 124 | Stemmer fra prosessen | 8 kraftfulle sitater fra 2023-2025 |
+| 125 | Hoffselva & Økologisk verdi | 11 års biotop, kvikkleire, restaurering |
+| 126 | Grønn finansiering | Belåning, energi, Husbanken/Enova |
+
+### Oppdaterte sider
+- Side 121: Kritisk tidslinje (61 plasser, Skøyen Aktivitetssenter)
+- Side 123: Konkrete nabolags-innspill
+
+### Konseptskisse-statistikk
+| Metrikk | Verdi |
+|---------|-------|
+| **Totalt sider** | 126 (opp fra 123) |
+| **Del 5 sider** | 27 (s. 100-126) |
+| **Sitater dokumentert** | 8 |
+
+---
+
+**Phase 38: Husbanken-korreksjon ✅ COMPLETE**
+
+Faktasjekk og korreksjon av Husbanken-informasjon (50% → 45%). Verifisert mot offisielle satser 2025.
+
+---
+
+**Phase 37: Konseptskisse Benchmark-implementering ✅ COMPLETE**
+
+Implementering av anbefalinger fra benchmark-analyse mot Natural State portefølje. 4 nye sider lagt til i konseptskisse-2.html.
+
+### Nye sider (120-123)
+| Side | Tittel | Adresserer gap |
+|------|--------|----------------|
+| 120 | Nettside & Digital Tilstedeværelse | Kommunikasjonsstrategi |
+| 121 | Markedsinnsikt | Plaace/demografi-analyse |
+| 122 | Stedsøkonomi — Arealregnskap | Økonomisk modell |
+| 123 | Medvirkningsdokumentasjon | Medvirkningsformat |
+
+### Oppdaterte sider
+- **Side 114**: Formidlingsstrategi oppdatert med hovfaret13.no status (lansert) og sosiale medier
+
+### Gap-status etter implementering
+| Gap | Før | Etter |
+|-----|-----|-------|
+| Stedsøkonomi | 🔴 KRITISK | 🟡 DELVIS (s.119 + s.122) |
+| Markedsinnsikt | 🔴 KRITISK | ✅ ADRESSERT (s.121) |
+| Kommunikasjonsstrategi | 🟡 MEDIUM | ✅ ADRESSERT (s.114 + s.120) |
+| Medvirkningsformat | 🟡 MEDIUM | ✅ ADRESSERT (s.123) |
+
+---
+
+**Phase 36: Prosjektopprydding ✅ COMPLETE**
+
+Komplett opprydding av prosjektstrukturen for bedre oversikt og teamsamarbeid.
+
+### Oppryddingstiltak
+| Tiltak | Antall filer | Flyttet til |
+|--------|--------------|-------------|
+| Backup JSON-filer | 4 | `.backups/data/` |
+| Gamle dashboards | 7 | `.backups/dashboard/` |
+| Prosess-output | 5 | `.backups/analysis/process-output/` |
+| Gamle plandokumenter | 7 | `.backups/docs/plans/` |
+| Session summaries | 3 | `.backups/docs/sessions/` |
+
+### Ny dokumentasjon
+- **ARCHITECTURE.md** - Komplett prosjektarkitektur og dataflyt
+
+### Renset mappestruktur
+```
+Root: 7 hovedfiler (README, STATUS, CHANGELOG, ARCHITECTURE, CLAUDE, QUICKSTART, QUICK_ACCESS)
+dashboard/: 20 aktive HTML-filer (ned fra 27)
+data/: Kun live JSON-filer (ingen backups)
+analysis/: 10 aktive analysefiler (ned fra 24)
+```
+
+---
+
+**Phase 35: Konseptskisse Del 5 Restrukturering ✅ COMPLETE**
+
+Komplett restrukturering av konseptskisse-2.html etter analyse av original PDF. Fjernet duplikater, renummerert sider, og re-organisert som Del 5: Progresjon.
+
+### Strukturendringer gjennomført
+| Endring | Før | Etter |
+|---------|-----|-------|
+| Sider fjernet | 114, 115, 116 | (duplikater av original s.98-99) |
+| Første nye side | 114 (Del 5 divider) | **100** (Del 5 divider) |
+| Siste side | 135 | **119** |
+| Totalt sider | 22 | **20** |
+| Sidetall-område | 114-135 | **100-119** |
+
+### Hvorfor restruktureringen
+Original konseptskisse (113 sider) ender på side 99 "Strategisk Akselerasjon". Våre tilleggssider startet feilaktig på side 114 og inkluderte duplikater av sider som allerede finnes i originalen:
+- Side 114 "Del 5 divider" - Unødvendig, laget ny som side 100
+- Side 115 "Status Desember 2025" - Duplikat av original side 98
+- Side 116 "Strategisk Akselerasjon" - Duplikat av original side 99
+
+### Ny sidestruktur (Del 5: Progresjon)
+| Side | Tittel | Beskrivelse |
+|------|--------|-------------|
+| 100 | Del 5 Divider | Section divider "Progresjon" |
+| 101 | Energirapport | Vill Energi analyse |
+| 102 | Klimagass | CO₂-beregninger |
+| 103 | Bærekraftsvurdering | Natural State rapport |
+| 104 | R21 Leveranse | Arkitektleveranse |
+| 105 | Interessentdialog | 13 verifiserte hendelser |
+| 106 | Omsorg+ Fordypning | Konseptdetaljer |
+| 107 | Geoteknisk | Kvikkleire-analyse |
+| 108 | Prosjektdatabase | 70 møter, 271 dokumenter |
+| 109 | Neste steg | Handlingsplan |
+| 110 | Oppsummering | Konklusjon |
+| 111 | Natural State Metodikk | Ref. Godsløkka s.7 |
+| 112 | Helhetlige Verdier | Ref. Godsløkka s.8-11 |
+| 113 | Suksesskriterier | Ref. Godsløkka s.12 |
+| 114 | Formidlingsstrategi | Ref. Godsløkka s.24-28 |
+| 115 | Politisk Dialog | James Lorentzen møte |
+| 116 | Nordic Innovation | NCE søknad |
+| 117 | Konseptworkshop R21 | 27. sept 2025 |
+| 118 | Regulatorisk Prosess | Nabovarsel + søknader |
+| 119 | Stedsøkonomi | Finansiering |
+
+---
+
+**Phase 34: Konseptskisse 2.0 Tekstutvikling ✅ COMPLETE**
+
+Forbedret tekstene i konseptskisse-2.html for å matche originalens narrative stil. Lagt til quote-boxes, innledende prosa, og poetiske vendinger.
+
+### Tekstforbedringer gjennomført
+| Side | Endring | Beskrivelse |
+|------|---------|-------------|
+| **114** | Tagline forbedret | "Hva har skjedd siden..." → "Fra visjon til handling — Hva har skjedd siden september 2025?" |
+| **115** | Innledning omskrevet | Mer narrativ tone, lagt til quote-box med sitat |
+| **116** | Strategisk akselerasjon | Ny åpningsparagraf som "tegner bildet", lagt til quote-box |
+| **117** | Energirapport | Mer engasjerende innledning, forbedrede punktlister |
+| **118** | Klimagass | Lagt til kontekstuell innledning om hvorfor materialutslipp er viktig |
+| **119** | Bærekraftsrapport | Retorisk spørsmål som åpning, forbedret struktur |
+| **120** | R21 Leveranse | Narrativ innledning + key-message avslutning |
+| **121** | Interessentdialog | Lagt til overordnet innledning om betydningen av interessentarbeid |
+| **122** | Omsorg+ | Ny undertittel + kontekstuell forklaring av Omsorg+ konseptet |
+| **123** | Geoteknisk | Ny undertittel som tydeliggjør hovedargumentet, quote-box |
+| **124** | Prosjektdatabase | Retorisk spørsmål som innledning |
+| **125** | Neste steg | Forbedret subtitle |
+| **126** | Oppsummering | Narrativ avslutning + Natural State-sitat som callback til original |
+
+### Stilistiske forbedringer
+- **Quote-boxes**: Lagt til 5 nye sitat-bokser med karakteristisk stil fra originalen
+- **Innledende prosa**: Alle sider har nå en åpningssetning som kontekstualiserer innholdet
+- **Kursiv/poetisk språk**: Sitater med tankestrek-formatering
+- **Callback til original**: Avslutter med "Forlat skogen like ren..." fra konseptskisse.html
+
+---
 
 **Phase 33: Bærekraftsrapport 2.0 Grafiske Elementer ✅ COMPLETE**
 

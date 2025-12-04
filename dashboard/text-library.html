@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekstbibliotek | Hovfaret 13</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #fafafa;
+            color: #111;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: #fff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1.5rem 3rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        .back-link:hover { color: #111; }
+        .header h1 { font-size: 1.25rem; font-weight: 600; }
+
+        /* Main */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem;
+        }
+
+        /* Info */
+        .intro {
+            max-width: 700px;
+            margin-bottom: 4rem;
+        }
+        .intro h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .intro p {
+            color: #666;
+            font-size: 1.125rem;
+        }
+
+        /* Text category */
+        .text-category {
+            margin-bottom: 4rem;
+        }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .category-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .category-badge.formal { background: #1e40af; color: #fff; }
+        .category-badge.conversational { background: #22c55e; color: #fff; }
+        .category-badge.poetic { background: #7c3aed; color: #fff; }
+        .category-badge.application { background: #dc2626; color: #fff; }
+        .category-badge.press { background: #f59e0b; color: #fff; }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .category-desc {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        /* Text cards */
+        .text-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .text-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #e5e5e5;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .text-card:hover {
+            border-color: #111;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .text-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #999;
+            margin-bottom: 0.75rem;
+        }
+
+        .text-content {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        .text-content.serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.125rem;
+        }
+        .text-content.large {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .text-meta {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-use {
+            font-size: 0.75rem;
+            color: #666;
+        }
+        .copy-btn {
+            font-size: 0.75rem;
+            padding: 0.35rem 0.75rem;
+            border: 1px solid #e5e5e5;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .copy-btn:hover {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+        }
+
+        /* Highlight */
+        .highlight { background: linear-gradient(120deg, #fef3c7 0%, #fef3c7 100%); padding: 0 0.2em; }
+
+        /* Block quote style */
+        .text-card.featured {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-color: #22c55e;
+        }
+        .text-card.dark {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+        }
+        .text-card.dark .text-label { color: #666; }
+        .text-card.dark .text-meta { border-color: #333; }
+        .text-card.dark .text-use { color: #888; }
+        .text-card.dark .copy-btn { background: #222; color: #fff; border-color: #333; }
+
+        /* Section divider */
+        .section-divider {
+            text-align: center;
+            margin: 4rem 0;
+            color: #ccc;
+        }
+        .section-divider span {
+            display: inline-block;
+            padding: 0 1rem;
+            background: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">← Tilbake</a>
+            <h1>Tekstbibliotek</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="intro">
+            <h2>Tekster i ulike toneleier</h2>
+            <p>Samme budskap, forskjellige stemmer. Bruk disse tekstene som utgangspunkt for presentasjoner, søknader, presse og sosiale medier.</p>
+        </div>
+
+        <!-- HOVEDBUDSKAP -->
+        <section class="text-category">
+            <div class="category-header">
+                <span class="category-badge formal">Formelt</span>
+                <div>
+                    <h3 class="category-title">Hovedbudskap — Formell tone</h3>
+                    <p class="category-desc">For søknader, offisielle dokumenter, kommunikasjon med myndigheter</p>
+                </div>
+            </div>
+            <div class="text-grid">
+                <div class="text-card">
+                    <div class="text-label">Prosjektbeskrivelse — kort</div>
+                    <div class="text-content">
+                        Hovfaret 13 er et transformasjonsprosjekt som demonstrerer hvordan eksisterende bygningsmasse kan rehabiliteres og utvides for å møte samfunnets behov for omsorgsboliger, samtidig som klimagassutslipp reduseres med 48% sammenlignet med riving og nybygg.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Søknadstekst, sammendrag</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Klimaargument — teknisk</div>
+                    <div class="text-content">
+                        Livsløpsanalyse (LCA) utført av Vill Energi AS dokumenterer at rehabilitering av Hovfaret 13 resulterer i totale klimagassutslipp på 2 794 tonn CO₂-ekvivalenter over 50 år, sammenlignet med 5 343 tonn ved riving og nybygg — en reduksjon på 48%. Materialutslipp alene reduseres fra 312 til 62 kg CO₂-ekv./m², tilsvarende 80% besparelse.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Teknisk søknad, rapport</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Samfunnsnytte — formell</div>
+                    <div class="text-content">
+                        Prosjektet møter et dokumentert behov i Bydel Ullern for 150-200 omsorgsboliger frem mot 2040. Med 73 planlagte Omsorg+-enheter vil Hovfaret 13 dekke omtrent 40% av bydelens behov. Konseptet har oppnådd politisk støtte fra bydelsutvalgsnivå til byråd for byutvikling.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Politisk kommunikasjon</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONVERSJONELL -->
+        <section class="text-category">
+            <div class="category-header">
+                <span class="category-badge conversational">Uformell</span>
+                <div>
+                    <h3 class="category-title">Hovedbudskap — Uformell tone</h3>
+                    <p class="category-desc">For sosiale medier, nettside, nabolagskommunikasjon</p>
+                </div>
+            </div>
+            <div class="text-grid">
+                <div class="text-card featured">
+                    <div class="text-label">Hva handler det om?</div>
+                    <div class="text-content">
+                        I stedet for å rive et fullt fungerende bygg og starte på nytt, velger vi å beholde det som fungerer. Resultatet? Nesten halvparten så mye CO₂, 73 nye hjem for eldre som trenger det, og et bygg som får leve videre.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Nettside intro, SoMe</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Hvorfor beholde?</div>
+                    <div class="text-content">
+                        Bygget fra 1989 ble faktisk designet for 12 etasjer, men bare 5 ble bygget. Alt det arbeidet som ble lagt ned i fundamentet? Det er fortsatt der, klart til å brukes. Å rive det er som å kaste bort en gave fra fortiden.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Nabolagsmøte, historie</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">For bydelen</div>
+                    <div class="text-content">
+                        Bydel Ullern trenger 150-200 omsorgsboliger de neste 15 årene. Akkurat nå finnes det bare 61 plasser. Hovfaret 13 kan gi 73 til — nesten halvparten av det vi trenger. Og de eldre får bo nær naturen, ved Hoffselva.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Nabolag, bydel</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POETISK -->
+        <section class="text-category">
+            <div class="category-header">
+                <span class="category-badge poetic">Narrativ</span>
+                <div>
+                    <h3 class="category-title">Hovedbudskap — Narrativ tone</h3>
+                    <p class="category-desc">For presentasjoner, historiefortelling, visjonsdokumenter</p>
+                </div>
+            </div>
+            <div class="text-grid">
+                <div class="text-card dark">
+                    <div class="text-label">Visjonstekst</div>
+                    <div class="text-content serif">
+                        Det finnes en bygning på Skøyen som har stått i 35 år med en hemmelighet. Den ble bygget for fremtiden — en fremtid som nå har kommet. Fundamentet bærer allerede vekten av det som skal bli. Alt vi trenger å gjøre er å la den stå.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Åpning, presentasjon</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Bærekraftperspektiv</div>
+                    <div class="text-content serif">
+                        <span class="highlight">Å bevare er å skape.</span> Hver betongblokk i dette bygget inneholder energi fra 1989 — energi vi ikke trenger å bruke på nytt. Hver pele i grunnen holder allerede. Transformasjon er ikke kompromiss. Det er fremtiden.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Visjonsdokument</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Økologi-narrativ</div>
+                    <div class="text-content serif">
+                        Ved Hoffselva har naturen brukt elleve år på å ta tilbake. Trærne har slått rot, økosystemet har funnet sin rytme. Å rive nå er å nulle ut alt det arbeidet. Naturen har ingen hastverk. Kanskje vi kan lære noe av det.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Miljøfortelling</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"><span>• • •</span></div>
+
+        <!-- SØKNAD -->
+        <section class="text-category">
+            <div class="category-header">
+                <span class="category-badge application">Søknad</span>
+                <div>
+                    <h3 class="category-title">Søknadstekster</h3>
+                    <p class="category-desc">For bruksendringssøknad, dispensasjonssøknad, reguleringsinnspill</p>
+                </div>
+            </div>
+            <div class="text-grid">
+                <div class="text-card">
+                    <div class="text-label">Begrunnelse for bruksendring</div>
+                    <div class="text-content">
+                        Søknaden gjelder bruksendring fra kontor til omsorgsbolig (Omsorg+) for Hovfaret 13. Prosjektet møter et dokumentert behov for omsorgsboliger i Bydel Ullern og representerer en bærekraftig løsning som bevarer eksisterende bygningsmasse. Bygget har reservekapasitet i fundamentet som muliggjør påbygg uten nye grunnarbeider.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Søknadstekst innledning</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Klimaargument for dispensasjon</div>
+                    <div class="text-content">
+                        Riving av Hovfaret 13 vil medføre klimagassutslipp på 5 343 tonn CO₂-ekvivalenter over 50 år, mens rehabilitering medfører 2 794 tonn — en differanse på 2 549 tonn. Dette tilsvarer årlige utslipp fra over 500 personbiler. Områdeplanens rivningskrav er således i direkte konflikt med kommunens egne klimamål.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Dispensasjonsbegrunnelse</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Geoteknisk argument</div>
+                    <div class="text-content">
+                        Bygget er fundamentert på peler til fast grunn gjennom kvikkleiresone langs Hoffselva. Ved riving må pelene fjernes, noe som medfører geoteknisk risiko dokumentert i ROS-analyse for nærliggende Hoff Skole. Bærekraftsrapportens konklusjon: «En avlastning av området fra ytterligere geoteknisk belastning er det mest rasjonelle valget.»
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Teknisk argument</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Samfunnsnytteargument</div>
+                    <div class="text-content">
+                        Leder av bydelsutvalget i Ullern har dokumentert et behov for 150-200 omsorgsboliger mot 2040. Hovfaret 13 leverer 73 enheter og dekker ca. 40% av behovet. Alternativet — Skøyen Aktivitetssenter — har rivningsvedtak. Uten Hovfaret 13 står bydelen uten tilstrekkelig kapasitet.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Politisk argument</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRESSE -->
+        <section class="text-category">
+            <div class="category-header">
+                <span class="category-badge press">Presse</span>
+                <div>
+                    <h3 class="category-title">Pressetekster</h3>
+                    <p class="category-desc">For pressemeldinger, intervjuer, artikler</p>
+                </div>
+            </div>
+            <div class="text-grid">
+                <div class="text-card">
+                    <div class="text-label">Pressemeldingsinnledning</div>
+                    <div class="text-content large">
+                        Et kontorbygg på Skøyen kan bli Oslos neste klimavinner. Ved å transformere fremfor å rive, spares nesten 2 500 tonn CO₂ — og 73 eldre får nye hjem ved Hoffselva.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Pressemelding åpning</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Overskriftsforslag</div>
+                    <div class="text-content">
+                        <strong>Alt 1:</strong> «Bygget som nekter å dø: Skøyen-kontor kan bli 73 eldrehjem»<br><br>
+                        <strong>Alt 2:</strong> «48% lavere utslipp: Derfor bør dette bygget få stå»<br><br>
+                        <strong>Alt 3:</strong> «Fundamentet fra 1989 var bygget for fremtiden»<br><br>
+                        <strong>Alt 4:</strong> «Rivning eller rehabilitering? Svaret kan spare 2500 tonn CO₂»
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Pressealternativer</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card">
+                    <div class="text-label">Sitatforslag — Andreas</div>
+                    <div class="text-content">
+                        «Vi så på alle alternativene, og konklusjonen var klar: Det å rive dette bygget ville vært ødeleggende for hele området. Økologisk og sosialt. Vi valgte en annen vei.»<br>
+                        <em style="font-size: 0.875rem; color: #666;">— Andreas Thorsnes, Urbania Eiendom</em>
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Intervjusitat</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KORTE FORMULERINGER -->
+        <section class="text-category">
+            <div class="category-header">
+                <span class="category-badge conversational">Korte</span>
+                <div>
+                    <h3 class="category-title">Korte formuleringer</h3>
+                    <p class="category-desc">For taglines, SoMe, slides, overskrifter</p>
+                </div>
+            </div>
+            <div class="text-grid">
+                <div class="text-card">
+                    <div class="text-label">Taglines</div>
+                    <div class="text-content large">
+                        • Bygd for 12. Har 5. Kan få 8.<br>
+                        • 48% lavere utslipp. 73 nye hjem.<br>
+                        • Fremtiden bor i fortiden.<br>
+                        • La betongen stå. La naturen vokse.<br>
+                        • Transformasjon, ikke riving.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Headlines, slides</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card dark">
+                    <div class="text-label">Statement</div>
+                    <div class="text-content large" style="text-align: center;">
+                        Dette bygget må få stå.
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Avslutningsslide</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+
+                <div class="text-card featured">
+                    <div class="text-label">Sosiale medier</div>
+                    <div class="text-content">
+                        🏢 Et 35 år gammelt kontorbygg på Skøyen.<br>
+                        🌱 73 nye omsorgsboliger ved Hoffselva.<br>
+                        📉 48% lavere CO₂ enn å rive og bygge nytt.<br><br>
+                        Hvorfor rive når vi kan transformere?<br>
+                        #Hovfaret13 #BærekraftigOslo #Transformasjon
+                    </div>
+                    <div class="text-meta">
+                        <span class="text-use">Instagram/LinkedIn</span>
+                        <button class="copy-btn">Kopier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.text-card');
+                const text = card.querySelector('.text-content').innerText;
+                navigator.clipboard.writeText(text);
+                btn.textContent = 'Kopiert!';
+                setTimeout(() => btn.textContent = 'Kopier', 2000);
+            });
+        });
+    </script>
+</body>
+</html>

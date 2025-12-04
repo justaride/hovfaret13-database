@@ -2,6 +2,319 @@
 
 All notable changes to this project database.
 
+## [2.53.0] - 2025-12-04
+
+### Phase 41: Tekstbibliotek
+
+**Status:** ✅ COMPLETE
+
+#### Ferdigskrevne tekster i ulike stemmer og toner
+
+Laget bibliotek med tekster tilpasset ulike formål og mottakere.
+
+**Ny fil:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `text-library.html` | 20+ tekster i 6 kategorier |
+
+**Kategorier:**
+
+1. **Formell** — Søknadstekster for bruksendring, dispensasjon
+2. **Konverserende** — Nettsider, nyhetsbrev, sosiale medier
+3. **Narrativ/Poetisk** — Presentasjoner, visjonsdokumenter
+4. **Søknadsspesifikk** — Argumentasjon for reguleringsplan
+5. **Presse** — Pressemeldinger, overskrifter
+6. **Korte formuleringer** — Taglines, SoMe-tekster
+
+**Innholdshøydepunkter:**
+- Argumentasjon mot rivning med konkrete tall (48% CO₂, 80% materiale)
+- Hoffselva biotop-argumentasjon
+- Husbanken/Enova finansieringsargumenter
+- Pressemelding-maler
+- 15+ korte formuleringer for ulike kanaler
+
+**index.html oppdatert:**
+- Lagt til Tekstbibliotek i Presentasjoner-seksjonen
+- Versjon oppdatert til v2.53
+
+---
+
+## [2.52.0] - 2025-12-04
+
+### Phase 40: Standalone presentasjonsmateriell
+
+**Status:** ✅ COMPLETE
+
+#### Nye dashboards for visuell kommunikasjon
+
+Laget to nye presentasjonsverktøy for bruk utenfor konseptskissen.
+
+**Nye filer:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `slides-library.html` | 15 standalone slides kategorisert etter tema |
+| `visual-stories.html` | Minimalistisk scrollbasert storytelling |
+
+**slides-library.html — Kategorier:**
+- Transformasjonsargumentasjon (48% CO₂, sammenligning, materialer, reservekapasitet)
+- NCC & Nordic Circle (partnerskap, sirkulær økonomi)
+- Samfunnsverdi & Omsorg+ (bydelsbehov, konsept, interessentstøtte)
+- Teknisk & Økologisk (Hoffselva, kvikkleire)
+- Finansiering & Økonomi (Husbanken, tidslinje)
+
+**visual-stories.html — Seksjoner:**
+- 48% hero-slide
+- Riving vs rehabilitering sammenligning
+- Sitater fra prosessen
+- Prosjekttidslinje
+- Byggets reservekapasitet
+- Bydelens behov
+- Økologisk verdi (11 år biotop)
+- Avsluttende budskap
+
+**index.html oppdatert:**
+- Lagt til Slide-bibliotek i Presentasjoner
+- Lagt til Visuelle historier (featured)
+- Versjon oppdatert til v2.52
+
+---
+
+## [2.51.0] - 2025-12-04
+
+### Phase 39: Møteanalyse og konseptskisse-utvidelse
+
+**Status:** ✅ COMPLETE
+
+#### Grundig gjennomgang av 70 møter + 3 nye konseptskisse-sider
+
+Analysert alle 70 møter i prosjektdatabasen for å identifisere nøkkelinnsikter som manglet i konseptskissen.
+
+**Nye sider (124-126):**
+
+| Side | Tittel | Innhold |
+|------|--------|---------|
+| 124 | Stemmer fra prosessen | 8 kraftfulle sitater fra møter 2023-2025 |
+| 125 | Hoffselva & Økologisk verdi | 11 års etablert biotop, kvikkleire-risiko, restaureringsplan |
+| 126 | Grønn finansiering | Grønn belåning, energiytelse, Husbanken/Enova-støtte |
+
+**Oppdaterte sider:**
+- Side 121: Lagt til kritisk tidslinje (61 plasser, Skøyen Aktivitetssenter rivning)
+- Side 123: Utvidet med konkrete innspill fra nabolagsmøtet (dans, yoga, ungdom, natur)
+
+**Nøkkelfunn fra møteanalyse:**
+
+Kritiske sitater dokumentert:
+- "Det å rive det bygget ville vært ødeleggende for hele området, økologisk og sosialt" (Andreas, 2023)
+- "Dette kan bli et fyrtårn for framtidens bygg" (Einar, 2023)
+- "Det å rive det bygget ødelegger 11 år av etablert biotop" (økologisk vurdering)
+- "150-200 nye boenheter frem til 2040" (Ingrid Hopp, okt 2025)
+
+**Konseptskisse nå totalt 126 sider** (opp fra 123)
+
+---
+
+## [2.50.0] - 2025-12-03
+
+### Phase 38: Husbanken-korreksjon
+
+**Status:** ✅ COMPLETE
+
+#### Faktasjekk og korreksjon av Husbanken-informasjon
+
+Verifisert Husbanken investeringstilskudd mot offisielle satser 2025 (husbanken.no).
+
+**Korreksjon:**
+- ❌ **Feil:** "50% Husbanken-støtte" (basert på muntlig info fra møte sept 2025)
+- ✅ **Riktig:** 45% tilskudd for omsorgsboliger, maks 2 124 000 kr/enhet i Oslo
+
+**Viktige presiseringer:**
+- Kun kommuner kan søke investeringstilskudd (ikke private utviklere)
+- Beboere må ha "vedtak om heldøgns helse- og omsorgstjenester"
+- 30 års bindingstid
+- Oslo er pressområde med høyere satser
+
+**Filer oppdatert:**
+- `dashboard/konseptskisse-2.html` — 3 steder korrigert (side 112, 119, 122)
+- `data/themes/omsorg-plus.json` — financing-seksjon utvidet med verifiserte data
+- `data/themes/konseptskisse-2.0-tillegg.json` — husbanken_support korrigert
+
+**Kilde:** https://www.husbanken.no/tilskudd/investeringstilskudd/satser-investeringstilskudd/
+
+---
+
+## [2.49.0] - 2025-12-03
+
+### Phase 37: Konseptskisse Benchmark-implementering
+
+**Status:** ✅ COMPLETE
+
+#### Implementering av anbefalinger fra benchmark-analyse
+
+Benchmark-analyse mot 8 Natural State konseptskisser avdekket gap. 4 nye sider implementert.
+
+**Nye sider (120-123):**
+
+| Side | Tittel | Innhold |
+|------|--------|---------|
+| 120 | Nettside & Digital Tilstedeværelse | hovfaret13.no, Facebook, Instagram, Parabol |
+| 121 | Markedsinnsikt | Bydel Ullern demografi, 150-200 boligbehov, konkurranseanalyse |
+| 122 | Stedsøkonomi — Arealregnskap | Arealfordeling, økonomisk modell, NS-referanser |
+| 123 | Medvirkningsdokumentasjon | Nabolagsmøte-oppsummering, dialog-hendelser |
+
+**Oppdaterte sider:**
+- Side 114: Formidlingsstrategi — hovfaret13.no status endret fra "planlagt" til "lansert sept 2025"
+
+**Benchmark-gap adressert:**
+- ✅ Markedsinnsikt (KRITISK → ADRESSERT)
+- ✅ Kommunikasjonsstrategi (MEDIUM → ADRESSERT)
+- ✅ Medvirkningsformat (MEDIUM → ADRESSERT)
+- 🟡 Stedsøkonomi (KRITISK → DELVIS) — mangler Plaace-analyse og detaljert kalkyle
+
+**Filer oppdatert:**
+- `dashboard/konseptskisse-2.html` — 4 nye slides, oppdatert navigasjon
+- `data/themes/konseptskisse-2.0-tillegg.json` — v4.0 med nye sider
+- `data/config.json` — v2.49, 123 totale sider
+- `analysis/konseptskisse-benchmark-analyse.md` — referansedokument
+
+---
+
+## [2.48.0] - 2025-12-03
+
+### Phase 36: Prosjektopprydding
+
+**Status:** ✅ COMPLETE
+
+#### Komplett opprydding av prosjektstrukturen
+
+Gjennomgått hele prosjektet og ryddet opp for bedre oversikt og teamsamarbeid.
+
+**Filer flyttet til `.backups/`:**
+
+| Kategori | Filer | Destinasjon |
+|----------|-------|-------------|
+| Backup JSON | 4 filer | `.backups/data/` |
+| Gamle dashboards | 7 filer | `.backups/dashboard/` |
+| Prosess-output | 5 filer | `.backups/analysis/process-output/` |
+| Gamle plandokumenter | 7 filer | `.backups/docs/plans/` |
+| Session summaries | 3 filer | `.backups/docs/sessions/` |
+
+**Backup JSON-filer:**
+- `meetings.backup.json`
+- `meetings.backup_20251122_*.json` (3 filer)
+
+**Gamle dashboards:**
+- `index-old-v2.html`
+- `index-variant-hero-bg.html`
+- `index-variant-split.html`
+- `konseptskisse-2-backup.html`
+- `meetings-old.html`
+- `timeline-old.html`
+- `test-functions.html`
+
+**Prosess-output:**
+- `meeting_notes_parsed.json` (858 KB)
+- `meeting_reports_analysis.json` (574 KB)
+- `suggested_new_meetings.json` (134 KB)
+- `note_matching_analysis.md` (217 KB)
+- `meeting_notes_quality_analysis.md` (180 KB)
+
+**Ny dokumentasjon:**
+- `ARCHITECTURE.md` - Komplett prosjektarkitektur og dataflyt for teamet
+
+**Resultat:**
+- Root: 7 hovedfiler (renset fra 16)
+- Dashboard: 20 aktive filer (renset fra 27)
+- Analysis: 10 aktive filer (renset fra 24)
+- Alle gamle filer bevart i `.backups/` for referanse
+
+---
+
+## [2.47.0] - 2025-12-03
+
+### Phase 35: Konseptskisse Del 5 Restrukturering
+
+**Status:** ✅ COMPLETE
+
+#### Komplett restrukturering av konseptskisse-2.html
+
+Etter analyse av original konseptskisse PDF/TXT (1843 linjer, 99 sider), identifiserte vi at våre tilleggssider startet på feil sidetall og inkluderte duplikater.
+
+**Problemet:**
+- Original konseptskisse ender på side 99 (Strategisk Akselerasjon)
+- Våre sider startet på 114 (ingen logisk grunn)
+- Side 115 og 116 var duplikater av original side 98-99
+
+**Løsningen:**
+- Fjernet duplikater (gamle sider 114, 115, 116)
+- Re-nummererte alle sider til 100-119
+- La til ny Del 5 section divider som side 100
+- Oppdaterte JavaScript pages array
+- Oppdaterte info-banner statistikk
+
+**Teknisk implementasjon:**
+- Python-skript for batch-renummerering
+- Regex-basert erstatning av data-page attributter
+- Oppdaterte slide-kommentarer og footer-sidetall
+
+**Ny struktur:**
+| Gammelt sidetall | Nytt sidetall | Innhold |
+|------------------|---------------|---------|
+| (ny) | 100 | Del 5 Divider |
+| 117 | 101 | Energirapport |
+| 118 | 102 | Klimagass |
+| ... | ... | ... |
+| 135 | 119 | Stedsøkonomi |
+
+**Filer endret:**
+- `dashboard/konseptskisse-2.html` - 20 sider (100-119)
+
+---
+
+## [2.46.0] - 2025-12-03
+
+### Phase 34: Konseptskisse 2.0 Tekstutvikling
+
+**Status:** ✅ COMPLETE
+
+#### Tekstforbedringer for å matche originalens narrative stil
+
+Analyserte konseptskisse.html og identifiserte stilistiske gap i konseptskisse-2.html. Implementerte forbedringer på alle 13 sider.
+
+**Hovedforbedringer:**
+
+1. **Quote-boxes (5 nye)**
+   - Side 115: "Bydelen trenger dette nå..."
+   - Side 116: "Når behovet er dokumentert og bygget står klart — hvorfor vente?"
+   - Side 118: "Å la betongen stå er det største enkeltgrepet for å kutte CO₂..."
+   - Side 123: "Avlastning av området fra ytterligere geoteknisk belastning..."
+   - Side 126: "Forlat skogen like ren eller renere enn når du kom." (callback til original)
+
+2. **Innledende prosa på hver side**
+   - Narrative åpningssetninger som kontekstualiserer innholdet
+   - Retoriske spørsmål for å engasjere leseren
+   - Eksempel: "Et bygg fra 1989 med energimerke F høres kanskje håpløst ut..."
+
+3. **Forbedrede undertitler**
+   - Side 114: "Fra visjon til handling — Hva har skjedd siden september 2025?"
+   - Side 122: "73 enheter som møter bydelens behov"
+   - Side 123: "Kvikkleire — enda et argument for å la bygget stå"
+   - Side 124: "20 måneder med arbeid — dokumentert og søkbart"
+
+4. **Stilistiske endringer**
+   - Tankestrek (—) i stedet for bindestrek for visuell rytme
+   - Bold + beskrivelse format i punktlister
+   - Key-messages og quote-boxes for viktige konklusjoner
+
+**Sammenligning med original:**
+- Original har quote-cards med kursiv, varm gul gradient
+- Original bruker innledende prosa + punktlister (ikke bare punktlister)
+- Original har poetiske utsagn som "Forlat skogen like ren..."
+- Nye sider matcher nå denne stilen
+
+---
+
 ## [2.45.0] - 2025-12-03
 
 ### Phase 33: Bærekraftsrapport 2.0 Grafiske Elementer

@@ -397,9 +397,14 @@
 
   "financing": {
     "husbanken_support": {
-      "program": "Heldøgns omsorgsboliger (HDO)",
-      "coverage": "Inntil 50% av byggekostnader for kvalifiserende prosjekter",
-      "requirement": "Kommunal omsorgsavtale"
+      "program": "Investeringstilskudd til heldøgns omsorgsplasser",
+      "coverage": "45% tilskudd for omsorgsboliger (ikke institusjonsplasser)",
+      "max_per_unit_oslo": "2 124 000 kr (pressområde, med kjøkken)",
+      "max_anleggskost_oslo": "4 721 000 kr/enhet",
+      "requirement": "Kun kommuner kan søke. Beboere må ha vedtak om heldøgns helse- og omsorgstjenester.",
+      "binding_period": "30 år",
+      "source": "Husbanken.no, satser 2025",
+      "note": "For Omsorg+ må avtale med bydelen sikre at beboere oppfyller vedtakskravet"
     }
   },
 
