@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <script>if(sessionStorage.getItem('h13_auth')!=='true')window.location.href='../index.html';</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tidslinjer for Google Slides</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-card: #1e293b;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --color-bydel: #22d3ee;
+      --color-kommune: #a78bfa;
+      --color-politiker: #f472b6;
+      --color-leietaker: #4ade80;
+      --color-nabo: #fbbf24;
+      --color-workshop: #fb923c;
+      --color-green: #22c55e;
+      --color-accent: #3b82f6;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #1e293b;
+      color: var(--text-primary);
+      padding: 2rem;
+      padding-top: 5rem;
+    }
+
+    /* Navigation */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+    }
+
+    .back-link:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .nav-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    /* Info box */
+    .info-box {
+      background: var(--bg-dark);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      max-width: 900px;
+    }
+
+    .info-box p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .info-box ul {
+      margin-top: 0.75rem;
+      margin-left: 1.25rem;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .section-badge {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.75rem;
+      background: rgba(34, 211, 238, 0.2);
+      color: var(--color-bydel);
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Slides Row */
+    .slides-row {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+
+    /* Slide Container */
+    .slide-container {
+      flex-shrink: 0;
+      background: var(--bg-dark);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .slide-header {
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .slide-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .slide-dimensions {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
+
+    /* ================================================
+       VERTICAL TIMELINE SLIDE (fits on one slide)
+       Standard Google Slides: 25.4cm x 14.29cm (10" x 5.63")
+       We'll make these 400px wide x 600px tall for vertical
+    ================================================ */
+
+    .slide-vertical {
+      width: 350px;
+      height: 500px;
+      background: var(--bg-dark);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Slide Title */
+    .slide-vertical .slide-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+
+    .slide-vertical .slide-subtitle {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    /* Vertical Timeline */
+    .v-timeline {
+      flex: 1;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .v-timeline::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--color-bydel) 0%, var(--color-politiker) 50%, var(--color-green) 100%);
+      border-radius: 1px;
+    }
+
+    .v-timeline-item {
+      position: relative;
+      padding-bottom: 0.75rem;
+      padding-left: 0.75rem;
+    }
+
+    .v-timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .v-timeline-dot {
+      position: absolute;
+      left: -1.5rem;
+      top: 0.15rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-bydel);
+      border: 2px solid var(--bg-dark);
+    }
+
+    .v-timeline-dot.highlight {
+      width: 14px;
+      height: 14px;
+      left: calc(-1.5rem - 1px);
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.3);
+    }
+
+    .v-timeline-dot.bydel { background: var(--color-bydel); }
+    .v-timeline-dot.politiker { background: var(--color-politiker); }
+    .v-timeline-dot.leietaker { background: var(--color-leietaker); }
+    .v-timeline-dot.nabo { background: var(--color-nabo); }
+    .v-timeline-dot.workshop { background: var(--color-workshop); }
+    .v-timeline-dot.kommune { background: var(--color-kommune); }
+    .v-timeline-dot.green { background: var(--color-green); }
+
+    .v-timeline-date {
+      font-size: 0.55rem;
+      color: var(--text-muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .v-timeline-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .v-timeline-outcome {
+      font-size: 0.55rem;
+      color: var(--color-green);
+      margin-top: 0.15rem;
+    }
+
+    /* Year divider */
+    .v-year-divider {
+      position: relative;
+      padding: 0.5rem 0;
+      margin-left: -0.75rem;
+    }
+
+    .v-year-divider span {
+      background: var(--bg-dark);
+      padding: 0.15rem 0.5rem;
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: var(--color-bydel);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      border-radius: 3px;
+    }
+
+    /* Stats footer */
+    .slide-stats {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .slide-stat {
+      text-align: center;
+    }
+
+    .slide-stat-value {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-bydel);
+    }
+
+    .slide-stat-label {
+      font-size: 0.5rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ================================================
+       WIDE HORIZONTAL TIMELINE (for full slide width)
+    ================================================ */
+    .slide-horizontal {
+      width: 700px;
+      height: 280px;
+      background: var(--bg-dark);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-horizontal .slide-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .h-timeline {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 1rem;
+    }
+
+    .h-timeline::before {
+      content: "";
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      top: 50%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-bydel) 0%, var(--color-politiker) 50%, var(--color-green) 100%);
+      border-radius: 2px;
+      transform: translateY(-50%);
+    }
+
+    .h-timeline-items {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .h-timeline-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 100px;
+    }
+
+    .h-timeline-item.above .h-content {
+      order: -1;
+      margin-bottom: 0.5rem;
+    }
+
+    .h-timeline-item.below .h-content {
+      margin-top: 0.5rem;
+    }
+
+    .h-timeline-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--color-bydel);
+      border: 3px solid var(--bg-dark);
+      flex-shrink: 0;
+    }
+
+    .h-timeline-dot.highlight {
+      width: 20px;
+      height: 20px;
+      box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.3);
+    }
+
+    .h-timeline-dot.bydel { background: var(--color-bydel); }
+    .h-timeline-dot.politiker { background: var(--color-politiker); }
+    .h-timeline-dot.workshop { background: var(--color-workshop); }
+    .h-timeline-dot.green { background: var(--color-green); }
+
+    .h-content {
+      max-width: 90px;
+    }
+
+    .h-timeline-date {
+      font-size: 0.55rem;
+      color: var(--text-muted);
+    }
+
+    .h-timeline-title {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    /* ================================================
+       COMPACT CARD STYLE
+    ================================================ */
+    .slide-compact {
+      width: 300px;
+      height: 400px;
+      background: var(--bg-dark);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .compact-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .compact-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .compact-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .compact-subtitle {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+    }
+
+    .compact-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .compact-item {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background: var(--bg-card);
+      border-radius: 6px;
+      border-left: 3px solid var(--color-bydel);
+    }
+
+    .compact-item.highlight {
+      background: rgba(34, 211, 238, 0.1);
+    }
+
+    .compact-item-date {
+      font-size: 0.55rem;
+      color: var(--text-muted);
+      min-width: 50px;
+    }
+
+    .compact-item-text {
+      font-size: 0.65rem;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .compact-footer {
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+
+    .compact-footer-text {
+      font-size: 0.6rem;
+      color: var(--color-green);
+      font-weight: 600;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="nav-left">
+      <a href="stakeholder-journey.html" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Interessentreise
+      </a>
+      <span class="nav-title">Tidslinjer for Google Slides</span>
+    </div>
+  </nav>
+
+  <!-- Info -->
+  <div class="info-box">
+    <p><strong>Vertikale tidslinjer optimalisert for Google Slides</strong></p>
+    <ul>
+      <li>Høyreklikk → "Kopier bilde" → Lim inn i Google Slides</li>
+      <li>Eller ta skjermbilde (Cmd+Shift+4 på Mac) av ønsket tidslinje</li>
+      <li>Plasser på siden av en slide for visuell effekt</li>
+    </ul>
+  </div>
+
+  <!-- ============================================
+       SECTION 1: TOTAL OVERSIKT
+  ============================================= -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Total Prosjektoversikt</h2>
+      <span class="section-badge">Nøkkelhendelser</span>
+    </div>
+    <div class="slides-row">
+
+      <!-- Vertikal: Komplett reise -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Komplett tidslinje</span>
+          <span class="slide-dimensions">350×500px</span>
+        </div>
+        <div class="slide-vertical">
+          <div class="slide-title">Interessentreisen</div>
+          <div class="slide-subtitle">Januar 2025 → Desember 2025</div>
+
+          <div class="v-timeline">
+            <div class="v-year-divider"><span>2025</span></div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot leietaker"></div>
+              <div class="v-timeline-date">10. jan</div>
+              <div class="v-timeline-title">Leietakerdialog startet</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel"></div>
+              <div class="v-timeline-date">5. mai</div>
+              <div class="v-timeline-title">Første møte Bydel Ullern</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel"></div>
+              <div class="v-timeline-date">22. mai</div>
+              <div class="v-timeline-title">Bydelslederstøtte bekreftet</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot politiker highlight"></div>
+              <div class="v-timeline-date">24. juni</div>
+              <div class="v-timeline-title">James Lorentzen (Byråd)</div>
+              <div class="v-timeline-outcome">Politisk dialog etablert</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot workshop highlight"></div>
+              <div class="v-timeline-date">5. sept</div>
+              <div class="v-timeline-title">Strategisk akselerasjon</div>
+              <div class="v-timeline-outcome">Direkte til Omsorg+</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot nabo"></div>
+              <div class="v-timeline-date">14. okt</div>
+              <div class="v-timeline-title">Nabolagsmøte (~30 pers)</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot green highlight"></div>
+              <div class="v-timeline-date">16. okt</div>
+              <div class="v-timeline-title">Nabovarsel sendt</div>
+              <div class="v-timeline-outcome">Milepæl fullført</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel highlight"></div>
+              <div class="v-timeline-date">29. okt</div>
+              <div class="v-timeline-title">Bydelsutvalget: 160 enheter</div>
+              <div class="v-timeline-outcome">Behov dokumentert</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot kommune"></div>
+              <div class="v-timeline-date">Nov</div>
+              <div class="v-timeline-title">Rammesøknad pågår</div>
+            </div>
+          </div>
+
+          <div class="slide-stats">
+            <div class="slide-stat">
+              <div class="slide-stat-value">13</div>
+              <div class="slide-stat-label">Møter</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value">4</div>
+              <div class="slide-stat-label">Bydel</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value">1</div>
+              <div class="slide-stat-label">Byråd</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value">20</div>
+              <div class="slide-stat-label">Mnd</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horisontal: Key milestones -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Horisontal — Nøkkelmilepæler</span>
+          <span class="slide-dimensions">700×280px</span>
+        </div>
+        <div class="slide-horizontal">
+          <div class="slide-title">Fra rivningskrav til støtte — 2025</div>
+          <div class="h-timeline">
+            <div class="h-timeline-items">
+              <div class="h-timeline-item above">
+                <div class="h-content">
+                  <div class="h-timeline-date">Jan</div>
+                  <div class="h-timeline-title">Leietaker-dialog</div>
+                </div>
+                <div class="h-timeline-dot leietaker"></div>
+              </div>
+              <div class="h-timeline-item below">
+                <div class="h-timeline-dot bydel"></div>
+                <div class="h-content">
+                  <div class="h-timeline-date">Mai</div>
+                  <div class="h-timeline-title">Bydel-støtte</div>
+                </div>
+              </div>
+              <div class="h-timeline-item above">
+                <div class="h-content">
+                  <div class="h-timeline-date">Juni</div>
+                  <div class="h-timeline-title">Byråds-møte</div>
+                </div>
+                <div class="h-timeline-dot politiker highlight"></div>
+              </div>
+              <div class="h-timeline-item below">
+                <div class="h-timeline-dot workshop highlight"></div>
+                <div class="h-content">
+                  <div class="h-timeline-date">5. sept</div>
+                  <div class="h-timeline-title">Strategisk skifte</div>
+                </div>
+              </div>
+              <div class="h-timeline-item above">
+                <div class="h-content">
+                  <div class="h-timeline-date">Okt</div>
+                  <div class="h-timeline-title">Nabo-møte</div>
+                </div>
+                <div class="h-timeline-dot nabo"></div>
+              </div>
+              <div class="h-timeline-item below">
+                <div class="h-timeline-dot green highlight"></div>
+                <div class="h-content">
+                  <div class="h-timeline-date">16. okt</div>
+                  <div class="h-timeline-title">Nabovarsel ✓</div>
+                </div>
+              </div>
+              <div class="h-timeline-item above">
+                <div class="h-content">
+                  <div class="h-timeline-date">29. okt</div>
+                  <div class="h-timeline-title">160 enheter</div>
+                </div>
+                <div class="h-timeline-dot bydel highlight"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 2: MEDVIRKNING
+  ============================================= -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Medvirkning</h2>
+      <span class="section-badge">Interessentdialog</span>
+    </div>
+    <div class="slides-row">
+
+      <!-- Medvirkning: Vertikal -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Medvirkningsprosessen</span>
+          <span class="slide-dimensions">350×500px</span>
+        </div>
+        <div class="slide-vertical">
+          <div class="slide-title">Medvirkningsprosessen</div>
+          <div class="slide-subtitle">Systematisk interessentdialog</div>
+
+          <div class="v-timeline">
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot leietaker"></div>
+              <div class="v-timeline-date">10. januar</div>
+              <div class="v-timeline-title">Leietakermøte</div>
+              <div class="v-timeline-outcome">Åpen dialog etablert</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel"></div>
+              <div class="v-timeline-date">5. mai</div>
+              <div class="v-timeline-title">Møte Bente Otto</div>
+              <div class="v-timeline-outcome">Avd.dir. Helse og omsorg</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel"></div>
+              <div class="v-timeline-date">13. mai</div>
+              <div class="v-timeline-title">Bydel Ullern 2035</div>
+              <div class="v-timeline-outcome">Åpent møte</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel highlight"></div>
+              <div class="v-timeline-date">22. mai</div>
+              <div class="v-timeline-title">Presentasjon bydelsledere</div>
+              <div class="v-timeline-outcome">Sterk støtte</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot politiker highlight"></div>
+              <div class="v-timeline-date">24. juni</div>
+              <div class="v-timeline-title">James Lorentzen</div>
+              <div class="v-timeline-outcome">Byutviklingsbyråd</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot nabo"></div>
+              <div class="v-timeline-date">14. oktober</div>
+              <div class="v-timeline-title">Nabolagsmøte</div>
+              <div class="v-timeline-outcome">~30 deltakere</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel highlight"></div>
+              <div class="v-timeline-date">29. oktober</div>
+              <div class="v-timeline-title">Bydelsutvalgsmøte</div>
+              <div class="v-timeline-outcome">Politisk støtte bekreftet</div>
+            </div>
+          </div>
+
+          <div class="slide-stats">
+            <div class="slide-stat">
+              <div class="slide-stat-value">4</div>
+              <div class="slide-stat-label">Bydel</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value">2</div>
+              <div class="slide-stat-label">Nabo</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value">2</div>
+              <div class="slide-stat-label">Leietaker</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value">1</div>
+              <div class="slide-stat-label">Byråd</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medvirkning: Kompakt -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Interessentgrupper</span>
+          <span class="slide-dimensions">300×400px</span>
+        </div>
+        <div class="slide-compact">
+          <div class="compact-header">
+            <div class="compact-icon">🤝</div>
+            <div class="compact-title">Interessentgrupper</div>
+            <div class="compact-subtitle">Hvem vi har møtt</div>
+          </div>
+
+          <div class="compact-items">
+            <div class="compact-item" style="border-left-color: var(--color-bydel);">
+              <div class="compact-item-date">4 møter</div>
+              <div class="compact-item-text"><strong>Bydel Ullern</strong><br>Bente Otto, Ingrid Hopp, Bydelsutvalget</div>
+            </div>
+            <div class="compact-item highlight" style="border-left-color: var(--color-politiker);">
+              <div class="compact-item-date">24. juni</div>
+              <div class="compact-item-text"><strong>Byutviklingsbyråd</strong><br>James Lorentzen</div>
+            </div>
+            <div class="compact-item" style="border-left-color: var(--color-leietaker);">
+              <div class="compact-item-date">2 møter</div>
+              <div class="compact-item-text"><strong>Leietakere</strong><br>Eksisterende virksomheter</div>
+            </div>
+            <div class="compact-item" style="border-left-color: var(--color-nabo);">
+              <div class="compact-item-date">~30 pers</div>
+              <div class="compact-item-text"><strong>Naboer</strong><br>Nabolagsmøte + nabovarsel</div>
+            </div>
+          </div>
+
+          <div class="compact-footer">
+            <div class="compact-footer-text">✓ Bred støtte fra alle grupper</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 3: OMSORG+
+  ============================================= -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Omsorg+ Reisen</h2>
+      <span class="section-badge">Fra ide til konsept</span>
+    </div>
+    <div class="slides-row">
+
+      <!-- Omsorg+: Vertikal -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Omsorg+ tidslinje</span>
+          <span class="slide-dimensions">350×500px</span>
+        </div>
+        <div class="slide-vertical">
+          <div class="slide-title">Omsorg+ Reisen</div>
+          <div class="slide-subtitle">Fra behov til løsning</div>
+
+          <div class="v-timeline">
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel"></div>
+              <div class="v-timeline-date">5. mai</div>
+              <div class="v-timeline-title">Behov identifisert</div>
+              <div class="v-timeline-outcome">Bente Otto: Eldreboliger trengs</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel"></div>
+              <div class="v-timeline-date">22. mai</div>
+              <div class="v-timeline-title">Konsept presentert</div>
+              <div class="v-timeline-outcome">Bydelsledere positive</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot workshop highlight"></div>
+              <div class="v-timeline-date">5. sept</div>
+              <div class="v-timeline-title">Strategisk beslutning</div>
+              <div class="v-timeline-outcome">Direkte til Omsorg+</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot workshop"></div>
+              <div class="v-timeline-date">27. sept</div>
+              <div class="v-timeline-title">R21 Konseptworkshop</div>
+              <div class="v-timeline-outcome">73 enheter definert</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot bydel highlight"></div>
+              <div class="v-timeline-date">29. okt</div>
+              <div class="v-timeline-title">160 enheter behov</div>
+              <div class="v-timeline-outcome">Hovfaret dekker 46%</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot kommune"></div>
+              <div class="v-timeline-date">Nov</div>
+              <div class="v-timeline-title">Rammesøknad</div>
+              <div class="v-timeline-outcome">Transformasjon til bolig</div>
+            </div>
+          </div>
+
+          <div class="slide-stats">
+            <div class="slide-stat">
+              <div class="slide-stat-value">73</div>
+              <div class="slide-stat-label">Enheter</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value">160</div>
+              <div class="slide-stat-label">Behov</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value">46%</div>
+              <div class="slide-stat-label">Dekning</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Omsorg+: Kompakt -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Omsorg+ Konsept</span>
+          <span class="slide-dimensions">300×400px</span>
+        </div>
+        <div class="slide-compact">
+          <div class="compact-header">
+            <div class="compact-icon">🏠</div>
+            <div class="compact-title">Omsorg+ Konsept</div>
+            <div class="compact-subtitle">73 eldreboliger</div>
+          </div>
+
+          <div class="compact-items">
+            <div class="compact-item" style="border-left-color: var(--color-green);">
+              <div class="compact-item-date">66 stk</div>
+              <div class="compact-item-text"><strong>Enkeltrom</strong><br>42 m² per enhet</div>
+            </div>
+            <div class="compact-item" style="border-left-color: var(--color-green);">
+              <div class="compact-item-date">7 stk</div>
+              <div class="compact-item-text"><strong>Dobbeltrom</strong><br>67 m² per enhet</div>
+            </div>
+            <div class="compact-item highlight" style="border-left-color: var(--color-bydel);">
+              <div class="compact-item-date">8 etg</div>
+              <div class="compact-item-text"><strong>Bygg</strong><br>5 rehab + 2 påbygg + takhage</div>
+            </div>
+            <div class="compact-item" style="border-left-color: var(--color-kommune);">
+              <div class="compact-item-date">12/12</div>
+              <div class="compact-item-text"><strong>Husbanken</strong><br>Alle krav oppfylt</div>
+            </div>
+          </div>
+
+          <div class="compact-footer">
+            <div class="compact-footer-text">Dekker 46% av bydelens behov</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 4: REGULATORISK
+  ============================================= -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Regulatorisk Prosess</h2>
+      <span class="section-badge">Søknadsprosess</span>
+    </div>
+    <div class="slides-row">
+
+      <!-- Regulatorisk: Vertikal -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Regulatorisk tidslinje</span>
+          <span class="slide-dimensions">350×500px</span>
+        </div>
+        <div class="slide-vertical">
+          <div class="slide-title">Regulatorisk Prosess</div>
+          <div class="slide-subtitle">Fra strategi til søknad</div>
+
+          <div class="v-timeline">
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot workshop"></div>
+              <div class="v-timeline-date">5. sept 2025</div>
+              <div class="v-timeline-title">Strategi besluttet</div>
+              <div class="v-timeline-outcome">Direkte til Omsorg+</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot nabo"></div>
+              <div class="v-timeline-date">14. okt 2025</div>
+              <div class="v-timeline-title">Nabolagsmøte</div>
+              <div class="v-timeline-outcome">Informasjon før nabovarsel</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot green highlight"></div>
+              <div class="v-timeline-date">16. okt 2025</div>
+              <div class="v-timeline-title">Nabovarsel sendt</div>
+              <div class="v-timeline-outcome">✓ Milepæl fullført</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot kommune"></div>
+              <div class="v-timeline-date">Nov 2025</div>
+              <div class="v-timeline-title">Rammesøknad utarbeides</div>
+              <div class="v-timeline-outcome">Byggesaksrådgivning AS</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot kommune"></div>
+              <div class="v-timeline-date">Q1 2026</div>
+              <div class="v-timeline-title">Innsending PBE</div>
+              <div class="v-timeline-outcome">Planlagt</div>
+            </div>
+
+            <div class="v-timeline-item">
+              <div class="v-timeline-dot kommune"></div>
+              <div class="v-timeline-date">2026</div>
+              <div class="v-timeline-title">Igangsettingssøknad</div>
+              <div class="v-timeline-outcome">Etter rammetillatelse</div>
+            </div>
+          </div>
+
+          <div class="slide-stats">
+            <div class="slide-stat">
+              <div class="slide-stat-value" style="color: var(--color-green);">✓</div>
+              <div class="slide-stat-label">Nabovarsel</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value" style="color: var(--color-workshop);">→</div>
+              <div class="slide-stat-label">Rammesøk.</div>
+            </div>
+            <div class="slide-stat">
+              <div class="slide-stat-value" style="color: var(--text-muted);">○</div>
+              <div class="slide-stat-label">Igangsett.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regulatorisk: Horisontal -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Regulatorisk prosess — horisontal</span>
+          <span class="slide-dimensions">700×280px</span>
+        </div>
+        <div class="slide-horizontal">
+          <div class="slide-title">Søknadsprosessen</div>
+          <div class="h-timeline">
+            <div class="h-timeline-items">
+              <div class="h-timeline-item above">
+                <div class="h-content">
+                  <div class="h-timeline-date">5. sept</div>
+                  <div class="h-timeline-title">Strategi</div>
+                </div>
+                <div class="h-timeline-dot workshop"></div>
+              </div>
+              <div class="h-timeline-item below">
+                <div class="h-timeline-dot nabo"></div>
+                <div class="h-content">
+                  <div class="h-timeline-date">14. okt</div>
+                  <div class="h-timeline-title">Nabomøte</div>
+                </div>
+              </div>
+              <div class="h-timeline-item above">
+                <div class="h-content">
+                  <div class="h-timeline-date">16. okt</div>
+                  <div class="h-timeline-title">Nabovarsel ✓</div>
+                </div>
+                <div class="h-timeline-dot green highlight"></div>
+              </div>
+              <div class="h-timeline-item below">
+                <div class="h-timeline-dot kommune"></div>
+                <div class="h-content">
+                  <div class="h-timeline-date">Nov</div>
+                  <div class="h-timeline-title">Rammesøk.</div>
+                </div>
+              </div>
+              <div class="h-timeline-item above">
+                <div class="h-content">
+                  <div class="h-timeline-date">Q1 2026</div>
+                  <div class="h-timeline-title">PBE</div>
+                </div>
+                <div class="h-timeline-dot kommune" style="opacity: 0.5;"></div>
+              </div>
+              <div class="h-timeline-item below">
+                <div class="h-timeline-dot kommune" style="opacity: 0.5;"></div>
+                <div class="h-content">
+                  <div class="h-timeline-date">2026</div>
+                  <div class="h-timeline-title">Igangsett.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION 5: BÆREKRAFT
+  ============================================= -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Bærekraft</h2>
+      <span class="section-badge">Klimaargumentet</span>
+    </div>
+    <div class="slides-row">
+
+      <!-- Bærekraft: Kompakt -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">Bærekraftsargument</span>
+          <span class="slide-dimensions">300×400px</span>
+        </div>
+        <div class="slide-compact">
+          <div class="compact-header">
+            <div class="compact-icon">🌱</div>
+            <div class="compact-title">Hvorfor transformasjon?</div>
+            <div class="compact-subtitle">Klima og materialbesparelse</div>
+          </div>
+
+          <div class="compact-items">
+            <div class="compact-item highlight" style="border-left-color: var(--color-green);">
+              <div class="compact-item-date">-48%</div>
+              <div class="compact-item-text"><strong>CO₂-reduksjon</strong><br>vs nybygg etter riving</div>
+            </div>
+            <div class="compact-item" style="border-left-color: var(--color-green);">
+              <div class="compact-item-date">85%</div>
+              <div class="compact-item-text"><strong>Materialbesparelse</strong><br>Bærekonstruksjon bevares</div>
+            </div>
+            <div class="compact-item" style="border-left-color: var(--color-bydel);">
+              <div class="compact-item-date">1989</div>
+              <div class="compact-item-text"><strong>Byggeår</strong><br>Fundamentert for 12 etasjer</div>
+            </div>
+            <div class="compact-item" style="border-left-color: var(--color-workshop);">
+              <div class="compact-item-date">NCC</div>
+              <div class="compact-item-text"><strong>Nordic Circle</strong><br>Sirkulær pilotpartner</div>
+            </div>
+          </div>
+
+          <div class="compact-footer">
+            <div class="compact-footer-text">La betongen stå — ikke riv!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bærekraft: Scenarier -->
+      <div class="slide-container">
+        <div class="slide-header">
+          <span class="slide-label">3 Scenarier</span>
+          <span class="slide-dimensions">300×400px</span>
+        </div>
+        <div class="slide-compact">
+          <div class="compact-header">
+            <div class="compact-icon">📊</div>
+            <div class="compact-title">Tre scenarier</div>
+            <div class="compact-subtitle">LCA-analyse (Vill Energi)</div>
+          </div>
+
+          <div class="compact-items">
+            <div class="compact-item" style="border-left-color: #ef4444;">
+              <div class="compact-item-date" style="color: #ef4444;">Ref</div>
+              <div class="compact-item-text"><strong>Riv og bygg nytt</strong><br>100% klimagassutslipp</div>
+            </div>
+            <div class="compact-item" style="border-left-color: var(--color-workshop);">
+              <div class="compact-item-date">-34%</div>
+              <div class="compact-item-text"><strong>Rehabilitering</strong><br>Minimal påbygging</div>
+            </div>
+            <div class="compact-item highlight" style="border-left-color: var(--color-green);">
+              <div class="compact-item-date">-48%</div>
+              <div class="compact-item-text"><strong>Omsorg+</strong><br>3 etasjer påbygg</div>
+            </div>
+          </div>
+
+          <div class="compact-footer">
+            <div class="compact-footer-text">✓ Omsorg+ = Beste klimavalg</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
