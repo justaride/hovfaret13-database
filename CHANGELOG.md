@@ -2,6 +2,86 @@
 
 All notable changes to this project database.
 
+## [2.65.0] - 2025-12-04
+
+### Phase 53: GitHub Pages + Multiple Design Variants
+
+**Status:** ✅ COMPLETE
+
+#### GitHub Pages Deployment
+
+Satt opp prosjektet på GitHub Pages for enkel deling.
+
+**URL:** https://justaride.github.io/hovfaret13-database/
+
+**Konfigurasjon:**
+- Root index.html med redirect til dashboard/
+- .nojekyll fil for å deaktivere Jekyll-prosessering
+
+#### Status Desember 2025 — 4 Designvarianter
+
+Utviklet komplett statussystem med multiple designalternativer og design-switcher.
+
+**Nye filer:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `status-december-2025-complete.html` | Komplett variant med alt innhold |
+| `status-december-2025-light.html` | Nordisk hvitt design |
+| `status-december-2025-minimal.html` | Ultra-minimalistisk design |
+
+**Innhold i komplett variant:**
+- **"Hva betyr dette prosjektet for..."** — 6 interessentgrupper
+  - Politikerne: Pilotprosjekt for klima og eldreomsorg
+  - Nabolaget: 73 nye naboer, ikke en byggeplass
+  - Bydelen: Varm transformasjon av kontorstrøk
+  - Byen: Modell for bærekraftig byutvikling
+  - Samfunnet: Fra avfall til ressurs
+  - Investorer: ESG-ledende prosjekt
+- **Deep-dive tekster** per interessentgruppe
+- **10+ tekstvarianter** for ulike formål
+- **9 overskrifter** med kopieringsfunksjon
+- **Design-switcher** mellom alle 4 varianter
+
+**Designsystemer:**
+- **Komplett:** Mørk gradient, fullt innhold
+- **Lys:** Hvit bakgrunn, Google-inspirert palett
+- **Minimal:** Kun svart/hvit/grå, typografifokus
+- **Mørk (original):** Opprinnelig design
+
+#### Bærekraft — Komplett Side
+
+Utviklet omfattende bærekraftsside med LCA-modeller og sirkulær økonomi.
+
+**Nye filer:**
+
+| Fil | Beskrivelse |
+|-----|-------------|
+| `sustainability-complete.html` | Komplett bærekraftsside med modeller |
+
+**Innhold:**
+- **LCA-modellvisualisering** (EN 15978)
+  - A1-A3: Materialproduksjon
+  - A4: Transport
+  - A5: Byggeplass
+  - B1-B7: Drift
+  - C1-C4: Avhending
+- **Sirkulær økonomi-seksjon** med animert ring
+- **Scenariosammenligning** — 3 kort
+- **8+ tekstvarianter** for ulike målgrupper
+- **Design-switcher** til andre varianter
+
+#### Index og Navigasjon
+
+Oppdatert hovednavigasjon til å peke på komplett-versjoner.
+
+**Endringer i index.html:**
+- Bærekraft → sustainability-complete.html
+- Status Desember 2025 → status-december-2025-complete.html
+- Oppdatert moduleData med nye beskrivelser
+
+---
+
 ## [2.62.0] - 2025-12-04
 
 ### Phase 50: Omsorg+ Dashboard + Medvirkning Webkonsept
