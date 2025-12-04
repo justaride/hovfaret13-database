@@ -1,11 +1,25 @@
 # Project Status
 
 **Last Updated:** 2025-12-04
-**Status:** ✅ Phase 42 COMPLETE - Tidslinjebibliotek
+**Status:** ✅ Phase 43 COMPLETE - Kvalitetssikring
 
 ---
 
 ## Current Phase
+
+**Phase 43: Kvalitetssikring — Etasjepåstand korrigert ✅ COMPLETE**
+
+Faktasjekk avdekket at "bygd for 12 etasjer" var uverifisert. Korrigert til "reservekapasitet for 3 nye etasjer" (5→8) i alle filer.
+
+### Korrigerte filer
+- visual-stories.html, slides-library.html, text-library.html
+- project-story.html (4 steder)
+- config.json, project.json
+
+### Andre nøkkeltall verifisert ✅
+- 48% CO₂-reduksjon, 73 enheter, 150-200 bydelsbehov, 70 møter, 271 dokumenter
+
+---
 
 **Phase 42: Tidslinjebibliotek ✅ COMPLETE**
 

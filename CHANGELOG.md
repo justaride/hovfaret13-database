@@ -2,6 +2,41 @@
 
 All notable changes to this project database.
 
+## [2.55.0] - 2025-12-04
+
+### Phase 43: Kvalitetssikring — Etasjepåstand korrigert
+
+**Status:** ✅ COMPLETE
+
+#### Faktasjekk og korrigering av "12 etasjer"-påstanden
+
+Grundig analyse avdekket at påstanden "bygd for 12 etasjer" var uverifisert.
+Kildene (møtereferater, arkitekt) sier konsekvent "reservekapasitet for 3 nye etasjer".
+
+**Korrigert i:**
+- `visual-stories.html` — "Bygd for 12, har 5" → "Har 5, kan bli 8"
+- `slides-library.html` — Oppdatert reservekapasitet-slide
+- `text-library.html` — Tagline korrigert
+- `project-story.html` — 4 steder korrigert
+- `config.json` — `design_capacity_floors: 12` → `extension_capacity_floors: 3`
+- `project.json` — Alle referanser til "12 floors" fjernet
+
+**Korrekt formulering:**
+- Bygget har 5 etasjer i dag
+- Fundamentet har reservekapasitet for 3 nye etasjer
+- Omsorg+ planen gir totalt 8 etasjer (etasje 1-8)
+
+**Kvalitetssjekk av andre nøkkeltall:**
+| Tall | Status | Kilde |
+|------|--------|-------|
+| 48% CO₂-reduksjon | ✅ Korrekt | Vill Energi: (5343-2794)/5343 = 47.7% |
+| 73 enheter | ✅ Korrekt | R21 tegninger |
+| 150-200 bydelsbehov | ✅ Korrekt | Ingrid Hopp, nabolagsmøte |
+| 70 møter | ✅ Korrekt | meetings.json |
+| 271 dokumenter | ✅ Korrekt | documents.json |
+
+---
+
 ## [2.54.0] - 2025-12-04
 
 ### Phase 42: Tidslinjebibliotek

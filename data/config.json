@@ -54,9 +54,11 @@
     "city": "Oslo",
     "construction_year": 1989,
     "current_floors": 5,
-    "design_capacity_floors": 12,
+    "extension_capacity_floors": 3,
+    "planned_total_floors": 8,
     "area_bta_m2": 6100,
-    "area_bra_m2": 5800
+    "area_bra_m2": 5800,
+    "_note": "Fundament har reservekapasitet for 3 nye etasjer (5+3=8). Tallet '12 etasjer' i tidlige dokumenter er uverifisert."
   },
   "omsorg_plus": {
     "planned_units": 73,
