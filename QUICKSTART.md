@@ -1,6 +1,8 @@
-# Hurtigstart - Hovfaret 13 Dashboard
+# Hurtigstart - Hovfaret 13 Dashboard v2.75
 
-## Start dashboardet
+**Live på GitHub Pages:** https://justaride.github.io/hovfaret13-database/
+
+## Start dashboardet lokalt
 
 ```bash
 cd /Users/gabrielboen/2.0-Hovfaret13-NewStructureSimplified/dashboard
@@ -64,7 +66,7 @@ Alle dashboards har tema-bytte i navigasjonen:
 
 ```
 /2.0-Hovfaret13-NewStructureSimplified/
-├── dashboard/         # 20 HTML-dashboards
+├── dashboard/         # 36 HTML-dashboards
 ├── data/              # JSON-datafiler
 │   ├── meetings.json
 │   ├── documents.json

@@ -2,6 +2,74 @@
 
 All notable changes to this project database.
 
+## [2.75.0] - 2025-12-07
+
+### Phase 56: Skandinavisk Minimal Design
+
+**Status:** ✅ COMPLETE
+
+#### Nye design-outputs på alle presentasjonssider
+
+Lagt til "Skandinavisk Minimal" seksjoner med rent skandinavisk design inspirert av moderne nordisk estetikk.
+
+**Designprinsipper:**
+- Fargepalett: Hvitt (#FFFFFF), Lys grå (#F5F5F5), Marine blå (#001F3F)
+- Typografi: Inter font, font-weight 200-500
+- Layout: Rikelig whitespace, sentrert/asymmetrisk grid
+- Stil: Funksjon først, ingen unødvendige dekorasjoner
+
+#### slides-library.html — 6 nye slides
+
+| Slide | Beskrivelse |
+|-------|-------------|
+| Klimatall — Minimal | 48% hero med marine aksent |
+| Nøkkeltall Grid | 4 tall i 2×2 asymmetrisk grid |
+| Sitat — Minimal | Vertikal linje aksent |
+| Klimasammenligning | Enkel søylediagram |
+| Tidslinje — Minimal | Vertikal milepælsliste |
+| Omsorg+ Konsept | Boligdata rent format |
+
+#### visual-stories.html — 6 nye historier
+
+| Historie | Beskrivelse |
+|----------|-------------|
+| Hero Number | 48 i gigantisk font (clamp 8-16rem) |
+| Clean Comparison | Side-by-side CO₂-tall |
+| Quote | Strategisk beslutning med border-left |
+| Key Numbers Grid | 6 nøkkeltall i 3×2 grid |
+| Building Concept | 5+3 etasje visualisering |
+| Final Statement | Marine bakgrunn avslutning |
+
+#### text-library.html — 8 nye tekstkort
+
+| Kort | Beskrivelse |
+|------|-------------|
+| Overskrift Hero | 48% med underline separator |
+| Hovedbudskap | Medium lengde, lys grå bakgrunn |
+| Sitat | Kursiv med kilde og border-left |
+| Nøkkeltall | 2×2 tall-grid med labels |
+| Prosjektbeskrivelse Lang | For søknader og rapporter |
+| Statement | Marine bakgrunn, hvit tekst |
+| Taglines | Korte fraser, én per linje |
+| Kulepunkter | 6 nøkkelpunkter for pitch |
+
+#### timeline-slides.html — 9 nye slides
+
+**Ny seksjon:** `#minimal`
+
+| Format | Slides |
+|--------|--------|
+| 350×500px vertikal | Hero Tall, Tidslinje, Nøkkeltall, Sitat, Statement, Etasjer, Omsorg+, Medvirkning |
+| 700×280px horisontal | Sammenligning |
+
+**Alle slides bruker:**
+- Hvitt/lys grå bakgrunn
+- Marine blå (#001F3F) aksent
+- Tynn typografi (font-weight: 200-300)
+- Uppercase labels med letter-spacing
+
+---
+
 ## [2.70.0] - 2025-12-04
 
 ### Phase 55: Timeline Slides + Bærekraftsrapport Overview

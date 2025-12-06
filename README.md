@@ -1,6 +1,8 @@
-# Hovfaret 13 Prosjektdatabase v2.49
+# Hovfaret 13 Prosjektdatabase v2.75
 
 Komplett prosjektdatabase med interaktivt dashboard for Hovfaret 13 transformasjonsprosjektet.
+
+**Live:** https://justaride.github.io/hovfaret13-database/
 
 ## Prosjektoversikt
 
@@ -67,7 +69,7 @@ data/
 | Fil | Beskrivelse |
 |-----|-------------|
 | `README.md` | Denne filen |
-| `STATUS.md` | Gjeldende status (Phase 37) |
+| `STATUS.md` | Gjeldende status (Phase 56) |
 | `CHANGELOG.md` | Endringshistorikk |
 | `ARCHITECTURE.md` | Komplett prosjektarkitektur |
 | `QUICKSTART.md` | Hurtigstart-guide |
