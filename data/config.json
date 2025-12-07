@@ -1,11 +1,17 @@
 {
   "metadata": {
-    "version": "2.49",
+    "version": "2.80",
     "created": "2025-12-03",
-    "last_updated": "2025-12-03",
+    "last_updated": "2025-12-07",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 37
+    "database_phase": 58
+  },
+  "auth": {
+    "enabled": true,
+    "password_hash": "h13-skøyen-2025",
+    "session_key": "h13_auth",
+    "session_duration_hours": 24
   },
   "project": {
     "name": "Hovfaret 13 Transformation",
@@ -23,12 +29,13 @@
   "metrics": {
     "meetings_total": 70,
     "documents_total": 271,
-    "deliverables_total": 75,
+    "deliverables_total": 37,
     "stakeholders": {
-      "people": 22,
-      "organizations": 13,
-      "total": 35
+      "people": 23,
+      "organizations": 16,
+      "total": 39
     },
+    "project_duration_months": 21,
     "timeline": {
       "strategic_events": 12,
       "operational_events": 27,

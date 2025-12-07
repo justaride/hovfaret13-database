@@ -119,20 +119,37 @@
     </div>
 
     <script>
-        const HASH = '8a9c1f2b3d4e5f6a7b8c9d0e1f2a3b4c';
+        const AUTH_KEY = 'h13_auth';
+        const AUTH_PASSWORD = 'h13-skøyen-2025';
+        const SESSION_HOURS = 24;
 
-        function simpleHash(str) {
-            let hash = 0;
-            for (let i = 0; i < str.length; i++) {
-                const char = str.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash;
+        function isAuthenticated() {
+            const session = localStorage.getItem(AUTH_KEY);
+            if (!session) return false;
+            try {
+                const data = JSON.parse(session);
+                const expires = new Date(data.expires);
+                return expires > new Date() && data.authenticated;
+            } catch (e) {
+                return false;
             }
-            return Math.abs(hash).toString(16).padStart(8, '0');
+        }
+
+        function authenticate(password) {
+            if (password === AUTH_PASSWORD) {
+                const expires = new Date();
+                expires.setHours(expires.getHours() + SESSION_HOURS);
+                localStorage.setItem(AUTH_KEY, JSON.stringify({
+                    authenticated: true,
+                    expires: expires.toISOString()
+                }));
+                return true;
+            }
+            return false;
         }
 
         // Check if already authenticated
-        if (sessionStorage.getItem('h13_auth') === 'true') {
+        if (isAuthenticated()) {
             window.location.href = 'dashboard/index.html';
         }
 
@@ -140,8 +157,7 @@
             e.preventDefault();
             const password = document.getElementById('password').value;
 
-            if (password === 'Kamran3rB3st') {
-                sessionStorage.setItem('h13_auth', 'true');
+            if (authenticate(password)) {
                 window.location.href = 'dashboard/index.html';
             } else {
                 document.getElementById('error').classList.add('show');

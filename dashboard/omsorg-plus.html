@@ -803,7 +803,29 @@
             .text-variants-grid { grid-template-columns: 1fr; }
             .slides-grid { grid-template-columns: 1fr; }
         }
-    </style>
+    
+    /* Print styles */
+    @media print {
+        body { background: white !important; color: black !important; }
+        .nav, .nav-bar, .header-nav, nav, .back-link, .auth-overlay, 
+        .copy-btn, button:not([type="submit"]), .design-switcher,
+        .hamburger, .mobile-menu { display: none !important; }
+        .container, .app-container, main { 
+            max-width: 100% !important; 
+            margin: 0 !important; 
+            padding: 1rem !important;
+        }
+        a { color: black !important; text-decoration: underline !important; }
+        .card, .section, .slide-card { 
+            break-inside: avoid !important;
+            box-shadow: none !important;
+            border: 1px solid #ddd !important;
+        }
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
+
+  </style>
+    <script src="auth.js"></script>
 </head>
 <body>
     <!-- Header -->

@@ -2,6 +2,80 @@
 
 All notable changes to this project database.
 
+## [2.80.0] - 2025-12-07
+
+### Phase 58: Security, Data Enrichment & Print Support
+
+**Status:** ✅ COMPLETE
+
+#### Auth-beskyttelse implementert
+
+Enhetlig autentisering på alle 37 dashboard-sider.
+
+**Nye filer:**
+- `dashboard/auth.js` — Gjenbrukbar auth-modul med norsk UI
+
+**Oppdaterte filer (37):**
+- Alle dashboard/*.html — Auth script injisert
+- `index.html` — Unified auth med localStorage
+
+**Features:**
+- 24 timers sesjon
+- Profesjonell norsk login-dialog
+- Passord: `h13-skøyen-2025`
+
+#### Meeting Data Enrichment
+
+Beriket `meetings.json`:
+
+| Felt | Dekning |
+|------|---------|
+| summary | 70/70 (100%) |
+| outcomes | 40/70 (57%) |
+
+**Endringer:**
+- Metadata-seksjon lagt til
+- Summary hentet fra report.summary
+- Outcomes generert fra decisions + action_items
+
+#### Prosjektvarighet korrigert
+
+27 forekomster oppdatert: "20 måneder" → "21 måneder"
+
+**Oppdaterte filer:**
+- barekraftsrapport-2.html (1)
+- konseptskisse-2.html (1)
+- project-story.html (1)
+- status-december-2025.html (6)
+- status-december-2025-complete.html (7)
+- status-december-2025-light.html (6)
+- status-december-2025-minimal.html (5)
+
+#### Print Styles lagt til
+
+9 nøkkelsider fikk print-stiler:
+
+- status-december-2025.html
+- status-december-2025-complete.html
+- sustainability-complete.html
+- konseptskisse-2.html
+- omsorg-plus.html
+- meetings.html
+- documents.html
+- stakeholders.html
+- timeline.html
+
+#### Config.json oppdatert
+
+- `metadata.version`: 2.76 → 2.80
+- `metadata.database_phase`: 57 → 58
+- `auth`: Ny seksjon med auth-konfigurasjon
+- `metrics.stakeholders`: Korrigert (23 + 16 = 39)
+- `metrics.deliverables_total`: 75 → 37
+- `metrics.project_duration_months`: 21 (ny)
+
+---
+
 ## [2.76.0] - 2025-12-07
 
 ### Phase 57: Data Quality & Consistency

@@ -840,7 +840,29 @@
             .hero-stat-value { font-size: 2rem; }
             .donut-container { flex-direction: column; }
         }
-    </style>
+    
+    /* Print styles */
+    @media print {
+        body { background: white !important; color: black !important; }
+        .nav, .nav-bar, .header-nav, nav, .back-link, .auth-overlay, 
+        .copy-btn, button:not([type="submit"]), .design-switcher,
+        .hamburger, .mobile-menu { display: none !important; }
+        .container, .app-container, main { 
+            max-width: 100% !important; 
+            margin: 0 !important; 
+            padding: 1rem !important;
+        }
+        a { color: black !important; text-decoration: underline !important; }
+        .card, .section, .slide-card { 
+            break-inside: avoid !important;
+            box-shadow: none !important;
+            border: 1px solid #ddd !important;
+        }
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
+
+  </style>
+    <script src="auth.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -870,7 +892,7 @@
 
         <!-- Hero Status -->
         <section class="hero-status">
-            <h2>20 måneder med transformasjon</h2>
+            <h2>21 måneder med transformasjon</h2>
             <p class="hero-tagline">Fra rivningsvedtak til Omsorg+ — reisen fortsetter</p>
             <div class="hero-stats">
                 <div class="hero-stat">
@@ -910,7 +932,7 @@
                     <div class="slide-preview" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
                         <div class="slide-number">Slide 1 — Prosjekttidslinje</div>
                         <div class="slide-title">Fra visjon til handling</div>
-                        <div class="slide-subtitle">20 måneder med strategisk utvikling</div>
+                        <div class="slide-subtitle">21 måneder med strategisk utvikling</div>
                         <div class="slide-content">
                             <div class="timeline-visual">
                                 <div class="timeline-point">
@@ -1345,7 +1367,7 @@
             <div class="headlines-grid">
                 <div class="headline-card" onclick="copyHeadline(this)">
                     <div class="headline-type">Faktabasert</div>
-                    <div class="headline-text">20 måneder med transformasjon</div>
+                    <div class="headline-text">21 måneder med transformasjon</div>
                 </div>
                 <div class="headline-card" onclick="copyHeadline(this)">
                     <div class="headline-type">Narrativ</div>
@@ -1407,7 +1429,7 @@
                     </div>
                     <div class="variant-content">
                         <div class="variant-text">
-                            <p>Etter 20 måneder med strategisk utvikling, 70 møter og dialog med 39 interessenter, er Hovfaret 13 klar for søknadsfasen — med dokumentert klimagevinst på 48%.</p>
+                            <p>Etter 21 måneder med strategisk utvikling, 70 møter og dialog med 39 interessenter, er Hovfaret 13 klar for søknadsfasen — med dokumentert klimagevinst på 48%.</p>
                         </div>
                         <div class="variant-note">Egnet for: Innledning på slide, kort oppsummering</div>
                     </div>
@@ -1452,7 +1474,7 @@
                     </div>
                     <div class="variant-content">
                         <div class="variant-text">
-                            <p>For 20 måneder siden startet reisen. Områdeplanen krevde riving, men teamet så noe annet: et bygg med ubrukt potensial, fundamentert for 12 etasjer men med bare 5 bygget.</p>
+                            <p>For 21 måneder siden startet reisen. Områdeplanen krevde riving, men teamet så noe annet: et bygg med ubrukt potensial, fundamentert for 12 etasjer men med bare 5 bygget.</p>
                             <p>I dag, etter 70 møter med bydel, naboer og myndigheter, står vi ved terskelen til søknadsfasen. Nabovarsel er sendt. Dialogen har vært konstruktiv. Neste steg: rammesøknad.</p>
                         </div>
                         <div class="variant-note">Egnet for: Prosjekthistorie, nettsiden, presentasjoner</div>
@@ -1474,7 +1496,7 @@
                     <div class="variant-content">
                         <div class="variant-text">
                             <p><strong>Status Desember 2025</strong></p>
-                            <p>Etter 20 måneder med strategisk arbeid har prosjektet oppnådd betydelig fremdrift. Konseptutvikling er komplett, interessentdialog er etablert med bred støtte, og søknadsprosessen er igangsatt.</p>
+                            <p>Etter 21 måneder med strategisk arbeid har prosjektet oppnådd betydelig fremdrift. Konseptutvikling er komplett, interessentdialog er etablert med bred støtte, og søknadsprosessen er igangsatt.</p>
                         </div>
                         <div class="variant-note">Egnet for: Første slide etter tittelslide</div>
                     </div>

@@ -891,7 +891,29 @@
             .significance-grid { grid-template-columns: 1fr; }
             .design-switcher { display: none; }
         }
-    </style>
+    
+    /* Print styles */
+    @media print {
+        body { background: white !important; color: black !important; }
+        .nav, .nav-bar, .header-nav, nav, .back-link, .auth-overlay, 
+        .copy-btn, button:not([type="submit"]), .design-switcher,
+        .hamburger, .mobile-menu { display: none !important; }
+        .container, .app-container, main { 
+            max-width: 100% !important; 
+            margin: 0 !important; 
+            padding: 1rem !important;
+        }
+        a { color: black !important; text-decoration: underline !important; }
+        .card, .section, .slide-card { 
+            break-inside: avoid !important;
+            box-shadow: none !important;
+            border: 1px solid #ddd !important;
+        }
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
+
+  </style>
+    <script src="auth.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -922,7 +944,7 @@
         <!-- Hero -->
         <section class="hero">
             <div class="hero-overline">Hovfaret 13 · Skøyen · Oslo</div>
-            <h2>20 måneder med transformasjon</h2>
+            <h2>21 måneder med transformasjon</h2>
             <p class="hero-tagline">Fra rivningsvedtak til Omsorg+ — prosjektet er klar for rammesøknad til Plan- og bygningsetaten</p>
             <div class="hero-stats">
                 <div class="hero-stat">
@@ -1205,7 +1227,7 @@
             <div class="headlines-grid">
                 <div class="headline-card" onclick="copyHeadline(this)">
                     <div class="headline-type">Faktabasert</div>
-                    <div class="headline-text">20 måneder med transformasjon</div>
+                    <div class="headline-text">21 måneder med transformasjon</div>
                 </div>
                 <div class="headline-card" onclick="copyHeadline(this)">
                     <div class="headline-type">Narrativ</div>
@@ -1442,7 +1464,7 @@
                     </div>
                     <div class="text-card-body">
                         <div class="text-content">
-                            <p>Hovfaret 13 har gjennomgått en systematisk utviklingsprosess over 20 måneder. Per desember 2025 er konseptutvikling fullført, interessentdialog etablert med bred støtte, og prosjektet er klar for innsending av rammesøknad til Plan- og bygningsetaten.</p>
+                            <p>Hovfaret 13 har gjennomgått en systematisk utviklingsprosess over 21 måneder. Per desember 2025 er konseptutvikling fullført, interessentdialog etablert med bred støtte, og prosjektet er klar for innsending av rammesøknad til Plan- og bygningsetaten.</p>
                             <p>Prosjektdatabasen omfatter 70 møter, 271 dokumenter og dialog med 39 interessenter fra offentlig sektor, næringsliv og lokalsamfunn.</p>
                         </div>
                         <div class="text-note">For rapporter og offentlige dokumenter</div>
@@ -1463,7 +1485,7 @@
                     </div>
                     <div class="text-card-body">
                         <div class="text-content">
-                            <p>For 20 måneder siden startet reisen. Områdeplanen krevde riving, men teamet så noe annet: et bygg med ubrukt potensial, fundamentert for 12 etasjer men med bare 5 bygget.</p>
+                            <p>For 21 måneder siden startet reisen. Områdeplanen krevde riving, men teamet så noe annet: et bygg med ubrukt potensial, fundamentert for 12 etasjer men med bare 5 bygget.</p>
                             <p>I dag står vi ved terskelen til søknadsfasen. Nabovarsel er sendt. Dialogen har vært konstruktiv. Neste steg: rammesøknad til Plan- og bygningsetaten.</p>
                         </div>
                         <div class="text-note">For prosjekthistorie og presentasjoner</div>
@@ -1484,7 +1506,7 @@
                     </div>
                     <div class="text-card-body">
                         <div class="text-content">
-                            <p>20 måneder. 70 møter. 39 interessenter. Konseptskisse 2.0 ferdig. Nabovarsel sendt. Rammesøknad under ferdigstillelse. Innsending Q1 2026.</p>
+                            <p>21 måneder. 70 møter. 39 interessenter. Konseptskisse 2.0 ferdig. Nabovarsel sendt. Rammesøknad under ferdigstillelse. Innsending Q1 2026.</p>
                         </div>
                         <div class="text-note">For slides og kortfattet oppsummering</div>
                     </div>
@@ -1505,7 +1527,7 @@
                     <div class="text-card-body">
                         <div class="text-content">
                             <p><strong>Status Desember 2025</strong></p>
-                            <p>Etter 20 måneder med strategisk arbeid er prosjektet klar for rammesøknad. Konseptutvikling fullført. Interessentdialog etablert med bred støtte. Søknad planlagt Q1 2026.</p>
+                            <p>Etter 21 måneder med strategisk arbeid er prosjektet klar for rammesøknad. Konseptutvikling fullført. Interessentdialog etablert med bred støtte. Søknad planlagt Q1 2026.</p>
                         </div>
                         <div class="text-note">For første slide etter tittelslide</div>
                     </div>
@@ -1627,7 +1649,7 @@
                     </div>
                     <div class="text-card-body">
                         <div class="text-content">
-                            <p>Et kontorbygg på Skøyen kan bli 73 seniorboliger — og spare miljøet for 2.549 tonn CO₂. Hovfaret 13 er et pilotprosjekt for sirkulær byutvikling i Oslo, og er klar for rammesøknad etter 20 måneder med forberedelser.</p>
+                            <p>Et kontorbygg på Skøyen kan bli 73 seniorboliger — og spare miljøet for 2.549 tonn CO₂. Hovfaret 13 er et pilotprosjekt for sirkulær byutvikling i Oslo, og er klar for rammesøknad etter 21 måneder med forberedelser.</p>
                         </div>
                         <div class="text-note">For pressemelding eller medieomtale</div>
                     </div>
