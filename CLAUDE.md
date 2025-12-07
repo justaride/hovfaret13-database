@@ -1,30 +1,53 @@
 # CLAUDE.md - Project Instructions for Claude Code
 
-## Project: Hovfaret 13 Data Consolidation v2.0
+## Project: Hovfaret 13 Data Consolidation v2.80
 
-This is a real estate transformation project database. When working on this project, always read `STATUS.md` first to understand current state.
+Real estate transformation project database. Version 2.80, Phase 58.
 
-## Key Files to Read on Session Start
+**Auth:** Password `h13-skøyen-2025` (24h localStorage session)
 
-1. **STATUS.md** - Current progress, blockers, next actions
-2. **CHANGELOG.md** - What was done in previous sessions
-3. **data/project.json** - Master project context
+## Key Files
+
+| Priority | File | Purpose |
+|----------|------|---------|
+| 1 | `data/config.json` | Single source of truth for all metrics |
+| 2 | `STATUS.md` | Current progress, blockers, next actions |
+| 3 | `CHANGELOG.md` | Session history |
+
+## Current Metrics (from config.json)
+
+| Data | Count |
+|------|-------|
+| Meetings | 70 |
+| Documents | 271 |
+| People | 23 |
+| Organizations | 16 |
+| Deliverables | 37 |
+| Timeline events | 39 (12 strategic + 27 operational) |
+| Dashboard pages | 37 (all auth-protected) |
+| Project duration | 21 months |
 
 ## Project Structure
 
 ```
 data/
+├── config.json           # Central config - single source of truth
 ├── project.json          # Building, phases, scenarios
 ├── timeline.json         # Multi-layer timeline (strategic/operational)
-├── meetings.json         # 37 meetings
+├── meetings.json         # 70 meetings with summaries/outcomes
 ├── documents.json        # 271 documents categorized
 ├── stakeholders/
-│   ├── organizations.json
-│   └── people.json
+│   ├── organizations.json (16 orgs)
+│   └── people.json       (23 people)
 └── themes/
     ├── sustainability.json
     ├── regulatory.json
     └── omsorg-plus.json
+
+dashboard/
+├── auth.js               # Reusable auth module
+├── index.html            # Main entry point
+└── *.html                # 37 pages total
 ```
 
 ## Working Principles
@@ -48,14 +71,25 @@ data/
 
 ## Key Context
 
-- **Building**: Hovfaret 13, Skøyen, Oslo - built 1989, 5 floors (designed for 12)
+- **Building**: Hovfaret 13, Skøyen, Oslo - built 1989, 5 floors (+3 extension capacity = 8)
+- **Area**: 6,100 m² BTA / 5,800 m² BRA
 - **Challenge**: Area plan requires demolition, project argues for transformation
-- **Main argument**: 48% lower CO₂ with rehabilitation vs demolition
-- **Preferred scenario**: Omsorg+ (elderly housing) with 3-floor extension
+- **Main argument**: 48% CO₂ savings, 80% material savings with rehabilitation
+- **Preferred scenario**: Omsorg+ (73 elderly housing units) with 3-floor extension
+- **District need**: 160 Omsorg+ units by 2040 (H13 covers 46%)
 
-## Quality Checklist for Data
+## Regulatory Status
+
+| Process | Status | Date |
+|---------|--------|------|
+| Nabovarsel | ✅ Complete | 2025-10-16 |
+| Bruksendringssøknad | 🔄 In progress | Target Q4 2025 |
+| Rammesøknad | ⏳ Not started | Target Q1 2026 |
+
+## Quality Checklist
 
 - [ ] Dates in ISO format (YYYY-MM-DD)
-- [ ] Norwegian names preserved correctly (ø, æ, å)
-- [ ] Sources referenced where possible
+- [ ] Norwegian names preserved (ø, æ, å)
+- [ ] Sources referenced
 - [ ] Cross-references use consistent IDs
+- [ ] Metrics match config.json
