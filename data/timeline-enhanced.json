@@ -289,7 +289,7 @@
       },
       {
         "id": "s_012",
-        "date": "2025-Q4",
+        "date": "2026-Q1",
         "title": "TARGET: Application Submission",
         "title_no": "MÅL: Søknad innsendt",
         "description": "Target date for framework application (rammesøknad) submission to Plan- og bygningsetaten.",
@@ -298,7 +298,7 @@
         "icon": "target",
         "status": "planned",
         "exec_summary": [
-          "Target: Q4 2025 framework application submission",
+          "Target: Q1 2026 framework application submission",
           "To Plan- og bygningsetaten Oslo",
           "Depends on finalizing preferred scenario"
         ]

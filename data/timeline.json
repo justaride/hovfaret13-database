@@ -15,7 +15,7 @@
       "name": "Strategic Overview",
       "name_no": "Strategisk oversikt",
       "description": "Major milestones for executive summaries and external stakeholders",
-      "event_count": 10,
+      "event_count": 12,
       "use_case": "Board presentations, investor updates, public communications"
     },
     "operational": {
@@ -23,7 +23,7 @@
       "name": "Operational Timeline",
       "name_no": "Operasjonell tidslinje",
       "description": "Key decisions, deliverables, and stakeholder engagements",
-      "event_count": 22,
+      "event_count": 27,
       "use_case": "Project management, team updates, progress tracking"
     },
     "detailed": {
@@ -31,7 +31,7 @@
       "name": "Detailed Activity Log",
       "name_no": "Detaljert aktivitetslogg",
       "description": "All meetings, documents, and activities",
-      "event_count": "47+ meetings",
+      "event_count": "70 meetings",
       "use_case": "Complete audit trail, reference, due diligence",
       "note": "Links to meetings.json for full detail"
     }
