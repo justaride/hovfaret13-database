@@ -1,33 +1,34 @@
 {
   "metadata": {
-    "version": "1.0",
+    "version": "1.1",
     "created": "2025-12-03",
-    "last_updated": "2025-12-03",
+    "last_updated": "2025-12-07",
     "description": "Project deliverables for Hovfaret 13 transformation",
     "source": "Notion Export - integrated December 2025",
-    "total_deliverables": 75
+    "total_deliverables": 37,
+    "verification_note": "Counts verified 2025-12-07 - corrected from erroneous 75"
   },
   "summary": {
-    "total": 75,
+    "total": 37,
     "by_status": {
-      "completed": 48,
-      "in_progress": 6,
-      "not_started": 17,
-      "in_planning": 2,
-      "in_production": 2
+      "completed": 22,
+      "in_progress": 4,
+      "not_started": 9,
+      "in_planning": 1,
+      "in_production": 1
     },
     "by_category": {
-      "stakeholder_engagement": 30,
-      "communication": 11,
-      "social_media": 10,
+      "nabolagsmote": 8,
+      "communication": 4,
+      "social_media": 5,
       "regulatory": 3,
-      "design_development": 2,
+      "design_development": 1,
       "sustainability": 3,
       "omsorg_plus": 3,
       "finance": 3,
       "tenant_relations": 4,
-      "meetings": 5,
-      "other": 4
+      "meetings": 2,
+      "other": 1
     }
   },
   "categories": [
@@ -37,7 +38,7 @@
       "name_no": "Nabolagsmøte (14. okt 2025)",
       "status": "completed",
       "description": "Preparation, execution and follow-up of neighborhood meeting",
-      "deliverable_count": 30
+      "deliverable_count": 8
     },
     {
       "id": "cat_02",
@@ -45,7 +46,7 @@
       "name_no": "Nettside og kommunikasjon",
       "status": "partial",
       "description": "Website development and communication strategy",
-      "deliverable_count": 11
+      "deliverable_count": 4
     },
     {
       "id": "cat_03",
@@ -53,7 +54,7 @@
       "name_no": "Sosiale medier",
       "status": "completed",
       "description": "Social media presence and content",
-      "deliverable_count": 10
+      "deliverable_count": 5
     },
     {
       "id": "cat_04",
@@ -77,7 +78,7 @@
       "name_no": "Konseptskisse 2.0",
       "status": "in_progress",
       "description": "Updated concept documentation",
-      "deliverable_count": 2
+      "deliverable_count": 1
     },
     {
       "id": "cat_07",
@@ -109,7 +110,7 @@
       "name_no": "Møter og dialog",
       "status": "completed",
       "description": "Stakeholder meetings and dialogue activities",
-      "deliverable_count": 5
+      "deliverable_count": 2
     },
     {
       "id": "cat_11",
@@ -117,7 +118,7 @@
       "name_no": "Andre",
       "status": "mixed",
       "description": "Miscellaneous deliverables",
-      "deliverable_count": 4
+      "deliverable_count": 1
     }
   ],
   "deliverables": [

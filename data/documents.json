@@ -1,8 +1,10 @@
 {
   "metadata": {
-    "version": "2.0",
+    "version": "2.1",
     "created": "2025-11-21",
+    "last_updated": "2025-12-07",
     "description": "Document registry for Hovfaret 13 project",
+    "total": 271,
     "total_documents": 271,
     "by_category": {
       "analysis_notes": 94,
