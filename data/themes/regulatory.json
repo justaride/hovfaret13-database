@@ -2,7 +2,14 @@
   "metadata": {
     "version": "2.0",
     "created": "2025-11-21",
-    "description": "Regulatory context and status for Hovfaret 13 project"
+    "description": "Regulatory context and status for Hovfaret 13 project",
+    "content_classification": {
+      "type": "project_data",
+      "deliverable_id": null,
+      "deliverable_version": null,
+      "source_document": "Oslo Kommune planning documents and project status tracking",
+      "is_primary_source": true
+    }
   },
   "current_status": {
     "summary": "Area plan adopted September 2023 requires demolition, but plan is not legally binding due to objections. Project pursuing exemption through building permit process.",

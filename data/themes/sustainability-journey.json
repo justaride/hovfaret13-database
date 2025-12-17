@@ -3,7 +3,14 @@
     "version": "1.0",
     "created": "2025-12-03",
     "description": "Kronologisk bærekraftsreise for Hovfaret 13 prosjektet",
-    "purpose": "Dokumenterer alle bærekraftsrelaterte prosesser, beslutninger og leveranser"
+    "purpose": "Dokumenterer alle bærekraftsrelaterte prosesser, beslutninger og leveranser",
+    "content_classification": {
+      "type": "project_data",
+      "deliverable_id": null,
+      "deliverable_version": null,
+      "source_document": "Meeting notes and project records",
+      "is_primary_source": true
+    }
   },
   "journey": [
     {

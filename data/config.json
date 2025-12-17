@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.81",
+    "version": "2.84.0",
     "created": "2025-12-03",
-    "last_updated": "2025-12-08",
+    "last_updated": "2025-12-17",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 59
+    "database_phase": 63
   },
   "auth": {
     "enabled": true,
@@ -19,15 +19,17 @@
     "current_phase": "phase_6",
     "status": "Active - Pre-submission Phase"
   },
-  "konseptskisse": {
-    "version": "2.0",
-    "total_pages": 123,
-    "original_pages": 99,
-    "del_5_pages": "100-123",
-    "del_5_count": 24
+  "konseptskisse_ref": {
+    "current_version": "2.0",
+    "deliverable_id": "d_025",
+    "content_files": {
+      "v1": "themes/konseptskisse.json",
+      "v2": "themes/konseptskisse-2.0-tillegg.json"
+    },
+    "_note": "Page counts and structure details are in the content files, not here"
   },
   "metrics": {
-    "meetings_total": 70,
+    "meetings_total": 59,
     "documents_total": 271,
     "deliverables_total": 37,
     "stakeholders": {
@@ -37,9 +39,14 @@
     },
     "project_duration_months": 21,
     "timeline": {
-      "strategic_events": 12,
-      "operational_events": 27,
+      "strategic_events": 10,
+      "operational_events": 22,
+      "total_events": 32,
       "sustainability_events": 17
+    },
+    "notion": {
+      "databases": 12,
+      "records": 538
     }
   },
   "sustainability": {

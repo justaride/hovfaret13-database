@@ -10,7 +10,14 @@
     "new_pages": "100-123",
     "total_new_pages": 24,
     "purpose": "Del 5: Progresjon - fortsetter etter originalens side 99 (Strategisk Akselerasjon)",
-    "revision_notes": "v4.0: Utvidet med 4 nye sider (120-123) basert på benchmark-analyse. Nettside, Markedsinnsikt, Stedsøkonomi med arealregnskap, Medvirkningsdokumentasjon."
+    "revision_notes": "v4.0: Utvidet med 4 nye sider (120-123) basert på benchmark-analyse. Nettside, Markedsinnsikt, Stedsøkonomi med arealregnskap, Medvirkningsdokumentasjon.",
+    "content_classification": {
+      "type": "deliverable_content",
+      "deliverable_id": "d_025",
+      "deliverable_version": "2.0",
+      "source_document": "Konseptskisse 2.0 - Del 5: Progresjon",
+      "is_primary_source": false
+    }
   },
 
   "style_guide": {

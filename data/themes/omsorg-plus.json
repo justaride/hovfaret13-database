@@ -5,7 +5,14 @@
     "updated": "2025-12-02",
     "description": "Komplett Omsorg+ konseptdata for Hovfaret 13",
     "source": "R21 Arkitekter presentasjon 21. mai 2025, Husbanken krav, Oslo kommune data",
-    "data_quality": "HIGH - Verifisert mot originaldokumenter"
+    "data_quality": "HIGH - Verifisert mot originaldokumenter",
+    "content_classification": {
+      "type": "deliverable_content",
+      "deliverable_id": "d_omsorg_plus_concept",
+      "deliverable_version": "3.0",
+      "source_document": "R21 Arkitekter presentasjon 21. mai 2025",
+      "is_primary_source": false
+    }
   },
 
   "concept": {

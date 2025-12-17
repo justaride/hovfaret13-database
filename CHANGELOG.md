@@ -2,6 +2,196 @@
 
 All notable changes to this project database.
 
+## [2.84.0] - 2025-12-17
+
+### Phase 63: Data Boundary Implementation
+
+**Status:** ✅ COMPLETE
+
+#### Strikt grense mellom prosjektdata og leveranseinnhold
+
+**Problem:**
+- Prosjektdata (møter, beslutninger, tidslinje) var blandet med leveranseinnhold (Konseptskisse, rapporter)
+- Risiko for at nye leveranser (Konseptskisse 3.0) kunne forurense prosjekthistorikk
+
+**Løsning:** Metadata-klassifiseringssystem
+
+**Filer oppdatert:**
+
+| Fil | Type | Endring |
+|-----|------|---------|
+| themes/konseptskisse.json | deliverable_content | Lagt til content_classification |
+| themes/konseptskisse-2.0-tillegg.json | deliverable_content | Lagt til content_classification |
+| themes/barekraftsrapport.json | deliverable_content | Lagt til content_classification |
+| themes/sustainability.json | deliverable_content | Lagt til content_classification |
+| themes/omsorg-plus.json | deliverable_content | Lagt til content_classification |
+| themes/sustainability-journey.json | project_data | Lagt til content_classification |
+| themes/regulatory.json | project_data | Lagt til content_classification |
+| config.json | — | konseptskisse → konseptskisse_ref |
+| deliverables.json | — | Lagt til theme_content_files |
+| CLAUDE.md | — | Dokumentert Data Boundary Rules |
+
+**Metadata-skjema:**
+```json
+"content_classification": {
+  "type": "deliverable_content",
+  "deliverable_id": "d_025",
+  "deliverable_version": "2.0",
+  "source_document": "...",
+  "is_primary_source": false
+}
+```
+
+**Regler for nye leveranser:**
+1. Opprett ny theme-fil (f.eks. themes/konseptskisse-3.0.json)
+2. Legg til content_classification med type: deliverable_content
+3. Oppdater deliverables.json med theme_content_files referanse
+4. Aldri endre prosjektdata (meetings, timeline, stakeholders)
+
+---
+
+## [2.83.0] - 2025-12-12
+
+### Phase 62: Meeting Data Quality Cleanup
+
+**Status:** ✅ COMPLETE
+
+#### Grundig kvalitetsopprydding av møtedata
+
+**Oppsummering:**
+
+| Metrikk | Før | Etter |
+|---------|-----|-------|
+| Totalt møter | 70 | 59 |
+| Med type | 8 | 59 (100%) |
+| Med lokasjon | 44 | 59 (100%) |
+| Korrupt data | 4 | 0 |
+
+**Tiltak utført:**
+
+1. **Slettet 6 ikke-møter:**
+   - Notater, rapporter og oppgavelister som var feilregistrert
+
+2. **Merget 5 duplikater:**
+   - 2024-03-11, 2024-04-03, 2024-05-06, 2025-01-17, 2025-03-07
+
+3. **Fikset korrupt data:**
+   - Lokasjoner med HTML/markdown-fragmenter
+   - Titler med escape-tegn
+
+4. **Auto-tildelt møtetyper:**
+   - Interne møter: 27
+   - Prosjektmøte: 15
+   - Telefonsamtale: 6
+   - Bydelsmøte: 3
+   - Eksterne møter: 3
+   - Workshop: 2
+   - Befaring: 2
+   - Intern strategi: 1
+
+5. **Fylt manglende lokasjoner:**
+   - 23 møter oppdatert basert på rapport-innhold
+
+**Nye filer:**
+- `scripts/cleanup-meetings.js` — Oppryddingsskript
+- `data/meetings.backup.json` — Backup før opprydding
+
+---
+
+## [2.82.1] - 2025-12-12
+
+### Phase 61: Notion Visual Presentation
+
+**Status:** ✅ COMPLETE
+
+#### Visuelle forbedringer for bedre overblikk
+
+**Nye filer:**
+- `notion-sync/src/visual-config.js` — Sentral visuell konfigurasjon
+
+**Implementerte funksjoner:**
+
+| Funksjon | Beskrivelse |
+|----------|-------------|
+| Emoji-ikoner | Kontekstuelle ikoner for alle 549 records |
+| Møtestruktur | Callouts, toggles, dividers for bedre lesbarhet |
+| Fargekonfig | Definert i visual-config.js |
+
+**Ikon-mapping:**
+```
+🏢 Organizations  👥 People        🗓️ Meetings
+📁 Documents      📅 Timeline      📦 Deliverables
+🏠 Omsorg+ Concept 🏗️ Floors       🚪 Units
+🏥 Facilities     ✅ Compliance    🌱 Sustainability
+```
+
+**Møteinnhold-struktur:**
+- 📋 Sammendrag (gray callout)
+- 🎯 Beslutninger (green callout)
+- ⚡ Oppgaver (orange callout med checkboxes)
+- 💬 Diskusjon (collapsible toggle)
+- 👥 Deltakere (collapsible toggle)
+
+**Tekniske notater:**
+- Select-farger kan kun settes manuelt i Notion UI (API-begrensning)
+- Views (Gallery/Board/Calendar) opprettes manuelt
+
+---
+
+## [2.82.0] - 2025-12-12
+
+### Phase 60: Notion Sync Optimalisering & Omsorg+ Utvidelse
+
+**Status:** ✅ COMPLETE
+
+#### Notion Data Quality Improvements
+
+**Enrichment scripts opprettet:**
+- `notion-sync/scripts/enrich-meetings.js` — 30 møter beriket med outcomes
+- `notion-sync/scripts/enrich-timeline.js` — 22 operational events med descriptions
+- `notion-sync/scripts/enrich-deliverables.js` — Alle 37 med responsible + title_no
+
+| Data | Før | Etter |
+|------|-----|-------|
+| Meetings med outcomes | 57% | 100% |
+| Timeline med descriptions | 30% | 100% |
+| Deliverables med responsible | 76% | 100% |
+
+#### Omsorg+ Utvidelse (1→5 databaser)
+
+**Nye transformer-moduler:**
+- `src/transformers/omsorg-plus/concept.js` (1 record)
+- `src/transformers/omsorg-plus/floors.js` (7 records)
+- `src/transformers/omsorg-plus/units.js` (73 records med room features)
+- `src/transformers/omsorg-plus/facilities.js` (11 records)
+- `src/transformers/omsorg-plus/compliance.js` (5 records)
+
+**Totalt:** 97 Omsorg+ records (opp fra 73)
+
+#### Timeline Metadata Fix
+
+Korrigert counts:
+- strategic_events: 12 → 10
+- operational_events: 27 → 22
+- total_events: 32 (ny)
+
+#### Notion Sync Results
+
+```
+Databases: 12 (opp fra 8)
+Records: 549 (26 created, 523 updated)
+Errors: 0
+```
+
+**Nye Notion database IDs:**
+- Omsorg+ Concept: `2c720392-ef5b-8161-a42f-ca77d2935211`
+- Omsorg+ Floors: `2c720392-ef5b-8166-ba9b-c08246111743`
+- Omsorg+ Units: `2c720392-ef5b-8181-94b9-c9481e7699fa`
+- Omsorg+ Facilities: `2c720392-ef5b-8122-be31-c8817eef06a3`
+- Omsorg+ Compliance: `2c720392-ef5b-81ac-b15e-d12582a5ee1f`
+
+---
+
 ## [2.81.0] - 2025-12-08
 
 ### Phase 59: Data Integrity & Konseptskisse Analysis

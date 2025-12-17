@@ -21,7 +21,14 @@
         "pages": 18,
         "type": "LCA Report"
       }
-    ]
+    ],
+    "content_classification": {
+      "type": "deliverable_content",
+      "deliverable_id": "d_sustainability_analysis",
+      "deliverable_version": "3.0",
+      "source_document": "Vill Energi reports (Energikartlegging + Klimagassberegninger)",
+      "is_primary_source": false
+    }
   },
   "executive_summary": {
     "recommendation": "Rehabilitering (Scenario 2) eller Påbygg (Scenario 3)",

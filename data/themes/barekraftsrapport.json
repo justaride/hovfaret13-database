@@ -8,7 +8,14 @@
     "status": "UTKAST",
     "total_pages": 83,
     "source_file": "Bærekraftsrapport - Hovfaret 13.pdf",
-    "image_folder": "assets/reports/barekraftsrapport-utkast"
+    "image_folder": "assets/reports/barekraftsrapport-utkast",
+    "content_classification": {
+      "type": "deliverable_content",
+      "deliverable_id": "d_barekraftsrapport",
+      "deliverable_version": "1.0",
+      "source_document": "Bærekraftsrapport - Hovfaret 13.pdf",
+      "is_primary_source": false
+    }
   },
 
   "executive_summary": {

@@ -7,7 +7,14 @@
     "author": "Natural State / R21 Arkitekter / Urbania Eiendom",
     "date": "2025-09-04",
     "total_pages": 113,
-    "image_folder": "assets/konseptskisser/v1-sept-2025"
+    "image_folder": "assets/konseptskisser/v1-sept-2025",
+    "content_classification": {
+      "type": "deliverable_content",
+      "deliverable_id": "d_konseptskisse_1",
+      "deliverable_version": "1.0",
+      "source_document": "Konseptskisse September 2025",
+      "is_primary_source": false
+    }
   },
 
   "structure": {

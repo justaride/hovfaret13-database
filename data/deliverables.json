@@ -2,11 +2,12 @@
   "metadata": {
     "version": "1.1",
     "created": "2025-12-03",
-    "last_updated": "2025-12-07",
+    "last_updated": "2025-12-12",
     "description": "Project deliverables for Hovfaret 13 transformation",
     "source": "Notion Export - integrated December 2025",
     "total_deliverables": 37,
-    "verification_note": "Counts verified 2025-12-07 - corrected from erroneous 75"
+    "verification_note": "Counts verified 2025-12-07 - corrected from erroneous 75",
+    "enrichment_note": "Assigned responsible persons and added Norwegian titles."
   },
   "summary": {
     "total": 37,
@@ -132,10 +133,18 @@
         "start": "2025-10-06",
         "end": "2025-10-14"
       },
-      "responsible": ["linda_marie_aas", "kamran_surizehi"],
+      "responsible": [
+        "linda_marie_aas",
+        "kamran_surizehi"
+      ],
       "importance": "critical",
-      "linked_meetings": ["m_2025-10-14_nabolagsmote_hovfaret"],
-      "linked_timeline_events": ["o_023", "s_011"]
+      "linked_meetings": [
+        "m_2025-10-14_nabolagsmote_hovfaret"
+      ],
+      "linked_timeline_events": [
+        "o_023",
+        "s_011"
+      ]
     },
     {
       "id": "d_002",
@@ -146,7 +155,10 @@
         "start": "2025-09-03",
         "end": "2025-09-23"
       },
-      "responsible": ["kamran_surizehi"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Planlegging nabolagsmøte"
     },
     {
       "id": "d_003",
@@ -158,7 +170,9 @@
         "start": "2025-09-03",
         "end": "2025-09-16"
       },
-      "responsible": ["kamran_surizehi"]
+      "responsible": [
+        "kamran_surizehi"
+      ]
     },
     {
       "id": "d_004",
@@ -169,7 +183,11 @@
         "start": "2025-09-03",
         "end": "2025-09-12"
       },
-      "responsible": ["linda_marie_aas", "kamran_surizehi"]
+      "responsible": [
+        "linda_marie_aas",
+        "kamran_surizehi"
+      ],
+      "title_no": "Presentasjon nabolagsmøte"
     },
     {
       "id": "d_005",
@@ -179,7 +197,11 @@
       "dates": {
         "end": "2025-09-29"
       },
-      "responsible": ["kamran_surizehi", "linda_marie_aas"]
+      "responsible": [
+        "kamran_surizehi",
+        "linda_marie_aas"
+      ],
+      "title_no": "Heng opp invitasjoner"
     },
     {
       "id": "d_006",
@@ -190,8 +212,13 @@
         "start": "2025-09-11",
         "end": "2025-09-12"
       },
-      "responsible": ["kamran_surizehi"],
-      "related_organizations": ["r21_arkitekter"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "related_organizations": [
+        "r21_arkitekter"
+      ],
+      "title_no": "Plansjer til Temastasjon - R21"
     },
     {
       "id": "d_007",
@@ -202,8 +229,11 @@
         "start": "2025-10-15",
         "end": "2025-10-15"
       },
-      "responsible": ["kamran_surizehi"],
-      "importance": "high"
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "importance": "high",
+      "title_no": "Oppsummering nabolagsmøte"
     },
     {
       "id": "d_008",
@@ -214,7 +244,10 @@
         "start": "2025-10-13",
         "end": "2025-10-20"
       },
-      "responsible": []
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Samle innspill nabolagsmøte"
     },
     {
       "id": "d_009",
@@ -226,8 +259,13 @@
         "start": "2025-09-05",
         "end": "2025-09-29"
       },
-      "responsible": ["linda_marie_aas", "kamran_surizehi"],
-      "related_organizations": ["parabol"],
+      "responsible": [
+        "linda_marie_aas",
+        "kamran_surizehi"
+      ],
+      "related_organizations": [
+        "parabol"
+      ],
       "url": "https://hovfaret13.no"
     },
     {
@@ -239,8 +277,13 @@
         "start": "2025-09-08",
         "end": "2025-09-15"
       },
-      "responsible": ["kamran_surizehi"],
-      "related_organizations": ["parabol"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "related_organizations": [
+        "parabol"
+      ],
+      "title_no": "Landing page før nabolagsmøtet"
     },
     {
       "id": "d_011",
@@ -251,28 +294,40 @@
         "start": "2025-09-15",
         "end": "2025-10-06"
       },
-      "responsible": ["kamran_surizehi"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Kommunikasjonsstrategi"
     },
     {
       "id": "d_012",
       "title": "Lage 4 artikler og publisere før jul",
       "category": "cat_02",
       "status": "not_started",
-      "responsible": ["kamran_surizehi"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Lage 4 artikler og publisere før jul"
     },
     {
       "id": "d_013",
       "title": "Facebook side",
       "category": "cat_03",
       "status": "completed",
-      "responsible": []
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Facebook side"
     },
     {
       "id": "d_014",
       "title": "Instagram - Meta",
       "category": "cat_03",
       "status": "completed",
-      "responsible": []
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Instagram - Meta"
     },
     {
       "id": "d_015",
@@ -283,7 +338,10 @@
         "start": "2025-10-15",
         "end": "2025-10-15"
       },
-      "responsible": ["kamran_surizehi"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Post SoMe Hovfaret kanaler"
     },
     {
       "id": "d_016",
@@ -294,14 +352,21 @@
         "start": "2025-10-15",
         "end": "2025-10-15"
       },
-      "responsible": ["kamran_surizehi", "severin_docker"]
+      "responsible": [
+        "kamran_surizehi",
+        "severin_docker"
+      ],
+      "title_no": "Post SoMe Natural State / NCC"
     },
     {
       "id": "d_017",
       "title": "1 post i mnd",
       "category": "cat_03",
       "status": "in_progress",
-      "responsible": []
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "1 post i mnd"
     },
     {
       "id": "d_018",
@@ -312,7 +377,10 @@
         "start": "2025-09-08",
         "end": "2025-10-01"
       },
-      "responsible": ["kamran_surizehi"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Leietakersamtaler"
     },
     {
       "id": "d_019",
@@ -320,7 +388,9 @@
       "title_no": "Forklare at man nå går rett til steg 2 (bruksendring for omsorg+)",
       "category": "cat_04",
       "status": "completed",
-      "responsible": []
+      "responsible": [
+        "kamran_surizehi"
+      ]
     },
     {
       "id": "d_020",
@@ -328,14 +398,19 @@
       "title_no": "Presisere at deres 5-årskontrakter fortsatt gjelder",
       "category": "cat_04",
       "status": "completed",
-      "responsible": []
+      "responsible": [
+        "kamran_surizehi"
+      ]
     },
     {
       "id": "d_021",
       "title": "Rekruttering temporære leietakere",
       "category": "cat_04",
       "status": "not_started",
-      "responsible": []
+      "responsible": [
+        "andreas_thorsnes"
+      ],
+      "title_no": "Rekruttering temporære leietakere"
     },
     {
       "id": "d_022",
@@ -346,10 +421,17 @@
         "start": "2025-10-30",
         "end": "2025-11-07"
       },
-      "responsible": [],
-      "related_organizations": ["byggesaksradgivning"],
+      "responsible": [
+        "thomas_thorsen"
+      ],
+      "related_organizations": [
+        "byggesaksradgivning"
+      ],
       "importance": "critical",
-      "linked_timeline_events": ["o_026"]
+      "linked_timeline_events": [
+        "o_026"
+      ],
+      "title_no": "Bruksendringssøknad"
     },
     {
       "id": "d_023",
@@ -359,7 +441,10 @@
       "dates": {
         "end": "2025-11-07"
       },
-      "responsible": ["kamran_surizehi"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Rammeinnsendelse"
     },
     {
       "id": "d_024",
@@ -370,8 +455,13 @@
         "start": "2025-10-16",
         "end": "2025-10-16"
       },
-      "responsible": [],
-      "linked_timeline_events": ["o_024"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "linked_timeline_events": [
+        "o_024"
+      ],
+      "title_no": "Nabovarsel sendt"
     },
     {
       "id": "d_025",
@@ -382,9 +472,18 @@
         "start": "2025-09-09",
         "end": "2025-12-01"
       },
-      "responsible": [],
+      "responsible": [
+        "thomas_thorsen"
+      ],
       "importance": "high",
-      "linked_timeline_events": ["o_027"]
+      "linked_timeline_events": [
+        "o_027"
+      ],
+      "theme_content_files": [
+        "themes/konseptskisse.json",
+        "themes/konseptskisse-2.0-tillegg.json"
+      ],
+      "title_no": "Konseptskisse 2.0"
     },
     {
       "id": "d_026",
@@ -395,7 +494,10 @@
         "start": "2025-09-21",
         "end": "2025-10-06"
       },
-      "responsible": []
+      "responsible": [
+        "gabriel_boen"
+      ],
+      "title_no": "Bærekrafts-kalkyle"
     },
     {
       "id": "d_027",
@@ -406,7 +508,10 @@
         "start": "2025-09-09",
         "end": "2025-12-21"
       },
-      "responsible": []
+      "responsible": [
+        "einar_holthe"
+      ],
+      "title_no": "Stedsøkonomisk prognose 2.0"
     },
     {
       "id": "d_028",
@@ -417,16 +522,26 @@
         "start": "2025-09-09",
         "end": "2025-11-16"
       },
-      "responsible": [],
-      "related_organizations": ["nordic_circle_hotspot"]
+      "responsible": [
+        "severin_docker"
+      ],
+      "related_organizations": [
+        "nordic_circle_hotspot"
+      ],
+      "title_no": "Teoretisk prosjektering NCC"
     },
     {
       "id": "d_029",
       "title": "Gjøre klart Omsorg+",
       "category": "cat_08",
       "status": "not_started",
-      "responsible": [],
-      "related_stakeholders": ["bydel_ullern"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "related_stakeholders": [
+        "bydel_ullern"
+      ],
+      "title_no": "Gjøre klart Omsorg+"
     },
     {
       "id": "d_030",
@@ -437,21 +552,30 @@
         "start": "2025-10-27",
         "end": "2025-11-10"
       },
-      "responsible": []
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Medvirkningsrapport"
     },
     {
       "id": "d_031",
       "title": "Påmelding nabolagsmøtet",
       "category": "cat_08",
       "status": "completed",
-      "responsible": []
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Påmelding nabolagsmøtet"
     },
     {
       "id": "d_032",
       "title": "Bank finansiering",
       "category": "cat_09",
       "status": "not_started",
-      "responsible": []
+      "responsible": [
+        "andreas_thorsnes"
+      ],
+      "title_no": "Bank finansiering"
     },
     {
       "id": "d_033",
@@ -461,7 +585,10 @@
       "dates": {
         "end": "2025-10-16"
       },
-      "responsible": []
+      "responsible": [
+        "andreas_thorsnes"
+      ],
+      "title_no": "Bankmøte"
     },
     {
       "id": "d_034",
@@ -472,7 +599,10 @@
         "start": "2025-10-13",
         "end": "2025-11-03"
       },
-      "responsible": []
+      "responsible": [
+        "gabriel_boen"
+      ],
+      "title_no": "Kartlegge finansiering og støtteordninger"
     },
     {
       "id": "d_035",
@@ -482,23 +612,36 @@
       "dates": {
         "end": "2025-10-29"
       },
-      "responsible": ["kamran_surizehi"],
-      "linked_timeline_events": ["o_025"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "linked_timeline_events": [
+        "o_025"
+      ],
+      "title_no": "Bydelsutvalgsmøte"
     },
     {
       "id": "d_036",
       "title": "Grunneierforum OMA møte",
       "category": "cat_10",
       "status": "completed",
-      "responsible": ["kamran_surizehi"]
+      "responsible": [
+        "kamran_surizehi"
+      ],
+      "title_no": "Grunneierforum OMA møte"
     },
     {
       "id": "d_037",
       "title": "Merkevareplattform - Parabol",
       "category": "cat_11",
       "status": "completed",
-      "responsible": [],
-      "related_organizations": ["parabol"]
+      "responsible": [
+        "linda_marie_aas"
+      ],
+      "related_organizations": [
+        "parabol"
+      ],
+      "title_no": "Merkevareplattform - Parabol"
     }
   ],
   "responsible_summary": [
@@ -507,21 +650,30 @@
       "name": "Kamran Surizehi",
       "organization": "natural_state",
       "deliverables_count": 35,
-      "primary_categories": ["cat_01", "cat_02", "cat_03"]
+      "primary_categories": [
+        "cat_01",
+        "cat_02",
+        "cat_03"
+      ]
     },
     {
       "person_id": "linda_marie_aas",
       "name": "Linda Marie Aas",
       "organization": "natural_state",
       "deliverables_count": 15,
-      "primary_categories": ["cat_01", "cat_02"]
+      "primary_categories": [
+        "cat_01",
+        "cat_02"
+      ]
     },
     {
       "person_id": "severin_docker",
       "name": "Severin Døcker",
       "organization": "natural_state",
       "deliverables_count": 2,
-      "primary_categories": ["cat_03"]
+      "primary_categories": [
+        "cat_03"
+      ]
     }
   ],
   "key_milestones": [
@@ -531,35 +683,49 @@
       "milestone": "Nettside lansering",
       "milestone_no": "hovfaret13.no lansert",
       "status": "completed",
-      "linked_deliverables": ["d_009", "d_010"]
+      "linked_deliverables": [
+        "d_009",
+        "d_010"
+      ]
     },
     {
       "id": "km_02",
       "date": "2025-10-14",
       "milestone": "Nabolagsmøte",
       "status": "completed",
-      "linked_deliverables": ["d_001", "d_002", "d_003", "d_004"]
+      "linked_deliverables": [
+        "d_001",
+        "d_002",
+        "d_003",
+        "d_004"
+      ]
     },
     {
       "id": "km_03",
       "date": "2025-10-16",
       "milestone": "Nabovarsel sendt",
       "status": "completed",
-      "linked_deliverables": ["d_024"]
+      "linked_deliverables": [
+        "d_024"
+      ]
     },
     {
       "id": "km_04",
       "date": "2025-11-07",
       "milestone": "Bruksendringssøknad",
       "status": "in_progress",
-      "linked_deliverables": ["d_022"]
+      "linked_deliverables": [
+        "d_022"
+      ]
     },
     {
       "id": "km_05",
       "date": "2025-12-01",
       "milestone": "Konseptskisse 2.0 ferdig",
       "status": "completed",
-      "linked_deliverables": ["d_025"]
+      "linked_deliverables": [
+        "d_025"
+      ]
     }
   ]
 }

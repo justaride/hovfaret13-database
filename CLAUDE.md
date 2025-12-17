@@ -1,8 +1,8 @@
 # CLAUDE.md - Project Instructions for Claude Code
 
-## Project: Hovfaret 13 Data Consolidation v2.81
+## Project: Hovfaret 13 Data Consolidation v2.83
 
-Real estate transformation project database. Version 2.81, Phase 59.
+Real estate transformation project database. Version 2.83, Phase 62.
 
 **Auth:** Password `h13-skøyen-2025` (24h localStorage session)
 
@@ -18,14 +18,16 @@ Real estate transformation project database. Version 2.81, Phase 59.
 
 | Data | Count |
 |------|-------|
-| Meetings | 70 |
+| Meetings | 59 |
 | Documents | 271 |
 | People | 23 |
 | Organizations | 16 |
 | Deliverables | 37 (verifisert) |
-| Timeline events | 39 (12 strategic + 27 operational) |
+| Timeline events | 32 (10 strategic + 22 operational) |
 | Dashboard pages | 37 (all auth-protected) |
 | Project duration | 21 months |
+| Notion databases | 12 |
+| Notion records | 538 |
 
 ## Project Structure
 
@@ -34,7 +36,7 @@ data/
 ├── config.json           # Central config - single source of truth
 ├── project.json          # Building, phases, scenarios
 ├── timeline.json         # Multi-layer timeline (strategic/operational)
-├── meetings.json         # 70 meetings with summaries/outcomes
+├── meetings.json         # 59 meetings with summaries/outcomes
 ├── documents.json        # 271 documents categorized
 ├── stakeholders/
 │   ├── organizations.json (16 orgs)
@@ -56,6 +58,52 @@ dashboard/
 2. **Single source of truth** - Don't duplicate data across files
 3. **Iterative dashboard** - Build one component at a time, verify before next
 4. **Norwegian context** - Project is in Oslo, many terms are Norwegian
+
+## Data Boundary Rules
+
+**Project Data** vs **Deliverable Content** are strictly separated:
+
+| Type | Files | Rule |
+|------|-------|------|
+| **Project Data** | meetings.json, timeline.json, stakeholders/, deliverables.json, config.json | Immutable project history - never modified by deliverable updates |
+| **Deliverable Content** | themes/konseptskisse*.json, themes/barekraftsrapport.json, themes/sustainability.json, themes/omsorg-plus.json | Extracted content from presentations/reports |
+| **Process Data** | themes/sustainability-journey.json, themes/regulatory.json | Project process records (flagged as project_data) |
+
+### Content Classification
+
+All theme files have `metadata.content_classification`:
+```json
+"content_classification": {
+  "type": "deliverable_content",  // or "project_data"
+  "deliverable_id": "d_025",       // null for project_data
+  "deliverable_version": "2.0",
+  "source_document": "Document name",
+  "is_primary_source": false
+}
+```
+
+### Rules for New Deliverables
+
+When creating content for a new deliverable (e.g., Konseptskisse 3.0):
+
+1. **Create new theme file** - `themes/konseptskisse-3.0.json`
+2. **Add content_classification** - type: `deliverable_content`, link to deliverable ID
+3. **Update deliverables.json** - add `theme_content_files` reference
+4. **Never modify project data** - meetings, timeline, stakeholders stay unchanged
+5. **Update config.json reference** - point `konseptskisse_ref.current_version` to new version
+
+## Notion Sync
+
+```bash
+cd notion-sync
+npm run sync        # Full sync to Notion
+npm run sync:dry    # Preview changes
+```
+
+12 databases synced:
+- Organizations (16), People (23), Meetings (59), Documents (271)
+- Timeline (32), Deliverables (37), Sustainability (3)
+- Omsorg+ Concept (1), Floors (7), Units (73), Facilities (11), Compliance (5)
 
 ## Source Data Locations
 
