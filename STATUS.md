@@ -1,14 +1,46 @@
 # Project Status
 
-**Last Updated:** 2025-12-17
-**Dashboard Version:** 2.84
-**Status:** ✅ Phase 63 COMPLETE - Data Boundary Implementation
+**Last Updated:** 2025-12-22
+**Dashboard Version:** 2.85
+**Status:** ✅ Phase 64 COMPLETE - Meeting Report System
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 **Auth Password:** `h13-skøyen-2025`
 
 ---
 
 ## Current Phase
+
+**Phase 64: Meeting Report System ✅ COMPLETE**
+
+Lagt til nytt møte (19.12.2025) med dedikert møterapport-side.
+
+### Endringer
+
+| Fil | Endring |
+|-----|---------|
+| meetings.json | Nytt møte #60: Strategimøte - Nordic Circular Construction |
+| config.json | Møtetelling: 59 → 60 |
+| moete-2025-12-19.html | Ny møterapport-side med full transkripsjon |
+
+### Møte 19.12.2025 - Nøkkelpunkter
+
+| Tema | Beslutning |
+|------|-----------|
+| Nordic Circular Construction | H13 bekreftet som pilotprosjekt |
+| FRAVIK-strategi | Valgt fremfor dispensasjon |
+| Utleie | Arkitekter flytter ut mars, "Aktiviteter" → "Utleie" |
+| Priskalkyle | Bevist: transformasjon kan være billigere (38M → 22M) |
+
+### Ny dashboard-side
+
+- `moete-2025-12-19.html` - Møterapport med:
+  - Sammendrag og nøkkelpunkter
+  - Beslutninger og oppfølgingsoppgaver
+  - Relevante linker (plassholdere)
+  - Sammenleggbar rå transkripsjon
+  - Print-optimalisert layout
+
+---
 
 **Phase 63: Data Boundary Implementation ✅ COMPLETE**
 

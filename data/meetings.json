@@ -1,11 +1,12 @@
 {
   "metadata": {
-    "version": "2.76",
+    "version": "2.84",
     "created": "2025-11-21",
-    "last_updated": "2025-12-07",
+    "last_updated": "2025-12-20",
     "description": "Meeting records for Hovfaret 13 project",
-    "total_meetings": 70,
-    "enrichment_note": "Added summary and outcomes fields based on report.summary, decisions, and action_items"
+    "total_meetings": 60,
+    "enrichment_note": "Outcomes derived from decisions, action_items, and summary text.",
+    "cleanup_note": "Data quality cleanup phase 62 - removed duplicates, non-meetings, fixed corrupt data, added types"
   },
   "meetings": [
     {
@@ -121,14 +122,15 @@
         "Sirkulære prinsipper skal gjennomsyre hele prosjektet",
         "Oppgave: Dokumentere biologisk mangfold på tomten (Eirik)",
         "Oppgave: Lage skjøtselsplan for våtmarksystem (Eirik)"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2023-11-24_urbania_prosjekt_oppstart",
       "date": "2023-11-24",
       "title": "Møte Urbania - Prosjekt oppstart og gjennomgang",
       "organizer": "gabriel@naturalstate.no",
-      "location": "Ukjent",
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -163,14 +165,19 @@
           "consolidated_date": "2025-12-02"
         }
       },
-      "summary": "Oppstartsmøte for Hovfaret 13-prosjektet med Urbania Eiendom. Gjennomgang av prosjektmuligheter og etablering av samarbeid."
+      "summary": "Oppstartsmøte for Hovfaret 13-prosjektet med Urbania Eiendom. Gjennomgang av prosjektmuligheter og etablering av samarbeid.",
+      "outcomes": [
+        "Oppstartsmøte for Hovfaret 13-prosjektet med Urbania Eiendom",
+        "Gjennomgang av prosjektmuligheter og etablering av samarbeid"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-02-21_strategisk_avklaring_konseptskisse",
       "date": "2024-02-21",
       "title": "Strategisk Avklaring og Konseptskisse Hovfaret",
       "organizer": "gabriel@naturalstate.no",
-      "location": "Ukjent",
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -205,7 +212,11 @@
           "consolidated_date": "2025-12-02"
         }
       },
-      "summary": "Strategisk møte for å avklare retning og starte arbeidet med konseptskisse for Hovfaret 13."
+      "summary": "Strategisk møte for å avklare retning og starte arbeidet med konseptskisse for Hovfaret 13.",
+      "outcomes": [
+        "Strategisk møte for å avklare retning og starte arbeidet med konseptskisse for Hovfaret 13"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-03-11_urbania_hovfaret_13_konseptskisse_1_0",
@@ -354,156 +365,16 @@
         "Natural State har hovedansvar for interessentkartlegging og kommunikasjonsstrategi",
         "Oppgave: Workshop med kjerneprosjektteam",
         "Oppgave: Befaring og fotografering av Hovfaret 13"
-      ]
-    },
-    {
-      "id": "m_2024-03-11__11_mars_2024",
-      "date": "2024-03-11",
-      "title": "MØTE  11 MARS 2024",
-      "organizer": null,
-      "location": null,
-      "participant_count": 3,
-      "participants": [
-        {
-          "name": "Andreas",
-          "organization": "Urbania Eiendom AS",
-          "email": "andreas@urbania.no"
-        },
-        {
-          "name": "Einar",
-          "organization": "Natural State AS",
-          "email": "einar@naturalstate.no"
-        },
-        {
-          "name": "Gabriel",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        }
       ],
-      "data_quality_note": "Participants reconstructed from duplicate meeting entry",
-      "action_items": [
-        "Workshop med kjerneprosjektteam",
-        "Befaring og fotografering av Hovfaret 13",
-        "Utvikle detaljert prosjekttidslinje",
-        "Identifisere raske gevinster og aktiveringsstrategier"
-      ],
-      "topics_discussed": [
-        "Demonstrere prosjektets verdi (miljø, samfunn, økonomi)",
-        "Regulatoriske utfordringer og godkjenninger",
-        "Interessentengasjement og kommunikasjon",
-        "Tekniske og designmessige hensyn"
-      ],
-      "decisions": [
-        "Prosjektet skal fokusere på å få politikerne til å endre områdeplanen gjennom overbevisende bærekraftsargumentasjon",
-        "R21 Arkitekter skal involveres tett i konseptutvikling",
-        "Natural State har hovedansvar for interessentkartlegging og kommunikasjonsstrategi"
-      ],
-      "report_link": "data/polished_notes/2024-03-11_m_2024-03-11__11_mars_2024_POLISHED.md",
-      "report_metadata": {
-        "word_count": 356,
-        "matched_from_note": "MØTE  11 MARS   2024.md",
-        "match_date": "2025-11-22T10:28:28.248150",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "original_report_link": "data/restructured_notes/2024-03-11_MØTE  11 MARS   2024.md",
-      "report": {
-        "summary": "Dette er prosjektets første offisielle møte, der Natural State og Urbania Eiendom initierer arbeidet med å utfordre rivningskravet i områdeplanen for Skøyen. Møtet definerer kjernestrateg: å få politikerne til å instruere endringer i områdeplanen gjennom å presentere transformasjon av Hovfaret 13 som et banebrytende bærekraftsprosjekt. Det ble identifisert fem hovedarbeidsområder: verdidemonstrasjon, regulatorisk navigering, interessentengasjement, teknisk analyse, og prosjektplanlegging.",
-        "topics": [
-          "Demonstrere prosjektets verdi (miljø, samfunn, økonomi)",
-          "Regulatoriske utfordringer og godkjenninger",
-          "Interessentengasjement og kommunikasjon",
-          "Tekniske og designmessige hensyn"
-        ],
-        "discussion": [
-          {
-            "heading": "### Overordnet strategi",
-            "content": "Nøkkelen til å drive prosjektet fremover ble identifisert som å få politikerne til å instruere endringer i områdeplanen for Skøyen, spesielt å fjerne rivningsordren for Hovfaret 13. Det er avgjørende å målrette de riktige beslutningstakerne - primært bystyrets avdeling som eier plan- og bygningsetaten.\n\nStrategien skal fokusere på å presentere en overbevisende sak som samsvarer med politikernes uttalte bærekraftsambisjoner. Prosjektet posisjoneres som et mulig flaggskip for Oslo kommunes klimamål."
-          },
-          {
-            "heading": "1. Demonstrere prosjektets verdi",
-            "content": "Teamet diskuterte hvordan prosjektet skal fremheve:\n- Miljømessige, sosiale og økonomiske fordeler ved gjenbruk fremfor riving og nybygg\n- Potensielle kostnadsbesparelser og redusert CO₂-påvirkning ved å bevare eksisterende bygning\n- Prosjektet som et banebrytende eksempel på bærekraftig bytransformasjon som politikere kan fronte\n\nHovfaret 13 har et unikt utgangspunkt: bygget ble i 1989 designet og fundamentert for 12 etasjer, men kun 5 ble bygget. Dette betyr at vertikal utvidelse kan skje uten ny fundamentering, noe som gir betydelige miljøgevinster."
-          },
-          {
-            "heading": "2. Regulatoriske utfordringer og godkjenninger",
-            "content": "Teamet identifiserte behovet for å navigere i et komplekst og delvis motstridende regulatorisk landskap, inkludert områdeplanen, byggeforskrifter og reguleringsbestemmelser.\n\nViktige spørsmål som må avklares:\n- Prosessen for å endre bygningens bruk (fra næring til bolig)\n- Spesifikke krav for hver brukstype\n- Muligheter for en fleksibel, blandet brukstilnærming som tillater tilpasning over tid"
-          },
-          {
-            "heading": "3. Interessentengasjement og kommunikasjon",
-            "content": "Det ble diskutert viktigheten av å identifisere og engasjere nøkkelinteressenter som kan påvirke beslutningsprosessen:\n- Lokale politikere (særlig i Ullern bydel)\n- Planmyndigheter i Oslo kommune\n- Lokalsamfunnsledere og nabolag\n\nEn målrettet kommunikasjonsstrategi skal utvikles for å bygge støtte til prosjektet, med vekt på samsvar med interessentenes prioriteringer og den bredere visjonen for Skøyen.\n\nTeamet vurderte å utnytte medieoppmerksomhet og offentlig opinion for å skape en følelse av hastverk og momentum bak prosjektet."
-          },
-          {
-            "heading": "4. Tekniske og designmessige hensyn",
-            "content": "Natural State og Urbania ble enige om å:\n- Gjennomføre detaljert analyse av eksisterende bygningsstruktur, infrastruktur og potensial for vertikal utvidelse\n- Utforske innovative designløsninger som optimaliserer bruk av plass, inkorporerer grønne teknologier og skaper et fleksibelt, tilpasningsdyktig miljø\n- Samarbeide tett med arkitektteamet (R21 Arkitekter) for å raffinere konseptet og sikre gjennomførbarhet og samsvar med forskrifter"
-          },
-          {
-            "heading": "5. Neste steg og tidslinje",
-            "content": "Teamet planla følgende umiddelbare aktiviteter:\n- Workshop med kjerneprosjektteamet (Urbania Eiendom, R21 Arkitekter, Natural State) for å videreutvikle konsept og strategi\n- Befaring og fotografering for å dokumentere eksisterende forhold\n- Utvikle detaljert prosjekttidslinje med milepæler, beslutningspunkter og interessentaktiviteter\n- Identifisere potensielle raske gevinster og midlertidige aktiveringsstrategier"
-          }
-        ],
-        "decisions": [
-          "Prosjektet skal fokusere på å få politikerne til å endre områdeplanen gjennom overbevisende bærekraftsargumentasjon",
-          "R21 Arkitekter skal involveres tett i konseptutvikling",
-          "Natural State har hovedansvar for interessentkartlegging og kommunikasjonsstrategi"
-        ],
-        "action_items": [
-          {
-            "task": "Workshop med kjerneprosjektteam",
-            "responsible": "Gabriel (Natural State)",
-            "deadline": "April 2024"
-          },
-          {
-            "task": "Befaring og fotografering av Hovfaret 13",
-            "responsible": "Teamet",
-            "deadline": "April 2024"
-          },
-          {
-            "task": "Utvikle detaljert prosjekttidslinje",
-            "responsible": "Natural State",
-            "deadline": "April 2024"
-          },
-          {
-            "task": "Identifisere raske gevinster og aktiveringsstrategier",
-            "responsible": "Natural State & Urbania",
-            "deadline": "Q2 2024"
-          }
-        ],
-        "quotes": [
-          "Nøkkelen til å drive prosjektet fremover er å få politikerne til å instruere endringer i områdeplanen for Skøyen, spesielt å fjerne rivningsordren."
-        ],
-        "context": "Dette møtet markerer prosjektstart for det som vil bli en omfattende mobilisering mot Oslo kommunes rivningskrav. Hovfaret 13 står overfor krav om riving i henhold til Områderegulering Skøyen vedtatt september 2023, som krever 10 meters setback fra Hoffselva.\n\nProsjektet argumenterer for at rehabilitering gir 48% lavere CO₂-utslipp sammenlignet med riving og nybygg (456 vs 631 kg CO₂-ekv/m² BTA), basert på at fundamentet allerede er dimensjonert for 12 etasjer.\n\nDette er starten på en 18-måneders prosess som vil involvere teknisk dokumentasjon, politisk lobbyvirksomhet, og utvikling av scenariet \"Omsorg+\" - omgjøring til omsorgsboliger med 3 etasjer påbygg.\n\n---\n*Renskrevet: 2025-11-22*\n*Basert på: 2024-03-11_MØTE  11 MARS   2024.md*\n*Møte-ID: m_2024-03-11__11_mars_2024*",
-        "metadata": {
-          "word_count": 734,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion",
-            "decisions",
-            "action_items",
-            "quotes",
-            "context"
-          ],
-          "has_full_report": true
-        }
-      },
-      "summary": "Dette er prosjektets første offisielle møte, der Natural State og Urbania Eiendom initierer arbeidet med å utfordre rivningskravet i områdeplanen for Skøyen. Møtet definerer kjernestrateg: å få politikerne til å instruere endringer i områdeplanen gjennom å presentere transformasjon av Hovfaret 13 som et banebrytende bærekraftsprosjekt. Det ble identifisert fem hovedarbeidsområder: verdidemonstrasjon, regulatorisk navigering, interessentengasjement, teknisk analyse, og prosjektplanlegging.",
-      "outcomes": [
-        "Prosjektet skal fokusere på å få politikerne til å endre områdeplanen gjennom overbevisende bærekraftsargumentasjon",
-        "R21 Arkitekter skal involveres tett i konseptutvikling",
-        "Natural State har hovedansvar for interessentkartlegging og kommunikasjonsstrategi",
-        "Oppgave: Workshop med kjerneprosjektteam",
-        "Oppgave: Befaring og fotografering av Hovfaret 13"
-      ]
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-04-03_urbania_leveransem_te_konsepskisse_og_st",
       "date": "2024-04-03",
       "title": "Urbania - Leveransemøte Konsepskisse og Strategi Hovfaret 13.",
       "organizer": "einar@naturalstate.no",
-      "location": null,
-      "participant_count": 4,
+      "location": "Ikke spesifisert",
+      "participant_count": 7,
       "participants": [
         {
           "name": "Einar",
@@ -524,143 +395,7 @@
           "name": "Thomas",
           "organization": "R21 Arkitekter AS",
           "email": "thomas@r21.no"
-        }
-      ],
-      "action_items": [
-        "Ferdigstille konseptskisse med utviklingsscenarier",
-        "Utvikle kommunikasjonsstrategi",
-        "Gjennomføre place-analyse (200m radius)",
-        "Gjennomgå områdereguleringen detaljert",
-        "Avtale nytt møtetidspunkt"
-      ],
-      "topics_discussed": [
-        "Områdeplanens motsetninger",
-        "Verdi versus rivekrav",
-        "Områdeplanens målsetninger versus realitet",
-        "Mål, ambisjoner og premisser for utviklingen",
-        "Strategisk kommunikasjon"
-      ],
-      "decisions": [
-        "Prosjektet skal posisjonere seg mot områdeplanens målsetninger og vise at transformasjon bidrar bedre enn riving",
-        "Place-analyse skal gjennomføres for å dokumentere nabolagstilhørighet",
-        "CO₂-beregninger skal gjøres for å kvantifisere bærekraftsgevinsten"
-      ],
-      "report_link": "data/polished_notes/2024-04-03_m_unknown_date_notat_hva_skal_vi_mles_mot_POLISHED.md",
-      "report_metadata": {
-        "word_count": 402,
-        "people_mentioned": [],
-        "organizations_mentioned": [],
-        "extraction_date": "2025-11-20T16:03:21.785278",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "original_report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE  3  April 2024 .md",
-      "report": {
-        "summary": "Dette strategiske arbeidsdokumentet artikulerer kjerneargumentasjonen mot rivningskravet i områdeplanen for Skøyen. Notatet strukturerer hovedargumentene rundt fem temaer: områdeplanens indre motsetninger, byggets eksisterende verdi, gapet mellom politiske ambisjoner og realitet, bærekraftige utviklingsmål, og kommunikasjonsstrategi. Dokumentet introduserer også behovet for en place-analyse for å dokumentere nabolagets tilhørighet til bygget.",
-        "topics": [
-          "Områdeplanens motsetninger",
-          "Verdi versus rivekrav",
-          "Områdeplanens målsetninger versus realitet",
-          "Mål, ambisjoner og premisser for utviklingen",
-          "Strategisk kommunikasjon"
-        ],
-        "discussion": [
-          {
-            "heading": "### Områdeplanens motsetninger",
-            "content": "Den gjeldende områdereguleringen for Skøyen krever riving av bygget i Hovfaret 13. Dette står i fundamental kontrast til byggets fleksibilitet og potensial for adaptiv gjenbruk.\n\n**Sentralt argument:** Bygget ble opprinnelig designet og prosjektert med tanke på fremtidige påbygg og endringer, inkludert bæreevne for flere etasjer - en bærekraftig tankegang som nå risikeres kastet bort. Dette representerer en iboende motsetning i planverket: Oslo kommune krever riving av et bygg som i seg selv er et eksempel på fremtidsrettet, bærekraftig bygging."
-          },
-          {
-            "heading": "Verdi versus rivekrav",
-            "content": "Notatet dokumenterer byggets nåværende økonomiske verdi:\n\n**Økonomiske nøkkeltall:**\n- Årlige leieinntekter: ca. 7,1 millioner kroner (budsjett var 10 millioner)\n- Leiepris: 1.750 kr per m² + felleskostnader\n- Ca. 800 m² står ledig (ved tidspunkt for notat)\n\n**Argumentasjon:** Å rive dette bygget er i strid med moderne prinsipper for bærekraftig byutvikling og sirkulær økonomi. Det representerer betydelige miljømessige, sosiale og økonomiske kostnader som ikke er tatt hensyn til i områdeplanen."
-          },
-          {
-            "heading": "Områdeplanens målsetninger versus realitet",
-            "content": "Notatet identifiserer et betydelig gap mellom politisk besluttede visjoner for flere boliger i Skøyen-området og realiteten for å nå disse målene. Dagens planer gir ifølge notatet mulighet for kun ca. 1.200 boliger, langt under områdets potensial.\n\n**Foreslått løsning:** En ny place-analyse som skal kartlegge:\n- Hvem bor innenfor 200 meter?\n- Hvem har tilhørighet til bygget som en del av et nabolag?\n- Områdets identitet og historie (referanser til Holm, Møllhausen bakeri)\n- Områdets sosiale karakteristikk (\"Området er historisk sett ikke et høystatus området\")"
-          },
-          {
-            "heading": "Mål, ambisjoner og premisser for utviklingen",
-            "content": "Notatet argumenterer for at bevaring og transformasjon av Hovfaret 13 kan bidra til fire hovedområder:\n\n**1. Stedsidentitet**\n- Bygget representerer en viktig del av områdets historie\n- Kan styrke stedets identitet gjennom transformasjon\n- Bidrar til kontinuitet i nabolaget\n\n**2. Bærekraft og sirkulær økonomi**\nKritiske spørsmål som må besvares:\n- Hvilken modell skal brukes for CO₂-beregning?\n- Hva har samfunnet spart i klimautslipp ved å bevare bygget?\n- Risikoanalyse for konsekvenser ved inngrep i elveleiet (Hoffselva)\n\n**3. Fleksibilitet og fremtidsrettet bruk**\n- Byggets evne til å tilpasse seg skiftende behov over tid\n- Potensial for påbygg og utvidelse (fundamentert for 12 etasjer)\n- Muligheter for blandet bruk (bolig, næring, kultur, omsorg)\n\n**4. Alternativer til rivning**\nNotatet skisserer fire alternativer, der alternativ 4 (riving) fremheves som ikke-bærekraftig:\n1. Transformasjon med bevaring av eksisterende struktur\n2. Gjenbruk med nye funksjoner\n3. Utvidelse av eksisterende bygg\n4. Riving - fremheves som ikke-bærekraftig (foreslås visualisert med \"rødt kryss - gif kollaps av bygg?\")"
-          },
-          {
-            "heading": "Strategisk kommunikasjon",
-            "content": "For å lykkes med å få endret rivningskravet identifiseres fire hovedgrep:\n\n1. Utvikle målrettede argumenter for ulike interessenter\n2. Bygge allianser med andre aktører i området\n3. Skape overbevisende argumentasjon basert på byggets iboende verdi\n4. Fremheve prosjektet som et potensielt referanseprosjekt for bærekraftig byutvikling"
-          },
-          {
-            "heading": "Neste steg",
-            "content": "Notatet lister fire umiddelbare oppgaver:\n\n1. Ferdigstille konseptskissen med ulike utviklingsscenarier\n2. Utvikle kommunikasjonsstrategi\n3. Gjennomføre ny place-analyse\n4. Avtale nytt møtetidspunkt for videre arbeid med prosjektet"
-          }
-        ],
-        "decisions": [
-          "Prosjektet skal posisjonere seg mot områdeplanens målsetninger og vise at transformasjon bidrar bedre enn riving",
-          "Place-analyse skal gjennomføres for å dokumentere nabolagstilhørighet",
-          "CO₂-beregninger skal gjøres for å kvantifisere bærekraftsgevinsten"
-        ],
-        "action_items": [
-          {
-            "task": "Ferdigstille konseptskisse med utviklingsscenarier",
-            "responsible": "Natural State & R21",
-            "deadline": "April 2024"
-          },
-          {
-            "task": "Utvikle kommunikasjonsstrategi",
-            "responsible": "Natural State",
-            "deadline": "Q2 2024"
-          },
-          {
-            "task": "Gjennomføre place-analyse (200m radius)",
-            "responsible": "Natural State",
-            "deadline": "Q2 2024"
-          },
-          {
-            "task": "Gjennomgå områdereguleringen detaljert",
-            "responsible": "Natural State",
-            "deadline": "April 2024"
-          },
-          {
-            "task": "Avtale nytt møtetidspunkt",
-            "responsible": "Gabriel",
-            "deadline": "Umiddelbart"
-          }
-        ],
-        "quotes": [
-          "Hva skal vi måles mot?",
-          "Vi snakker om et bygg som er fleksibelt. Det er bygd og prosjektert for utvikling. Fortiden beregnet inn det økte behovet. Det var bærekraftig... skal man kaste bort det verdifulle i det?",
-          "Hva har samfunnet spart i klimautslipp ved å bevare bygget?"
-        ],
-        "context": "Dette notatet representerer et viktig strategisk dokument tidlig i prosjektet (ca. 3 uker etter første møte). Det viser hvordan argumentasjonslinjen formes:\n\n1. **Fra defensiv til offensiv posisjon:** I stedet for å bare forsvare mot rivning, posisjoneres prosjektet som et bidrag til områdets mål.\n\n2. **Kvantifisering av verdier:** Notatet identifiserer behovet for konkrete tall - både økonomiske (leieinntekter) og miljømessige (CO₂-beregninger).\n\n3. **Place-analyse som verktøy:** Introduksjon av stedsanalyse som dokumentasjonsmetode, noe som senere blir sentralt i prosjektet.\n\n4. **Historisk kontekst:** Bevissthet om områdets sosiale historie (\"ikke høystatus området\") som grunnlag for argumentasjon.\n\nNotatet er skrevet i en blanding av renskrevet tekst og stikkord/tankekart-format, noe som indikerer at det er et arbeidsdokument under utvikling.",
-        "metadata": {
-          "word_count": 893,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion",
-            "decisions",
-            "action_items",
-            "quotes",
-            "context"
-          ],
-          "has_full_report": true
-        }
-      },
-      "summary": "Dette strategiske arbeidsdokumentet artikulerer kjerneargumentasjonen mot rivningskravet i områdeplanen for Skøyen. Notatet strukturerer hovedargumentene rundt fem temaer: områdeplanens indre motsetninger, byggets eksisterende verdi, gapet mellom politiske ambisjoner og realitet, bærekraftige utviklingsmål, og kommunikasjonsstrategi. Dokumentet introduserer også behovet for en place-analyse for å dokumentere nabolagets tilhørighet til bygget.",
-      "outcomes": [
-        "Prosjektet skal posisjonere seg mot områdeplanens målsetninger og vise at transformasjon bidrar bedre enn riving",
-        "Place-analyse skal gjennomføres for å dokumentere nabolagstilhørighet",
-        "CO₂-beregninger skal gjøres for å kvantifisere bærekraftsgevinsten",
-        "Oppgave: Ferdigstille konseptskisse med utviklingsscenarier",
-        "Oppgave: Utvikle kommunikasjonsstrategi"
-      ]
-    },
-    {
-      "id": "m_2024-04-03__3_april_2024_",
-      "date": "2024-04-03",
-      "title": "MØTE  3  April 2024 ",
-      "organizer": null,
-      "location": "Hovfaret 13",
-      "participant_count": 3,
-      "participants": [
+        },
         {
           "name": "Gabriel Bøen",
           "organization": "Natural State AS",
@@ -802,7 +537,8 @@
         "CO₂-beregninger skal gjøres for å kvantifisere bærekraftsgevinsten",
         "Oppgave: Ferdigstille konseptskisse med utviklingsscenarier",
         "Oppgave: Utvikle kommunikasjonsstrategi"
-      ]
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2024-05-06_hovfaret_13_med_r21",
@@ -941,151 +677,15 @@
         "Utviklingen skal planlegges trinnvis for å redusere risiko og demonstrere verdi underveis",
         "Oppgave: Kontakte Kristian angående detaljer om sikker skolevei",
         "Oppgave: Utarbeide formelt innspill til områdeplanen"
-      ]
-    },
-    {
-      "id": "m_2024-05-06__6_mai_2024",
-      "date": "2024-05-06",
-      "title": "MØTE  6  MAI 2024",
-      "organizer": null,
-      "location": "St. Halvards gate 33, Oslo",
-      "participant_count": 3,
-      "participants": [
-        {
-          "name": "Einar",
-          "organization": "Natural State AS",
-          "email": "einar@naturalstate.no"
-        },
-        {
-          "name": "Thomas",
-          "organization": "R21 Arkitekter AS",
-          "email": "thomas@r21.no"
-        },
-        {
-          "name": "Gabriel",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        }
       ],
-      "data_quality_note": "Participants reconstructed from duplicate meeting entry",
-      "action_items": [
-        "Kontakte Kristian angående detaljer om sikker skolevei",
-        "Utarbeide formelt innspill til områdeplanen",
-        "Utvikle konsept for samfunnsfunksjoner",
-        "Kartlegge potensielle brukere (idrettslag, foreninger, utdanningsinstitusjoner)"
-      ],
-      "topics_discussed": [
-        "Utdanningstilbud og samfunnsfunksjoner",
-        "Transformasjon fra Områdetype 2 til Områdetype 1",
-        "Bevaring av grøntområder",
-        "Innspill mot områdeplan"
-      ],
-      "decisions": [
-        "Hovfaret 13 skal posisjoneres som et multifunksjonelt samfunnsknutepunkt, ikke bare et eiendomsprosjekt",
-        "Innspill til områdeplanen skal inkludere reklassifisering fra Områdetype 2 til Områdetype 1",
-        "Utviklingen skal planlegges trinnvis for å redusere risiko og demonstrere verdi underveis"
-      ],
-      "report_link": "data/polished_notes/2024-05-06_m_2024-05-06__6_mai_2024_POLISHED.md",
-      "report_metadata": {
-        "word_count": 300,
-        "matched_from_note": "MØTE  6  MAI   2024.md",
-        "match_date": "2025-11-22T10:28:28.248148",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "original_report_link": "data/restructured_notes/2024-05-06_MØTE  6  MAI   2024.md",
-      "report": {
-        "summary": "Dette møtet markerer en viktig utvidelse av prosjektvisjonen: fra primært å fokusere på bærekraftig transformasjon til å posisjonere Hovfaret 13 som et multifunksjonelt samfunnsknutepunkt. Natural State og R21 utforsker hvordan bygget kan tilby utdanningstilbud, møtelokaler for lokalsamfunnet, og sikre skoleveier. Møtet introduserer også strategien om reklassifisering fra Områdetype 2 til Områdetype 1 for å muliggjøre mer fleksibel bruk. Sentrale temaer er bevaring av grøntområder, trinnvis realisering, og posisjonering av Hovfaret 13 som \"det bankende hjertet\" i området.",
-        "topics": [
-          "Utdanningstilbud og samfunnsfunksjoner",
-          "Transformasjon fra Områdetype 2 til Områdetype 1",
-          "Bevaring av grøntområder",
-          "Innspill mot områdeplan"
-        ],
-        "discussion": [
-          {
-            "heading": "### Utdanningstilbud og samfunnsfunksjoner",
-            "content": "Møtet identifiserte unikt potensial for Hovfaret 13 som samfunnsinfrastruktur på Skøyen:\n\n**Skoletilbud**\nBygget kan tilby arealer for utdanningsinstitusjoner:\n- Mulighet for ungdomsskole i transformerte lokaler\n- Seniorakademi som kunnskapssenter for eldre innbyggere\n- Nærhet til eksisterende skoler med mulighet for gangvei\n\nDette representerer en ny tematisk retning: I tillegg til bolig og næring, introduseres utdanning som en mulig bruksfunksjon. Særlig interessant er konseptet \"Seniorakademi\", som kan knyttes til den senere utviklede \"Omsorg+\"-scenarioet for eldreboliger.\n\n**Sikker skolevei**\nDet ble diskutert hvordan Hovfaret 13 kan spille en rolle i trafikktryggheten for barn:\n- Utvikling av bilfri gangvei til nærliggende skoler\n- Kristian [?] har detaljert informasjon om dette\n- Trygg bevegelse for barn prioriteres i utviklingen\n- Fokus på trafikksikkerhet og tilgjengelighet\n\n**Møtelokaler for lokalsamfunnet**\nBygget kan tilby:\n- Egnede lokaler for idrettslag og foreninger\n- Tilknytningspunkt for Vestre Aker (notatet nevner at \"Høyre har møter i området\")\n- Flerbrukslokaler for kulturelle arrangementer\n\nDette viser en tidlig bevissthet om nabolagsfunksjoner og sosial infrastruktur som mangler i Skøyen-området."
-          },
-          {
-            "heading": "Transformasjon fra Områdetype 2 til Områdetype 1",
-            "content": "**Dagens situasjon:**\n- Bygget er klassifisert som Områdetype 2 i gjeldende områdeplan for Skøyen\n\n**Ønsket endring:**\n- Reklassifisering til Områdetype 1\n- Dette muliggjør mer fleksibel og variert bruk\n- Skaper grunnlag for blandede funksjoner (bolig, næring, kultur, utdanning)\n\nDette er første gang reklassifiseringsstrategien nevnes eksplisitt i møtenotatene. Områdetype 1 gir større fleksibilitet i bruk og høyere utnyttelsesgrad, noe som er avgjørende for prosjektets økonomiske bærekraft."
-          },
-          {
-            "heading": "Bevaring av grøntområder",
-            "content": "Teamet diskuterte hvordan nåværende områdeplan paradoksalt nok vil medføre tap av grøntarealer ved utvikling (fordi rivning og nybygg krever 10m setback fra Hoffselva, noe som reduserer tilgjengelig grøntareal).\n\n**Alternative løsninger:**\n- Justert plassering av bygg for å bevare mer grøntareal\n- Integrering av grønne elementer i eksisterende struktur\n- Fokus på tilgjengelighet til Hoffselva uten å rive bygget\n\nDette argumentet vil senere bli sentralt i bærekraftsargumentasjonen: Rivning truer faktisk grønne kvaliteter, ikke bevarer dem."
-          },
-          {
-            "heading": "Innspill mot områdeplan",
-            "content": "Møtet definerte fem hovedpunkter som må fremheves i formelt innspill til områdeplanen:\n\n1. **Hovfaret 13 som urban katalysator** og ankerpunkt for revitalisering av Skøyen\n2. **Byggets potensial som multifunksjonelt sentrum** for lokalmiljøet\n3. **Bærekraftsaspektet** ved transformasjon kontra riving (CO₂, materialbruk, sirkulær økonomi)\n4. **Bevaring av grønne kvaliteter** gjennom tilpasset utvikling\n5. **Økte samfunnsverdier** ved blandet bruk (bolig, næring, kultur, utdanning)\n\nDisse fem punktene utgjør kjernen i den argumentasjonen som vil presenteres for Oslo kommune."
-          },
-          {
-            "heading": "Trinnvis realisering",
-            "content": "For første gang diskuteres en faseinndelt utviklingsstrategi:\n\n**Fase 1:** Transformasjon av eksisterende kontorer\n- Oppgradering av energisystemer\n- Tilrettelegging for nye leietakere\n- Forbedring av fasiliteter\n\n**Fase 2:** Utvikling av møteplasser og samfunnsfunksjoner\n- Etablering av flerbrukslokaler\n- Tilrettelegging for kulturarrangementer\n- Etablering av utdanningstilbud (seniorakademi?)\n\n**Fase 3:** Eventuell utvidelse med påbygg for flere funksjoner\n- Vertikal utvidelse (utnytting av at bygget er fundamentert for 12 etasjer)\n- Tilføring av nye bruksområder (bolig, omsorg?)"
-          }
-        ],
-        "decisions": [
-          "Hovfaret 13 skal posisjoneres som et multifunksjonelt samfunnsknutepunkt, ikke bare et eiendomsprosjekt",
-          "Innspill til områdeplanen skal inkludere reklassifisering fra Områdetype 2 til Områdetype 1",
-          "Utviklingen skal planlegges trinnvis for å redusere risiko og demonstrere verdi underveis"
-        ],
-        "action_items": [
-          {
-            "task": "Kontakte Kristian angående detaljer om sikker skolevei",
-            "responsible": "Gabriel/Einar",
-            "deadline": "Mai 2024"
-          },
-          {
-            "task": "Utarbeide formelt innspill til områdeplanen",
-            "responsible": "Natural State & R21",
-            "deadline": "Q2 2024"
-          },
-          {
-            "task": "Utvikle konsept for samfunnsfunksjoner",
-            "responsible": "R21",
-            "deadline": "Q2 2024"
-          },
-          {
-            "task": "Kartlegge potensielle brukere (idrettslag, foreninger, utdanningsinstitusjoner)",
-            "responsible": "Natural State",
-            "deadline": "Q2 2024"
-          }
-        ],
-        "quotes": [
-          "Dette skaper en helhetlig stedsidentitet der Hovfaret 13 blir det bankende hjertet i området med aktiviteter, innovasjon og møteplasser som tjener lokalsamfunnet."
-        ],
-        "context": "Dette møtet representerer en viktig dreining i prosjektets narrativ:\n\n**Fra eiendomsutvikling til samfunnsutvikling:** Møtet flytter fokus fra primært \"spare bygget fra riving\" til \"skape samfunnsverdi for Skøyen-området\". Dette gjør argumentasjonen langt mer offensiv og positiv.\n\n**Introduksjon av utdanning som bruks-kategori:** For første gang nevnes utdanningstilbud (ungdomsskole, seniorakademi). Dette viser at teamet tenker bredt om hvordan bygget kan møte faktiske behov i området.\n\n**Faseinndeling som risikostrategi:** Trinnvis realisering gjør prosjektet mindre skremmende for reguleringsmyndigheter og viser at utbygger tenker langsiktig.\n\n**Politisk posisjonering:** Referansen til Vestre Aker og lokale politiske møter viser bevissthet om at prosjektet må bygge politisk støtte.\n\n**Grønt paradoks:** Argumentet om at rivning faktisk reduserer grøntareal (på grunn av setback-krav) er smart retorikk som snur områdeplanens begrunnelse på hodet.\n\nDette møtet viser at prosjektet modnes fra en reaktiv posisjon (mot riving) til en proaktiv visjon (for samfunnsutvikling).\n\n---\n*Renskrevet: 2025-11-22*\n*Basert på: 2024-05-06_MØTE  6  MAI   2024.md*\n*Møte-ID: m_2024-05-06__6_mai_2024*",
-        "metadata": {
-          "word_count": 864,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion",
-            "decisions",
-            "action_items",
-            "quotes",
-            "context"
-          ],
-          "has_full_report": true
-        }
-      },
-      "summary": "Dette møtet markerer en viktig utvidelse av prosjektvisjonen: fra primært å fokusere på bærekraftig transformasjon til å posisjonere Hovfaret 13 som et multifunksjonelt samfunnsknutepunkt. Natural State og R21 utforsker hvordan bygget kan tilby utdanningstilbud, møtelokaler for lokalsamfunnet, og sikre skoleveier. Møtet introduserer også strategien om reklassifisering fra Områdetype 2 til Områdetype 1 for å muliggjøre mer fleksibel bruk. Sentrale temaer er bevaring av grøntområder, trinnvis realisering, og posisjonering av Hovfaret 13 som \"det bankende hjertet\" i området.",
-      "outcomes": [
-        "Hovfaret 13 skal posisjoneres som et multifunksjonelt samfunnsknutepunkt, ikke bare et eiendomsprosjekt",
-        "Innspill til områdeplanen skal inkludere reklassifisering fra Områdetype 2 til Områdetype 1",
-        "Utviklingen skal planlegges trinnvis for å redusere risiko og demonstrere verdi underveis",
-        "Oppgave: Kontakte Kristian angående detaljer om sikker skolevei",
-        "Oppgave: Utarbeide formelt innspill til områdeplanen"
-      ]
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2024-06-03_hovfaret_13_stand_up_",
       "date": "2024-06-03",
       "title": "Hovfaret 13 Stand Up ",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -1120,7 +720,11 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Kort intern koordineringsmøte for å synkronisere arbeidet mellom Einar og Gabriel på Hovfaret 13-prosjektet."
+      "summary": "Kort intern koordineringsmøte for å synkronisere arbeidet mellom Einar og Gabriel på Hovfaret 13-prosjektet.",
+      "outcomes": [
+        "Kort intern koordineringsmøte for å synkronisere arbeidet mellom Einar og Gabriel på Hovfaret 13-prosjektet"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-06-27_strategimøte_urbania/natural_s",
@@ -1179,7 +783,13 @@
         "polished": true
       },
       "time": "13:00-14:30",
-      "summary": "Presentasjon av forbedret og revidert konseptskisse (versjon 2.0) som bygget på feedback fra første versjon. Møtet markerte en iterativ utvikling av transformasjonsideen."
+      "summary": "Presentasjon av forbedret og revidert konseptskisse (versjon 2.0) som bygget på feedback fra første versjon. Møtet markerte en iterativ utvikling av transformasjonsideen.",
+      "outcomes": [
+        "Presentasjon av forbedret og revidert konseptskisse (versjon 2",
+        "0) som bygget på feedback fra første versjon",
+        "Møtet markerte en iterativ utvikling av transformasjonsideen"
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2024-06-27_sirkular_okonomi_strategi",
@@ -1262,14 +872,15 @@
         "Prosjektet posisjoneres som mulig katalysator for sirkulær områdeutvikling",
         "Oppgave: Ferdigstille slides om sirkulær økonomi (Gabriel)",
         "Oppgave: Innarbeide sirkulære prinsipper i konseptskisse (Natural State)"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-09-03_urbania_baerekraft_introduksjon",
       "date": "2024-09-03",
       "title": "Urbania Eiendom - Bærekraft og videre bruk, byggenæringen - Introduksjon",
       "organizer": "gabriel@naturalstate.no",
-      "location": "Ukjent",
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -1304,14 +915,18 @@
           "consolidated_date": "2025-12-02"
         }
       },
-      "summary": "Introduksjonsmøte om bærekraft og videre bruk av bygg, med fokus på Hovfaret 13s plass i dette perspektivet."
+      "summary": "Introduksjonsmøte om bærekraft og videre bruk av bygg, med fokus på Hovfaret 13s plass i dette perspektivet.",
+      "outcomes": [
+        "Introduksjonsmøte om bærekraft og videre bruk av bygg, med fokus på Hovfaret 13s plass i dette perspektivet"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-09-09_l_renveien_hovfaret_13",
       "date": "2024-09-09",
       "title": "Lørenveien + Hovfaret 13",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -1350,7 +965,12 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Intern koordineringsmøte mellom Einar og Gabriel for å diskutere status på både Lørenveien og Hovfaret 13-prosjektene. Natural State jobbet med flere prosjekter samtidig og trengte å koordinere ressurser."
+      "summary": "Intern koordineringsmøte mellom Einar og Gabriel for å diskutere status på både Lørenveien og Hovfaret 13-prosjektene. Natural State jobbet med flere prosjekter samtidig og trengte å koordinere ressurser.",
+      "outcomes": [
+        "Intern koordineringsmøte mellom Einar og Gabriel for å diskutere status på både Lørenveien og Hovfaret 13-prosjektene",
+        "Natural State jobbet med flere prosjekter samtidig og trengte å koordinere ressurser"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-09-19_laara_gabriel_a_closer_look_hovfaret_13",
@@ -1410,14 +1030,15 @@
         "Laara ble involvert i kommunikasjonsarbeidet",
         "Start på planlegging av kommunikasjonsstrategi",
         "Nettsideutvikling skulle påbegynnes"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-09-24_laara_gabriel_urbania_hovfaret_13_coms_t",
       "date": "2024-09-24",
       "title": "Laara / Gabriel URBANIA HOVFARET 13 COMS TALK ?",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 2,
       "participants": [
         {
@@ -1456,7 +1077,12 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Oppfølgingsmøte etter møtet 19. september. Laara og Gabriel fortsatte planleggingen av kommunikasjonsstrategien og nettsideutviklingen."
+      "summary": "Oppfølgingsmøte etter møtet 19. september. Laara og Gabriel fortsatte planleggingen av kommunikasjonsstrategien og nettsideutviklingen.",
+      "outcomes": [
+        "Oppfølgingsmøte etter møtet 19",
+        "Laara og Gabriel fortsatte planleggingen av kommunikasjonsstrategien og nettsideutviklingen"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-09-27_urbania_r21_natural_state_hovfaret_13",
@@ -1533,7 +1159,8 @@
         "Starte planlegging av interessentdialog",
         "R21s tegninger godkjent for videre arbeid",
         "Strategi for ekstern engasjement etablert"
-      ]
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2024-10-15_hovfaret_13_oppf_lging_",
@@ -1612,7 +1239,11 @@
           "has_full_report": false
         }
       },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
+      "outcomes": [
+        "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2024-10-31_hovfaret_13_nettside_workshop_",
@@ -1678,14 +1309,15 @@
       "outcomes": [
         "Oppgave: Utvikle første utkast til nettside",
         "Oppgave: Samle innhold og bilder"
-      ]
+      ],
+      "type": "Workshop"
     },
     {
       "id": "m_2024-11-06_rask_avklaring_hovfaret_13_elementer_",
       "date": "2024-11-06",
       "title": "Rask Avklaring . Hovfaret 13 elementer ",
       "organizer": "",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 1,
       "participants": [
         {
@@ -1713,14 +1345,19 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Gabriel satte av tid til intern avklaring og koordinering av ulike elementer i prosjektet. Solo arbeidsmøte for å strukturere videre arbeid."
+      "summary": "Gabriel satte av tid til intern avklaring og koordinering av ulike elementer i prosjektet. Solo arbeidsmøte for å strukturere videre arbeid.",
+      "outcomes": [
+        "Gabriel satte av tid til intern avklaring og koordinering av ulike elementer i prosjektet",
+        "Solo arbeidsmøte for å strukturere videre arbeid"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-11-12_hovfaret_13_website_framework_",
       "date": "2024-11-12",
       "title": "Hovfaret 13 Website  ( framework ) ",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 3,
       "participants": [
         {
@@ -1773,14 +1410,15 @@
       "outcomes": [
         "Oppgave: Implementere teknisk løsning",
         "Oppgave: Sette opp domene"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-11-27__27_november_24",
       "date": "2024-11-27",
-      "title": "MØTE  27 November 24",
+      "title": "Hovfaret 13 - Statusmøte november",
       "organizer": null,
-      "location": null,
+      "location": "Hovfaret 13",
       "participant_count": 3,
       "participants": [
         {
@@ -1887,7 +1525,8 @@
       "summary": "Møtereferat - Hovfaret 13: Utviklingsstrategi og reguleringsforhold",
       "outcomes": [
         "Oppgave: srom:"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-12-03_hovfaret_ncc_ombruk",
@@ -1959,14 +1598,15 @@
         "NCC-kobling skal følges opp",
         "Oppgave: Følge opp ombrukskartlegging (Gabriel)",
         "Oppgave: Avklare lab-leietaker interesse (Gabriel)"
-      ]
+      ],
+      "type": "Telefonsamtale"
     },
     {
       "id": "m_2024-12-09_h13_presentation_3",
       "date": "2024-12-09",
       "title": "H13 Presentation #3",
       "organizer": "gabriel@naturalstate.no",
-      "location": "Ukjent",
+      "location": "Hovfaret 13",
       "participant_count": 3,
       "participants": [
         {
@@ -2006,14 +1646,18 @@
           "consolidated_date": "2025-12-02"
         }
       },
-      "summary": "Tredje formelle presentasjon av Hovfaret 13-prosjektet, sannsynligvis med oppdatering på konseptutvikling og fremdrift."
+      "summary": "Tredje formelle presentasjon av Hovfaret 13-prosjektet, sannsynligvis med oppdatering på konseptutvikling og fremdrift.",
+      "outcomes": [
+        "Tredje formelle presentasjon av Hovfaret 13-prosjektet, sannsynligvis med oppdatering på konseptutvikling og fremdrift"
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2024-12-10_snakke_med_akt_r_for_1_etg_hovfaret_13_",
       "date": "2024-12-10",
       "title": "Snakke med Aktør for 1 etg  Hovfaret 13 - ",
       "organizer": "",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 1,
       "participants": [
         {
@@ -2047,7 +1691,12 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Gabriel hadde samtale med potensielle aktører for servering/kafédrift i byggets første etasje. Dette var del av strategien om å skape levende førsteetasjer med fellesfunksjoner."
+      "summary": "Gabriel hadde samtale med potensielle aktører for servering/kafédrift i byggets første etasje. Dette var del av strategien om å skape levende førsteetasjer med fellesfunksjoner.",
+      "outcomes": [
+        "Gabriel hadde samtale med potensielle aktører for servering/kafédrift i byggets første etasje",
+        "Dette var del av strategien om å skape levende førsteetasjer med fellesfunksjoner"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2024-12-11_befaring_hovfaret_13_energikartlegging_m",
@@ -2124,7 +1773,8 @@
         "Trenger detaljert analyse for bærekraftsdokumentasjon",
         "Oppgave: Petter (Vill Energi) leverer rapport innen 14 dager",
         "Oppgave: Energiberegninger for transformasjon vs. nybygg"
-      ]
+      ],
+      "type": "Befaring"
     },
     {
       "id": "m_2024-12-18_trym_vill_energi_tilbud",
@@ -2193,7 +1843,8 @@
         "Enova-støtte skal søkes for energikartlegging",
         "Oppgave: Vurdere Vill Energi tilbud (Trym/Gabriel)",
         "Oppgave: Søke Enova om støtte (Gabriel)"
-      ]
+      ],
+      "type": "Telefonsamtale"
     },
     {
       "id": "m_2024-12-19_oppf_lging_og_status_m_te_veien_videre_h",
@@ -2265,14 +1916,18 @@
           "has_full_report": false
         }
       },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
+      "outcomes": [
+        "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025-01-08_hovfaret_13",
       "date": "2025-01-08",
       "title": "Strategisk Årsmøte med Knut Halvor - Hovfaret 13",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 3,
       "participants": [
         {
@@ -2451,7 +2106,7 @@
       "date": "2025-01-09",
       "title": "Status Hovfaret 13 web",
       "organizer": "laara@naturalstate.no",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 2,
       "participants": [
         {
@@ -2485,14 +2140,18 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Statusmøte organisert av Laara for å gå gjennom nettsideutviklingen og holde momentum i nettsidearbeidet."
+      "summary": "Statusmøte organisert av Laara for å gå gjennom nettsideutviklingen og holde momentum i nettsidearbeidet.",
+      "outcomes": [
+        "Statusmøte organisert av Laara for å gå gjennom nettsideutviklingen og holde momentum i nettsidearbeidet"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-01-10__hovfaret_13_leietaker_m_te_",
       "date": "2025-01-10",
       "title": " HOVFARET 13 - LEIETAKER MØTE ",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 5,
       "participants": [
         {
@@ -2606,7 +2265,8 @@
       "outcomes": [
         "Oppgave: Leietakerne inviteres til å dele logo og beskrivelse for nettsiden",
         "Oppgave: Oppfølgingsmøter planlegges individuelt med interesserte leietakere"
-      ]
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025-01-17_hovfaret_13_status_m_te_",
@@ -2614,7 +2274,7 @@
       "title": "Hovfaret 13 Status Møte ",
       "organizer": "gabriel@naturalstate.no",
       "location": "St. Halvards gate 33, 0192 Oslo, Norway",
-      "participant_count": 6,
+      "participant_count": 7,
       "participants": [
         {
           "name": "Andreas",
@@ -2645,12 +2305,23 @@
           "name": "Khh",
           "organization": "Bykon AS",
           "email": "khh@bykon.no"
+        },
+        {
+          "name": "Knut Halvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
         }
       ],
       "action_items": [
         "hos statsforvalteren"
       ],
-      "topics_discussed": [],
+      "topics_discussed": [
+        "Konseptskisse og presentasjon",
+        "Digital tilstedeværelse",
+        "Bærekraftsstrategi",
+        "Nåværende status",
+        "Arealoptimalisering"
+      ],
       "decisions": [],
       "report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE 17  Januar 25.md",
       "report_metadata": {
@@ -2750,162 +2421,15 @@
       "summary": "Prosessplan for Hovfaret 13 - 2025",
       "outcomes": [
         "Oppgave: hos statsforvalteren"
-      ]
-    },
-    {
-      "id": "m_2025-01-17_17_januar_25",
-      "date": "2025-01-17",
-      "title": "MØTE 17  Januar 25",
-      "organizer": null,
-      "location": "St. Halvards gate 33, Oslo",
-      "participant_count": 6,
-      "participants": [
-        {
-          "name": "Andreas",
-          "organization": "Urbania Eiendom AS",
-          "email": "andreas@urbania.no"
-        },
-        {
-          "name": "Thomas",
-          "organization": "R21 Arkitekter AS",
-          "email": "thomas@r21.no"
-        },
-        {
-          "name": "Knut Halvor",
-          "organization": "Natural State AS",
-          "email": "knuthalvor@naturalstate.no"
-        },
-        {
-          "name": "Andrea",
-          "organization": "R21 Arkitekter AS",
-          "email": "andrea@r21.no"
-        },
-        {
-          "name": "Gabriel",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Khh",
-          "organization": "Bykon AS",
-          "email": "khh@bykon.no"
-        }
       ],
-      "data_quality_note": "Participants reconstructed from duplicate meeting entry m_2025-01-17_hovfaret_13_status_m_te_",
-      "action_items": [
-        "hos statsforvalteren"
-      ],
-      "topics_discussed": [
-        "Konseptskisse og presentasjon",
-        "Digital tilstedeværelse",
-        "Bærekraftsstrategi",
-        "Nåværende status",
-        "Arealoptimalisering"
-      ],
-      "decisions": [],
-      "report_link": "/Users/gabrielboen/Library/CloudStorage/GoogleDrive-gabriel@naturalstate.no/My Drive/H13 Backup Process Nov 25/MIRO ting. MØTE RAPPORTER VIKTIG ER HER /MØTE 17  Januar 25.md",
-      "report_metadata": {
-        "enriched_date": "2025-12-01T20:42:05.787674",
-        "source_file": "MØTE 17  Januar 25.md",
-        "polished": true
-      },
-      "report": {
-        "summary": "Prosessplan for Hovfaret 13 - 2025",
-        "topics": [
-          "Konseptskisse og presentasjon",
-          "Digital tilstedeværelse",
-          "Bærekraftsstrategi",
-          "Nåværende status",
-          "Arealoptimalisering"
-        ],
-        "discussion": [
-          {
-            "heading": "Konseptskisse og presentasjon",
-            "content": "- Tilpasse konseptmaterialet til ulike interessentgrupper:\n- **Leietakere**: Fokus på virksomhetsutvikling og fremtidige muligheter\n- **Drivere**: Forretningskonsept og driftsmuligheter\n- **Politiske aktører**: Samfunnsnytte og bærekraftige løsninger"
-          },
-          {
-            "heading": "Digital tilstedeværelse",
-            "content": "- Lansering av prosjektnettside med:\n- Prosjektbeskrivelse og visjon\n- Representasjon av involverte aktører\n- Løpende oppdateringer og kontaktinformasjon\n- Dokumentasjon av bærekraftsarbeid"
-          },
-          {
-            "heading": "Bærekraftsstrategi",
-            "content": "- Utvikle helhetlig tilnærming til miljømessig og sosial bærekraft\n- Implementere ESRS-rapportering (European Sustainability Reporting Standards)\n- Dokumentere hvordan prosjektet bidrar positivt til områdets utvikling"
-          },
-          {
-            "heading": "Nåværende status",
-            "content": "- Ca. 50% av eksisterende leietakere har deltatt i første informasjonsmøte\n- Positiv respons fra deltakende leietakere\n- Behov for oppfølging med ikke-deltakende leietakere"
-          },
-          {
-            "heading": "Arealoptimalisering",
-            "content": "- Strategiutvikling for effektiv arealutnyttelse\n- Identifisere muligheter for sambruk og fellesfunksjoner\n- Utvikling av første etasje som aktiv sone med publikumsrettede funksjoner"
-          },
-          {
-            "heading": "Komplett interessentanalyse",
-            "content": "- Utvikle detaljert oversikt over alle relevante interessenter:\n- Nabolag og nærmiljø\n- Politiske aktører\n- Grunneiere og naboeiendomsbesittere\n- Potensielle nye brukere/leietakere"
-          },
-          {
-            "heading": "Planlagte møter",
-            "content": "- Nabolagsmøte planlagt i april:\n- Invitere naboer, grunneiere og lokale interessenter\n- Presentere visjoner og planer\n- Innhente innspill og etablere dialog"
-          },
-          {
-            "heading": "Bydelshus/skole synergi",
-            "content": "- Undersøke planer for nytt bydelshus og skole i området\n- Identifisere potensielle samarbeidsmuligheter\n- Vurdere om Hovfaret 13 kan dekke noen av behovene for disse funksjonene"
-          },
-          {
-            "heading": "Områdeplan og regulering",
-            "content": "- Følge opp status på områdeplanbehandling hos statsforvalteren\n- Innhente all relevant dokumentasjon fra tidligere prosesser\n- Forberede argumentasjon for ønsket utvikling"
-          },
-          {
-            "heading": "Strategiske partnere",
-            "content": "- Vurdere medlemskap i OMA for nettverksbygging\n- Etablere uformelle kommunikasjonskanaler med bydelen\n- Utvikle strategi for positiv politisk forankring"
-          },
-          {
-            "heading": "Energikartlegging",
-            "content": "- Systematisk innhenting av tidligere dokumentasjon\n- Koordinering med Vill Energi for gjennomgang\n- Knut Halvor koordinerer med tidligere kontakter\n- Utvikling av plan for energioptimalisering"
-          },
-          {
-            "heading": "Nordic Circular Construction",
-            "content": "- Utarbeide rammer for kontrakt\n- Sikre fokus på bærekraftige løsninger\n- Utvikle målbare kriterier og rapporteringsrutiner"
-          },
-          {
-            "heading": "Første etasje og utomhusplan",
-            "content": "- Utvikle konsept for aktiv og levende førsteetasje\n- Fokus på publikumsrettede aktiviteter\n- Integrering med omkringliggende utearealer\n- Etablere formell prosess for bruksendring"
-          },
-          {
-            "heading": "Kartlegging av mulige drivere",
-            "content": "- Identifisere potensielle kjøkkenaktører\n- Vurdere konseptmuligheter for serveringssted\n- Utforske muligheter for samarbeid med frivillige organisasjoner"
-          },
-          {
-            "heading": "7. Umiddelbare aksjoner (januar-februar)",
-            "content": "- Ferdigstille møteplan for februar\n- Planlegge individuelle møter med leietakere\n- Systematisk områdekartlegging\n- Etablere dialog med bydelen\n- Systematisere eksisterende dokumentasjon\n- Fremskaffe manglende informasjon om bygget"
-          },
-          {
-            "heading": "8. Langsiktige mål",
-            "content": "- Utvikle bærekraftig driftskonsept som sikrer økonomisk levedyktighet\n- Etablere prosjektet som en integrert del av lokalmiljøet\n- Skape positive synergier med omkringliggende utvikling\n- Oppnå balanse mellom kommersielle interesser og samfunnsansvar\n- Dokumentere prosjektets positive effekter på en transparent måte"
-          }
-        ],
-        "decisions": [],
-        "action_items": [
-          "Individuelle møter med hver enkelt leietaker for å kartlegge:",
-          "Nåværende behov og utfordringer",
-          "Fremtidige planer og ønsker",
-          "Muligheter for samarbeid og synergier",
-          "Arealbehov og fleksibilitet"
-        ],
-        "quotes": [],
-        "context": ""
-      },
-      "summary": "Prosessplan for Hovfaret 13 - 2025",
-      "outcomes": [
-        "Oppgave: hos statsforvalteren"
-      ]
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025-01-27_viderefakturering_hovfaret_13",
       "date": "2025-01-27",
       "title": "viderefakturering hovfaret 13",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -2941,14 +2465,19 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Kort møte mellom Gabriel og Kristian (økonomiansvarlig i Natural State) for å koordinere viderefakturering av kostnader relatert til Hovfaret 13-prosjektet. Dette var del av profesjonell prosjektstyring med tydelig skille mellom faglig og økonomisk ansvar."
+      "summary": "Kort møte mellom Gabriel og Kristian (økonomiansvarlig i Natural State) for å koordinere viderefakturering av kostnader relatert til Hovfaret 13-prosjektet. Dette var del av profesjonell prosjektstyring med tydelig skille mellom faglig og økonomisk ansvar.",
+      "outcomes": [
+        "Kort møte mellom Gabriel og Kristian (økonomiansvarlig i Natural State) for å koordinere viderefakturering av kostnader relatert til Hovfaret 13-prosjektet",
+        "Dette var del av profesjonell prosjektstyring med tydelig skille mellom faglig og økonomisk ansvar"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-02-04_urbania_knut_halvor",
       "date": "2025-02-04",
       "title": "URBANIA samtale med Knut Halvor",
       "organizer": "gabriel@naturalstate.no",
-      "location": "Ukjent",
+      "location": "Hovfaret 13",
       "participant_count": 3,
       "participants": [
         {
@@ -2987,7 +2516,11 @@
           "consolidated_date": "2025-12-02"
         }
       },
-      "summary": "Samtale med Knut Halvor Hansen fra Urbania om Hovfaret 13-prosjektet."
+      "summary": "Samtale med Knut Halvor Hansen fra Urbania om Hovfaret 13-prosjektet.",
+      "outcomes": [
+        "Samtale med Knut Halvor Hansen fra Urbania om Hovfaret 13-prosjektet"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-02-11_milj_risiko_kartlegging_hovfaret_13_i_sa",
@@ -3046,7 +2579,12 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Teknisk møte for å kartlegge miljørisiko og klimarisikoaspekter ved Hovfaret 13-transformasjonen. Knut Halvor Hansen fra BYKON ledet diskusjonen om risikovurdering i sammenheng med Vill Energis energikartlegging."
+      "summary": "Teknisk møte for å kartlegge miljørisiko og klimarisikoaspekter ved Hovfaret 13-transformasjonen. Knut Halvor Hansen fra BYKON ledet diskusjonen om risikovurdering i sammenheng med Vill Energis energikartlegging.",
+      "outcomes": [
+        "Teknisk møte for å kartlegge miljørisiko og klimarisikoaspekter ved Hovfaret 13-transformasjonen",
+        "Knut Halvor Hansen fra BYKON ledet diskusjonen om risikovurdering i sammenheng med Vill Energis energikartlegging"
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025-03-04_trym_einar_vill_energi",
@@ -3143,7 +2681,8 @@
         "Tre scenarier: ASIS, ASIS+3 etasjer, rive og bygge nytt",
         "Oppgave: Ringe Petter (Vill Energi) og avklare leveranser (Trym)",
         "Oppgave: Få nytt tilbud kun for energikartlegging og klimagassregnskap (Trym)"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-03-07_hovfaret_13_statusm_tet",
@@ -3151,7 +2690,7 @@
       "title": "Hovfaret 13 - Statusmøtet",
       "organizer": "gabriel@naturalstate.no",
       "location": "St. Halvards gate 33, 0192 Oslo, Norway",
-      "participant_count": 4,
+      "participant_count": 5,
       "participants": [
         {
           "name": "Einar",
@@ -3172,10 +2711,17 @@
           "name": "Andreas",
           "organization": "Urbania Eiendom AS",
           "email": "andreas@urbania.no"
+        },
+        {
+          "name": "Knut Halvor",
+          "organization": "Natural State AS",
+          "email": "knuthalvor@naturalstate.no"
         }
       ],
       "action_items": [],
-      "topics_discussed": [],
+      "topics_discussed": [
+        "Status og fremdrift i prosjektet"
+      ],
       "decisions": [],
       "report_link": "data/polished_notes/2025_03_07_m_unknown_date_detaljert_sammendrag_av_samtalen_om_skolebygget_POLISHED.md",
       "report_metadata": {
@@ -3217,198 +2763,11 @@
           "has_full_report": false
         }
       },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
-    },
-    {
-      "id": "m_2025-03-07_7_mars_25",
-      "date": "2025-03-07",
-      "title": "MØTE 7  Mars 25",
-      "organizer": null,
-      "location": "St. Halvards gate 33, Oslo",
-      "participant_count": 4,
-      "participants": [
-        {
-          "name": "Einar",
-          "organization": "Natural State AS",
-          "email": "einar@naturalstate.no"
-        },
-        {
-          "name": "Gabriel",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Knut Halvor",
-          "organization": "Natural State AS",
-          "email": "knuthalvor@naturalstate.no"
-        },
-        {
-          "name": "Andreas",
-          "organization": "Urbania Eiendom AS",
-          "email": "andreas@urbania.no"
-        }
+      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
+      "outcomes": [
+        "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
       ],
-      "topics_discussed": [
-        "Status og fremdrift i prosjektet"
-      ],
-      "data_quality_note": "Participants reconstructed from duplicate meeting entry m_2025-03-07_hovfaret_13_statusm_tet",
-      "action_items": [],
-      "decisions": [],
-      "report_link": "data/polished_notes/2025_03_07_m_2025-03-07_7_mars_25_POLISHED.md",
-      "report_metadata": {
-        "word_count": 488,
-        "matched_from_note": "MØTE 7  Mars  2025.md",
-        "match_date": "2025-11-22T10:28:28.204690",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "original_report_link": "data/restructured_notes/2025-03-07_MØTE 7  Mars  2025.md",
-      "report": {
-        "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
-        "topics": [
-          "Status og fremdrift i prosjektet"
-        ],
-        "discussion": [
-          {
-            "heading": "*[Original innhold følger - krever manuell renskrivning]*",
-            "content": ""
-          }
-        ],
-        "decisions": [],
-        "action_items": [],
-        "quotes": [],
-        "context": "",
-        "metadata": {
-          "word_count": 170,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion"
-          ],
-          "has_full_report": false
-        }
-      },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
-    },
-    {
-      "id": "m_unknown_date_detaljert_sammendrag_av_samtalen_om_skolebygget",
-      "date": "2025-03-07",
-      "title": "Detaljert sammendrag av samtalen om skolebygget",
-      "organizer": null,
-      "location": null,
-      "participant_count": 2,
-      "participants": [
-        {
-          "name": "Gabriel Bøen",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Trym",
-          "organization": "Natural State AS",
-          "email": "trym@naturalstate.no"
-        }
-      ],
-      "action_items": [],
-      "topics_discussed": [],
-      "decisions": [],
-      "report_link": "data/polished_notes/2025_03_07_m_unknown_date_detaljert_sammendrag_av_samtalen_om_skolebygget_POLISHED.md",
-      "report_metadata": {
-        "word_count": 582,
-        "source": "Downloaded meeting notes - auto-created",
-        "needs_review": true,
-        "created_date": "2025-11-22T10:28:28.204946",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
-      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  7 MARS   skoletomten.md",
-      "report": {
-        "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
-        "topics": [],
-        "discussion": [
-          {
-            "heading": "*[Original innhold følger - krever manuell renskrivning]*",
-            "content": "Representanten fra Oslobygg forklarer at de har jobbet med skoleprosjektet i ganske mange år, gjennom flere faser som konseptvalgsutredninger, skisseprosjekter og mulighetsstudier\\. Bestillingen for prosjektet har vært veldig stor med mange formål og et stort program som skal inn på tomten\\.\n\nHovedformålene for skolebygget inkluderer:\n\n- Skole \\(dette har vært hovedbestillingen og er lovpålagt\\)\n- Omsorgsboliger\n- Flerbrukshall\n- Deichman \\(bibliotek\\)\n\nProsjektet er komplisert av flere faktorer:\n\n1. Områdeplanen har lagt opp til et torg \\(Hoftorg\\) og en park, og forutsatt at:\n    - Trikketraséen skal flyttes\n    - Vende\\-snu\\-sirkelen for trikk skal fjernes\n    - Det tekniske bygget som ligger i midten skal bort\n2. Områdeplanen er vedtatt, men med flere innsigelser, og mange av forutsetningene for skoleprosjektet er usikre \\- spesielt parken \\(Hoffpark\\)\\.\n3. Det har vært en utredning om trikketraséen hos Plan og Bygg og Bymiljøetaten, men denne er ikke offentlig, så Oslobygg vet ikke hva konklusjonene er\\.\n4. Det er en &quot;målkonflikt&quot; i kommunen, der ulike etater vil forskjellige ting\\.\n5. Skolebarna skal ha et uteopphold, men dette er ganske begrenset mulighet for på tomten\\. Hoffpark har derfor vært en betingelse for at det skal kunne fungere, slik at man kan argumentere for et lavere uteopphold enn det som normen legger opp til\\.\n6. Oslobygg har forsøkt å få politikerne til å prioritere mellom de ulike formålene, men det har de ikke villet gjøre\\.\n7. Forprosjektet ble stoppet i mai, selv om det var så godt som ferdig, på grunn av høy risiko på det tekniske som ikke var tatt ut i &quot;andre enden&quot;\\.\n8. Det er nå satt i gang en ny konseptvalgsutredning hvor man revurderer de samme formålene på nytt, basert på kunnskapen om hva tomten faktisk har plass til\\.\n9. Utdanningsetaten er ansvarlig for denne utredningen, med Oslobygg som støtte med den tekniske kunnskapen de har\\.\n10. Den nye tilnærmingen er mer &quot;risiko\\-avers&quot; enn tidligere, spesielt med tanke på:\n    - Hvor dypt de kan gå i bakken\n    - Hvor høyt de skal utfordre områdereguleringen\n    - Tekniske forhold rundt tomten\n11. Arbeidet skal pågå frem mot sommeren, med mål om å levere en anbefaling som viser ulike utnyttelser av tomtene\\.\n12. Det er fortsatt ingen prioritering mellom formålene, så de jobber med å skissere ulike varianter av formålskombinasjoner på &quot;et litt mer ansvarlig nivå&quot;\\.\n13. Oslobygg samarbeider med Norder Eiendom, som bygger nord for dem og som skal ha adkomst over deres tomt, så de har ganske mye dialog om reguleringssakene\\.\n14. De kjører en detaljregulering nå som har vært ute på begrenset høring\\.\n15. Oslobygg omtaler tomten som &quot;en ganske vrien tomt&quot; med mange utfordringer\\.\n16. Plan og Bygg har ønsket en &quot;grønn dag&quot; \\(øst\\-vest\\-akse\\) som skulle gå i forlengelsen fra torget og gjennom parken og på tvers av deres tomt, noe som har gjort det vanskelig å utnytte tomten på en god måte\\.\n17. Plan og Bygg har laget sitt eget alternativ for tomten\\.\n18. Det er signaler fra Plan og Bygg om at de må gå helt tilbake til planinitiativ, selv om reguleringen har vært ute på offentlig høring\\.\n19. En ny skolebehovsplan kommer på høring om en uke, som vil &quot;kaste litt nytt lys over det hele&quot;\\.\n20. Det kreves politisk vilje for å komme i havn med prosjektet\\.\n\nOslobygg\\-representanten uttrykker at de forstår at folk er utålmodige og at det tar fryktelig lang tid, men &quot;det er dessverre sånn det er blitt&quot;\\. De håper at området kan utvikle seg uavhengig av det endelige utfallet for deres tomt\\."
-          }
-        ],
-        "decisions": [],
-        "action_items": [],
-        "quotes": [],
-        "context": "",
-        "metadata": {
-          "word_count": 716,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "discussion"
-          ],
-          "has_full_report": false
-        }
-      },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
-    },
-    {
-      "id": "m_unknown_date_det_er_jo_det",
-      "date": "2025-03-07",
-      "title": "Det er jo det\\.",
-      "organizer": null,
-      "location": ", sånn\\.",
-      "participant_count": 2,
-      "participants": [
-        {
-          "name": "Gabriel Bøen",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Internt team",
-          "organization": "Natural State AS",
-          "email": ""
-        }
-      ],
-      "action_items": [],
-      "topics_discussed": [],
-      "decisions": [],
-      "report_link": "data/polished_notes/2025_03_07_m_unknown_date_det_er_jo_det_POLISHED.md",
-      "report_metadata": {
-        "word_count": 5420,
-        "source": "Downloaded meeting notes - auto-created",
-        "needs_review": true,
-        "created_date": "2025-11-22T10:28:28.247644",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
-      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  7 MARS   Nabolagsfabrikken .md",
-      "report": {
-        "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
-        "topics": [],
-        "discussion": [
-          {
-            "heading": "*[Original innhold følger - krever manuell renskrivning]*",
-            "content": "Hei\\. Albert\\.\n\nHei …\n\nMen hva skjer?\n\nMen hvordan …?\n\nMen hvordan da?\n\nJa, det er jo …\n\nJa …\n\nJa, så …\n\nJa, så …\n\nSå …\n\nJa …\n\nMen det er ikke galt med å ha skoa inne\\.\n\nDet er ikke noe …\n\nDet er ikke noe …\n\nHæ?\n\nHæ? I morgen\\. Jo\\.\n\nJa, jeg jobber for å få en tablett, men siden jeg får så tap …\n\nDet er 100 % abdeksin, så jeg får ikke tatt det\\.\n\nNei …\n\nJa, det er akkurat der jeg er nå\\.\n\nHysj, Timo\\. Hei, hei, hei\\. Hva sa du?\n\nDa jeg var der dagen før, da satt det noen her og snakket\\.\n\nJa … Og ikke bare i skoa, da\\.\n\nGikk det inn og snakket med dem, eller? Ja\\.\n\nJeg snakker med en … Jeg klarer aldri å huske navnet første gangen\\.\n\nDet var en voksen dame som het Gjerd\\. Og så en litt yngre som … hun var student\\.\n\nDet er hun som satt til side? Hun av der med sånn langt hår …?\n\nPaula\\.\n\nJa\\. Byggebolet\\.\n\nDet er jo fantastisk at de har kobla seg på, da\\. Er det …? Ja\\.\n\nJa\\.\n\nJa\\.\n\nFordi at … alle har en andre …\n\nHan har alltid vist at vi må løfte oss inn\\.\n\nVi må løfte oss inn … Vi har noe kos på når å være alene\\.\n\nOg vi er noe som ikke har … Jeg har ikke hatt så mye å gjøre\\.\n\nJeg har ikke klart å nødvendigvis mistyre meg\n\nen ekte resept på den måten som kanskje hadde vært best\\.\n\nMen nå har jeg kommet opp i stigen etter noen som har begynt å lage plakater …\n\nDet er ikke den ene muligheten der den andre har en nabo i nabolaget\\.\n\nDet begynner å holde sånn for meg, iallfall\\.\n\nFor jeg har engstet meg altfor mye sjøl\\.\n\nOg når fruet er frivillig, så er det jo veldig utrolig\\.\n\nHva kan man få, og om man får det man trenger akkurat når man trenger det …\n\nDet har jo endt opp med altfor mye for meg\\.\n\nMen det er jo kjekt òg, sånn som nå\\.\n\nVi har et perspektiv med Marianne\\. Hun er singel, hun er 19 år …\n\nOg en ungdom som skal på jobb igjen, kan jobbe sammen med det samme,\n\nkomme tilbake fra Italia og sitte omgangs scenen …\n\nDet er så kjekt\\. Det er Norge det kjekkeste jeg arbeider i\\.\n\nJeg syns det er helt vanlig bra at vi på nabolaget snakker sammen\\.\n\nVi er liksom takknemlige og åpne, og fine\\.\n\nMed så glede, ikke sant …\n\nSå det …\n\nNå har jeg jo òg enig …\n\nJeg syns det er litt vanskelig å snakke om det\\.\n\nJa …\n\nJa …\n\nJa\\.\n\nJa\\.\n\nJa\\. Det var gøy\\.\n\nJa\\.\n\nJa\\.\n\nDet er klart\\.\n\nMen dere har vel sånn, dere òg\\. Nyaktivisering og alt det samme?\n\nNår jeg er litt varm, liksom?\n\nJa, det er det … Jeg jobber jo veldig på tvers av mange prosjekter\\.\n\nOg jeg har inn og ut mange elementer som skal holde noen rett i munnen på\\.\n\nSå vi jobber med ny aktivisering, mest kanskje i Drammen, og så nå kommer vi i gang med Nydalen\\.\n\nMed Nydalen etter hvert\\. De Nydalen\\-fabrikkene som er …\n\nDer\\. Kjempestort prosjekt, da?\n\nJa\\. Vi har ansatt Cecilie Daas fra Food Studio\\.\n\nSom jobbet mye med nabolandsmiddagen og så videre på … Hva heter det …\n\nP3\\-spas? Nei\\. Kanskje der òg, men jeg tenkte nede på Sørenga\\.\n\nÅ ja\\. Loseter\\.\n\nJa\\. Hun var den som holdt i mye av det\\.\n\nSå hun er jo veldig god på å finne løsninger og aktører\n\nsom kan være på temporære aktiviteter i den mellomfasen der, da\\.\n\nOg markedsavklaring for sånne kule folk som kan være drivere rundt omkring\\.\n\nSom har litt substans og mening i det\\.\n\nMen det er jo annet enn å være i natural fake\\.\n\nEr hun fortsatt på tvers av flere prosjekter, eller?\n\nHun jobber litt på tvers av flere prosjekter\\.\n\nMen hun jobber vel ikke 100 % ennå\\. Hun har også jobbet som lærer,\n\nså hun har vært 50 %, men er vel på vei til å jobbe fullt\\.\n\nDet er jo da litt enklere kaffe enn du sannsynligvis visste hva var\\.\n\nOg vi har fått en gammel kaffetrakter, som vi driver på med\\.\n\nJeg var jo sånn som kjente bare mørkbrent kaffe, og tenkte at det var greia\\.\n\nSå nå er jeg blitt sånn … Ja\\. Så har jeg fuglenkaffe oppetter ørene\\.\n\nNå er det godt, da\\.\n\nJa, nei …\n\nMen … Grunnen til at jeg tenkte at det var fint å treffes, er jo mange grunner\\.\n\nAt jeg tenkte det var fint å treffes\\.\n\nDet er jo … Ja, fordi dere gjør prosjektet det\\.\n\nFordi vi har snakket om det kunne settes til\\.\n\nOg så plutselig tenkte jeg ikke det likevel, men da trengte jeg det igjen\\. Og så …\n\nDet er jo litt om …\n\nJeg har jo ingen erfaring med å drive et sted, sånn\\.\n\nDet er jo … Ja\\.\n\nJeg skjønner det jeg skulle gjøre heller en gang sånn, så …\n\nHvordan prosjektet ligger der\\. Jeg har tenkt det, egentlig\\.\n\nJeg er jo nå her innimellom tilbaketid\\.\n\nInnimellom dagtid\\. Jeg trekker litt hjemme og litt her\\.\n\nOg så har jeg masse møter her fra tid til annen tid\\.\n\nSå har jeg klart det\\. Altså, så mesteparten av det som skjer på kveldstid,\n\nhar noen andre enn meg sjøl\\.\n\nMen jeg tenker jo at jeg fungerer jo som en slags hussjef òg,\n\nsjøl om jeg egentlig ikke nødvendigvis trenger å være der\\.\n\nOg så må jo … Er jeg …?\n\nVi får jo ting til, men alt skjer jo litt sånn ad hoc\\.\n\nSå i lengden så går jo ikke det\\. Man må jo bli bedre, jeg og alle andre,\n\njeg må jo bli bedre til langtidsplanlegging\\.\n\nMen nå har jo dette … Vi skulle egentlig bare være her februar første omgang\\.\n\nSå er det to måneder til, nå er det til mai\\.\n\nNei, jeg må ikke ut i mai\\.\n\nHva skal skje her, da? Da er det en aktør som skal leie?\n\nNei\\.\n\nNei\\.\n\nNei\\.\n\nNei\\.\n\nDet er et kjempekjekt sted\\. Jeg elsker å være her\\.\n\nSitte her og jobbe og se ut hvor folk er og … Det er et veldig, veldig kjekt sted å være\\.\n\nMen det mangler noe\\.\n\nPå kveldstid, når det skal være ungdomsting, er det ikke så kult at en mor\n\nhenger i et hjørne og skal passe på\\. Vi trenger et bakgrunn òg\\.\n\nMen det er interessant\\. Det er ikke fiksa\\.\n\nDet er bare å gå inn i det, så er hun etter det\\.\n\nOg så går det inn der borte, så er hun etter det\\.\n\nSå sånn leihetsmessig så tenker jeg at vi kunne gjøre noe med enkelheten\\.\n\nAt det er noe som blir slik … For å ta ut at damene i resepsjonen der inne\n\nsannsynligvis må ha faren følge med opp\\. Men jeg tror ikke det er noe som er der\\.\n\nJeg tenker … Men jeg er jo litt sånn …\n\nMen det kunne være mulig å ta det\\.\n\nFor det er jo helt sikkert sykehusleie\\.\n\nJa\\. Du betaler ikke husleie i dag\\.\n\nNei, vi tar bare kommunal leie\\.\n\nNei, det er bare kommunal leie\\.\n\nJa, just making, ja\\.\n\nJa, just making, ja\\.\n\nJeg vet ikke om jeg kan få til noen synabier mellom de tingene\\. Jeg vet ikke\\.\n\nMen jeg tenkte uansett så er det veldig mange muligheter for å få til ting sammen,\n\nog de må bare snakke videre\\.\n\nVi kan jo bare gi deg nummeret til han med en gang, så du har det\\.\n\nDet er kameraet som holder og jobber med det konkret\\.\n\nSå kan du få nummeret til Kim også, som jobber med det\n\nog flere andre sånne typer budsjekter\\.\n\nKim …\n\nKim …\n\nKim …\n\nJa …\n\nKameraet driver for seg selv, men jobber på konkrete prosjekter\\.\n\nHan er arkitekt, men dette er lidenskapen hans, han alle …\n\nSå Kim jobber veldig ofte med selve søknader\\.\n\nOg få midler og koble seg på prosjekter som vi kan jobbe med\\.\n\nSå jeg tror hun jobber 100 % hos oss nå\\.\n\nSå de to er nøkkelpersonene i forhold til ungdomsarbeid\n\nog har jo også masse innsikt på å anskaffe midler til slike typer prosjekter\\.\n\nOg da er vel trustmaking helt i sluttfasen\\.\n\nMen det kan godt … Det var aktivitet nå i helgen i fengselsbåtsparken\\.\n\nI to dager\\. Det var vel liksom hovedaktivitet i det prosjektet\\.\n\nMen det er fort gjort at det er flere ting som skjer\n\nsom jeg ikke har fått med meg engang, som er i beita\\. Og hva skjer?\n\nJa, det var godt jeg kunne huske på det òg\\.\n\nJeg tenkte gjerne at du skulle ta det opp med deg\\.\n\nOg så er det noe med det du nå gjør …\n\nDet hørte jeg veldig mange som kom opptatt av det i oppdraget her\\.\n\nSå kanskje det å kunne spille av …\n\nJa\\. Vi har jo blant annet vårt kurs\\.\n\nOg litt sånn type aktiviteter\\.\n\nDet er jo så veldig trangt for økonomien,\n\nså der prøver man jo å gjøre alt man kan for å gå mest mulig ut av lite\\.\n\nSå mange av de kursene og så videre har de jo hatt hos oss\\.\n\nSå det er gratis å bruke våre lokaler\\.\n\nSå, ja\\. Men det er helt klart aktiviteter som kunne kanskje vært koblet på her\\.\n\nSå jeg kan gi deg noe som heter Idyl\\. Idyl?\n\nAktos\\. En tøff tyrker som er på en måte …\n\nBærer i bjelka og er det som jobber hver dag med alt dette\\.\n\nSom får til utrolig mye med …\n\nJa … Hva slags kurs er det vi har?\n\nVi har jo honningsmaking og honningsensorikk\\-kurs\\.\n\nOg så har vi jo hatt det da i birøkting\\. Det har vært litt sånn entry level\\.\n\nVi har hatt en sånn pakke som har vært ganske dyptgående\\.\n\nSom vi kommer sikkert til å endre litt på, for det var …\n\nAltså pandemien og foran pandemien så var det på en måte litt sånn anferd hos folk\\.\n\nFolk var mer villig til å ta kurs og investere penger i det\\.\n\nMen det merker man etter pandemien har liksom endra seg litt\\.\n\nSå folk er litt mer averse\\. Så man må først dele opp, gjøre ting litt bedre\\.\n\nMindre\\. Lettere\\. Ja, ikke sånn stavebakker\\.\n\nJa, så det jobber man litt med hvordan det skal fungere i praksis\\.\n\nVi har hatt … Fordi vi måtte spare penger på\n\nå jobbe med noen som gjorde selve tappingen av honningen,\n\nså søkte vi om midler til en aktivitet der du kunne tappe din egen honning\\.\n\nSå det har vi gjort\\. Det er vel noe som skjer nå om en måneds tid\\.\n\nNeste aktivitetspost på det\\. Men det er jo en veldig hyggelig ting\\.\n\nMen hvordan gjør man det, da? Hvordan drar man og tapper den honningen?\n\nJa, det har vi gjort på Bygdøy komsgård\\. Der vi har …\n\nDet er der vi har kontoret og der vi har slyngerom og så videre\\.\n\nHvorfor er det viktig at det er et lite komskap?\n\nDer har vi to kontorplasser, og så har vi et lager og det som er et slyngerom,\n\nsom vi også har klart å lage litt økonomi rundt, der bi\\-røktere, lokaler, leier seg inn\\.\n\nI stedet for når du tapper honning, så må du ha en sånn stor slynge som du slenger på\\.\n\nDet har vi fått til å være noen kroner i pluss på det\\.\n\nMen å tapte inn egen honningaktivitet …\n\nJeg er litt usikker på hvor det neste da ville vært\\.\n\nMen det er jo liksom noe man kunne ha gjort\\.\n\nKanskje man kan koble på ungdom\\.\n\nVi har vel noen midler i forhold til noen skoleaktiviteter\n\nder vi mangler et par kandidater, tror jeg, på skoler\\.\n\nVi hadde jo skolehage på kontor da i fjor\\.\n\nOg det har jeg ikke egentlig lyst til å videreføre\\.\n\nMen når du snakker om de dyptgående kursene,\n\nså tenkte jeg at jeg kunne ansette noen ungdommer\\.\n\nJa\\.\n\nFor vi har jo parker og plasser tilgjengelig hvor vi kunne ha satt opp kuber\\.\n\nJa\\.\n\nJa\\.\n\nJa …\n\nOg så fint med parken og dette her på Romsjøen\\.\n\nDet hadde vært kjempekjekt å se sånn egentlig … Hva heter det igjen?\n\nVi hadde jo på Greenhouse i Sverigegårdsgata, så har vi hatt bikube der\\.\n\nOg det har vært basestasjon for det som heter Andelsbirøktelag\\.\n\nSom har vært ganske populært\\. Som er noe av idyllen lagde\\.\n\nLocal Bus, het det\\. Å ja\\.\n\nDer har det vært … Men nå er jo det stengt, hele bygget\\.\n\nDet ble jo stengt litt tidligere enn det skulle pga\\. brannforskrifter\\.\n\nBrannvernet kom inn og halet ut innen tre måneder\\.\n\nDet var ting som ikke var helt i orden der\\. Så der har det vært en liten strebing for å finne en ny lokasjon for det\\.\n\nHun har jo funnet at det blir Stensparken\\.\n\nMen det er ikke sikkert at det er loss i stein, så der er det kanskje greit\n\nå snakke med idyllen om det\\.\n\nHva heter dette? Local Bus?\n\nAndelsbirøktelag\\. Det kan hende at det er aktuelt å snakke om det, da\\.\n\nDer har vel målet vært å finne en lokasjon som er såpass sentral og i nærheten av …\n\nKollektiv, så at det er tilgjengelig for alle som kunne tenke seg å være med på det\\.\n\nDerfor har vi sett på lokasjoner som har god buss og trikk eller T\\-bane til Ingrid Eth\\.\n\nJa, og det hadde jo vært f\\.eks\\. …\n\nDet er ikke så enkelt å finne en løsning på det\\.\n\nNei, det vil jeg snakke med henne om\\.\n\nFor der er det kanskje mulig å finne en løsning\\.\n\nKanskje det er ungdom som er interessert i det\\.\n\nDa lærer man jo om biøkting uten å måtte ha hele ansvaret\\.\n\nDet å drive med biøkting er jo en stor investering\\.\n\nDu må ha en god del kunnskap for å drive med det, og det krever masse tid\\.\n\nSå det er det som er &quot;locko buss&quot;\\. Da får man opplæring og erfaring\n\nog kan holde på med det uten å måtte ta på seg et så stort ansvar som det er\\.\n\nDet er en mulighet der\\.\n\nJa\\. Jeg håper jeg har spurt deg om det\\.\n\nJa, ja\\. Det er vel det\\.\n\nJeg har snakket med kameraet, snakket med Kim\n\nom aktivisering, om synergi med ungdom\\.\n\nJa, vi holder jo på med Holfaretretten, da\\.\n\nFortsatt litt sånn jobbe med … Har dialoger, jobber med innsikt, planlegger\\.\n\nFor å … ja, snakke med …\n\nBydels … altså politikere, beskyttingsdager i bydelene\\.\n\nBare preppe alt klart til å ha argumentasjonen klar for å få …\n\nFå lov til å utvikle bygget\\.\n\nOg har jo snakket med frivilligheten i området\\. Snakket med aktiviteter …\n\nSnakket med aktivitetssenteret som er over gata der som jobber med eldre\\.\n\nMed det lille røde huset …\n\nJa\\.\n\nJa, Sivilismssentralen, Kirkens Bymisjon, som også har mye aktivitet,\n\nsom jeg har forstått, og kunne hatt behov for noe mer …\n\nAltså areal … Ja, rom og areal for noen av de aktivitetene\n\nsom ikke får plass der\\. Og så er de på dispensasjon, selve bygget,\n\nsom er liksom på lånt tid, så det er ikke sikkert at vi kan fortsette å være der\\.\n\nI det røde bygget? Å, jeg trodde de eide det\\.\n\nJa, de eier det, men det er på en måte …\n\nJa, bygget står der på en midlertidig dispensasjon, som har vært i litt tid, da\\.\n\nSå det kan fort hende at de ikke kan det, og da må de flytte det\\.\n\nSå de har jo tydeligvis en ambisjon om å bygge et frivillig, altså ha et frivillighetens hus,\n\nde som holder på der\\.\n\nDe er jo planlagt inn i en koloni egentlig\\.\n\nJa, men der er jeg også og prøver å holde meg oppdatert\\.\n\nSånn som jeg forstår det, så er det fort at det blir en reguleringssak\n\nsom begynner helt på scratch\\. Så det er liksom …\n\nDet er mange år til at det … Ja, det er …\n\nJa, skal man være pragmatisk analyse av det, så er det liksom fort fem år\\.\n\nFør det begynner å bevege seg noe som helst\\. For det er så mange …\n\nJa, den områdeplanen, den utfordrer mange mye i utvikling\\.\n\nSå … Ja, og vi har jo noen markedsavklaringsdialoger\\.\n\nVi har Knut Halvor som jobber hos oss nå, som driver noe sånt i Bicom,\n\nsom har jobbet mye med sosialetterforskunderskap i Brenneli vei\\.\n\nOg er en del av … er rådgiver og husfar i Pådriv\\.\n\nSå der ser vi på noen typer aktører som kunne vært aktuelle\n\nfor å drive et sted på Hopparetretten\\.\n\nOg kanskje om vi da kan koble på aktivitet fra behovet til frivilligheten i området\\.\n\nSå det er jo tydeligvis et behov for …\n\nMer plass for eldre\\. Det er mange eldre i området som bruker Frivillighetens hus,\n\nmen de har ikke kapasitet til å møte alle voksne\\. Ja\\.\n\nJa, og det er et fernyelsesenter\\. Sa de noe om når de må flytte ut?\n\nNei, jeg har et samtale\\-nytt\\-telefon\\. De skal dra på besøk og få litt mer innsikt i det\\.\n\nMen jeg har ikke noe inntrykk av at de må ut\\. Men, ja …\n\nDet stiger jo … Det er jo det aktivitetssenteret,\n\nsånn som ligger rett ved siden av Fondia\\-elva\\.\n\nNei, de er … De skal jo bruke verktøy, de som har hatt verksted i kjelleren\\.\n\nMen nå er jo det for en måte ubrukelig for dem\\.\n\nJa\\. Absolutt\\. Vi kommer jo også til å …\n\nKanskje vi kan komme ut med det nå?\n\nJa, absolutt\\. Vi kommer jo også til å tegne ut det forslaget\\.\n\nOg tilby bydelen det sitt alternativ\\.\n\nAt bygget ble kontor og omsorgsbolig\\. For å komme til det behovet\\.\n\nMen det er jo oppdragsgiver … Han bare vil at det skal være bygget?\n\nHvem? Ja\\.\n\nHan vil ikke rive det bygget? Nei, han har ikke noe med det å gjøre\\.\n\nDet er kommunen som har … Nei, mitt oppdrags gule bygg er HV\\-13\\.\n\nMen han vil ikke rive det\\. Nei, men han vil drive det andre\\.\n\nNei, han er bare HV\\-13 nå\\. Å ja\\.\n\nOg jeg trodde det var begge to …\n\nDa jeg holdt på med HV\\-11, prøvde de å få utviklet, men kom ingen vei,\n\nog måtte ta et veivalg og solgte det for en god del år siden\\.\n\nSå han er kun på HV\\-13, og det er hans faensak\\.\n\nDet å gå opp den løypa som han gjør, det er ingen som gjør det,\n\nsom driver med eiendomsutvikling, for det er litt håpløst og sånn, men han …\n\nJeg har sterke meninger om det med bærekraft\n\nog det som er faktisk bærekraft\\.\n\nDet er en diskusjon om at man skal bytte ut alle disse vinduene\n\npga\\. energitiltak, men har man egentlig oversikt over utslippene\n\nsom det er å produsere alle disse vinduene?\n\nOg resirkulere alle disse gamle vinduene?\n\nHva er det det gir dette mening? Han er opptatt av viderebruk,\n\nog at det er uholdbart at man skal rive ned et bygg som er så solid bygget\n\nog har så mange tilpasningsmuligheter for å imøtekomme samfunnsbo i området\\.\n\nOm ikke dere kan lage en versjon av hvor …\n\nKan lage en versjon hvor hetet bygget er ungdomsskole?\n\nJa, det … Vi er åpne for det\\.\n\nDet er vel litt sånn … Ja, jeg vet ikke helt hvordan …\n\nJa\\. Vi har jo, som sagt, dialog med den skoleansvarlige for skoletomta\\.\n\nOg for å være i dialog om kan funksjon…\n\nVi har jo sett på den mølja som er av dokumenter på plan og bygg for den tomta\\.\n\nOg når man ser på hva man har sett for seg det skal fylles med av aktiviteter,\n\nså er det jo egentlig ikke plass til det\\. Der har vi jo …\n\nJeg har jo snakket senest i dag om det\\.\n\nEr det interessant å se på fartretten som et tilskudd,\n\nder man kan flytte noen av de funksjonene?\n\nMen der igjen så er det … Ja\\.\n\nDet er for lite bevegelse, så det er for lang tid i fremtiden\\. Det er liksom … ja\\.\n\nDet er liksom fem år til man kanskje begynner, og så er man ikke på plass der før jeg har ti år, da\\.\n\nHvor lang tid ville det tatt å transformere Håvard Ekkman til en skole?\n\nDet kan vi begynne med … Ja, innen to år kunne vi bygd\\.\n\nDerfor er det dumt at vi solgte den røde byggeformen\\.\n\nVi trenger jo det\\. Det er jo det vi trenger mest\\.\n\nMen hvis kommunene er villige til å kjøpe det, så er jeg sikker på at eieren er åpen for det\\.\n\nJeg hadde jo med meg han der … Hva heter han ene sammen med Thomas …\n\nSønnen til Andreas? Thomas Thorsnes, ja\\. Ikke han som arkitekt, men han som …\n\nHan var jo med meg i rådhuset og sånn, sammen med Carlos Capedo\\.\n\nJa\\.\n\nFordi at vi ville ha skole i det røde bygget\\.\n\nDet var Hermet Fosnes helt med på, han ville gjerne ha det der, liksom\\.\n\nOg så fikk jeg deg i kontrakten, og så …\n\nMen der var det jo Utdanningsetaten …\n\nJa\\.\n\nDe var bare sånn … &quot;Nei, vi kan ikke ha skole i gamle bygg\\.&quot;\n\nMen de leide jo bare et tablarat av folk for å bygge nye bygninger\\.\n\nJa\\. Det er nok et bygg som er komplekst å bygge en skole i\\.\n\nJa\\. Det er nok et bygg som er komplekst å bygge en skole i,\n\nog det hadde nok vært rimeligere å rive det og bygge det på nytt,\n\nfordi det hadde krevd så mye tilpasninger i forhold til alle regulatoriske krav\\.\n\nDet blir litt som sammen …\n\nEr det lave etasjer her, eller?\n\nDet bygget er ikke utvikla på en sånn måte at det er så lett og …\n\nJa, du husker ikke alle fant på det, men overfor oss,\n\nder Kirkens Bymisjon flytter inn med St\\. Halvorsenga,\n\ndet var jo et fungerende hjem for eldre, men så kom alle disse kravene,\n\nbl\\.a\\. om egne toaletter, som gjorde at de måtte stenge driften\\.\n\nSå mista man jo plutselig et kjempeviktig tilbud\\.\n\nOg så var det en periode det var romanifolk som bodde der,\n\nmen dørene åpnet ikke før klokka ni, så folk sto utenfor der\n\nfra seks\\-syv om morgenen, og ble liksom belasta …\n\nPlutselig så kom disse gode intensjonene om krav inn\n\nog fjerna et tilbud som det var et behov for, og som folk satte pris på\\.\n\nSå jeg tror ikke man får gjennom … Det bygges opp igjen\\.\n\nMen jeg skal ikke løse opp i nok av det heller, så …\n\nMed mindre det holder på å gå tog for folk\\.\n\nEr du ute i jobb? Ja\\.\n\nJa, da sender jeg melding til Einar\\. Jeg veit jo aldri hvordan han tenker … Ja\\.\n\nJa, nei, jeg er åpen for det neste …\n\nI forhold til det som min …\n\nMen … hva kunne dere tenke dere å gjøre her?\n\nHer? Nei, jeg vet ikke\\.\n\nLage fuglpopper, lage workshops for farer,\n\nvære med oss og fylle ut skolepamper\\.\n\nKom på en måte …\n\nJa, jeg har vanskelig å finne innfallsvinkelen, men har et navn til\\.\n\nJeg vet ikke om du kjenner Katrine Barth?\n\nHun er veldig flink på å tenke fritt, og hun er jo bl\\.a\\. veldig interessert i sying\\.\n\nOg hun har også starta et lite sideprosjekt\n\nder hun lager produkter ut av kaffesekker\\.\n\nJa, og har jo … Hun har vett ikke akkurat situasjonen nå,\n\nmen hun har sett etter løsninger på steder å jobbe med syarbeid\\.\n\nVi har jo stymaskiner her, og det var veldig mange\n\nsom har hatt lyst til å ha et syverksted for voksne\\.\n\nMen det er avhengig av at det er noen voksne som tar ansvar for å få det til å skje\\.\n\nMen du gjør da &quot;coffee hack sack&quot;, kaller hun det\\.\n\nDet var jo greit\\. &quot;Coffee sack hack&quot;\\.\n\nDu får de for fuglen, ja? Ja\\. Det er jo kjempefine sekker\\.\n\nEstetisk sett og også …\n\nJobbet med noe som heter &quot;smart soil&quot;, som i forhold til fuglen\n\nog avfallet fra kaffeproduksjonen til å gjøre sånt i jord\\.\n\nDet er på en måte de er eksperter på mikrobakterier\\. Så jeg har tenkt at jeg har lyst til å kjøpe noen tonn\\.\n\nOg så kunne nabolaget komme og hente jord til årssesongen\\.\n\nOg så kunne man jo fylt … Kunne de fylt i disse kaffesekkene\\.\n\nJa, det var min takk, da\\. At vi hadde fått noen tonn med jord dumpa,\n\nog så noen spader, og så inviterer man folk til å komme og fylle …\n\nFylle sekkene selv og ta med til hagene sine, istedenfor å kjøpe møkkajord, som er ikke bærekraftig\\.\n\nJa, ja\\. Og som har en smart soil …\n\nSom også har en sånn bevissthetsgjøring\\-element ved seg\\.\n\nAt de er eksperter på mikrobakterier\\.\n\nAltså noen av de fremste ekspertene i verden på mikrobakterier\n\nog hvor viktig det er for akvaksystemet\\.\n\nSmart soil heter det\\.\n\nDet er jo plass til å ha kontanter på\\.\n\nJeg og Marianne satt og vakte på at vi skulle legge ut så store deler av arealet her\\.\n\nHun er jo forfolkelig å gjøre, men jeg er mer på at vi kjøper nok en lam inn\\.\n\nEller en mappe som bare ruller ut, eksempel\\.\n\nJa …\n\nmm\\. Vi har jo den pollinatpassasjen,\n\nog det er kanskje noe aktivitet man kan koble på her\\.\n\nDet hadde vært kjeng\\. Det hadde vært helt i tråden med den samtalen vi hadde\\.\n\nJeg skal jo ha et par oppfølgingssamtaler med FAM\n\nom de tingene som vi gjorde ut fra krigsbarndomsvirkelige svar\\.\n\nDet har jeg tenkt å følge opp, få de to til å forplikte seg litt og gjøre noe\\.\n\nDet er jo kjempeviktig stikkord å …\n\nKanskje du kunne fått til å ha noen bikuber på taket av byggene sine her i nærheten?\n\nJa, helt klart\\. Det har jeg\\.\n\nVi har hatt nabolagsfabrikk\\-honning i butikken\\.\n\nOgså ungdom som gjør at det er kjempeviktig\\.\n\nMen det er et problem at det er passasjetegner\\. Er det noe som har fått finansiert?\n\nJeg kan se for meg hvordan det kunne ha vært å snakke med …\n\nJa, kunne det ha vært f\\.eks\\. et lag til et heimeverksted fra Sundøy nær Svitsøy?\n\nJa, vi har fått midler\\. Og så, over to år, har det prosjektet foregått\n\nmed de midlene vi har der\\. Men vi prøver jo å koble på mer\\.\n\nAltså mer finansiering, med det som base, bl\\.a\\. så er det …\n\nKlonihagen har jo gitt litt støtte til selve søknadsprosessen\n\nog sagt at de er positive til å gi mer midler\\.\n\nJeg tror på en måte det er en innfartsåre til å få flere partnere og midler\n\nved å gjennomføre pollenatpassasjen\\.\n\nSå er jeg usikker på hvilket slyngingsrom man har i det budsjettet til å gjøre andre typer ting\\.\n\nAt man skal kjøpe frø og sette ut masse frø …\n\nDet er mer å koble på bedriftspartnerskapene våre\n\nog gjøre det til baser, gjøre informasjon …\n\nLage, samle noen kartløsninger\n\nhvor vi identifiserer alle disse områdene som er en del av matpassasjen\\.\n\nKunnskap … Det er en nettside som heter Sanke, som er laget av …\n\nFinne noen synergier av disse kartutsnittene\n\nog kommunikasjonen og samarbeidet her\\.\n\nMen … Ja, jeg ville bare snakket med Idil og sett hva mulighetsrommet er\\.\n\nDet er også &quot;hands on&quot;\\. Ja, selvfølgelig\\. Han er jo ok\\.\n\nJa, hun, da\\. Hun er tyrkisk\\.\n\nJa\\. Det er enda farligere å være sammen med en tyrkisk dame i fem år\\.\n\nEt annet temperament\\. Det må være vondt i Norge\\.\n\nNei\\. Det er vel det, da\\. Og så … ja\\.\n\nSe på de synergiene der\\. Kameraen, Kim, på ungdom, Katrine på sying\\.\n\nIdil og Bibi\\. Så jobber vi med …\n\nSå jobber vi med HFAretretten og er åpne for hvilket mulighetsrom som er der\\.\n\nOg vi har jo denne delen av første etasje som står jo stille\n\nmed litt aktivitet hver dags dato\\.\n\nJa, det er jo på en måte tilgjengelig for aktiviteter der\\.\n\nMan må bare rent sånn finne ut av, hvis man skal gjøre det,\n\nhvordan det rent praktisk gjøres\\. Låse inn, låse ut og sånn\\.\n\nMen målet vårt er jo at vi skal få gjort noen av etasjene til studiokontorer\\.\n\nOg hvis vi får koblet på en driver, at i kombinasjon av det … så har\n\nvi på en måte en resepsjon som &quot;community management&quot;,\n\nså at man har et større mulighetsrom for å aktivisere den første etasjen\n\nflere timer i døgnet\\. Det er målet\\.\n\nMen vi er åpne for å prøve ut ting fra nå av og utover\\.\n\nEgentlig fra nå av og utover\\.\n\nDer har man jo litt større areal, da\\. I dag er det jo møblert som en kantine\\.\n\nMan kan jo snu og gjøre det enda hyggeligere, men der kan man jo få plass til en god del mennesker\\.\n\nKanskje jeg skal komme og se på det … Det er dødt så lenge siden jeg har vært her\\.\n\nMen …\n\nGudimalla, jeg har snakket med noen som har prøvd å sjekke meg,\n\nMen det er jo sjukt første gang jeg tar ut av det\\.\n\nSå … Jeg kan jo ikke gjøre det alene\\. Nei\\.\n\nNei\\.\n\nNei, jeg skjønner\\.\n\nJa\\.\n\nJa\\.\n\nJa\\.\n\nJa\\.\n\nJa\\.\n\nJa\\.\n\nMen det er jo noe samfunnet må jobbe fram helt fra scratch av,\n\nsom er kjempeskrekkende\\.\n\nJeg vet ikke … De krever jo inn i seg …\n\nNei\\.\n\nJa\\.\n\nJa\\.\n\nNei\\.\n\nJa, jeg vet ikke hva du snakker om\\.\n\nNei, jeg gjør vel ikke det\\. Det er jo egentlig litt sensator for deg sjøl\\.\n\nHar det noen stikkord? Ja, det er jo ungdom og …\n\nJa, det er ungdom og …\n\nJa\\. Veldig åpen for det\\. Det er jo en av … ja\\.\n\nVeiene man kan gå med Holdtvedt\\-retten og studiekontoret\n\nog forsøke å lage et lite start\\-up\\-miljø\\.\n\nMan er åpen for det\\.\n\nEgentlig\\. Jeg har ikke tenkt på dette når vi har vært sammen,\n\nmen jeg samarbeider jo litt med halogen her, da,\n\nhvor vi liksom skal holde på med noe sånt, men …\n\nOg vi takker jo kan hverandre, men det ble …\n\nDet var ikke … Ja\\.\n\nOg så tenkte vi da egentlig på et annet sted, da\\.\n\nDet handler jo liksom om … Greia er jo at det er mange konsepter\n\nsom egentlig kan splittes, og det er forskjellige steder\\.\n\nOg som egentlig bare blir noe annet enn det det er her nå\\.\n\nSå jeg er på en god måte midt i den prosessen,\n\nmen det hadde vært gøy å snakke om det til en ungdomsentreprenør med dere\n\nsom er så gode pensjonærer sjøl\\.\n\nJa, men da tror jeg jeg må komme bort og se det\\.\n\nDet virker også så perlig, de konseptene\\.\n\nJa\\.\n\nJeg har tenkt på det òg …\n\nFaglig, sosialt, åpen for alt\\.\n\nJeg vet jo f\\.eks\\. noe som kunne … Jeg vet ikke, jeg\\.\n\nMen jeg har tenkt på det òg, at det kunne være kjekt å …\n\nDet er jo flere som savner liksom …\n\nFor mange, mange år siden snakket jeg med Harm Stian Vågland om å ha topp\\-østvarer\\.\n\nMen det ble jo ikke det\\.\n\nMen jeg tenkte at det er jo egentlig et ganske gøy konsept,\n\nhvor man kunne ha det på sånne spennende steder rundt omkring\\.\n\nJa, kanskje først det her, da, og så kanskje andre …\n\nEt sted man vanligvis ikke kommer til, men som har en forankring\\.\n\nJa\\. Men det kunne vært kjekt\\. Jeg har vært for mange som savner det her\\.\n\nMen det kunne være kjekt å få noe sånn kvalitet for oss\n\nsom egentlig får lommerkopi av Østkanten …\n\nJa\\.\n\nJeg skal spille tilbake til Einar\\.\n\nOg en kafé\\.\n\nOg det er egentlig en ungdomskafé òg, så man trenger noen som gjør det\\.\n\nSå det er ikke bare denne Dorgekaffen, men det er på en måte en form for traketer\\.\n\nDet er ikke bare jeg som lager Dorg Evergood\\.\n\nHer har vi òg snakket om å ha ungdomskafeer,\n\nat ungdommer kan drive med egne kafeer med ekte hjelp og veldig mye sånt\\.\n\nMen alt er avhengig av at jeg får tak i det og gjør noe med det\\.\n\nMen det er på en måte mulig å gi flere nye typer av …\n\nTareringskonsepter òg, så pop\\-opp tareringskonsepter\n\nkunne gjerne handle om …\n\nEt eller annet\\.\n\nJeg må løpe videre\\."
-          }
-        ],
-        "decisions": [],
-        "action_items": [],
-        "quotes": [],
-        "context": "",
-        "metadata": {
-          "word_count": 5426,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "discussion"
-          ],
-          "has_full_report": false
-        }
-      },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-03-07_urbania_prosess_workshop",
@@ -3543,14 +2902,15 @@
         "Bruksendring for første etasje ventes til etter bydelsmøte",
         "Oppgave: Møte med Bente Otto (bydelen) (Andreas/Gabriel)",
         "Oppgave: Kategorisere leietakere etter studiokontorkompatibilitet (Team)"
-      ]
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025-03-17_status_hovfaret",
       "date": "2025-03-17",
       "title": "Status Hovfaret",
       "organizer": "gabriel@naturalstate.no",
-      "location": "Ukjent",
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -3584,154 +2944,11 @@
           "consolidated_date": "2025-12-02"
         }
       },
-      "summary": "Intern statusgjennomgang av Hovfaret 13-prosjektet med fokus på fremdrift."
-    },
-    {
-      "id": "m_unknown_date_notat_hva_skal_vi_mles_mot",
-      "date": "2025-04-03",
-      "title": "Notat: Hva skal vi måles mot?",
-      "organizer": null,
-      "location": "sidentitet**: Bygget representerer en viktig del av områdets historie og kan styrke stedets identitet gjennom transformasjon\\.",
-      "participant_count": 2,
-      "participants": [
-        {
-          "name": "Gabriel Bøen",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Prosjektteam",
-          "organization": "Natural State AS",
-          "email": ""
-        }
-      ],
-      "action_items": [
-        "Ferdigstille konseptskisse med utviklingsscenarier",
-        "Utvikle kommunikasjonsstrategi",
-        "Gjennomføre place-analyse (200m radius)",
-        "Gjennomgå områdereguleringen detaljert",
-        "Avtale nytt møtetidspunkt"
-      ],
-      "topics_discussed": [
-        "Områdeplanens motsetninger",
-        "Verdi versus rivekrav",
-        "Områdeplanens målsetninger versus realitet",
-        "Mål, ambisjoner og premisser for utviklingen",
-        "Strategisk kommunikasjon"
-      ],
-      "decisions": [
-        "Prosjektet skal posisjonere seg mot områdeplanens målsetninger og vise at transformasjon bidrar bedre enn riving",
-        "Place-analyse skal gjennomføres for å dokumentere nabolagstilhørighet",
-        "CO₂-beregninger skal gjøres for å kvantifisere bærekraftsgevinsten"
-      ],
-      "report_link": "data/polished_notes/2024-04-03_m_unknown_date_notat_hva_skal_vi_mles_mot_POLISHED.md",
-      "report_metadata": {
-        "word_count": 736,
-        "source": "Downloaded meeting notes - auto-created",
-        "needs_review": true,
-        "created_date": "2025-11-22T10:28:28.204685",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
-      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  3  April  .md",
-      "report": {
-        "summary": "Dette strategiske arbeidsdokumentet artikulerer kjerneargumentasjonen mot rivningskravet i områdeplanen for Skøyen. Notatet strukturerer hovedargumentene rundt fem temaer: områdeplanens indre motsetninger, byggets eksisterende verdi, gapet mellom politiske ambisjoner og realitet, bærekraftige utviklingsmål, og kommunikasjonsstrategi. Dokumentet introduserer også behovet for en place-analyse for å dokumentere nabolagets tilhørighet til bygget.",
-        "topics": [
-          "Områdeplanens motsetninger",
-          "Verdi versus rivekrav",
-          "Områdeplanens målsetninger versus realitet",
-          "Mål, ambisjoner og premisser for utviklingen",
-          "Strategisk kommunikasjon"
-        ],
-        "discussion": [
-          {
-            "heading": "### Områdeplanens motsetninger",
-            "content": "Den gjeldende områdereguleringen for Skøyen krever riving av bygget i Hovfaret 13. Dette står i fundamental kontrast til byggets fleksibilitet og potensial for adaptiv gjenbruk.\n\n**Sentralt argument:** Bygget ble opprinnelig designet og prosjektert med tanke på fremtidige påbygg og endringer, inkludert bæreevne for flere etasjer - en bærekraftig tankegang som nå risikeres kastet bort. Dette representerer en iboende motsetning i planverket: Oslo kommune krever riving av et bygg som i seg selv er et eksempel på fremtidsrettet, bærekraftig bygging."
-          },
-          {
-            "heading": "Verdi versus rivekrav",
-            "content": "Notatet dokumenterer byggets nåværende økonomiske verdi:\n\n**Økonomiske nøkkeltall:**\n- Årlige leieinntekter: ca. 7,1 millioner kroner (budsjett var 10 millioner)\n- Leiepris: 1.750 kr per m² + felleskostnader\n- Ca. 800 m² står ledig (ved tidspunkt for notat)\n\n**Argumentasjon:** Å rive dette bygget er i strid med moderne prinsipper for bærekraftig byutvikling og sirkulær økonomi. Det representerer betydelige miljømessige, sosiale og økonomiske kostnader som ikke er tatt hensyn til i områdeplanen."
-          },
-          {
-            "heading": "Områdeplanens målsetninger versus realitet",
-            "content": "Notatet identifiserer et betydelig gap mellom politisk besluttede visjoner for flere boliger i Skøyen-området og realiteten for å nå disse målene. Dagens planer gir ifølge notatet mulighet for kun ca. 1.200 boliger, langt under områdets potensial.\n\n**Foreslått løsning:** En ny place-analyse som skal kartlegge:\n- Hvem bor innenfor 200 meter?\n- Hvem har tilhørighet til bygget som en del av et nabolag?\n- Områdets identitet og historie (referanser til Holm, Møllhausen bakeri)\n- Områdets sosiale karakteristikk (\"Området er historisk sett ikke et høystatus området\")"
-          },
-          {
-            "heading": "Mål, ambisjoner og premisser for utviklingen",
-            "content": "Notatet argumenterer for at bevaring og transformasjon av Hovfaret 13 kan bidra til fire hovedområder:\n\n**1. Stedsidentitet**\n- Bygget representerer en viktig del av områdets historie\n- Kan styrke stedets identitet gjennom transformasjon\n- Bidrar til kontinuitet i nabolaget\n\n**2. Bærekraft og sirkulær økonomi**\nKritiske spørsmål som må besvares:\n- Hvilken modell skal brukes for CO₂-beregning?\n- Hva har samfunnet spart i klimautslipp ved å bevare bygget?\n- Risikoanalyse for konsekvenser ved inngrep i elveleiet (Hoffselva)\n\n**3. Fleksibilitet og fremtidsrettet bruk**\n- Byggets evne til å tilpasse seg skiftende behov over tid\n- Potensial for påbygg og utvidelse (fundamentert for 12 etasjer)\n- Muligheter for blandet bruk (bolig, næring, kultur, omsorg)\n\n**4. Alternativer til rivning**\nNotatet skisserer fire alternativer, der alternativ 4 (riving) fremheves som ikke-bærekraftig:\n1. Transformasjon med bevaring av eksisterende struktur\n2. Gjenbruk med nye funksjoner\n3. Utvidelse av eksisterende bygg\n4. Riving - fremheves som ikke-bærekraftig (foreslås visualisert med \"rødt kryss - gif kollaps av bygg?\")"
-          },
-          {
-            "heading": "Strategisk kommunikasjon",
-            "content": "For å lykkes med å få endret rivningskravet identifiseres fire hovedgrep:\n\n1. Utvikle målrettede argumenter for ulike interessenter\n2. Bygge allianser med andre aktører i området\n3. Skape overbevisende argumentasjon basert på byggets iboende verdi\n4. Fremheve prosjektet som et potensielt referanseprosjekt for bærekraftig byutvikling"
-          },
-          {
-            "heading": "Neste steg",
-            "content": "Notatet lister fire umiddelbare oppgaver:\n\n1. Ferdigstille konseptskissen med ulike utviklingsscenarier\n2. Utvikle kommunikasjonsstrategi\n3. Gjennomføre ny place-analyse\n4. Avtale nytt møtetidspunkt for videre arbeid med prosjektet"
-          }
-        ],
-        "decisions": [
-          "Prosjektet skal posisjonere seg mot områdeplanens målsetninger og vise at transformasjon bidrar bedre enn riving",
-          "Place-analyse skal gjennomføres for å dokumentere nabolagstilhørighet",
-          "CO₂-beregninger skal gjøres for å kvantifisere bærekraftsgevinsten"
-        ],
-        "action_items": [
-          {
-            "task": "Ferdigstille konseptskisse med utviklingsscenarier",
-            "responsible": "Natural State & R21",
-            "deadline": "April 2024"
-          },
-          {
-            "task": "Utvikle kommunikasjonsstrategi",
-            "responsible": "Natural State",
-            "deadline": "Q2 2024"
-          },
-          {
-            "task": "Gjennomføre place-analyse (200m radius)",
-            "responsible": "Natural State",
-            "deadline": "Q2 2024"
-          },
-          {
-            "task": "Gjennomgå områdereguleringen detaljert",
-            "responsible": "Natural State",
-            "deadline": "April 2024"
-          },
-          {
-            "task": "Avtale nytt møtetidspunkt",
-            "responsible": "Gabriel",
-            "deadline": "Umiddelbart"
-          }
-        ],
-        "quotes": [
-          "Hva skal vi måles mot?",
-          "Vi snakker om et bygg som er fleksibelt. Det er bygd og prosjektert for utvikling. Fortiden beregnet inn det økte behovet. Det var bærekraftig... skal man kaste bort det verdifulle i det?",
-          "Hva har samfunnet spart i klimautslipp ved å bevare bygget?"
-        ],
-        "context": "Dette notatet representerer et viktig strategisk dokument tidlig i prosjektet (ca. 3 uker etter første møte). Det viser hvordan argumentasjonslinjen formes:\n\n1. **Fra defensiv til offensiv posisjon:** I stedet for å bare forsvare mot rivning, posisjoneres prosjektet som et bidrag til områdets mål.\n\n2. **Kvantifisering av verdier:** Notatet identifiserer behovet for konkrete tall - både økonomiske (leieinntekter) og miljømessige (CO₂-beregninger).\n\n3. **Place-analyse som verktøy:** Introduksjon av stedsanalyse som dokumentasjonsmetode, noe som senere blir sentralt i prosjektet.\n\n4. **Historisk kontekst:** Bevissthet om områdets sosiale historie (\"ikke høystatus området\") som grunnlag for argumentasjon.\n\nNotatet er skrevet i en blanding av renskrevet tekst og stikkord/tankekart-format, noe som indikerer at det er et arbeidsdokument under utvikling.",
-        "metadata": {
-          "word_count": 893,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion",
-            "decisions",
-            "action_items",
-            "quotes",
-            "context"
-          ],
-          "has_full_report": true
-        }
-      },
-      "summary": "Dette strategiske arbeidsdokumentet artikulerer kjerneargumentasjonen mot rivningskravet i områdeplanen for Skøyen. Notatet strukturerer hovedargumentene rundt fem temaer: områdeplanens indre motsetninger, byggets eksisterende verdi, gapet mellom politiske ambisjoner og realitet, bærekraftige utviklingsmål, og kommunikasjonsstrategi. Dokumentet introduserer også behovet for en place-analyse for å dokumentere nabolagets tilhørighet til bygget.",
+      "summary": "Intern statusgjennomgang av Hovfaret 13-prosjektet med fokus på fremdrift.",
       "outcomes": [
-        "Prosjektet skal posisjonere seg mot områdeplanens målsetninger og vise at transformasjon bidrar bedre enn riving",
-        "Place-analyse skal gjennomføres for å dokumentere nabolagstilhørighet",
-        "CO₂-beregninger skal gjøres for å kvantifisere bærekraftsgevinsten",
-        "Oppgave: Ferdigstille konseptskisse med utviklingsscenarier",
-        "Oppgave: Utvikle kommunikasjonsstrategi"
-      ]
+        "Intern statusgjennomgang av Hovfaret 13-prosjektet med fokus på fremdrift"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-04-29_trym_vill_energi_hovfaret",
@@ -3823,7 +3040,8 @@
         "One-pager skal koble energirapport og klimagassberegning",
         "Oppgave: Ferdigstille energiberegning (Linda)",
         "Oppgave: Svare Vill Energi på mail (Gabriel)"
-      ]
+      ],
+      "type": "Telefonsamtale"
     },
     {
       "id": "m_2025-05-05_m_te_med_bente_otto_bydel_ullern_",
@@ -3904,96 +3122,11 @@
         "Lokale forhold og utfordringer",
         "Interessentperspektiver"
       ],
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
-    },
-    {
-      "id": "m_unknown_date_rapport_mte_om_utviklingsprosjekt_p_skyen",
-      "date": "2025-05-05",
-      "title": "Rapport: Møte om utviklingsprosjekt på Skøyen",
-      "organizer": null,
-      "location": "**: Ikke spesifisert<br>**Deltakere**:",
-      "participant_count": 3,
-      "participants": [
-        {
-          "name": "Gabriel Bøen",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Bydel Ullern representant",
-          "organization": "Bydel Ullern",
-          "email": ""
-        },
-        {
-          "name": "Urbania representant",
-          "organization": "Urbania Eiendom",
-          "email": ""
-        }
+      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
+      "outcomes": [
+        "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
       ],
-      "action_items": [],
-      "topics_discussed": [
-        "Sammendrag",
-        "Møteinformasjon",
-        "Reguleringsmessig kontekst",
-        "Bygningsanalyse",
-        "Foreslått utvikling",
-        "Utviklingsstrategi",
-        "Boligbehov i bydelen",
-        "Finansiell og forretningsmessig kontekst",
-        "Bærekraftperspektiver",
-        "Lokale forhold og utfordringer",
-        "Interessentperspektiver"
-      ],
-      "decisions": [],
-      "report_link": "data/polished_notes/2025_05_05_m_unknown_date_rapport_mte_om_utviklingsprosjekt_p_skyen_POLISHED.md",
-      "report_metadata": {
-        "word_count": 1570,
-        "source": "Downloaded meeting notes - auto-created",
-        "needs_review": true,
-        "created_date": "2025-11-22T10:28:28.248014",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
-      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  5 MAI  .md",
-      "report": {
-        "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
-        "topics": [
-          "Sammendrag",
-          "Møteinformasjon",
-          "Reguleringsmessig kontekst",
-          "Bygningsanalyse",
-          "Foreslått utvikling",
-          "Utviklingsstrategi",
-          "Boligbehov i bydelen",
-          "Finansiell og forretningsmessig kontekst",
-          "Bærekraftperspektiver",
-          "Lokale forhold og utfordringer",
-          "Interessentperspektiver"
-        ],
-        "discussion": [
-          {
-            "heading": "*[Original innhold følger - krever manuell renskrivning]*",
-            "content": ""
-          }
-        ],
-        "decisions": [],
-        "action_items": [],
-        "quotes": [],
-        "context": "",
-        "metadata": {
-          "word_count": 158,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion"
-          ],
-          "has_full_report": false
-        }
-      },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      "type": "Bydelsmøte"
     },
     {
       "id": "m_2025-05-06_jan_thomas_ncc_hovfaret",
@@ -4098,14 +3231,15 @@
         "Vil bruke prosjektet som showcase for sirkulære løsninger",
         "Oppgave: Sende mail til Thomas R21 om NCC (Gabriel)",
         "Oppgave: Dele Vill Energi-rapport (Gabriel)"
-      ]
+      ],
+      "type": "Telefonsamtale"
     },
     {
       "id": "m_unknown_date_rapport_fra_pent_mte_bydel_ullern",
       "date": "2025-05-13",
       "title": "Rapport fra åpent møte: Bydel Ullern 2035",
       "organizer": null,
-      "location": "** Laboratoriet, Harbitz torg<br>**Arrangører:** Ullern Arbeiderparti, Nabolagsfabrikken og Ullern Høyre",
+      "location": "Laboratoriet, Harbitz torg",
       "participant_count": 3,
       "participants": [
         {
@@ -4175,7 +3309,11 @@
           "has_full_report": false
         }
       },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
+      "outcomes": [
+        "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      ],
+      "type": "Bydelsmøte"
     },
     {
       "id": "m_2025-05-21_barekraftsrapport_struktur",
@@ -4278,7 +3416,8 @@
         "Klimadelen ferdigstilles først til møte",
         "Oppgave: Ferdigstille klimadelen til fredag (Linda)",
         "Oppgave: Lage 3-4 slides med klimauttak til bydelsmøte (Linda)"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-05-22_m_te_med_bydels_leder_p_hovfaret_13_vi_m",
@@ -4436,147 +3575,11 @@
       ]
     },
     {
-      "id": "m_unknown_date_umiddelbare_oppgaver_denne_uken",
-      "date": "2025-05-22",
-      "title": "Umiddelbare oppgaver \\(denne uken\\):",
-      "organizer": null,
-      "location": null,
-      "participant_count": 2,
-      "participants": [
-        {
-          "name": "Gabriel Bøen",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Prosjektteam",
-          "organization": "Natural State AS",
-          "email": ""
-        }
-      ],
-      "action_items": [],
-      "topics_discussed": [
-        "Møter og oppfølging (neste uke):",
-        "Strategiske grep:",
-        "Dokumentasjon som må utarbeides:",
-        "Viktige hensyn:"
-      ],
-      "decisions": [],
-      "report_link": "data/polished_notes/2025_05_22_m_unknown_date_umiddelbare_oppgaver_denne_uken_POLISHED.md",
-      "report_metadata": {
-        "word_count": 431,
-        "source": "Downloaded meeting notes - auto-created",
-        "needs_review": true,
-        "created_date": "2025-11-22T10:28:28.204591",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
-      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  22 MAI   notater.md",
-      "report": {
-        "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
-        "topics": [
-          "Møter og oppfølging (neste uke):",
-          "Strategiske grep:",
-          "Dokumentasjon som må utarbeides:",
-          "Viktige hensyn:"
-        ],
-        "discussion": [
-          {
-            "heading": "*[Original innhold følger - krever manuell renskrivning]*",
-            "content": ""
-          }
-        ],
-        "decisions": [],
-        "action_items": [],
-        "quotes": [],
-        "context": "",
-        "metadata": {
-          "word_count": 151,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion"
-          ],
-          "has_full_report": false
-        }
-      },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
-    },
-    {
-      "id": "m_unknown_date_rapport_bydelsledernes_uttalelser_mte_om_omsorg",
-      "date": "2025-05-22",
-      "title": "Rapport: Bydelsledernes Uttalelser \\- Møte om Omsorg Pluss i Ullern Bydel",
-      "organizer": null,
-      "location": null,
-      "participant_count": 3,
-      "participants": [
-        {
-          "name": "Gabriel Bøen",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Bydelsledere Ullern",
-          "organization": "Bydel Ullern",
-          "email": ""
-        },
-        {
-          "name": "Urbania representant",
-          "organization": "Urbania Eiendom",
-          "email": ""
-        }
-      ],
-      "action_items": [],
-      "topics_discussed": [
-        "Bydelsledernes Hovedbudskap"
-      ],
-      "decisions": [],
-      "report_link": "data/polished_notes/2025_05_22_m_2025-05-22_m_te_med_bydels_leder_p_hovfaret_13_vi_m_POLISHED.md",
-      "report_metadata": {
-        "word_count": 727,
-        "source": "Downloaded meeting notes - auto-created",
-        "needs_review": true,
-        "created_date": "2025-11-22T10:28:28.204869",
-        "polished": true,
-        "polished_date": "2025-11-22"
-      },
-      "data_quality_note": "Auto-assigned date from filename/content - needs verification",
-      "original_report_link": "data/restructured_notes/UKJENT_DATO_MØTE  22 MAI  .md",
-      "report": {
-        "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
-        "topics": [],
-        "discussion": [
-          {
-            "heading": "*[Original innhold følger - krever manuell renskrivning]*",
-            "content": ""
-          }
-        ],
-        "decisions": [],
-        "action_items": [],
-        "quotes": [],
-        "context": "",
-        "metadata": {
-          "word_count": 1407,
-          "source": "polished_note",
-          "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "discussion"
-          ],
-          "has_full_report": false
-        }
-      },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
-    },
-    {
       "id": "m_2025-05-23_hovfaret_debrief",
       "date": "2025-05-23",
       "title": "Hovfaret Debrief + Planlegge neste steg",
       "organizer": "gabriel@naturalstate.no",
-      "location": "Ukjent",
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -4615,7 +3618,12 @@
           "consolidated_date": "2025-12-02"
         }
       },
-      "summary": "Debrief-møte dagen etter det viktige møtet med bydelsledere på Hovfaret 13. Evaluering og planlegging av oppfølging."
+      "summary": "Debrief-møte dagen etter det viktige møtet med bydelsledere på Hovfaret 13. Evaluering og planlegging av oppfølging.",
+      "outcomes": [
+        "Debrief-møte dagen etter det viktige møtet med bydelsledere på Hovfaret 13",
+        "Evaluering og planlegging av oppfølging"
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-06-03_oppf_lging_prosjekt_gruppen_hovfaret_13_",
@@ -4895,14 +3903,18 @@
         "quotes": [],
         "context": ""
       },
-      "summary": "Omfattende Møteanalyse: Oppfølging Prosjekt Gruppen Hovfaret 13"
+      "summary": "Omfattende Møteanalyse: Oppfølging Prosjekt Gruppen Hovfaret 13",
+      "outcomes": [
+        "Omfattende Møteanalyse: Oppfølging Prosjekt Gruppen Hovfaret 13"
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025_06_24_med_james_lorentzen",
       "date": "2025-06-24",
-      "title": "med James Lorentzen",
+      "title": "Møte med James Lorentzen - Hovfaret 13",
       "organizer": null,
-      "location": "e så det blir\\. Det blir å konsentrere seg om det vesentligste\\. Der er det gode ja\\.",
+      "location": "Ikke spesifisert",
       "participant_count": 2,
       "participants": [
         {
@@ -4954,14 +3966,18 @@
           "has_full_report": false
         }
       },
-      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
+      "outcomes": [
+        "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*"
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025-07-04_b_rekraftsrapport_hovfaret_13",
       "date": "2025-07-04",
       "title": "Bærekraftsrapport - Hovfaret 13",
       "organizer": "linda@naturalstate.no",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 2,
       "participants": [
         {
@@ -5022,7 +4038,8 @@
         "48% lavere klimagassutslipp ved rehabilitering vs. nybygg",
         "50% reduksjon i energiforbruk mulig",
         "80-90% mindre avfall enn ved riving"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-08-22_andreas_energiklassifisering",
@@ -5109,14 +4126,15 @@
         "Diskrepans mellom reelt og beregnet energiforbruk skal avklares",
         "Oppgave: Avtale møte mandag 14:30 (Gabriel)",
         "Oppgave: Forberede energiklassifiseringsforklaring (Trym)"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-08-25_energikartlegging_hovfaret_13_avklaringe",
       "date": "2025-08-25",
       "title": "Energikartlegging Hovfaret 13 - Avklaringer ",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Ikke spesifisert",
       "participant_count": 3,
       "participants": [
         {
@@ -5246,14 +4264,15 @@
         "Omsorg+ forfølges som parallelt spor",
         "Oppgave: Purre på byråd James for svar (Gabriel)",
         "Oppgave: Ringe takstmann og avklare behov (Andreas)"
-      ]
+      ],
+      "type": "Interne møter"
     },
     {
       "id": "m_2025-08-28_kort_brief_om_utviklingsprosess_hovfaret",
       "date": "2025-08-28",
       "title": "Kort Brief med Thomas Thorsnes (Urbania) - Rammesøknad Omsorg+",
       "organizer": "gabriel@naturalstate.no",
-      "location": null,
+      "location": "Hovfaret 13",
       "participant_count": 2,
       "participants": [
         {
@@ -5469,7 +4488,8 @@
         "Instagram-konto skal opprettes med ca 1 post/måned",
         "Oppgave: Ferdigstille klimadelen av rapporten (Linda)",
         "Oppgave: Oppdatere nettside med konseptskisse-merking (KOMS/Jurei)"
-      ]
+      ],
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025-09-02_andreas_og_einar_stedsokonomi",
@@ -5564,7 +4584,8 @@
         "Studiekontormodell gir høyere inntekt per kvm",
         "Oppgave: Få takstmannvurdering (Andreas)",
         "Oppgave: Ferdigstille inntektsprognose (Einar)"
-      ]
+      ],
+      "type": "Telefonsamtale"
     },
     {
       "id": "m_2025-09-04_hovfaret_13_koordinere_rammes_knad",
@@ -5636,245 +4657,13 @@
         "source": "claude_web_gmail_calendar_drive",
         "polished": true
       },
-      "summary": "Kritisk koordineringsmøte hos R21 for å forberede formell rammesøknad til kommunen. Arkitektteamet samordnet dokumentasjon, tegninger og landskapsarkitektur for å kunne sende inn søknad. Dette var et viktig steg mot formalisering av transformasjonsprosjektet."
-    },
-    {
-      "id": "m_2025-09-27_urbania_hovfaret_workshop",
-      "date": "2025-09-27",
-      "title": "Urbania Hovfaret 13 - Konseptworkshop med R21",
-      "organizer": "gabriel@naturalstate.no",
-      "location": "Hovfaret 13 / Natural State kontor",
-      "participant_count": 4,
-      "participants": [
-        {
-          "name": "Gabriel Bøen",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Einar Holthe",
-          "organization": "Natural State AS",
-          "email": "einar@naturalstate.no"
-        },
-        {
-          "name": "Thomas Thorsnes",
-          "organization": "R21 Arkitekter AS",
-          "email": null
-        },
-        {
-          "name": "Andreas Thorsnes",
-          "organization": "Urbania Eiendom AS",
-          "email": "andreas@urbania.no"
-        }
-      ],
-      "topics_discussed": [
-        "Fire utviklingsscenarier gjennomgang",
-        "Energikartlegging og klimagassregnskap",
-        "Fasadeendringer og grønne løsninger",
-        "Omsorg+, hotell, bokollektiv alternativer",
-        "Inntektspotensial og stedsøkonomi",
-        "Husbanken-finansiering",
-        "Kulturminnevern og tidstypisk arkitektur"
-      ],
-      "decisions": [
-        "Fem etasjer næring er alternativ 1 (dagens situasjon optimalisert)",
-        "Fire etasjer næring + fire etasjer bolig er alternativ 2",
-        "Syv etasjer bolig + næring i første er alternativ 3",
-        "Åtte etasjer næring er alternativ 4",
-        "Energikartlegging og ombrukskartlegging skal søkes støtte til",
-        "Form med inntrukket påbygg og rund trapp som monument er valgt retning"
-      ],
-      "action_items": [
-        {
-          "task": "Søke Enova om energikartlegging",
-          "responsible": "Gabriel/Vill Energi",
-          "status": "pending"
-        },
-        {
-          "task": "Søke Resirkel om ombrukskartlegging",
-          "responsible": "Gabriel",
-          "status": "pending"
-        },
-        {
-          "task": "Lage leietakerliste med arealfordeling",
-          "responsible": "Andreas/Gabriel",
-          "status": "pending"
-        },
-        {
-          "task": "Planlegge husmøte med leietakere",
-          "responsible": "Gabriel",
-          "status": "pending"
-        },
-        {
-          "task": "Oppdatere tegninger med underetasjer",
-          "responsible": "Thomas R21",
-          "status": "pending"
-        },
-        {
-          "task": "Lage inntektsprognose for studiokontorer",
-          "responsible": "Einar",
-          "status": "pending"
-        }
-      ],
-      "report": {
-        "summary": "Omfattende konseptworkshop med R21 Arkitekter og Natural State for å gjennomgå fire utviklingsscenarier for Hovfaret 13. Møtet var svært produktivt med detaljert gjennomgang av arkitektoniske løsninger, programmatiske alternativer (næring, bolig, hotell, omsorg+), og finansieringsstrategier. Viktig gjennombrudd: arkitektene presenterte en elegant formløsning med inntrukket påbygg som gir bygget et 'nøkternt' uttrykk - møtt med 'nøktern entusiasme' (vestlandsk for 'veldig bra'). Diskuterte Husbanken-finansiering, kulturminneaspekter, og inntektspotensial ved studiokontorer.",
-        "discussion": [
-          {
-            "heading": "De fire scenariene",
-            "content": "Alternativ 1: Fem etasjer næring - dagens bygg transformert til foregangeksempel på viderebruk. Fasadeendringer, pergola ved inngang, aktiv førsteetasje. Alternativ 2: Fire etasjer næring + fire etasjer bolig - mest sannsynlig scenario. Alternativ 3: Syv etasjer bolig + næring i første etasje. Alternativ 4: Åtte etasjer rent næringsbygg. Alle alternativer beholder aktiv førsteetasje og underetasjer som parkering/boder."
-          },
-          {
-            "heading": "Arkitektonisk formgrep",
-            "content": "Thomas R21 presenterte skisser der påbygget er inntrukket fra eksisterende fasade, med den runde trappen bevart som et 'monument'. Dette gir en elegant overgang mellom gammelt og nytt, og bygget ser 'ikke så voldsomt ut'. Fasaden kan oppgraderes med grønne elementer og varevindu på innsiden (som gjort på Industribrygg) for bedre energieffektivitet uten å endre det tidstypiske uttrykket."
-          },
-          {
-            "heading": "Programmatiske alternativer",
-            "content": "Diskuterte hotell (21 rom per etasje), bokollektiv (18 enheter), studentboliger, omsorgsboliger. Viktig innsikt: hotell er 'næring' regulatorisk, men overnatting - dette åpner muligheter. HDO-boliger (Husbank-støttede omsorgsboliger) gir 50% tilskudd til kjøp. Einar anbefaler å skille studentkollektiv og omsorgstrapp i kommunikasjonen - helt ulike finansieringsmodeller."
-          },
-          {
-            "heading": "Energi og miljødokumentasjon",
-            "content": "Energikartlegging må gjøres for å ha faktabasert argumentasjon. Vill Energi/Per har 100% treff på Enova-søknader om energikartlegging. Resirkel kan søke om ombrukskartlegging. Asplan Viak er kontaktet for klimagassberegning. Bygget bruker under 40 kWh/m² i dag - 'veldig beskjedent for et slikt bygg'."
-          },
-          {
-            "heading": "Inntektspotensial og stedsøkonomi",
-            "content": "Dagens leie: ca 1,5 mill på 14 leietakere. Med studiokontorkonsept kan dette øke til 3 mill+ - nesten dobling. Nøkkelen er å dele opp i mindre enheter (32, 21, 21 kvm) og ta høyere pris per kvm. Einar skal lage detaljert inntektsprognose. Viktig: felleskostnader fordeles på flere, service inkluderes, og miljøet blir mer attraktivt."
-          },
-          {
-            "heading": "Husbanken og finansiering",
-            "content": "Husbanken kan finansiere transformasjon med energioppgradering. Referanse til Wilswaterslien-prosjektet. Universell utforming trengs, men ikke full tilgjengelighet. Lars Halvorsen i Husbanken er kontaktperson. HDO-boliger (hjemmebaserte omsorgsboliger) gir 50% tilskudd ved vedtak om hjemmehjelp."
-          }
-        ],
-        "quotes": [
-          "Det er en nøktern entusiasme. Sånn at du sier på Vestlandet: 'Det er ikke så gale.' Det betyr veldig, veldig bra!",
-          "Potensialet er der - vi kan ha fått dobbelt den inntekten ved å være mer effektiv og sette opp ferdige studiebord.",
-          "Hvis du klarer å bygge opp entusiasme hos saksbehandler i Plan og bygg, så er det utrolig hva du kan få til.",
-          "Det er et bygg som er fleksibelt. Det er bygd og prosjektert for utvikling. Fortiden beregnet inn det økte behovet."
-        ],
-        "context": "Dette er et av de viktigste arbeidsmøtene i prosjektet - her kobles arkitektur, økonomi, og strategi sammen. R21 Arkitekter ledes av Thomas (sønn av Andreas), noe som gir tett samarbeid. Møtet skjer etter sommerferien, i en fase der prosjektet forbereder rammesøknad og politisk trykk. Natural States stedsøkonomiske metodikk demonstreres.",
-        "metadata": {
-          "source": "transcript",
-          "source_file": "URBANIA HOVFARET 13 (Sep 27 08.44.09).txt",
-          "word_count": 800,
-          "consolidated_date": "2025-12-02"
-        }
-      },
-      "source_file": "URBANIA HOVFARET 13 (Sep 27 08.44.09).txt",
-      "summary": "Omfattende konseptworkshop med R21 Arkitekter og Natural State for å gjennomgå fire utviklingsscenarier for Hovfaret 13. Møtet var svært produktivt med detaljert gjennomgang av arkitektoniske løsninger, programmatiske alternativer (næring, bolig, hotell, omsorg+), og finansieringsstrategier. Viktig gjennombrudd: arkitektene presenterte en elegant formløsning med inntrukket påbygg som gir bygget et 'nøkternt' uttrykk - møtt med 'nøktern entusiasme' (vestlandsk for 'veldig bra'). Diskuterte Husbanken-finansiering, kulturminneaspekter, og inntektspotensial ved studiokontorer.",
+      "summary": "Kritisk koordineringsmøte hos R21 for å forberede formell rammesøknad til kommunen. Arkitektteamet samordnet dokumentasjon, tegninger og landskapsarkitektur for å kunne sende inn søknad. Dette var et viktig steg mot formalisering av transformasjonsprosjektet.",
       "outcomes": [
-        "Fem etasjer næring er alternativ 1 (dagens situasjon optimalisert)",
-        "Fire etasjer næring + fire etasjer bolig er alternativ 2",
-        "Syv etasjer bolig + næring i første er alternativ 3",
-        "Oppgave: Søke Enova om energikartlegging (Gabriel/Vill Energi)",
-        "Oppgave: Søke Resirkel om ombrukskartlegging (Gabriel)"
-      ]
-    },
-    {
-      "id": "m_2025-10-14_hovfaret_befaring_og_diskusjon",
-      "date": "2025-10-14",
-      "title": "Hovfaret 13 - Befaring og prosjektdiskusjon",
-      "organizer": "gabriel@naturalstate.no",
-      "location": "Hovfaret 13",
-      "participant_count": 3,
-      "participants": [
-        {
-          "name": "Gabriel Bøen",
-          "organization": "Natural State AS",
-          "email": "gabriel@naturalstate.no"
-        },
-        {
-          "name": "Einar Holthe",
-          "organization": "Natural State AS",
-          "email": "einar@naturalstate.no"
-        },
-        {
-          "name": "Ekstern rådgiver",
-          "organization": null,
-          "email": null
-        }
+        "Kritisk koordineringsmøte hos R21 for å forberede formell rammesøknad til kommunen",
+        "Arkitektteamet samordnet dokumentasjon, tegninger og landskapsarkitektur for å kunne sende inn søknad",
+        "Dette var et viktig steg mot formalisering av transformasjonsprosjektet"
       ],
-      "topics_discussed": [
-        "Bygningsbefaring og teknisk status",
-        "Leietakeroversikt og arealfordeling",
-        "Interessentkartlegging og nabolag",
-        "Filosofiske refleksjoner om liv og arbeid",
-        "Konkurrenter i området",
-        "Prosjektets fremtid"
-      ],
-      "decisions": [
-        "Leietakerliste skal oppdateres med kontaktinfo",
-        "Interessentoversikt over nabolaget skal lages",
-        "Kantinen kan lånes gratis til arrangementer",
-        "Fokus på å skape mer 'liv' i bygget"
-      ],
-      "action_items": [
-        {
-          "task": "Oppdatere leietakerliste med kontaktinfo",
-          "responsible": "Gabriel",
-          "status": "pending"
-        },
-        {
-          "task": "Kartlegge interessenter i nabolaget",
-          "responsible": "Gabriel",
-          "status": "pending"
-        },
-        {
-          "task": "Kontakte bydelen (venteliste)",
-          "responsible": "Gabriel",
-          "status": "pending"
-        },
-        {
-          "task": "Vurdere arrangement i kantinen",
-          "responsible": "Gabriel",
-          "status": "pending"
-        }
-      ],
-      "report": {
-        "summary": "Befaring i bygget med gjennomgang av alle etasjer, leietakere, og tekniske installasjoner. Samtalen ble også filosofisk - diskuterte livsrefleksjoner, tap, og mening. Praktisk fokus på å kartlegge interessenter i nabolaget og skape mer aktivitet i bygget. Bygget beskrives som 'dødt' - kantinen brukes ikke, leietakere holder seg for seg selv. Mulighet for å bruke kantinen til arrangementer for å skape 'content' og liv.",
-        "discussion": [
-          {
-            "heading": "Bygningsbefaring",
-            "content": "Gjennomgang av alle etasjer med fokus på leietakere og arealfordeling. Første etasje har to butikker som selger mot bedrifter (ikke publikum). Kantinen er ikke i drift. Leietakere inkluderer Svein, Anneke, og flere kontorleietakere. Parkeringskjeller har boder, lagerfunksjoner. Ventilasjon er separate anlegg for garasje og sentralbygget."
-          },
-          {
-            "heading": "Byggets atmosfære",
-            "content": "Bygget beskrives som 'veldig dødt'. Leietakere bruker ikke fellesarealene. Kantinen står tom. Noen bruker egne innganger og ser aldri andre. Gabriel oppfordrer folk til å bruke fellesarealer men det er motstand. Potensial for å skape mer liv gjennom studiokontorer og aktivering."
-          },
-          {
-            "heading": "Konkurrenter og marked",
-            "content": "Diskusjon om konkurrerende lokaler i området: Holm Eindahl, Møller (nybygg), Trenger, Klaveness (modernisert). Utfordring: disse har bedre fasiliteter og mer moderne uttrykk. Hovfaret må differensiere seg gjennom pris, miljø, og konsept - ikke konkurrere på standard kontorfasiliteter."
-          },
-          {
-            "heading": "Filosofiske refleksjoner",
-            "content": "Samtalen tok en personlig vending med refleksjoner om tap (Gabriel mistet datteren sin for fire år siden), mening i livet, og betydningen av lys og natur. Diskuterte LED-revolusjonens påvirkning på menneskers døgnrytme og helse. Disse personlige innsiktene farger Gabriels tilnærming til prosjekter."
-          },
-          {
-            "heading": "Interessentkartlegging",
-            "content": "Behov for oversikt over dialoger med organisasjoner og interessenter i nabolaget. Hoff-Elvens venner er en potensiell samarbeidspartner, men tidligere kontakt var problematisk. Ullern frivillighetssentral sitter i en garasje oppe i området. Oslo kommune bydel ønsker å være i bygget men har ikke fått lov."
-          }
-        ],
-        "quotes": [
-          "Det er for meg helt fundamentalt dette med lys. Hun (datteren) hadde veldig spesielle øyne.",
-          "Vi er predatorer som utvikles for fort - vi tenker ikke over konsekvensene.",
-          "Det er veldig dødt her. Kantinen blir ikke brukt. Det er bomtrist å komme til oss.",
-          "Hver dag er en gave. Livet er vakkert. Det var ikke evig. Hvis det ikke hadde vært noe ende, så hadde det ikke gitt noe mening."
-        ],
-        "context": "Dette møtet er en blanding av praktisk befaring og dypere samtaler om mening og motivasjon. Det gir innsikt i byggets nåværende tilstand og utfordringer, samt Gabriels personlige drivkrefter bak prosjektet. Befaringen dokumenterer fysiske forhold og identifiserer muligheter for aktivering.",
-        "metadata": {
-          "source": "transcript",
-          "source_file": "Hovfaret preik  (Oct 14 12.39.11).txt",
-          "word_count": 550,
-          "consolidated_date": "2025-12-02"
-        }
-      },
-      "source_file": "Hovfaret preik  (Oct 14 12.39.11).txt",
-      "summary": "Befaring i bygget med gjennomgang av alle etasjer, leietakere, og tekniske installasjoner. Samtalen ble også filosofisk - diskuterte livsrefleksjoner, tap, og mening. Praktisk fokus på å kartlegge interessenter i nabolaget og skape mer aktivitet i bygget. Bygget beskrives som 'dødt' - kantinen brukes ikke, leietakere holder seg for seg selv. Mulighet for å bruke kantinen til arrangementer for å skape 'content' og liv.",
-      "outcomes": [
-        "Leietakerliste skal oppdateres med kontaktinfo",
-        "Interessentoversikt over nabolaget skal lages",
-        "Kantinen kan lånes gratis til arrangementer",
-        "Oppgave: Oppdatere leietakerliste med kontaktinfo (Gabriel)",
-        "Oppgave: Kartlegge interessenter i nabolaget (Gabriel)"
-      ]
+      "type": "Prosjektmøte"
     },
     {
       "id": "m_2025-09-05_hovfaret_13_strategimote",
@@ -6185,6 +4974,246 @@
       ]
     },
     {
+      "id": "m_2025-09-27_urbania_hovfaret_workshop",
+      "date": "2025-09-27",
+      "title": "Urbania Hovfaret 13 - Konseptworkshop med R21",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "Hovfaret 13 / Natural State kontor",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Gabriel Bøen",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Einar Holthe",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Thomas Thorsnes",
+          "organization": "R21 Arkitekter AS",
+          "email": null
+        },
+        {
+          "name": "Andreas Thorsnes",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no"
+        }
+      ],
+      "topics_discussed": [
+        "Fire utviklingsscenarier gjennomgang",
+        "Energikartlegging og klimagassregnskap",
+        "Fasadeendringer og grønne løsninger",
+        "Omsorg+, hotell, bokollektiv alternativer",
+        "Inntektspotensial og stedsøkonomi",
+        "Husbanken-finansiering",
+        "Kulturminnevern og tidstypisk arkitektur"
+      ],
+      "decisions": [
+        "Fem etasjer næring er alternativ 1 (dagens situasjon optimalisert)",
+        "Fire etasjer næring + fire etasjer bolig er alternativ 2",
+        "Syv etasjer bolig + næring i første er alternativ 3",
+        "Åtte etasjer næring er alternativ 4",
+        "Energikartlegging og ombrukskartlegging skal søkes støtte til",
+        "Form med inntrukket påbygg og rund trapp som monument er valgt retning"
+      ],
+      "action_items": [
+        {
+          "task": "Søke Enova om energikartlegging",
+          "responsible": "Gabriel/Vill Energi",
+          "status": "pending"
+        },
+        {
+          "task": "Søke Resirkel om ombrukskartlegging",
+          "responsible": "Gabriel",
+          "status": "pending"
+        },
+        {
+          "task": "Lage leietakerliste med arealfordeling",
+          "responsible": "Andreas/Gabriel",
+          "status": "pending"
+        },
+        {
+          "task": "Planlegge husmøte med leietakere",
+          "responsible": "Gabriel",
+          "status": "pending"
+        },
+        {
+          "task": "Oppdatere tegninger med underetasjer",
+          "responsible": "Thomas R21",
+          "status": "pending"
+        },
+        {
+          "task": "Lage inntektsprognose for studiokontorer",
+          "responsible": "Einar",
+          "status": "pending"
+        }
+      ],
+      "report": {
+        "summary": "Omfattende konseptworkshop med R21 Arkitekter og Natural State for å gjennomgå fire utviklingsscenarier for Hovfaret 13. Møtet var svært produktivt med detaljert gjennomgang av arkitektoniske løsninger, programmatiske alternativer (næring, bolig, hotell, omsorg+), og finansieringsstrategier. Viktig gjennombrudd: arkitektene presenterte en elegant formløsning med inntrukket påbygg som gir bygget et 'nøkternt' uttrykk - møtt med 'nøktern entusiasme' (vestlandsk for 'veldig bra'). Diskuterte Husbanken-finansiering, kulturminneaspekter, og inntektspotensial ved studiokontorer.",
+        "discussion": [
+          {
+            "heading": "De fire scenariene",
+            "content": "Alternativ 1: Fem etasjer næring - dagens bygg transformert til foregangeksempel på viderebruk. Fasadeendringer, pergola ved inngang, aktiv førsteetasje. Alternativ 2: Fire etasjer næring + fire etasjer bolig - mest sannsynlig scenario. Alternativ 3: Syv etasjer bolig + næring i første etasje. Alternativ 4: Åtte etasjer rent næringsbygg. Alle alternativer beholder aktiv førsteetasje og underetasjer som parkering/boder."
+          },
+          {
+            "heading": "Arkitektonisk formgrep",
+            "content": "Thomas R21 presenterte skisser der påbygget er inntrukket fra eksisterende fasade, med den runde trappen bevart som et 'monument'. Dette gir en elegant overgang mellom gammelt og nytt, og bygget ser 'ikke så voldsomt ut'. Fasaden kan oppgraderes med grønne elementer og varevindu på innsiden (som gjort på Industribrygg) for bedre energieffektivitet uten å endre det tidstypiske uttrykket."
+          },
+          {
+            "heading": "Programmatiske alternativer",
+            "content": "Diskuterte hotell (21 rom per etasje), bokollektiv (18 enheter), studentboliger, omsorgsboliger. Viktig innsikt: hotell er 'næring' regulatorisk, men overnatting - dette åpner muligheter. HDO-boliger (Husbank-støttede omsorgsboliger) gir 50% tilskudd til kjøp. Einar anbefaler å skille studentkollektiv og omsorgstrapp i kommunikasjonen - helt ulike finansieringsmodeller."
+          },
+          {
+            "heading": "Energi og miljødokumentasjon",
+            "content": "Energikartlegging må gjøres for å ha faktabasert argumentasjon. Vill Energi/Per har 100% treff på Enova-søknader om energikartlegging. Resirkel kan søke om ombrukskartlegging. Asplan Viak er kontaktet for klimagassberegning. Bygget bruker under 40 kWh/m² i dag - 'veldig beskjedent for et slikt bygg'."
+          },
+          {
+            "heading": "Inntektspotensial og stedsøkonomi",
+            "content": "Dagens leie: ca 1,5 mill på 14 leietakere. Med studiokontorkonsept kan dette øke til 3 mill+ - nesten dobling. Nøkkelen er å dele opp i mindre enheter (32, 21, 21 kvm) og ta høyere pris per kvm. Einar skal lage detaljert inntektsprognose. Viktig: felleskostnader fordeles på flere, service inkluderes, og miljøet blir mer attraktivt."
+          },
+          {
+            "heading": "Husbanken og finansiering",
+            "content": "Husbanken kan finansiere transformasjon med energioppgradering. Referanse til Wilswaterslien-prosjektet. Universell utforming trengs, men ikke full tilgjengelighet. Lars Halvorsen i Husbanken er kontaktperson. HDO-boliger (hjemmebaserte omsorgsboliger) gir 50% tilskudd ved vedtak om hjemmehjelp."
+          }
+        ],
+        "quotes": [
+          "Det er en nøktern entusiasme. Sånn at du sier på Vestlandet: 'Det er ikke så gale.' Det betyr veldig, veldig bra!",
+          "Potensialet er der - vi kan ha fått dobbelt den inntekten ved å være mer effektiv og sette opp ferdige studiebord.",
+          "Hvis du klarer å bygge opp entusiasme hos saksbehandler i Plan og bygg, så er det utrolig hva du kan få til.",
+          "Det er et bygg som er fleksibelt. Det er bygd og prosjektert for utvikling. Fortiden beregnet inn det økte behovet."
+        ],
+        "context": "Dette er et av de viktigste arbeidsmøtene i prosjektet - her kobles arkitektur, økonomi, og strategi sammen. R21 Arkitekter ledes av Thomas (sønn av Andreas), noe som gir tett samarbeid. Møtet skjer etter sommerferien, i en fase der prosjektet forbereder rammesøknad og politisk trykk. Natural States stedsøkonomiske metodikk demonstreres.",
+        "metadata": {
+          "source": "transcript",
+          "source_file": "URBANIA HOVFARET 13 (Sep 27 08.44.09).txt",
+          "word_count": 800,
+          "consolidated_date": "2025-12-02"
+        }
+      },
+      "source_file": "URBANIA HOVFARET 13 (Sep 27 08.44.09).txt",
+      "summary": "Omfattende konseptworkshop med R21 Arkitekter og Natural State for å gjennomgå fire utviklingsscenarier for Hovfaret 13. Møtet var svært produktivt med detaljert gjennomgang av arkitektoniske løsninger, programmatiske alternativer (næring, bolig, hotell, omsorg+), og finansieringsstrategier. Viktig gjennombrudd: arkitektene presenterte en elegant formløsning med inntrukket påbygg som gir bygget et 'nøkternt' uttrykk - møtt med 'nøktern entusiasme' (vestlandsk for 'veldig bra'). Diskuterte Husbanken-finansiering, kulturminneaspekter, og inntektspotensial ved studiokontorer.",
+      "outcomes": [
+        "Fem etasjer næring er alternativ 1 (dagens situasjon optimalisert)",
+        "Fire etasjer næring + fire etasjer bolig er alternativ 2",
+        "Syv etasjer bolig + næring i første er alternativ 3",
+        "Oppgave: Søke Enova om energikartlegging (Gabriel/Vill Energi)",
+        "Oppgave: Søke Resirkel om ombrukskartlegging (Gabriel)"
+      ],
+      "type": "Workshop"
+    },
+    {
+      "id": "m_2025-10-14_hovfaret_befaring_og_diskusjon",
+      "date": "2025-10-14",
+      "title": "Hovfaret 13 - Befaring og prosjektdiskusjon",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "Hovfaret 13",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Gabriel Bøen",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no"
+        },
+        {
+          "name": "Einar Holthe",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no"
+        },
+        {
+          "name": "Ekstern rådgiver",
+          "organization": null,
+          "email": null
+        }
+      ],
+      "topics_discussed": [
+        "Bygningsbefaring og teknisk status",
+        "Leietakeroversikt og arealfordeling",
+        "Interessentkartlegging og nabolag",
+        "Filosofiske refleksjoner om liv og arbeid",
+        "Konkurrenter i området",
+        "Prosjektets fremtid"
+      ],
+      "decisions": [
+        "Leietakerliste skal oppdateres med kontaktinfo",
+        "Interessentoversikt over nabolaget skal lages",
+        "Kantinen kan lånes gratis til arrangementer",
+        "Fokus på å skape mer 'liv' i bygget"
+      ],
+      "action_items": [
+        {
+          "task": "Oppdatere leietakerliste med kontaktinfo",
+          "responsible": "Gabriel",
+          "status": "pending"
+        },
+        {
+          "task": "Kartlegge interessenter i nabolaget",
+          "responsible": "Gabriel",
+          "status": "pending"
+        },
+        {
+          "task": "Kontakte bydelen (venteliste)",
+          "responsible": "Gabriel",
+          "status": "pending"
+        },
+        {
+          "task": "Vurdere arrangement i kantinen",
+          "responsible": "Gabriel",
+          "status": "pending"
+        }
+      ],
+      "report": {
+        "summary": "Befaring i bygget med gjennomgang av alle etasjer, leietakere, og tekniske installasjoner. Samtalen ble også filosofisk - diskuterte livsrefleksjoner, tap, og mening. Praktisk fokus på å kartlegge interessenter i nabolaget og skape mer aktivitet i bygget. Bygget beskrives som 'dødt' - kantinen brukes ikke, leietakere holder seg for seg selv. Mulighet for å bruke kantinen til arrangementer for å skape 'content' og liv.",
+        "discussion": [
+          {
+            "heading": "Bygningsbefaring",
+            "content": "Gjennomgang av alle etasjer med fokus på leietakere og arealfordeling. Første etasje har to butikker som selger mot bedrifter (ikke publikum). Kantinen er ikke i drift. Leietakere inkluderer Svein, Anneke, og flere kontorleietakere. Parkeringskjeller har boder, lagerfunksjoner. Ventilasjon er separate anlegg for garasje og sentralbygget."
+          },
+          {
+            "heading": "Byggets atmosfære",
+            "content": "Bygget beskrives som 'veldig dødt'. Leietakere bruker ikke fellesarealene. Kantinen står tom. Noen bruker egne innganger og ser aldri andre. Gabriel oppfordrer folk til å bruke fellesarealer men det er motstand. Potensial for å skape mer liv gjennom studiokontorer og aktivering."
+          },
+          {
+            "heading": "Konkurrenter og marked",
+            "content": "Diskusjon om konkurrerende lokaler i området: Holm Eindahl, Møller (nybygg), Trenger, Klaveness (modernisert). Utfordring: disse har bedre fasiliteter og mer moderne uttrykk. Hovfaret må differensiere seg gjennom pris, miljø, og konsept - ikke konkurrere på standard kontorfasiliteter."
+          },
+          {
+            "heading": "Filosofiske refleksjoner",
+            "content": "Samtalen tok en personlig vending med refleksjoner om tap (Gabriel mistet datteren sin for fire år siden), mening i livet, og betydningen av lys og natur. Diskuterte LED-revolusjonens påvirkning på menneskers døgnrytme og helse. Disse personlige innsiktene farger Gabriels tilnærming til prosjekter."
+          },
+          {
+            "heading": "Interessentkartlegging",
+            "content": "Behov for oversikt over dialoger med organisasjoner og interessenter i nabolaget. Hoff-Elvens venner er en potensiell samarbeidspartner, men tidligere kontakt var problematisk. Ullern frivillighetssentral sitter i en garasje oppe i området. Oslo kommune bydel ønsker å være i bygget men har ikke fått lov."
+          }
+        ],
+        "quotes": [
+          "Det er for meg helt fundamentalt dette med lys. Hun (datteren) hadde veldig spesielle øyne.",
+          "Vi er predatorer som utvikles for fort - vi tenker ikke over konsekvensene.",
+          "Det er veldig dødt her. Kantinen blir ikke brukt. Det er bomtrist å komme til oss.",
+          "Hver dag er en gave. Livet er vakkert. Det var ikke evig. Hvis det ikke hadde vært noe ende, så hadde det ikke gitt noe mening."
+        ],
+        "context": "Dette møtet er en blanding av praktisk befaring og dypere samtaler om mening og motivasjon. Det gir innsikt i byggets nåværende tilstand og utfordringer, samt Gabriels personlige drivkrefter bak prosjektet. Befaringen dokumenterer fysiske forhold og identifiserer muligheter for aktivering.",
+        "metadata": {
+          "source": "transcript",
+          "source_file": "Hovfaret preik  (Oct 14 12.39.11).txt",
+          "word_count": 550,
+          "consolidated_date": "2025-12-02"
+        }
+      },
+      "source_file": "Hovfaret preik  (Oct 14 12.39.11).txt",
+      "summary": "Befaring i bygget med gjennomgang av alle etasjer, leietakere, og tekniske installasjoner. Samtalen ble også filosofisk - diskuterte livsrefleksjoner, tap, og mening. Praktisk fokus på å kartlegge interessenter i nabolaget og skape mer aktivitet i bygget. Bygget beskrives som 'dødt' - kantinen brukes ikke, leietakere holder seg for seg selv. Mulighet for å bruke kantinen til arrangementer for å skape 'content' og liv.",
+      "outcomes": [
+        "Leietakerliste skal oppdateres med kontaktinfo",
+        "Interessentoversikt over nabolaget skal lages",
+        "Kantinen kan lånes gratis til arrangementer",
+        "Oppgave: Oppdatere leietakerliste med kontaktinfo (Gabriel)",
+        "Oppgave: Kartlegge interessenter i nabolaget (Gabriel)"
+      ],
+      "type": "Befaring"
+    },
+    {
       "id": "m_2025-10-14_nabolagsmote_hovfaret",
       "date": "2025-10-14",
       "title": "Nabolagsmøte Hovfaret 13",
@@ -6342,6 +5371,121 @@
       "outcomes": [
         "Politisk støtte til videre utvikling bekreftet"
       ]
+    },
+    {
+      "id": "m_2025-12-19_strategimote_status",
+      "date": "2025-12-19",
+      "title": "Strategimøte - Prosjektstatus og Nordic Circular Construction",
+      "organizer": "gabriel@naturalstate.no",
+      "location": "Hovfaret 13",
+      "type": "Interne møter",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Gabriel B Freeman",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no",
+          "role": "Prosjektleder"
+        },
+        {
+          "name": "Andreas Thorsnes",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no",
+          "role": "Eier/Utvikler"
+        },
+        {
+          "name": "Einar Kleppe Holthe",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no",
+          "role": "Strategisk rådgiver"
+        }
+      ],
+      "topics_discussed": [
+        "Prosjektdokumentasjon og nettside-status",
+        "Nordic Circular Construction - pilotprosjekt med Nordic Innovation",
+        "FRAVIK som regulatorisk strategi (anbefalt fremfor dispensasjon)",
+        "Priskalkyle: Standard vs deleentreprise-tilnærming",
+        "Utleiestrategi - arkitekter flytter ut i mars",
+        "Fredrikstad sykehus som mulig referanseprosjekt",
+        "Villa Granli - Einars transformasjonsprosjekt som referanse"
+      ],
+      "decisions": [
+        "Sende linker til Andreas: hovedside, aktivitetsside, presentasjon, nabolagsmøte",
+        "Endre 'Aktiviteter' til 'Utleie' på nettsiden",
+        "Hovfaret 13 bekreftet som pilotprosjekt for Nordic Circular Construction",
+        "Bruke FRAVIK-tilnærming fremfor dispensasjonssøknader",
+        "Fortsette arbeid uten ekstra fakturering til neste fase starter"
+      ],
+      "action_items": [
+        {
+          "task": "Sende mail med linker til Andreas (hovedside, aktiviteter, presentasjon, nabolagsmøte)",
+          "responsible": "Gabriel",
+          "status": "pending",
+          "due_date": "2025-12-20"
+        },
+        {
+          "task": "Oppdatere nettside - endre 'Aktiviteter' til 'Utleie'",
+          "responsible": "Gabriel",
+          "status": "pending"
+        },
+        {
+          "task": "Lage utleieside med tegninger og kontaktskjema",
+          "responsible": "Gabriel",
+          "status": "pending"
+        },
+        {
+          "task": "Utvikle priskalkyler for prosjektet",
+          "responsible": "Natural State",
+          "status": "pending"
+        },
+        {
+          "task": "Vurdere Fredrikstad sykehusprosjekt som referanse",
+          "responsible": "Andreas/Einar",
+          "status": "pending",
+          "due_date": "2025-01-01"
+        },
+        {
+          "task": "Besøk Villa Granli for referanseerfaring",
+          "responsible": "Team",
+          "status": "pending",
+          "due_date": "2025-12-27"
+        }
+      ],
+      "report": {
+        "summary": "Strategisk statusmøte om Hovfaret 13 prosjektets fremdrift. Prosjektet har fått betydelig økt synlighet gjennom presentasjoner for Nordic Innovation, Husbanken og bydelsutvalget. Hovfaret 13 er nå bekreftet som pilotprosjekt for Nordic Circular Construction sammen med KPMG-bygget på Majorstua. Diskuterte FRAVIK som nøkkelstrategi for regulatorisk fleksibilitet ved transformasjonsprosjekter - anbefalt av Riksantikvaren fremfor dispensasjon. Viktig læring fra Einars Villa Granli-prosjekt om pragmatisk tilnærming til transformasjon.",
+        "context": "Møtet markerer en positiv statusoppdatering mot slutten av 2025. Prosjektet har solid forankring politisk og i bransjen. Neste fase fokuserer på utleie og praktisk gjennomføring.",
+        "discussion": [
+          {
+            "heading": "Nordic Circular Construction",
+            "content": "Presenterte Hovfaret 13 for ledelsen i Nordic Innovation. Hydro Construction (KPMG-bygget Majorstua) blir pilot nummer to. Prosjektet løftes frem i hele Norden som referanse for sirkulær transformasjon. Ca 150 sirkulære løsninger identifisert, 20 produktark innhentet med priser."
+          },
+          {
+            "heading": "FRAVIK-strategi",
+            "content": "Riksantikvaren og andre eksperter anbefaler FRAVIK fremfor dispensasjon. FRAVIK ble etablert for å gi fleksibilitet ved transformasjon, men brukes ikke korrekt i dag. Dette blir nøkkelstrategi for å håndtere TEK-17 krav pragmatisk."
+          },
+          {
+            "heading": "Priskalkyle-bevis",
+            "content": "Vist på Husbank-seminar: Tåsen-case hadde standardkalkyle på 38 mill, deleentreprise-tilnærming verifisert til 22 mill. Beviset: transformasjon trenger ikke være dyrere - kalkylen er feil, ikke konseptet."
+          },
+          {
+            "heading": "Utleiestrategi",
+            "content": "Arkitektene i 4. etasje flytter ut i mars. Mulighet for å omgjøre til studioer. Rom 302 aktuelt. Andreas nærmer seg 9 mill i årlig leie. Diskuterte å bryte opp arealer for mer fleksibel utleie. Skal lage utleieside på nettsiden."
+          },
+          {
+            "heading": "Fredrikstad referanse",
+            "content": "Gamle sykehuset i Fredrikstad - lokal gruppe har opsjon, ulike konsepter per etasje (eldre-fellesskap, ungdomskollektiv, nabolagshus). Ønsker å bruke Hovfaret 13 som referanse. Potensielt interessant for erfaringsutveksling."
+          }
+        ]
+      },
+      "summary": "Strategisk statusmøte om Hovfaret 13. Prosjektet bekreftet som pilotprosjekt for Nordic Circular Construction. FRAVIK identifisert som nøkkelstrategi for regulatorisk fleksibilitet. Planlegger omlegging av nettside fra 'Aktiviteter' til 'Utleie' for å håndtere arkitektenes utflytting i mars.",
+      "outcomes": [
+        "Hovfaret 13 bekreftet som Nordic Circular Construction pilotprosjekt",
+        "FRAVIK-strategi valgt fremfor dispensasjon",
+        "Utleiestrategi for 4. etasje når arkitekter flytter",
+        "Nettside skal oppdateres med utleiefunksjonalitet",
+        "Videre arbeid dekket av eksisterende avtale"
+      ],
+      "source_file": "MTE-191225.md, 19.12.25.md"
     }
   ]
 }

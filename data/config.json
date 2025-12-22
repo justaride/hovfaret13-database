@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.84.0",
+    "version": "2.85.0",
     "created": "2025-12-03",
-    "last_updated": "2025-12-17",
+    "last_updated": "2025-12-22",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 63
+    "database_phase": 64
   },
   "auth": {
     "enabled": true,
@@ -29,7 +29,7 @@
     "_note": "Page counts and structure details are in the content files, not here"
   },
   "metrics": {
-    "meetings_total": 59,
+    "meetings_total": 60,
     "documents_total": 271,
     "deliverables_total": 37,
     "stakeholders": {
