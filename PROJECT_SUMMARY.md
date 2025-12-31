@@ -1,6 +1,6 @@
 # Hovfaret 13 Project Summary
 
-**Version:** 2.81 | **Phase:** 59 | **Updated:** 2025-12-08
+**Version:** 2.83 | **Phase:** 62 | **Updated:** 2025-12-12
 
 ## Quick Reference
 
@@ -15,12 +15,12 @@ Live: https://justaride.github.io/hovfaret13-database/
 
 | Data | Count |
 |------|-------|
-| Meetings | 70 |
+| Meetings | 59 |
 | Documents | 271 |
 | People | 23 |
 | Organizations | 16 |
 | Deliverables | 37 |
-| Timeline events | 39 |
+| Timeline events | 32 |
 
 ## Building
 
@@ -53,15 +53,16 @@ Live: https://justaride.github.io/hovfaret13-database/
 
 ```
 data/config.json     # Central config
-data/meetings.json   # 70 meetings
+data/meetings.json   # 59 meetings
 data/documents.json  # 271 documents
 dashboard/auth.js    # Auth module
 ```
 
-## Recent Changes (Phase 59)
+## Recent Changes (Phase 62)
 
-1. Konseptskisse helhetsanalyse (100% dekning)
-2. Data integrity fixes (deliverables 75→37)
-3. Metadata validation på alle JSON-filer
-4. Dashboard overleverer: 36 moduler (144% av krav)
-5. Ny rapport: analysis/KONSEPTSKISSE-HELHET-ANALYSE.md
+1. Meeting data quality cleanup (70→59 meetings)
+2. Removed 6 non-meetings (notes, reports, task lists)
+3. Merged 5 duplicate meetings
+4. Added meeting types to all 59 meetings (100%)
+5. Fixed all corrupt data (locations, titles)
+6. Notion sync: 538 records

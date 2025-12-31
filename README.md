@@ -1,4 +1,4 @@
-# Hovfaret 13 Prosjektdatabase v2.75
+# Hovfaret 13 Prosjektdatabase v2.83
 
 Komplett prosjektdatabase med interaktivt dashboard for Hovfaret 13 transformasjonsprosjektet.
 
@@ -14,11 +14,11 @@ Komplett prosjektdatabase med interaktivt dashboard for Hovfaret 13 transformasj
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | 70 |
+| Møter | 59 |
 | Dokumenter | 271 |
-| Leveranser | 75 |
-| Personer | 22 |
-| Organisasjoner | 13 |
+| Leveranser | 37 |
+| Personer | 23 |
+| Organisasjoner | 16 |
 | CO₂-besparelse | 48% |
 | Omsorg+ enheter | 73 |
 
@@ -36,10 +36,10 @@ open http://localhost:8888/index.html
 |-----------|-----|-------------|
 | Hjemmeside | `index.html` | Navigasjon til alle dashboards |
 | Oversikt | `overview.html` | Prosjekthelse og KPIer |
-| Møter | `meetings.html` | 70 møter med notater |
+| Møter | `meetings.html` | 59 møter med notater |
 | Tidslinje | `timeline.html` | Kronologisk oversikt |
 | Dokumenter | `documents.html` | 271 dokumenter |
-| Interessenter | `stakeholders.html` | 22 personer, 13 organisasjoner |
+| Interessenter | `stakeholders.html` | 23 personer, 16 organisasjoner |
 | Scenarier | `scenarios.html` | 3 utviklingsscenarier |
 | Bærekraft | `sustainability.html` | Miljø og klima |
 | Konseptskisse 2.0 | `konseptskisse-2.html` | 123 sider presentasjon |
@@ -49,14 +49,14 @@ open http://localhost:8888/index.html
 ```
 data/
 ├── project.json              # Masterprosjekt
-├── meetings.json             # 70 møter
+├── meetings.json             # 59 møter
 ├── documents.json            # 271 dokumenter
 ├── config.json               # Sentralkonfigurasjon
-├── deliverables.json         # 75 leveranser
+├── deliverables.json         # 37 leveranser
 ├── timeline.json             # Tidslinje
 ├── stakeholders/
-│   ├── organizations.json    # 13 organisasjoner
-│   └── people.json           # 22 personer
+│   ├── organizations.json    # 16 organisasjoner
+│   └── people.json           # 23 personer
 └── themes/
     ├── sustainability.json   # Energi, klima, sirkulært
     ├── regulatory.json       # Søknader, regulering
@@ -69,7 +69,7 @@ data/
 | Fil | Beskrivelse |
 |-----|-------------|
 | `README.md` | Denne filen |
-| `STATUS.md` | Gjeldende status (Phase 56) |
+| `STATUS.md` | Gjeldende status (Phase 62) |
 | `CHANGELOG.md` | Endringshistorikk |
 | `ARCHITECTURE.md` | Komplett prosjektarkitektur |
 | `QUICKSTART.md` | Hurtigstart-guide |

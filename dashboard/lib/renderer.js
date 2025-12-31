@@ -5,6 +5,18 @@
 
 const Renderer = {
   /**
+   * Sanitize string to prevent XSS attacks
+   * @param {string} str - String to sanitize
+   * @returns {string} Sanitized string
+   */
+  sanitize(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  },
+
+  /**
    * Icons map (Lucide icon names)
    */
   icons: {
@@ -58,13 +70,13 @@ const Renderer = {
     const expandedClass = expanded ? 'expanded' : '';
 
     let html = `
-      <div class="event-card ${importanceClass} ${expandedClass}" data-event-id="${event.id}">
-        <div class="event-header" onclick="Renderer.toggleEventCard('${event.id}')">
+      <div class="event-card ${importanceClass} ${expandedClass}" data-event-id="${this.sanitize(event.id)}">
+        <div class="event-header" onclick="Renderer.toggleEventCard('${this.sanitize(event.id)}')">
           <div class="event-icon"><i data-lucide="${iconName}"></i></div>
           <div class="event-main">
             <div class="event-date">${this.formatDate(event.date)}</div>
-            <div class="event-title">${event.title}</div>
-            ${event.title_no ? `<div class="event-title-no">${event.title_no}</div>` : ''}
+            <div class="event-title">${this.sanitize(event.title)}</div>
+            ${event.title_no ? `<div class="event-title-no">${this.sanitize(event.title_no)}</div>` : ''}
           </div>
           <div class="event-indicators">
             ${hasMeetings ? `<span class="indicator meeting-indicator" title="${event.linked_meetings.length} meeting(s)"><i data-lucide="clipboard" class="icon-xs"></i> ${event.linked_meetings.length}</span>` : ''}
@@ -74,13 +86,13 @@ const Renderer = {
         </div>
 
         <div class="event-body">
-          ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
+          ${event.description ? `<p class="event-description">${this.sanitize(event.description)}</p>` : ''}
 
           ${hasExecSummary ? `
             <div class="event-exec-summary">
               <h4>Executive Summary</h4>
               <ul>
-                ${event.exec_summary.map(point => `<li>${point}</li>`).join('')}
+                ${event.exec_summary.map(point => `<li>${this.sanitize(point)}</li>`).join('')}
               </ul>
             </div>
           ` : ''}
@@ -91,8 +103,8 @@ const Renderer = {
               ${event.linked_meetings.map(m => {
                 const meeting = allData.meetings.find(mtg => mtg.id === m.id);
                 return `
-                  <div class="meeting-link" onclick="Renderer.showMeetingDetails('${m.id}')">
-                    <div class="meeting-title">${m.title}</div>
+                  <div class="meeting-link" onclick="Renderer.showMeetingDetails('${this.sanitize(m.id)}')">
+                    <div class="meeting-title">${this.sanitize(m.title)}</div>
                     <div class="meeting-meta">${m.participant_count} participants</div>
                   </div>
                 `;
@@ -106,7 +118,7 @@ const Renderer = {
               <ul>
                 ${event.related_documents.map(docId => {
                   const doc = allData.documents.find(d => d.id === docId);
-                  return `<li>${doc ? doc.title : docId}</li>`;
+                  return `<li>${this.sanitize(doc ? doc.title : docId)}</li>`;
                 }).join('')}
               </ul>
             </div>
@@ -114,7 +126,7 @@ const Renderer = {
 
           ${event.tags ? `
             <div class="event-tags">
-              ${event.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+              ${event.tags.map(tag => `<span class="tag">${this.sanitize(tag)}</span>`).join('')}
             </div>
           ` : ''}
         </div>

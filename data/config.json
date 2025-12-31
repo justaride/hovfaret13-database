@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.85.0",
+    "version": "2.86.0",
     "created": "2025-12-03",
-    "last_updated": "2025-12-22",
+    "last_updated": "2025-12-31",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 64
+    "database_phase": 65
   },
   "auth": {
     "enabled": true,

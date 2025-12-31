@@ -1,7 +1,7 @@
 # Hovfaret 13 Prosjektdatabase - Arkitektur
 
-**Sist oppdatert:** 2025-12-03
-**Versjon:** 2.49
+**Sist oppdatert:** 2025-12-12
+**Versjon:** 2.83
 
 ---
 
@@ -9,11 +9,11 @@
 
 ```
 Hovfaret 13 Prosjektdatabase
-├── 70 møter dokumentert
+├── 59 møter dokumentert
 ├── 271 dokumenter kategorisert
-├── 75 leveranser sporet
-├── 22 personer + 13 organisasjoner
-├── 20 aktive dashboards
+├── 37 leveranser sporet
+├── 23 personer + 16 organisasjoner
+├── 37 aktive dashboards
 └── Konseptskisse 2.0 (123 sider)
 ```
 
@@ -26,21 +26,21 @@ Hovfaret 13 Prosjektdatabase
 │
 ├── 📄 Hovedfiler
 │   ├── README.md              # Prosjektoversikt
-│   ├── STATUS.md              # Gjeldende status (Phase 35)
+│   ├── STATUS.md              # Gjeldende status (Phase 62)
 │   ├── CHANGELOG.md           # Endringshistorikk
 │   ├── ARCHITECTURE.md        # Denne filen
 │   ├── CLAUDE.md              # AI-instruksjoner
 │   ├── QUICKSTART.md          # Kom i gang
 │   └── QUICK_ACCESS.md        # Dashboard-lenker
 │
-├── 📊 dashboard/              # HTML-dashboards (20 aktive)
+├── 📊 dashboard/              # HTML-dashboards (37 aktive)
 │   ├── index.html             # Hovednavigasjon
 │   ├── lib/                   # JavaScript-bibliotek
 │   └── assets/                # Bilder, rapporter
 │
 ├── 💾 data/                   # JSON-datafiler
 │   ├── project.json           # Masterprosjekt
-│   ├── meetings.json          # 70 møter
+│   ├── meetings.json          # 59 møter
 │   ├── documents.json         # 271 dokumenter
 │   ├── config.json            # Sentralkonfigurasjon
 │   ├── stakeholders/          # Personer + organisasjoner

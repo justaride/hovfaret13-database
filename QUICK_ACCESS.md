@@ -54,11 +54,11 @@ python3 -m http.server 8888
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | **70** |
+| Møter | **59** |
 | Dokumenter | **271** |
-| Leveranser | **75** |
-| Personer | **22** |
-| Organisasjoner | **13** |
+| Leveranser | **37** |
+| Personer | **23** |
+| Organisasjoner | **16** |
 | CO₂-besparelse | **48%** |
 | Omsorg+ enheter | **73** |
 

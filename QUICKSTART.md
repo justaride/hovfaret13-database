@@ -1,4 +1,4 @@
-# Hurtigstart - Hovfaret 13 Dashboard v2.75
+# Hurtigstart - Hovfaret 13 Dashboard v2.83
 
 **Live på GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 
@@ -16,10 +16,10 @@ open http://localhost:8888/index.html
 |------|-----|-------------|
 | Hjemmeside | http://localhost:8888/index.html | Hovednavigasjon |
 | Oversikt | http://localhost:8888/overview.html | Prosjekthelse, KPIer |
-| Møter | http://localhost:8888/meetings.html | 70 møter med notater |
+| Møter | http://localhost:8888/meetings.html | 59 møter med notater |
 | Tidslinje | http://localhost:8888/timeline.html | Kronologisk oversikt |
 | Dokumenter | http://localhost:8888/documents.html | 271 dokumenter |
-| Interessenter | http://localhost:8888/stakeholders.html | 22 personer, 13 org |
+| Interessenter | http://localhost:8888/stakeholders.html | 23 personer, 16 org |
 | Scenarier | http://localhost:8888/scenarios.html | CO₂-analyse |
 | Bærekraft | http://localhost:8888/sustainability.html | Miljødata |
 
@@ -39,17 +39,17 @@ open http://localhost:8888/index.html
 | Bærekraftsrapport | http://localhost:8888/sustainability-report.html | 83 sider |
 | Bærekraftsrapport 2.0 | http://localhost:8888/barekraftsrapport-2.html | Arbeidsrom |
 | Regulatorisk | http://localhost:8888/regulatory-status.html | Søknadsstatus |
-| Leveranser | http://localhost:8888/deliverables.html | 75 leveranser |
+| Leveranser | http://localhost:8888/deliverables.html | 37 leveranser |
 
 ## Nøkkeltall
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | 70 |
+| Møter | 59 |
 | Dokumenter | 271 |
-| Leveranser | 75 |
-| Personer | 22 |
-| Organisasjoner | 13 |
+| Leveranser | 37 |
+| Personer | 23 |
+| Organisasjoner | 16 |
 | CO₂-besparelse | 48% |
 | Omsorg+ enheter | 73 |
 | Bydelsbehov | 150-200 |

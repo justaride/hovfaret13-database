@@ -1,26 +1,106 @@
 /**
  * Data Loader Module
  * Loads and caches JSON data for dashboard
+ *
+ * Features:
+ * - In-memory cache with TTL support
+ * - SessionStorage persistence for cross-page caching
+ * - Lazy loading support for non-critical data
  */
 
 const DataLoader = {
   cache: {},
+  cacheTimestamps: {},
+
+  // Cache configuration
+  config: {
+    ttl: 5 * 60 * 1000, // 5 minutes TTL
+    useSessionStorage: true,
+    sessionStoragePrefix: 'h13_data_'
+  },
 
   /**
-   * Load JSON file with caching
+   * Check if cached data is still valid
+   */
+  isCacheValid(filepath) {
+    const timestamp = this.cacheTimestamps[filepath];
+    if (!timestamp) return false;
+    return (Date.now() - timestamp) < this.config.ttl;
+  },
+
+  /**
+   * Get data from sessionStorage
+   */
+  getFromSessionStorage(filepath) {
+    if (!this.config.useSessionStorage || typeof sessionStorage === 'undefined') {
+      return null;
+    }
+    try {
+      const key = this.config.sessionStoragePrefix + btoa(filepath);
+      const stored = sessionStorage.getItem(key);
+      if (!stored) return null;
+
+      const { data, timestamp } = JSON.parse(stored);
+      if ((Date.now() - timestamp) < this.config.ttl) {
+        return data;
+      }
+      // Expired, remove from sessionStorage
+      sessionStorage.removeItem(key);
+      return null;
+    } catch (e) {
+      return null;
+    }
+  },
+
+  /**
+   * Save data to sessionStorage
+   */
+  saveToSessionStorage(filepath, data) {
+    if (!this.config.useSessionStorage || typeof sessionStorage === 'undefined') {
+      return;
+    }
+    try {
+      const key = this.config.sessionStoragePrefix + btoa(filepath);
+      const payload = JSON.stringify({ data, timestamp: Date.now() });
+      sessionStorage.setItem(key, payload);
+    } catch (e) {
+      // SessionStorage might be full or disabled, ignore silently
+      console.warn('SessionStorage save failed:', e.message);
+    }
+  },
+
+  /**
+   * Load JSON file with multi-layer caching
+   * Priority: 1. Memory cache 2. SessionStorage 3. Network fetch
    */
   async loadJSON(filepath) {
-    if (this.cache[filepath]) {
+    // Check memory cache first (fastest)
+    if (this.cache[filepath] && this.isCacheValid(filepath)) {
       return this.cache[filepath];
     }
 
+    // Check sessionStorage (persists across page navigations)
+    const sessionData = this.getFromSessionStorage(filepath);
+    if (sessionData) {
+      // Populate memory cache from sessionStorage
+      this.cache[filepath] = sessionData;
+      this.cacheTimestamps[filepath] = Date.now();
+      return sessionData;
+    }
+
+    // Fetch from network
     try {
       const response = await fetch(filepath);
       if (!response.ok) {
         throw new Error(`Failed to load ${filepath}: ${response.statusText}`);
       }
       const data = await response.json();
+
+      // Store in both caches
       this.cache[filepath] = data;
+      this.cacheTimestamps[filepath] = Date.now();
+      this.saveToSessionStorage(filepath, data);
+
       return data;
     } catch (error) {
       console.error(`Error loading ${filepath}:`, error);
@@ -29,11 +109,107 @@ const DataLoader = {
   },
 
   /**
-   * Load all core data files
+   * Clear all caches
    */
-  async loadAllData() {
+  clearCache() {
+    this.cache = {};
+    this.cacheTimestamps = {};
+    if (typeof sessionStorage !== 'undefined') {
+      Object.keys(sessionStorage).forEach(key => {
+        if (key.startsWith(this.config.sessionStoragePrefix)) {
+          sessionStorage.removeItem(key);
+        }
+      });
+    }
+  },
+
+  /**
+   * Clear cache for specific file
+   */
+  clearCacheFor(filepath) {
+    delete this.cache[filepath];
+    delete this.cacheTimestamps[filepath];
+    if (typeof sessionStorage !== 'undefined') {
+      const key = this.config.sessionStoragePrefix + btoa(filepath);
+      sessionStorage.removeItem(key);
+    }
+  },
+
+  /**
+   * Preload files in the background (for prefetching)
+   */
+  async preload(filepaths) {
+    const loadPromises = filepaths.map(fp =>
+      this.loadJSON(fp).catch(() => null) // Silently ignore errors
+    );
+    await Promise.all(loadPromises);
+  },
+
+  /**
+   * Load all core data files
+   * @param {Object} options - Loading options
+   * @param {boolean} options.lazy - If true, loads non-critical data after critical data
+   * @param {Function} options.onCriticalReady - Callback when critical data is loaded
+   */
+  async loadAllData(options = {}) {
+    const { lazy = false, onCriticalReady = null } = options;
+
     console.log('Loading data...');
 
+    // Critical data needed for initial render
+    const criticalFiles = [
+      '../data/meetings.json',
+      '../data/project.json'
+    ];
+
+    // Non-critical data can be loaded after initial render
+    const nonCriticalFiles = [
+      '../data/timeline-enhanced.json',
+      '../data/stakeholders/people.json',
+      '../data/stakeholders/organizations.json',
+      '../data/documents.json',
+      '../data/themes/sustainability.json'
+    ];
+
+    if (lazy) {
+      // Load critical data first
+      const [meetings, project] = await Promise.all(
+        criticalFiles.map(f => this.loadJSON(f))
+      );
+
+      const criticalResult = {
+        meetings: meetings.meetings,
+        project,
+        timeline: null,
+        people: null,
+        organizations: null,
+        documents: null,
+        sustainability: null
+      };
+
+      // Call callback with critical data
+      if (onCriticalReady) {
+        onCriticalReady(criticalResult);
+      }
+
+      // Load non-critical data in background
+      const [timelineEnhanced, people, organizations, documents, sustainability] =
+        await Promise.all(nonCriticalFiles.map(f => this.loadJSON(f)));
+
+      console.log('✓ All data loaded (lazy)');
+
+      return {
+        timeline: timelineEnhanced,
+        meetings: meetings.meetings,
+        people: people.people,
+        organizations: organizations.organizations,
+        documents: documents.documents,
+        project,
+        sustainability
+      };
+    }
+
+    // Standard loading - all at once
     const [
       timelineEnhanced,
       meetings,
@@ -61,6 +237,43 @@ const DataLoader = {
       organizations: organizations.organizations,
       documents: documents.documents,
       project,
+      sustainability
+    };
+  },
+
+  /**
+   * Load only critical data for fast initial render
+   */
+  async loadCriticalData() {
+    const [meetings, project] = await Promise.all([
+      this.loadJSON('../data/meetings.json'),
+      this.loadJSON('../data/project.json')
+    ]);
+
+    return {
+      meetings: meetings.meetings,
+      project
+    };
+  },
+
+  /**
+   * Load supplementary data after initial render
+   */
+  async loadSupplementaryData() {
+    const [timelineEnhanced, people, organizations, documents, sustainability] =
+      await Promise.all([
+        this.loadJSON('../data/timeline-enhanced.json'),
+        this.loadJSON('../data/stakeholders/people.json'),
+        this.loadJSON('../data/stakeholders/organizations.json'),
+        this.loadJSON('../data/documents.json'),
+        this.loadJSON('../data/themes/sustainability.json')
+      ]);
+
+    return {
+      timeline: timelineEnhanced,
+      people: people.people,
+      organizations: organizations.organizations,
+      documents: documents.documents,
       sustainability
     };
   },

@@ -2,12 +2,13 @@
   "metadata": {
     "version": "2.1",
     "created": "2025-11-21",
-    "last_updated": "2025-11-21",
+    "last_updated": "2025-12-12",
     "description": "Multi-layer curated timeline for Hovfaret 13 project",
     "source": "PROJECT_MILESTONES.json from h13-project-database",
     "verification_status": "verified",
     "verification_date": "2025-11-21",
-    "verification_notes": "Dates verified against source documents including energy reports, climate calculations, architectural drawings, and meeting files"
+    "verification_notes": "Dates verified against source documents including energy reports, climate calculations, architectural drawings, and meeting files",
+    "enrichment_note": "Added descriptions and Norwegian titles for operational events."
   },
   "layers": {
     "strategic": {
@@ -15,7 +16,7 @@
       "name": "Strategic Overview",
       "name_no": "Strategisk oversikt",
       "description": "Major milestones for executive summaries and external stakeholders",
-      "event_count": 12,
+      "event_count": 10,
       "use_case": "Board presentations, investor updates, public communications"
     },
     "operational": {
@@ -23,7 +24,7 @@
       "name": "Operational Timeline",
       "name_no": "Operasjonell tidslinje",
       "description": "Key decisions, deliverables, and stakeholder engagements",
-      "event_count": 27,
+      "event_count": 22,
       "use_case": "Project management, team updates, progress tracking"
     },
     "detailed": {
@@ -57,7 +58,9 @@
         "phase": "phase_2",
         "importance": "critical",
         "icon": "alert",
-        "tags": ["turning_point"]
+        "tags": [
+          "turning_point"
+        ]
       },
       {
         "id": "s_003",
@@ -68,7 +71,9 @@
         "phase": "phase_3",
         "importance": "critical",
         "icon": "rocket",
-        "tags": ["milestone"],
+        "tags": [
+          "milestone"
+        ],
         "source_verified": "meetings.json - Urbania Hovfaret 13 - Konseptskisse 1.0"
       },
       {
@@ -101,7 +106,9 @@
         "phase": "phase_5",
         "importance": "critical",
         "icon": "lightning",
-        "tags": ["key_deliverable"],
+        "tags": [
+          "key_deliverable"
+        ],
         "source_verified": "20250411 Energikartlegging Hovfaret 13.pdf"
       },
       {
@@ -113,7 +120,10 @@
         "phase": "phase_5",
         "importance": "critical",
         "icon": "leaf",
-        "tags": ["key_deliverable", "sustainability"],
+        "tags": [
+          "key_deliverable",
+          "sustainability"
+        ],
         "source_verified": "Klimagassberegninger Hovfaret 13 v2.pdf - Rapportdato 22.04.2025"
       },
       {
@@ -136,7 +146,9 @@
         "phase": "phase_6",
         "importance": "critical",
         "icon": "document",
-        "tags": ["key_deliverable"]
+        "tags": [
+          "key_deliverable"
+        ]
       },
       {
         "id": "s_010",
@@ -156,7 +168,9 @@
         "date": "1989",
         "title": "Building Constructed",
         "phase": "phase_1",
-        "category": "historical"
+        "category": "historical",
+        "description": "Hovfaret 13 ble bygget med betongstruktur dimensjonert for 12 etasjer. Fundamentet muliggjør fremtidig vertikal utvidelse.",
+        "title_no": "Bygget oppført"
       },
       {
         "id": "o_002",
@@ -164,7 +178,8 @@
         "title": "Energy Certificate Issued",
         "title_no": "Energimerke utstedt",
         "phase": "phase_1",
-        "category": "technical"
+        "category": "technical",
+        "description": "Bygget fikk energimerke som dokumenterer energiforbruk og potensial for forbedringer."
       },
       {
         "id": "o_003",
@@ -172,7 +187,8 @@
         "title": "Byplangrep Skøyen Adopted",
         "title_no": "Byplangrep Skøyen vedtatt",
         "phase": "phase_1",
-        "category": "regulatory"
+        "category": "regulatory",
+        "description": "Byplangrep for Skøyen-området ble vedtatt med retningslinjer for fremtidig utvikling."
       },
       {
         "id": "o_004",
@@ -180,14 +196,18 @@
         "title": "Demolition Requirement Imposed",
         "phase": "phase_2",
         "category": "regulatory",
-        "importance": "critical"
+        "importance": "critical",
+        "description": "Oslo bystyre vedtar områdeplan som krever riving av H13 og 10m tilbaketrekning fra Hoffselva.",
+        "title_no": "Rivingskrav vedtatt"
       },
       {
         "id": "o_005",
         "date": "2023-10",
         "title": "Plan Sent to Statsforvalteren",
         "phase": "phase_2",
-        "category": "regulatory"
+        "category": "regulatory",
+        "description": "Områdeplanen sendes til Statsforvalteren for vurdering av innsigelser.",
+        "title_no": "Plan sendt til Statsforvalteren"
       },
       {
         "id": "o_006",
@@ -195,7 +215,8 @@
         "title": "Meeting with City Councillor",
         "title_no": "Møte med byråd James Lorentzen",
         "phase": "phase_3",
-        "category": "stakeholder"
+        "category": "stakeholder",
+        "description": "Møte med byråd for byutvikling James Stove Lorentzen om transformasjonsmulighetene."
       },
       {
         "id": "o_007",
@@ -203,7 +224,9 @@
         "title": "PROJECT START - Konseptskisse 1.0",
         "phase": "phase_3",
         "category": "project_start",
-        "importance": "critical"
+        "importance": "critical",
+        "description": "Første formelle prosjektmøte mellom Urbania, Natural State og arkitekter. Systematisk arbeid starter.",
+        "title_no": "PROSJEKTOPPSTART - Konseptskisse 1.0"
       },
       {
         "id": "o_008",
@@ -211,14 +234,17 @@
         "title": "Concept & Strategy Delivery",
         "title_no": "Leveransemøte konseptskisse og strategi",
         "phase": "phase_3",
-        "category": "project_delivery"
+        "category": "project_delivery",
+        "description": "Natural State leverer konseptskisse og strategidokument til Urbania."
       },
       {
         "id": "o_009",
         "date": "2024-05-06",
         "title": "R21 Architects Engaged",
         "phase": "phase_3",
-        "category": "technical"
+        "category": "technical",
+        "description": "R21 Arkitekter engasjeres for å utvikle detaljerte planer og scenarioer.",
+        "title_no": "R21 Arkitekter engasjert"
       },
       {
         "id": "o_010",
@@ -226,7 +252,9 @@
         "title": "R21 Delivers 6 Scenario Plans",
         "phase": "phase_4",
         "category": "technical",
-        "importance": "high"
+        "importance": "high",
+        "description": "R21 leverer 6 utviklingsscenarier inkludert kontor, bolig, Omsorg+ og kombinasjonsløsninger.",
+        "title_no": "R21 leverer 6 scenarioer"
       },
       {
         "id": "o_011",
@@ -234,7 +262,8 @@
         "title": "Input to Oslo KPS Submitted",
         "title_no": "Innspill til Oslo KPS",
         "phase": "phase_4",
-        "category": "stakeholder"
+        "category": "stakeholder",
+        "description": "Innspill sendt til Oslo kommunes planstrategi (KPS) om transformasjon fremfor riving."
       },
       {
         "id": "o_012",
@@ -242,7 +271,8 @@
         "title": "Plan Prerequisites Documented",
         "title_no": "Planforutsetninger dokumentert",
         "phase": "phase_4",
-        "category": "regulatory"
+        "category": "regulatory",
+        "description": "Planforutsetninger for bruksendring og transformasjon dokumenteres systematisk."
       },
       {
         "id": "o_013",
@@ -250,14 +280,17 @@
         "title": "Energy Mapping Site Visit",
         "title_no": "Befaring energikartlegging",
         "phase": "phase_4",
-        "category": "technical"
+        "category": "technical",
+        "description": "Vill Energi gjennomfører befaring for energikartlegging og identifisering av tiltak."
       },
       {
         "id": "o_014",
         "date": "2025-01-10",
         "title": "Tenant Presentation",
         "phase": "phase_5",
-        "category": "stakeholder"
+        "category": "stakeholder",
+        "description": "Transformasjonsplaner presenteres for nåværende leietakere. Dialog om overgang etableres.",
+        "title_no": "Leietakerpresentasjon"
       },
       {
         "id": "o_015",
@@ -265,7 +298,8 @@
         "title": "Environmental Risk Mapping",
         "title_no": "Miljørisiko kartlegging",
         "phase": "phase_5",
-        "category": "technical"
+        "category": "technical",
+        "description": "Kartlegging av miljørisiko inkludert grunnforhold, materialer og eksponering."
       },
       {
         "id": "o_016",
@@ -273,7 +307,9 @@
         "title": "Energy Report Delivered",
         "phase": "phase_5",
         "category": "technical",
-        "importance": "critical"
+        "importance": "critical",
+        "description": "Vill Energi leverer energirapport som viser vei til 50% energireduksjon og Enova-støtte.",
+        "title_no": "Energirapport levert"
       },
       {
         "id": "o_017",
@@ -281,21 +317,27 @@
         "title": "Climate Calculations v2 Delivered",
         "phase": "phase_5",
         "category": "technical",
-        "importance": "critical"
+        "importance": "critical",
+        "description": "Klimagassberegninger v2 viser 48% CO₂-besparelse ved transformasjon vs. riving.",
+        "title_no": "Klimaberegninger v2 levert"
       },
       {
         "id": "o_018",
         "date": "2025-05-05",
         "title": "Meeting with Bente Otto (Bydel Ullern)",
         "phase": "phase_5",
-        "category": "stakeholder"
+        "category": "stakeholder",
+        "description": "Møte med Bente Otto fra Bydel Ullern om behov for omsorgsboliger i området.",
+        "title_no": "Møte med Bente Otto (Bydel Ullern)"
       },
       {
         "id": "o_019",
         "date": "2025-05-16",
         "title": "Omsorg+ Presentations Completed",
         "phase": "phase_5",
-        "category": "scenario_development"
+        "category": "scenario_development",
+        "description": "Omsorg+ presentasjoner fullført med 73 enheter og fellesfunksjoner.",
+        "title_no": "Omsorg+ presentasjoner fullført"
       },
       {
         "id": "o_020",
@@ -303,7 +345,9 @@
         "title": "Sustainability Report Delivered",
         "phase": "phase_6",
         "category": "technical",
-        "importance": "critical"
+        "importance": "critical",
+        "description": "Omfattende bærekraftsrapport i henhold til ESRS-rammeverket ferdigstilles.",
+        "title_no": "Bærekraftsrapport levert"
       },
       {
         "id": "o_021",
@@ -311,14 +355,17 @@
         "title": "Framework Application Coordination",
         "title_no": "Koordinering rammesøknad",
         "phase": "phase_6",
-        "category": "regulatory"
+        "category": "regulatory",
+        "description": "Koordineringsmøte for rammesøknad med fokus på regulatorisk strategi."
       },
       {
         "id": "o_022",
         "date": "2025-10-09",
         "title": "Final R21 Delivery (Renders & Plans)",
         "phase": "phase_6",
-        "category": "technical"
+        "category": "technical",
+        "description": "R21 leverer endelige tegninger, 3D-visualiseringer og planmateriale.",
+        "title_no": "Endelig R21 leveranse (tegninger og planer)"
       }
     ]
   },
