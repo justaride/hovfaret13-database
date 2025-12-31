@@ -1,4 +1,4 @@
-# Hurtigstart - Hovfaret 13 Dashboard v2.83
+# Hurtigstart - Hovfaret 13 Dashboard v2.86
 
 **Live på GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 
@@ -16,7 +16,7 @@ open http://localhost:8888/index.html
 |------|-----|-------------|
 | Hjemmeside | http://localhost:8888/index.html | Hovednavigasjon |
 | Oversikt | http://localhost:8888/overview.html | Prosjekthelse, KPIer |
-| Møter | http://localhost:8888/meetings.html | 59 møter med notater |
+| Møter | http://localhost:8888/meetings.html | 60 møter med notater |
 | Tidslinje | http://localhost:8888/timeline.html | Kronologisk oversikt |
 | Dokumenter | http://localhost:8888/documents.html | 271 dokumenter |
 | Interessenter | http://localhost:8888/stakeholders.html | 23 personer, 16 org |
@@ -45,7 +45,7 @@ open http://localhost:8888/index.html
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | 59 |
+| Møter | 60 |
 | Dokumenter | 271 |
 | Leveranser | 37 |
 | Personer | 23 |

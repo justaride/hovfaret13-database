@@ -1,4 +1,4 @@
-# Hovfaret 13 Prosjektdatabase v2.83
+# Hovfaret 13 Prosjektdatabase v2.86
 
 Komplett prosjektdatabase med interaktivt dashboard for Hovfaret 13 transformasjonsprosjektet.
 
@@ -14,7 +14,7 @@ Komplett prosjektdatabase med interaktivt dashboard for Hovfaret 13 transformasj
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | 59 |
+| Møter | 60 |
 | Dokumenter | 271 |
 | Leveranser | 37 |
 | Personer | 23 |
@@ -36,7 +36,7 @@ open http://localhost:8888/index.html
 |-----------|-----|-------------|
 | Hjemmeside | `index.html` | Navigasjon til alle dashboards |
 | Oversikt | `overview.html` | Prosjekthelse og KPIer |
-| Møter | `meetings.html` | 59 møter med notater |
+| Møter | `meetings.html` | 60 møter med notater |
 | Tidslinje | `timeline.html` | Kronologisk oversikt |
 | Dokumenter | `documents.html` | 271 dokumenter |
 | Interessenter | `stakeholders.html` | 23 personer, 16 organisasjoner |
@@ -49,7 +49,7 @@ open http://localhost:8888/index.html
 ```
 data/
 ├── project.json              # Masterprosjekt
-├── meetings.json             # 59 møter
+├── meetings.json             # 60 møter
 ├── documents.json            # 271 dokumenter
 ├── config.json               # Sentralkonfigurasjon
 ├── deliverables.json         # 37 leveranser
@@ -69,7 +69,7 @@ data/
 | Fil | Beskrivelse |
 |-----|-------------|
 | `README.md` | Denne filen |
-| `STATUS.md` | Gjeldende status (Phase 62) |
+| `STATUS.md` | Gjeldende status (Phase 65) |
 | `CHANGELOG.md` | Endringshistorikk |
 | `ARCHITECTURE.md` | Komplett prosjektarkitektur |
 | `QUICKSTART.md` | Hurtigstart-guide |

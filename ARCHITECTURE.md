@@ -1,7 +1,7 @@
 # Hovfaret 13 Prosjektdatabase - Arkitektur
 
-**Sist oppdatert:** 2025-12-12
-**Versjon:** 2.83
+**Sist oppdatert:** 2025-12-31
+**Versjon:** 2.86
 
 ---
 
@@ -9,12 +9,12 @@
 
 ```
 Hovfaret 13 Prosjektdatabase
-├── 59 møter dokumentert
+├── 60 møter dokumentert
 ├── 271 dokumenter kategorisert
 ├── 37 leveranser sporet
 ├── 23 personer + 16 organisasjoner
-├── 37 aktive dashboards
-└── Konseptskisse 2.0 (123 sider)
+├── 38 aktive dashboards
+└── Konseptskisse 3.0 (16 sider)
 ```
 
 ---
@@ -26,7 +26,7 @@ Hovfaret 13 Prosjektdatabase
 │
 ├── 📄 Hovedfiler
 │   ├── README.md              # Prosjektoversikt
-│   ├── STATUS.md              # Gjeldende status (Phase 62)
+│   ├── STATUS.md              # Gjeldende status (Phase 65)
 │   ├── CHANGELOG.md           # Endringshistorikk
 │   ├── ARCHITECTURE.md        # Denne filen
 │   ├── CLAUDE.md              # AI-instruksjoner
@@ -73,7 +73,7 @@ Hovfaret 13 Prosjektdatabase
 | Fil | Innhold | Antall | Oppdateres av |
 |-----|---------|--------|---------------|
 | `project.json` | Bygning, faser, scenarier | - | Manuelt |
-| `meetings.json` | Møter med notater | 70 | Scripts + manuelt |
+| `meetings.json` | Møter med notater | 60 | Scripts + manuelt |
 | `documents.json` | Dokumentregister | 271 | Scripts |
 | `config.json` | Nøkkeltall | - | Manuelt |
 | `deliverables.json` | Leveranser | 75 | Manuelt |

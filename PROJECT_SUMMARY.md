@@ -1,13 +1,13 @@
 # Hovfaret 13 Project Summary
 
-**Version:** 2.83 | **Phase:** 62 | **Updated:** 2025-12-12
+**Version:** 2.86 | **Phase:** 65 | **Updated:** 2025-12-31
 
 ## Quick Reference
 
 ```yaml
 Auth: h13-skøyen-2025 (24h session)
 Config: data/config.json (single source of truth)
-Dashboard: 37 pages, all auth-protected
+Dashboard: 38 pages, all auth-protected
 Live: https://justaride.github.io/hovfaret13-database/
 ```
 
@@ -15,7 +15,7 @@ Live: https://justaride.github.io/hovfaret13-database/
 
 | Data | Count |
 |------|-------|
-| Meetings | 59 |
+| Meetings | 60 |
 | Documents | 271 |
 | People | 23 |
 | Organizations | 16 |
@@ -52,10 +52,12 @@ Live: https://justaride.github.io/hovfaret13-database/
 ## Key Files
 
 ```
-data/config.json     # Central config
-data/meetings.json   # 59 meetings
-data/documents.json  # 271 documents
-dashboard/auth.js    # Auth module
+data/config.json           # Central config
+data/meetings.json         # 60 meetings
+data/documents.json        # 271 documents
+dashboard/lib/utils.js     # Shared utilities
+dashboard/lib/data-loader.js  # Data loading with caching
+dashboard/css/variables.css   # CSS design tokens
 ```
 
 ## Recent Changes (Phase 62)
