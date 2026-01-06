@@ -1,8 +1,8 @@
 # CLAUDE.md - Project Instructions for Claude Code
 
-## Project: Hovfaret 13 Data Consolidation v2.83
+## Project: Hovfaret 13 Data Consolidation v2.87
 
-Real estate transformation project database. Version 2.83, Phase 62.
+Real estate transformation project database. Version 2.87, Phase 66.
 
 **Auth:** Password `h13-skøyen-2025` (24h localStorage session)
 
@@ -18,13 +18,13 @@ Real estate transformation project database. Version 2.83, Phase 62.
 
 | Data | Count |
 |------|-------|
-| Meetings | 59 |
+| Meetings | 60 |
 | Documents | 271 |
 | People | 23 |
 | Organizations | 16 |
 | Deliverables | 37 (verifisert) |
 | Timeline events | 32 (10 strategic + 22 operational) |
-| Dashboard pages | 37 (all auth-protected) |
+| Dashboard pages | 38 (all auth-protected) |
 | Project duration | 21 months |
 | Notion databases | 12 |
 | Notion records | 538 |
@@ -36,7 +36,7 @@ data/
 ├── config.json           # Central config - single source of truth
 ├── project.json          # Building, phases, scenarios
 ├── timeline.json         # Multi-layer timeline (strategic/operational)
-├── meetings.json         # 59 meetings with summaries/outcomes
+├── meetings.json         # 60 meetings with summaries/outcomes
 ├── documents.json        # 271 documents categorized
 ├── stakeholders/
 │   ├── organizations.json (16 orgs)
@@ -44,12 +44,13 @@ data/
 └── themes/
     ├── sustainability.json
     ├── regulatory.json
-    └── omsorg-plus.json
+    ├── omsorg-plus.json
+    └── utleie.json
 
 dashboard/
 ├── auth.js               # Reusable auth module
 ├── index.html            # Main entry point
-└── *.html                # 37 pages total
+└── *.html                # 38 pages total
 ```
 
 ## Working Principles
@@ -101,7 +102,7 @@ npm run sync:dry    # Preview changes
 ```
 
 12 databases synced:
-- Organizations (16), People (23), Meetings (59), Documents (271)
+- Organizations (16), People (23), Meetings (60), Documents (271)
 - Timeline (32), Deliverables (37), Sustainability (3)
 - Omsorg+ Concept (1), Floors (7), Units (73), Facilities (11), Compliance (5)
 

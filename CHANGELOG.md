@@ -6,7 +6,7 @@ All notable changes to this project database.
 
 ### Phase 66: Utleie - Rental Marketing
 
-**Status:** 🔄 IN PROGRESS
+**Status:** ✅ COMPLETE
 
 #### Ny utleie-seksjon etablert
 
@@ -16,7 +16,8 @@ Opprettet struktur for markedsføring av ledige lokaler i Hovfaret 13.
 
 | Oppgave | Status | Kanal |
 |---------|--------|-------|
-| FINN-annonse kontorlokale | ⏳ Venter på tegninger/bilder | FINN.no |
+| Dashboard utleie-side | ✅ Komplett | dashboard |
+| FINN-annonse kontorlokale | ⏳ Venter på pris/bilder | FINN.no |
 | Squarespace "Utleie"-side | ✅ Innhold klart | hovfaret13.no |
 | Flere lokaler på nettside | ⏳ Pending | hovfaret13.no |
 
@@ -26,15 +27,22 @@ Opprettet struktur for markedsføring av ledige lokaler i Hovfaret 13.
 |-----|--------|
 | `data/themes/utleie.json` | Utleie-data, innhold, FINN-mal |
 | `dashboard/floorplan-3etg.svg` | Redesignet plantegning 3. etasje (slate palette, clean hierarchy) |
+| `dashboard/utleie.html` | Dashboard-side for utleie med 4 lokaler, plantegning, FINN-tekst |
+
+**Dashboard utleie.html inneholder:**
+- Hero med bygginformasjon (6100 m², 5 etasjer)
+- 4 utleielokaler som kort (kontor, arrangement, studio, næring)
+- Plantegning 3. etg med romfordeling
+- FINN-annonsetekst med kopier-funksjon
+- Kontaktinformasjon Urbania
 
 **Squarespace endringer planlagt:**
 - Endre navigasjon: "Aktiviteter" → "Utleie"
 - Nytt sideinnhold med lokaler til leie
 
 **Venter på:**
-- Tegninger av kontorlokalet
+- Pris for kontorlokalet
 - Bilder for FINN-annonse
-- Spesifikasjoner (areal, pris, ledig fra)
 
 ---
 

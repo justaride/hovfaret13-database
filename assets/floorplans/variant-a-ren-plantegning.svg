@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="900" height="650">
+  <defs>
+    <style>
+      .wall { fill: none; stroke: #333333; stroke-width: 3; }
+      .wall-thin { fill: none; stroke: #333333; stroke-width: 1.5; }
+      .wall-light { fill: none; stroke: #999999; stroke-width: 1.5; }
+      .door { fill: none; stroke: #333333; stroke-width: 1.5; }
+      .floor-rental { fill: #F5F5F0; }
+      .floor-common { fill: #E8E8E8; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11px; fill: #333333; }
+      .label-area { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 9px; fill: #666666; }
+      .label-common { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 9px; fill: #888888; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 20px; font-weight: 600; fill: #333333; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; fill: #666666; }
+      .accent { fill: #4A9B9B; }
+      .window { stroke: #4A9B9B; stroke-width: 2; fill: none; }
+      .stair { fill: none; stroke: #999999; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="650" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="450" y="40" class="title" text-anchor="middle">Hovfaret 13, 3. etasje</text>
+  <text x="450" y="60" class="subtitle" text-anchor="middle">Utleieareal (markert): ca. 290 m² | Total etasje: ca. 450 m²</text>
+
+  <!-- Main floor plan -->
+  <g transform="translate(60, 90)">
+
+    <!-- ========== COMMON AREAS (lighter) ========== -->
+
+    <!-- Spiral staircase area (left) -->
+    <rect x="0" y="280" width="80" height="120" class="floor-common"/>
+    <rect x="0" y="280" width="80" height="120" class="wall"/>
+    <!-- Spiral stair indication -->
+    <circle cx="40" cy="340" r="35" class="stair"/>
+    <circle cx="40" cy="340" r="25" class="stair"/>
+    <circle cx="40" cy="340" r="15" class="stair"/>
+    <circle cx="40" cy="340" r="5" fill="#999"/>
+    <text x="40" y="385" class="label-common" text-anchor="middle">Trapp</text>
+
+    <!-- Corridor/passage area -->
+    <rect x="80" y="250" width="50" height="70" class="floor-common"/>
+
+    <!-- WC area (right side) -->
+    <path d="M560,80 L700,80 L700,320 L560,320 Z" class="floor-common"/>
+    <path d="M560,80 L700,80 L700,320 L560,320 Z" class="wall"/>
+
+    <!-- WC Forrom -->
+    <rect x="560" y="80" width="60" height="80" class="wall-light" fill="none"/>
+    <text x="590" y="115" class="label-common" text-anchor="middle">WC</text>
+    <text x="590" y="128" class="label-common" text-anchor="middle">Forrom</text>
+
+    <!-- Individual WCs -->
+    <rect x="620" y="80" width="40" height="50" class="wall-light" fill="none"/>
+    <text x="640" y="110" class="label-common" text-anchor="middle">WC</text>
+
+    <rect x="660" y="80" width="40" height="50" class="wall-light" fill="none"/>
+    <text x="680" y="110" class="label-common" text-anchor="middle">WC</text>
+
+    <rect x="560" y="160" width="50" height="60" class="wall-light" fill="none"/>
+    <text x="585" y="195" class="label-common" text-anchor="middle">WC</text>
+
+    <rect x="610" y="160" width="50" height="60" class="wall-light" fill="none"/>
+    <text x="635" y="195" class="label-common" text-anchor="middle">WC</text>
+
+    <rect x="660" y="160" width="40" height="60" class="wall-light" fill="none"/>
+    <text x="680" y="195" class="label-common" text-anchor="middle">WC</text>
+
+    <!-- Additional common space -->
+    <rect x="560" y="240" width="140" height="80" class="wall-light" fill="none"/>
+    <text x="630" y="280" class="label-common" text-anchor="middle">Fellesareal</text>
+
+    <!-- ========== RENTAL AREA (highlighted) ========== -->
+
+    <!-- Main rental floor -->
+    <path d="M80,0 L560,0 L560,400 L80,400 L80,280 L130,280 L130,180 L80,180 Z" class="floor-rental"/>
+    <path d="M80,0 L560,0 L560,400 L80,400 L80,280 L130,280 L130,180 L80,180 Z" class="wall"/>
+
+    <!-- Windows on top (north facade) -->
+    <g class="window">
+      <line x1="100" y1="0" x2="140" y2="0"/>
+      <line x1="160" y1="0" x2="200" y2="0"/>
+      <line x1="220" y1="0" x2="260" y2="0"/>
+      <line x1="280" y1="0" x2="320" y2="0"/>
+      <line x1="340" y1="0" x2="380" y2="0"/>
+      <line x1="400" y1="0" x2="440" y2="0"/>
+      <line x1="460" y1="0" x2="500" y2="0"/>
+      <line x1="520" y1="0" x2="550" y2="0"/>
+    </g>
+
+    <!-- Windows on bottom (south facade) -->
+    <g class="window">
+      <line x1="100" y1="400" x2="140" y2="400"/>
+      <line x1="160" y1="400" x2="200" y2="400"/>
+      <line x1="220" y1="400" x2="260" y2="400"/>
+      <line x1="300" y1="400" x2="340" y2="400"/>
+      <line x1="380" y1="400" x2="420" y2="400"/>
+      <line x1="460" y1="400" x2="500" y2="400"/>
+      <line x1="520" y1="400" x2="550" y2="400"/>
+    </g>
+
+    <!-- Windows on right (east facade) - common area -->
+    <g class="window" style="stroke: #999;">
+      <line x1="700" y1="100" x2="700" y2="130"/>
+      <line x1="700" y1="150" x2="700" y2="180"/>
+      <line x1="700" y1="200" x2="700" y2="230"/>
+      <line x1="700" y1="250" x2="700" y2="280"/>
+    </g>
+
+    <!-- ========== INTERNAL WALLS - RENTAL AREA ========== -->
+
+    <!-- Lysbord area indicator -->
+    <text x="100" y="100" class="label-area" text-anchor="start" style="fill: #4A9B9B;">Lysbord</text>
+
+    <!-- Horizontal divider between kontorlandskap and lower rooms -->
+    <line class="wall-thin" x1="130" y1="180" x2="450" y2="180"/>
+
+    <!-- Møterom M2 -->
+    <rect x="380" y="180" width="80" height="70" class="wall-thin" fill="none"/>
+    <text x="420" y="215" class="label" text-anchor="middle">Møterom M2</text>
+    <text x="420" y="230" class="label-area" text-anchor="middle">13,1 m²</text>
+
+    <!-- Kopirom -->
+    <rect x="300" y="180" width="80" height="70" class="wall-thin" fill="none"/>
+    <text x="340" y="215" class="label" text-anchor="middle">Kopirom</text>
+    <text x="340" y="230" class="label-area" text-anchor="middle">13,6 m²</text>
+
+    <!-- Vertical corridor between rooms -->
+    <line class="wall-thin" x1="460" y1="180" x2="460" y2="320"/>
+
+    <!-- Tekjøkken/Garderobe -->
+    <rect x="200" y="250" width="130" height="70" class="wall-thin" fill="none"/>
+    <text x="265" y="280" class="label" text-anchor="middle">Tekjøkken/Gard</text>
+    <text x="265" y="295" class="label-area" text-anchor="middle">17,2 m²</text>
+
+    <!-- Small rooms: Lager, Garderobe, etc. -->
+    <rect x="330" y="250" width="40" height="35" class="wall-thin" fill="none"/>
+    <text x="350" y="272" class="label-area" text-anchor="middle">Lager</text>
+
+    <rect x="370" y="250" width="45" height="35" class="wall-thin" fill="none"/>
+    <text x="392" y="272" class="label-area" text-anchor="middle">Gard.</text>
+
+    <rect x="415" y="250" width="45" height="35" class="wall-thin" fill="none"/>
+    <text x="437" y="272" class="label-area" text-anchor="middle">Hylle</text>
+
+    <!-- Møterom M1 -->
+    <rect x="80" y="280" width="120" height="120" class="wall-thin" fill="none"/>
+    <text x="140" y="340" class="label" text-anchor="middle">Møterom M1</text>
+    <text x="140" y="358" class="label-area" text-anchor="middle">25,3 m²</text>
+
+    <!-- Kontor 1 -->
+    <rect x="200" y="320" width="80" height="80" class="wall-thin" fill="none"/>
+    <text x="240" y="360" class="label" text-anchor="middle">Kontor</text>
+    <text x="240" y="375" class="label-area" text-anchor="middle">9,9 m²</text>
+
+    <!-- Kontor 2 -->
+    <rect x="280" y="320" width="80" height="80" class="wall-thin" fill="none"/>
+    <text x="320" y="360" class="label" text-anchor="middle">Kontor</text>
+    <text x="320" y="375" class="label-area" text-anchor="middle">9,9 m²</text>
+
+    <!-- Stille/Hvile -->
+    <rect x="360" y="320" width="100" height="80" class="wall-thin" fill="none"/>
+    <text x="410" y="355" class="label" text-anchor="middle">Stille/Hvile</text>
+    <text x="410" y="370" class="label-area" text-anchor="middle">9,9 m²</text>
+
+    <!-- Kontorlandskap label -->
+    <text x="300" y="70" class="label" text-anchor="middle" style="font-size: 14px; font-weight: 500;">Kontorlandskap</text>
+    <text x="300" y="90" class="label-area" text-anchor="middle" style="font-size: 11px;">178,7 m²</text>
+
+    <!-- Door indicators (simple lines for openings) -->
+    <line x1="380" y1="210" x2="380" y2="230" stroke="#F5F5F0" stroke-width="4"/>
+    <line x1="300" y1="210" x2="300" y2="230" stroke="#F5F5F0" stroke-width="4"/>
+    <line x1="200" y1="285" x2="220" y2="285" stroke="#F5F5F0" stroke-width="4"/>
+    <line x1="200" y1="335" x2="200" y2="355" stroke="#F5F5F0" stroke-width="4"/>
+    <line x1="280" y1="335" x2="280" y2="355" stroke="#F5F5F0" stroke-width="4"/>
+    <line x1="360" y1="335" x2="360" y2="355" stroke="#F5F5F0" stroke-width="4"/>
+
+    <!-- Connection to common WC area -->
+    <line x1="500" y1="200" x2="520" y2="200" stroke="#F5F5F0" stroke-width="6"/>
+    <text x="525" y="205" class="label-area" style="fill: #4A9B9B;">→ WC</text>
+
+    <!-- Main entrance from staircase -->
+    <line x1="80" y1="230" x2="80" y2="250" stroke="#F5F5F0" stroke-width="6"/>
+    <text x="60" y="245" class="label-area" text-anchor="end" style="fill: #4A9B9B;">Inngang</text>
+
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(60, 540)">
+    <rect x="0" y="0" width="20" height="12" fill="#F5F5F0" stroke="#333" stroke-width="1"/>
+    <text x="28" y="10" class="label-area">Utleieareal (~290 m²)</text>
+
+    <rect x="150" y="0" width="20" height="12" fill="#E8E8E8" stroke="#999" stroke-width="1"/>
+    <text x="178" y="10" class="label-area">Fellesareal (trapp, WC)</text>
+
+    <line x1="320" y1="6" x2="340" y2="6" stroke="#4A9B9B" stroke-width="2"/>
+    <text x="348" y="10" class="label-area">Vinduer</text>
+  </g>
+
+  <!-- Compass -->
+  <g transform="translate(820, 560)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#CCCCCC" stroke-width="1"/>
+    <polygon points="0,-15 -5,5 0,0 5,5" fill="#333333"/>
+    <text x="0" y="-25" class="label-area" text-anchor="middle" style="font-size: 10px;">N</text>
+  </g>
+
+  <!-- Scale bar -->
+  <g transform="translate(60, 580)">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#333333" stroke-width="1"/>
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#333333" stroke-width="1"/>
+    <line x1="50" y1="-3" x2="50" y2="3" stroke="#333333" stroke-width="1"/>
+    <line x1="100" y1="-5" x2="100" y2="5" stroke="#333333" stroke-width="1"/>
+    <text x="50" y="15" class="label-area" text-anchor="middle">ca. 10 m</text>
+  </g>
+
+</svg>

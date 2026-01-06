@@ -65,19 +65,44 @@
 
   "rental_objects": [
     {
-      "id": "kontor_01",
+      "id": "kontor_3etg",
       "type": "kontor",
-      "name": "Kontorlokale",
+      "name": "Kontorlokale 3. etasje",
       "status": "for_rent",
       "priority": "finn_first",
-      "area_m2": null,
-      "floor": null,
+      "floor": 3,
+      "available_from": "2025-04-01",
+      "area_total_m2": 280,
       "price_nok_month": null,
-      "description": "Fleksibelt kontorlokale - detaljer kommer",
-      "features": [],
+      "felleskostnader_nok_month": null,
+      "rooms": [
+        {"name": "Kontorlandskap", "area_m2": 178.7, "description": "Åpent landskap med arbeidsplasser"},
+        {"name": "Møterom M1", "area_m2": 25.3, "capacity": "10-12 personer"},
+        {"name": "Møterom M2", "area_m2": 13.0, "capacity": "6-8 personer"},
+        {"name": "Kopirom", "area_m2": 13.6},
+        {"name": "Tekjøkken/Garderobe", "area_m2": 17.2},
+        {"name": "Kontor 1", "area_m2": 9.9, "description": "Cellekontor"},
+        {"name": "Kontor 2", "area_m2": 9.9, "description": "Cellekontor"},
+        {"name": "Stille/Hvilerom", "area_m2": 9.9}
+      ],
+      "facilities": [
+        "WC med forrom",
+        "Lager",
+        "Garderobe",
+        "Lysbord/resepsjon"
+      ],
+      "features": [
+        "Åpent kontorlandskap for ca. 20-25 arbeidsplasser",
+        "2 møterom (stort og lite)",
+        "2 cellekontor for ledelse/konsentrasjon",
+        "Eget tekjøkken",
+        "Stille-/hvilerom",
+        "Heis og trapp",
+        "Gode lysforhold"
+      ],
+      "floorplan": "floorplan-3etg.svg",
       "images": [],
-      "floorplan": null,
-      "_notes": "FINN-annonse prioritet - venter på tegninger og bilder"
+      "_notes": "Plantegning mottatt 2025-01-06. Mangler: pris, bilder"
     },
     {
       "id": "arrangement_01",
@@ -192,24 +217,35 @@
     }
   },
 
-  "finn_template": {
+  "finn_ad": {
+    "status": "ready_to_publish",
     "category": "Næringseiendom til leie > Kontor",
-    "title": "[AREAL] m² kontorlokale på Skøyen - Hovfaret 13",
+    "title": "280 m² kontorlokale på Skøyen – Hovfaret 13, 3. etasje",
     "location": "Hovfaret 13, 0275 Oslo",
     "fields": {
-      "areal_m2": "TODO",
-      "etasje": "TODO",
-      "leiepris_mnd": "TODO",
-      "fellesutgifter": "TODO",
-      "ledig_fra": "TODO"
+      "areal_m2": 280,
+      "etasje": 3,
+      "leiepris_mnd": "Pris etter avtale",
+      "ledig_fra": "April 2025"
     },
-    "description_template": "Fleksibelt kontorlokale i Hovfaret 13 på Skøyen.\n\n[BESKRIVELSE AV LOKALET]\n\nBeliggenhet:\n- 500 meter fra Skøyen stasjon\n- Ved Hoffselva med grønne omgivelser\n- Rolig område med god tilgjengelighet\n\nFasiliteter:\n- Heis til alle etasjer\n- Sykkelparkering i kjeller\n- Bilparkering tilgjengelig\n- Treningsrom i bygget\n\nTa kontakt for visning!\n\nKontakt: andreas@urbania.no / +47 911 70 395",
-    "images_needed": [
-      "Hovedbilde av lokalet",
-      "Plantegning",
-      "Fellesarealer",
-      "Fasade/inngang",
-      "Utsikt/omgivelser"
-    ]
+    "description": "Fleksibelt og innbydende kontorlokale i 3. etasje i Hovfaret 13 på Skøyen. Lokalet har vært brukt som arkitektkontor og fremstår i meget god stand.\n\nLOKALET INNEHOLDER:\n• Åpent kontorlandskap (179 m²) – plass til 20-25 arbeidsplasser\n• Stort møterom (25 m²) – 10-12 personer, med skjerm\n• Lite møterom (13 m²) – 6-8 personer, med TV og whiteboard\n• 2 cellekontor (10 m² hver) – for ledelse eller konsentrasjonsarbeid\n• Tekjøkken med benk, kaffemaskin, kjøleskap, mikro (17 m²)\n• Stille-/hvilerom (10 m²)\n• Kopirom/lager (14 m²)\n• Inngangsparti med loungeområde\n• WC med forrom\n\nBYGGET:\n• Byggeår 1989, solid betongkonstruksjon\n• Heis til alle etasjer\n• Sykkelparkering i kjeller\n• Bilparkering tilgjengelig\n• Treningsrom\n\nBELIGGENHET:\n• Hovfaret 13, 0275 Oslo (Skøyen)\n• 500 meter fra Skøyen stasjon (tog, buss, trikk)\n• Ved Hoffselva – rolige, grønne omgivelser\n• Gangavstand til Skøyen sentrum\n\nLokalet passer for bedrifter som ønsker et komplett, innflytningsklart kontor med både åpent landskap og cellekontorer, i et rolig og tilgjengelig område på Skøyen.\n\nLedig fra april 2025.\n\nTa kontakt for visning!",
+    "contact": {
+      "email": "andreas@urbania.no",
+      "phone": "+47 911 70 395",
+      "company": "Urbania Eiendom AS"
+    },
+    "images_order": [
+      {"file": "kontor arealer , felles sitteområdet.png", "caption": "Åpent kontorlandskap med felleslangbord"},
+      {"file": "Entre : Inngangsparti.png", "caption": "Inngangsparti med loungeområde"},
+      {"file": "møterom 2 .png", "caption": "Stort møterom (25 m²)"},
+      {"file": "Foaje området.png", "caption": "Foajé og sitteområde"},
+      {"file": "Kontor Arealer.png", "caption": "Arbeidsplasser med god utsikt"},
+      {"file": "Kjøkken.png", "caption": "Fullt utstyrt tekjøkken"},
+      {"file": "Møterom 1.png", "caption": "Lite møterom med TV"},
+      {"file": "Utsikt fra kontoret.png", "caption": "Utsikt mot grøntområde"},
+      {"file": "Gang mellom små kontorene.png", "caption": "Gang med cellekontor"},
+      {"file": "Inngang til Kontoret.png", "caption": "Inngang til kontorlokalet"}
+    ],
+    "floorplan": "floorplan-3etg.svg"
   }
 }
