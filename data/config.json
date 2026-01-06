@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.86.0",
+    "version": "2.87.0",
     "created": "2025-12-03",
-    "last_updated": "2025-12-31",
+    "last_updated": "2025-01-06",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 65
+    "database_phase": 66
   },
   "auth": {
     "enabled": true,
@@ -122,6 +122,12 @@
       "status": "not_started",
       "target_date": null
     }
+  },
+  "utleie": {
+    "status": "in_progress",
+    "content_file": "themes/utleie.json",
+    "channels": ["hovfaret13.no", "FINN.no"],
+    "priority_task": "FINN-annonse for kontorlokale"
   },
   "key_deliverables": {
     "energy_report": {

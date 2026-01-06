@@ -1,14 +1,46 @@
 # Project Status
 
-**Last Updated:** 2025-12-31
-**Dashboard Version:** 2.86
-**Status:** ✅ Phase 65 COMPLETE - Comprehensive Project Optimization
+**Last Updated:** 2025-01-06
+**Dashboard Version:** 2.87
+**Status:** 🔄 Phase 66 IN PROGRESS - Utleie / Rental Marketing
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 **Auth Password:** `h13-skøyen-2025`
 
 ---
 
 ## Current Phase
+
+**Phase 66: Utleie - Rental Marketing 🔄 IN PROGRESS**
+
+Etablerer utleie-markedsføring for ledige lokaler i Hovfaret 13. Følger opp beslutning fra møte 19.12.2025.
+
+### Oppgaver
+
+| Oppgave | Status | Kanal |
+|---------|--------|-------|
+| FINN-annonse kontorlokale | ⏳ Venter på tegninger/bilder | FINN.no |
+| Squarespace "Utleie"-side | ✅ Innhold klart | hovfaret13.no |
+| Flere lokaler på nettside | ⏳ Pending | hovfaret13.no |
+
+### Venter på
+
+- [ ] Tegninger av kontorlokalet
+- [ ] Bilder for FINN-annonse
+- [ ] Spesifikasjoner (areal m², pris kr/mnd, ledig fra)
+
+### Nye filer
+
+| Fil | Formål |
+|-----|--------|
+| `data/themes/utleie.json` | Utleie-data, nettside-innhold, FINN-mal |
+| `dashboard/floorplan-3etg.svg` | Redesignet plantegning 3. etasje |
+
+### Squarespace endringer
+
+- Endre navigasjon: "Aktiviteter" → "Utleie"
+- Legge inn nytt sideinnhold (ferdig i utleie.json)
+
+---
 
 **Phase 65: Comprehensive Project Optimization ✅ COMPLETE**
 

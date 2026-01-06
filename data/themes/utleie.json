@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-01-06",
+    "updated": "2025-01-06",
+    "description": "Utleie-informasjon for Hovfaret 13 - lokaler til leie",
+    "content_classification": {
+      "type": "operational_content",
+      "purpose": "Marketing and rental listings",
+      "channels": ["hovfaret13.no", "FINN.no"]
+    }
+  },
+
+  "task": {
+    "status": "in_progress",
+    "priority": "high",
+    "description": "Etablere utleie-seksjon for Hovfaret 13",
+    "steps": [
+      {
+        "id": 1,
+        "task": "FINN-annonse for kontorlokale",
+        "status": "waiting_for_input",
+        "notes": "Venter på tegninger og bilder fra Gabriel",
+        "deliverable": "FINN.no annonse for spesifikt kontorareal"
+      },
+      {
+        "id": 2,
+        "task": "Squarespace - Utleie-side",
+        "status": "content_ready",
+        "notes": "Innhold utarbeidet, klar for implementering",
+        "deliverable": "Endre 'Aktiviteter' til 'Utleie' med nytt innhold"
+      },
+      {
+        "id": 3,
+        "task": "Flere lokaler på nettside",
+        "status": "pending",
+        "notes": "Legge til oversikt over flere utleielokaler etter FINN-annonsen"
+      }
+    ],
+    "waiting_for": [
+      "Tegninger av kontorlokalet",
+      "Bilder for annonse",
+      "Spesifikasjoner (areal, pris, etc.)"
+    ]
+  },
+
+  "building": {
+    "address": "Hovfaret 13, 0275 Oslo",
+    "total_area_m2": 6100,
+    "floors": "5 etasjer + 2 underetasjer",
+    "construction_year": 1989,
+    "ceiling_height_m": "2.7-2.8",
+    "location_highlights": [
+      "500m fra Skøyen stasjon",
+      "Ved Hoffselva",
+      "Rolig område med grønne omgivelser"
+    ],
+    "facilities": [
+      "Heis til alle etasjer",
+      "Sykkelparkering i kjeller",
+      "Bilparkering tilgjengelig",
+      "Treningsrom"
+    ]
+  },
+
+  "rental_objects": [
+    {
+      "id": "kontor_01",
+      "type": "kontor",
+      "name": "Kontorlokale",
+      "status": "for_rent",
+      "priority": "finn_first",
+      "area_m2": null,
+      "floor": null,
+      "price_nok_month": null,
+      "description": "Fleksibelt kontorlokale - detaljer kommer",
+      "features": [],
+      "images": [],
+      "floorplan": null,
+      "_notes": "FINN-annonse prioritet - venter på tegninger og bilder"
+    },
+    {
+      "id": "arrangement_01",
+      "type": "arrangement",
+      "name": "Arrangementslokale",
+      "status": "planned",
+      "priority": "website",
+      "capacity_persons": "20-100",
+      "suitable_for": [
+        "Bryllup og konfirmasjon",
+        "Bursdager og private fester",
+        "Konserter og kulturarrangementer",
+        "Workshops og kurs",
+        "Firmaarrangementer"
+      ],
+      "features": [
+        "Uteservering tilgjengelig i sommerhalvåret"
+      ]
+    },
+    {
+      "id": "studio_01",
+      "type": "kontor",
+      "name": "Studioer og kontorfellesskap",
+      "status": "planned",
+      "priority": "website",
+      "area_m2_range": "fra 15",
+      "features": [
+        "Enkeltstudioer fra 15 m²",
+        "Kontorfellesskap med delt infrastruktur",
+        "Møterom for 4-12 personer",
+        "Community Manager på huset",
+        "Tilgang til felles fasiliteter"
+      ]
+    },
+    {
+      "id": "naering_01",
+      "type": "naering",
+      "name": "Næringslokale 1. etasje",
+      "status": "planned",
+      "priority": "website",
+      "floor": 1,
+      "area_m2_range": "400-800",
+      "ceiling_height_m": "2.7-2.8",
+      "suitable_for": [
+        "Kafé eller restaurant",
+        "Servering med uteservering",
+        "Butikk eller showroom",
+        "Helsetjenester (fysioterapi, frisør)"
+      ],
+      "features": [
+        "Adgang fra gateplan",
+        "Uteområder mot Hoffselva",
+        "Fleksible planløsninger"
+      ]
+    }
+  ],
+
+  "website_content": {
+    "page_title": "Utleie",
+    "hero": {
+      "heading": "Lokaler til leie i Hovfaret 13",
+      "intro": "Hovfaret 13 tilbyr fleksible lokaler for arrangementer, kontor og næring – midt på Skøyen med utsikt mot Hoffselva og grønne omgivelser."
+    },
+    "sections": [
+      {
+        "id": "arrangement",
+        "icon": "🎭",
+        "heading": "Arrangementer",
+        "body": "Planlegger du bryllup, konfirmasjon, bursdag eller firmafest? Hovfaret 13 har fleksible lokaler som kan tilpasses ditt arrangement.",
+        "bullets": [
+          "Bryllup og konfirmasjon",
+          "Bursdager og private fester",
+          "Konserter og kulturarrangementer",
+          "Workshops og kurs",
+          "Firmaarrangementer"
+        ],
+        "details": "Kapasitet: 20–100 personer. Uteservering tilgjengelig i sommerhalvåret."
+      },
+      {
+        "id": "kontor",
+        "icon": "💼",
+        "heading": "Kontor og studioer",
+        "body": "Fleksible kontorløsninger for oppstartbedrifter, kreative næringer og etablerte virksomheter.",
+        "bullets": [
+          "Enkeltstudioer fra 15 m²",
+          "Kontorfellesskap med delt infrastruktur",
+          "Møterom for 4–12 personer",
+          "Community Manager på huset",
+          "Tilgang til felles fasiliteter"
+        ],
+        "details": "Beliggenhet: 500m fra Skøyen stasjon. Parkering tilgjengelig i kjeller."
+      },
+      {
+        "id": "naering",
+        "icon": "🍽️",
+        "heading": "Næring i 1. etasje",
+        "body": "Førsteetasjen er planlagt for publikumsrettet virksomhet med adgang fra gateplan og uteområder mot Hoffselva.",
+        "bullets": [
+          "Kafé eller restaurant",
+          "Servering med uteservering",
+          "Butikk eller showroom",
+          "Helsetjenester (fysioterapi, frisør)"
+        ],
+        "details": "Areal: ca. 400–800 m² tilgjengelig. Takhøyde: 2.7–2.8 meter. Fleksible planløsninger."
+      }
+    ],
+    "contact": {
+      "heading": "Ta kontakt for visning",
+      "email": "andreas@urbania.no",
+      "phone": "+47 911 70 395",
+      "company": "Urbania Eiendom AS"
+    }
+  },
+
+  "finn_template": {
+    "category": "Næringseiendom til leie > Kontor",
+    "title": "[AREAL] m² kontorlokale på Skøyen - Hovfaret 13",
+    "location": "Hovfaret 13, 0275 Oslo",
+    "fields": {
+      "areal_m2": "TODO",
+      "etasje": "TODO",
+      "leiepris_mnd": "TODO",
+      "fellesutgifter": "TODO",
+      "ledig_fra": "TODO"
+    },
+    "description_template": "Fleksibelt kontorlokale i Hovfaret 13 på Skøyen.\n\n[BESKRIVELSE AV LOKALET]\n\nBeliggenhet:\n- 500 meter fra Skøyen stasjon\n- Ved Hoffselva med grønne omgivelser\n- Rolig område med god tilgjengelighet\n\nFasiliteter:\n- Heis til alle etasjer\n- Sykkelparkering i kjeller\n- Bilparkering tilgjengelig\n- Treningsrom i bygget\n\nTa kontakt for visning!\n\nKontakt: andreas@urbania.no / +47 911 70 395",
+    "images_needed": [
+      "Hovedbilde av lokalet",
+      "Plantegning",
+      "Fellesarealer",
+      "Fasade/inngang",
+      "Utsikt/omgivelser"
+    ]
+  }
+}

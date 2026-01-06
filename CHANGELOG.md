@@ -2,6 +2,42 @@
 
 All notable changes to this project database.
 
+## [2.87.0] - 2025-01-06
+
+### Phase 66: Utleie - Rental Marketing
+
+**Status:** 🔄 IN PROGRESS
+
+#### Ny utleie-seksjon etablert
+
+Opprettet struktur for markedsføring av ledige lokaler i Hovfaret 13.
+
+**Oppgaver:**
+
+| Oppgave | Status | Kanal |
+|---------|--------|-------|
+| FINN-annonse kontorlokale | ⏳ Venter på tegninger/bilder | FINN.no |
+| Squarespace "Utleie"-side | ✅ Innhold klart | hovfaret13.no |
+| Flere lokaler på nettside | ⏳ Pending | hovfaret13.no |
+
+**Nye filer:**
+
+| Fil | Formål |
+|-----|--------|
+| `data/themes/utleie.json` | Utleie-data, innhold, FINN-mal |
+| `dashboard/floorplan-3etg.svg` | Redesignet plantegning 3. etasje (slate palette, clean hierarchy) |
+
+**Squarespace endringer planlagt:**
+- Endre navigasjon: "Aktiviteter" → "Utleie"
+- Nytt sideinnhold med lokaler til leie
+
+**Venter på:**
+- Tegninger av kontorlokalet
+- Bilder for FINN-annonse
+- Spesifikasjoner (areal, pris, ledig fra)
+
+---
+
 ## [2.86.0] - 2025-12-31
 
 ### Phase 65: Comprehensive Project Optimization
