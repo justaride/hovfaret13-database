@@ -813,19 +813,179 @@
     <main class="main">
 
         <!-- Status Banner -->
-        <div class="status-banner">
-            <svg viewBox="0 0 24 24" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="8" x2="12" y2="12"/>
-                <line x1="12" y1="16" x2="12.01" y2="16"/>
+        <div class="status-banner" style="background: var(--green-light); border-color: var(--green);">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" style="stroke: var(--green-dark);">
+                <polyline points="20 6 9 17 4 12"/>
             </svg>
             <div class="status-banner-text">
-                <div class="status-banner-title">FINN-annonse under arbeid</div>
-                <div class="status-banner-desc">Venter på pris og bilder for kontorlokalet i 3. etasje. Plantegning mottatt 6. januar 2025.</div>
+                <div class="status-banner-title" style="color: var(--green-dark);">Innhold klart for Squarespace</div>
+                <div class="status-banner-desc" style="color: #166534;">Tekst, plantegning og bilder mottatt. Kopier innholdet nedenfor til hovfaret13.no/utleie</div>
             </div>
         </div>
 
-        <!-- Tilgjengelige lokaler -->
+        <!-- SQUARESPACE INNHOLD -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon rose">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M3 9h18"/>
+                        <path d="M9 21V9"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Squarespace — hovfaret13.no/utleie</h2>
+                    <p class="section-subtitle">Kopier tekst til Squarespace-siden</p>
+                </div>
+            </div>
+
+            <!-- Tagline alternativer -->
+            <div class="finn-card" style="margin-bottom: 1.5rem;">
+                <div class="finn-header" style="background: linear-gradient(135deg, #f43f5e, #be123c);">
+                    <span class="finn-logo">Tagline</span>
+                    <span class="finn-status">Velg én</span>
+                </div>
+                <div class="finn-content">
+                    <p style="margin-bottom: 1rem; color: var(--text-secondary);">Kort tekst øverst på siden (velg én):</p>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); transition: all 0.15s;">
+                            <strong style="color: var(--green-dark);">Anbefalt:</strong> Gode arbeidsplasser i et bygg med sjel
+                        </div>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); transition: all 0.15s;">
+                            Her finner du arbeidsplasser med utsikt til Hoffselva
+                        </div>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); transition: all 0.15s;">
+                            Finn din arbeidsplass ved Hoffselva
+                        </div>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); transition: all 0.15s;">
+                            Din neste arbeidsplass ved elva
+                        </div>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); transition: all 0.15s;">
+                            Et sted å jobbe på Skøyen
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero seksjon -->
+            <div class="finn-card" style="margin-bottom: 1.5rem;">
+                <div class="finn-header" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);">
+                    <span class="finn-logo">Hero</span>
+                    <span class="finn-status">Hovedseksjon</span>
+                </div>
+                <div class="finn-content">
+                    <div style="margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">OVERSKRIFT</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 1.25rem; font-weight: 600;">Lokaler til leie</div>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">INTRO</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border);">Hovfaret 13 tilbyr fleksible lokaler i et bygg med sjel - fra små studioer til større kontorareal. Her kombinerer vi det beste fra en solid 1989-konstruksjon med moderne arbeidsformer, ved Hoffselva på Skøyen.</div>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">HIGHLIGHTS (3 punkter)</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); white-space: pre-line;">500m fra Skøyen stasjon
+Ved Hoffselva - rolige omgivelser
+Heis, sykkelparkering, treningsrom</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lokale 1: Kontorlokale -->
+            <div class="finn-card" style="margin-bottom: 1.5rem;">
+                <div class="finn-header" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));">
+                    <span class="finn-logo">Lokale 1</span>
+                    <span class="finn-status">280 m² kontor</span>
+                </div>
+                <div class="finn-content">
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">BADGE</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 0.75rem 1rem; background: var(--green); color: white; border-radius: 8px; cursor: pointer; display: inline-block; font-weight: 600;">Ledig april 2025</div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">OVERSKRIFT</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 1.1rem; font-weight: 600;">Kontorlokale 280 m²</div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">BESKRIVELSE</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border);">Innflytningsklart kontor med åpent landskap, to møterom, cellekontorer og tekjøkken. Tidligere arkitektkontor i god stand.</div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">PUNKTER</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); white-space: pre-line;">Plass til 20-25 arbeidsplasser
+2 møterom + 2 cellekontorer
+Eget tekjøkken og hvilerom</div>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">KNAPP</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 0.75rem 1rem; background: var(--primary); color: white; border-radius: 8px; cursor: pointer; display: inline-block; font-weight: 600;">Kontakt oss for visning</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lokale 2: Cellekontorer -->
+            <div class="finn-card" style="margin-bottom: 1.5rem;">
+                <div class="finn-header" style="background: linear-gradient(135deg, var(--orange), #d97706);">
+                    <span class="finn-logo">Lokale 2</span>
+                    <span class="finn-status">Cellekontorer</span>
+                </div>
+                <div class="finn-content">
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">BADGE</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 0.75rem 1rem; background: var(--orange); color: white; border-radius: 8px; cursor: pointer; display: inline-block; font-weight: 600;">Fra 10 m²</div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">OVERSKRIFT</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 1.1rem; font-weight: 600;">Cellekontorer og studioer</div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">BESKRIVELSE</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border);">Mindre enheter for deg som trenger et eget rom - enten du er frilanser, gründer eller trenger et stille arbeidssted nær sentrum.</div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">PUNKTER</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); white-space: pre-line;">Enkeltkontorer fra ca. 10 m²
+Tilgang til felles fasiliteter
+Fleksible avtaler</div>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">KNAPP</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 0.75rem 1rem; background: var(--primary); color: white; border-radius: 8px; cursor: pointer; display: inline-block; font-weight: 600;">Ta kontakt for tilgjengelighet</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kontakt seksjon -->
+            <div class="finn-card">
+                <div class="finn-header" style="background: linear-gradient(135deg, var(--green), var(--green-dark));">
+                    <span class="finn-logo">Kontakt</span>
+                    <span class="finn-status">Bunnseksjon</span>
+                </div>
+                <div class="finn-content">
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">OVERSKRIFT</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); font-size: 1.1rem; font-weight: 600;">Ta kontakt</div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">TEKST</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border);">Interessert i lokaler? Vi viser gjerne frem og diskuterer muligheter.</div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">KONTAKTINFO</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; cursor: pointer; border: 1px solid var(--border); white-space: pre-line;">Andreas Brunsvig
+andreas@urbania.no
++47 911 70 395
+Urbania Eiendom AS</div>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">KNAPP (link til mailto:andreas@urbania.no?subject=Henvendelse om lokaler i Hovfaret 13)</p>
+                        <div class="copy-block" onclick="copyText(this)" style="padding: 0.75rem 1rem; background: var(--primary); color: white; border-radius: 8px; cursor: pointer; display: inline-block; font-weight: 600;">Send e-post</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tilgjengelige lokaler - intern oversikt -->
         <section class="section">
             <div class="section-header">
                 <div class="section-icon blue">
@@ -837,7 +997,7 @@
                 </div>
                 <div>
                     <h2 class="section-title">Tilgjengelige lokaler</h2>
-                    <p class="section-subtitle">Kontor, arrangement og næring på Skøyen</p>
+                    <p class="section-subtitle">Kun reelle utleieobjekter (ikke utviklingsplaner)</p>
                 </div>
             </div>
 
@@ -845,7 +1005,7 @@
                 <!-- Kontorlokale 3. etasje -->
                 <div class="rental-card featured">
                     <div class="rental-header">
-                        <span class="rental-badge finn">FINN-klar</span>
+                        <span class="rental-badge available">Ledig</span>
                         <h3 class="rental-title">Kontorlokale 3. etasje</h3>
                         <p class="rental-subtitle">280 m² — Ledig fra april 2025</p>
                     </div>
@@ -875,79 +1035,27 @@
                     </div>
                 </div>
 
-                <!-- Arrangementslokale -->
-                <div class="rental-card">
-                    <div class="rental-header green-grad">
-                        <span class="rental-badge planned">Planlagt</span>
-                        <h3 class="rental-title">Arrangementslokale</h3>
-                        <p class="rental-subtitle">20–100 personer</p>
-                    </div>
-                    <div class="rental-content">
-                        <ul class="rental-features">
-                            <li>Bryllup og konfirmasjon</li>
-                            <li>Bursdager og private fester</li>
-                            <li>Konserter og kulturarrangementer</li>
-                            <li>Workshops og kurs</li>
-                            <li>Firmaarrangementer</li>
-                            <li>Uteservering tilgjengelig i sommerhalvåret</li>
-                        </ul>
-                        <div class="rental-meta">
-                            <div class="rental-meta-item">
-                                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                                <span>20–100 personer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Studioer og kontorfellesskap -->
+                <!-- Cellekontorer og studioer -->
                 <div class="rental-card">
                     <div class="rental-header">
-                        <span class="rental-badge planned">Planlagt</span>
-                        <h3 class="rental-title">Studioer og kontorfellesskap</h3>
-                        <p class="rental-subtitle">Fra 15 m²</p>
+                        <span class="rental-badge available">Ledig</span>
+                        <h3 class="rental-title">Cellekontorer og studioer</h3>
+                        <p class="rental-subtitle">Fra 10 m²</p>
                     </div>
                     <div class="rental-content">
                         <ul class="rental-features">
-                            <li>Enkeltstudioer fra 15 m²</li>
-                            <li>Kontorfellesskap med delt infrastruktur</li>
-                            <li>Møterom for 4-12 personer</li>
-                            <li>Community Manager på huset</li>
+                            <li>Enkeltkontorer fra ca. 10 m²</li>
                             <li>Tilgang til felles fasiliteter</li>
+                            <li>Fleksible avtaler</li>
                         </ul>
                         <div class="rental-meta">
                             <div class="rental-meta-item">
                                 <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                                <span>Fra 15 m²</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Næringslokale 1. etasje -->
-                <div class="rental-card">
-                    <div class="rental-header orange-grad">
-                        <span class="rental-badge planned">Planlagt</span>
-                        <h3 class="rental-title">Næringslokale 1. etasje</h3>
-                        <p class="rental-subtitle">400–800 m²</p>
-                    </div>
-                    <div class="rental-content">
-                        <ul class="rental-features">
-                            <li>Kafé eller restaurant</li>
-                            <li>Servering med uteservering</li>
-                            <li>Butikk eller showroom</li>
-                            <li>Helsetjenester (fysioterapi, frisør)</li>
-                            <li>Adgang fra gateplan</li>
-                            <li>Uteområder mot Hoffselva</li>
-                        </ul>
-                        <div class="rental-meta">
-                            <div class="rental-meta-item">
-                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                                <span>400–800 m²</span>
+                                <span>Fra 10 m²</span>
                             </div>
                             <div class="rental-meta-item">
-                                <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                                <span>1. etasje</span>
+                                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                <span>Frilansere, gründere</span>
                             </div>
                         </div>
                     </div>
@@ -1127,12 +1235,36 @@ Ta kontakt for visning!</div>
     <!-- Footer -->
     <footer class="footer">
         <p class="footer-text">
-            Hovfaret 13 Prosjektdatabase — Utleie v1.0 — Januar 2025<br>
-            Urbania Eiendom AS
+            Hovfaret 13 Prosjektdatabase — Utleie v2.0 — Januar 2025<br>
+            Squarespace-innhold + FINN-annonse
         </p>
     </footer>
 
     <script>
+        function copyText(element) {
+            // Get text content, handling the "Anbefalt:" prefix
+            let text = element.textContent.trim();
+            if (text.startsWith('Anbefalt:')) {
+                text = text.replace('Anbefalt:', '').trim();
+            }
+
+            navigator.clipboard.writeText(text).then(() => {
+                const originalBg = element.style.background;
+                const originalColor = element.style.color;
+                element.style.background = '#22c55e';
+                element.style.color = 'white';
+
+                const originalText = element.innerHTML;
+                element.innerHTML = '&#10003; Kopiert!';
+
+                setTimeout(() => {
+                    element.style.background = originalBg;
+                    element.style.color = originalColor;
+                    element.innerHTML = originalText;
+                }, 1500);
+            });
+        }
+
         function copyFinnText() {
             const finnText = `280 m² kontorlokale på Skøyen — Hovfaret 13, 3. etasje
 

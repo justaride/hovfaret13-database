@@ -10,35 +10,42 @@
 
 ## Current Phase
 
-**Phase 66: Utleie - Rental Marketing 🔄 IN PROGRESS**
+**Phase 66: Utleie - Rental Marketing ✅ COMPLETE**
 
-Etablerer utleie-markedsføring for ledige lokaler i Hovfaret 13. Følger opp beslutning fra møte 19.12.2025.
+Etablert utleie-markedsføring for ledige lokaler i Hovfaret 13. Squarespace-innhold klart til implementering.
 
 ### Oppgaver
 
 | Oppgave | Status | Kanal |
 |---------|--------|-------|
-| FINN-annonse kontorlokale | ⏳ Venter på tegninger/bilder | FINN.no |
-| Squarespace "Utleie"-side | ✅ Innhold klart | hovfaret13.no |
-| Flere lokaler på nettside | ⏳ Pending | hovfaret13.no |
+| FINN-annonse kontorlokale | ✅ Tekst klar | FINN.no |
+| Squarespace "Utleie"-side | ✅ Innhold klart + kopierbar | hovfaret13.no |
+| Dashboard utleie-side | ✅ Oppdatert v2.0 | dashboard |
 
-### Venter på
+### Utleie-scope (kun reelle lokaler)
 
-- [ ] Tegninger av kontorlokalet
-- [ ] Bilder for FINN-annonse
-- [ ] Spesifikasjoner (areal m², pris kr/mnd, ledig fra)
+| Lokale | Status | Areal |
+|--------|--------|-------|
+| Kontorlokale 3. etg | Ledig april 2025 | 280 m² |
+| Cellekontorer/studioer | Ledig | Fra 10 m² |
 
-### Nye filer
+**Utelatt fra nettside:** Arrangementslokale og næringslokale 1. etg (utviklingsplaner)
+
+### Filer
 
 | Fil | Formål |
 |-----|--------|
-| `data/themes/utleie.json` | Utleie-data, nettside-innhold, FINN-mal |
-| `dashboard/floorplan-3etg.svg` | Redesignet plantegning 3. etasje |
+| `data/themes/utleie.json` | Utleie-data v2.0 med Squarespace-innhold |
+| `dashboard/utleie.html` | Dashboard v2.0 med kopierbare tekstblokker |
+| `dashboard/floorplan-3etg.svg` | Plantegning 3. etasje |
 
-### Squarespace endringer
+### Squarespace-innhold (klar til kopiering)
 
-- Endre navigasjon: "Aktiviteter" → "Utleie"
-- Legge inn nytt sideinnhold (ferdig i utleie.json)
+- Tagline-alternativer (5 stk, anbefalt: "Gode arbeidsplasser i et bygg med sjel")
+- Hero: overskrift, intro, 3 highlights
+- Lokale 1: 280 m² kontor med badge, beskrivelse, punkter
+- Lokale 2: Cellekontorer med badge, beskrivelse, punkter
+- Kontakt: Andreas @ Urbania
 
 ---
 

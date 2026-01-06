@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "version": "1.0",
+    "version": "2.0",
     "created": "2025-01-06",
     "updated": "2025-01-06",
     "description": "Utleie-informasjon for Hovfaret 13 - lokaler til leie",
@@ -18,30 +18,29 @@
     "steps": [
       {
         "id": 1,
-        "task": "FINN-annonse for kontorlokale",
-        "status": "waiting_for_input",
-        "notes": "Venter på tegninger og bilder fra Gabriel",
-        "deliverable": "FINN.no annonse for spesifikt kontorareal"
+        "task": "FINN-annonse for kontorlokale 3. etg",
+        "status": "ready",
+        "notes": "Tekst, plantegning og bilder mottatt",
+        "deliverable": "FINN.no annonse for 280 m² kontor"
       },
       {
         "id": 2,
         "task": "Squarespace - Utleie-side",
         "status": "content_ready",
-        "notes": "Innhold utarbeidet, klar for implementering",
-        "deliverable": "Endre 'Aktiviteter' til 'Utleie' med nytt innhold"
-      },
-      {
-        "id": 3,
-        "task": "Flere lokaler på nettside",
-        "status": "pending",
-        "notes": "Legge til oversikt over flere utleielokaler etter FINN-annonsen"
+        "notes": "Innhold definert: Hero + 2 lokaler (280m² + cellekontorer) + Kontakt",
+        "deliverable": "Oppdater utleie-side med nytt innhold"
       }
     ],
-    "waiting_for": [
-      "Tegninger av kontorlokalet",
-      "Bilder for annonse",
-      "Spesifikasjoner (areal, pris, etc.)"
-    ]
+    "content_scope": {
+      "included": [
+        "Kontorlokale 3. etasje (280 m²) - ledig april 2025",
+        "Cellekontorer og studioer (fra 10 m²)"
+      ],
+      "excluded": [
+        "Arrangementslokale (utviklingsplan)",
+        "Næringslokale 1. etg (utviklingsplan)"
+      ]
+    }
   },
 
   "building": {
@@ -105,112 +104,86 @@
       "_notes": "Plantegning mottatt 2025-01-06. Mangler: pris, bilder"
     },
     {
-      "id": "arrangement_01",
-      "type": "arrangement",
-      "name": "Arrangementslokale",
-      "status": "planned",
+      "id": "cellekontorer",
+      "type": "kontor",
+      "name": "Cellekontorer og studioer",
+      "status": "for_rent",
       "priority": "website",
-      "capacity_persons": "20-100",
-      "suitable_for": [
-        "Bryllup og konfirmasjon",
-        "Bursdager og private fester",
-        "Konserter og kulturarrangementer",
-        "Workshops og kurs",
-        "Firmaarrangementer"
-      ],
+      "area_m2_range": "fra 10",
+      "description": "Mindre enheter for deg som trenger et eget rom - enten du er frilanser, gründer eller trenger et stille arbeidssted nær sentrum.",
       "features": [
-        "Uteservering tilgjengelig i sommerhalvåret"
+        "Enkeltkontorer fra ca. 10 m²",
+        "Tilgang til felles fasiliteter",
+        "Fleksible avtaler"
+      ],
+      "target_audience": [
+        "Frilansere",
+        "Gründere",
+        "Konsulenter",
+        "Kreative næringer"
       ]
     },
     {
-      "id": "studio_01",
-      "type": "kontor",
-      "name": "Studioer og kontorfellesskap",
-      "status": "planned",
-      "priority": "website",
-      "area_m2_range": "fra 15",
-      "features": [
-        "Enkeltstudioer fra 15 m²",
-        "Kontorfellesskap med delt infrastruktur",
-        "Møterom for 4-12 personer",
-        "Community Manager på huset",
-        "Tilgang til felles fasiliteter"
-      ]
+      "id": "arrangement_01",
+      "type": "arrangement",
+      "name": "Arrangementslokale",
+      "status": "development_plan",
+      "priority": "future",
+      "_note": "Ikke annonsert - del av utviklingsplaner"
     },
     {
       "id": "naering_01",
       "type": "naering",
       "name": "Næringslokale 1. etasje",
-      "status": "planned",
-      "priority": "website",
-      "floor": 1,
-      "area_m2_range": "400-800",
-      "ceiling_height_m": "2.7-2.8",
-      "suitable_for": [
-        "Kafé eller restaurant",
-        "Servering med uteservering",
-        "Butikk eller showroom",
-        "Helsetjenester (fysioterapi, frisør)"
-      ],
-      "features": [
-        "Adgang fra gateplan",
-        "Uteområder mot Hoffselva",
-        "Fleksible planløsninger"
-      ]
+      "status": "development_plan",
+      "priority": "future",
+      "_note": "Ikke annonsert - del av utviklingsplaner"
     }
   ],
 
   "website_content": {
-    "page_title": "Utleie",
+    "page_title": "Lokaler til leie",
     "hero": {
-      "heading": "Lokaler til leie i Hovfaret 13",
-      "intro": "Hovfaret 13 tilbyr fleksible lokaler for arrangementer, kontor og næring – midt på Skøyen med utsikt mot Hoffselva og grønne omgivelser."
+      "heading": "Lokaler til leie",
+      "intro": "Hovfaret 13 tilbyr fleksible lokaler i et bygg med sjel - fra små studioer til større kontorareal. Her kombinerer vi det beste fra en solid 1989-konstruksjon med moderne arbeidsformer, ved Hoffselva på Skøyen.",
+      "highlights": [
+        "500m fra Skøyen stasjon",
+        "Ved Hoffselva - rolige omgivelser",
+        "Heis, sykkelparkering, treningsrom"
+      ]
     },
     "sections": [
       {
-        "id": "arrangement",
-        "icon": "🎭",
-        "heading": "Arrangementer",
-        "body": "Planlegger du bryllup, konfirmasjon, bursdag eller firmafest? Hovfaret 13 har fleksible lokaler som kan tilpasses ditt arrangement.",
+        "id": "kontor_3etg",
+        "badge": "Ledig april 2025",
+        "heading": "Kontorlokale 280 m²",
+        "body": "Innflytningsklart kontor med åpent landskap, to møterom, cellekontorer og tekjøkken. Tidligere arkitektkontor i god stand.",
         "bullets": [
-          "Bryllup og konfirmasjon",
-          "Bursdager og private fester",
-          "Konserter og kulturarrangementer",
-          "Workshops og kurs",
-          "Firmaarrangementer"
+          "Plass til 20-25 arbeidsplasser",
+          "2 møterom + 2 cellekontorer",
+          "Eget tekjøkken og hvilerom"
         ],
-        "details": "Kapasitet: 20–100 personer. Uteservering tilgjengelig i sommerhalvåret."
+        "has_floorplan": true,
+        "has_images": true,
+        "cta": "Kontakt oss for visning"
       },
       {
-        "id": "kontor",
-        "icon": "💼",
-        "heading": "Kontor og studioer",
-        "body": "Fleksible kontorløsninger for oppstartbedrifter, kreative næringer og etablerte virksomheter.",
+        "id": "cellekontorer",
+        "badge": "Fra 10 m²",
+        "heading": "Cellekontorer og studioer",
+        "body": "Mindre enheter for deg som trenger et eget rom - enten du er frilanser, gründer eller trenger et stille arbeidssted nær sentrum.",
         "bullets": [
-          "Enkeltstudioer fra 15 m²",
-          "Kontorfellesskap med delt infrastruktur",
-          "Møterom for 4–12 personer",
-          "Community Manager på huset",
-          "Tilgang til felles fasiliteter"
+          "Enkeltkontorer fra ca. 10 m²",
+          "Tilgang til felles fasiliteter",
+          "Fleksible avtaler"
         ],
-        "details": "Beliggenhet: 500m fra Skøyen stasjon. Parkering tilgjengelig i kjeller."
-      },
-      {
-        "id": "naering",
-        "icon": "🍽️",
-        "heading": "Næring i 1. etasje",
-        "body": "Førsteetasjen er planlagt for publikumsrettet virksomhet med adgang fra gateplan og uteområder mot Hoffselva.",
-        "bullets": [
-          "Kafé eller restaurant",
-          "Servering med uteservering",
-          "Butikk eller showroom",
-          "Helsetjenester (fysioterapi, frisør)"
-        ],
-        "details": "Areal: ca. 400–800 m² tilgjengelig. Takhøyde: 2.7–2.8 meter. Fleksible planløsninger."
+        "cta": "Ta kontakt for tilgjengelighet"
       }
     ],
     "contact": {
-      "heading": "Ta kontakt for visning",
+      "heading": "Ta kontakt",
+      "intro": "Interessert i lokaler? Vi viser gjerne frem og diskuterer muligheter.",
+      "name": "Andreas Brunsvig",
       "email": "andreas@urbania.no",
       "phone": "+47 911 70 395",
       "company": "Urbania Eiendom AS"

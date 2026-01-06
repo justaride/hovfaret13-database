@@ -2,6 +2,45 @@
 
 All notable changes to this project database.
 
+## [2.87.1] - 2025-01-06
+
+### Phase 66: Utleie - Squarespace Content Ready
+
+**Status:** ✅ COMPLETE
+
+#### Squarespace-innhold ferdigstilt
+
+Utarbeidet komplett innhold for hovfaret13.no/utleie med kopierbare tekstblokker i dashboard.
+
+**Endringer:**
+
+| Endring | Beskrivelse |
+|---------|-------------|
+| `utleie.json` v2.0 | Raffinert scope - kun reelle utleieobjekter |
+| `utleie.html` v2.0 | Ny Squarespace-seksjon med kopierbare blokker |
+| Tagline-alternativer | 5 forslag, anbefalt: "Gode arbeidsplasser i et bygg med sjel" |
+| Utleie-scope | Kun 280 m² kontor + cellekontorer (ikke utviklingsplaner) |
+
+**Utleie-objekter på nettside:**
+
+| Lokale | Badge | Areal |
+|--------|-------|-------|
+| Kontorlokale 3. etg | Ledig april 2025 | 280 m² |
+| Cellekontorer/studioer | Fra 10 m² | Fleksibelt |
+
+**Utelatt (utviklingsplaner):**
+- Arrangementslokale (20-100 pers)
+- Næringslokale 1. etg (400-800 m²)
+
+**Dashboard utleie.html v2.0:**
+- Squarespace-seksjon med klikk-for-å-kopiere tekstblokker
+- Tagline-alternativer med anbefalt valg
+- Hero, Lokale 1, Lokale 2, Kontakt som separate kort
+- Forenklet lokaloversikt (kun 2 reelle objekter)
+- FINN-annonsetekst beholdt
+
+---
+
 ## [2.87.0] - 2025-01-06
 
 ### Phase 66: Utleie - Rental Marketing
@@ -12,37 +51,19 @@ All notable changes to this project database.
 
 Opprettet struktur for markedsføring av ledige lokaler i Hovfaret 13.
 
-**Oppgaver:**
-
-| Oppgave | Status | Kanal |
-|---------|--------|-------|
-| Dashboard utleie-side | ✅ Komplett | dashboard |
-| FINN-annonse kontorlokale | ⏳ Venter på pris/bilder | FINN.no |
-| Squarespace "Utleie"-side | ✅ Innhold klart | hovfaret13.no |
-| Flere lokaler på nettside | ⏳ Pending | hovfaret13.no |
-
 **Nye filer:**
 
 | Fil | Formål |
 |-----|--------|
 | `data/themes/utleie.json` | Utleie-data, innhold, FINN-mal |
-| `dashboard/floorplan-3etg.svg` | Redesignet plantegning 3. etasje (slate palette, clean hierarchy) |
-| `dashboard/utleie.html` | Dashboard-side for utleie med 4 lokaler, plantegning, FINN-tekst |
+| `dashboard/floorplan-3etg.svg` | Redesignet plantegning 3. etasje |
+| `dashboard/utleie.html` | Dashboard-side for utleie |
 
 **Dashboard utleie.html inneholder:**
 - Hero med bygginformasjon (6100 m², 5 etasjer)
-- 4 utleielokaler som kort (kontor, arrangement, studio, næring)
 - Plantegning 3. etg med romfordeling
 - FINN-annonsetekst med kopier-funksjon
 - Kontaktinformasjon Urbania
-
-**Squarespace endringer planlagt:**
-- Endre navigasjon: "Aktiviteter" → "Utleie"
-- Nytt sideinnhold med lokaler til leie
-
-**Venter på:**
-- Pris for kontorlokalet
-- Bilder for FINN-annonse
 
 ---
 
