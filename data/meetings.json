@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "version": "2.84",
+    "version": "2.88",
     "created": "2025-11-21",
-    "last_updated": "2025-12-20",
+    "last_updated": "2026-01-07",
     "description": "Meeting records for Hovfaret 13 project",
-    "total_meetings": 60,
+    "total_meetings": 61,
     "enrichment_note": "Outcomes derived from decisions, action_items, and summary text.",
     "cleanup_note": "Data quality cleanup phase 62 - removed duplicates, non-meetings, fixed corrupt data, added types"
   },
@@ -5486,6 +5486,121 @@
         "Videre arbeid dekket av eksisterende avtale"
       ],
       "source_file": "MTE-191225.md, 19.12.25.md"
+    },
+    {
+      "id": "m_2026-01-06_internt_disp_nabovarsel",
+      "date": "2026-01-06",
+      "title": "Internt møte - Dispensasjonssøknad og nabovarsel-status",
+      "organizer": "Natural State AS",
+      "location": "Digitalt/Hovfaret 13",
+      "type": "Interne møter",
+      "participant_count": 3,
+      "participants": [
+        {
+          "name": "Kamran Surizehi",
+          "organization": "Natural State AS",
+          "role": "Byggesaksrådgiver"
+        },
+        {
+          "name": "Gabriel B Freeman",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no",
+          "role": "Prosjektleder"
+        },
+        {
+          "name": "Einar Kleppe Holthe",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no",
+          "role": "Strategisk rådgiver"
+        }
+      ],
+      "topics_discussed": [
+        "Saksinnsyn - gjennomgang av kommunale saksdokumenter",
+        "Nabovarsel-status og frist 12. januar",
+        "Hoffarets venner forhåndsuttalelse om skygge på elva",
+        "Dispensasjonssøknad - berikelse av argumentasjon",
+        "Fravik vs dispensasjon - juridisk vurdering",
+        "Bærekraftsargumentasjon for søknaden"
+      ],
+      "decisions": [
+        "Vente til 12. januar med å svare ut nabovarsel-innspill",
+        "Berike dispensasjonsdokumentet med bærekraftsargumentasjon",
+        "Kamran gjennomgår utkastet fra byggesaksrådgiver",
+        "Kamran utreder fravik vs dispensasjon-spørsmålet",
+        "Henvise til hovfaret13.no og hoveddokumentasjon i søknaden",
+        "Lage eksemplarisk PDF-dokument med illustrasjoner for dispensasjonssøknaden"
+      ],
+      "action_items": [
+        {
+          "task": "Be kommunen om alle vedlegg fra saksinnsyn",
+          "responsible": "Kamran",
+          "status": "pending"
+        },
+        {
+          "task": "Gjennomgå utkast til dispensasjonsredegjørelse",
+          "responsible": "Kamran",
+          "status": "pending"
+        },
+        {
+          "task": "Utrede om fravik eller dispensasjon er riktig tilnærming",
+          "responsible": "Kamran",
+          "status": "pending"
+        },
+        {
+          "task": "Svare ut Hoffarets venner uttalelse om skygge på elva",
+          "responsible": "Team",
+          "status": "pending",
+          "due_date": "2026-01-12"
+        },
+        {
+          "task": "Berike dispensasjonsdokument med bærekraftsargumentasjon",
+          "responsible": "Gabriel/Kamran",
+          "status": "pending"
+        },
+        {
+          "task": "Lage PDF-dokument med illustrasjoner til dispensasjonssøknad",
+          "responsible": "Kamran",
+          "status": "pending"
+        }
+      ],
+      "report": {
+        "summary": "Internt arbeidsmøte for å koordinere dispensasjonssøknaden og håndtere nabovarsel-prosessen. Hovedfokus på å berike det tynne utkastet fra byggesaksrådgiver med solid bærekraftsargumentasjon. Diskuterte strategi for å svare ut Hoffarets venner sin forhåndsuttalelse om skygge på Hoffselva.",
+        "context": "Nabovarselet har gått ut med frist 12. januar 2026. Hoffarets venner har allerede levert forhåndsuttalelse med bekymring om at 3 ekstra etasjer vil skyggelegge 12 meter av elva og påvirke ørretbestanden negativt.",
+        "discussion": [
+          {
+            "heading": "Saksinnsyn og vedlegg",
+            "content": "Teamet gjennomgikk saksinnsyn i Oslo kommune. Fant at vedleggene (utomhusplan, soldiagram, fasader, MUA-beregninger etc.) ikke er offentlig tilgjengelige ennå. Må be kommunen om å oversende alle tegninger for å sikre at teamet arbeider med riktig grunnlag."
+          },
+          {
+            "heading": "Hoffarets venner uttalelse",
+            "content": "Hoffarets venner (elveforeningen) har sendt inn forhåndsuttalelse datert 11/12. Deres hovedargument er at økt byggehøyde vil skyggelegge elva og skade ørretbestanden. Teamet diskuterte motargument: ørret trives faktisk i skyggelagte elveleier uten direkte sol. Rivning av kjelleren ville forårsake langt større inngrep i elveleiet og ødelegge etablert biodiversitet."
+          },
+          {
+            "heading": "Dispensasjonsdokumentet",
+            "content": "Utkastet fra byggesaksrådgiver (planjurist) oppleves som tynt. Teamet skal berike det med: (1) Bærekraftsargumentasjon fra utviklingsstrategien, (2) Sosiale argumenter om Omsorg+ og bydelens behov, (3) Dokumentasjon fra medvirkningsprosessen, (4) Referanser til hovfaret13.no. Kamran foreslo å lage en eksemplarisk PDF med illustrasjoner."
+          },
+          {
+            "heading": "Fravik vs dispensasjon",
+            "content": "Diskuterte om FRAVIK (fra teknisk forskrift) kan brukes i stedet for dispensasjon. Einar påpekte at fravik gjelder teknisk forskrift (lavere i lovhierarkiet), mens dispensasjon kreves for avvik fra reguleringsplan. Siden høydeavviket er fra områdereguleringen, må det være dispensasjon. Kamran skal likevel utrede spørsmålet grundig."
+          },
+          {
+            "heading": "Hovedargumentet for dispensasjon",
+            "content": "Sakens kjerne: fordelen ved å endre funksjon (til Omsorg+) er mye større enn ulempene ved høydeavviket. Dette kan dokumenteres gjennom: samfunnsmessig behov (160 Omsorg+-enheter trengs i bydelen innen 2040), miljøgevinst (48% CO₂-besparelse, 80% materialbesparelse), og redusert inngrep i elveleiet sammenlignet med riving."
+          },
+          {
+            "heading": "Reguleringsplanens status",
+            "content": "Områdeplanen er ikke rettsvirkende - den er foreslått men ikke vedtatt. Dette kompliserer saken. Einar nevnte at man kan henvise til nasjonal arkitekturstrategi og transformasjonspolitikk for å argumentere at 'toget har gått' fra den gamle reguleringstankegangen."
+          }
+        ]
+      },
+      "summary": "Internt arbeidsmøte om dispensasjonssøknaden og nabovarsel-prosessen. Hoffarets venner har levert forhåndsuttalelse om skygge på Hoffselva. Teamet skal berike det tynne utkastet fra byggesaksrådgiver med bærekraftsargumentasjon, sosiale argumenter om Omsorg+-behovet, og dokumentasjon fra medvirkningsprosessen. Kamran skal utrede fravik vs dispensasjon-spørsmålet og lage illustrert PDF-dokument.",
+      "outcomes": [
+        "Nabovarsel-frist bekreftet til 12. januar 2026",
+        "Hoffarets venner uttalelse skal svares ut med biodiversitetsargumentasjon",
+        "Dispensasjonsdokument skal berikes med bærekraft- og samfunnsargumenter",
+        "Kamran tar ansvar for juridisk vurdering og dokumentproduksjon"
+      ],
+      "source_file": "meeting-transcript-2026-01-06"
     }
   ]
 }

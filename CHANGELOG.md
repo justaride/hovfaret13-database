@@ -2,6 +2,38 @@
 
 All notable changes to this project database.
 
+## [2.88.0] - 2026-01-07
+
+### Nytt møte: Internt strategimøte om dispensasjonssøknad
+
+**Lagt til:** Møte m_2026-01-06_internt_disp_nabovarsel
+
+#### Deltakere
+- Kamran Surizehi (Byggesaksrådgiver)
+- Gabriel B Freeman (Prosjektleder)
+- Einar Kleppe Holthe (Strategisk rådgiver)
+
+#### Hovedtemaer
+- Saksinnsyn og vedlegg fra kommunen
+- Nabovarsel-status (frist 12. januar 2026)
+- Hoffarets venner forhåndsuttalelse om skygge på Hoffselva
+- Dispensasjonssøknad - berikelse av argumentasjon
+- Fravik vs dispensasjon juridisk vurdering
+
+#### Nøkkelavgjørelser
+- Vente til 12. januar med å svare ut innspill
+- Berike dispensasjonsdokumentet med bærekraftsargumentasjon
+- Kamran tar ansvar for juridisk vurdering og dokumentproduksjon
+
+**Endringer:**
+
+| Fil | Endring |
+|-----|---------|
+| `meetings.json` | +1 møte (nå 61 totalt) |
+| `config.json` | Oppdatert møtetall og versjon |
+
+---
+
 ## [2.87.1] - 2025-01-06
 
 ### Phase 66: Utleie - Squarespace Content Ready
