@@ -2,6 +2,41 @@
 
 All notable changes to this project database.
 
+## [2.89.0] - 2026-01-21
+
+### Phase 67: Natur & Miljø - Konsekvensutredning
+
+**Status:** 🔄 IN PROGRESS
+
+#### Ny dashboard-side: Natur & Miljø
+
+Opprettet komplett side for konsekvensutredning av natur og miljø knyttet til tilbyggscenario.
+
+**6 seksjoner:**
+- Oversikt med statusoversikt og arbeidsoppgaver
+- Skyggeanalyse med årstid/tidspunkt-velger
+- Hoffselva & Økologi (ørret, velforening, biologkonsultasjon)
+- Geoteknikk & Grunnforhold
+- Sammenligning: Rehabilitering vs. Riving
+- Kildemateriale og kontaktlogg
+
+**Formål:**
+- Svare ut naboer og velforeningen for elven
+- Underlagsmateriale til rammesøknad Omsorg+
+- Dokumentere biologkonsultasjon (planlagt)
+- Gjenbruke skoletomtens KU-materiale
+
+**Endringer:**
+
+| Fil | Endring |
+|-----|---------|
+| `data/themes/natur-miljo.json` | Ny datafil med 6 seksjoner |
+| `dashboard/natur-miljo.html` | Ny side med tab-navigasjon |
+| `dashboard/index.html` | Lagt til modul i navigasjon |
+| `config.json` | Versjon 2.89.0, phase 67 |
+
+---
+
 ## [2.88.0] - 2026-01-07
 
 ### Nytt møte: Internt strategimøte om dispensasjonssøknad

@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.88.0",
+    "version": "2.89.0",
     "created": "2025-12-03",
-    "last_updated": "2026-01-07",
+    "last_updated": "2026-01-21",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 66
+    "database_phase": 67
   },
   "auth": {
     "enabled": true,
@@ -128,6 +128,12 @@
     "content_file": "themes/utleie.json",
     "channels": ["hovfaret13.no", "FINN.no"],
     "priority_task": "FINN-annonse for kontorlokale"
+  },
+  "natur_miljo": {
+    "status": "in_progress",
+    "content_file": "themes/natur-miljo.json",
+    "sections": ["overview", "shadow_analysis", "hoffselva", "geotechnics", "comparison", "sources"],
+    "pending_tasks": ["biologist_consultation", "school_site_docs_review", "hoffselva_data"]
   },
   "key_deliverables": {
     "energy_report": {
