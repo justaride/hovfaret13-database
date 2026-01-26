@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miljøargumentasjon - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-hover: #f1f5f9;
+        --bg-subtle: #f9fafb;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --text-accent: #2563eb;
+        --border-color: #e2e8f0;
+        --border-light: #e2e8f0;
+        --success: #22c55e;
+        --success-bg: #dcfce7;
+        --warning: #f59e0b;
+        --warning-bg: #fef3c7;
+        --danger: #ef4444;
+        --danger-bg: #fee2e2;
+        --radius-sm: 6px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      .auth-wall {
+        position: fixed;
+        inset: 0;
+        background: var(--bg-main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .auth-container {
+        background: var(--bg-card);
+        padding: 2rem;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        text-align: center;
+        max-width: 320px;
+        width: 100%;
+      }
+
+      .auth-container h2 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .auth-container input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .auth-container button {
+        width: 100%;
+        padding: 0.75rem;
+        background: var(--text-accent);
+        color: white;
+        border: none;
+        border-radius: var(--radius-sm);
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .auth-container button:hover {
+        background: #1d4ed8;
+      }
+
+      main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .page-header {
+        margin-bottom: 2rem;
+      }
+
+      .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .breadcrumb a {
+        color: var(--text-accent);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .page-header h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        color: var(--text-secondary);
+      }
+
+      .stats-row {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .stat-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 1rem 1.5rem;
+        min-width: 120px;
+        text-align: center;
+      }
+
+      .stat-card .value {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-accent);
+      }
+
+      .stat-card .label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .controls-row {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .search-box {
+        flex: 1;
+        min-width: 250px;
+        position: relative;
+      }
+
+      .search-box input {
+        width: 100%;
+        padding: 0.75rem 1rem 0.75rem 2.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        font-family: inherit;
+        background: var(--bg-card);
+      }
+
+      .search-box input:focus {
+        outline: none;
+        border-color: var(--text-accent);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      }
+
+      .search-box::before {
+        content: "🔍";
+        position: absolute;
+        left: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.9rem;
+      }
+
+      .filter-group {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        background: var(--bg-card);
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.15s;
+        font-family: inherit;
+      }
+
+      .filter-btn:hover {
+        background: var(--bg-hover);
+      }
+
+      .filter-btn.active {
+        background: var(--text-accent);
+        color: white;
+        border-color: var(--text-accent);
+      }
+
+      .filter-section {
+        margin-bottom: 1.5rem;
+      }
+
+      .filter-section h3 {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+      }
+
+      .arguments-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 1rem;
+      }
+
+      .argument-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        transition: all 0.15s;
+      }
+
+      .argument-card:hover {
+        box-shadow: var(--shadow-md);
+        border-color: var(--text-accent);
+      }
+
+      .argument-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .argument-title {
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--text-primary);
+        line-height: 1.4;
+      }
+
+      .argument-theme {
+        flex-shrink: 0;
+        font-size: 1.25rem;
+      }
+
+      .argument-summary {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .argument-points {
+        background: var(--bg-subtle);
+        border-radius: var(--radius-sm);
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        display: none;
+      }
+
+      .argument-points.expanded {
+        display: block;
+      }
+
+      .argument-points ul {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+
+      .argument-points li {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.35rem;
+      }
+
+      .argument-points li:last-child {
+        margin-bottom: 0;
+      }
+
+      .argument-comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        display: none;
+      }
+
+      .argument-comparison.expanded {
+        display: grid;
+      }
+
+      .comparison-item {
+        padding: 0.5rem 0.75rem;
+        border-radius: var(--radius-sm);
+        font-size: 0.8rem;
+      }
+
+      .comparison-item.rehab {
+        background: var(--success-bg);
+      }
+
+      .comparison-item.demolition {
+        background: var(--danger-bg);
+      }
+
+      .comparison-label {
+        font-weight: 500;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-bottom: 0.25rem;
+        color: var(--text-muted);
+      }
+
+      .argument-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .argument-tags {
+        display: flex;
+        gap: 0.35rem;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 999px;
+        background: var(--bg-hover);
+        color: var(--text-secondary);
+      }
+
+      .tag.audience {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+
+      .strength-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        font-weight: 500;
+      }
+
+      .strength-badge.strong {
+        background: var(--success-bg);
+        color: #166534;
+      }
+
+      .strength-badge.medium {
+        background: var(--warning-bg);
+        color: #92400e;
+      }
+
+      .strength-badge.supporting {
+        background: var(--bg-hover);
+        color: var(--text-secondary);
+      }
+
+      .argument-actions {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .action-btn {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.8rem;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        background: var(--bg-card);
+        cursor: pointer;
+        transition: all 0.15s;
+        font-family: inherit;
+      }
+
+      .action-btn:hover {
+        background: var(--bg-hover);
+      }
+
+      .action-btn.primary {
+        background: var(--text-accent);
+        color: white;
+        border-color: var(--text-accent);
+      }
+
+      .action-btn.primary:hover {
+        background: #1d4ed8;
+      }
+
+      .copy-toast {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--text-primary);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        z-index: 100;
+      }
+
+      .copy-toast.show {
+        opacity: 1;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--text-muted);
+        grid-column: 1 / -1;
+      }
+
+      .empty-state h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-secondary);
+      }
+
+      .missing-docs-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 2px solid var(--border-color);
+      }
+
+      .missing-docs-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      .missing-docs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+
+      .missing-doc-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 1rem;
+        border-left: 3px solid var(--warning);
+      }
+
+      .missing-doc-card h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .missing-doc-card .category {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .missing-doc-card p {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.5rem;
+      }
+
+      .missing-doc-card .source {
+        font-size: 0.75rem;
+        color: var(--text-accent);
+      }
+
+      .priority-high {
+        border-left-color: var(--danger);
+      }
+
+      .priority-medium {
+        border-left-color: var(--warning);
+      }
+
+      .priority-low {
+        border-left-color: var(--text-muted);
+      }
+
+      @media (max-width: 768px) {
+        main {
+          padding: 1rem;
+        }
+
+        .arguments-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .controls-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .search-box {
+          min-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="auth-wall" class="auth-wall" style="display: none">
+      <div class="auth-container">
+        <h2>Tilgangskontroll</h2>
+        <input type="password" id="password-input" placeholder="Passord" />
+        <button onclick="checkAuth()">Logg inn</button>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <header class="page-header">
+        <nav class="breadcrumb">
+          <a href="index.html">Dashboard</a> / Miljøargumentasjon
+        </nav>
+        <h1>Miljøargumentasjon</h1>
+        <p class="subtitle">
+          Strukturert argumentasjonsbase for rammesøknad og innsigelser
+        </p>
+      </header>
+
+      <div class="stats-row" id="stats-row">
+        <div class="stat-card">
+          <div class="value" id="stat-total">0</div>
+          <div class="label">Argumenter</div>
+        </div>
+        <div class="stat-card">
+          <div class="value" id="stat-filtered">0</div>
+          <div class="label">Filtrert</div>
+        </div>
+        <div class="stat-card">
+          <div class="value" id="stat-strong">0</div>
+          <div class="label">Sterke</div>
+        </div>
+        <div class="stat-card">
+          <div class="value" id="stat-sources">0</div>
+          <div class="label">Kilder</div>
+        </div>
+        <div class="stat-card">
+          <div class="value" id="stat-missing">0</div>
+          <div class="label">Mangler</div>
+        </div>
+      </div>
+
+      <div class="controls-row">
+        <div class="search-box">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Søk i argumenter..."
+          />
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <h3>Tema</h3>
+        <div class="filter-group" id="theme-filters"></div>
+      </div>
+
+      <div class="filter-section">
+        <h3>Målgruppe</h3>
+        <div class="filter-group" id="audience-filters"></div>
+      </div>
+
+      <div class="arguments-grid" id="arguments-grid"></div>
+
+      <section class="missing-docs-section">
+        <h2>Dokumenter som bør innhentes</h2>
+        <div class="missing-docs-grid" id="missing-docs-grid"></div>
+      </section>
+    </main>
+
+    <div class="copy-toast" id="copy-toast">Kopiert til utklippstavle</div>
+
+    <script>
+      const AUTH_PASSWORD = "h13-skøyen-2025";
+      const AUTH_KEY = "h13_auth";
+      const AUTH_DURATION = 24 * 60 * 60 * 1000;
+
+      let data = null;
+      let activeTheme = null;
+      let activeAudience = null;
+      let searchTerm = "";
+
+      function checkStoredAuth() {
+        const stored = localStorage.getItem(AUTH_KEY);
+        if (stored) {
+          const { timestamp } = JSON.parse(stored);
+          if (Date.now() - timestamp < AUTH_DURATION) {
+            return true;
+          }
+          localStorage.removeItem(AUTH_KEY);
+        }
+        return false;
+      }
+
+      function checkAuth() {
+        const input = document.getElementById("password-input");
+        if (input.value === AUTH_PASSWORD) {
+          localStorage.setItem(
+            AUTH_KEY,
+            JSON.stringify({ timestamp: Date.now() }),
+          );
+          document.getElementById("auth-wall").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        } else {
+          alert("Feil passord");
+        }
+      }
+
+      function initAuth() {
+        if (checkStoredAuth()) {
+          document.getElementById("auth-wall").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        } else {
+          document.getElementById("auth-wall").style.display = "flex";
+          document.getElementById("main-content").style.display = "none";
+        }
+      }
+
+      async function loadData() {
+        try {
+          const response = await fetch(
+            "data/themes/environmental-arguments.json",
+          );
+          data = await response.json();
+          renderFilters();
+          renderArguments();
+          renderMissingDocs();
+          updateStats();
+        } catch (error) {
+          console.error("Kunne ikke laste data:", error);
+        }
+      }
+
+      function renderFilters() {
+        const themeContainer = document.getElementById("theme-filters");
+        themeContainer.innerHTML = `
+        <button class="filter-btn active" data-theme="">Alle</button>
+        ${data.themes
+          .map(
+            (t) => `
+          <button class="filter-btn" data-theme="${t.id}">${t.icon} ${t.name}</button>
+        `,
+          )
+          .join("")}
+      `;
+
+        const audienceContainer = document.getElementById("audience-filters");
+        audienceContainer.innerHTML = `
+        <button class="filter-btn active" data-audience="">Alle</button>
+        ${data.audiences
+          .map(
+            (a) => `
+          <button class="filter-btn" data-audience="${a.id}">${a.name}</button>
+        `,
+          )
+          .join("")}
+      `;
+
+        themeContainer.addEventListener("click", (e) => {
+          if (e.target.classList.contains("filter-btn")) {
+            themeContainer
+              .querySelectorAll(".filter-btn")
+              .forEach((b) => b.classList.remove("active"));
+            e.target.classList.add("active");
+            activeTheme = e.target.dataset.theme || null;
+            renderArguments();
+            updateStats();
+          }
+        });
+
+        audienceContainer.addEventListener("click", (e) => {
+          if (e.target.classList.contains("filter-btn")) {
+            audienceContainer
+              .querySelectorAll(".filter-btn")
+              .forEach((b) => b.classList.remove("active"));
+            e.target.classList.add("active");
+            activeAudience = e.target.dataset.audience || null;
+            renderArguments();
+            updateStats();
+          }
+        });
+      }
+
+      function getFilteredArguments() {
+        let filtered = data.arguments;
+
+        if (activeTheme) {
+          filtered = filtered.filter((a) => a.theme_id === activeTheme);
+        }
+
+        if (activeAudience) {
+          filtered = filtered.filter((a) =>
+            a.audiences.includes(activeAudience),
+          );
+        }
+
+        if (searchTerm) {
+          const term = searchTerm.toLowerCase();
+          filtered = filtered.filter(
+            (a) =>
+              a.title.toLowerCase().includes(term) ||
+              a.summary.toLowerCase().includes(term) ||
+              a.spissede_punkter.some((p) => p.toLowerCase().includes(term)),
+          );
+        }
+
+        return filtered;
+      }
+
+      function getTheme(id) {
+        return data.themes.find((t) => t.id === id);
+      }
+
+      function getAudienceName(id) {
+        const audience = data.audiences.find((a) => a.id === id);
+        return audience ? audience.name : id;
+      }
+
+      function renderArguments() {
+        const container = document.getElementById("arguments-grid");
+        const filtered = getFilteredArguments();
+
+        if (filtered.length === 0) {
+          container.innerHTML = `
+          <div class="empty-state">
+            <h3>Ingen argumenter funnet</h3>
+            <p>Prøv å justere filtrene eller søketermen</p>
+          </div>
+        `;
+          return;
+        }
+
+        container.innerHTML = filtered
+          .map((arg) => {
+            const theme = getTheme(arg.theme_id);
+            return `
+          <article class="argument-card" data-id="${arg.id}">
+            <div class="argument-header">
+              <h3 class="argument-title">${arg.title}</h3>
+              <span class="argument-theme" title="${theme?.name}">${theme?.icon}</span>
+            </div>
+            <p class="argument-summary">${arg.summary}</p>
+
+            <div class="argument-points" id="points-${arg.id}">
+              <ul>
+                ${arg.spissede_punkter.map((p) => `<li>${p}</li>`).join("")}
+              </ul>
+            </div>
+
+            <div class="argument-comparison" id="comparison-${arg.id}">
+              <div class="comparison-item rehab">
+                <div class="comparison-label">Rehabilitering</div>
+                ${arg.comparison.rehabilitation}
+              </div>
+              <div class="comparison-item demolition">
+                <div class="comparison-label">Riving</div>
+                ${arg.comparison.demolition}
+              </div>
+            </div>
+
+            <div class="argument-footer">
+              <div class="argument-tags">
+                ${arg.audiences.map((a) => `<span class="tag audience">${getAudienceName(a)}</span>`).join("")}
+              </div>
+              <span class="strength-badge ${arg.strength}">${getStrengthLabel(arg.strength)}</span>
+            </div>
+
+            <div class="argument-actions">
+              <button class="action-btn" onclick="toggleExpand('${arg.id}')">Vis detaljer</button>
+              <button class="action-btn primary" onclick="copyArgument('${arg.id}')">Kopier</button>
+            </div>
+          </article>
+        `;
+          })
+          .join("");
+      }
+
+      function getStrengthLabel(strength) {
+        const labels = {
+          strong: "Sterk",
+          medium: "Medium",
+          supporting: "Støttende",
+        };
+        return labels[strength] || strength;
+      }
+
+      function toggleExpand(id) {
+        const points = document.getElementById(`points-${id}`);
+        const comparison = document.getElementById(`comparison-${id}`);
+        const isExpanded = points.classList.contains("expanded");
+
+        points.classList.toggle("expanded", !isExpanded);
+        comparison.classList.toggle("expanded", !isExpanded);
+
+        const btn = document.querySelector(`[data-id="${id}"] .action-btn`);
+        btn.textContent = isExpanded ? "Vis detaljer" : "Skjul detaljer";
+      }
+
+      function copyArgument(id) {
+        const arg = data.arguments.find((a) => a.id === id);
+        if (!arg) return;
+
+        const text = `${arg.title}
+
+${arg.summary}
+
+Hovedpunkter:
+${arg.spissede_punkter.map((p) => `• ${p}`).join("\n")}
+
+Sammenligning:
+✓ Rehabilitering: ${arg.comparison.rehabilitation}
+✗ Riving: ${arg.comparison.demolition}
+
+Kilder:
+${arg.references.map((r) => r.citation).join("\n")}`;
+
+        navigator.clipboard.writeText(text).then(() => {
+          showToast();
+        });
+      }
+
+      function showToast() {
+        const toast = document.getElementById("copy-toast");
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 2000);
+      }
+
+      function renderMissingDocs() {
+        const container = document.getElementById("missing-docs-grid");
+        container.innerHTML = data.missing_documents
+          .map(
+            (doc) => `
+        <div class="missing-doc-card priority-${doc.priority}">
+          <div class="category">${doc.category}</div>
+          <h4>${doc.title}</h4>
+          <p>${doc.description}</p>
+          <div class="source">Kilde: ${doc.source}</div>
+        </div>
+      `,
+          )
+          .join("");
+      }
+
+      function updateStats() {
+        const filtered = getFilteredArguments();
+        const strong = filtered.filter((a) => a.strength === "strong").length;
+
+        document.getElementById("stat-total").textContent =
+          data.arguments.length;
+        document.getElementById("stat-filtered").textContent = filtered.length;
+        document.getElementById("stat-strong").textContent = strong;
+        document.getElementById("stat-sources").textContent =
+          data.source_documents.length;
+        document.getElementById("stat-missing").textContent =
+          data.missing_documents.length;
+      }
+
+      document.getElementById("search-input").addEventListener("input", (e) => {
+        searchTerm = e.target.value;
+        renderArguments();
+        updateStats();
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initAuth();
+        loadData();
+      });
+
+      document
+        .getElementById("password-input")
+        ?.addEventListener("keypress", (e) => {
+          if (e.key === "Enter") checkAuth();
+        });
+    </script>
+  </body>
+</html>

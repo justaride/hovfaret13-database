@@ -1,1341 +1,1709 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="no">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Hovfaret 13 Dashboard - Prosjektoversikt for transformasjon av kontorbygg til Omsorg+ boliger i Oslo">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
-  <title>Hovfaret 13 - Prosjektdatabase</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-  <!-- Preconnect for faster font loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Prefetch commonly navigated pages for instant navigation -->
-  <link rel="prefetch" href="command-center.html">
-  <link rel="prefetch" href="meetings.html">
-  <link rel="prefetch" href="timeline.html">
-  <link rel="prefetch" href="stakeholders.html">
-  <link rel="prefetch" href="lib/data-loader.js">
-
-  <!-- Font with display=swap to prevent render blocking -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-  <style>
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg-main: #f8fafc;
-      --bg-card: #ffffff;
-      --bg-hover: #f1f5f9;
-      --bg-selected: #eff6ff;
-      --bg-accent: #dbeafe;
-
-      --text-primary: #1e293b;
-      --text-secondary: #475569;
-      --text-muted: #94a3b8;
-      --text-accent: #2563eb;
-
-      --border-light: #e2e8f0;
-      --border-medium: #cbd5e1;
-
-      --success: #22c55e;
-      --warning: #f59e0b;
-      --info: #3b82f6;
-
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
-
-      --space-1: 0.25rem;
-      --space-2: 0.5rem;
-      --space-3: 0.75rem;
-      --space-4: 1rem;
-      --space-5: 1.25rem;
-      --space-6: 1.5rem;
-      --space-8: 2rem;
-
-      --radius-sm: 6px;
-      --radius-md: 8px;
-      --radius-lg: 12px;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-main);
-      color: var(--text-primary);
-      line-height: 1.5;
-      font-size: 14px;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* ===== LAYOUT ===== */
-    .app-container {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-    }
-
-    /* Header */
-    .app-header {
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-light);
-      padding: var(--space-4) var(--space-6);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-shrink: 0;
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: var(--space-4);
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-    }
-
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      background: linear-gradient(135deg, var(--text-accent), #7c3aed);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 600;
-      font-size: 0.875rem;
-    }
-
-    .header-stats {
-      display: flex;
-      gap: var(--space-6);
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-value {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-accent);
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* Main Content */
-    .main-content {
-      display: flex;
-      flex: 1;
-      overflow: hidden;
-    }
-
-    /* ===== LEFT PANEL - MODULE LIST ===== */
-    .list-panel {
-      width: 380px;
-      min-width: 380px;
-      background: var(--bg-card);
-      border-right: 1px solid var(--border-light);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .list-header {
-      padding: var(--space-4);
-      border-bottom: 1px solid var(--border-light);
-    }
-
-    .list-title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: var(--space-1);
-    }
-
-    .list-subtitle {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .module-list {
-      flex: 1;
-      overflow-y: auto;
-      padding: var(--space-2);
-    }
-
-    .module-group {
-      margin-bottom: var(--space-4);
-    }
-
-    .group-header {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: var(--space-2) var(--space-3);
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .module-item {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-      padding: var(--space-3) var(--space-4);
-      margin: var(--space-1) 0;
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      transition: all 0.15s;
-      border: 1px solid transparent;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .module-item:hover {
-      background: var(--bg-hover);
-    }
-
-    .module-item.selected {
-      background: var(--bg-selected);
-      border-color: var(--text-accent);
-    }
-
-    .module-item.disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    .module-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      flex-shrink: 0;
-    }
-
-    .module-icon.timeline { background: #dbeafe; }
-    .module-icon.meetings { background: #dcfce7; }
-    .module-icon.stakeholders { background: #fce7f3; }
-    .module-icon.scenarios { background: #fef3c7; }
-    .module-icon.documents { background: #e0e7ff; }
-    .module-icon.sustainability { background: #d1fae5; }
-    .module-icon.analytics { background: #ede9fe; }
-    .module-icon.overview { background: #f1f5f9; }
-    .module-icon.story { background: linear-gradient(135deg, #fef3c7, #fde68a); }
-
-    .module-info {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .module-name {
-      font-weight: 500;
-      color: var(--text-primary);
-      margin-bottom: 2px;
-    }
-
-    .module-desc {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .module-badge {
-      font-size: 0.65rem;
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-weight: 500;
-      flex-shrink: 0;
-    }
-
-    .module-badge.count {
-      background: var(--bg-main);
-      color: var(--text-secondary);
-      border: 1px solid var(--border-light);
-    }
-
-    .module-badge.new {
-      background: #dcfce7;
-      color: #166534;
-    }
-
-    .module-item.featured {
-      background: linear-gradient(135deg, var(--bg-accent) 0%, var(--bg-card) 100%);
-      border: 2px solid var(--text-accent);
-    }
-
-    .module-item.featured:hover {
-      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
-    }
-
-    .module-icon.command-center {
-      background: linear-gradient(135deg, var(--text-accent), #7c3aed);
-      color: white;
-    }
-
-    /* ===== RIGHT PANEL - DETAIL VIEW ===== */
-    .detail-panel {
-      flex: 1;
-      overflow-y: auto;
-      background: var(--bg-main);
-    }
-
-    .detail-empty {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      color: var(--text-muted);
-      text-align: center;
-      padding: var(--space-8);
-    }
-
-    .detail-empty-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--bg-card);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: var(--space-4);
-      border: 1px solid var(--border-light);
-    }
-
-    .detail-empty h3 {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      margin-bottom: var(--space-2);
-    }
-
-    .detail-empty p {
-      font-size: 0.875rem;
-    }
-
-    /* Detail Content */
-    .detail-content {
-      padding: var(--space-6);
-    }
-
-    .detail-header {
-      margin-bottom: var(--space-6);
-    }
-
-    .detail-icon {
-      font-size: 3rem;
-      margin-bottom: var(--space-4);
-    }
-
-    .detail-title {
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: var(--space-2);
-    }
-
-    .detail-description {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: var(--space-4);
-    }
-
-    .detail-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: var(--space-4);
-      margin-bottom: var(--space-6);
-    }
-
-    .detail-stat {
-      background: var(--bg-card);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: var(--space-4);
-      text-align: center;
-    }
-
-    .detail-stat-value {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--text-accent);
-    }
-
-    .detail-stat-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .detail-actions {
-      display: flex;
-      gap: var(--space-3);
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: var(--space-3) var(--space-5);
-      background: var(--text-accent);
-      color: white;
-      border: none;
-      border-radius: var(--radius-md);
-      font-size: 0.875rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.15s;
-      text-decoration: none;
-    }
-
-    .btn-primary:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: var(--space-3) var(--space-5);
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      font-size: 0.875rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.15s;
-      text-decoration: none;
-    }
-
-    .btn-secondary:hover {
-      background: var(--bg-hover);
-      border-color: var(--border-medium);
-    }
-
-    /* Features List */
-    .features-section {
-      margin-top: var(--space-6);
-    }
-
-    .features-title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: var(--space-3);
-    }
-
-    .features-list {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-      padding: var(--space-3);
-      background: var(--bg-card);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-sm);
-    }
-
-    .feature-icon {
-      color: var(--success);
-    }
-
-    .feature-text {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-    }
-
-    /* Footer in detail */
-    .detail-footer {
-      margin-top: var(--space-8);
-      padding-top: var(--space-4);
-      border-top: 1px solid var(--border-light);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-  </style>
-    
-</head>
-<body>
-  <div class="app-container">
-    <!-- Header -->
-    <header class="app-header">
-      <div class="header-left">
-        <div class="logo">
-          <div class="logo-icon">H13</div>
-          <span>Hovfaret 13</span>
-        </div>
-      </div>
-      <div class="header-stats">
-        <div class="stat">
-          <div class="stat-value" id="stat-meetings">70</div>
-          <div class="stat-label">Møter</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" id="stat-documents">271</div>
-          <div class="stat-label">Dokumenter</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" id="stat-stakeholders">35</div>
-          <div class="stat-label">Interessenter</div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Left Panel: Module List -->
-      <aside class="list-panel">
-        <div class="list-header">
-          <div class="list-title">Prosjektmoduler</div>
-          <div class="list-subtitle">Velg en modul for å se detaljer</div>
-        </div>
-
-        <div class="module-list">
-          <!-- Command Center -->
-          <div class="module-group">
-            <div class="group-header">Master Dashboard</div>
-
-            <a href="command-center.html" class="module-item featured" data-module="command-center">
-              <div class="module-icon command-center">🎯</div>
-              <div class="module-info">
-                <div class="module-name">Command Center</div>
-                <div class="module-desc">Komplett prosjektoversikt</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="project-story.html" class="module-item featured" data-module="project-story">
-              <div class="module-icon story">📖</div>
-              <div class="module-info">
-                <div class="module-name">Prosjekthistorie</div>
-                <div class="module-desc">Komplett dokumentasjon av prosjektet</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-          </div>
-
-          <!-- Primary Modules -->
-          <div class="module-group">
-            <div class="group-header">Hovedmoduler</div>
-
-            <a href="timeline.html" class="module-item" data-module="timeline">
-              <div class="module-icon timeline">🏛️</div>
-              <div class="module-info">
-                <div class="module-name">Prosjekthistorikk</div>
-                <div class="module-desc">Komplett tidslinje fra 1989 til i dag</div>
-              </div>
-              <span class="module-badge count">32</span>
-            </a>
-
-            <a href="meetings.html" class="module-item" data-module="meetings">
-              <div class="module-icon meetings">📋</div>
-              <div class="module-info">
-                <div class="module-name">Møteoversikt</div>
-                <div class="module-desc">Søkbar database med rapporter</div>
-              </div>
-              <span class="module-badge count">70</span>
-            </a>
-
-            <a href="stakeholders.html" class="module-item" data-module="stakeholders">
-              <div class="module-icon stakeholders">👥</div>
-              <div class="module-info">
-                <div class="module-name">Interessentnettverk</div>
-                <div class="module-desc">Personer og organisasjoner</div>
-              </div>
-              <span class="module-badge count">30</span>
-            </a>
-
-            <a href="scenarios.html" class="module-item" data-module="scenarios">
-              <div class="module-icon scenarios">♻️</div>
-              <div class="module-info">
-                <div class="module-name">Scenariosammenligning</div>
-                <div class="module-desc">CO₂-analyse og alternativer</div>
-              </div>
-              <span class="module-badge count">3</span>
-            </a>
-          </div>
-
-          <!-- Secondary Modules -->
-          <div class="module-group">
-            <div class="group-header">Analyse & Dokumentasjon</div>
-
-            <a href="documents.html" class="module-item" data-module="documents">
-              <div class="module-icon documents">📄</div>
-              <div class="module-info">
-                <div class="module-name">Dokumentutforsker</div>
-                <div class="module-desc">Alle prosjektdokumenter</div>
-              </div>
-              <span class="module-badge count">271</span>
-            </a>
-
-            <a href="sustainability-complete.html" class="module-item featured" data-module="sustainability">
-              <div class="module-icon sustainability" style="background: linear-gradient(135deg, #166534, #22c55e);">🌱</div>
-              <div class="module-info">
-                <div class="module-name">Bærekraft</div>
-                <div class="module-desc">LCA-modeller, tekster og klimadata</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="analytics.html" class="module-item" data-module="analytics">
-              <div class="module-icon analytics">📊</div>
-              <div class="module-info">
-                <div class="module-name">Avansert Analyse</div>
-                <div class="module-desc">Statistikk og innsikt</div>
-              </div>
-            </a>
-
-            <a href="overview.html" class="module-item" data-module="overview">
-              <div class="module-icon overview">🏠</div>
-              <div class="module-info">
-                <div class="module-name">Prosjektoversikt</div>
-                <div class="module-desc">Helhetlig prosjektstatus</div>
-              </div>
-            </a>
-
-            <a href="deliverables.html" class="module-item" data-module="deliverables">
-              <div class="module-icon deliverables">📋</div>
-              <div class="module-info">
-                <div class="module-name">Leveranser</div>
-                <div class="module-desc">Prosjektleveranser og status</div>
-              </div>
-              <span class="module-badge count">75</span>
-            </a>
-
-            <a href="regulatory-status.html" class="module-item" data-module="regulatory">
-              <div class="module-icon regulatory">⚖️</div>
-              <div class="module-info">
-                <div class="module-name">Regulatorisk Status</div>
-                <div class="module-desc">Søknadsprosess og regelverk</div>
-              </div>
-            </a>
-
-            <a href="natur-miljo.html" class="module-item featured" data-module="natur-miljo">
-              <div class="module-icon natur-miljo" style="background: linear-gradient(135deg, #166534, #15803d);">🌿</div>
-              <div class="module-info">
-                <div class="module-name">Natur & Miljø</div>
-                <div class="module-desc">Konsekvensutredning og økologi</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-          </div>
-
-          <!-- Presentasjoner -->
-          <div class="module-group">
-            <div class="group-header">Presentasjoner</div>
-
-            <a href="konseptskisse.html" class="module-item" data-module="konseptskisse">
-              <div class="module-icon konseptskisse" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">📑</div>
-              <div class="module-info">
-                <div class="module-name">Konseptskisse 1.0</div>
-                <div class="module-desc">Original konseptpresentasjon</div>
-              </div>
-            </a>
-
-            <a href="konseptskisse-2.html" class="module-item" data-module="konseptskisse2">
-              <div class="module-icon konseptskisse2" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe);">📘</div>
-              <div class="module-info">
-                <div class="module-name">Konseptskisse 2.0</div>
-                <div class="module-desc">Oppdatert presentasjon des 2025</div>
-              </div>
-            </a>
-
-            <a href="konseptskisse-3.html" class="module-item" data-module="konseptskisse3">
-              <div class="module-icon konseptskisse3" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">📗</div>
-              <div class="module-info">
-                <div class="module-name">Konseptskisse 3.0</div>
-                <div class="module-desc">16 slides — fullstendig presentasjon</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="sustainability-report.html" class="module-item" data-module="sustainability-report">
-              <div class="module-icon sustainability-report" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">📊</div>
-              <div class="module-info">
-                <div class="module-name">Bærekraftsrapport Viewer</div>
-                <div class="module-desc">83-siders rapport med navigasjon</div>
-              </div>
-              <span class="module-badge count">83</span>
-            </a>
-
-            <a href="stakeholder-journey.html" class="module-item" data-module="stakeholder-journey">
-              <div class="module-icon stakeholder-journey" style="background: linear-gradient(135deg, #ede9fe, #ddd6fe);">🎭</div>
-              <div class="module-info">
-                <div class="module-name">Presentasjonsmodus</div>
-                <div class="module-desc">Interessentreise visualisering</div>
-              </div>
-            </a>
-
-            <a href="barekraftsrapport-overview.html" class="module-item" data-module="barekraftsrapport-overview">
-              <div class="module-icon barekraftsrapport-overview" style="background: linear-gradient(135deg, #dcfce7, #bbf7d0);">📋</div>
-              <div class="module-info">
-                <div class="module-name">Bærekraftsrapport Oversikt</div>
-                <div class="module-desc">Gap-analyse og iterasjonsstatus</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="barekraftsrapport-2.html" class="module-item" data-module="barekraftsrapport-2">
-              <div class="module-icon barekraftsrapport-2" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">📝</div>
-              <div class="module-info">
-                <div class="module-name">Bærekraftsrapport Arbeidsrom</div>
-                <div class="module-desc">Rediger nye sider (84-97)</div>
-              </div>
-            </a>
-
-            <a href="slides-library.html" class="module-item" data-module="slides-library">
-              <div class="module-icon slides-library" style="background: linear-gradient(135deg, #f0abfc, #e879f9);">🎨</div>
-              <div class="module-info">
-                <div class="module-name">Slide-bibliotek</div>
-                <div class="module-desc">Standalone argumentasjons-slides</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="visual-stories.html" class="module-item featured" data-module="visual-stories">
-              <div class="module-icon visual-stories" style="background: linear-gradient(135deg, #111, #333);">✦</div>
-              <div class="module-info">
-                <div class="module-name">Visuelle historier</div>
-                <div class="module-desc">Minimalistisk storytelling</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="text-library.html" class="module-item" data-module="text-library">
-              <div class="module-icon text-library" style="background: linear-gradient(135deg, #fef3c7, #fbbf24);">✍️</div>
-              <div class="module-info">
-                <div class="module-name">Tekstbibliotek</div>
-                <div class="module-desc">Tekster i ulike stemmer og toner</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="timelines.html" class="module-item" data-module="timelines">
-              <div class="module-icon timelines" style="background: linear-gradient(135deg, #dbeafe, #93c5fd);">📈</div>
-              <div class="module-info">
-                <div class="module-name">Tidslinjebibliotek</div>
-                <div class="module-desc">Alle prosjekttidslinjer samlet</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="ncc-partnership.html" class="module-item featured" data-module="ncc-partnership">
-              <div class="module-icon ncc" style="background: linear-gradient(135deg, #0066cc, #004d99);">🔄</div>
-              <div class="module-info">
-                <div class="module-name">NCC Partnership</div>
-                <div class="module-desc">Nordic Circle × Hovfaret 13</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="place-economy.html" class="module-item featured" data-module="place-economy">
-              <div class="module-icon economy" style="background: linear-gradient(135deg, #166534, #064e3b);">📊</div>
-              <div class="module-info">
-                <div class="module-name">Stedsøkonomi</div>
-                <div class="module-desc">Økonomisk verdimodell</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="participation.html" class="module-item featured" data-module="participation">
-              <div class="module-icon participation" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);">👥</div>
-              <div class="module-info">
-                <div class="module-name">Medvirkning</div>
-                <div class="module-desc">Deltakelse og dialogprosesser</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="status-december-2025-complete.html" class="module-item featured" data-module="status-dec-2025">
-              <div class="module-icon status" style="background: linear-gradient(135deg, #0f172a, #1e293b);">📊</div>
-              <div class="module-info">
-                <div class="module-name">Status Desember 2025</div>
-                <div class="module-desc">Komplett status med 4 designvarianter</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="market-insight.html" class="module-item featured" data-module="market-insight">
-              <div class="module-icon market" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">📈</div>
-              <div class="module-info">
-                <div class="module-name">Markedsinnsikt</div>
-                <div class="module-desc">Demografi, behov og posisjonering</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="omsorg-plus.html" class="module-item featured" data-module="omsorg-plus">
-              <div class="module-icon omsorg" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);">🏠</div>
-              <div class="module-info">
-                <div class="module-name">Omsorg+</div>
-                <div class="module-desc">73 eldreboliger, tekster og prosess</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="utleie.html" class="module-item featured" data-module="utleie">
-              <div class="module-icon utleie" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">🏢</div>
-              <div class="module-info">
-                <div class="module-name">Utleie</div>
-                <div class="module-desc">Lokaler til leie i Hovfaret 13</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-
-            <a href="communication-strategy.html" class="module-item featured" data-module="communication-strategy">
-              <div class="module-icon comm" style="background: linear-gradient(135deg, #1e3a5f, #2563eb);">📣</div>
-              <div class="module-info">
-                <div class="module-name">Kommunikasjonsstrategi</div>
-                <div class="module-desc">Formidling, kanaler og målgrupper</div>
-              </div>
-              <span class="module-badge new">NY</span>
-            </a>
-          </div>
-        </div>
-      </aside>
-
-      <!-- Right Panel: Detail View -->
-      <section class="detail-panel" id="detail-panel">
-        <div class="detail-empty">
-          <div class="detail-empty-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <h3>Hovfaret 13 Prosjektdatabase</h3>
-          <p>Hold over en modul for å se forhåndsvisning, eller klikk for å åpne</p>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script>
-    // Module data for preview
-    const moduleData = {
-      'command-center': {
-        icon: '🎯',
-        title: 'Command Center',
-        description: 'Komplett oversikt over prosjektets diskusjoner, beslutninger, prosesser og status. Master dashboard som knytter sammen alle prosjektressurser.',
-        stats: [
-          { value: '70', label: 'Møter' },
-          { value: '108', label: 'Beslutninger' },
-          { value: '119', label: 'Handlinger' }
-        ],
-        features: [
-          'Hva har skjedd / Hva skjer nå / Hva skal skje',
-          'Prosjektfaser med fremdrift',
-          'Kategoriserte temaer og diskusjoner',
-          'Siste beslutninger og handlingspunkter',
-          'Kobling til alle prosjektressurser'
-        ],
-        href: 'command-center.html'
-      },
-      timeline: {
-        icon: '📅',
-        title: 'Prosjekttidslinje',
-        description: 'Interaktiv tidslinje som viser prosjektets utvikling fra 2023 til 2025. Inkluderer strategiske milepæler, operasjonelle hendelser, og koblinger til møter og dokumenter.',
-        stats: [
-          { value: '32', label: 'Hendelser' },
-          { value: '2', label: 'Lag' },
-          { value: '16', label: 'Måneder' }
-        ],
-        features: [
-          'Strategisk oversikt med hovedmilepæler',
-          'Operasjonell tidslinje med alle hendelser',
-          'Kobling til møter og dokumenter',
-          'Filtrering og søk'
-        ],
-        href: 'timeline.html'
-      },
-      meetings: {
-        icon: '📋',
-        title: 'Møteoversikt',
-        description: 'Komplett database over alle prosjektmøter med detaljerte rapporter, deltakerlister, beslutninger og handlingspunkter. Integrert med Google Kalender.',
-        stats: [
-          { value: '70', label: 'Møter' },
-          { value: '22', label: 'Deltakere' },
-          { value: '13', label: 'Organisasjoner' }
-        ],
-        features: [
-          'Fullstendige møterapporter',
-          'Søk og filtrering',
-          'Google Kalender-integrasjon',
-          'Deltaker- og organisasjonsoversikt'
-        ],
-        href: 'meetings.html'
-      },
-      stakeholders: {
-        icon: '👥',
-        title: 'Interessentnettverk',
-        description: 'Oversikt over alle personer og organisasjoner involvert i prosjektet. Se roller, kontaktinformasjon og prosjektdeltakelse.',
-        stats: [
-          { value: '30', label: 'Personer' },
-          { value: '11', label: 'Organisasjoner' },
-          { value: '5', label: 'Kategorier' }
-        ],
-        features: [
-          'Personprofiler med roller',
-          'Organisasjonsoversikt',
-          'Nettverksvisualisering',
-          'Kontaktinformasjon'
-        ],
-        href: 'stakeholders.html'
-      },
-      scenarios: {
-        icon: '♻️',
-        title: 'Scenariosammenligning',
-        description: 'Sammenligning av tre utviklingsscenarier for Hovfaret 13. Detaljert CO₂-analyse, materialutslipp og energiforbruk.',
-        stats: [
-          { value: '3', label: 'Scenarier' },
-          { value: '-48%', label: 'CO₂ spart' },
-          { value: '-80%', label: 'Materiale' }
-        ],
-        features: [
-          'Riving vs rehabilitering',
-          'CO₂-beregninger',
-          'Materialanalyse',
-          'Omsorg+ konsept'
-        ],
-        href: 'scenarios.html'
-      },
-      documents: {
-        icon: '📄',
-        title: 'Dokumentutforsker',
-        description: 'Søkbar database over alle prosjektdokumenter. Kategorisert etter type, dato og relevans.',
-        stats: [
-          { value: '271', label: 'Dokumenter' },
-          { value: '8', label: 'Kategorier' },
-          { value: '458', label: 'Ekstrahert' }
-        ],
-        features: [
-          'Kategorisert dokumentbibliotek',
-          'Fulltekstsøk',
-          'Dokumentforhåndsvisning',
-          'Nedlastingsmuligheter'
-        ],
-        href: 'documents.html'
-      },
-      sustainability: {
-        icon: '🌱',
-        title: 'Bærekraft',
-        description: 'Komplett bærekraftsside med LCA-modeller, sirkulær økonomi, scenariosammenligning og dyptgående tekster.',
-        stats: [
-          { value: '48%', label: 'CO₂-reduksjon' },
-          { value: '2 549 t', label: 'CO₂ spart' },
-          { value: '8+', label: 'Tekstvarianter' }
-        ],
-        features: [
-          'LCA-modell visualisert (A1-C4)',
-          'Sirkulær økonomi (85% bevart)',
-          'Scenariosammenligning (3 alternativer)',
-          '8+ bærekraftstekster med kopiering',
-          'Nordic Circle Hotspot'
-        ],
-        href: 'sustainability-complete.html'
-      },
-      analytics: {
-        icon: '📊',
-        title: 'Avansert Analyse',
-        description: 'Statistikk og innsikt på tvers av prosjektdata. Trender, mønstre og nøkkeltall.',
-        stats: [
-          { value: '16', label: 'Måneder' },
-          { value: '70', label: 'Møter' },
-          { value: '271', label: 'Dokumenter' }
-        ],
-        features: [
-          'Aktivitetstrender',
-          'Møtestatistikk',
-          'Dokumentanalyse',
-          'Prosjektinnsikt'
-        ],
-        href: 'analytics.html'
-      },
-      overview: {
-        icon: '🏠',
-        title: 'Prosjektoversikt',
-        description: 'Helhetlig oversikt over Hovfaret 13-prosjektet med nøkkeltall og status.',
-        stats: [
-          { value: '5', label: 'Etasjer' },
-          { value: '1989', label: 'Byggeår' },
-          { value: 'Skøyen', label: 'Beliggenhet' }
-        ],
-        features: [
-          'Prosjektstatus',
-          'Nøkkeltall',
-          'Fremdriftsoversikt',
-          'Milepæler'
-        ],
-        href: 'overview.html'
-      },
-      deliverables: {
-        icon: '📋',
-        title: 'Leveranser',
-        description: 'Oversikt over alle prosjektleveranser med status, ansvarlige og tidslinjer.',
-        stats: [
-          { value: '75', label: 'Leveranser' },
-          { value: '48', label: 'Fullført' },
-          { value: '6', label: 'Pågår' }
-        ],
-        features: [
-          'Kategoriserte leveranser',
-          'Statussporing',
-          'Ansvarlige personer',
-          'Tidslinje og frister'
-        ],
-        href: 'deliverables.html'
-      },
-      regulatory: {
-        icon: '⚖️',
-        title: 'Regulatorisk Status',
-        description: 'Komplett oversikt over søknadsprosessen, regelverksforutsetninger og strategi for Hovfaret 13.',
-        stats: [
-          { value: '1', label: 'Fullført' },
-          { value: '1', label: 'Pågår' },
-          { value: '2', label: 'Planlagt' }
-        ],
-        features: [
-          'Søknadstidslinje',
-          'Reguleringsplanstatus',
-          'Juridiske argumenter',
-          'Interessentoversikt'
-        ],
-        href: 'regulatory-status.html'
-      },
-      konseptskisse: {
-        icon: '📑',
-        title: 'Konseptskisse 1.0',
-        description: 'Original konseptpresentasjon for Hovfaret 13 transformasjonsprosjekt. Dokumenterer visjonen for Omsorg+ eldreboliger.',
-        stats: [
-          { value: '73', label: 'Boliger' },
-          { value: '8', label: 'Etasjer' },
-          { value: '2025', label: 'Ferdig' }
-        ],
-        features: [
-          'Prosjektvisjon og konsept',
-          'Arkitektoniske tegninger',
-          'Bærekraftsargumentasjon',
-          'Omsorg+ programbeskrivelse'
-        ],
-        href: 'konseptskisse.html'
-      },
-      konseptskisse2: {
-        icon: '📘',
-        title: 'Konseptskisse 2.0',
-        description: 'Oppdatert presentasjon med nyeste data, strategisk skifte til Omsorg+, og ferske bærekraftsberegninger.',
-        stats: [
-          { value: '48%', label: 'CO₂-reduksjon' },
-          { value: '16', label: 'Slides' },
-          { value: '207%', label: 'ROI rehab' },
-          { value: '2027', label: 'Ferdigstillelse' }
-        ],
-        features: [
-          'Strategisk skifte dokumentert',
-          'Oppdaterte klimaberegninger',
-          'Bydelsdialog og støtte',
-          'Nabovarsel og søknadsstatus'
-        ],
-        href: 'konseptskisse-2.html'
-      },
-      konseptskisse3: {
-        icon: '📗',
-        title: 'Konseptskisse 3.0',
-        description: 'Fullstendig 16-slides presentasjon med pedagogisk oppbygging. Fra kontorbygg til 73 Omsorg+-enheter.',
-        stats: [
-          { value: '73', label: 'Omsorg+ enheter' },
-          { value: '48%', label: 'CO₂-besparelse' },
-          { value: '207%', label: 'ROI rehab' },
-          { value: '16', label: 'Slides' }
-        ],
-        features: [
-          'Pedagogisk strukturert presentasjon',
-          'Scenariosammenligning med tall',
-          'Etasjeprogram og leilighetstyper',
-          'Sirkulære strategier og SMART-mål',
-          'Faseplan og milepæler'
-        ],
-        href: 'konseptskisse-3.html'
-      },
-      'sustainability-report': {
-        icon: '📊',
-        title: 'Bærekraftsrapport Viewer',
-        description: '83-siders komplett bærekraftsrapport med navigering, kapitteloversikt og eksporterte data.',
-        stats: [
-          { value: '83', label: 'Sider' },
-          { value: '10', label: 'Kapitler' },
-          { value: 'Jul 2025', label: 'Ferdig' }
-        ],
-        features: [
-          'Full rapport med navigasjon',
-          'Kapittelbasert lesing',
-          'Klimagassberegninger',
-          'ESRS-rapportering'
-        ],
-        href: 'sustainability-report.html'
-      },
-      'stakeholder-journey': {
-        icon: '🎭',
-        title: 'Presentasjonsmodus',
-        description: 'Interaktiv visualisering av interessentreisen gjennom prosjektet. Perfekt for presentasjoner.',
-        stats: [
-          { value: '22', label: 'Personer' },
-          { value: '13', label: 'Organisasjoner' },
-          { value: '70', label: 'Møter' }
-        ],
-        features: [
-          'Visuell tidslinje',
-          'Interessentkart',
-          'Presentasjonsmodus',
-          'Animert navigasjon'
-        ],
-        href: 'stakeholder-journey.html'
-      },
-      'text-library': {
-        icon: '✍️',
-        title: 'Tekstbibliotek',
-        description: 'Ferdigskrevne tekster i ulike stemmer og toner. Fra formelle søknadstekster til poetiske narrativer og sosiale medier.',
-        stats: [
-          { value: '6', label: 'Kategorier' },
-          { value: '20+', label: 'Tekster' },
-          { value: '∞', label: 'Bruksområder' }
-        ],
-        features: [
-          'Formelle søknadstekster',
-          'Konverserende nettsideTekst',
-          'Poetiske presentasjoner',
-          'Pressemeldinger og SoMe',
-          'Kopiering med ett klikk'
-        ],
-        href: 'text-library.html'
-      },
-      'timelines': {
-        icon: '📈',
-        title: 'Tidslinjebibliotek',
-        description: 'Alle prosjekttidslinjer samlet på ett sted. Fra komplett historikk til formålsspesifikke uttak for presentasjoner og søknader.',
-        stats: [
-          { value: '9', label: 'Tidslinjer' },
-          { value: '32', label: 'Hendelser' },
-          { value: '1989-2025', label: 'Periode' }
-        ],
-        features: [
-          'Hoveddashboard med full historikk',
-          'Interessentreise-tidslinje',
-          'Visuelle storytelling-uttak',
-          'Søknadsspesifikke tidslinjer',
-          'Innebygde mini-tidslinjer'
-        ],
-        href: 'timelines.html'
-      },
-      'ncc-partnership': {
-        icon: '🔄',
-        title: 'NCC Partnership',
-        description: 'Hovfaret 13 som pilotkunde for Nordic Circle Hotspot. Living laboratory for sirkulære byggematerialer og løsninger.',
-        stats: [
-          { value: '2024', label: 'Etablert' },
-          { value: '48%', label: 'CO₂-kutt' },
-          { value: '80%', label: 'Materialsparing' }
-        ],
-        features: [
-          'Nordic Circle Construction',
-          'Sirkulære byggematerialer',
-          'Living laboratory konsept',
-          'Nordic Innovation søknad',
-          'Presentasjonsmateriell'
-        ],
-        href: 'ncc-partnership.html'
-      },
-      'place-economy': {
-        icon: '📊',
-        title: 'Stedsøkonomi',
-        description: 'Stedsøkonomisk prognose for Hovfaret 13. Inntektspotensial og finansieringsmodell for transformasjon.',
-        stats: [
-          { value: '12,4 M', label: 'Årlig inntekt' },
-          { value: '247 M', label: '20-års verdi' },
-          { value: '+56%', label: 'Økt m²-pris' }
-        ],
-        features: [
-          'Alt 1: Næring/Studiokontor',
-          'Alt 3: Omsorg+ økonomikk',
-          'Arealregnskap og priser',
-          'Husbanken-finansiering',
-          'Presentasjonsmateriell'
-        ],
-        href: 'place-economy.html'
-      },
-      'participation': {
-        icon: '👥',
-        title: 'Medvirkning',
-        description: 'Dokumentasjon av medvirkningsprosesser. Tekstuttak for konseptskisse og presentasjoner.',
-        stats: [
-          { value: '30', label: 'Deltakere' },
-          { value: '4', label: 'Prosesser' },
-          { value: '3', label: 'Tekstvarianter' }
-        ],
-        features: [
-          'Nabolagsmøte 14. oktober',
-          'Bydelsdialog dokumentasjon',
-          'Leietakerdialog oversikt',
-          'Politisk dialog',
-          'Kopierbare tekster for konseptskisse'
-        ],
-        href: 'participation.html'
-      },
-      'status-dec-2025': {
-        icon: '📊',
-        title: 'Status Desember 2025',
-        description: 'Komplett statusoversikt med 4 designvarianter, interessentanalyse og dyptgående tekster.',
-        stats: [
-          { value: '4', label: 'Designvarianter' },
-          { value: '20', label: 'Måneder' },
-          { value: '10+', label: 'Tekster' }
-        ],
-        features: [
-          '6 interessent-betydninger',
-          '6 dyptgående tekster',
-          '9 overskrifter med kopiering',
-          '4 designvarianter (komplett, lys, minimal, mørk)',
-          'Nøkkelbudskap per målgruppe'
-        ],
-        href: 'status-december-2025-complete.html'
-      },
-      'market-insight': {
-        icon: '📈',
-        title: 'Markedsinnsikt',
-        description: 'Demografi, boligbehov og posisjonering i Bydel Ullern. Tekster og slides for konseptskisse.',
-        stats: [
-          { value: '35k', label: 'Innbyggere' },
-          { value: '18%', label: 'Over 67 år' },
-          { value: '8', label: 'Tekstvarianter' }
-        ],
-        features: [
-          'Demografisk analyse',
-          'Bydelens egne sitater',
-          'Konkurranseanalyse (13 Omsorg+)',
-          '6 presentasjonsslides',
-          '8 tekster for konseptskisse'
-        ],
-        href: 'market-insight.html'
-      },
-      'omsorg-plus': {
-        icon: '🏠',
-        title: 'Omsorg+',
-        description: 'Omfattende side om Omsorg+-konseptet: 73 enheter, sitater fra bydelen, tekster og prosess.',
-        stats: [
-          { value: '73', label: 'Enheter' },
-          { value: '8', label: 'Tekstvarianter' },
-          { value: '12/12', label: 'Husbanken-krav' }
-        ],
-        features: [
-          'Sitater fra bydelsledere',
-          '8 kopierbare tekster',
-          'Leilighetstyper og areal',
-          'Tidslinje for prosessen',
-          'Betydning for lokalsamfunnet'
-        ],
-        href: 'omsorg-plus.html'
-      },
-      'utleie': {
-        icon: '🏢',
-        title: 'Utleie',
-        description: 'Oversikt over tilgjengelige lokaler i Hovfaret 13: kontor, arrangement og næring på Skøyen.',
-        stats: [
-          { value: '280', label: 'm² kontor' },
-          { value: '4', label: 'Lokaler' },
-          { value: '500m', label: 'til Skøyen st.' }
-        ],
-        features: [
-          'Kontorlokale 3. etg (280 m²)',
-          'Arrangementslokale (20-100 pers)',
-          'Næringslokale 1. etasje',
-          'Plantegning og romfordeling',
-          'FINN-annonse klar til publisering'
-        ],
-        href: 'utleie.html'
-      },
-      'communication-strategy': {
-        icon: '📣',
-        title: 'Kommunikasjonsstrategi',
-        description: 'Komplett kommunikasjonsstrategi basert på Natural State metodikk. Målgrupper, kanaler og budskap.',
-        stats: [
-          { value: '4', label: 'Målgrupper' },
-          { value: '11', label: 'Leveranser' },
-          { value: '3', label: 'Faser' }
-        ],
-        features: [
-          'Stedsidentitetsmodell',
-          'Målgrupper og nøkkelbudskap',
-          'Kommunikasjonskanaler',
-          'Trinnvise faser',
-          'Tekstforslag for konseptskisse'
-        ],
-        href: 'communication-strategy.html'
-      },
-      'natur-miljo': {
-        icon: '🌿',
-        title: 'Natur & Miljø',
-        description: 'Konsekvensutredning for natur og miljø. Skyggeanalyse, Hoffselva-økologi, geoteknikk og sammenligning rehabilitering vs. riving.',
-        stats: [
-          { value: '6', label: 'Seksjoner' },
-          { value: '1', label: 'Bekk' },
-          { value: '48%', label: 'CO₂-spart' }
-        ],
-        features: [
-          'Skyggeanalyse med årstid/tid-velger',
-          'Hoffselva og ørretliv',
-          'Biologkonsultasjon (planlagt)',
-          'Geoteknikk og utglidningsrisiko',
-          'Rehabilitering vs. riving sammenligning',
-          'Skoletomten-dokumentasjon'
-        ],
-        href: 'natur-miljo.html'
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Hovfaret 13 Dashboard - Prosjektoversikt for transformasjon av kontorbygg til Omsorg+ boliger i Oslo"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';"
+    />
+    <title>Hovfaret 13 - Prosjektdatabase</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Prefetch commonly navigated pages for instant navigation -->
+    <link rel="prefetch" href="command-center.html" />
+    <link rel="prefetch" href="meetings.html" />
+    <link rel="prefetch" href="timeline.html" />
+    <link rel="prefetch" href="stakeholders.html" />
+    <link rel="prefetch" href="lib/data-loader.js" />
+
+    <!-- Font with display=swap to prevent render blocking -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      /* ===== RESET & BASE ===== */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    };
 
-    // Render detail view
-    function renderDetail(moduleId) {
-      const data = moduleData[moduleId];
-      if (!data) return;
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-hover: #f1f5f9;
+        --bg-selected: #eff6ff;
+        --bg-accent: #dbeafe;
 
-      const panel = document.getElementById('detail-panel');
-      panel.innerHTML = `
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --text-accent: #2563eb;
+
+        --border-light: #e2e8f0;
+        --border-medium: #cbd5e1;
+
+        --success: #22c55e;
+        --warning: #f59e0b;
+        --info: #3b82f6;
+
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        --shadow-lg:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+
+        --radius-sm: 6px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.5;
+        font-size: 14px;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* ===== LAYOUT ===== */
+      .app-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      /* Header */
+      .app-header {
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-light);
+        padding: var(--space-4) var(--space-6);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+
+      .logo-icon {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, var(--text-accent), #7c3aed);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+
+      .header-stats {
+        display: flex;
+        gap: var(--space-6);
+      }
+
+      .stat {
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-accent);
+      }
+
+      .stat-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Main Content */
+      .main-content {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      /* ===== LEFT PANEL - MODULE LIST ===== */
+      .list-panel {
+        width: 380px;
+        min-width: 380px;
+        background: var(--bg-card);
+        border-right: 1px solid var(--border-light);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .list-header {
+        padding: var(--space-4);
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .list-title {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-1);
+      }
+
+      .list-subtitle {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .module-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: var(--space-2);
+      }
+
+      .module-group {
+        margin-bottom: var(--space-4);
+      }
+
+      .group-header {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-2) var(--space-3);
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .module-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-3) var(--space-4);
+        margin: var(--space-1) 0;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        transition: all 0.15s;
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .module-item:hover {
+        background: var(--bg-hover);
+      }
+
+      .module-item.selected {
+        background: var(--bg-selected);
+        border-color: var(--text-accent);
+      }
+
+      .module-item.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .module-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      .module-icon.timeline {
+        background: #dbeafe;
+      }
+      .module-icon.meetings {
+        background: #dcfce7;
+      }
+      .module-icon.stakeholders {
+        background: #fce7f3;
+      }
+      .module-icon.scenarios {
+        background: #fef3c7;
+      }
+      .module-icon.documents {
+        background: #e0e7ff;
+      }
+      .module-icon.sustainability {
+        background: #d1fae5;
+      }
+      .module-icon.analytics {
+        background: #ede9fe;
+      }
+      .module-icon.overview {
+        background: #f1f5f9;
+      }
+      .module-icon.story {
+        background: linear-gradient(135deg, #fef3c7, #fde68a);
+      }
+
+      .module-info {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .module-name {
+        font-weight: 500;
+        color: var(--text-primary);
+        margin-bottom: 2px;
+      }
+
+      .module-desc {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .module-badge {
+        font-size: 0.65rem;
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-weight: 500;
+        flex-shrink: 0;
+      }
+
+      .module-badge.count {
+        background: var(--bg-main);
+        color: var(--text-secondary);
+        border: 1px solid var(--border-light);
+      }
+
+      .module-badge.new {
+        background: #dcfce7;
+        color: #166534;
+      }
+
+      .module-item.featured {
+        background: linear-gradient(
+          135deg,
+          var(--bg-accent) 0%,
+          var(--bg-card) 100%
+        );
+        border: 2px solid var(--text-accent);
+      }
+
+      .module-item.featured:hover {
+        background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+      }
+
+      .module-icon.command-center {
+        background: linear-gradient(135deg, var(--text-accent), #7c3aed);
+        color: white;
+      }
+
+      /* ===== RIGHT PANEL - DETAIL VIEW ===== */
+      .detail-panel {
+        flex: 1;
+        overflow-y: auto;
+        background: var(--bg-main);
+      }
+
+      .detail-empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: var(--text-muted);
+        text-align: center;
+        padding: var(--space-8);
+      }
+
+      .detail-empty-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--bg-card);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: var(--space-4);
+        border: 1px solid var(--border-light);
+      }
+
+      .detail-empty h3 {
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+        margin-bottom: var(--space-2);
+      }
+
+      .detail-empty p {
+        font-size: 0.875rem;
+      }
+
+      /* Detail Content */
+      .detail-content {
+        padding: var(--space-6);
+      }
+
+      .detail-header {
+        margin-bottom: var(--space-6);
+      }
+
+      .detail-icon {
+        font-size: 3rem;
+        margin-bottom: var(--space-4);
+      }
+
+      .detail-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-2);
+      }
+
+      .detail-description {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: var(--space-4);
+      }
+
+      .detail-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: var(--space-4);
+        margin-bottom: var(--space-6);
+      }
+
+      .detail-stat {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-md);
+        padding: var(--space-4);
+        text-align: center;
+      }
+
+      .detail-stat-value {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-accent);
+      }
+
+      .detail-stat-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .detail-actions {
+        display: flex;
+        gap: var(--space-3);
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-3) var(--space-5);
+        background: var(--text-accent);
+        color: white;
+        border: none;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.15s;
+        text-decoration: none;
+      }
+
+      .btn-primary:hover {
+        background: #1d4ed8;
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-3) var(--space-5);
+        background: var(--bg-card);
+        color: var(--text-secondary);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.15s;
+        text-decoration: none;
+      }
+
+      .btn-secondary:hover {
+        background: var(--bg-hover);
+        border-color: var(--border-medium);
+      }
+
+      /* Features List */
+      .features-section {
+        margin-top: var(--space-6);
+      }
+
+      .features-title {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-3);
+      }
+
+      .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-3);
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-sm);
+      }
+
+      .feature-icon {
+        color: var(--success);
+      }
+
+      .feature-text {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      /* Footer in detail */
+      .detail-footer {
+        margin-top: var(--space-8);
+        padding-top: var(--space-4);
+        border-top: 1px solid var(--border-light);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="logo">
+            <div class="logo-icon">H13</div>
+            <span>Hovfaret 13</span>
+          </div>
+        </div>
+        <div class="header-stats">
+          <div class="stat">
+            <div class="stat-value" id="stat-meetings">70</div>
+            <div class="stat-label">Møter</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="stat-documents">271</div>
+            <div class="stat-label">Dokumenter</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="stat-stakeholders">35</div>
+            <div class="stat-label">Interessenter</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Left Panel: Module List -->
+        <aside class="list-panel">
+          <div class="list-header">
+            <div class="list-title">Prosjektmoduler</div>
+            <div class="list-subtitle">Velg en modul for å se detaljer</div>
+          </div>
+
+          <div class="module-list">
+            <!-- Command Center -->
+            <div class="module-group">
+              <div class="group-header">Master Dashboard</div>
+
+              <a
+                href="command-center.html"
+                class="module-item featured"
+                data-module="command-center"
+              >
+                <div class="module-icon command-center">🎯</div>
+                <div class="module-info">
+                  <div class="module-name">Command Center</div>
+                  <div class="module-desc">Komplett prosjektoversikt</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="project-story.html"
+                class="module-item featured"
+                data-module="project-story"
+              >
+                <div class="module-icon story">📖</div>
+                <div class="module-info">
+                  <div class="module-name">Prosjekthistorie</div>
+                  <div class="module-desc">
+                    Komplett dokumentasjon av prosjektet
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+            </div>
+
+            <!-- Primary Modules -->
+            <div class="module-group">
+              <div class="group-header">Hovedmoduler</div>
+
+              <a
+                href="timeline.html"
+                class="module-item"
+                data-module="timeline"
+              >
+                <div class="module-icon timeline">🏛️</div>
+                <div class="module-info">
+                  <div class="module-name">Prosjekthistorikk</div>
+                  <div class="module-desc">
+                    Komplett tidslinje fra 1989 til i dag
+                  </div>
+                </div>
+                <span class="module-badge count">32</span>
+              </a>
+
+              <a
+                href="meetings.html"
+                class="module-item"
+                data-module="meetings"
+              >
+                <div class="module-icon meetings">📋</div>
+                <div class="module-info">
+                  <div class="module-name">Møteoversikt</div>
+                  <div class="module-desc">Søkbar database med rapporter</div>
+                </div>
+                <span class="module-badge count">70</span>
+              </a>
+
+              <a
+                href="stakeholders.html"
+                class="module-item"
+                data-module="stakeholders"
+              >
+                <div class="module-icon stakeholders">👥</div>
+                <div class="module-info">
+                  <div class="module-name">Interessentnettverk</div>
+                  <div class="module-desc">Personer og organisasjoner</div>
+                </div>
+                <span class="module-badge count">30</span>
+              </a>
+
+              <a
+                href="scenarios.html"
+                class="module-item"
+                data-module="scenarios"
+              >
+                <div class="module-icon scenarios">♻️</div>
+                <div class="module-info">
+                  <div class="module-name">Scenariosammenligning</div>
+                  <div class="module-desc">CO₂-analyse og alternativer</div>
+                </div>
+                <span class="module-badge count">3</span>
+              </a>
+            </div>
+
+            <!-- Secondary Modules -->
+            <div class="module-group">
+              <div class="group-header">Analyse & Dokumentasjon</div>
+
+              <a
+                href="documents.html"
+                class="module-item"
+                data-module="documents"
+              >
+                <div class="module-icon documents">📄</div>
+                <div class="module-info">
+                  <div class="module-name">Dokumentutforsker</div>
+                  <div class="module-desc">Alle prosjektdokumenter</div>
+                </div>
+                <span class="module-badge count">271</span>
+              </a>
+
+              <a
+                href="sustainability-complete.html"
+                class="module-item featured"
+                data-module="sustainability"
+              >
+                <div
+                  class="module-icon sustainability"
+                  style="background: linear-gradient(135deg, #166534, #22c55e)"
+                >
+                  🌱
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Bærekraft</div>
+                  <div class="module-desc">
+                    LCA-modeller, tekster og klimadata
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="analytics.html"
+                class="module-item"
+                data-module="analytics"
+              >
+                <div class="module-icon analytics">📊</div>
+                <div class="module-info">
+                  <div class="module-name">Avansert Analyse</div>
+                  <div class="module-desc">Statistikk og innsikt</div>
+                </div>
+              </a>
+
+              <a
+                href="overview.html"
+                class="module-item"
+                data-module="overview"
+              >
+                <div class="module-icon overview">🏠</div>
+                <div class="module-info">
+                  <div class="module-name">Prosjektoversikt</div>
+                  <div class="module-desc">Helhetlig prosjektstatus</div>
+                </div>
+              </a>
+
+              <a
+                href="deliverables.html"
+                class="module-item"
+                data-module="deliverables"
+              >
+                <div class="module-icon deliverables">📋</div>
+                <div class="module-info">
+                  <div class="module-name">Leveranser</div>
+                  <div class="module-desc">Prosjektleveranser og status</div>
+                </div>
+                <span class="module-badge count">75</span>
+              </a>
+
+              <a
+                href="regulatory-status.html"
+                class="module-item"
+                data-module="regulatory"
+              >
+                <div class="module-icon regulatory">⚖️</div>
+                <div class="module-info">
+                  <div class="module-name">Regulatorisk Status</div>
+                  <div class="module-desc">Søknadsprosess og regelverk</div>
+                </div>
+              </a>
+
+              <a
+                href="natur-miljo.html"
+                class="module-item featured"
+                data-module="natur-miljo"
+              >
+                <div
+                  class="module-icon natur-miljo"
+                  style="background: linear-gradient(135deg, #166534, #15803d)"
+                >
+                  🌿
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Natur & Miljø</div>
+                  <div class="module-desc">Konsekvensutredning og økologi</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="miljo-argumenter.html"
+                class="module-item featured"
+                data-module="miljo-argumenter"
+              >
+                <div
+                  class="module-icon miljo-argumenter"
+                  style="background: linear-gradient(135deg, #059669, #10b981)"
+                >
+                  🎯
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Miljøargumentasjon</div>
+                  <div class="module-desc">Søkbar argumentasjonsbase</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+            </div>
+
+            <!-- Presentasjoner -->
+            <div class="module-group">
+              <div class="group-header">Presentasjoner</div>
+
+              <a
+                href="konseptskisse.html"
+                class="module-item"
+                data-module="konseptskisse"
+              >
+                <div
+                  class="module-icon konseptskisse"
+                  style="background: linear-gradient(135deg, #fef3c7, #fde68a)"
+                >
+                  📑
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Konseptskisse 1.0</div>
+                  <div class="module-desc">Original konseptpresentasjon</div>
+                </div>
+              </a>
+
+              <a
+                href="konseptskisse-2.html"
+                class="module-item"
+                data-module="konseptskisse2"
+              >
+                <div
+                  class="module-icon konseptskisse2"
+                  style="background: linear-gradient(135deg, #dbeafe, #bfdbfe)"
+                >
+                  📘
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Konseptskisse 2.0</div>
+                  <div class="module-desc">Oppdatert presentasjon des 2025</div>
+                </div>
+              </a>
+
+              <a
+                href="konseptskisse-3.html"
+                class="module-item"
+                data-module="konseptskisse3"
+              >
+                <div
+                  class="module-icon konseptskisse3"
+                  style="background: linear-gradient(135deg, #d1fae5, #a7f3d0)"
+                >
+                  📗
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Konseptskisse 3.0</div>
+                  <div class="module-desc">
+                    16 slides — fullstendig presentasjon
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="sustainability-report.html"
+                class="module-item"
+                data-module="sustainability-report"
+              >
+                <div
+                  class="module-icon sustainability-report"
+                  style="background: linear-gradient(135deg, #d1fae5, #a7f3d0)"
+                >
+                  📊
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Bærekraftsrapport Viewer</div>
+                  <div class="module-desc">
+                    83-siders rapport med navigasjon
+                  </div>
+                </div>
+                <span class="module-badge count">83</span>
+              </a>
+
+              <a
+                href="stakeholder-journey.html"
+                class="module-item"
+                data-module="stakeholder-journey"
+              >
+                <div
+                  class="module-icon stakeholder-journey"
+                  style="background: linear-gradient(135deg, #ede9fe, #ddd6fe)"
+                >
+                  🎭
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Presentasjonsmodus</div>
+                  <div class="module-desc">Interessentreise visualisering</div>
+                </div>
+              </a>
+
+              <a
+                href="barekraftsrapport-overview.html"
+                class="module-item"
+                data-module="barekraftsrapport-overview"
+              >
+                <div
+                  class="module-icon barekraftsrapport-overview"
+                  style="background: linear-gradient(135deg, #dcfce7, #bbf7d0)"
+                >
+                  📋
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Bærekraftsrapport Oversikt</div>
+                  <div class="module-desc">Gap-analyse og iterasjonsstatus</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="barekraftsrapport-2.html"
+                class="module-item"
+                data-module="barekraftsrapport-2"
+              >
+                <div
+                  class="module-icon barekraftsrapport-2"
+                  style="background: linear-gradient(135deg, #d1fae5, #a7f3d0)"
+                >
+                  📝
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Bærekraftsrapport Arbeidsrom</div>
+                  <div class="module-desc">Rediger nye sider (84-97)</div>
+                </div>
+              </a>
+
+              <a
+                href="slides-library.html"
+                class="module-item"
+                data-module="slides-library"
+              >
+                <div
+                  class="module-icon slides-library"
+                  style="background: linear-gradient(135deg, #f0abfc, #e879f9)"
+                >
+                  🎨
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Slide-bibliotek</div>
+                  <div class="module-desc">
+                    Standalone argumentasjons-slides
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="visual-stories.html"
+                class="module-item featured"
+                data-module="visual-stories"
+              >
+                <div
+                  class="module-icon visual-stories"
+                  style="background: linear-gradient(135deg, #111, #333)"
+                >
+                  ✦
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Visuelle historier</div>
+                  <div class="module-desc">Minimalistisk storytelling</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="text-library.html"
+                class="module-item"
+                data-module="text-library"
+              >
+                <div
+                  class="module-icon text-library"
+                  style="background: linear-gradient(135deg, #fef3c7, #fbbf24)"
+                >
+                  ✍️
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Tekstbibliotek</div>
+                  <div class="module-desc">
+                    Tekster i ulike stemmer og toner
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="timelines.html"
+                class="module-item"
+                data-module="timelines"
+              >
+                <div
+                  class="module-icon timelines"
+                  style="background: linear-gradient(135deg, #dbeafe, #93c5fd)"
+                >
+                  📈
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Tidslinjebibliotek</div>
+                  <div class="module-desc">Alle prosjekttidslinjer samlet</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="ncc-partnership.html"
+                class="module-item featured"
+                data-module="ncc-partnership"
+              >
+                <div
+                  class="module-icon ncc"
+                  style="background: linear-gradient(135deg, #0066cc, #004d99)"
+                >
+                  🔄
+                </div>
+                <div class="module-info">
+                  <div class="module-name">NCC Partnership</div>
+                  <div class="module-desc">Nordic Circle × Hovfaret 13</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="place-economy.html"
+                class="module-item featured"
+                data-module="place-economy"
+              >
+                <div
+                  class="module-icon economy"
+                  style="background: linear-gradient(135deg, #166534, #064e3b)"
+                >
+                  📊
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Stedsøkonomi</div>
+                  <div class="module-desc">Økonomisk verdimodell</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="participation.html"
+                class="module-item featured"
+                data-module="participation"
+              >
+                <div
+                  class="module-icon participation"
+                  style="background: linear-gradient(135deg, #7c3aed, #5b21b6)"
+                >
+                  👥
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Medvirkning</div>
+                  <div class="module-desc">Deltakelse og dialogprosesser</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="status-december-2025-complete.html"
+                class="module-item featured"
+                data-module="status-dec-2025"
+              >
+                <div
+                  class="module-icon status"
+                  style="background: linear-gradient(135deg, #0f172a, #1e293b)"
+                >
+                  📊
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Status Desember 2025</div>
+                  <div class="module-desc">
+                    Komplett status med 4 designvarianter
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="market-insight.html"
+                class="module-item featured"
+                data-module="market-insight"
+              >
+                <div
+                  class="module-icon market"
+                  style="background: linear-gradient(135deg, #1e40af, #3b82f6)"
+                >
+                  📈
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Markedsinnsikt</div>
+                  <div class="module-desc">
+                    Demografi, behov og posisjonering
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="omsorg-plus.html"
+                class="module-item featured"
+                data-module="omsorg-plus"
+              >
+                <div
+                  class="module-icon omsorg"
+                  style="background: linear-gradient(135deg, #7c3aed, #5b21b6)"
+                >
+                  🏠
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Omsorg+</div>
+                  <div class="module-desc">
+                    73 eldreboliger, tekster og prosess
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="utleie.html"
+                class="module-item featured"
+                data-module="utleie"
+              >
+                <div
+                  class="module-icon utleie"
+                  style="background: linear-gradient(135deg, #1e40af, #3b82f6)"
+                >
+                  🏢
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Utleie</div>
+                  <div class="module-desc">Lokaler til leie i Hovfaret 13</div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+
+              <a
+                href="communication-strategy.html"
+                class="module-item featured"
+                data-module="communication-strategy"
+              >
+                <div
+                  class="module-icon comm"
+                  style="background: linear-gradient(135deg, #1e3a5f, #2563eb)"
+                >
+                  📣
+                </div>
+                <div class="module-info">
+                  <div class="module-name">Kommunikasjonsstrategi</div>
+                  <div class="module-desc">
+                    Formidling, kanaler og målgrupper
+                  </div>
+                </div>
+                <span class="module-badge new">NY</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Panel: Detail View -->
+        <section class="detail-panel" id="detail-panel">
+          <div class="detail-empty">
+            <div class="detail-empty-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <h3>Hovfaret 13 Prosjektdatabase</h3>
+            <p>
+              Hold over en modul for å se forhåndsvisning, eller klikk for å
+              åpne
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Module data for preview
+      const moduleData = {
+        "command-center": {
+          icon: "🎯",
+          title: "Command Center",
+          description:
+            "Komplett oversikt over prosjektets diskusjoner, beslutninger, prosesser og status. Master dashboard som knytter sammen alle prosjektressurser.",
+          stats: [
+            { value: "70", label: "Møter" },
+            { value: "108", label: "Beslutninger" },
+            { value: "119", label: "Handlinger" },
+          ],
+          features: [
+            "Hva har skjedd / Hva skjer nå / Hva skal skje",
+            "Prosjektfaser med fremdrift",
+            "Kategoriserte temaer og diskusjoner",
+            "Siste beslutninger og handlingspunkter",
+            "Kobling til alle prosjektressurser",
+          ],
+          href: "command-center.html",
+        },
+        timeline: {
+          icon: "📅",
+          title: "Prosjekttidslinje",
+          description:
+            "Interaktiv tidslinje som viser prosjektets utvikling fra 2023 til 2025. Inkluderer strategiske milepæler, operasjonelle hendelser, og koblinger til møter og dokumenter.",
+          stats: [
+            { value: "32", label: "Hendelser" },
+            { value: "2", label: "Lag" },
+            { value: "16", label: "Måneder" },
+          ],
+          features: [
+            "Strategisk oversikt med hovedmilepæler",
+            "Operasjonell tidslinje med alle hendelser",
+            "Kobling til møter og dokumenter",
+            "Filtrering og søk",
+          ],
+          href: "timeline.html",
+        },
+        meetings: {
+          icon: "📋",
+          title: "Møteoversikt",
+          description:
+            "Komplett database over alle prosjektmøter med detaljerte rapporter, deltakerlister, beslutninger og handlingspunkter. Integrert med Google Kalender.",
+          stats: [
+            { value: "70", label: "Møter" },
+            { value: "22", label: "Deltakere" },
+            { value: "13", label: "Organisasjoner" },
+          ],
+          features: [
+            "Fullstendige møterapporter",
+            "Søk og filtrering",
+            "Google Kalender-integrasjon",
+            "Deltaker- og organisasjonsoversikt",
+          ],
+          href: "meetings.html",
+        },
+        stakeholders: {
+          icon: "👥",
+          title: "Interessentnettverk",
+          description:
+            "Oversikt over alle personer og organisasjoner involvert i prosjektet. Se roller, kontaktinformasjon og prosjektdeltakelse.",
+          stats: [
+            { value: "30", label: "Personer" },
+            { value: "11", label: "Organisasjoner" },
+            { value: "5", label: "Kategorier" },
+          ],
+          features: [
+            "Personprofiler med roller",
+            "Organisasjonsoversikt",
+            "Nettverksvisualisering",
+            "Kontaktinformasjon",
+          ],
+          href: "stakeholders.html",
+        },
+        scenarios: {
+          icon: "♻️",
+          title: "Scenariosammenligning",
+          description:
+            "Sammenligning av tre utviklingsscenarier for Hovfaret 13. Detaljert CO₂-analyse, materialutslipp og energiforbruk.",
+          stats: [
+            { value: "3", label: "Scenarier" },
+            { value: "-48%", label: "CO₂ spart" },
+            { value: "-80%", label: "Materiale" },
+          ],
+          features: [
+            "Riving vs rehabilitering",
+            "CO₂-beregninger",
+            "Materialanalyse",
+            "Omsorg+ konsept",
+          ],
+          href: "scenarios.html",
+        },
+        documents: {
+          icon: "📄",
+          title: "Dokumentutforsker",
+          description:
+            "Søkbar database over alle prosjektdokumenter. Kategorisert etter type, dato og relevans.",
+          stats: [
+            { value: "271", label: "Dokumenter" },
+            { value: "8", label: "Kategorier" },
+            { value: "458", label: "Ekstrahert" },
+          ],
+          features: [
+            "Kategorisert dokumentbibliotek",
+            "Fulltekstsøk",
+            "Dokumentforhåndsvisning",
+            "Nedlastingsmuligheter",
+          ],
+          href: "documents.html",
+        },
+        sustainability: {
+          icon: "🌱",
+          title: "Bærekraft",
+          description:
+            "Komplett bærekraftsside med LCA-modeller, sirkulær økonomi, scenariosammenligning og dyptgående tekster.",
+          stats: [
+            { value: "48%", label: "CO₂-reduksjon" },
+            { value: "2 549 t", label: "CO₂ spart" },
+            { value: "8+", label: "Tekstvarianter" },
+          ],
+          features: [
+            "LCA-modell visualisert (A1-C4)",
+            "Sirkulær økonomi (85% bevart)",
+            "Scenariosammenligning (3 alternativer)",
+            "8+ bærekraftstekster med kopiering",
+            "Nordic Circle Hotspot",
+          ],
+          href: "sustainability-complete.html",
+        },
+        analytics: {
+          icon: "📊",
+          title: "Avansert Analyse",
+          description:
+            "Statistikk og innsikt på tvers av prosjektdata. Trender, mønstre og nøkkeltall.",
+          stats: [
+            { value: "16", label: "Måneder" },
+            { value: "70", label: "Møter" },
+            { value: "271", label: "Dokumenter" },
+          ],
+          features: [
+            "Aktivitetstrender",
+            "Møtestatistikk",
+            "Dokumentanalyse",
+            "Prosjektinnsikt",
+          ],
+          href: "analytics.html",
+        },
+        overview: {
+          icon: "🏠",
+          title: "Prosjektoversikt",
+          description:
+            "Helhetlig oversikt over Hovfaret 13-prosjektet med nøkkeltall og status.",
+          stats: [
+            { value: "5", label: "Etasjer" },
+            { value: "1989", label: "Byggeår" },
+            { value: "Skøyen", label: "Beliggenhet" },
+          ],
+          features: [
+            "Prosjektstatus",
+            "Nøkkeltall",
+            "Fremdriftsoversikt",
+            "Milepæler",
+          ],
+          href: "overview.html",
+        },
+        deliverables: {
+          icon: "📋",
+          title: "Leveranser",
+          description:
+            "Oversikt over alle prosjektleveranser med status, ansvarlige og tidslinjer.",
+          stats: [
+            { value: "75", label: "Leveranser" },
+            { value: "48", label: "Fullført" },
+            { value: "6", label: "Pågår" },
+          ],
+          features: [
+            "Kategoriserte leveranser",
+            "Statussporing",
+            "Ansvarlige personer",
+            "Tidslinje og frister",
+          ],
+          href: "deliverables.html",
+        },
+        regulatory: {
+          icon: "⚖️",
+          title: "Regulatorisk Status",
+          description:
+            "Komplett oversikt over søknadsprosessen, regelverksforutsetninger og strategi for Hovfaret 13.",
+          stats: [
+            { value: "1", label: "Fullført" },
+            { value: "1", label: "Pågår" },
+            { value: "2", label: "Planlagt" },
+          ],
+          features: [
+            "Søknadstidslinje",
+            "Reguleringsplanstatus",
+            "Juridiske argumenter",
+            "Interessentoversikt",
+          ],
+          href: "regulatory-status.html",
+        },
+        konseptskisse: {
+          icon: "📑",
+          title: "Konseptskisse 1.0",
+          description:
+            "Original konseptpresentasjon for Hovfaret 13 transformasjonsprosjekt. Dokumenterer visjonen for Omsorg+ eldreboliger.",
+          stats: [
+            { value: "73", label: "Boliger" },
+            { value: "8", label: "Etasjer" },
+            { value: "2025", label: "Ferdig" },
+          ],
+          features: [
+            "Prosjektvisjon og konsept",
+            "Arkitektoniske tegninger",
+            "Bærekraftsargumentasjon",
+            "Omsorg+ programbeskrivelse",
+          ],
+          href: "konseptskisse.html",
+        },
+        konseptskisse2: {
+          icon: "📘",
+          title: "Konseptskisse 2.0",
+          description:
+            "Oppdatert presentasjon med nyeste data, strategisk skifte til Omsorg+, og ferske bærekraftsberegninger.",
+          stats: [
+            { value: "48%", label: "CO₂-reduksjon" },
+            { value: "16", label: "Slides" },
+            { value: "207%", label: "ROI rehab" },
+            { value: "2027", label: "Ferdigstillelse" },
+          ],
+          features: [
+            "Strategisk skifte dokumentert",
+            "Oppdaterte klimaberegninger",
+            "Bydelsdialog og støtte",
+            "Nabovarsel og søknadsstatus",
+          ],
+          href: "konseptskisse-2.html",
+        },
+        konseptskisse3: {
+          icon: "📗",
+          title: "Konseptskisse 3.0",
+          description:
+            "Fullstendig 16-slides presentasjon med pedagogisk oppbygging. Fra kontorbygg til 73 Omsorg+-enheter.",
+          stats: [
+            { value: "73", label: "Omsorg+ enheter" },
+            { value: "48%", label: "CO₂-besparelse" },
+            { value: "207%", label: "ROI rehab" },
+            { value: "16", label: "Slides" },
+          ],
+          features: [
+            "Pedagogisk strukturert presentasjon",
+            "Scenariosammenligning med tall",
+            "Etasjeprogram og leilighetstyper",
+            "Sirkulære strategier og SMART-mål",
+            "Faseplan og milepæler",
+          ],
+          href: "konseptskisse-3.html",
+        },
+        "sustainability-report": {
+          icon: "📊",
+          title: "Bærekraftsrapport Viewer",
+          description:
+            "83-siders komplett bærekraftsrapport med navigering, kapitteloversikt og eksporterte data.",
+          stats: [
+            { value: "83", label: "Sider" },
+            { value: "10", label: "Kapitler" },
+            { value: "Jul 2025", label: "Ferdig" },
+          ],
+          features: [
+            "Full rapport med navigasjon",
+            "Kapittelbasert lesing",
+            "Klimagassberegninger",
+            "ESRS-rapportering",
+          ],
+          href: "sustainability-report.html",
+        },
+        "stakeholder-journey": {
+          icon: "🎭",
+          title: "Presentasjonsmodus",
+          description:
+            "Interaktiv visualisering av interessentreisen gjennom prosjektet. Perfekt for presentasjoner.",
+          stats: [
+            { value: "22", label: "Personer" },
+            { value: "13", label: "Organisasjoner" },
+            { value: "70", label: "Møter" },
+          ],
+          features: [
+            "Visuell tidslinje",
+            "Interessentkart",
+            "Presentasjonsmodus",
+            "Animert navigasjon",
+          ],
+          href: "stakeholder-journey.html",
+        },
+        "text-library": {
+          icon: "✍️",
+          title: "Tekstbibliotek",
+          description:
+            "Ferdigskrevne tekster i ulike stemmer og toner. Fra formelle søknadstekster til poetiske narrativer og sosiale medier.",
+          stats: [
+            { value: "6", label: "Kategorier" },
+            { value: "20+", label: "Tekster" },
+            { value: "∞", label: "Bruksområder" },
+          ],
+          features: [
+            "Formelle søknadstekster",
+            "Konverserende nettsideTekst",
+            "Poetiske presentasjoner",
+            "Pressemeldinger og SoMe",
+            "Kopiering med ett klikk",
+          ],
+          href: "text-library.html",
+        },
+        timelines: {
+          icon: "📈",
+          title: "Tidslinjebibliotek",
+          description:
+            "Alle prosjekttidslinjer samlet på ett sted. Fra komplett historikk til formålsspesifikke uttak for presentasjoner og søknader.",
+          stats: [
+            { value: "9", label: "Tidslinjer" },
+            { value: "32", label: "Hendelser" },
+            { value: "1989-2025", label: "Periode" },
+          ],
+          features: [
+            "Hoveddashboard med full historikk",
+            "Interessentreise-tidslinje",
+            "Visuelle storytelling-uttak",
+            "Søknadsspesifikke tidslinjer",
+            "Innebygde mini-tidslinjer",
+          ],
+          href: "timelines.html",
+        },
+        "ncc-partnership": {
+          icon: "🔄",
+          title: "NCC Partnership",
+          description:
+            "Hovfaret 13 som pilotkunde for Nordic Circle Hotspot. Living laboratory for sirkulære byggematerialer og løsninger.",
+          stats: [
+            { value: "2024", label: "Etablert" },
+            { value: "48%", label: "CO₂-kutt" },
+            { value: "80%", label: "Materialsparing" },
+          ],
+          features: [
+            "Nordic Circle Construction",
+            "Sirkulære byggematerialer",
+            "Living laboratory konsept",
+            "Nordic Innovation søknad",
+            "Presentasjonsmateriell",
+          ],
+          href: "ncc-partnership.html",
+        },
+        "place-economy": {
+          icon: "📊",
+          title: "Stedsøkonomi",
+          description:
+            "Stedsøkonomisk prognose for Hovfaret 13. Inntektspotensial og finansieringsmodell for transformasjon.",
+          stats: [
+            { value: "12,4 M", label: "Årlig inntekt" },
+            { value: "247 M", label: "20-års verdi" },
+            { value: "+56%", label: "Økt m²-pris" },
+          ],
+          features: [
+            "Alt 1: Næring/Studiokontor",
+            "Alt 3: Omsorg+ økonomikk",
+            "Arealregnskap og priser",
+            "Husbanken-finansiering",
+            "Presentasjonsmateriell",
+          ],
+          href: "place-economy.html",
+        },
+        participation: {
+          icon: "👥",
+          title: "Medvirkning",
+          description:
+            "Dokumentasjon av medvirkningsprosesser. Tekstuttak for konseptskisse og presentasjoner.",
+          stats: [
+            { value: "30", label: "Deltakere" },
+            { value: "4", label: "Prosesser" },
+            { value: "3", label: "Tekstvarianter" },
+          ],
+          features: [
+            "Nabolagsmøte 14. oktober",
+            "Bydelsdialog dokumentasjon",
+            "Leietakerdialog oversikt",
+            "Politisk dialog",
+            "Kopierbare tekster for konseptskisse",
+          ],
+          href: "participation.html",
+        },
+        "status-dec-2025": {
+          icon: "📊",
+          title: "Status Desember 2025",
+          description:
+            "Komplett statusoversikt med 4 designvarianter, interessentanalyse og dyptgående tekster.",
+          stats: [
+            { value: "4", label: "Designvarianter" },
+            { value: "20", label: "Måneder" },
+            { value: "10+", label: "Tekster" },
+          ],
+          features: [
+            "6 interessent-betydninger",
+            "6 dyptgående tekster",
+            "9 overskrifter med kopiering",
+            "4 designvarianter (komplett, lys, minimal, mørk)",
+            "Nøkkelbudskap per målgruppe",
+          ],
+          href: "status-december-2025-complete.html",
+        },
+        "market-insight": {
+          icon: "📈",
+          title: "Markedsinnsikt",
+          description:
+            "Demografi, boligbehov og posisjonering i Bydel Ullern. Tekster og slides for konseptskisse.",
+          stats: [
+            { value: "35k", label: "Innbyggere" },
+            { value: "18%", label: "Over 67 år" },
+            { value: "8", label: "Tekstvarianter" },
+          ],
+          features: [
+            "Demografisk analyse",
+            "Bydelens egne sitater",
+            "Konkurranseanalyse (13 Omsorg+)",
+            "6 presentasjonsslides",
+            "8 tekster for konseptskisse",
+          ],
+          href: "market-insight.html",
+        },
+        "omsorg-plus": {
+          icon: "🏠",
+          title: "Omsorg+",
+          description:
+            "Omfattende side om Omsorg+-konseptet: 73 enheter, sitater fra bydelen, tekster og prosess.",
+          stats: [
+            { value: "73", label: "Enheter" },
+            { value: "8", label: "Tekstvarianter" },
+            { value: "12/12", label: "Husbanken-krav" },
+          ],
+          features: [
+            "Sitater fra bydelsledere",
+            "8 kopierbare tekster",
+            "Leilighetstyper og areal",
+            "Tidslinje for prosessen",
+            "Betydning for lokalsamfunnet",
+          ],
+          href: "omsorg-plus.html",
+        },
+        utleie: {
+          icon: "🏢",
+          title: "Utleie",
+          description:
+            "Oversikt over tilgjengelige lokaler i Hovfaret 13: kontor, arrangement og næring på Skøyen.",
+          stats: [
+            { value: "280", label: "m² kontor" },
+            { value: "4", label: "Lokaler" },
+            { value: "500m", label: "til Skøyen st." },
+          ],
+          features: [
+            "Kontorlokale 3. etg (280 m²)",
+            "Arrangementslokale (20-100 pers)",
+            "Næringslokale 1. etasje",
+            "Plantegning og romfordeling",
+            "FINN-annonse klar til publisering",
+          ],
+          href: "utleie.html",
+        },
+        "communication-strategy": {
+          icon: "📣",
+          title: "Kommunikasjonsstrategi",
+          description:
+            "Komplett kommunikasjonsstrategi basert på Natural State metodikk. Målgrupper, kanaler og budskap.",
+          stats: [
+            { value: "4", label: "Målgrupper" },
+            { value: "11", label: "Leveranser" },
+            { value: "3", label: "Faser" },
+          ],
+          features: [
+            "Stedsidentitetsmodell",
+            "Målgrupper og nøkkelbudskap",
+            "Kommunikasjonskanaler",
+            "Trinnvise faser",
+            "Tekstforslag for konseptskisse",
+          ],
+          href: "communication-strategy.html",
+        },
+        "natur-miljo": {
+          icon: "🌿",
+          title: "Natur & Miljø",
+          description:
+            "Konsekvensutredning for natur og miljø. Skyggeanalyse, Hoffselva-økologi, geoteknikk og sammenligning rehabilitering vs. riving.",
+          stats: [
+            { value: "6", label: "Seksjoner" },
+            { value: "1", label: "Bekk" },
+            { value: "48%", label: "CO₂-spart" },
+          ],
+          features: [
+            "Skyggeanalyse med årstid/tid-velger",
+            "Hoffselva og ørretliv",
+            "Biologkonsultasjon (planlagt)",
+            "Geoteknikk og utglidningsrisiko",
+            "Rehabilitering vs. riving sammenligning",
+            "Skoletomten-dokumentasjon",
+          ],
+          href: "natur-miljo.html",
+        },
+        "miljo-argumenter": {
+          icon: "🎯",
+          title: "Miljøargumentasjon",
+          description:
+            "Strukturert argumentasjonsbase for rammesøknad-prosessen. 15 nøkkelargumenter fra 14 kildedokumenter med søk, filter og kopiering.",
+          stats: [
+            { value: "15", label: "Argumenter" },
+            { value: "7", label: "Temaer" },
+            { value: "14", label: "Kilder" },
+          ],
+          features: [
+            "Søk og filter per tema/målgruppe",
+            "Rehabilitering vs. riving sammenligning",
+            "Kopier argumenter med ett klikk",
+            "APA7-referanser inkludert",
+            "Manglende dokumenter identifisert",
+            "5 målgrupper (PBE, naboer, etc.)",
+          ],
+          href: "miljo-argumenter.html",
+        },
+      };
+
+      // Render detail view
+      function renderDetail(moduleId) {
+        const data = moduleData[moduleId];
+        if (!data) return;
+
+        const panel = document.getElementById("detail-panel");
+        panel.innerHTML = `
         <div class="detail-content">
           <div class="detail-header">
             <div class="detail-icon">${data.icon}</div>
@@ -1344,12 +1712,16 @@
           </div>
 
           <div class="detail-stats">
-            ${data.stats.map(s => `
+            ${data.stats
+              .map(
+                (s) => `
               <div class="detail-stat">
                 <div class="detail-stat-value">${s.value}</div>
                 <div class="detail-stat-label">${s.label}</div>
               </div>
-            `).join('')}
+            `,
+              )
+              .join("")}
           </div>
 
           <div class="detail-actions">
@@ -1364,14 +1736,18 @@
           <div class="features-section">
             <h3 class="features-title">Funksjoner</h3>
             <div class="features-list">
-              ${data.features.map(f => `
+              ${data.features
+                .map(
+                  (f) => `
                 <div class="feature-item">
                   <svg class="feature-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                   <span class="feature-text">${f}</span>
                 </div>
-              `).join('')}
+              `,
+                )
+                .join("")}
             </div>
           </div>
 
@@ -1380,23 +1756,27 @@
           </div>
         </div>
       `;
-    }
+      }
 
-    // Event listeners
-    document.querySelectorAll('.module-item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        const moduleId = item.dataset.module;
-        if (moduleId) {
-          renderDetail(moduleId);
-          document.querySelectorAll('.module-item').forEach(i => i.classList.remove('selected'));
-          item.classList.add('selected');
-        }
+      // Event listeners
+      document.querySelectorAll(".module-item").forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          const moduleId = item.dataset.module;
+          if (moduleId) {
+            renderDetail(moduleId);
+            document
+              .querySelectorAll(".module-item")
+              .forEach((i) => i.classList.remove("selected"));
+            item.classList.add("selected");
+          }
+        });
       });
-    });
 
-    // Show first module by default
-    renderDetail('timeline');
-    document.querySelector('[data-module="timeline"]').classList.add('selected');
-  </script>
-</body>
+      // Show first module by default
+      renderDetail("timeline");
+      document
+        .querySelector('[data-module="timeline"]')
+        .classList.add("selected");
+    </script>
+  </body>
 </html>

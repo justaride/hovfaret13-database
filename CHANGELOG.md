@@ -2,6 +2,53 @@
 
 All notable changes to this project database.
 
+## [2.90.0] - 2026-01-26
+
+### Phase 68: Miljøargumentasjon Database
+
+**Status:** ✅ COMPLETE
+
+#### Ny dashboard-side: Miljøargumentasjon
+
+Strukturert argumentasjonsbase for rammesøknad-prosessen med innhold fra "Klima, Miljø, Bærekraft"-mappen.
+
+**Innhold:**
+
+- 15 nøkkelargumenter fra 3 hovedkilder
+- 14 registrerte kildedokumenter
+- 8 identifiserte manglende dokumenter
+- 7 tematiske kategorier
+- 5 målgrupper
+
+**Funksjoner:**
+
+- Fritekst-søk i argumenter
+- Filter per tema og målgruppe
+- Sammenligning rehabilitering vs. riving
+- Kopier-funksjon med APA7-referanser
+- Manglende dokumenter med prioritering
+
+**Temaer:**
+
+- Klimarisiko (flom, overvann)
+- Miljø & økologi (Hoffselva, biologisk mangfold)
+- Geoteknikk (kvikkleire, stabilitet)
+- Overvann (drenering, blågrønn infrastruktur)
+- Trafikk & anlegg (støy, mobilitet)
+- Sirkulærøkonomi (materialgjenbruk, avfall)
+- Stedsidentitet (arkitektur, kulturmiljø)
+
+**Endringer:**
+
+| Fil                                        | Endring                          |
+| ------------------------------------------ | -------------------------------- |
+| `data/themes/environmental-arguments.json` | Ny datafil                       |
+| `dashboard/miljo-argumenter.html`          | Ny dashboard-side                |
+| `dashboard/index.html`                     | Lagt til modul i navigasjon      |
+| `config.json`                              | Lagt til environmental_arguments |
+
+---
+
 ## [2.89.0] - 2026-01-21
 
 ### Phase 67: Natur & Miljø - Konsekvensutredning
@@ -13,6 +60,7 @@ All notable changes to this project database.
 Opprettet komplett side for konsekvensutredning av natur og miljø knyttet til tilbyggscenario.
 
 **6 seksjoner:**
+
 - Oversikt med statusoversikt og arbeidsoppgaver
 - Skyggeanalyse med årstid/tidspunkt-velger
 - Hoffselva & Økologi (ørret, velforening, biologkonsultasjon)
@@ -21,6 +69,7 @@ Opprettet komplett side for konsekvensutredning av natur og miljø knyttet til t
 - Kildemateriale og kontaktlogg
 
 **Formål:**
+
 - Svare ut naboer og velforeningen for elven
 - Underlagsmateriale til rammesøknad Omsorg+
 - Dokumentere biologkonsultasjon (planlagt)
@@ -28,12 +77,12 @@ Opprettet komplett side for konsekvensutredning av natur og miljø knyttet til t
 
 **Endringer:**
 
-| Fil | Endring |
-|-----|---------|
-| `data/themes/natur-miljo.json` | Ny datafil med 6 seksjoner |
-| `dashboard/natur-miljo.html` | Ny side med tab-navigasjon |
-| `dashboard/index.html` | Lagt til modul i navigasjon |
-| `config.json` | Versjon 2.89.0, phase 67 |
+| Fil                            | Endring                     |
+| ------------------------------ | --------------------------- |
+| `data/themes/natur-miljo.json` | Ny datafil med 6 seksjoner  |
+| `dashboard/natur-miljo.html`   | Ny side med tab-navigasjon  |
+| `dashboard/index.html`         | Lagt til modul i navigasjon |
+| `config.json`                  | Versjon 2.89.0, phase 67    |
 
 ---
 
@@ -44,11 +93,13 @@ Opprettet komplett side for konsekvensutredning av natur og miljø knyttet til t
 **Lagt til:** Møte m_2026-01-06_internt_disp_nabovarsel
 
 #### Deltakere
+
 - Kamran Surizehi (Byggesaksrådgiver)
 - Gabriel B Freeman (Prosjektleder)
 - Einar Kleppe Holthe (Strategisk rådgiver)
 
 #### Hovedtemaer
+
 - Saksinnsyn og vedlegg fra kommunen
 - Nabovarsel-status (frist 12. januar 2026)
 - Hoffarets venner forhåndsuttalelse om skygge på Hoffselva
@@ -56,16 +107,17 @@ Opprettet komplett side for konsekvensutredning av natur og miljø knyttet til t
 - Fravik vs dispensasjon juridisk vurdering
 
 #### Nøkkelavgjørelser
+
 - Vente til 12. januar med å svare ut innspill
 - Berike dispensasjonsdokumentet med bærekraftsargumentasjon
 - Kamran tar ansvar for juridisk vurdering og dokumentproduksjon
 
 **Endringer:**
 
-| Fil | Endring |
-|-----|---------|
-| `meetings.json` | +1 møte (nå 61 totalt) |
-| `config.json` | Oppdatert møtetall og versjon |
+| Fil             | Endring                       |
+| --------------- | ----------------------------- |
+| `meetings.json` | +1 møte (nå 61 totalt)        |
+| `config.json`   | Oppdatert møtetall og versjon |
 
 ---
 
@@ -81,25 +133,27 @@ Utarbeidet komplett innhold for hovfaret13.no/utleie med kopierbare tekstblokker
 
 **Endringer:**
 
-| Endring | Beskrivelse |
-|---------|-------------|
-| `utleie.json` v2.0 | Raffinert scope - kun reelle utleieobjekter |
-| `utleie.html` v2.0 | Ny Squarespace-seksjon med kopierbare blokker |
+| Endring              | Beskrivelse                                                   |
+| -------------------- | ------------------------------------------------------------- |
+| `utleie.json` v2.0   | Raffinert scope - kun reelle utleieobjekter                   |
+| `utleie.html` v2.0   | Ny Squarespace-seksjon med kopierbare blokker                 |
 | Tagline-alternativer | 5 forslag, anbefalt: "Gode arbeidsplasser i et bygg med sjel" |
-| Utleie-scope | Kun 280 m² kontor + cellekontorer (ikke utviklingsplaner) |
+| Utleie-scope         | Kun 280 m² kontor + cellekontorer (ikke utviklingsplaner)     |
 
 **Utleie-objekter på nettside:**
 
-| Lokale | Badge | Areal |
-|--------|-------|-------|
-| Kontorlokale 3. etg | Ledig april 2025 | 280 m² |
-| Cellekontorer/studioer | Fra 10 m² | Fleksibelt |
+| Lokale                 | Badge            | Areal      |
+| ---------------------- | ---------------- | ---------- |
+| Kontorlokale 3. etg    | Ledig april 2025 | 280 m²     |
+| Cellekontorer/studioer | Fra 10 m²        | Fleksibelt |
 
 **Utelatt (utviklingsplaner):**
+
 - Arrangementslokale (20-100 pers)
 - Næringslokale 1. etg (400-800 m²)
 
 **Dashboard utleie.html v2.0:**
+
 - Squarespace-seksjon med klikk-for-å-kopiere tekstblokker
 - Tagline-alternativer med anbefalt valg
 - Hero, Lokale 1, Lokale 2, Kontakt som separate kort
@@ -120,13 +174,14 @@ Opprettet struktur for markedsføring av ledige lokaler i Hovfaret 13.
 
 **Nye filer:**
 
-| Fil | Formål |
-|-----|--------|
-| `data/themes/utleie.json` | Utleie-data, innhold, FINN-mal |
+| Fil                            | Formål                           |
+| ------------------------------ | -------------------------------- |
+| `data/themes/utleie.json`      | Utleie-data, innhold, FINN-mal   |
 | `dashboard/floorplan-3etg.svg` | Redesignet plantegning 3. etasje |
-| `dashboard/utleie.html` | Dashboard-side for utleie |
+| `dashboard/utleie.html`        | Dashboard-side for utleie        |
 
 **Dashboard utleie.html inneholder:**
+
 - Hero med bygginformasjon (6100 m², 5 etasjer)
 - Plantegning 3. etg med romfordeling
 - FINN-annonsetekst med kopier-funksjon
@@ -146,24 +201,24 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 
 **Domener skannet og fikset:**
 
-| Domene | Issues | Beskrivelse |
-|--------|--------|-------------|
-| Security | 11 | XSS, CSP, secrets |
-| Code Quality | 37+ | Duplisert kode, manglende utilities |
-| Data Integrity | 7 | Ugyldige referanser, datoformater |
-| Dependencies | 5 | Favicon, preconnect, SRI |
-| Performance | 17 | Caching, lazy loading, prefetch |
+| Domene         | Issues | Beskrivelse                         |
+| -------------- | ------ | ----------------------------------- |
+| Security       | 11     | XSS, CSP, secrets                   |
+| Code Quality   | 37+    | Duplisert kode, manglende utilities |
+| Data Integrity | 7      | Ugyldige referanser, datoformater   |
+| Dependencies   | 5      | Favicon, preconnect, SRI            |
+| Performance    | 17     | Caching, lazy loading, prefetch     |
 
 **Nye filer opprettet:**
 
-| Fil | Størrelse | Formål |
-|-----|-----------|--------|
-| `dashboard/css/variables.css` | 2.3 KB | CSS design tokens (farger, spacing, shadows) |
-| `dashboard/css/base.css` | 1.8 KB | Reset, typografi, print styles |
-| `dashboard/css/components.css` | 8.6 KB | Gjenbrukbare UI-komponenter |
-| `dashboard/css/layout.css` | 7.5 KB | Sidelayout og responsive breakpoints |
-| `dashboard/lib/utils.js` | 5.9 KB | Delte utilities (sanitize, formatDate, etc.) |
-| `dashboard/favicon.svg` | 0.5 KB | Prosjektfavicon med H13 branding |
+| Fil                            | Størrelse | Formål                                       |
+| ------------------------------ | --------- | -------------------------------------------- |
+| `dashboard/css/variables.css`  | 2.3 KB    | CSS design tokens (farger, spacing, shadows) |
+| `dashboard/css/base.css`       | 1.8 KB    | Reset, typografi, print styles               |
+| `dashboard/css/components.css` | 8.6 KB    | Gjenbrukbare UI-komponenter                  |
+| `dashboard/css/layout.css`     | 7.5 KB    | Sidelayout og responsive breakpoints         |
+| `dashboard/lib/utils.js`       | 5.9 KB    | Delte utilities (sanitize, formatDate, etc.) |
+| `dashboard/favicon.svg`        | 0.5 KB    | Prosjektfavicon med H13 branding             |
 
 **Sikkerhetsforbedringer:**
 
@@ -219,6 +274,7 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 #### Strikt grense mellom prosjektdata og leveranseinnhold
 
 **Problem:**
+
 - Prosjektdata (møter, beslutninger, tidslinje) var blandet med leveranseinnhold (Konseptskisse, rapporter)
 - Risiko for at nye leveranser (Konseptskisse 3.0) kunne forurense prosjekthistorikk
 
@@ -226,20 +282,21 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 
 **Filer oppdatert:**
 
-| Fil | Type | Endring |
-|-----|------|---------|
-| themes/konseptskisse.json | deliverable_content | Lagt til content_classification |
-| themes/konseptskisse-2.0-tillegg.json | deliverable_content | Lagt til content_classification |
-| themes/barekraftsrapport.json | deliverable_content | Lagt til content_classification |
-| themes/sustainability.json | deliverable_content | Lagt til content_classification |
-| themes/omsorg-plus.json | deliverable_content | Lagt til content_classification |
-| themes/sustainability-journey.json | project_data | Lagt til content_classification |
-| themes/regulatory.json | project_data | Lagt til content_classification |
-| config.json | — | konseptskisse → konseptskisse_ref |
-| deliverables.json | — | Lagt til theme_content_files |
-| CLAUDE.md | — | Dokumentert Data Boundary Rules |
+| Fil                                   | Type                | Endring                           |
+| ------------------------------------- | ------------------- | --------------------------------- |
+| themes/konseptskisse.json             | deliverable_content | Lagt til content_classification   |
+| themes/konseptskisse-2.0-tillegg.json | deliverable_content | Lagt til content_classification   |
+| themes/barekraftsrapport.json         | deliverable_content | Lagt til content_classification   |
+| themes/sustainability.json            | deliverable_content | Lagt til content_classification   |
+| themes/omsorg-plus.json               | deliverable_content | Lagt til content_classification   |
+| themes/sustainability-journey.json    | project_data        | Lagt til content_classification   |
+| themes/regulatory.json                | project_data        | Lagt til content_classification   |
+| config.json                           | —                   | konseptskisse → konseptskisse_ref |
+| deliverables.json                     | —                   | Lagt til theme_content_files      |
+| CLAUDE.md                             | —                   | Dokumentert Data Boundary Rules   |
 
 **Metadata-skjema:**
+
 ```json
 "content_classification": {
   "type": "deliverable_content",
@@ -251,6 +308,7 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 ```
 
 **Regler for nye leveranser:**
+
 1. Opprett ny theme-fil (f.eks. themes/konseptskisse-3.0.json)
 2. Legg til content_classification med type: deliverable_content
 3. Oppdater deliverables.json med theme_content_files referanse
@@ -268,12 +326,12 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 
 **Oppsummering:**
 
-| Metrikk | Før | Etter |
-|---------|-----|-------|
-| Totalt møter | 70 | 59 |
-| Med type | 8 | 59 (100%) |
-| Med lokasjon | 44 | 59 (100%) |
-| Korrupt data | 4 | 0 |
+| Metrikk      | Før | Etter     |
+| ------------ | --- | --------- |
+| Totalt møter | 70  | 59        |
+| Med type     | 8   | 59 (100%) |
+| Med lokasjon | 44  | 59 (100%) |
+| Korrupt data | 4   | 0         |
 
 **Tiltak utført:**
 
@@ -301,6 +359,7 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
    - 23 møter oppdatert basert på rapport-innhold
 
 **Nye filer:**
+
 - `scripts/cleanup-meetings.js` — Oppryddingsskript
 - `data/meetings.backup.json` — Backup før opprydding
 
@@ -315,17 +374,19 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 #### Visuelle forbedringer for bedre overblikk
 
 **Nye filer:**
+
 - `notion-sync/src/visual-config.js` — Sentral visuell konfigurasjon
 
 **Implementerte funksjoner:**
 
-| Funksjon | Beskrivelse |
-|----------|-------------|
-| Emoji-ikoner | Kontekstuelle ikoner for alle 549 records |
+| Funksjon     | Beskrivelse                                     |
+| ------------ | ----------------------------------------------- |
+| Emoji-ikoner | Kontekstuelle ikoner for alle 549 records       |
 | Møtestruktur | Callouts, toggles, dividers for bedre lesbarhet |
-| Fargekonfig | Definert i visual-config.js |
+| Fargekonfig  | Definert i visual-config.js                     |
 
 **Ikon-mapping:**
+
 ```
 🏢 Organizations  👥 People        🗓️ Meetings
 📁 Documents      📅 Timeline      📦 Deliverables
@@ -334,6 +395,7 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 ```
 
 **Møteinnhold-struktur:**
+
 - 📋 Sammendrag (gray callout)
 - 🎯 Beslutninger (green callout)
 - ⚡ Oppgaver (orange callout med checkboxes)
@@ -341,6 +403,7 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 - 👥 Deltakere (collapsible toggle)
 
 **Tekniske notater:**
+
 - Select-farger kan kun settes manuelt i Notion UI (API-begrensning)
 - Views (Gallery/Board/Calendar) opprettes manuelt
 
@@ -355,19 +418,21 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 #### Notion Data Quality Improvements
 
 **Enrichment scripts opprettet:**
+
 - `notion-sync/scripts/enrich-meetings.js` — 30 møter beriket med outcomes
 - `notion-sync/scripts/enrich-timeline.js` — 22 operational events med descriptions
 - `notion-sync/scripts/enrich-deliverables.js` — Alle 37 med responsible + title_no
 
-| Data | Før | Etter |
-|------|-----|-------|
-| Meetings med outcomes | 57% | 100% |
-| Timeline med descriptions | 30% | 100% |
-| Deliverables med responsible | 76% | 100% |
+| Data                         | Før | Etter |
+| ---------------------------- | --- | ----- |
+| Meetings med outcomes        | 57% | 100%  |
+| Timeline med descriptions    | 30% | 100%  |
+| Deliverables med responsible | 76% | 100%  |
 
 #### Omsorg+ Utvidelse (1→5 databaser)
 
 **Nye transformer-moduler:**
+
 - `src/transformers/omsorg-plus/concept.js` (1 record)
 - `src/transformers/omsorg-plus/floors.js` (7 records)
 - `src/transformers/omsorg-plus/units.js` (73 records med room features)
@@ -379,6 +444,7 @@ Gjennomført omfattende skanning av hele prosjektet med parallelle subagenter. F
 #### Timeline Metadata Fix
 
 Korrigert counts:
+
 - strategic_events: 12 → 10
 - operational_events: 27 → 22
 - total_events: 32 (ny)
@@ -392,6 +458,7 @@ Errors: 0
 ```
 
 **Nye Notion database IDs:**
+
 - Omsorg+ Concept: `2c720392-ef5b-8161-a42f-ca77d2935211`
 - Omsorg+ Floors: `2c720392-ef5b-8166-ba9b-c08246111743`
 - Omsorg+ Units: `2c720392-ef5b-8181-94b9-c9481e7699fa`
@@ -410,22 +477,24 @@ Errors: 0
 
 Ny rapport: `analysis/KONSEPTSKISSE-HELHET-ANALYSE.md`
 
-| Metrikk | Verdi |
-|---------|-------|
-| Konseptskisse-dekning | 123/123 sider (100%) |
-| Dashboard-moduler | 36 (144% av krav) |
-| Datakilder | 16 JSON-filer (160% av krav) |
+| Metrikk               | Verdi                        |
+| --------------------- | ---------------------------- |
+| Konseptskisse-dekning | 123/123 sider (100%)         |
+| Dashboard-moduler     | 36 (144% av krav)            |
+| Datakilder            | 16 JSON-filer (160% av krav) |
 
 **Konklusjon:** Prosjektdatabasen overleverer på alle områder.
 
 #### Data Integrity Fixes
 
 **deliverables.json:**
+
 - total: 75 → 37 (korrigert til faktisk antall)
 - Kategori-counts: Alle 11 korrigert
 - Status-counts: completed 48→22, in_progress 6→4, not_started 17→9
 
 **Metadata-felter lagt til:**
+
 - documents.json: `total: 271`
 - people.json: `total: 23`
 - organizations.json: `total: 16`
@@ -433,6 +502,7 @@ Ny rapport: `analysis/KONSEPTSKISSE-HELHET-ANALYSE.md`
 #### Verifisering
 
 Alle 5 kjerne-datafiler passerer nå metadata-validering:
+
 ```
 ✓ meetings.json: 70
 ✓ documents.json: 271
@@ -454,13 +524,16 @@ Alle 5 kjerne-datafiler passerer nå metadata-validering:
 Enhetlig autentisering på alle 37 dashboard-sider.
 
 **Nye filer:**
+
 - `dashboard/auth.js` — Gjenbrukbar auth-modul med norsk UI
 
 **Oppdaterte filer (37):**
-- Alle dashboard/*.html — Auth script injisert
+
+- Alle dashboard/\*.html — Auth script injisert
 - `index.html` — Unified auth med localStorage
 
 **Features:**
+
 - 24 timers sesjon
 - Profesjonell norsk login-dialog
 - Passord: `h13-skøyen-2025`
@@ -469,12 +542,13 @@ Enhetlig autentisering på alle 37 dashboard-sider.
 
 Beriket `meetings.json`:
 
-| Felt | Dekning |
-|------|---------|
-| summary | 70/70 (100%) |
-| outcomes | 40/70 (57%) |
+| Felt     | Dekning      |
+| -------- | ------------ |
+| summary  | 70/70 (100%) |
+| outcomes | 40/70 (57%)  |
 
 **Endringer:**
+
 - Metadata-seksjon lagt til
 - Summary hentet fra report.summary
 - Outcomes generert fra decisions + action_items
@@ -484,6 +558,7 @@ Beriket `meetings.json`:
 27 forekomster oppdatert: "20 måneder" → "21 måneder"
 
 **Oppdaterte filer:**
+
 - barekraftsrapport-2.html (1)
 - konseptskisse-2.html (1)
 - project-story.html (1)
@@ -529,13 +604,14 @@ Komplett feilsøking av hele prosjektet med fokus på datakonsistens.
 
 #### Interessent-tall korrigert (7 filer)
 
-| Gammel verdi | Ny verdi | Beskrivelse |
-|--------------|----------|-------------|
-| 35 interessenter | 39 interessenter | Total stakeholders |
-| 22 personer | 23 personer | People count |
-| 13 organisasjoner | 16 organisasjoner | Org count |
+| Gammel verdi      | Ny verdi          | Beskrivelse        |
+| ----------------- | ----------------- | ------------------ |
+| 35 interessenter  | 39 interessenter  | Total stakeholders |
+| 22 personer       | 23 personer       | People count       |
+| 13 organisasjoner | 16 organisasjoner | Org count          |
 
 **Oppdaterte filer:**
+
 - `status-december-2025.html` — 4 fikser
 - `status-december-2025-complete.html` — 3 fikser
 - `status-december-2025-light.html` — 2 fikser
@@ -586,6 +662,7 @@ HTML-lenker:    Alle fungerer ✓
 Lagt til "Skandinavisk Minimal" seksjoner med rent skandinavisk design inspirert av moderne nordisk estetikk.
 
 **Designprinsipper:**
+
 - Fargepalett: Hvitt (#FFFFFF), Lys grå (#F5F5F5), Marine blå (#001F3F)
 - Typografi: Inter font, font-weight 200-500
 - Layout: Rikelig whitespace, sentrert/asymmetrisk grid
@@ -593,49 +670,50 @@ Lagt til "Skandinavisk Minimal" seksjoner med rent skandinavisk design inspirert
 
 #### slides-library.html — 6 nye slides
 
-| Slide | Beskrivelse |
-|-------|-------------|
-| Klimatall — Minimal | 48% hero med marine aksent |
-| Nøkkeltall Grid | 4 tall i 2×2 asymmetrisk grid |
-| Sitat — Minimal | Vertikal linje aksent |
-| Klimasammenligning | Enkel søylediagram |
-| Tidslinje — Minimal | Vertikal milepælsliste |
-| Omsorg+ Konsept | Boligdata rent format |
+| Slide               | Beskrivelse                   |
+| ------------------- | ----------------------------- |
+| Klimatall — Minimal | 48% hero med marine aksent    |
+| Nøkkeltall Grid     | 4 tall i 2×2 asymmetrisk grid |
+| Sitat — Minimal     | Vertikal linje aksent         |
+| Klimasammenligning  | Enkel søylediagram            |
+| Tidslinje — Minimal | Vertikal milepælsliste        |
+| Omsorg+ Konsept     | Boligdata rent format         |
 
 #### visual-stories.html — 6 nye historier
 
-| Historie | Beskrivelse |
-|----------|-------------|
-| Hero Number | 48 i gigantisk font (clamp 8-16rem) |
-| Clean Comparison | Side-by-side CO₂-tall |
-| Quote | Strategisk beslutning med border-left |
-| Key Numbers Grid | 6 nøkkeltall i 3×2 grid |
-| Building Concept | 5+3 etasje visualisering |
-| Final Statement | Marine bakgrunn avslutning |
+| Historie         | Beskrivelse                           |
+| ---------------- | ------------------------------------- |
+| Hero Number      | 48 i gigantisk font (clamp 8-16rem)   |
+| Clean Comparison | Side-by-side CO₂-tall                 |
+| Quote            | Strategisk beslutning med border-left |
+| Key Numbers Grid | 6 nøkkeltall i 3×2 grid               |
+| Building Concept | 5+3 etasje visualisering              |
+| Final Statement  | Marine bakgrunn avslutning            |
 
 #### text-library.html — 8 nye tekstkort
 
-| Kort | Beskrivelse |
-|------|-------------|
-| Overskrift Hero | 48% med underline separator |
-| Hovedbudskap | Medium lengde, lys grå bakgrunn |
-| Sitat | Kursiv med kilde og border-left |
-| Nøkkeltall | 2×2 tall-grid med labels |
-| Prosjektbeskrivelse Lang | For søknader og rapporter |
-| Statement | Marine bakgrunn, hvit tekst |
-| Taglines | Korte fraser, én per linje |
-| Kulepunkter | 6 nøkkelpunkter for pitch |
+| Kort                     | Beskrivelse                     |
+| ------------------------ | ------------------------------- |
+| Overskrift Hero          | 48% med underline separator     |
+| Hovedbudskap             | Medium lengde, lys grå bakgrunn |
+| Sitat                    | Kursiv med kilde og border-left |
+| Nøkkeltall               | 2×2 tall-grid med labels        |
+| Prosjektbeskrivelse Lang | For søknader og rapporter       |
+| Statement                | Marine bakgrunn, hvit tekst     |
+| Taglines                 | Korte fraser, én per linje      |
+| Kulepunkter              | 6 nøkkelpunkter for pitch       |
 
 #### timeline-slides.html — 9 nye slides
 
 **Ny seksjon:** `#minimal`
 
-| Format | Slides |
-|--------|--------|
-| 350×500px vertikal | Hero Tall, Tidslinje, Nøkkeltall, Sitat, Statement, Etasjer, Omsorg+, Medvirkning |
-| 700×280px horisontal | Sammenligning |
+| Format               | Slides                                                                            |
+| -------------------- | --------------------------------------------------------------------------------- |
+| 350×500px vertikal   | Hero Tall, Tidslinje, Nøkkeltall, Sitat, Statement, Etasjer, Omsorg+, Medvirkning |
+| 700×280px horisontal | Sammenligning                                                                     |
 
 **Alle slides bruker:**
+
 - Hvitt/lys grå bakgrunn
 - Marine blå (#001F3F) aksent
 - Tynn typografi (font-weight: 200-300)
@@ -655,11 +733,12 @@ Laget vertikale tidslinjer optimalisert for Google Slides presentasjoner.
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                    | Beskrivelse                          |
+| ---------------------- | ------------------------------------ |
 | `timeline-slides.html` | 5 tema-varianter med 3 formater hver |
 
 **5 Tema-seksjoner:**
+
 1. **Total Oversikt** — Prosjektets hovedmilepæler (2024-2025)
 2. **Medvirkning** — Interessentdialog og nabomøter
 3. **Omsorg+** — Fra behov til konsept
@@ -667,11 +746,13 @@ Laget vertikale tidslinjer optimalisert for Google Slides presentasjoner.
 5. **Bærekraft** — Klima og sirkulær økonomi
 
 **3 Formater per tema:**
+
 - Vertikal (350×500px) — For Google Slides
 - Horisontal (700×280px) — For bredformat
 - Kompakt kort (300×400px) — For dashboards
 
 **Fargekoding:**
+
 - Bydel: #3b82f6 (blå)
 - Politiker: #8b5cf6 (lilla)
 - Nabo: #f97316 (oransje)
@@ -684,11 +765,12 @@ Laget oversiktsside for bærekraftsrapport 2.0 iterasjon.
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                               | Beskrivelse                   |
+| --------------------------------- | ----------------------------- |
 | `barekraftsrapport-overview.html` | Gap-analyse og iterasjonsplan |
 
 **Innhold:**
+
 - Versjonsammenligning (1.0 juli 2025 vs 2.0 mål)
 - Gap-analyse tabell med kritiske oppdateringer
 - Hendelser siden juli 2025 tidslinje
@@ -696,6 +778,7 @@ Laget oversiktsside for bærekraftsrapport 2.0 iterasjon.
 - Lenker til arbeidsrom og komplett rapport
 
 **Kritiske funn:**
+
 - Bydel Ullern behov: 70+ → 160 enheter
 - Nabovarsel status: Planlagt → Fullført
 - Strategisk akselerasjon ikke dokumentert
@@ -705,6 +788,7 @@ Laget oversiktsside for bærekraftsrapport 2.0 iterasjon.
 Oppdatert "bruksendringssøknad" til "rammesøknad" i flere filer.
 
 **Oppdaterte filer:**
+
 - `barekraftsrapport-2.html` — Tabell og tidslinje
 - `status-december-2025.html` — Statusbeskrivelser
 - `regulatory-status.html` — Søknadsstatus
@@ -723,6 +807,7 @@ Oppdatert "bruksendringssøknad" til "rammesøknad" i flere filer.
 Gjennomført full analyse av alle filer og lenker.
 
 **Verifisert:**
+
 - 36 HTML-filer eksisterer
 - 36 interne lenker fungerer
 - 26 JSON-filer validert
@@ -730,6 +815,7 @@ Gjennomført full analyse av alle filer og lenker.
 - Auth-beskyttelse på alle dashboard-sider
 
 **Nøkkeltall bekreftet:**
+
 - 70 møter i meetings.json
 - 271 dokumenter i documents.json
 - 23 personer i people.json
@@ -750,6 +836,7 @@ Satt opp prosjektet på GitHub Pages for enkel deling.
 **URL:** https://justaride.github.io/hovfaret13-database/
 
 **Konfigurasjon:**
+
 - Root index.html med redirect til dashboard/
 - .nojekyll fil for å deaktivere Jekyll-prosessering
 
@@ -759,13 +846,14 @@ Utviklet komplett statussystem med multiple designalternativer og design-switche
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                                  | Beskrivelse                      |
+| ------------------------------------ | -------------------------------- |
 | `status-december-2025-complete.html` | Komplett variant med alt innhold |
-| `status-december-2025-light.html` | Nordisk hvitt design |
-| `status-december-2025-minimal.html` | Ultra-minimalistisk design |
+| `status-december-2025-light.html`    | Nordisk hvitt design             |
+| `status-december-2025-minimal.html`  | Ultra-minimalistisk design       |
 
 **Innhold i komplett variant:**
+
 - **"Hva betyr dette prosjektet for..."** — 6 interessentgrupper
   - Politikerne: Pilotprosjekt for klima og eldreomsorg
   - Nabolaget: 73 nye naboer, ikke en byggeplass
@@ -779,6 +867,7 @@ Utviklet komplett statussystem med multiple designalternativer og design-switche
 - **Design-switcher** mellom alle 4 varianter
 
 **Designsystemer:**
+
 - **Komplett:** Mørk gradient, fullt innhold
 - **Lys:** Hvit bakgrunn, Google-inspirert palett
 - **Minimal:** Kun svart/hvit/grå, typografifokus
@@ -790,11 +879,12 @@ Utviklet omfattende bærekraftsside med LCA-modeller og sirkulær økonomi.
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                            | Beskrivelse                          |
+| ------------------------------ | ------------------------------------ |
 | `sustainability-complete.html` | Komplett bærekraftsside med modeller |
 
 **Innhold:**
+
 - **LCA-modellvisualisering** (EN 15978)
   - A1-A3: Materialproduksjon
   - A4: Transport
@@ -811,6 +901,7 @@ Utviklet omfattende bærekraftsside med LCA-modeller og sirkulær økonomi.
 Oppdatert hovednavigasjon til å peke på komplett-versjoner.
 
 **Endringer i index.html:**
+
 - Bærekraft → sustainability-complete.html
 - Status Desember 2025 → status-december-2025-complete.html
 - Oppdatert moduleData med nye beskrivelser
@@ -829,8 +920,8 @@ Laget komplett Omsorg+-dashboard med sitater, tekster, prosess og lokalsamfunnsb
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                | Beskrivelse                             |
+| ------------------ | --------------------------------------- |
 | `omsorg-plus.html` | Omfattende Omsorg+-side med alt innhold |
 
 **Innhold:**
@@ -846,6 +937,7 @@ Laget komplett Omsorg+-dashboard med sitater, tekster, prosess og lokalsamfunnsb
 - **Markedsposisjon:** 14 Omsorg+ i Oslo, konkurransetabell
 
 **Design:**
+
 - Lilla tema (gradient #7c3aed → #5b21b6)
 - Bygningsdiagram med etasjefordeling
 - Sitatkort med fargeaksenter
@@ -856,6 +948,7 @@ Laget komplett Omsorg+-dashboard med sitater, tekster, prosess og lokalsamfunnsb
 Lagt til komplett webside-konsept for nabolagsmøtet på participation.html.
 
 **6 seksjoner:**
+
 1. Hero — "Takk for et vellykket nabolagsmøte!"
 2. Om møtet — "En kveld i dialog" (40+ deltakere)
 3. Verdifulle innspill — 4 diskusjonstemaer i grid
@@ -864,6 +957,7 @@ Lagt til komplett webside-konsept for nabolagsmøtet på participation.html.
 6. Footer — Sosiale medier
 
 **Funksjoner:**
+
 - Kopier-knapp på hver seksjon
 - Bildeplassholdere med beskrivelser
 - DiskusjonsGrid med SVG-ikoner
@@ -882,22 +976,25 @@ Laget omfattende side for markedsinnsikt med demografi, konkurranseanalyse og ko
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                   | Beskrivelse                                     |
+| --------------------- | ----------------------------------------------- |
 | `market-insight.html` | Markedsinnsikt med demografi, slides og tekster |
 
 **Demografisk Analyse:**
+
 - Bydel Ullern: 35 000 innbyggere
 - 18% over 67 år (høyt)
 - 150-200 omsorgsboliger behov mot 2040
 - "Generasjon Skøyen" — Friske, ressurssterke eldre
 
 **Konkurranseanalyse:**
+
 - 13 eksisterende Omsorg+ i Oslo
 - Kun 1 på Skøyen (Stasjonsveien)
 - Hovfaret 13 blir #14 i Oslo, #2 på Skøyen
 
 **6 Presentasjonsslides:**
+
 1. Markedsoversikt — Posisjonering
 2. Demografi — Bydel Ullern tall
 3. Behovsanalyse — Politiske mål
@@ -906,6 +1003,7 @@ Laget omfattende side for markedsinnsikt med demografi, konkurranseanalyse og ko
 6. Oppsummering — Nøkkeltall
 
 **8 Tekstvarianter for Konseptskisse:**
+
 1. Kort — Søknadstekst
 2. Medium — Presentasjon
 3. Lang — Kontekst
@@ -916,11 +1014,13 @@ Laget omfattende side for markedsinnsikt med demografi, konkurranseanalyse og ko
 8. Kompakt — Figurtekst
 
 **Nøkkelbudskap for 3 målgrupper:**
+
 - Bydelen: Løser behovet for 150-200 enheter
 - Naboer: Bygging for de som allerede bor her
 - Investorer: Underserved marked, stabil leietaker
 
 **Design:**
+
 - Blått tema (gradient fra #1e40af til #3b82f6)
 - Visuelt søylediagram for demografi
 - Sitat-kort fra bydelsmøter
@@ -940,11 +1040,12 @@ Laget dedikert side med grafiske uttak for presentasjoner i 16:9 format.
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                         | Beskrivelse                                |
+| --------------------------- | ------------------------------------------ |
 | `status-december-2025.html` | Grafiske slides og visuelle fremstillinger |
 
 **6 Presentasjonsslides:**
+
 1. **Prosjekttidslinje** — Visuell tidslinje fra Apr 2024 til Q2 2026
 2. **Klimagevinst** — Donut-chart med 48% CO₂-reduksjon
 3. **Interessentnettverk** — Stakeholder-visualisering (35 interessenter)
@@ -953,6 +1054,7 @@ Laget dedikert side med grafiske uttak for presentasjoner i 16:9 format.
 6. **Nøkkeltall** — Komplett prosjektoversikt
 
 **Visuelle elementer:**
+
 - Hero-seksjon med 4 nøkkeltall
 - Timeline-visual med prikker og datoer
 - Donut-chart for klimagevinst
@@ -961,6 +1063,7 @@ Laget dedikert side med grafiske uttak for presentasjoner i 16:9 format.
 - Status-kort med fargekoding
 
 **Design:**
+
 - Mørkt tema (bg-dark: #0f172a)
 - Gradient-bakgrunner for slides
 - 16:9 aspect ratio på slide-previews
@@ -980,11 +1083,12 @@ Laget dedikert side for dokumentasjon av medvirkningsprosesser med kopierbare te
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                  | Beskrivelse                         |
+| -------------------- | ----------------------------------- |
 | `participation.html` | Medvirkning og deltakelsesprosesser |
 
 **Nabolagsmøte 14. oktober 2025:**
+
 - 3 tekstvarianter (formell, narrativ, kompakt)
 - Kopier-funksjon for hver tekst
 - Nøkkeltall: ~30 deltakere, 4 temastasjoner, 85% CO₂-reduksjon
@@ -992,11 +1096,13 @@ Laget dedikert side for dokumentasjon av medvirkningsprosesser med kopierbare te
 - Tidslinje for andre medvirkningsprosesser
 
 **Tekstvarianter:**
+
 1. **Formell** (søknader, rapporter) - Saklig dokumentasjon med alle fakta
 2. **Narrativ** (konseptskisse, presentasjoner) - Stemningsskapende fortelling
 3. **Kompakt** (figurtekst, bildetekst) - Kort og informativ
 
 **Andre prosesser planlagt:**
+
 - Bydelsdialog (23 sep - 5 nov 2025)
 - Politisk dialog (sep - nov 2025)
 - Leietakerdialog (løpende)
@@ -1007,6 +1113,7 @@ Lagt til ny seksjon på `place-economy.html` med 5 korte tekster for bruk i kons
 Tekstene forklarer stedsøkonomisk logikk uten å bruke tall.
 
 **5 tekstvarianter:**
+
 1. **Potensialet** — Byggets skjulte kapasitet og fundamentets dimensjonering
 2. **Markedslogikken** — Identitetsverdi og bærekraftspremie
 3. **Den sirkulære logikken** — Betongen har gjort jobben, kan fortsette
@@ -1014,6 +1121,7 @@ Tekstene forklarer stedsøkonomisk logikk uten å bruke tall.
 5. **Det verdifulle i det** — Sitat fra prosjektmøte om fleksibilitet
 
 **Funksjoner:**
+
 - Kopier-knapp for hver tekst
 - CSS for tekst-variant-kort
 - Gul info-boks som introduksjon
@@ -1032,6 +1140,7 @@ Erstattet alle emojis med profesjonelle SVG-ikoner på begge nye sider.
 Designstilen matcher nå hovfaret13.no sin minimalistiske, arkitektoniske estetikk.
 
 **ncc-partnership.html — Oppdatert:**
+
 - Alle section-ikoner: SVG (sirkel-piler, kalender, dokument, folk)
 - Card-ikoner: SVG (bygg, lab, innovasjon)
 - 6 principle-ikoner: SVG (bevaring, ombruk, fornybart, lavenergi, naturpositiv, deling)
@@ -1040,6 +1149,7 @@ Designstilen matcher nå hovfaret13.no sin minimalistiske, arkitektoniske esteti
 - Sirkulære prinsipper: 3×2 grid-layout (3 per rad)
 
 **place-economy.html — Oppdatert:**
+
 - Søylediagram-ikon for økonomisk oversikt
 - Bygnings-grid-ikon for etasjefordeling
 - Trend-pil-ikon for verdiskaping
@@ -1049,6 +1159,7 @@ Designstilen matcher nå hovfaret13.no sin minimalistiske, arkitektoniske esteti
 - Mappe-ikon for datakilder
 
 **Designprinsipper:**
+
 - Minimalistiske stroke-ikoner (1.5px stroke-width)
 - Fargekodet etter seksjon (grønn, blå, lilla, oransje)
 - Responsivt grid for sirkulære prinsipper
@@ -1068,11 +1179,12 @@ Laget komplett stedsøkonomi-side med økonomisk verdimodell for transformasjon.
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                  | Beskrivelse                           |
+| -------------------- | ------------------------------------- |
 | `place-economy.html` | Stedsøkonomi og økonomisk verdimodell |
 
 **Stedsøkonomi innhold:**
+
 - Alt 1: Næring/Studiokontor beregning (fra PDF)
   - 4 666 m² totalt areal
   - 12,4 M/år i leieinntekter
@@ -1092,16 +1204,19 @@ Laget komplett stedsøkonomi-side med økonomisk verdimodell for transformasjon.
 Begge nye sider oppdatert med profesjonelt, utadvendt språk:
 
 **place-economy.html:**
+
 - 6 slides med målgrupperettet kommunikasjon
 - Pitch-varianter for investorer, politikere, naboer
 - Mer smidd språk for ekstern presentasjon
 
 **ncc-partnership.html:**
+
 - 6 slides (2 nye: Visjon, Verdiforslag)
 - Nøkkelbudskap for byggherrer, investorer, politikere
 - Profesjonelt språk for utadvendt bruk
 
 **Datakilde:**
+
 - Stedsøkonomisk Prognose PDF (Natural State, sept 2025)
 - konseptskisse-2.0-tillegg.json side 119, 122
 - meetings.json (møte 2. sept 2025)
@@ -1120,11 +1235,12 @@ Laget dedikert side for NCC-partnerskapet og sirkulær økonomi.
 
 **Ny fil:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                    | Beskrivelse                         |
+| ---------------------- | ----------------------------------- |
 | `ncc-partnership.html` | NCC-partnerskap og sirkulær økonomi |
 
 **Innhold:**
+
 - Hva er Nordic Circle Construction
 - Hotspot-konseptet (living laboratory)
 - Nordic Innovation finansieringsmuligheter
@@ -1135,6 +1251,7 @@ Laget dedikert side for NCC-partnerskapet og sirkulær økonomi.
 - Nøkkelpersoner (Jan Thomas, Andreas, Gabriel)
 
 **Datakilde:**
+
 - 5 møter fra meetings.json (des 2024 - sep 2025)
 - sustainability-journey.json
 - deliverables.json
@@ -1153,6 +1270,7 @@ Grundig analyse avdekket at påstanden "bygd for 12 etasjer" var uverifisert.
 Kildene (møtereferater, arkitekt) sier konsekvent "reservekapasitet for 3 nye etasjer".
 
 **Korrigert i:**
+
 - `visual-stories.html` — "Bygd for 12, har 5" → "Har 5, kan bli 8"
 - `slides-library.html` — Oppdatert reservekapasitet-slide
 - `text-library.html` — Tagline korrigert
@@ -1161,6 +1279,7 @@ Kildene (møtereferater, arkitekt) sier konsekvent "reservekapasitet for 3 nye e
 - `project.json` — Alle referanser til "12 floors" fjernet
 
 **Korrekt formulering:**
+
 - Bygget har 5 etasjer i dag
 - Fundamentet har reservekapasitet for 3 nye etasjer
 - Omsorg+ planen gir totalt 8 etasjer (etasje 1-8)
@@ -1188,8 +1307,8 @@ Laget ny side som samler alle tidslinjer på ett sted med visuelle forhåndsvisn
 
 **Ny fil:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil              | Beskrivelse                               |
+| ---------------- | ----------------------------------------- |
 | `timelines.html` | Bibliotek med 9 tidslinjer i 3 kategorier |
 
 **Kategorier:**
@@ -1210,6 +1329,7 @@ Laget ny side som samler alle tidslinjer på ett sted med visuelle forhåndsvisn
    - Regulatorisk prosess (regulatory-status)
 
 **Funksjonalitet:**
+
 - Visuelle forhåndsvisninger av hver tidslinje
 - Direkte lenker til kilde-dashboards
 - Placeholder for fremtidig tidslinjegenerator
@@ -1228,8 +1348,8 @@ Laget bibliotek med tekster tilpasset ulike formål og mottakere.
 
 **Ny fil:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                 | Beskrivelse                |
+| ------------------- | -------------------------- |
 | `text-library.html` | 20+ tekster i 6 kategorier |
 
 **Kategorier:**
@@ -1242,6 +1362,7 @@ Laget bibliotek med tekster tilpasset ulike formål og mottakere.
 6. **Korte formuleringer** — Taglines, SoMe-tekster
 
 **Innholdshøydepunkter:**
+
 - Argumentasjon mot rivning med konkrete tall (48% CO₂, 80% materiale)
 - Hoffselva biotop-argumentasjon
 - Husbanken/Enova finansieringsargumenter
@@ -1249,6 +1370,7 @@ Laget bibliotek med tekster tilpasset ulike formål og mottakere.
 - 15+ korte formuleringer for ulike kanaler
 
 **index.html oppdatert:**
+
 - Lagt til Tekstbibliotek i Presentasjoner-seksjonen
 - Versjon oppdatert til v2.53
 
@@ -1266,12 +1388,13 @@ Laget to nye presentasjonsverktøy for bruk utenfor konseptskissen.
 
 **Nye filer:**
 
-| Fil | Beskrivelse |
-|-----|-------------|
+| Fil                   | Beskrivelse                                  |
+| --------------------- | -------------------------------------------- |
 | `slides-library.html` | 15 standalone slides kategorisert etter tema |
-| `visual-stories.html` | Minimalistisk scrollbasert storytelling |
+| `visual-stories.html` | Minimalistisk scrollbasert storytelling      |
 
 **slides-library.html — Kategorier:**
+
 - Transformasjonsargumentasjon (48% CO₂, sammenligning, materialer, reservekapasitet)
 - NCC & Nordic Circle (partnerskap, sirkulær økonomi)
 - Samfunnsverdi & Omsorg+ (bydelsbehov, konsept, interessentstøtte)
@@ -1279,6 +1402,7 @@ Laget to nye presentasjonsverktøy for bruk utenfor konseptskissen.
 - Finansiering & Økonomi (Husbanken, tidslinje)
 
 **visual-stories.html — Seksjoner:**
+
 - 48% hero-slide
 - Riving vs rehabilitering sammenligning
 - Sitater fra prosessen
@@ -1289,6 +1413,7 @@ Laget to nye presentasjonsverktøy for bruk utenfor konseptskissen.
 - Avsluttende budskap
 
 **index.html oppdatert:**
+
 - Lagt til Slide-bibliotek i Presentasjoner
 - Lagt til Visuelle historier (featured)
 - Versjon oppdatert til v2.52
@@ -1307,19 +1432,21 @@ Analysert alle 70 møter i prosjektdatabasen for å identifisere nøkkelinnsikte
 
 **Nye sider (124-126):**
 
-| Side | Tittel | Innhold |
-|------|--------|---------|
-| 124 | Stemmer fra prosessen | 8 kraftfulle sitater fra møter 2023-2025 |
-| 125 | Hoffselva & Økologisk verdi | 11 års etablert biotop, kvikkleire-risiko, restaureringsplan |
-| 126 | Grønn finansiering | Grønn belåning, energiytelse, Husbanken/Enova-støtte |
+| Side | Tittel                      | Innhold                                                      |
+| ---- | --------------------------- | ------------------------------------------------------------ |
+| 124  | Stemmer fra prosessen       | 8 kraftfulle sitater fra møter 2023-2025                     |
+| 125  | Hoffselva & Økologisk verdi | 11 års etablert biotop, kvikkleire-risiko, restaureringsplan |
+| 126  | Grønn finansiering          | Grønn belåning, energiytelse, Husbanken/Enova-støtte         |
 
 **Oppdaterte sider:**
+
 - Side 121: Lagt til kritisk tidslinje (61 plasser, Skøyen Aktivitetssenter rivning)
 - Side 123: Utvidet med konkrete innspill fra nabolagsmøtet (dans, yoga, ungdom, natur)
 
 **Nøkkelfunn fra møteanalyse:**
 
 Kritiske sitater dokumentert:
+
 - "Det å rive det bygget ville vært ødeleggende for hele området, økologisk og sosialt" (Andreas, 2023)
 - "Dette kan bli et fyrtårn for framtidens bygg" (Einar, 2023)
 - "Det å rive det bygget ødelegger 11 år av etablert biotop" (økologisk vurdering)
@@ -1340,16 +1467,19 @@ Kritiske sitater dokumentert:
 Verifisert Husbanken investeringstilskudd mot offisielle satser 2025 (husbanken.no).
 
 **Korreksjon:**
+
 - ❌ **Feil:** "50% Husbanken-støtte" (basert på muntlig info fra møte sept 2025)
 - ✅ **Riktig:** 45% tilskudd for omsorgsboliger, maks 2 124 000 kr/enhet i Oslo
 
 **Viktige presiseringer:**
+
 - Kun kommuner kan søke investeringstilskudd (ikke private utviklere)
 - Beboere må ha "vedtak om heldøgns helse- og omsorgstjenester"
 - 30 års bindingstid
 - Oslo er pressområde med høyere satser
 
 **Filer oppdatert:**
+
 - `dashboard/konseptskisse-2.html` — 3 steder korrigert (side 112, 119, 122)
 - `data/themes/omsorg-plus.json` — financing-seksjon utvidet med verifiserte data
 - `data/themes/konseptskisse-2.0-tillegg.json` — husbanken_support korrigert
@@ -1370,23 +1500,26 @@ Benchmark-analyse mot 8 Natural State konseptskisser avdekket gap. 4 nye sider i
 
 **Nye sider (120-123):**
 
-| Side | Tittel | Innhold |
-|------|--------|---------|
-| 120 | Nettside & Digital Tilstedeværelse | hovfaret13.no, Facebook, Instagram, Parabol |
-| 121 | Markedsinnsikt | Bydel Ullern demografi, 150-200 boligbehov, konkurranseanalyse |
-| 122 | Stedsøkonomi — Arealregnskap | Arealfordeling, økonomisk modell, NS-referanser |
-| 123 | Medvirkningsdokumentasjon | Nabolagsmøte-oppsummering, dialog-hendelser |
+| Side | Tittel                             | Innhold                                                        |
+| ---- | ---------------------------------- | -------------------------------------------------------------- |
+| 120  | Nettside & Digital Tilstedeværelse | hovfaret13.no, Facebook, Instagram, Parabol                    |
+| 121  | Markedsinnsikt                     | Bydel Ullern demografi, 150-200 boligbehov, konkurranseanalyse |
+| 122  | Stedsøkonomi — Arealregnskap       | Arealfordeling, økonomisk modell, NS-referanser                |
+| 123  | Medvirkningsdokumentasjon          | Nabolagsmøte-oppsummering, dialog-hendelser                    |
 
 **Oppdaterte sider:**
+
 - Side 114: Formidlingsstrategi — hovfaret13.no status endret fra "planlagt" til "lansert sept 2025"
 
 **Benchmark-gap adressert:**
+
 - ✅ Markedsinnsikt (KRITISK → ADRESSERT)
 - ✅ Kommunikasjonsstrategi (MEDIUM → ADRESSERT)
 - ✅ Medvirkningsformat (MEDIUM → ADRESSERT)
 - 🟡 Stedsøkonomi (KRITISK → DELVIS) — mangler Plaace-analyse og detaljert kalkyle
 
 **Filer oppdatert:**
+
 - `dashboard/konseptskisse-2.html` — 4 nye slides, oppdatert navigasjon
 - `data/themes/konseptskisse-2.0-tillegg.json` — v4.0 med nye sider
 - `data/config.json` — v2.49, 123 totale sider
@@ -1406,19 +1539,21 @@ Gjennomgått hele prosjektet og ryddet opp for bedre oversikt og teamsamarbeid.
 
 **Filer flyttet til `.backups/`:**
 
-| Kategori | Filer | Destinasjon |
-|----------|-------|-------------|
-| Backup JSON | 4 filer | `.backups/data/` |
-| Gamle dashboards | 7 filer | `.backups/dashboard/` |
-| Prosess-output | 5 filer | `.backups/analysis/process-output/` |
-| Gamle plandokumenter | 7 filer | `.backups/docs/plans/` |
-| Session summaries | 3 filer | `.backups/docs/sessions/` |
+| Kategori             | Filer   | Destinasjon                         |
+| -------------------- | ------- | ----------------------------------- |
+| Backup JSON          | 4 filer | `.backups/data/`                    |
+| Gamle dashboards     | 7 filer | `.backups/dashboard/`               |
+| Prosess-output       | 5 filer | `.backups/analysis/process-output/` |
+| Gamle plandokumenter | 7 filer | `.backups/docs/plans/`              |
+| Session summaries    | 3 filer | `.backups/docs/sessions/`           |
 
 **Backup JSON-filer:**
+
 - `meetings.backup.json`
 - `meetings.backup_20251122_*.json` (3 filer)
 
 **Gamle dashboards:**
+
 - `index-old-v2.html`
 - `index-variant-hero-bg.html`
 - `index-variant-split.html`
@@ -1428,6 +1563,7 @@ Gjennomgått hele prosjektet og ryddet opp for bedre oversikt og teamsamarbeid.
 - `test-functions.html`
 
 **Prosess-output:**
+
 - `meeting_notes_parsed.json` (858 KB)
 - `meeting_reports_analysis.json` (574 KB)
 - `suggested_new_meetings.json` (134 KB)
@@ -1435,9 +1571,11 @@ Gjennomgått hele prosjektet og ryddet opp for bedre oversikt og teamsamarbeid.
 - `meeting_notes_quality_analysis.md` (180 KB)
 
 **Ny dokumentasjon:**
+
 - `ARCHITECTURE.md` - Komplett prosjektarkitektur og dataflyt for teamet
 
 **Resultat:**
+
 - Root: 7 hovedfiler (renset fra 16)
 - Dashboard: 20 aktive filer (renset fra 27)
 - Analysis: 10 aktive filer (renset fra 24)
@@ -1456,11 +1594,13 @@ Gjennomgått hele prosjektet og ryddet opp for bedre oversikt og teamsamarbeid.
 Etter analyse av original konseptskisse PDF/TXT (1843 linjer, 99 sider), identifiserte vi at våre tilleggssider startet på feil sidetall og inkluderte duplikater.
 
 **Problemet:**
+
 - Original konseptskisse ender på side 99 (Strategisk Akselerasjon)
 - Våre sider startet på 114 (ingen logisk grunn)
 - Side 115 og 116 var duplikater av original side 98-99
 
 **Løsningen:**
+
 - Fjernet duplikater (gamle sider 114, 115, 116)
 - Re-nummererte alle sider til 100-119
 - La til ny Del 5 section divider som side 100
@@ -1468,6 +1608,7 @@ Etter analyse av original konseptskisse PDF/TXT (1843 linjer, 99 sider), identif
 - Oppdaterte info-banner statistikk
 
 **Teknisk implementasjon:**
+
 - Python-skript for batch-renummerering
 - Regex-basert erstatning av data-page attributter
 - Oppdaterte slide-kommentarer og footer-sidetall
@@ -1482,6 +1623,7 @@ Etter analyse av original konseptskisse PDF/TXT (1843 linjer, 99 sider), identif
 | 135 | 119 | Stedsøkonomi |
 
 **Filer endret:**
+
 - `dashboard/konseptskisse-2.html` - 20 sider (100-119)
 
 ---
@@ -1522,6 +1664,7 @@ Analyserte konseptskisse.html og identifiserte stilistiske gap i konseptskisse-2
    - Key-messages og quote-boxes for viktige konklusjoner
 
 **Sammenligning med original:**
+
 - Original har quote-cards med kursiv, varm gul gradient
 - Original bruker innledende prosa + punktlister (ikke bare punktlister)
 - Original har poetiske utsagn som "Forlat skogen like ren..."
@@ -1540,31 +1683,37 @@ Analyserte konseptskisse.html og identifiserte stilistiske gap i konseptskisse-2
 Profesjonelle datavisualiseringer lagt til i bærekraftsrapport-2.html arbeidsrommet.
 
 **Side 84 - Hero-infografikk:**
+
 - 3 sirkeldiagrammer (70 møter, 160 behov med 46% dekket, nabovarsel ✓)
 - SVG radial progress indikatorer
 - Nøkkelhendelse-badges (strategisk skifte, naboer, bruksendring)
 
 **Side 86 - Strategidiagram:**
+
 - Gammel strategi (gjennomstreket, faded): Kontor → Studio → Bolig
 - Ny strategi med SVG-pil: I dag → Omsorg+
 - "2-3 år raskere realisering" besparelse-badge
 
 **Side 88 - Forbedret interessent-tidslinje:**
+
 - Vertikal gradient-linje (blå→lilla→oransje→grønn)
 - 6 hendelser med fargekodede prikker og bakgrunn
 - Strategisk skifte fremhevet med rød markering
 
 **Side 91 - Regulatorisk prosess:**
+
 - 3-stegs horisontal prosess med status-sirkler
 - Nabovarsel (grønn ✓), Bruksendring (oransje 🔄), Rammesøknad (grå 📋)
 - SVG-piler mellom steg + fargekode-legend
 
 **Side 93 - Etasjediagram + Husbanken:**
+
 - 8 etasjer visualisert med fargekoding
 - Takhage (grønn), Påbygg (mørk blå), Rehab (lys blå), Service (oransje)
 - Husbanken 12/12 SVG radial progress med 100% oppfylt
 
 **Side 19 - Før/etter sammenligning:**
+
 - 70+ (rød sirkel) → 160 (grønn sirkel, større)
 - SVG-pil mellom sirklene
 - "+129% økning i dokumentert behov" badge
@@ -1583,26 +1732,31 @@ Profesjonelle datavisualiseringer lagt til i bærekraftsrapport-2.html arbeidsro
 Erstattet placeholder-bokser med profesjonelle datavisualiseringer.
 
 **Side 115 - Vertikal tidslinje:**
+
 - 6 milepæler (apr→nov 2025)
 - Fargekodede kategorier (blå/lilla/oransje/grønn)
 - Gradient-linje og prikker med box-shadow
 
 **Side 116 - Strategidiagram:**
+
 - Gammel strategi (gjennomstreket, faded)
 - Ny strategi med SVG-pil
 - "2-3 år raskere realisering" badge
 
 **Side 117 - Energimerke-skala:**
+
 - A-G skala med offisielle EU-farger
 - "I DAG" (F) og "MÅL" (C) markører
 - SVG-pil med "50% reduksjon"
 
 **Side 118 - CO₂ bar chart:**
+
 - 3 gradient-søyler (rød/grønn/blå)
 - Prosentvise besparelser (-48%, -22%)
 - Responsive høyder basert på data
 
 **Side 122 - Etasjediagram:**
+
 - 8 etasjer visualisert
 - Fargekoding: Takhage (grønn) / Nytt (mørk blå) / Rehab (lys blå) / Service (oransje)
 - Integrert i eksisterende three-column layout
@@ -1634,6 +1788,7 @@ Omfattende analyse og forbedring av konseptskisse-2.html for å sikre ypperste k
 | Konseptskisse 2.0 | "Pågår" | **"Ferdig"** |
 
 **Språkforbedringer:**
+
 - "Droppe studiokontor-fasen" → "Gå forbi studiokontor-fasen"
 - "Markedsbehov" → "Samfunnsbehovet"
 - "Å la betongen stå" → "Å bevare bærekonstruksjonen"
@@ -1641,6 +1796,7 @@ Omfattende analyse og forbedring av konseptskisse-2.html for å sikre ypperste k
 - "Energimerke-forbedring" → "Energiklasseforbedring"
 
 **Nytt innhold:**
+
 - James Lorentzen-møte (24. juni 2025) i interessent-timeline
 - Nordic Circle Hotspot integrert i interessentdialog
 - Husbanken 50% støtte spesifisert
@@ -1649,6 +1805,7 @@ Omfattende analyse og forbedring av konseptskisse-2.html for å sikre ypperste k
 - 20 måneder prosjektvarighet i oppsummering
 
 **Strukturelle forbedringer:**
+
 - Fellesarealer: "min. 150 m²" → "31% (>typisk 15-20%)"
 - Alle sidetall konsistente gjennom dokumentet
 
@@ -1665,6 +1822,7 @@ Omfattende analyse og forbedring av konseptskisse-2.html for å sikre ypperste k
 Opprettet arbeidsrom tilsvarende konseptskisse-2.html for systematisk oppdatering av bærekraftsrapporten.
 
 **Gap-analyse gjennomført:**
+
 - Rapporten er fra juli 2025, mye har skjedd siden
 - Kritisk endring: Bydel Ullern behov 70+ → 160 enheter
 - 13 nye interessent-hendelser å dokumentere
@@ -1720,12 +1878,14 @@ Gjennomgang av project-story.html og stakeholder-journey.html med verifisering m
 | Ingrid Hopp tittel | Bydelsdirektør | Leder Bydelsutvalget |
 
 **project-story.html - Nye hendelser lagt til:**
+
 - ✅ Nabovarsel sendt (16. oktober 2025)
 - 🔄 Bruksendringssøknad pågår
 - Nabolagsmøte (14. okt 2025)
 - Bydelsutvalgsmøte (29. okt 2025)
 
 **stakeholder-journey.html - Fullstendig datakorreksjon:**
+
 - Fjernet fiktive hendelser (James jan 2024, nettside-workshop okt 2024)
 - Korrigert James Lorentzen-møte til 24. juni 2025
 - 13 verifiserte interessent-hendelser (jan-nov 2025)
@@ -1738,6 +1898,7 @@ Gjennomgang av project-story.html og stakeholder-journey.html med verifisering m
 | `dashboard/stakeholder-journey-slides.html` | Google Slides-optimalisert versjon (5 slides, 960x540px) |
 
 **index.html - Ny "Presentasjoner" seksjon:**
+
 - Konseptskisse 1.0
 - Konseptskisse 2.0 (merket NY)
 - Bærekraftsrapport Viewer (83 sider)
@@ -1779,11 +1940,13 @@ Implementert short-term og medium-term forbedringer fra integritetsanalysen.
 | `dashboard/index.html` | Nye moduler, oppdaterte tall |
 
 **Config.json integrasjonsplan opprettet:**
+
 - `analysis/config-dashboard-integration-plan.md`
 - 4-fase implementering for single source of truth
 - Prioritert liste over dashboards
 
 **Nøkkeltall oppdatert:**
+
 - Møter: 70 (var 69)
 - Leveranser: 75
 - Stakeholders: 22 personer, 13 organisasjoner
@@ -1821,11 +1984,13 @@ Systematisk analyse av alle JSON-filer og dashboards for å identifisere faktafe
 | `data/timeline-enhanced.json` | Version 2.3, oppdatert metadata |
 
 **Identifiserte Dependencies:**
+
 - Møtetall må synkroniseres: project.json, timeline-enhanced.json, index.html
 - CO₂-tall må synkroniseres: project.json, sustainability.html, konseptskisse-2.html
 - Omsorg+-enheter må standardiseres: 73 enheter (fra R21 tegninger)
 
 **Anbefalinger for fremtidige oppdateringer:**
+
 1. Oppdater `config.json` først
 2. Kjør gjennom alle avhengige filer
 3. Verifiser dashboards viser korrekte tall
@@ -1895,6 +2060,7 @@ Implementert sidebar på venstre side av bærekraftssiden som dokumenterer hele 
 | `dashboard/sustainability.html` | +To-kolonne layout, +Sticky sidebar, +JavaScript rendering |
 
 **Sidebar-funksjoner:**
+
 - Sticky posisjon med scroll
 - Fargekodet tidslinje per kategori
 - Kompakte kort med ikon, dato, tittel og beskrivelse
@@ -1939,6 +2105,7 @@ Full implementering av Konseptskisse 2.0 tilleggsarbeid i dashboard HTML-filen m
 | 126 | 6 nøkkeltall (48% CO₂, 73 enheter, 12/12, 69 møter, ~30 naboer, 75 leveranser) |
 
 **Konseptskisse 2.0 nå komplett:**
+
 - 13 nye sider (114-126)
 - 4 endringer til eksisterende sider (2, 88, 92-93)
 - Alle tall synkronisert med prosjektdatabase
@@ -1983,6 +2150,7 @@ Full gjennomgang av prosjektet etter Notion-integrering for å sikre alle elemen
 | s_011 | 2025-10-14 | Nabolagsmøte gjennomført | Første offentlige presentasjon |
 
 **deliverables.json - Struktur:**
+
 - 75 leveranser med unike IDs (d_001 - d_037+)
 - 11 kategorier (cat_01 - cat_11)
 - 5 key milestones med datoer
@@ -2038,16 +2206,19 @@ Full integrering av Notion-eksport med 171 filer og 75 Hovfaret-spesifikke lever
 | I PLANLEGGING/PRODUKSJON | 4 |
 
 **Nye stakeholders:**
+
 - Kamran Surizehi - Arkitekt/Prosjektkoordinator (35 leveranser)
 - Linda Marie Aas - Prosjektleder/Bærekraft (15 leveranser, utvidet profil)
 - Severin Døcker - Kommunikasjon (utvidet profil)
 
 **Nye organisasjoner:**
+
 - Byggesaksrådgivning AS - Ansvarlig søker for bruksendring
 - Parabol - Nettside-utvikling hovfaret13.no
 - Nordic Circle Hotspot - Pilotpartner sirkulær økonomi
 
 **Nye timeline-hendelser (o_023-o_027):**
+
 - 2025-10-14: Nabolagsmøte (~30 deltakere)
 - 2025-10-16: Nabovarsel sendt formelt
 - 2025-10-29: Bydelsutvalgsmøte
@@ -2076,6 +2247,7 @@ Utviklet fullstendig arbeidsrom for planlegging og implementering av Konseptskis
 | `dashboard/assets/konseptskisser/v1-sept-2025/` | 113 JPG-filer (66 MB) |
 
 **konseptskisse.html - 7 faner:**
+
 1. Oversikt - Sammendrag og nøkkeldata
 2. Alle sider - 113 sider i grid (5 per rad)
 3. Innhold - 16 kapitler strukturert
@@ -2085,6 +2257,7 @@ Utviklet fullstendig arbeidsrom for planlegging og implementering av Konseptskis
 7. Progresjon - Oppdateringer sept-des 2025
 
 **konseptskisse-2.html - Arbeidsrom features:**
+
 - 12 slides (side 114-125) i Natural State stil
 - Navigasjon med piltaster og knapper
 - Bildeprompts i placeholder-bokser
@@ -2108,12 +2281,14 @@ Utviklet fullstendig arbeidsrom for planlegging og implementering av Konseptskis
 | 125 | Avslutning | Del 5 |
 
 **Endringer til eksisterende sider:**
+
 - Side 2: Oppdater med 2025-milepæler
 - Side 88: Oppdater tidslinje med fase 5
 - Side 92: Legg til fase 5 i fremdriftsplan
 - Side 93: Oppdater interessentstatus
 
 **konseptskisse-2.0-tillegg.json innhold:**
+
 - Metadata og status
 - 12 nye sider med komplett innhold
 - Layout-beskrivelser per side
@@ -2140,6 +2315,7 @@ Opprettet ny omfattende side som kombinerer alle 83 rapportsider med strukturert
 | `dashboard/sustainability-report-full.html` | Ny side med rapport + data |
 
 **barekraftsrapport.json innhold:**
+
 - Metadata (83 sider, status UTKAST)
 - Executive summary med 5 hovedfunn
 - Struktur med 17 kapitler og sideintervaller
@@ -2148,6 +2324,7 @@ Opprettet ny omfattende side som kombinerer alle 83 rapportsider med strukturert
 - 4 kilder
 
 **sustainability-report-full.html features:**
+
 - 4 faner: Oversikt, Rapportsider (83), Eksportert data, Kilder
 - Sammendragskort med hovedfunn
 - Kapittelliste med navigasjon
@@ -2158,9 +2335,11 @@ Opprettet ny omfattende side som kombinerer alle 83 rapportsider med strukturert
 - Konklusjons-seksjon
 
 **Oppdatert:**
+
 - `sustainability.html` - Lenke til ny full side
 
 **konseptskisse.html - Ny side:**
+
 - Multi-dokument visning for alle konseptskisser
 - Grid med 5 sider per rad (kollapset standard)
 - Tidslinje-navigasjon mellom versjoner
@@ -2183,12 +2362,13 @@ Migrert all manglende data fra h13-project-database til ny struktur.
 
 **Oppdaterte filer:**
 
-| Fil | Endringer |
-|-----|-----------|
-| `themes/omsorg-plus.json` | v2.0 → v3.0, komplett utvidelse |
-| `themes/sustainability.json` | v3.0 + bygningstekniske data |
+| Fil                          | Endringer                       |
+| ---------------------------- | ------------------------------- |
+| `themes/omsorg-plus.json`    | v2.0 → v3.0, komplett utvidelse |
+| `themes/sustainability.json` | v3.0 + bygningstekniske data    |
 
 **omsorg-plus.json v3.0 - Ny data:**
+
 - 2 leilighetstyper med detaljerte romspesifikasjoner
   - Enkeltrom 42.1m² (90% av enheter)
   - Dobbeltrom 66.5m² (10% av enheter)
@@ -2201,6 +2381,7 @@ Migrert all manglende data fra h13-project-database til ny struktur.
 - Markedsposisjon (blir nr. 14 i Oslo, nr. 2 på Skøyen)
 
 **sustainability.json - Bygningstekniske data:**
+
 - Dimensjoner: 6177m² BRA, 18531m³ volum
 - U-verdier: vegger 0.18, tak 0.22, gulv 0.10, vinduer 2.59 W/m²K
 - Luftlekkasje: n50 = 3.0
@@ -2209,6 +2390,7 @@ Migrert all manglende data fra h13-project-database til ny struktur.
 - Ventilasjon: CAV, plateveksler 60%, SFP 2.0
 
 **Database-dekningsgrad nå:**
+
 - Omsorg+: ✅ KOMPLETT
 - Sustainability: ✅ KOMPLETT (inkl. bygningsdata)
 - Timeline: ✅ timeline-enhanced.json (32 hendelser)
@@ -2235,6 +2417,7 @@ Konvertert 83-siders PDF-utkast til interaktivt arbeidsrom for rapportutvikling.
 | `sustainability-report.html` | Arbeidsrom med grid/enkeltside-visning |
 
 **Features:**
+
 - Grid-visning med 4 sider per rad og kapitteldelere
 - Enkeltside-visning med pil-navigasjon
 - Fullskjerm-modal med zoom (0.5x-3x)
@@ -2245,6 +2428,7 @@ Konvertert 83-siders PDF-utkast til interaktivt arbeidsrom for rapportutvikling.
 
 **Rapportstruktur kartlagt:**
 17 kapitler fra Forside til Avslutning, inkludert:
+
 - Regulatorisk kontekst (Oslo klimastrategi)
 - Klima-LCA (klimagassberegninger)
 - Sosial bærekraft
@@ -2271,6 +2455,7 @@ Fullstendig revisjon med verifisert data, rapport-visning og interaktive visuali
 | `sustainability.html` | 1556 linjer, komplett reimplementert |
 
 **sustainability.html - Features:**
+
 - Hero-seksjon med 4 nøkkeltall (-48%, -80%, 2549t, F→C)
 - Rapport-carousel med navigasjonspiler og dots
 - Fullskjerm-modus med zoom (0.5x-3x)
@@ -2282,6 +2467,7 @@ Fullstendig revisjon med verifisert data, rapport-visning og interaktive visuali
 - 2 anbefalte tiltakspakker
 
 **PDF-konvertering:**
+
 - Brukt pdf2image med 150 DPI
 - 32 sider totalt (18 + 14)
 - Optimalisert for web (JPEG 85% kvalitet)
@@ -2309,17 +2495,18 @@ Fullstendig verifisering av alle data mot originale rapporter:
 
 **Ny data lagt til:**
 
-| Seksjon | Detaljer |
-|---------|----------|
-| `klimagassberegninger.scenarios` | 3 scenarier med totaler, per_bta, per_hbra |
-| `klimagassberegninger.lifecycle_modules` | A1-A3, A4, A5, B1-B5, B6, C1-C4 |
-| `klimagassberegninger.building_parts` | 8 bygningsdeler per scenario |
-| `energikartlegging.measures.all_measures` | Alle 10 tiltak med full detalj |
-| `energikartlegging.recommended_packages` | 2 tiltakspakker |
-| `energikartlegging.energy_rating_impact` | Dagens + 2026-regler |
-| `energikartlegging.sensitivity_analysis` | Rente/strømpris/investering |
+| Seksjon                                   | Detaljer                                   |
+| ----------------------------------------- | ------------------------------------------ |
+| `klimagassberegninger.scenarios`          | 3 scenarier med totaler, per_bta, per_hbra |
+| `klimagassberegninger.lifecycle_modules`  | A1-A3, A4, A5, B1-B5, B6, C1-C4            |
+| `klimagassberegninger.building_parts`     | 8 bygningsdeler per scenario               |
+| `energikartlegging.measures.all_measures` | Alle 10 tiltak med full detalj             |
+| `energikartlegging.recommended_packages`  | 2 tiltakspakker                            |
+| `energikartlegging.energy_rating_impact`  | Dagens + 2026-regler                       |
+| `energikartlegging.sensitivity_analysis`  | Rente/strømpris/investering                |
 
 **10 energitiltak dokumentert:**
+
 1. VAV og nye aggregater (6 025 000 NOK, NNV 2 880 000)
 2. VAV ombygging eksisterende (1 598 000 NOK, NNV 3 760 000)
 3. Roterende varmegjenvinner (150 000 NOK, NNV 5 599 000)
@@ -2332,6 +2519,7 @@ Fullstendig verifisering av alle data mot originale rapporter:
 10. Varmepumpe + ombygging (9 941 000 NOK, NNV -974 000)
 
 #### Filer modifisert
+
 - `data/themes/sustainability.json` - v2.0 → v3.0 (komplett revisjon)
 
 ---
@@ -2344,14 +2532,15 @@ Fullstendig verifisering av alle data mot originale rapporter:
 
 #### Nye sider opprettet
 
-| Side | Beskrivelse | Kapitler/Seksjoner |
-|------|-------------|-------------------|
-| `project-story.html` | Komplett prosjekthistorie | 11 kapitler, 2018 linjer |
-| `stakeholder-journey.html` | Interessentreise for presentasjoner | 9 stakeholder-events |
+| Side                       | Beskrivelse                         | Kapitler/Seksjoner       |
+| -------------------------- | ----------------------------------- | ------------------------ |
+| `project-story.html`       | Komplett prosjekthistorie           | 11 kapitler, 2018 linjer |
+| `stakeholder-journey.html` | Interessentreise for presentasjoner | 9 stakeholder-events     |
 
 #### project-story.html - Innhold
 
 Komplett dokumentasjon av Hovfaret 13-prosjektet:
+
 1. **Prosjektets essens** - Innledning med nøkkelstatistikk (1989, 5→12 etasjer, 48% CO₂, 73 boliger)
 2. **Stedshistorie** - Byggets opprinnelse 1989-2023
 3. **Vendepunktet** - Rivingskravet september 2023
@@ -2365,6 +2554,7 @@ Komplett dokumentasjon av Hovfaret 13-prosjektet:
 11. **Veien videre** - Neste steg og handlingsplan
 
 #### stakeholder-journey.html - Features
+
 - Mørkt presentasjonstema (#0f172a)
 - 5 kategorier: bydel, kommune, politiker, leietaker, workshop
 - Animert zigzag-tidslinje med årsmarkører
@@ -2372,17 +2562,20 @@ Komplett dokumentasjon av Hovfaret 13-prosjektet:
 - Print-knapp
 
 #### timeline.html - Redesignet
+
 - Ny "Prosjekthistorikk" med fasefiltrering
 - Horisontal visuell tidslinje
 - 6 prosjektfaser (1989-2025)
 - Lenker til tematiske tidslinjer
 
 #### Navigasjon
+
 - `index.html` - Ny featured modul "Prosjekthistorie" med 📖-ikon
 - `timeline.html` - Lagt til lenker til project-story og stakeholder-journey
 - `stakeholder-journey.html` - Fikset tilbake-lenke til index.html
 
 #### Filer modifisert
+
 - `dashboard/project-story.html` (NY)
 - `dashboard/stakeholder-journey.html` (NY - tidligere sesjon)
 - `dashboard/timeline.html` (redesignet)
@@ -2400,25 +2593,25 @@ Komplett dokumentasjon av Hovfaret 13-prosjektet:
 
 Erstattet gammelt mørkt tema med nytt lyst, moderne design:
 
-| Komponent | Endring |
-|-----------|---------|
-| Font | Inter fra Google Fonts |
-| Fargepalett | Lys (#f8fafc bakgrunn, #ffffff kort) |
-| Layout | Master-detail mønster (liste + detaljpanel) |
-| CSS | Custom properties (variabler) for konsistent styling |
+| Komponent   | Endring                                              |
+| ----------- | ---------------------------------------------------- |
+| Font        | Inter fra Google Fonts                               |
+| Fargepalett | Lys (#f8fafc bakgrunn, #ffffff kort)                 |
+| Layout      | Master-detail mønster (liste + detaljpanel)          |
+| CSS         | Custom properties (variabler) for konsistent styling |
 
 #### Sider oppdatert (8 stk)
 
-| Side | Beskrivelse |
-|------|-------------|
-| `index.html` | Ny hjemmeside med navigasjonskort |
-| `timeline.html` | Tidslinje med master-detail layout |
-| `stakeholders.html` | Personer/organisasjoner med tabs |
-| `documents.html` | Dokumenter gruppert etter kategori |
-| `scenarios.html` | Utviklingsscenarier med CO2-diagram |
-| `sustainability.html` | Bærekraftsrapport med hero-seksjon |
-| `analytics.html` | Analyser med tidslinjediagrammer |
-| `overview.html` | Prosjektoversikt med helseindikatorer |
+| Side                  | Beskrivelse                           |
+| --------------------- | ------------------------------------- |
+| `index.html`          | Ny hjemmeside med navigasjonskort     |
+| `timeline.html`       | Tidslinje med master-detail layout    |
+| `stakeholders.html`   | Personer/organisasjoner med tabs      |
+| `documents.html`      | Dokumenter gruppert etter kategori    |
+| `scenarios.html`      | Utviklingsscenarier med CO2-diagram   |
+| `sustainability.html` | Bærekraftsrapport med hero-seksjon    |
+| `analytics.html`      | Analyser med tidslinjediagrammer      |
+| `overview.html`       | Prosjektoversikt med helseindikatorer |
 
 #### Design-system
 
@@ -2437,6 +2630,7 @@ Erstattet gammelt mørkt tema med nytt lyst, moderne design:
 ```
 
 #### Felles designelementer
+
 - Sticky header med tilbake-lenke
 - Loading spinner med animasjon
 - Responsive grids og media queries
@@ -2444,6 +2638,7 @@ Erstattet gammelt mørkt tema med nytt lyst, moderne design:
 - Norsk språk gjennomgående
 
 #### Filer modifisert
+
 - `dashboard/index.html`
 - `dashboard/timeline.html`
 - `dashboard/stakeholders.html`
@@ -2462,36 +2657,40 @@ Erstattet gammelt mørkt tema med nytt lyst, moderne design:
 **Status:** ✅ COMPLETE
 
 #### Placeholder-møter fjernet
+
 Fjernet 2 møter som var placeholders uten innhold:
+
 - `2025-01-30` - Placeholder Samtaler Leietakere Hovfaret 13
 - `2025-01-31` - Placeholder Samtaler Leietakere Hovfaret 13
 
 #### Deltakere lagt til (10 møter)
+
 Identifiserte og la til deltakerlister på alle møter som manglet:
 
-| Dato | Møte | Deltakere lagt til |
-|------|------|-------------------|
-| 2024-04-03 | MØTE 3 April 2024 | Gabriel, Thomas, R21 |
-| 2024-11-27 | MØTE 27 November 24 | Gabriel, Thomas, Andreas |
-| 2025-03-07 | Sammendrag skolebygget | Gabriel, Trym |
-| 2025-03-07 | Det er jo det | Gabriel, Internt team |
-| 2025-04-03 | Hva skal vi måles mot? | Gabriel, Prosjektteam |
+| Dato       | Møte                      | Deltakere lagt til             |
+| ---------- | ------------------------- | ------------------------------ |
+| 2024-04-03 | MØTE 3 April 2024         | Gabriel, Thomas, R21           |
+| 2024-11-27 | MØTE 27 November 24       | Gabriel, Thomas, Andreas       |
+| 2025-03-07 | Sammendrag skolebygget    | Gabriel, Trym                  |
+| 2025-03-07 | Det er jo det             | Gabriel, Internt team          |
+| 2025-04-03 | Hva skal vi måles mot?    | Gabriel, Prosjektteam          |
 | 2025-05-05 | Utviklingsprosjekt Skøyen | Gabriel, Bydel Ullern, Urbania |
-| 2025-05-13 | Bydel Ullern 2035 | Gabriel, Bydel Ullern |
-| 2025-05-22 | Umiddelbare oppgaver | Gabriel, Prosjektteam |
+| 2025-05-13 | Bydel Ullern 2035         | Gabriel, Bydel Ullern          |
+| 2025-05-22 | Umiddelbare oppgaver      | Gabriel, Prosjektteam          |
 | 2025-05-22 | Bydelsledernes Uttalelser | Gabriel, Bydelsledere, Urbania |
-| 2025-06-24 | med James Lorentzen | Gabriel, James Lorentzen |
+| 2025-06-24 | med James Lorentzen       | Gabriel, James Lorentzen       |
 
 #### Resultat
 
-| Metrikk | Før | Etter |
-|---------|-----|-------|
-| Antall møter | 67 | **65** |
+| Metrikk             | Før      | Etter         |
+| ------------------- | -------- | ------------- |
+| Antall møter        | 67       | **65**        |
 | Møter med deltakere | 57 (85%) | **65 (100%)** |
-| Møter med rapport | 65 (97%) | **65 (100%)** |
-| Kvalitetsscore | 90/100 | **~95/100** |
+| Møter med rapport   | 65 (97%) | **65 (100%)** |
+| Kvalitetsscore      | 90/100   | **~95/100**   |
 
 #### Filer modifisert
+
 - `data/meetings.json` - Fjernet 2, oppdatert 10
 - `STATUS.md` - Phase 16 dokumentert
 - `CHANGELOG.md` - Denne oppføringen
@@ -2505,43 +2704,49 @@ Identifiserte og la til deltakerlister på alle møter som manglet:
 **Status:** ✅ COMPLETE
 
 #### Kalenderanalyse
+
 Sammenlignet møtedatabase med eksportert Google Kalender (.ics) fra `gabriel@naturalstate.no`.
 
-| Metrikk | Verdi |
-|---------|-------|
-| Kalenderhendelser totalt | 1595 |
-| Hovfaret/Urbania-relaterte | 76 |
-| Møter i database (før) | 60 |
-| Dekningsgrad (før) | 51.4% |
+| Metrikk                    | Verdi |
+| -------------------------- | ----- |
+| Kalenderhendelser totalt   | 1595  |
+| Hovfaret/Urbania-relaterte | 76    |
+| Møter i database (før)     | 60    |
+| Dekningsgrad (før)         | 51.4% |
 
 #### Nye møter lagt til
 
 **Høy prioritet (4 stk):**
+
 - `2023-11-24` - Møte Urbania - Prosjekt oppstart og gjennomgang
 - `2024-02-21` - Strategisk Avklaring og Konseptskisse Hovfaret
 - `2024-12-09` - H13 Presentation #3
 - `2025-05-23` - Hovfaret Debrief + Planlegge neste steg
 
 **Medium prioritet (3 stk):**
+
 - `2024-09-03` - Urbania Eiendom - Bærekraft og videre bruk
 - `2025-02-04` - URBANIA samtale med Knut Halvor
 - `2025-03-17` - Status Hovfaret
 
 #### Oppdatert status
 
-| Metrikk | Før | Etter |
-|---------|-----|-------|
-| Antall møter | 60 | **67** |
+| Metrikk        | Før        | Etter          |
+| -------------- | ---------- | -------------- |
+| Antall møter   | 60         | **67**         |
 | Tidligste møte | 2023-06-27 | **2023-11-24** |
-| Dekningsgrad | 51.4% | **~60%** |
+| Dekningsgrad   | 51.4%      | **~60%**       |
 
 #### Ikke lagt til (lav prioritet)
+
 31 kalenderhendelser ble vurdert som lav prioritet:
+
 - Korte telefonsamtaler og prep-møter
 - Reisetid og admin
 - Interne notater og påminnelser
 
 #### Filer modifisert
+
 - `data/meetings.json` - 7 nye møter
 - `STATUS.md` - Phase 15 dokumentert
 - `CHANGELOG.md` - Denne oppføringen
@@ -2555,31 +2760,37 @@ Sammenlignet møtedatabase med eksportert Google Kalender (.ics) fra `gabriel@na
 **Status:** ✅ COMPLETE
 
 #### Problem
+
 Kildefiler med filnavn som `Hovfaret (Dec 3 11.51.35).txt` inneholdt bare måned og dag, ikke årstall. Ved import ble disse feilaktig tolket som desember 2025 (fremtidige datoer).
 
 #### Full Analyse
+
 Kjørte analyseskript på alle 60 møter:
+
 - Identifiserte **2 møter** med fremtidige datoer
 - Verifiserte at ingen andre datoanomalier eksisterte
 - Kronologisk rekkefølge bekreftet
 
 #### Korreksjoner
 
-| ID | Feil dato | Korrekt dato | Møtetittel |
-|----|-----------|--------------|------------|
-| `m_2025-12-03_hovfaret_ncc_ombruk` → `m_2024-12-03_...` | 2025-12-03 | **2024-12-03** | Hovfaret 13 - NCC og ombrukskartlegging |
+| ID                                                          | Feil dato  | Korrekt dato   | Møtetittel                                |
+| ----------------------------------------------------------- | ---------- | -------------- | ----------------------------------------- |
+| `m_2025-12-03_hovfaret_ncc_ombruk` → `m_2024-12-03_...`     | 2025-12-03 | **2024-12-03** | Hovfaret 13 - NCC og ombrukskartlegging   |
 | `m_2025-12-18_trym_vill_energi_tilbud` → `m_2024-12-18_...` | 2025-12-18 | **2024-12-18** | Trym - Vill Energi tilbud og Enova-støtte |
 
 #### Verifisering
+
 - ✅ 0 fremtidige datoer etter korreksjon
 - ✅ 60 møter med gyldige datoer
 - ✅ Kronologisk rekkefølge bekreftet
 
 #### Oppdatert Datoområde
+
 - **Tidligste møte:** 2023-06-27 (strategimøte økologisk restaurering)
 - **Seneste møte:** 2025-10-14 (befaring og prosjektdiskusjon)
 
 #### Filer Modifisert
+
 - `data/meetings.json` - Korrigerte 2 datoer og IDer
 - `STATUS.md` - Dokumentert Phase 14
 - `CHANGELOG.md` - Denne oppføringen
@@ -2596,17 +2807,18 @@ Kjørte analyseskript på alle 60 møter:
 
 Konsolidert v2-dashboards til primære filer:
 
-| Endring | Beskrivelse |
-|---------|-------------|
-| `meetings-v2.html` → `meetings.html` | Ny møteoversikt med rapporter og Google Kalender |
-| `meetings.html` → `meetings-old.html` | Gammel versjon arkivert |
-| `timeline-v2.html` → `timeline.html` | Teknisk tidslinje med full dybde |
-| `timeline.html` → `timeline-old.html` | Gammel versjon arkivert |
-| `index.html` oppdatert | Link endret fra `timeline-v2.html` til `timeline.html` |
+| Endring                               | Beskrivelse                                            |
+| ------------------------------------- | ------------------------------------------------------ |
+| `meetings-v2.html` → `meetings.html`  | Ny møteoversikt med rapporter og Google Kalender       |
+| `meetings.html` → `meetings-old.html` | Gammel versjon arkivert                                |
+| `timeline-v2.html` → `timeline.html`  | Teknisk tidslinje med full dybde                       |
+| `timeline.html` → `timeline-old.html` | Gammel versjon arkivert                                |
+| `index.html` oppdatert                | Link endret fra `timeline-v2.html` til `timeline.html` |
 
 #### Norsk Språk - Full Oversettelse
 
 **index.html (Hjemmeside):**
+
 - "Stakeholder Network" → "Interessentnettverk"
 - "Scenario Comparison" → "Scenariosammenligning"
 - "Meeting Browser" → "Møteoversikt"
@@ -2620,6 +2832,7 @@ Konsolidert v2-dashboards til primære filer:
 - Versjon oppdatert til v2.25
 
 **meetings.html (Møteoversikt):**
+
 - "Meetings" → "Møter"
 - "Total" → "Totalt"
 - "With Reports" → "Med rapporter"
@@ -2647,6 +2860,7 @@ Konsolidert v2-dashboards til primære filer:
 - "Unknown" → "Ukjent", "people" → "personer"
 
 **HTML lang-attributt fikset:**
+
 - `lang="en"` → `lang="no"` på alle 8 HTML-filer:
   - index.html, timeline.html, meetings.html, documents.html
   - stakeholders.html, scenarios.html, sustainability.html, analytics.html
@@ -2654,6 +2868,7 @@ Konsolidert v2-dashboards til primære filer:
 #### Filer Modifisert
 
 **Dashboard HTML-filer (8):**
+
 - `index.html` - Oversettelser + footer + versjon
 - `meetings.html` - Full oversettelse av UI
 - `timeline.html` - lang-attributt
@@ -2664,18 +2879,19 @@ Konsolidert v2-dashboards til primære filer:
 - `analytics.html` - allerede norsk
 
 **Prosjektdokumenter (2):**
+
 - `STATUS.md` - Phase 13 dokumentert
 - `CHANGELOG.md` - Denne oppføringen
 
 #### Statistikk
 
-| Metrikk | Verdi |
-|---------|-------|
-| HTML-filer oppdatert | 8 |
-| Tekster oversatt | ~90 |
-| Filer omdøpt | 4 |
-| Lang-attributter fikset | 4 |
-| Versjon | 2.25.0 |
+| Metrikk                 | Verdi  |
+| ----------------------- | ------ |
+| HTML-filer oppdatert    | 8      |
+| Tekster oversatt        | ~90    |
+| Filer omdøpt            | 4      |
+| Lang-attributter fikset | 4      |
+| Versjon                 | 2.25.0 |
 
 ---
 
@@ -2688,24 +2904,28 @@ Konsolidert v2-dashboards til primære filer:
 #### Fase 12.1: Berike 4 eksisterende møter ✅ COMPLETE
 
 **Møte 1: 2025-01-08 - Strategisk Årsmøte med Knut Halvor**
+
 - Kilde: 24KB transkripsjon
 - 9 temaer, 7 beslutninger, 7 action items
 - 9 diskusjonsseksjoner, 5 sitater
 - Nøkkelfunn: Årsplan 2025, rollefordeling, ESRS-rapportering, Hoffselva biotop
 
 **Møte 2: 2025-05-22 - Presentasjon for Bydelsledere Ullern**
+
 - Kilde: 77KB transkripsjon
 - 9 temaer, 4 beslutninger, 3 action items
 - 8 diskusjonsseksjoner, 5 sitater
 - Nøkkelfunn: Bydelen bekrefter behov, 40% kjøretid hjemmesykepleie, Hoppetomten referanse
 
 **Møte 3: 2025-08-28 - Kort Brief Thomas Thorsnes**
+
 - Kilde: 3KB transkripsjon
 - 4 temaer, 3 beslutninger, 3 action items
 - 4 diskusjonsseksjoner, 4 sitater
 - Nøkkelfunn: Rammesøknad klar, strategisk avslag, kommunens 2-års tidsfrist
 
 **Totalt Fase 12.1:**
+
 - 3 møter fullstendig beriket
 - 22 diskusjonsseksjoner
 - 14 beslutninger dokumentert
@@ -2716,27 +2936,29 @@ Konsolidert v2-dashboards til primære filer:
 #### Nytt kildemateriale identifisert
 
 Analysert nytt arkiv med møtenotater, rapporter og transkripsjoner:
+
 - **Lokasjon:** `/Users/gabrielboen/Downloads/Møter etter prompt Hovfaret 13/`
 - **Totalt:** 33 filer
 
-| Type | Antall | Størrelse |
-|------|--------|-----------|
-| Transkripsjoner (.txt) | 15 | ~300KB |
-| Strukturerte notater (.md) | 8 | ~100KB |
-| PDF rapporter | 8 | ~1.1MB |
-| Word dokument (.docx) | 1 | ~21KB |
+| Type                       | Antall | Størrelse |
+| -------------------------- | ------ | --------- |
+| Transkripsjoner (.txt)     | 15     | ~300KB    |
+| Strukturerte notater (.md) | 8      | ~100KB    |
+| PDF rapporter              | 8      | ~1.1MB    |
+| Word dokument (.docx)      | 1      | ~21KB     |
 
 #### Matching mot eksisterende database
 
-| Kategori | Antall |
-|----------|--------|
-| Eksakte matcher (dato finnes) | 4 møter |
-| Nye datoer (må opprettes) | 11 møter |
-| Filer med ukjent dato | 15 filer |
+| Kategori                      | Antall   |
+| ----------------------------- | -------- |
+| Eksakte matcher (dato finnes) | 4 møter  |
+| Nye datoer (må opprettes)     | 11 møter |
+| Filer med ukjent dato         | 15 filer |
 
 #### Arbeidsplan etablert
 
 **Fase 12.1: Berike 4 eksisterende møter**
+
 1. 2024-03-11 - MØTE 11 MARS 2024 (har rapport, verifisere)
 2. 2025-01-08 - Intern prat Knut Halvor (24KB transkripsjon) ⚠️
 3. 2025-05-22 - Bydelsledere Ullern (77KB transkripsjon) ⚠️
@@ -2745,51 +2967,61 @@ Analysert nytt arkiv med møtenotater, rapporter og transkripsjoner:
 #### Fase 12.2: Opprette nye møter ✅ COMPLETE
 
 **Møte 4: 2025-04-29 - Trym Vill Energi**
+
 - Kilde: 7KB transkripsjon
 - Tema: Energirapport, klimagassberegning, one-pager strategi
 - Nøkkelfunn: Kobling mellom energiklasse og rivekrav-argumentasjon
 
 **Møte 5: 2025-05-06 - Jan Thomas NCC + Andreas**
+
 - Kilde: 29KB + 4KB transkripsjoner
 - Tema: Nordic Circle Construction, sirkulære løsninger, Omsorg+-krav
 - Nøkkelfunn: Andreas vil ha "reell bærekraft", ikke merkelapper
 
 **Møte 6: 2025-05-21 - Bærekraftsrapport ESRS**
+
 - Kilde: 8KB markdown
 - Tema: Rapportstruktur, ESRS-inspirasjon, scenarioanalyse
 - Nøkkelfunn: Rapport endret fra ESRS til bærekraftsvurdering
 
 **Møte 7: 2025-08-29 - Bærekraft + KOMS**
+
 - Kilde: 7KB + 16KB transkripsjoner
 - Tema: Rapportstatus, kommunikasjon, nettside, Instagram
 - Nøkkelfunn: Prosjektet i mellomfase, kommunikasjon utfordrende
 
 **Møte 8: 2025-09-02 - Andreas + Einar stedsøkonomi**
+
 - Kilde: 3KB + 5KB transkripsjoner
 - Tema: Takstmann, inntektsprognose, studiekontorkonsept
 - Nøkkelfunn: Studiokontorer kan doble inntekt per kvm
 
 **Møte 9: 2025-09-27 - Urbania Konseptworkshop R21** ⭐ NØKKELMØTE
+
 - Kilde: 57KB transkripsjon
 - Tema: Fire scenarier, arkitektur, energi, Husbanken, økonomi
 - Nøkkelfunn: Elegant formløsning med inntrukket påbygg valgt
 
 **Møte 10: 2025-10-14 - Hovfaret befaring**
+
 - Kilde: 35KB transkripsjon
 - Tema: Bygningsbefaring, leietakere, filosofi, konkurrenter
 - Nøkkelfunn: Bygget "dødt", behov for aktivering
 
 **Møte 11: 2025-12-03 - NCC og ombruk**
+
 - Kilde: 3KB transkripsjon
 - Tema: Nordic Circle, ombrukskartlegging, lab-leietaker
 - Nøkkelfunn: Ombrukskartlegging neste prioritet
 
 **Møte 12: 2025-12-18 - Vill Energi tilbud**
+
 - Kilde: 2KB transkripsjon
 - Tema: Tilbud, Enova-støtte, prising
 - Nøkkelfunn: Enova kan dekke energikartlegging
 
 **Totalt Fase 12.2:**
+
 - 9 nye møter opprettet med fullstendige rapporter
 - ~200KB transkripsjon analysert
 - 2 PDF-filer (2024-09-16, 2025-03-28) utsatt til Fase 12.3
@@ -2798,31 +3030,37 @@ Analysert nytt arkiv med møtenotater, rapporter og transkripsjoner:
 #### Fase 12.3: Analysere filer med ukjent dato ✅ COMPLETE
 
 **Møte 13: 2023-06-27 - Strategimøte økologisk restaurering** ⭐ TIDLIGSTE
+
 - Kilde: 16KB markdown (Mtereferat---Hovfaret-13.md)
 - Tema: Økologisk restaurering, sirkulær stedsutvikling, rivningsvedtak
 - Nøkkelfunn: Første dokumenterte strategimøte - etablerer grunnprinsipper
 
 **Møte 14: 2024-06-27 - Sirkulær økonomi strategi**
+
 - Kilde: 2KB + 4KB markdown
 - Tema: 11 strategiske punkter, 4 slides om sirkulær stedsutvikling
 - Nøkkelfunn: Konkret innhold til konseptskisse utviklet
 
 **Møte 15: 2025-03-04 - Trym/Einar Vill Energi teknisk**
+
 - Kilde: 10KB markdown
 - Tema: Energikartlegging, klimagassregnskap, tre scenarier
 - Nøkkelfunn: Taksonomi-rapport droppes - lager intern vurdering
 
 **Møte 16: 2025-03-07 - Urbania prosess workshop** ⭐ STORT
+
 - Kilde: 55KB markdown (største transkripsjon!)
 - Tema: Dispensasjonsstrategi, leietakerdialog, grønnvasking
 - Nøkkelfunn: KPA §6 som alternativ til ren dispensasjon
 
 **Møte 17: 2025-08-22 - Andreas energiklassifisering**
+
 - Kilde: 3 duplikatfiler konsolidert
 - Tema: Grønn belåning, faktisk vs beregnet energi
 - Nøkkelfunn: Bygget bruker mindre energi enn nyere bygg
 
 **Totalt Fase 12.3:**
+
 - 5 nye møter opprettet fra ukjent-dato filer
 - Eldste møte oppdaget: 2023-06-27
 - 3 duplikatfiler håndtert (konsolidert til 1)
@@ -2831,20 +3069,21 @@ Analysert nytt arkiv med møtenotater, rapporter og transkripsjoner:
 
 #### Phase 12 Totalt
 
-| Metrikk | Verdi |
-|---------|-------|
-| Møter i database | 60 (opp fra 46) |
-| Nye møter opprettet | 14 |
-| Møter beriket | 3 |
-| Transkripsjoner analysert | ~300KB |
-| Tidsrom | 2023-06-27 → 2025-12-18 |
-| Sitater ekstrahert | 40+ |
-| Beslutninger dokumentert | 50+ |
-| Action items identifisert | 60+ |
+| Metrikk                   | Verdi                   |
+| ------------------------- | ----------------------- |
+| Møter i database          | 60 (opp fra 46)         |
+| Nye møter opprettet       | 14                      |
+| Møter beriket             | 3                       |
+| Transkripsjoner analysert | ~300KB                  |
+| Tidsrom                   | 2023-06-27 → 2025-12-18 |
+| Sitater ekstrahert        | 40+                     |
+| Beslutninger dokumentert  | 50+                     |
+| Action items identifisert | 60+                     |
 
 #### Rapportstandard definert
 
 Hver møterapport skal inneholde:
+
 ```
 1. Executive Summary (5-8 setninger)
 2. Møteinformasjon (dato, type, lokasjon, varighet)
@@ -2876,18 +3115,21 @@ Hver møterapport skal inneholde:
 #### Google Calendar Integration:
 
 **Features Implemented:**
+
 - Embedded Google Calendar in meeting detail view
 - AGENDA mode showing only events for the specific meeting date
 - "Open in Google Calendar" button linking directly to the date
 - Automatic date formatting for calendar URLs
 
 **Technical Implementation:**
+
 - `getCalendarEmbedUrl(dateStr)` - Generates embed URL with AGENDA mode
 - `getCalendarSearchUrl(dateStr, title)` - Creates direct calendar link
 - CSS styling for calendar container (300px height, responsive)
 - Calendar ID configurable (default: gabriel@naturalstate.no)
 
 **Calendar Embed Parameters:**
+
 - mode=AGENDA (clean list view)
 - dates=YYYYMMDD/YYYYMMDD (single day)
 - showTitle=0, showNav=0, showTabs=0 (minimal UI)
@@ -2897,11 +3139,12 @@ Hver møterapport skal inneholde:
 
 **Problem Solved:**
 Meeting "Energikartlegging Hovfaret 13 - Avklaringer" (2025-08-25) had placeholder text:
-*"[Dette notatet er automatisk prosessert og krever manuell redigering]"*
+_"[Dette notatet er automatisk prosessert og krever manuell redigering]"_
 
 Source was a 32,000 character automatic speech-to-text transcription that was fragmented and difficult to read.
 
 **AI Analysis Results:**
+
 - Extracted 5 main discussion topics:
   1. Vill Energi-rapporten og dens politiske formål
   2. Omsorg+ som alternativt bruksformål
@@ -2927,12 +3170,14 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - Extracted 3 key quotes from discussion
 
 **Files Updated:**
+
 - `data/meetings.json` - Meeting enriched with full report data
 - `data/polished_notes/2025_08_25_*.md` - Replaced placeholder with structured content
 
 #### Files Modified:
 
 **dashboard/meetings-v2.html:**
+
 - Added Google Calendar CSS styles (~80 lines)
 - Added Google Calendar section in renderMeetingDetail()
 - Added getCalendarEmbedUrl() function
@@ -2940,18 +3185,21 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - Added GOOGLE_CALENDAR_ID constant
 
 **data/meetings.json:**
+
 - Updated meeting m_2025-08-25_energikartlegging with:
   - 5 topics_discussed
   - 4 decisions
   - 7 action_items (with task/responsible structure)
   - Full report object with summary, discussion, quotes, context
 
-**data/polished_notes/2025_08_25_*.md:**
+**data/polished*notes/2025_08_25*\*.md:**
+
 - Complete rewrite from placeholder to structured meeting notes
 - Professional markdown formatting
 - All sections populated with analyzed content
 
 #### Statistics:
+
 - Meetings with Google Calendar integration: All (46 meetings)
 - Meetings enriched this session: 1
 - Transcript analyzed: 32,131 characters
@@ -2960,6 +3208,7 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - Action items created: 7
 
 #### User Experience:
+
 - Users can now see Google Calendar events for any meeting date
 - Cross-reference original calendar invites with enriched meeting data
 - One-click navigation to Google Calendar
@@ -2976,12 +3225,14 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 #### Technical Theme Family:
 
 **Fire Technical Variasjoner (basert på samme designspråk):**
+
 - **Technical Dark** 🌙 - Original mørkt tema (mørkest)
 - **Technical Dusk** 🌆 ⭐ Standard - 20% lysere (subtil, behagelig)
 - **Technical Twilight** 🌇 - 40% lysere (merkbar lysning)
 - **Technical Day** 🌄 - 60% lysere (betydelig lysere)
 
 **Alle temaene:**
+
 - Beholder Technical Dark's designspråk og hierarki
 - Samme accent-farger (#58a6ff blå)
 - Samme typografi og spacing
@@ -3000,12 +3251,14 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 #### Theme System Features:
 
 **1. Fire Fargetemaer (erstattet i v2.22):**
+
 - **Technical Dark** - Opprinnelig mørkt tema (power user fokus)
 - **Balanced** - Moderne balansert tema (lys blågrå)
 - **Clean Light** - Klassisk lyst tema (maksimal klarhet)
 - **Warm Light** - Varmt lyst tema (beige/sand toner)
 
 **2. Theme Switcher Komponent (`js/theme-switcher.js`):**
+
 - Automatisk lasting av tema fra localStorage
 - Dropdown selector i navigasjonsbaren (alle dashboards)
 - Real-time theme bytte uten page reload
@@ -3013,12 +3266,14 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - Emoji-ikoner for hvert tema (🌙 ⚖️ ☀️ 🌅)
 
 **3. CSS Skin Files:**
+
 - `skins/technical.css` - Mørkt tema (eksisterende)
 - `skins/balanced.css` - Balansert lyst tema (NY)
 - `skins/clean-light.css` - Klassisk lyst tema (NY)
 - `skins/warm-light.css` - Varmt lyst tema (NY)
 
 **4. Updated Dashboards (8 filer):**
+
 - index.html - Lagt til navigation bar for theme switcher
 - overview.html
 - timeline-v2.html
@@ -3029,11 +3284,13 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - sustainability.html
 
 **Alle dashboards:**
+
 - Fjernet hardkodet link til technical.css
 - Lagt til theme-switcher.js script
 - Theme lastes dynamisk basert på brukervalg
 
 **Technical Details:**
+
 - Default theme: "balanced" (anbefalt for de fleste brukere)
 - localStorage key: "hovfaret-theme"
 - Theme injiseres i <head> via JavaScript
@@ -3060,40 +3317,47 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 **Features Implementert:**
 
 **1. Hero Section med Hovedbudskap:**
+
 - Fremhevet -48% CO₂ besparelse
 - 4 nøkkel-statistikker (2,500+ tonn spart, -80% material, -85% avfall, 50% energi)
 - ESRS compliance badge
 
 **2. Scenariosammenligning (3 kort):**
+
 - Scenario 1: Nybygg og riving (❌ Ikke anbefalt)
 - Scenario 2: Rehabilitering (Anbefalt baseline)
 - Scenario 3: Påbygg (⭐ Foretrukket - maksimal samfunnsnytte)
 - Hver med CO₂, materialutslipp og energiforbruk
 
 **3. Klimapåvirkning Visualiseringer:**
+
 - Bar chart: CO₂-utslipp per m² for alle 3 scenarier
 - Bar chart: Materialutslipp vs Energiutslipp fordeling
 - Fargekoding: Rød (riving), Grønn (rehabilitering), Oransje (påbygg)
 - Prosentvise besparelser vist direkte i grafene
 
 **4. Sirkulær Økonomi Seksjonen:**
+
 - 85% avfallsreduksjon (500-1,000 vs 5,000-7,000 tonn)
 - 100% materialgjenbruk av bærende konstruksjoner
 - Innbygget karbon bevart
 
 **5. Energiytelse:**
+
 - Nåværende: F rating (232 kWh/m²/år)
 - Målsetting: C/B rating (116 kWh/m²/år)
 - 50% energiforbedring
 - 588k+ NOK årlige besparelser
 
 **6. Miljøfordeler:**
+
 - Beskytter Hoffselva elveøkosystem
 - Grønn infrastruktur (grønt tak, regnhager)
 - Biologisk mangfold (pollinator-vennlige beplantninger)
 - Redusert byggeplass og byggetid
 
 **7. ESRS Samsvar:**
+
 - ESRS E1: Klimaendring (LCA-analyse)
 - ESRS E4: Biologisk Mangfold (Hoffselva vurdering)
 - ESRS E5: Ressursbruk og Sirkulær Økonomi
@@ -3124,6 +3388,7 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - Responsive design for mobile
 
 **Homepage Updated:**
+
 - Bærekraftsrapport card: "Kommer snart" → "Tilgjengelig"
 - Stats oppdatert: -48% CO₂, -80% Material, -85% Avfall
 - Version bumped: v2.19 → v2.20
@@ -3143,6 +3408,7 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 #### Oversatte Filer:
 
 **HTML Dashboards (7 filer):**
+
 - `dashboard/index.html` - Hjemmeside med alle kort
 - `dashboard/overview.html` - Prosjektoversikt med handlingspunkter
 - `dashboard/timeline-v2.html` - Prosjekttidslinje
@@ -3154,16 +3420,19 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 #### Oversettelser Totalt:
 
 **Fase 1 (Kritisk):**
+
 - `overview.html`: ~15 strenger (status badges, tabs, labels)
 - `index.html`: ~35 strenger (kortitler, badges, stats)
 
 **Fase 2 (Hoveddashboards):**
+
 - `timeline-v2.html`: ~25 strenger (header, filters, buttons)
 - `documents.html`: ~25 strenger (search, filters, empty states)
 - `stakeholders.html`: ~20 strenger (tabs, filters, messages)
 - `meetings.html`: ~30 strenger (tabs, filters, stats)
 
 **Fase 3 (Sekundært):**
+
 - `scenarios.html`: ~15 strenger (headers, loading states)
 
 **Total: ~165 strenger oversatt**
@@ -3171,6 +3440,7 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 #### Nøkkeloversettelser:
 
 **Navigasjon:**
+
 - "Project Timeline" → "Prosjekttidslinje"
 - "Document Explorer" → "Dokumentutforsker"
 - "Stakeholder Network" → "Interessentnettwerk"
@@ -3178,24 +3448,28 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - "Scenario Comparison" → "Scenariosammenligning"
 
 **Filter & Søk:**
+
 - "Search..." → "Søk..."
 - "All Categories" → "Alle Kategorier"
 - "Sort: Newest First" → "Sorter: Nyeste først"
 - "Clear Filters" → "Nullstill Filtre"
 
 **Status & Meldinger:**
+
 - "Loading..." → "Laster..."
 - "Error loading data" → "Feil ved lasting av data"
 - "No results found" → "Ingen resultater funnet"
 - "Showing X of Y" → "Viser X av Y"
 
 **Tabs & Kategorier:**
+
 - "People / Organizations" → "Personer / Organisasjoner"
 - "Past / Upcoming" → "Avholdte / Kommende"
 - "Action Items" → "Handlingspunkter"
 - "All Meetings" → "Alle Møter"
 
 **Status Badges:**
+
 - "Available" → "Tilgjengelig"
 - "Coming Soon" → "Kommer snart"
 - "pending" → "venter"
@@ -3221,12 +3495,14 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 **Issue:** Navigation bar was not appearing on overview.html page.
 
 **Fix:**
+
 - Added `onload` callback to navigation script loading
 - Now calls `Navigation.inject('Prosjektoversikt')` after script loads
 - Navigation bar now appears with home link (🏗️ Hovfaret 13 → Prosjektoversikt)
 - Cache-busting parameter added to data-loader.js (`?v=2.18.0`)
 
 **Files Modified:**
+
 - `dashboard/overview.html` - Added navigation injection callback
 
 ## [2.18.0] - 2025-11-22
@@ -3238,12 +3514,14 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 #### New Features:
 
 **1. Project Health Indicators (4 cards):**
+
 - Møtefrekvens - Meetings per month (last 6 months)
 - Dokumentasjon - Coverage percentage
 - Beslutningshastighet - Decisions per meeting
 - Handlingssporing - Meetings with action items percentage
 
 **2. Key Statistics (8 metrics):**
+
 - Total møter, avholdte, kommende
 - Total beslutninger, action items
 - Dokumenter count
@@ -3251,24 +3529,28 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - Organisasjoner count
 
 **3. Recent Activity Timeline:**
+
 - Last 15 activities (meetings, decisions, actions)
 - Color-coded by type
 - Chronological display with dates
 - Interactive hover states
 
 **4. Decision Tracker:**
+
 - All decisions across all meetings
 - Source meeting and date
 - Searchable and filterable
 - Grouped by meeting
 
 **5. Action Items Tracker:**
+
 - All action items from all meetings
 - Status indicators (pending, overdue, due-today)
 - Responsible person and deadline
 - Color-coded by urgency
 
 **6. Stakeholder Engagement:**
+
 - Top 12 most active participants
 - Meeting count per person
 - Last meeting date
@@ -3276,6 +3558,7 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - Visual avatars with initials
 
 **7. Tabs Interface:**
+
 - Toggle between Decisions and Action Items
 - Clean navigation
 - Persistent state
@@ -3283,6 +3566,7 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 #### Technical Implementation:
 
 **Data Extraction Functions (`lib/data-loader.js`):**
+
 - `extractAllDecisions()` - Extract decisions with context
 - `extractAllActionItems()` - Extract actions with status
 - `calculateMeetingStats()` - Comprehensive meeting statistics
@@ -3293,6 +3577,7 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - `inferActionStatus()` - Infer action status from deadline
 
 **New Dashboard (`dashboard/overview.html`):**
+
 - Full-featured overview dashboard
 - Responsive grid layouts
 - Interactive elements
@@ -3300,11 +3585,13 @@ Source was a 32,000 character automatic speech-to-text transcription that was fr
 - Lucide icons integration
 
 **Updated Homepage (`dashboard/index.html`):**
+
 - Added "Prosjektoversikt" card (first position)
 - Stats: 45 meetings, 23 with reports
 - Changed Scenario Comparison icon (📊 → ♻️)
 
 #### Statistics:
+
 - 45 total meetings analyzed
 - 23 with embedded reports (51%)
 - 8 unique data extraction functions
@@ -3324,6 +3611,7 @@ Complete project status visibility in one dashboard. Executives and project mana
 #### Visual Enhancements:
 
 **1. Summary Box:**
+
 - Increased background gradient opacity for more prominence (25% → 15%)
 - Enhanced border (4px → 5px)
 - Added box shadow with green glow (4px 12px blur)
@@ -3333,6 +3621,7 @@ Complete project status visibility in one dashboard. Executives and project mana
 - Better line height (1.8) for readability
 
 **2. Expandable Sections:**
+
 - Enhanced border styling (1.5px, higher opacity)
 - Added backdrop blur for modern glass effect
 - Improved hover: slides right 4px with green border glow
@@ -3342,6 +3631,7 @@ Complete project status visibility in one dashboard. Executives and project mana
 - Smoother cubic-bezier animations (0.4s duration)
 
 **3. Discussion Sections:**
+
 - Added separator lines between subsections
 - Arrow prefix (→) before each heading
 - Better spacing: 2rem bottom margin, 1.5rem padding
@@ -3349,6 +3639,7 @@ Complete project status visibility in one dashboard. Executives and project mana
 - Optimized line height (1.85) for long text
 
 **4. Decisions List:**
+
 - Gradient backgrounds on each item
 - Animated checkmark (✓) that slides in on hover
 - Items slide right 4px on hover with shadow
@@ -3356,6 +3647,7 @@ Complete project status visibility in one dashboard. Executives and project mana
 - Enhanced line height (1.75)
 
 **5. Action Items:**
+
 - Gradient border effect on left edge
 - Orange color scheme with hover brightening
 - Improved task typography (font-weight 600)
@@ -3363,6 +3655,7 @@ Complete project status visibility in one dashboard. Executives and project mana
 - Hover: slides right with orange shadow
 
 **6. Quotes:**
+
 - Large decorative quotation mark (3rem Georgia serif)
 - Gradient background with purple accent
 - Improved padding and border radius
@@ -3370,18 +3663,21 @@ Complete project status visibility in one dashboard. Executives and project mana
 - Better line height (1.8) for readability
 
 **7. Responsive Design:**
+
 - Maintained all enhancements on mobile
 - Scaled font sizes appropriately
 - Adjusted padding for smaller screens
 - Smaller decorative quote mark on mobile
 
 #### Typography Improvements:
+
 - Increased font weights (600-700) for better hierarchy
 - Optimized line heights (1.75-1.85) for readability
 - Tighter letter-spacing (-0.01em) for modern look
 - Better font size progression (0.9375rem → 1.125rem)
 
 #### Animation Improvements:
+
 - Cubic-bezier easing for professional feel
 - Consistent 0.3s transitions
 - Transform effects (translateX, translateY)
@@ -3389,6 +3685,7 @@ Complete project status visibility in one dashboard. Executives and project mana
 - Shadow transitions
 
 #### Color Enhancements:
+
 - Increased opacity for better contrast
 - Vibrant accent colors on hover
 - Gradient backgrounds instead of flat colors
@@ -3406,6 +3703,7 @@ Meeting notes now have enterprise-grade visual design that "pops" while maintain
 #### What Was Done:
 
 **1. Updated Renderer (`dashboard/lib/renderer.js`):**
+
 - Removed "Read Full Report" button functionality
 - Added embedded report rendering directly in meeting cards
 - Implemented expandable sections for:
@@ -3418,6 +3716,7 @@ Meeting notes now have enterprise-grade visual design that "pops" while maintain
 - Added `toggleReportSection()` function for expand/collapse
 
 **2. Created CSS Styling (`dashboard/styles/embedded-reports.css`):**
+
 - Green gradient for summary section
 - Expandable sections with smooth animations
 - Color-coded sections:
@@ -3430,12 +3729,14 @@ Meeting notes now have enterprise-grade visual design that "pops" while maintain
 - Hover effects and transitions
 
 **3. Updated Meeting Browser (`dashboard/meetings.html`):**
+
 - Linked new CSS file
 - Ready to display embedded reports
 
 #### Statistics:
 
 **Meetings with Embedded Reports: 23 of 45**
+
 - With summary: 23
 - With discussion: 23
 - With decisions: 8
@@ -3444,6 +3745,7 @@ Meeting notes now have enterprise-grade visual design that "pops" while maintain
 - With context: 7
 
 #### Status:
+
 ✅ **COMPLETE** - Embedded reports now render inline in meeting cards with expandable sections.
 
 ## [2.15.0] - 2025-11-22
@@ -3455,17 +3757,20 @@ Meeting notes now have enterprise-grade visual design that "pops" while maintain
 #### Automated Meeting Note Rewriting:
 
 **Scripts Created:**
+
 - `scripts/rewrite-meeting-notes.py` - LLM-based rewriting with project context
 - `scripts/update-meetings-with-polished-notes.py` - Links polished notes to meetings.json
 - `REWRITE_INSTRUCTIONS.md` - Comprehensive rewriting instructions
 
 **Agent Processing:**
+
 - Used Task tool with general-purpose agent for batch processing
 - Agent rewrote all 24 meeting notes with full project context
 - 3 meetings received full manual polish (high quality)
 - 21 meetings received solid structure (ready for use)
 
 **Polished Note Features:**
+
 - Professional 2-3 sentence summary
 - Structured discussion sections
 - Extracted decisions and action items
@@ -3474,6 +3779,7 @@ Meeting notes now have enterprise-grade visual design that "pops" while maintain
 - Consistent markdown formatting
 
 **Data Updates:**
+
 - `data/polished_notes/` - 24 new polished meeting notes
 - `data/meetings.json` - 23 meetings linked to polished notes
 - New `report_metadata.polished` flag for identification
@@ -3481,6 +3787,7 @@ Meeting notes now have enterprise-grade visual design that "pops" while maintain
 #### Dashboard Integration:
 
 **renderer.js Updates:**
+
 - New `openPolishedNote()` function
 - Beautiful green gradient badge for polished reports
 - "Read Full Report" button with hover effects
@@ -3488,6 +3795,7 @@ Meeting notes now have enterprise-grade visual design that "pops" while maintain
 - Responsive design with Lucide icons
 
 **Visual Design:**
+
 ```
 Green gradient box (#10B981 to #059669)
 White "Read Full Report" button
@@ -3497,28 +3805,33 @@ Smooth hover animations
 ```
 
 **User Experience:**
+
 - Meetings with polished notes clearly identified
 - One-click access to professional reports
 - Opens in optimized window (900x800)
 - Maintains scroll position in main dashboard
 
 **Analysis Reports:**
+
 - `MØTENOTATER_RENSKRIVNING_RAPPORT.md` - Complete rewriting report
 - `analysis/IMPLEMENTATION_COMPLETE.md` - Full implementation summary
 
 **Key Achievements:**
+
 - ✅ All 24 meeting notes rewritten with LLM
 - ✅ Integrated into dashboard with beautiful UI
 - ✅ 51% of all meetings (23/45) now have polished notes
 - ✅ Professional quality matching enterprise standards
 
 **Quality Metrics:**
+
 - Original: 6,620 lines total
 - Polished: 4,105 lines total
 - Improvement: 38% better structure
 - Average: ~170 lines per polished note
 
 **Example High-Quality Note:**
+
 - Meeting: 2024-03-11 First Strategy Meeting
 - Length: 1,840 words
 - Sections: 8 (Summary, Discussion, Decisions, Actions, Quotes, Context)
@@ -3527,6 +3840,7 @@ Smooth hover animations
 - Context: Links meeting to 18-month project timeline
 
 **Next Steps (Optional):**
+
 - Polish remaining 21 notes to high-quality standard
 - Add search functionality for polished notes
 - Create PDF export capability
@@ -3540,6 +3854,7 @@ Smooth hover animations
 #### Completed Trinn 2 (Step 2) - Automated Quality Assurance:
 
 **Scripts Created:**
+
 - `scripts/assign-meeting-dates.py` - Intelligent date assignment:
   - Extracts dates from Norwegian filenames (multiple patterns)
   - Searches file content for explicit dates
@@ -3555,6 +3870,7 @@ Smooth hover animations
   - Generated comprehensive duplicate analysis
 
 **Analysis Reports:**
+
 - `analysis/date_assignment_report.md`:
   - All 8 new meetings now have dates
   - Confidence levels for each assignment (high/medium)
@@ -3575,6 +3891,7 @@ Smooth hover animations
   - Success criteria tracking
 
 **Updated Files:**
+
 - `data/meetings.json`:
   - 7 meetings received auto-assigned dates
   - All 45 meetings now have dates
@@ -3587,17 +3904,20 @@ Smooth hover animations
   - Added references to new analysis reports
 
 **Key Achievements:**
+
 - ✅ All meetings now have dates (45/45)
 - ✅ Identified all duplicate meetings
 - ✅ Created merge recommendations with confidence scores
 - ✅ Generated comprehensive documentation
 
 **Data Quality:**
+
 - Meetings with dates: 0 → 7 (new) + 38 (existing) = 45/45 (100%)
 - Duplicates identified: 3 clear + 2 potential = 5 dates
 - Estimated meetings after merge: 39-41 (from 45)
 
 **Next Steps (Manual Work Required):**
+
 - Merge 3 clear duplicate meetings
 - Review 2 dates with potential duplicates (7 meetings)
 - Verify estimated years with calendar/email
@@ -3613,6 +3933,7 @@ Smooth hover animations
 #### Created Meeting Report Analysis Infrastructure:
 
 **Analysis Scripts:**
+
 - `scripts/analyze-meeting-reports.py` - Automated report analysis:
   - Scans extraction-cache for meeting report JSON files
   - Extracts dates from filenames (Norwegian date patterns)
@@ -3630,6 +3951,7 @@ Smooth hover animations
   - Creates backup before modifying meetings.json
 
 **Analysis Reports:**
+
 - `analysis/meeting_reports_coverage.md`:
   - Coverage statistics: 24/37 meetings (64.9%)
   - List of meetings with reports
@@ -3653,6 +3975,7 @@ Smooth hover animations
 #### Enhanced meetings.json:
 
 **Added Fields to 24 Meetings:**
+
 - `action_items[]` - Extracted action items from report
 - `topics_discussed[]` - Discussion topics identified
 - `decisions[]` - Decisions made in meeting
@@ -3664,6 +3987,7 @@ Smooth hover animations
   - `extraction_date` - When report was extracted
 
 **Updated Metadata:**
+
 - Added `last_enrichment` to metadata:
   - Timestamp: 2025-11-22
   - Count: 24 meetings enriched
@@ -3672,6 +3996,7 @@ Smooth hover animations
 #### Enhanced Meeting Dashboard:
 
 **Updated renderer.js:**
+
 - Added report detection flags (hasReport, hasActionItems, hasDecisions)
 - Green file-text icon indicator for meetings with reports
 - New meeting body sections:
@@ -3686,6 +4011,7 @@ Smooth hover animations
 - All sections use Lucide SVG icons
 
 **Visual Enhancements:**
+
 - Report indicator in meeting header (green color)
 - Organized sections with icon headers
 - Responsive layout for report data
@@ -3694,6 +4020,7 @@ Smooth hover animations
 #### Icon System Upgrade - Lucide Icons:
 
 **Why Lucide:**
+
 - Professional SVG icons (no more emoji)
 - Consistent design language across dashboard
 - Crisp rendering at any size
@@ -3701,6 +4028,7 @@ Smooth hover animations
 - 1000+ icons available
 
 **Updated All Helper Modules:**
+
 - `dashboard/lib/stakeholder-helpers.js`:
   - Person categories: star, users, user-check, etc.
   - Organization types: building-2, briefcase, flask, etc.
@@ -3723,6 +4051,7 @@ Smooth hover animations
   - Status indicators
 
 **Updated renderer.js:**
+
 - Converted all icon references from emoji to Lucide names
 - Updated all render functions:
   - renderEventCard() - 13 icon types
@@ -3734,6 +4063,7 @@ Smooth hover animations
   - renderComparisonChart() - chart icons
 
 **Updated All HTML Dashboards:**
+
 - Added Lucide CDN script: `<script src="https://unpkg.com/lucide@latest"></script>`
 - Added icon initialization on page load
 - Added initialization after dynamic content renders
@@ -3746,29 +4076,35 @@ Smooth hover animations
   - scenarios.html
 
 **Icon Usage Pattern:**
+
 ```html
 <!-- Old: -->
 <span>🚀</span>
 
 <!-- New: -->
 <i data-lucide="rocket" class="icon-md"></i>
-<script>lucide.createIcons();</script>
+<script>
+  lucide.createIcons();
+</script>
 ```
 
 #### Coverage Statistics:
 
 **Meeting Reports:**
+
 - Total meetings: 37
 - With reports: 24 (64.9%)
 - Without reports: 13 (35.1%)
 - Extraction cache files analyzed: 66
 
 **Quality Assessment:**
+
 - Approved quality (≥70): 6 meetings
 - Needs review (<70): 18 meetings
 - Average quality score: 67.5/100
 
 **Data Extracted:**
+
 - Action items: Varies (0-1 per meeting)
 - Topics discussed: Mostly empty (extraction quality issue)
 - Decisions: Mostly empty (extraction quality issue)
@@ -3779,12 +4115,14 @@ Smooth hover animations
 #### Technical Implementation:
 
 **Norwegian Date Parsing:**
+
 - Patterns: "11 MARS 2024", "03.06.2026", "15 okt 24", "2024-03-11"
 - Month name conversion: januar → 01, mars → 03, etc.
 - Year normalization: '24 → '2024
 - Date validation and ISO formatting
 
 **Quality Scoring Algorithm:**
+
 - Base score: 100
 - -10 for no action items
 - -15 for no topics discussed
@@ -3795,6 +4133,7 @@ Smooth hover animations
 - Participant overlap check (warning only)
 
 **File Safety:**
+
 - Automatic backup: meetings.backup.json created before modification
 - JSON validation throughout
 - Error handling for corrupt files
@@ -3803,6 +4142,7 @@ Smooth hover animations
 #### User Experience:
 
 **Meeting Dashboard:**
+
 - Green file-text icon shows which meetings have reports
 - Click meeting card to expand
 - See report metadata, action items, decisions
@@ -3810,6 +4150,7 @@ Smooth hover animations
 - Visual distinction between meetings with/without reports
 
 **Analysis Reports:**
+
 - Clear Markdown formatting for human review
 - Statistics at top (coverage %)
 - Categorized sections (With Reports / Without Reports)
@@ -3819,6 +4160,7 @@ Smooth hover animations
 #### Files Modified:
 
 **New Files:**
+
 - scripts/analyze-meeting-reports.py (347 lines)
 - scripts/enrich-meetings-with-reports.py (386 lines)
 - analysis/meeting_reports_coverage.md
@@ -3828,6 +4170,7 @@ Smooth hover animations
 - data/meetings.backup.json (backup)
 
 **Modified Files:**
+
 - data/meetings.json (24 meetings enriched)
 - dashboard/lib/renderer.js (meeting card enhancements + full icon conversion)
 - dashboard/lib/stakeholder-helpers.js (icon names)
@@ -3847,6 +4190,7 @@ Smooth hover animations
 #### Next Steps:
 
 **Potential Improvements:**
+
 1. Re-extract meeting reports with better structure parsing
 2. Manual enrichment of the 18 low-quality meetings
 3. Add meeting report upload/edit functionality
@@ -3854,11 +4198,13 @@ Smooth hover animations
 5. Add meeting report preview/viewer in dashboard
 
 **Data Quality:**
+
 - 13 meetings still lack reports - could be found or created
 - 52 duplicate extraction files could be cleaned up
 - Better action item / topic extraction would improve quality scores
 
 **Dashboard Features:**
+
 - Visual timeline integration (show meetings on timeline)
 - Cross-reference to documents mentioned in reports
 - Export meeting data to various formats
@@ -3868,6 +4214,7 @@ Smooth hover animations
 This release delivers comprehensive meeting report integration with automated extraction, quality assurance, and dashboard visualization. The addition of Lucide Icons elevates the visual professionalism across all 6 dashboards. Meeting data is now significantly richer with 24 meetings having full report metadata, action items, decisions, and source links.
 
 **Impact:**
+
 - 64.9% of meetings now have structured report data
 - All dashboards have professional SVG icons
 - Quality assurance process ensures data integrity
@@ -3883,6 +4230,7 @@ This release delivers comprehensive meeting report integration with automated ex
 #### Created Scenario Comparison Infrastructure:
 
 **Core Modules:**
+
 - `dashboard/lib/scenario-helpers.js` - NEW utility module:
   - Scenario metadata (3 scenarios: Demolition, Rehabilitation, Rehabilitation+Extension)
   - Comparison metrics (CO₂ total, CO₂ per m², material emissions, energy)
@@ -3896,6 +4244,7 @@ This release delivers comprehensive meeting report integration with automated ex
   - SVG icons (chart, comparison, winner, info)
 
 **Extended Existing Modules:**
+
 - `dashboard/lib/data-loader.js` - Added 8 scenario functions:
   - getScenarios() - Extract scenarios from project data
   - getScenarioById() - Find scenario by ID
@@ -3912,6 +4261,7 @@ This release delivers comprehensive meeting report integration with automated ex
   - renderScenarioGrid() - Grid layout for all scenarios
 
 **Main Dashboard:**
+
 - `dashboard/scenarios.html` - Interactive scenario comparison:
   - Hero section with scenario count and preferred scenario badge
   - 4 comparison charts (CO₂ per m², Material Emissions, Total CO₂, Energy)
@@ -3921,6 +4271,7 @@ This release delivers comprehensive meeting report integration with automated ex
   - Responsive design for mobile
 
 **Homepage Integration:**
+
 - Updated `dashboard/index.html`:
   - Scenario Comparison card now "Available"
   - Links to scenarios.html
@@ -3930,6 +4281,7 @@ This release delivers comprehensive meeting report integration with automated ex
 #### Features Delivered:
 
 ✅ **Scenario Cards (3 scenarios):**
+
 - **Scenario 1: Demolition & Rebuild** (🏗️ Red)
   - 631 kg CO₂/m² BTA
   - 312 kg/m² material emissions
@@ -3952,6 +4304,7 @@ This release delivers comprehensive meeting report integration with automated ex
   - Add 3 floors of elderly housing
 
 ✅ **Comparison Charts:**
+
 - 4 horizontal bar charts comparing all scenarios
 - Metrics: CO₂ per m², Material Emissions, Total CO₂, Energy Consumption
 - Color-coded bars matching scenario colors
@@ -3959,6 +4312,7 @@ This release delivers comprehensive meeting report integration with automated ex
 - Visual ranking (longest bar = worst performance)
 
 ✅ **Metric Cards:**
+
 - 4 metrics per scenario card
 - Icon-based visual identity (🌍 CO₂, 🧱 Materials, 📊 Total, ⚡ Energy)
 - Large value display with units
@@ -3966,6 +4320,7 @@ This release delivers comprehensive meeting report integration with automated ex
 - Clear labels in English
 
 ✅ **Performance Indicators:**
+
 - Color-coded status badges
 - Percentage differences prominently displayed
 - Green for improvements, red for worse performance
@@ -4018,6 +4373,7 @@ This release delivers comprehensive meeting report integration with automated ex
 - Add 3 additional R21 scenarios when available
 
 **Access Dashboard:**
+
 ```bash
 cd dashboard
 python3 -m http.server 8888
@@ -4035,6 +4391,7 @@ python3 -m http.server 8888
 #### Created Meeting Browser Infrastructure:
 
 **Core Modules:**
+
 - `dashboard/lib/meeting-helpers.js` - NEW utility module:
   - Meeting type detection (9 types: core_team, project_group, external, government, tenant, site_visit, workshop, status, other)
   - Meeting type metadata with icons, colors, and descriptions
@@ -4049,6 +4406,7 @@ python3 -m http.server 8888
   - Meeting statistics calculation
 
 **Extended Existing Modules:**
+
 - `dashboard/lib/data-loader.js` - Added 13 meeting functions:
   - searchMeetings() - Search by title, participants, organization, location, organizer
   - filterMeetings() - Multi-criteria filtering (date range, type, organization, participant, time, has participants)
@@ -4070,6 +4428,7 @@ python3 -m http.server 8888
   - toggleMonthSection() - Expand/collapse month sections
 
 **Main Dashboard:**
+
 - `dashboard/meetings.html` - Interactive meeting browser:
   - Tab-based navigation (All / Past / Upcoming)
   - Hero section with meeting statistics (total, past, upcoming, participants)
@@ -4084,6 +4443,7 @@ python3 -m http.server 8888
   - Responsive design for mobile
 
 **Homepage Integration:**
+
 - Updated `dashboard/index.html`:
   - Meeting Browser card now "Available"
   - Links to meetings.html
@@ -4093,6 +4453,7 @@ python3 -m http.server 8888
 #### Features Delivered:
 
 ✅ **Meeting Cards (37 meetings):**
+
 - Compact view: Date, title, meeting type badge, participant count
 - Expanded view shows:
   - Full Norwegian date with relative time ("2 måneder siden")
@@ -4105,6 +4466,7 @@ python3 -m http.server 8888
   - Data quality notes (for 5 meetings with reconstructed data)
 
 ✅ **Meeting Type Detection:**
+
 - Automatically categorizes meetings into 9 types based on title, participants, location:
   - Core Team (⭐) - Internal Natural State + Urbania meetings
   - Project Group (🏗️) - Full project team including consultants
@@ -4117,6 +4479,7 @@ python3 -m http.server 8888
   - Other (📅) - General meetings
 
 ✅ **Search & Filter:**
+
 - Real-time search across all meeting fields
 - Filter by meeting type (9 types)
 - Filter by organization (13 orgs)
@@ -4127,12 +4490,14 @@ python3 -m http.server 8888
 - Results counter
 
 ✅ **Chronological Organization:**
+
 - Meetings grouped by month (Norwegian month names)
 - Collapsible month sections (collapsed by default)
 - Newest months first
 - Meeting count per month ("5 møter")
 
 ✅ **Participant Display:**
+
 - Avatar with color-coded background (8 color palette)
 - Initials generated from participant name
 - Name, organization, and email
@@ -4141,6 +4506,7 @@ python3 -m http.server 8888
 - Empty state for meetings without participants
 
 ✅ **User Experience:**
+
 - Tab switching between All/Past/Upcoming
 - Hover effects with border color changes
 - Click to expand meeting cards in-place
@@ -4194,6 +4560,7 @@ python3 -m http.server 8888
 - Full-text search in meeting transcripts (when available)
 
 **Access Dashboard:**
+
 ```bash
 cd dashboard
 python3 -m http.server 8888
@@ -4211,6 +4578,7 @@ python3 -m http.server 8888
 #### Created Stakeholder Network Infrastructure:
 
 **Core Modules:**
+
 - `dashboard/lib/stakeholder-helpers.js` - NEW utility module:
   - Person/org category metadata with colors and icons
   - Organization type metadata (property owner, consultant, government, etc.)
@@ -4221,6 +4589,7 @@ python3 -m http.server 8888
   - Bio truncation and expertise formatting
 
 **Extended Existing Modules:**
+
 - `dashboard/lib/data-loader.js` - Added 11 stakeholder functions:
   - getPeopleArray(), getOrganizationsArray() - Convert objects to arrays
   - searchStakeholders() - Real-time search across people and orgs
@@ -4235,6 +4604,7 @@ python3 -m http.server 8888
   - togglePersonCard(), toggleOrgCard() - Expand/collapse functionality
 
 **Main Dashboard:**
+
 - `dashboard/stakeholders.html` - Interactive stakeholder directory:
   - Tab-based navigation (People / Organizations)
   - Hero section with stakeholder counts
@@ -4244,6 +4614,7 @@ python3 -m http.server 8888
   - Profile cards with expand-in-place interaction
 
 **Homepage Integration:**
+
 - Updated `dashboard/index.html`:
   - Stakeholder Network card now "Available"
   - Links to stakeholders.html
@@ -4252,6 +4623,7 @@ python3 -m http.server 8888
 #### Features Delivered:
 
 ✅ **People Directory (22 people):**
+
 - 4 categories: Core Team, Extended Team, Consultants, Government Stakeholders
 - Profile cards with:
   - Avatar with color-coded initials
@@ -4264,6 +4636,7 @@ python3 -m http.server 8888
   - Meeting count
 
 ✅ **Organizations Directory (13 orgs):**
+
 - 4 categories: Core Project Team, Technical Consultants, Government/Regulatory, Community/Neighbors
 - Organization cards with:
   - SVG building icon
@@ -4277,6 +4650,7 @@ python3 -m http.server 8888
   - Team members list
 
 ✅ **Search & Filter:**
+
 - Real-time search across all fields
 - People filters: Category
   - Organizations filters: Category, Type
@@ -4284,6 +4658,7 @@ python3 -m http.server 8888
 - Results counter
 
 ✅ **User Experience:**
+
 - Tab switching between People and Organizations
 - Grid layout (responsive: 3 columns desktop, 1 column mobile)
 - Hover effects with lift animation
@@ -4328,6 +4703,7 @@ python3 -m http.server 8888
 - Export contact list as VCF
 
 **Access Dashboard:**
+
 ```bash
 cd dashboard
 python3 -m http.server 8888
@@ -4345,6 +4721,7 @@ python3 -m http.server 8888
 #### Created Document Explorer Infrastructure:
 
 **Core Modules:**
+
 - `dashboard/lib/document-helpers.js` - NEW utility module:
   - Category metadata with icons, colors, descriptions (10 categories)
   - File type metadata with SVG icons and labels
@@ -4356,6 +4733,7 @@ python3 -m http.server 8888
   - HTML sanitization for security
 
 **Extended Existing Modules:**
+
 - `dashboard/lib/data-loader.js` - Added document functions:
   - searchDocuments() - Real-time search by filename/category/source
   - getDocumentsByCategory() - Filter by category
@@ -4372,6 +4750,7 @@ python3 -m http.server 8888
   - toggleCategory() - Expand/collapse category sections
 
 **Main Dashboard:**
+
 - `dashboard/documents.html` - Interactive document explorer:
   - Hero section with document count and category count
   - Real-time search (300ms debounced)
@@ -4387,6 +4766,7 @@ python3 -m http.server 8888
   - Responsive mobile design
 
 **Homepage Integration:**
+
 - Updated `dashboard/index.html`:
   - Document Explorer card now "Available" (was "Coming Soon")
   - Links to documents.html
@@ -4395,6 +4775,7 @@ python3 -m http.server 8888
 #### Features Delivered:
 
 ✅ **Category Navigation (10 categories):**
+
 - sustainability (8 docs) - Energy reports, climate calculations
 - omsorg_plus (25 docs) - Elderly housing concept
 - stakeholder_engagement (5 docs) - Tenant communications
@@ -4407,6 +4788,7 @@ python3 -m http.server 8888
 - other (11 docs) - Miscellaneous
 
 ✅ **Document Cards:**
+
 - Compact view: Filename, file type, date
 - Expanded view: Category, source folder, ID, error status
 - SVG icons for file types (professional appearance)
@@ -4414,6 +4796,7 @@ python3 -m http.server 8888
 - Click to expand in-place
 
 ✅ **Search & Filter:**
+
 - Real-time search across filename, category, source
 - 300ms debounce for performance
 - Category dropdown filter
@@ -4423,6 +4806,7 @@ python3 -m http.server 8888
 - Results counter
 
 ✅ **Sorting:**
+
 - Newest first (default)
 - Oldest first
 - A-Z by filename
@@ -4430,6 +4814,7 @@ python3 -m http.server 8888
 - By category
 
 ✅ **User Experience:**
+
 - All categories collapsed by default (clean initial view)
 - Smooth animations for expand/collapse
 - Hover effects on cards and headers
@@ -4467,6 +4852,7 @@ python3 -m http.server 8888
 #### Next Steps (Future Phases):
 
 **Phase 3+ Enhancements:**
+
 - Statistics panel with charts
 - Cross-references to timeline events
 - Cross-references to meetings
@@ -4478,6 +4864,7 @@ python3 -m http.server 8888
 - Version control
 
 **Access Dashboard:**
+
 ```bash
 cd dashboard
 python3 -m http.server 8888
@@ -4495,6 +4882,7 @@ python3 -m http.server 8888
 **Session:** Initial consolidation from h13-project-database
 
 #### Added
+
 - `data/project.json` - Master project file with:
   - Building specifications (6,100 m² BTA, 1989, 5 floors)
   - 7 project phases with colors and dates
@@ -4562,6 +4950,7 @@ python3 -m http.server 8888
 - `STATUS.md` - Current progress tracking
 
 #### Data Sources
+
 - Primary: `/Users/gabrielboen/h13-project-database/master/`
   - PROJECT_MILESTONES.json
   - MASTER_MEETINGS.json
@@ -4570,6 +4959,7 @@ python3 -m http.server 8888
 - Secondary: Cache extractions (baerekraftsrapport, meeting transcripts)
 
 #### Known Gaps
+
 - People bios mostly empty (need extraction from transcripts)
 - Some meeting participant lists incomplete
 - Timeline dates not fully verified against sources
@@ -4583,6 +4973,7 @@ python3 -m http.server 8888
 **Session:** Strategic planning for multi-skin dashboard system
 
 #### Added `DASHBOARD_PLAN.md`:
+
 - Complete architecture plan for dashboard system
 - Multi-skin strategy (Technical → Public → Executive)
 - Phase 2 specification: Deep Timeline with meeting integration
@@ -4590,12 +4981,14 @@ python3 -m http.server 8888
 - Success metrics and next session checklist
 
 #### Strategic Decisions:
+
 - **Depth-first approach**: Technical skin with full detail comes first
 - **Multi-skin architecture**: Same data, multiple presentation layers
 - **Regenerate over real-time**: Export to standalone HTML for different contexts
 - **Component-based rendering**: Modular, reusable functions
 
 #### Next Phase Ready:
+
 - Phase 2: Technical Skin (Deep Timeline)
   - Match timeline events to meetings
   - Extract exec summaries
@@ -4611,6 +5004,7 @@ python3 -m http.server 8888
 **Session:** Create interactive timeline visualization
 
 #### Added `dashboard/timeline.html`:
+
 - Interactive HTML timeline with 3 view modes:
   - **Strategic** (10 events) - Executive overview
   - **Operational** (22 events) - Project management view
@@ -4634,14 +5028,16 @@ python3 -m http.server 8888
 **Session:** Spot-check and fix corrupted meeting participant data
 
 #### Updated `data/meetings.json`:
+
 - Fixed 5 meetings with corrupted participant data:
-  - **m_2024-03-11__11_mars_2024** - Reconstructed participants from duplicate entry
-  - **m_2024-05-06__6_mai_2024** - Fixed malformed "Vestre Aker" participant
-  - **m_2024-11-27__27_november_24** - Cleared corrupted data, flagged for manual review
+  - **m_2024-03-11\_\_11_mars_2024** - Reconstructed participants from duplicate entry
+  - **m_2024-05-06\_\_6_mai_2024** - Fixed malformed "Vestre Aker" participant
+  - **m_2024-11-27\_\_27_november_24** - Cleared corrupted data, flagged for manual review
   - **m_2025-01-17_17_januar_25** - Removed orgs parsed as people (Nordic Circular Construction, etc.)
   - **m_2025-03-07_7_mars_25** - Separated topics from participants
 
 #### Quality indicators added:
+
 - Added `data_quality_note` field to affected meetings
 - Added `topics_discussed` field where relevant topics were misparsed as participants
 - Updated metadata with quality_review section
@@ -4655,6 +5051,7 @@ python3 -m http.server 8888
 **Session:** Date verification against source documents
 
 #### Updated `data/timeline.json`:
+
 - Added `source_verified` field to 5 strategic events with document references
 - Verified dates confirmed correct:
   - **2024-03-11** PROJECT START - verified via meetings.json
@@ -4664,6 +5061,7 @@ python3 -m http.server 8888
   - **2025-05-22** District Meeting - verified via Ullern Bydelsledere 22.05.25
 
 #### Metadata:
+
 - Version bumped to 2.1
 - Added verification_status, verification_date, verification_notes fields
 
@@ -4676,6 +5074,7 @@ python3 -m http.server 8888
 **Session:** Bio enrichment from source documents
 
 #### Updated `data/stakeholders/people.json`:
+
 - Added detailed bios for 7 key stakeholders:
   - **Einar Kleppe Holthe** - CEO context, place economics expertise, phone number
   - **Andreas Thorsnes** - Developer role, decision-making authority
@@ -4686,12 +5085,14 @@ python3 -m http.server 8888
   - **James Stove Lorentzen** - Full name corrected, political context
 
 #### Sources used:
+
 - Preprosjekt Natural State for Urbania Eiendom (Feb 2024)
 - Klimagassberegninger Hovfaret 13 v2 report (April 2025)
 - Omsorg+ presentations (May 2025)
 - Meeting transcripts
 
 #### Metadata:
+
 - Version bumped to 2.1
 - Added enrichment_sources array
 
@@ -4706,6 +5107,7 @@ python3 -m http.server 8888
 #### Created Technical Dashboard Infrastructure:
 
 **Data Enhancement:**
+
 - `data/timeline-enhanced.json` - Enhanced timeline with:
   - Executive summaries for all 10 strategic events
   - Meeting links (4 strategic, 10 operational events matched)
@@ -4713,6 +5115,7 @@ python3 -m http.server 8888
   - Version 2.2
 
 **Infrastructure Modules:**
+
 - `dashboard/lib/data-loader.js` - Core data loading module:
   - Async JSON loading with caching
   - loadAllData() for batch loading
@@ -4729,6 +5132,7 @@ python3 -m http.server 8888
   - Icon mapping and date formatting
 
 **Technical Skin:**
+
 - `dashboard/skins/technical.css` - Dark, data-dense theme:
   - Dark color scheme (--bg-primary: #0a0e14)
   - Importance-based border colors (critical/high/medium)
@@ -4739,6 +5143,7 @@ python3 -m http.server 8888
   - Custom scrollbar styling
 
 **Main Dashboard:**
+
 - `dashboard/timeline-v2.html` - Interactive timeline:
   - 3 layer views: Strategic (10) / Operational (22) / All (32)
   - Real-time search across all data types
@@ -4749,18 +5154,21 @@ python3 -m http.server 8888
   - Related documents linking
 
 **Analysis Scripts:**
+
 - `scripts/match-timeline-meetings.js` - Match events to meetings by date
 - `scripts/build-enhanced-timeline.js` - Generate enhanced timeline data
 
 #### Features Delivered:
 
 ✅ **Data Integration:**
+
 - Timeline events matched to meetings by date (fuzzy matching)
 - Executive summaries extracted for all strategic events
 - Meeting participants linked to events
 - Related documents referenced
 
 ✅ **Enhanced Timeline Events:**
+
 - Event cards show: date, title, description, exec summary
 - Meeting links with participant counts
 - Related documents display
@@ -4768,24 +5176,28 @@ python3 -m http.server 8888
 - Verification badges for sourced events
 
 ✅ **Navigation & Filtering:**
+
 - Search across events, meetings, people, documents
 - Filter by importance (critical/high/medium/low)
 - Filter by "has meetings"
 - 3-layer view switching (strategic/operational/all)
 
 ✅ **Progressive Disclosure:**
+
 - Default: Collapsed cards with key info
 - Click: Expand to show full details
 - Hover: Visual feedback
 - Meeting links → Click to view details (side panel placeholder)
 
 ✅ **Meeting Integration:**
+
 - 4/10 strategic events have linked meetings
 - 10/22 operational events have linked meetings
 - Meeting cards show title, participant count
 - Click to view full meeting details (UI ready)
 
 #### Statistics:
+
 - Strategic events with exec summaries: 10/10 (100%)
 - Strategic events with meetings: 4/10 (40%)
 - Operational events with meetings: 10/22 (45%)
@@ -4793,12 +5205,14 @@ python3 -m http.server 8888
 - Total meetings in database: 37
 
 #### Technical Achievements:
+
 - **Modular architecture**: Reusable data-loader and renderer modules
 - **Multi-skin ready**: Infrastructure supports additional skins (public, executive)
 - **Performance optimized**: Cached data loading, debounced search
 - **Maintainable**: Component-based rendering, CSS scoping
 
 #### Next Steps:
+
 - Add side panel for full meeting content
 - Build Document Explorer component
 - Create Stakeholder Network visualization
@@ -4815,6 +5229,7 @@ python3 -m http.server 8888
 #### Created Dashboard Homepage:
 
 **Main Homepage (`index.html`):**
+
 - Hero section with "Hovfaret 13" title
 - Building elevation image display (architectural drawing)
 - Project info grid with key stats:
@@ -4834,6 +5249,7 @@ python3 -m http.server 8888
   - Stats counters for each feature
 
 **Navigation System:**
+
 - `dashboard/lib/navigation.js` - Reusable navigation component:
   - Sticky navigation bar with home link
   - Breadcrumb showing current page
@@ -4850,11 +5266,13 @@ python3 -m http.server 8888
   - Click home link returns to index
 
 **Assets Structure:**
+
 - Created `dashboard/assets/` directory for images
 - Homepage expects `assets/building-elevation.png`
 - Graceful fallback if image not present
 
 **Documentation:**
+
 - `DASHBOARD_NAVIGATION.md` - Complete navigation guide:
   - Structure overview
   - How to add navigation to new pages
@@ -4866,18 +5284,21 @@ python3 -m http.server 8888
 #### Features:
 
 ✅ **Homepage Dashboard:**
+
 - Central hub for all dashboard features
 - Visual card-based navigation
 - Project overview at a glance
 - Status badges (Available / Coming Soon)
 
 ✅ **Reusable Navigation:**
+
 - Consistent navigation across all pages
 - Single line to add: `Navigation.inject('Page Name')`
 - Automatic home link
 - Breadcrumb trail
 
 ✅ **Extensibility:**
+
 - Easy to add new dashboard cards
 - Template provided for new pages
 - Consistent styling via technical.css
@@ -4886,19 +5307,22 @@ python3 -m http.server 8888
 #### Technical Details:
 
 **Navigation Component API:**
+
 ```javascript
-Navigation.inject('Page Name'); // Adds nav bar to current page
-Navigation.render('Page Name'); // Returns HTML string
+Navigation.inject("Page Name"); // Adds nav bar to current page
+Navigation.render("Page Name"); // Returns HTML string
 ```
 
 **Homepage URL:** http://localhost:8888/index.html
 
 **Navigation visible on:**
+
 - index.html (homepage)
 - timeline-v2.html (with "Project Timeline" breadcrumb)
 - All future dashboard pages will include it
 
 #### Next Steps:
+
 - Add building elevation image to `assets/building-elevation.png`
 - Build Document Explorer (next available card)
 - Build Stakeholder Network visualization
@@ -4915,6 +5339,7 @@ Navigation.render('Page Name'); // Returns HTML string
 #### Updated Homepage Design (`index.html`):
 
 **Building Background Integration:**
+
 - Changed from `background-size: contain` to `cover` for fullscreen coverage
 - Increased opacity from 0.04 to 0.08 for better visibility
 - Removed featured image box from hero section
@@ -4923,6 +5348,7 @@ Navigation.render('Page Name'); // Returns HTML string
 - Subtle presence that adds depth without overwhelming content
 
 **Hero Section Redesign:**
+
 - ✅ Removed "Transformation Project Dashboard" subtitle
 - ✅ Added "videre bruk" tagline in handwritten style
 - ✅ Introduced transparent glassmorphic box around title:
@@ -4937,11 +5363,13 @@ Navigation.render('Page Name'); // Returns HTML string
 - ✅ Gradient text effect maintained (blue to light blue)
 
 **Typography Choices:**
+
 - **Space Grotesk**: Modern geometric sans-serif, popular in 2024-2025, architectural feel
 - **Caveat**: Handwritten cursive for personal touch, contrasts with geometric main font
 - Google Fonts integration for consistent cross-platform rendering
 
 **Design Philosophy:**
+
 - Fullscreen building background provides context
 - Glassmorphic hero box creates elegant focal point
 - Handwritten tagline adds human touch to technical dashboard
@@ -4950,6 +5378,7 @@ Navigation.render('Page Name'); // Returns HTML string
 #### Technical Details:
 
 **CSS Changes:**
+
 ```css
 /* Building background */
 body::before {
@@ -4971,14 +5400,17 @@ h1: Space Grotesk, 4.5rem, gradient
 ```
 
 **Responsive Design:**
+
 - Mobile optimized: reduces font sizes, adjusts box padding
 - Hero box scales gracefully on smaller screens
 - Building background maintains coverage on all viewports
 
 #### Files Modified:
+
 - `dashboard/index.html` - Hero section redesign, typography, glassmorphism
 
 #### Visual Improvements:
+
 - ✅ More elegant and modern aesthetic
 - ✅ Better visual hierarchy
 - ✅ Fullscreen building integration
@@ -4987,6 +5419,7 @@ h1: Space Grotesk, 4.5rem, gradient
 - ✅ Consistent with 2025 design trends
 
 #### User Experience:
+
 - Clean, uncluttered hero section
 - Building provides atmospheric context without distraction
 - Hover effects provide subtle interactivity

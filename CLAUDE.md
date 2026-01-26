@@ -1,33 +1,33 @@
 # CLAUDE.md - Project Instructions for Claude Code
 
-## Project: Hovfaret 13 Data Consolidation v2.87
+## Project: Hovfaret 13 Data Consolidation v2.90
 
-Real estate transformation project database. Version 2.87, Phase 66.
+Real estate transformation project database. Version 2.90, Phase 68.
 
 **Auth:** Password `h13-skøyen-2025` (24h localStorage session)
 
 ## Key Files
 
-| Priority | File | Purpose |
-|----------|------|---------|
-| 1 | `data/config.json` | Single source of truth for all metrics |
-| 2 | `STATUS.md` | Current progress, blockers, next actions |
-| 3 | `CHANGELOG.md` | Session history |
+| Priority | File               | Purpose                                  |
+| -------- | ------------------ | ---------------------------------------- |
+| 1        | `data/config.json` | Single source of truth for all metrics   |
+| 2        | `STATUS.md`        | Current progress, blockers, next actions |
+| 3        | `CHANGELOG.md`     | Session history                          |
 
 ## Current Metrics (from config.json)
 
-| Data | Count |
-|------|-------|
-| Meetings | 60 |
-| Documents | 271 |
-| People | 23 |
-| Organizations | 16 |
-| Deliverables | 37 (verifisert) |
-| Timeline events | 32 (10 strategic + 22 operational) |
-| Dashboard pages | 38 (all auth-protected) |
-| Project duration | 21 months |
-| Notion databases | 12 |
-| Notion records | 538 |
+| Data             | Count                              |
+| ---------------- | ---------------------------------- |
+| Meetings         | 60                                 |
+| Documents        | 271                                |
+| People           | 23                                 |
+| Organizations    | 16                                 |
+| Deliverables     | 37 (verifisert)                    |
+| Timeline events  | 32 (10 strategic + 22 operational) |
+| Dashboard pages  | 39 (all auth-protected)            |
+| Project duration | 21 months                          |
+| Notion databases | 12                                 |
+| Notion records   | 538                                |
 
 ## Project Structure
 
@@ -64,15 +64,16 @@ dashboard/
 
 **Project Data** vs **Deliverable Content** are strictly separated:
 
-| Type | Files | Rule |
-|------|-------|------|
-| **Project Data** | meetings.json, timeline.json, stakeholders/, deliverables.json, config.json | Immutable project history - never modified by deliverable updates |
-| **Deliverable Content** | themes/konseptskisse*.json, themes/barekraftsrapport.json, themes/sustainability.json, themes/omsorg-plus.json | Extracted content from presentations/reports |
-| **Process Data** | themes/sustainability-journey.json, themes/regulatory.json | Project process records (flagged as project_data) |
+| Type                    | Files                                                                                                           | Rule                                                              |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Project Data**        | meetings.json, timeline.json, stakeholders/, deliverables.json, config.json                                     | Immutable project history - never modified by deliverable updates |
+| **Deliverable Content** | themes/konseptskisse\*.json, themes/barekraftsrapport.json, themes/sustainability.json, themes/omsorg-plus.json | Extracted content from presentations/reports                      |
+| **Process Data**        | themes/sustainability-journey.json, themes/regulatory.json                                                      | Project process records (flagged as project_data)                 |
 
 ### Content Classification
 
 All theme files have `metadata.content_classification`:
+
 ```json
 "content_classification": {
   "type": "deliverable_content",  // or "project_data"
@@ -102,6 +103,7 @@ npm run sync:dry    # Preview changes
 ```
 
 12 databases synced:
+
 - Organizations (16), People (23), Meetings (60), Documents (271)
 - Timeline (32), Deliverables (37), Sustainability (3)
 - Omsorg+ Concept (1), Floors (7), Units (73), Facilities (11), Compliance (5)
@@ -129,11 +131,11 @@ npm run sync:dry    # Preview changes
 
 ## Regulatory Status
 
-| Process | Status | Date |
-|---------|--------|------|
-| Nabovarsel | ✅ Complete | 2025-10-16 |
+| Process             | Status         | Date           |
+| ------------------- | -------------- | -------------- |
+| Nabovarsel          | ✅ Complete    | 2025-10-16     |
 | Bruksendringssøknad | 🔄 In progress | Target Q4 2025 |
-| Rammesøknad | ⏳ Not started | Target Q1 2026 |
+| Rammesøknad         | ⏳ Not started | Target Q1 2026 |
 
 ## Quality Checklist
 

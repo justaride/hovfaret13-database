@@ -1,0 +1,699 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-01-26",
+    "last_updated": "2026-01-26",
+    "description": "Strukturert argumentasjonsbase for miljø og klima",
+    "content_classification": {
+      "type": "project_data",
+      "deliverable_id": null,
+      "source_folder": "Hovfaret 13  - Klima , Miljø, Bærekraft"
+    },
+    "purpose": "Søkbar argumentasjonsbase for rammesøknad-prosessen"
+  },
+  "themes": [
+    {
+      "id": "klimarisiko",
+      "name": "Klimarisiko",
+      "icon": "🌡️",
+      "description": "Flom, overvann, ekstremvær"
+    },
+    {
+      "id": "miljo",
+      "name": "Miljø & økologi",
+      "icon": "🌿",
+      "description": "Hoffselva, biologisk mangfold, kantvegetasjon"
+    },
+    {
+      "id": "geoteknikk",
+      "name": "Geoteknikk",
+      "icon": "⛰️",
+      "description": "Grunnforhold, kvikkleire, stabilitet"
+    },
+    {
+      "id": "overvann",
+      "name": "Overvann",
+      "icon": "💧",
+      "description": "Drenering, avrenning, blågrønn infrastruktur"
+    },
+    {
+      "id": "trafikk",
+      "name": "Trafikk & anlegg",
+      "icon": "🚛",
+      "description": "Anleggstrafikk, støy, støv, mobilitet"
+    },
+    {
+      "id": "sirkulaer",
+      "name": "Sirkulærøkonomi",
+      "icon": "♻️",
+      "description": "Materialbruk, avfall, gjenbruk"
+    },
+    {
+      "id": "stedsidentitet",
+      "name": "Stedsidentitet",
+      "icon": "🏛️",
+      "description": "Arkitektur, kulturmiljø, lokal forankring"
+    }
+  ],
+  "audiences": [
+    {
+      "id": "pbe",
+      "name": "Plan- og bygningsetaten",
+      "description": "Formell saksbehandling"
+    },
+    {
+      "id": "naboer",
+      "name": "Naboer",
+      "description": "Nabovarsling og dialog"
+    },
+    {
+      "id": "innsigelser",
+      "name": "Innsigelser",
+      "description": "Motargumentasjon"
+    },
+    {
+      "id": "investorer",
+      "name": "Investorer",
+      "description": "Økonomisk argumentasjon"
+    },
+    {
+      "id": "politikere",
+      "name": "Politikere",
+      "description": "Strategisk påvirkning"
+    }
+  ],
+  "arguments": [
+    {
+      "id": "arg_001",
+      "theme_id": "klimarisiko",
+      "title": "Nærhet til Hoffselva: Risikoforebygging gjennom naturpositiv utforming",
+      "summary": "Bevaring tillater målrettede naturpositive tiltak ved elvebredden uten omfattende terrenginngrep.",
+      "spissede_punkter": [
+        "Bygget ligger innenfor 10-metersbeltet – rivningsvedtaket er avledet av overskridelse av avstandsregelen",
+        "Nærheten gir mulighet for naturpositive tiltak (forbedring av elvebredden) som reduserer erosjons- og flomrisiko",
+        "Eksisterende konstruksjon kan lettere tilpasses reelle vannføringsforhold uten omfattende terrenginngrep"
+      ],
+      "comparison": {
+        "rehabilitation": "Målrettet tilpasning til vannføringsforhold, naturpositiv utforming",
+        "demolition": "Omfattende terrenginngrep som kan forsterke flom- og jordskredfare"
+      },
+      "audiences": ["pbe", "naboer", "innsigelser"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_01", "doc_pdf_08"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Planforslag til offentlig ettersyn - forslagsstillers del.",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_002",
+      "theme_id": "overvann",
+      "title": "Overvann, flom og strengere miljøkrav: Fortrinn ved videre bruk",
+      "summary": "Gjenbruk av bygningsmassen unngår nye overvannsutfordringer ved omdisponering av terreng.",
+      "spissede_punkter": [
+        "Intens nedbør og økt flomfare gir strengere krav i områdeplan for Skøyen",
+        "Gjenbruk sikrer at man ikke åpner store nye flater eller omdisponerer terreng",
+        "Mindre anleggsarbeid gir lavere risiko for perioder uten tilstrekkelig drenering",
+        "Klimarisiko ved byggefasen reduseres betydelig"
+      ],
+      "comparison": {
+        "rehabilitation": "Bevart terreng, etablert drenering, kortere anleggsfase",
+        "demolition": "Nye flater, omdisponert terreng, økt overvannsmengde"
+      },
+      "audiences": ["pbe", "naboer"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_11"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Vurdering av håndtering av overvann (11).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_003",
+      "theme_id": "klimarisiko",
+      "title": "Teknisk robusthet: Eksisterende konstruksjon gir mulighet for klimasmarte løsninger",
+      "summary": "Byggets fundament er dimensjonert for påbygg og kan kombineres med moderne klimatiltak.",
+      "spissede_punkter": [
+        "Bygget er opprinnelig dimensjonert for flere etasjer og tåler påbygg",
+        "Robust bærende konstruksjon kan kombineres med fordrøyningsbasseng i kjeller",
+        "Grønne tak kan magasinere regnvann",
+        "Sikrer fundament og tar høyde for fremtidige ekstremværsituasjoner uten å starte på bar bakke"
+      ],
+      "comparison": {
+        "rehabilitation": "Utnytt eksisterende reservekapasitet, kombiner med nye klimatiltak",
+        "demolition": "Må bygge all robusthet fra grunnen av"
+      },
+      "audiences": ["pbe", "investorer"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_21"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Kvalitetsprogram for miljø og energi (21).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_004",
+      "theme_id": "sirkulaer",
+      "title": "Klimafordel: Redusert utslipp og mer bærekraftig ressursbruk",
+      "summary": "48% CO₂-besparelse og 80% materialgjenbruk ved rehabilitering fremfor nybygg.",
+      "spissede_punkter": [
+        "Unngåelse av rivning sparer 2 549 tonn CO₂",
+        "48% reduksjon i klimagassutslipp sammenlignet med nybygg",
+        "Sirkulærøkonomisk forbilde – demonstrerer at rivningsvedtatt bygg kan rehabiliteres",
+        "Oppgradering til moderne standard uten nye materialer"
+      ],
+      "comparison": {
+        "rehabilitation": "2 794 tonn CO₂ (Scenario 2)",
+        "demolition": "5 343 tonn CO₂ (Scenario 1)"
+      },
+      "audiences": ["pbe", "politikere", "investorer"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_21"],
+      "references": [
+        {
+          "citation": "Vill Energi AS. (2025). Klimagassberegninger Hovfaret 13 v2.",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_005",
+      "theme_id": "sirkulaer",
+      "title": "Ressurseffektivitet: Mindre avfall, lavere transportbehov",
+      "summary": "Minimering av rivningsavfall og anleggstrafikk gir lokal verdiskaping.",
+      "spissede_punkter": [
+        "Riving genererer store mengder tungt rivningsavfall",
+        "Oppgradering av eksisterende stål- og betongkonstruksjoner eliminerer avfallsproblem",
+        "Kortere anleggsfase gir mindre anleggstrafikk, støy og støv",
+        "Skåner lokalsamfunnet og miljøet"
+      ],
+      "comparison": {
+        "rehabilitation": "Minimalt avfall, kortere anleggsperiode",
+        "demolition": "Store mengder rivningsavfall, omfattende transport"
+      },
+      "audiences": ["naboer", "pbe", "politikere"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_08"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). ROS-analyse (08).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_006",
+      "theme_id": "miljo",
+      "title": "Tap av økologiske verdier og forverring av Hoffselva",
+      "summary": "Riving og nybygg truer vannkvalitet og sjøørretbestand i Hoffselva.",
+      "spissede_punkter": [
+        "Hoffselva er sårbar vannressurs i nærheten av Hovfaret 13",
+        "Større byggeprosesser øker avrenning av sedimenter og forurensninger",
+        "Kan skade økosystemet og påvirke sjøørret- og laksebestand",
+        "Graving og massetransport fører til erosjon av kantsonene"
+      ],
+      "comparison": {
+        "rehabilitation": "Minimalt inngrep, bevart kantvegetasjon",
+        "demolition": "Økt avrenning, erosjon, trussel mot akvatisk liv"
+      },
+      "audiences": ["pbe", "naboer", "innsigelser"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_13"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Naturmiljø (13).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_007",
+      "theme_id": "miljo",
+      "title": "Spredning av fremmedarter",
+      "summary": "Anleggsarbeid kan spre problematiske fremmedarter til omkringliggende naturområder.",
+      "spissede_punkter": [
+        "Flere problematiske fremmedarter identifisert: kanadagullris, alaska- og sibirkornell",
+        "Svært høy spredningsrisiko ved riving og anleggsarbeid",
+        "Hoffselva allerede under press",
+        "Rehabilitering reduserer behovet for omfattende gravearbeider"
+      ],
+      "comparison": {
+        "rehabilitation": "Begrenset forstyrrelse, kontrollert utvikling",
+        "demolition": "Risiko for spredning av fremmede arter"
+      },
+      "audiences": ["pbe", "innsigelser"],
+      "strength": "medium",
+      "source_documents": ["doc_pdf_13"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Naturmiljø (13).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_008",
+      "theme_id": "miljo",
+      "title": "Forringelse av lokalt biologisk mangfold",
+      "summary": "Bevaring av trær og grønne soner opprettholder habitater for fugl og insekter.",
+      "spissede_punkter": [
+        "Naturmiljøanalysen anbefaler å bevare trær og grønne soner",
+        "Riving krever store terrenginngrep og tap av trær og fuglereir",
+        "Grønne tak og fuglekasser mister effekt hvis området først raseres",
+        "Gradvis utvikling av grøntarealer mulig ved bevaring"
+      ],
+      "comparison": {
+        "rehabilitation": "Bevarte trær, gradvis grøntutvikling, habitat opprettholdt",
+        "demolition": "Tap av eksisterende trær, fuglereir, habitater"
+      },
+      "audiences": ["pbe", "naboer"],
+      "strength": "medium",
+      "source_documents": ["doc_pdf_13"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Naturmiljø (13).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_009",
+      "theme_id": "geoteknikk",
+      "title": "Geoteknisk sårbarhet: Redusert risiko ved bevaring",
+      "summary": "Bevaring av bygningskroppen begrenser graving og reduserer kvikkleirefare.",
+      "spissede_punkter": [
+        "Rapporter viser fare for sprøbruddmaterialer/kvikkleire nær elva",
+        "Full riving + ny kjeller øker faren for massedeponering",
+        "Store terrenginngrep ved nybygg øker geoteknisk risiko",
+        "Bevaring begrenser omfattende ny graving"
+      ],
+      "comparison": {
+        "rehabilitation": "Eksisterende fundament beholdes, minimal graving",
+        "demolition": "Nytt fundament, omfattende graving, økt utglidningsrisiko"
+      },
+      "audiences": ["pbe", "naboer", "innsigelser"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_18"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Områdestabilitet (18).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_010",
+      "theme_id": "trafikk",
+      "title": "Negative konsekvenser for mobilitet i anleggsfasen",
+      "summary": "Transformasjon minimerer transportvolumer og støyplager for nabolaget.",
+      "spissede_punkter": [
+        "Anleggstrafikk gir midlertidig forverring av sykkel- og gåmiljø",
+        "Nybygg krever transport ut av all rivningsmasse og inn av all ny betong/stål",
+        "Transformasjon minimerer transportvolumer og anleggslast",
+        "Bedre forhold for nabolaget i anleggsperioden"
+      ],
+      "comparison": {
+        "rehabilitation": "Begrenset anleggstrafikk, kortere periode",
+        "demolition": "Omfattende massetransport, langvarig støy og støv"
+      },
+      "audiences": ["naboer", "pbe"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_10"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Notat grønn mobilitet og trafikk (10).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_011",
+      "theme_id": "stedsidentitet",
+      "title": "Bevaring av stedsidentitet og arkitektonisk mangfold",
+      "summary": "Å rive reduserer mangfoldet av bygningskarakter og svekker lokal stedskvalitet.",
+      "spissede_punkter": [
+        "PBEs stedsanalyse vektlegger stedets historiske spor og arkitektonisk egenart",
+        "Hovfaret 13 bidrar til variert bygningsmasse langs Hoffselva",
+        "Riving svekker lokal stedskvalitet",
+        "Eksisterende bygg kan lettere tilpasses funksjonsmiks"
+      ],
+      "comparison": {
+        "rehabilitation": "Bevart stedskvalitet, hurtigere transformasjon, variert funksjon",
+        "demolition": "Tap av arkitektonisk egenart, monofunksjonell struktur"
+      },
+      "audiences": ["pbe", "politikere", "naboer"],
+      "strength": "medium",
+      "source_documents": ["doc_pdf_stedsanalyse"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2018). PBEs stedsanalyse.",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_012",
+      "theme_id": "sirkulaer",
+      "title": "Samsvar med overordnede klimapolitiske mål",
+      "summary": "Riving strider mot Oslos klimastrategi og kommuneplanens arealdel.",
+      "spissede_punkter": [
+        "Kommuneplanens arealdel og Klimastrategi for Oslo fremhever redusert byggenæringsutslipp",
+        "Oslo kommune støtter aktivt ombruksstrategier",
+        "Riving undergraver Oslos ambisjoner om sirkulær økonomi",
+        "Hovfaret 13 kan bli forbildeprosjekt for grønn transformasjon"
+      ],
+      "comparison": {
+        "rehabilitation": "I tråd med klimastrategi, forbildeprosjekt",
+        "demolition": "Strider mot klimamål og sirkularitetsambisjoner"
+      },
+      "audiences": ["pbe", "politikere"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_21", "doc_pdf_23"],
+      "references": [
+        {
+          "citation": "Oslo kommune. (2020). Klimastrategi mot 2030.",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_013",
+      "theme_id": "klimarisiko",
+      "title": "Redusert dispensasjonsrisiko ved bevaring",
+      "summary": "Transformasjon innebærer mindre avvik fra planverk og håndterer klimarisiko mer kostnadseffektivt.",
+      "spissede_punkter": [
+        "Store nybyggprosjekter forbundet med betydelig dispensasjonsrisiko",
+        "Tidkrevende søknadsprosesser for avvik fra overordnede planer",
+        "Bevaring og transformasjon innebærer mindre avvik",
+        "Klimarisiko kan håndteres mer målrettet og kostnadseffektivt"
+      ],
+      "comparison": {
+        "rehabilitation": "Lavere dispensasjonsrisiko, raskere prosess",
+        "demolition": "Betydelig dispensasjonsrisiko, langvarig søknadsprosess"
+      },
+      "audiences": ["pbe", "investorer"],
+      "strength": "medium",
+      "source_documents": ["doc_pdf_23"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Komplettvurdering av planforslaget (23).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_014",
+      "theme_id": "overvann",
+      "title": "Overvannshåndtering og økt flomrisiko ved riving",
+      "summary": "Nybygg gir mer tette flater og reduserer naturlig infiltrasjon.",
+      "spissede_punkter": [
+        "Rivning forverrer overflateavrenningen",
+        "Bidrar til økt flomfare langs Hoffselva",
+        "Nybygg gir ofte mer tette flater",
+        "Transformasjon tillater skånsom tilpasning av overvannsløsninger"
+      ],
+      "comparison": {
+        "rehabilitation": "Grønne tak, permeable flater, skånsom tilpasning",
+        "demolition": "Mer tette flater, redusert infiltrasjon, økt flomfare"
+      },
+      "audiences": ["pbe", "naboer"],
+      "strength": "strong",
+      "source_documents": ["doc_pdf_11"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Vurdering av håndtering av overvann (11).",
+          "style": "apa7"
+        }
+      ]
+    },
+    {
+      "id": "arg_015",
+      "theme_id": "stedsidentitet",
+      "title": "Forbildeprosjekt for sirkulær transformasjon",
+      "summary": "Hovfaret 13 kan demonstrere adaptiv gjenbruk i praksis og tjene som forbilde.",
+      "spissede_punkter": [
+        "Skøyen-området har potensial for grønn foregangsrolle",
+        "Bevaring og transformasjon signaliserer sterkt, innovativt grep",
+        "Tjener som forbilde for framtidig byutvikling",
+        "Riving fratar muligheten for å demonstrere adaptiv gjenbruk"
+      ],
+      "comparison": {
+        "rehabilitation": "Forbildeprosjekt, innovasjon, presedens",
+        "demolition": "Tapt mulighet for demonstrasjonsprosjekt"
+      },
+      "audiences": ["politikere", "investorer", "pbe"],
+      "strength": "medium",
+      "source_documents": ["doc_pdf_21"],
+      "references": [
+        {
+          "citation": "Plan- og bygningsetaten. (2023). Kvalitetsprogram for miljø og energi (21).",
+          "style": "apa7"
+        }
+      ]
+    }
+  ],
+  "source_documents": [
+    {
+      "id": "doc_pdf_01",
+      "filename": "01_Planforslag_til_offentlig_ettersyn_-_forslagsstillers_del.pdf",
+      "title": "Planforslag til offentlig ettersyn - forslagsstillers del",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Grunnlag for plankrav og avstandskrav til vassdrag",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_07",
+      "filename": "07_Forslagsstillers_oppsummering_av_uttalelser.pdf",
+      "title": "Forslagsstillers oppsummering av uttalelser",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Oversikt over innspill og innsigelser",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_08",
+      "filename": "08_ROS-analyse.pdf",
+      "title": "ROS-analyse",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Risiko- og sårbarhetsanalyse for området",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_10",
+      "filename": "10_Notat_groenn_mobilitet_og_trafikk.pdf",
+      "title": "Notat grønn mobilitet og trafikk",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Trafikkkonsekvenser og anleggstrafikk",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_11",
+      "filename": "11_Vurdering_av_haandtering_av_overvann.pdf",
+      "title": "Vurdering av håndtering av overvann",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Overvannshåndtering og flomrisiko",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_13",
+      "filename": "13_Naturmiljoe.pdf",
+      "title": "Naturmiljø",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Biologisk mangfold, kantvegetasjon, fremmedarter",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_18",
+      "filename": "18_Omraadestabilitet.pdf",
+      "title": "Områdestabilitet",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Geotekniske forhold og kvikkleirefare",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_21",
+      "filename": "21_Kvalitetsprogram_for_miljoe_og_energi.pdf",
+      "title": "Kvalitetsprogram for miljø og energi",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Klimakrav og sirkulærøkonomi",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_23",
+      "filename": "23_Komplettvurdering_av_planforslaget.pdf",
+      "title": "Komplettvurdering av planforslaget",
+      "source": "Plan- og bygningsetaten",
+      "year": 2023,
+      "relevance": "Helhetlig vurdering av planforslaget",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_stedsanalyse",
+      "filename": "PBEs_stedsanalyse.pdf",
+      "title": "PBEs stedsanalyse",
+      "source": "Plan- og bygningsetaten",
+      "year": 2018,
+      "relevance": "Stedsidentitet og arkitektonisk egenart",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_vd055",
+      "filename": "VD_rapport_055.pdf",
+      "title": "VD rapport 055",
+      "source": "Vegdirektoratet",
+      "year": null,
+      "relevance": "Trafikk og mobilitet",
+      "status": "available"
+    },
+    {
+      "id": "doc_pdf_natural_state",
+      "filename": "natural_state_barekraftsrapport.pdf",
+      "title": "Bærekraftsrapport",
+      "source": "Natural State AS",
+      "year": 2025,
+      "relevance": "Klimagassberegninger og bærekraftsvurdering",
+      "status": "available"
+    },
+    {
+      "id": "doc_md_klimarisiko",
+      "filename": "DEL-1-KLIMARISIKO-SPISSEDE-ARGUMENTER.md",
+      "title": "Klimarisiko - Spissede argumenter",
+      "source": "Prosjektteam",
+      "year": 2025,
+      "relevance": "Sammenstilte klimaargumenter",
+      "status": "available"
+    },
+    {
+      "id": "doc_md_sammenstilt",
+      "filename": "SAMMENSTILT-RAPPORT-ARGUMENTASJON-MOT-RIVING-AV-BESTENDE-BYGG.md",
+      "title": "Sammenstilt rapport - Argumentasjon mot riving",
+      "source": "Prosjektteam",
+      "year": 2025,
+      "relevance": "Hovedargumentasjon mot riving",
+      "status": "available"
+    }
+  ],
+  "missing_documents": [
+    {
+      "id": "missing_01",
+      "category": "Biologi",
+      "title": "Biologisk kartlegging Hoffselva",
+      "description": "Kartlegging av biologisk mangfold og artsobservasjoner langs Hoffselva ved Hovfaret 13",
+      "source": "Biolog/konsulent",
+      "priority": "high",
+      "estimated_cost": null,
+      "action": "Engasjere biolog for feltarbeid"
+    },
+    {
+      "id": "missing_02",
+      "category": "Biologi",
+      "title": "Sjøørret-bestandsvurdering",
+      "description": "Vurdering av sjøørretbestand i Hoffselva og potensielle påvirkninger fra byggeaktivitet",
+      "source": "Statsforvalter/NINA",
+      "priority": "high",
+      "estimated_cost": null,
+      "action": "Kontakte Statsforvalter for eksisterende data, vurdere NINA-oppdrag"
+    },
+    {
+      "id": "missing_03",
+      "category": "Geoteknikk",
+      "title": "Grunnundersøkelse Hovfaret 13",
+      "description": "Geoteknisk rapport med boreprøver og vurdering av grunnforhold på eiendommen",
+      "source": "Geoteknisk firma",
+      "priority": "high",
+      "estimated_cost": null,
+      "action": "Innhente tilbud fra geoteknisk konsulent"
+    },
+    {
+      "id": "missing_04",
+      "category": "Geoteknikk",
+      "title": "Kvikkleirekartlegging området",
+      "description": "Kartlegging av kvikkleireforekomster i nærområdet",
+      "source": "NGU/NVE",
+      "priority": "medium",
+      "estimated_cost": null,
+      "action": "Hente kart fra NGU, kontakte NVE for utfyllende info"
+    },
+    {
+      "id": "missing_05",
+      "category": "Klima",
+      "title": "Klimarisikovurdering H13 spesifikk",
+      "description": "Stedsspesifikk klimarisikovurdering for Hovfaret 13 inkludert flom, ekstremvær og havnivåstigning",
+      "source": "Natural State/konsulent",
+      "priority": "medium",
+      "estimated_cost": null,
+      "action": "Vurdere utvidelse av Natural State-oppdrag"
+    },
+    {
+      "id": "missing_06",
+      "category": "Overvann",
+      "title": "Overvannsberegning for H13",
+      "description": "Dimensjonering av overvannshåndtering for rehabilitering og tilbygg",
+      "source": "VA-konsulent",
+      "priority": "high",
+      "estimated_cost": null,
+      "action": "Innhente tilbud fra VA-rådgiver"
+    },
+    {
+      "id": "missing_07",
+      "category": "Kulturmiljø",
+      "title": "Antikvarisk vurdering",
+      "description": "Vurdering av byggets antikvariske verdi og eventuelle bevaringsinteresser",
+      "source": "Byantikvaren",
+      "priority": "low",
+      "estimated_cost": null,
+      "action": "Sende forespørsel til Byantikvaren"
+    },
+    {
+      "id": "missing_08",
+      "category": "Trafikk",
+      "title": "Trafikkanalyse for H13",
+      "description": "Analyse av trafikkkonsekvenser ved transformasjon til Omsorg+",
+      "source": "Trafikkonsulent",
+      "priority": "medium",
+      "estimated_cost": null,
+      "action": "Innhente tilbud fra trafikkrådgiver"
+    }
+  ],
+  "comparison_matrix": {
+    "summary": "Se sustainability.json for detaljerte CO₂-beregninger",
+    "link": "themes/sustainability.json",
+    "key_figures": {
+      "co2_savings_percent": 48,
+      "co2_saved_tonnes": 2549,
+      "material_savings_percent": 80
+    }
+  },
+  "statistics": {
+    "total_arguments": 15,
+    "by_theme": {
+      "klimarisiko": 3,
+      "overvann": 2,
+      "miljo": 3,
+      "geoteknikk": 1,
+      "trafikk": 1,
+      "sirkulaer": 3,
+      "stedsidentitet": 2
+    },
+    "by_strength": {
+      "strong": 10,
+      "medium": 5,
+      "supporting": 0
+    },
+    "source_documents_count": 14,
+    "missing_documents_count": 8
+  }
+}

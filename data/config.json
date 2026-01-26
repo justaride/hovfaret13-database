@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.89.0",
+    "version": "2.90.0",
     "created": "2025-12-03",
-    "last_updated": "2026-01-21",
+    "last_updated": "2026-01-26",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 67
+    "database_phase": 68
   },
   "auth": {
     "enabled": true,
@@ -132,8 +132,30 @@
   "natur_miljo": {
     "status": "in_progress",
     "content_file": "themes/natur-miljo.json",
-    "sections": ["overview", "shadow_analysis", "hoffselva", "geotechnics", "comparison", "sources"],
-    "pending_tasks": ["biologist_consultation", "school_site_docs_review", "hoffselva_data"]
+    "sections": [
+      "overview",
+      "shadow_analysis",
+      "hoffselva",
+      "geotechnics",
+      "comparison",
+      "sources"
+    ],
+    "pending_tasks": [
+      "biologist_consultation",
+      "school_site_docs_review",
+      "hoffselva_data"
+    ]
+  },
+  "environmental_arguments": {
+    "status": "in_progress",
+    "content_file": "themes/environmental-arguments.json",
+    "dashboard_page": "miljo-argumenter.html",
+    "source_folder": "Hovfaret 13  - Klima , Miljø, Bærekraft",
+    "argument_count": 15,
+    "source_document_count": 14,
+    "missing_document_count": 8,
+    "themes": 7,
+    "audiences": 5
   },
   "key_deliverables": {
     "energy_report": {
