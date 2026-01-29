@@ -2,6 +2,231 @@
 
 All notable changes to this project database.
 
+## [2.97.0] - 2026-01-27
+
+### Phase 75: Navigasjonsforenkling
+
+**Status:** ✅ COMPLETE
+
+#### Index som Hub - Minimal innholdsheader
+
+Forenklet navigasjon med klar mental modell: index.html er hub, innholdssider har minimal header.
+
+**Ny navigasjonsmodell:**
+
+| Kontekst      | Før                                | Etter                         |
+| ------------- | ---------------------------------- | ----------------------------- |
+| index.html    | Tab-header + sidebar               | Uendret (hub)                 |
+| Innholdssider | TabHeader + gammel header + subnav | ContentHeader: [← Tab] Tittel |
+
+**Nye filer:**
+
+| Fil                                      | Formål                           |
+| ---------------------------------------- | -------------------------------- |
+| `dashboard/components/content-header.js` | Minimal header med tilbake-lenke |
+
+**Oppdaterte filer:**
+
+| Fil                            | Endring                                   |
+| ------------------------------ | ----------------------------------------- |
+| `dashboard/css/tabs.css`       | Lagt til content-header stiler            |
+| 43 innholdssider               | TabHeader → ContentHeader                 |
+| `dashboard/rammesoeknad.html`  | Oppdatert header-referanser (60px → 48px) |
+| `dashboard/master.html`        | Oppdatert progress-bar posisjon           |
+| `dashboard/timeline.html`      | Oppdatert timeline-linje posisjon         |
+| `dashboard/project-story.html` | Fjernet unødvendig hero margin-top        |
+
+**Forbedringer:**
+
+- Én klar navigasjonsmodell (hub → innhold → tilbake)
+- Ingen dobbel header på innholdssider
+- Innholdssider får full plass uten distraksjoner
+- Automatisk fjerning av gamle nav-elementer
+
+---
+
+## [2.96.0] - 2026-01-26
+
+### Phase 74: Dashboard Restrukturering
+
+**Status:** ✅ COMPLETE
+
+#### Tab-basert navigasjon med tre soner
+
+Fullstendig restrukturering av 44 dashboard-sider fra flat sidebar til tre tydelige navigasjonssoner.
+
+**Ny struktur:**
+
+| Tab             | Formål                | Sider                                                                                       |
+| --------------- | --------------------- | ------------------------------------------------------------------------------------------- |
+| Prosjektstyring | Team-oversikt         | 6 sider (command-center, timeline, meetings, stakeholders, deliverables, regulatory-status) |
+| Presentasjoner  | Ekstern kommunikasjon | 2 sider (master, rammesoeknad)                                                              |
+| Produksjonsrom  | Arbeidsverktøy        | 35 sider i 9 kategorier                                                                     |
+
+**Nye filer:**
+
+| Fil                                  | Formål                                |
+| ------------------------------------ | ------------------------------------- |
+| `dashboard/components/tab-header.js` | Delt header-komponent med inject()    |
+| `dashboard/lib/page-config.js`       | Side-til-tab mapping og konfigurasjon |
+| `dashboard/lib/tab-router.js`        | URL state management (?tab=)          |
+| `dashboard/css/tabs.css`             | Tab-navigasjon styling                |
+| `dashboard/master.html`              | Ny longread-kronikk side              |
+| `dashboard/rammesoeknad.html`        | Ny rammesøknad dokumentside           |
+
+**Oppdaterte sider:**
+
+Alle 43 innholdssider oppdatert med:
+
+- CSS import (tabs.css)
+- Script imports (page-config.js, tab-router.js, tab-header.js)
+- TabHeader.inject() kall
+
+---
+
+## [2.95.0] - 2026-01-26
+
+### Phase 73: Solstudie & Animasjon
+
+**Status:** ✅ COMPLETE
+
+#### Smooth solstudie‑viewer med video og grading
+
+Ny solstudie-modul med automatisk eksport fra PDF, interpolerte videoer (MP4/WebM) og grafikkjustering i dashboardet. Viewer velger WebM når støttet og faller tilbake til MP4 eller frames.
+
+**Endringer:**
+
+| Fil                                 | Endring                                     |
+| ----------------------------------- | ------------------------------------------- |
+| `dashboard/solstudie.html`          | Ny solstudie‑side med kontroller og visning |
+| `dashboard/js/solstudie-player.js`  | Videoavspilling + fallback til frames       |
+| `dashboard/css/solstudie.css`       | Layout, overlays og UI‑stil                 |
+| `dashboard/index.html`              | Lagt til solstudie‑modul i navigasjon       |
+| `dashboard/data/solstudie.json`     | Manifest for serier/frames/video            |
+| `scripts/build-solstudie-assets.py` | PDF → PNG + manifest generator              |
+| `scripts/build-solstudie-video.py`  | Interpolert MP4/WebM + cinematic grading    |
+| `dashboard/assets/solstudie/`       | Frames og renderede videoer                 |
+
+---
+
+## [2.94.0] - 2026-01-26
+
+### Phase 72: Analyse av Lokale Bevis
+
+**Status:** ✅ COMPLETE
+
+#### Verifisering av Skøyen Terrasse 1 & Hoffsveien 17
+
+Analysert lokale filer i `ai_db_output` og funnet konkrete bevis på geoteknisk risiko.
+
+**Nøkkelfunn:**
+
+- **Skøyen Terrasse 1:** Bekreftet omfattende **stålforsterkning** i 2024/2025 pga. skjevstilling og setningsskader (Rammetillatelse/Ferdigattest).
+- **Hoffsveien 17:** Miljøteknisk rapport (2016) bekrefter **forurensede fyllmasser** over dyp leire. Ingen fjell i dagen.
+
+**Betydning:**
+
+Vi har nå fysiske bevis på at nabobygg må "reddes" fra setningsskader, og at grunnforholdene er svært krevende. Dette er avgjørende for argumentasjonen mot riving av Hovfaret 13.
+
+**Endringer:**
+
+| Fil                                             | Endring                          |
+| ----------------------------------------------- | -------------------------------- |
+| `analysis/research_skoyen_terrasse_findings.md` | Ny rapport med detaljert analyse |
+| `data/themes/environmental-arguments.json`      | Oppdatert status til "Anskaffet" |
+| `STATUS.md`                                     | Oppdatert dokumentstatus         |
+| `analysis/plan_acquisition_missing_...`         | Markert dokumenter som anskaffet |
+
+---
+
+## [2.93.0] - 2026-01-26
+
+### Phase 71: Kartlegging av Ekstern Dokumentasjon
+
+**Status:** ✅ COMPLETE
+
+#### Identifisering av Nabo-data og Presedens
+
+Gjennomført "nabo-detektivarbeid" for å finne relevante geotekniske rapporter og dispensasjonssaker i Skøyen-området.
+
+**Identifiserte Dokumenter:**
+
+- **Multiconsult (2016):** Geoteknisk rapport for Nedre Skøyen vei 2 (nabo i sør).
+- **Scandiaconsult (2001):** Grunnundersøkelse for Drammensveien 131.
+- **Statsforvalteren (2020):** Miljøgeologisk datarapport for Skøyen i berg (Fornebubanen).
+- **Hoffsveien 10:** Presedens for dispensasjon (kulturminneloven).
+
+**Betydning for Hovfaret 13:**
+
+Disse rapportene bekrefter områdets geotekniske kompleksitet og gir oss data vi kan bruke som referanse ("nabo-bevis") for å argumentere mot riving og for skånsom transformasjon.
+
+**Endringer:**
+
+| Fil                                        | Endring                                 |
+| ------------------------------------------ | --------------------------------------- |
+| `analysis/external_evidence_report_...`    | Ny rapport med detaljert kartlegging    |
+| `data/themes/environmental-arguments.json` | Lagt til 4 nye kildedokumenter          |
+| `STATUS.md`                                | Oppdatert status for eksterne rapporter |
+| `analysis/plan_acquisition_missing_...`    | Oppdatert handling: Laste ned rapporter |
+
+---
+
+## [2.92.0] - 2026-01-26
+
+### Phase 70: Deep Search & Identifisering
+
+**Status:** ✅ COMPLETE
+
+#### Identifisering av Skøyen Terrasse 1
+
+Gjennomført dypt søk og identifisert "dagsenteret" med setningsskader som **Skøyen Terrasse 1**.
+
+**Nøkkelfunn:**
+
+- Bygget (Omsorg+) står på **kvikkleire** og har omfattende setningsskader.
+- Estimert restlevetid er kun **10 år**, og bygget må rives.
+- Dette bekrefter geoteknisk risiko i området og forsterker behovet for nye omsorgsboliger (erstatning for 61 plasser).
+
+**Endringer:**
+
+| Fil                                        | Endring                                      |
+| ------------------------------------------ | -------------------------------------------- |
+| `analysis/deep_search_results_...`         | Ny rapport med detaljer om Skøyen Terrasse   |
+| `data/themes/environmental-arguments.json` | Oppdatert missing_09 med konkrete detaljer   |
+| `dashboard/miljo-argumenter.html`          | Visuell oppdatering for "identified" status  |
+| `analysis/plan_acquisition_missing_...`    | Oppdatert handling: Søke innsyn hos Oslobygg |
+
+---
+
+## [2.91.0] - 2026-01-26
+
+### Phase 69: Kartlegging av Miljødokumentasjon
+
+**Status:** ✅ COMPLETE
+
+#### Gap-analyse og dokumentintegrering
+
+Gjennomført grundig kartlegging av gap i miljø- og klimadokumentasjon for å styrke argumentasjonen mot riving.
+
+**Hovedpunkter:**
+
+- Identifisert 8 kritiske mangler i dokumentasjonen (Geoteknikk, Biologi, Overvann, etc.)
+- **Nytt funn:** Identifisert manglende dokumentasjon på setningsskader ved nærliggende dagsenter (referert i møter).
+- Dokumentert nåværende bruk av "proxy-data" fra naboprosjekter
+- Opprettet formell forskningsrapport og gjennomføringsplan for datainnhenting
+
+**Endringer:**
+
+| Fil                                        | Endring                                   |
+| ------------------------------------------ | ----------------------------------------- |
+| `data/themes/environmental-arguments.json` | Oppdatert med status og forskningsnotater |
+| `dashboard/miljo-argumenter.html`          | Oppdatert rendering med statusvisning     |
+| `analysis/research_missing_documents_...`  | Ny forskningsrapport                      |
+| `analysis/plan_acquisition_missing_...`    | Ny gjennomføringsplan                     |
+| `STATUS.md`                                | Oppdatert med Phase 67 (Miljøkartlegging) |
+
+---
+
 ## [2.90.0] - 2026-01-26
 
 ### Phase 68: Miljøargumentasjon Database

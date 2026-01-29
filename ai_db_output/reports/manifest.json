@@ -1,0 +1,358 @@
+{
+  "generated_at": "2026-01-26T19:17:12.566219+00:00",
+  "total_files": 39,
+  "files": [
+    {
+      "file": "7832 (1).pdf",
+      "json": "ai_db_output/json/7832 (1).json",
+      "markdown": "ai_db_output/markdown/7832 (1).md",
+      "page_count": 16,
+      "text_chars": 52325,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "7832.pdf",
+      "json": "ai_db_output/json/7832.json",
+      "markdown": "ai_db_output/markdown/7832.md",
+      "page_count": 16,
+      "text_chars": 52325,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Anmodning_om_forhaandsuttalelse_sendt_til_Vann-_og_avloepsetaten.pdf",
+      "json": "ai_db_output/json/Anmodning_om_forhaandsuttalelse_sendt_til_Vann-_og_avloepsetaten.json",
+      "markdown": "ai_db_output/markdown/Anmodning_om_forhaandsuttalelse_sendt_til_Vann-_og_avloepsetaten.md",
+      "page_count": 9,
+      "text_chars": 67867,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Avfallsrapport.pdf",
+      "json": "ai_db_output/json/Avfallsrapport.json",
+      "markdown": "ai_db_output/markdown/Avfallsrapport.md",
+      "page_count": 5,
+      "text_chars": 4817,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Behov_for_tilleggsdokumentasjon.pdf",
+      "json": "ai_db_output/json/Behov_for_tilleggsdokumentasjon.json",
+      "markdown": "ai_db_output/markdown/Behov_for_tilleggsdokumentasjon.md",
+      "page_count": 3,
+      "text_chars": 5931,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Egenerklaering_av_eierskap_til_offentlig_veigrunn.pdf",
+      "json": "ai_db_output/json/Egenerklaering_av_eierskap_til_offentlig_veigrunn.json",
+      "markdown": "ai_db_output/markdown/Egenerklaering_av_eierskap_til_offentlig_veigrunn.md",
+      "page_count": 1,
+      "text_chars": 1172,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Eksisterende_plan_kjeller.pdf",
+      "json": "ai_db_output/json/Eksisterende_plan_kjeller.json",
+      "markdown": "ai_db_output/markdown/Eksisterende_plan_kjeller.md",
+      "page_count": 1,
+      "text_chars": 587,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Erklaering_om_ansvarsrett_-_Grunnteknikk_AS.pdf",
+      "json": "ai_db_output/json/Erklaering_om_ansvarsrett_-_Grunnteknikk_AS.json",
+      "markdown": "ai_db_output/markdown/Erklaering_om_ansvarsrett_-_Grunnteknikk_AS.md",
+      "page_count": 1,
+      "text_chars": 5592,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Erklaering_om_ansvarsrett_-_Skape_Entreprenoer_AS.pdf",
+      "json": "ai_db_output/json/Erklaering_om_ansvarsrett_-_Skape_Entreprenoer_AS.json",
+      "markdown": "ai_db_output/markdown/Erklaering_om_ansvarsrett_-_Skape_Entreprenoer_AS.md",
+      "page_count": 2,
+      "text_chars": 9115,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Erklaering_om_ansvarsrett_-_VSO_Consulting.pdf",
+      "json": "ai_db_output/json/Erklaering_om_ansvarsrett_-_VSO_Consulting.json",
+      "markdown": "ai_db_output/markdown/Erklaering_om_ansvarsrett_-_VSO_Consulting.md",
+      "page_count": 1,
+      "text_chars": 4588,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Ferdigattest_-_Skoeyen_terrasse_1.pdf",
+      "json": "ai_db_output/json/Ferdigattest_-_Skoeyen_terrasse_1.json",
+      "markdown": "ai_db_output/markdown/Ferdigattest_-_Skoeyen_terrasse_1.md",
+      "page_count": 2,
+      "text_chars": 3022,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Forhaandsuttalelse_fra_Vann-_og_avloepsetaten.pdf",
+      "json": "ai_db_output/json/Forhaandsuttalelse_fra_Vann-_og_avloepsetaten.json",
+      "markdown": "ai_db_output/markdown/Forhaandsuttalelse_fra_Vann-_og_avloepsetaten.md",
+      "page_count": 2,
+      "text_chars": 3459,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Fundamentplan_utvidelse.pdf",
+      "json": "ai_db_output/json/Fundamentplan_utvidelse.json",
+      "markdown": "ai_db_output/markdown/Fundamentplan_utvidelse.md",
+      "page_count": 1,
+      "text_chars": 1433,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Gjennomfoeringsplan (1).pdf",
+      "json": "ai_db_output/json/Gjennomfoeringsplan (1).json",
+      "markdown": "ai_db_output/markdown/Gjennomfoeringsplan (1).md",
+      "page_count": 4,
+      "text_chars": 8083,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Gjennomfoeringsplan (2).pdf",
+      "json": "ai_db_output/json/Gjennomfoeringsplan (2).json",
+      "markdown": "ai_db_output/markdown/Gjennomfoeringsplan (2).md",
+      "page_count": 4,
+      "text_chars": 7629,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Gjennomfoeringsplan (3).pdf",
+      "json": "ai_db_output/json/Gjennomfoeringsplan (3).json",
+      "markdown": "ai_db_output/markdown/Gjennomfoeringsplan (3).md",
+      "page_count": 1,
+      "text_chars": 3145,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Gjennomfoeringsplan.pdf",
+      "json": "ai_db_output/json/Gjennomfoeringsplan.json",
+      "markdown": "ai_db_output/markdown/Gjennomfoeringsplan.md",
+      "page_count": 4,
+      "text_chars": 8570,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Miljoeteknisk_grunnundersoekelse.pdf",
+      "json": "ai_db_output/json/Miljoeteknisk_grunnundersoekelse.json",
+      "markdown": "ai_db_output/markdown/Miljoeteknisk_grunnundersoekelse.md",
+      "page_count": 58,
+      "text_chars": 174723,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Nabomerknader.pdf",
+      "json": "ai_db_output/json/Nabomerknader.json",
+      "markdown": "ai_db_output/markdown/Nabomerknader.md",
+      "page_count": 1,
+      "text_chars": 2753,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Opplysninger_gitt_i_nabovarsel_1.pdf",
+      "json": "ai_db_output/json/Opplysninger_gitt_i_nabovarsel_1.json",
+      "markdown": "ai_db_output/markdown/Opplysninger_gitt_i_nabovarsel_1.md",
+      "page_count": 2,
+      "text_chars": 3609,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Opplysninger_gitt_i_nabovarsel_2.pdf",
+      "json": "ai_db_output/json/Opplysninger_gitt_i_nabovarsel_2.json",
+      "markdown": "ai_db_output/markdown/Opplysninger_gitt_i_nabovarsel_2.md",
+      "page_count": 3,
+      "text_chars": 6341,
+      "has_text": true,
+      "ocr": true
+    },
+    {
+      "file": "Plan_1_etasje.pdf",
+      "json": "ai_db_output/json/Plan_1_etasje.json",
+      "markdown": "ai_db_output/markdown/Plan_1_etasje.md",
+      "page_count": 1,
+      "text_chars": 22342,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Plan_kjeller.pdf",
+      "json": "ai_db_output/json/Plan_kjeller.json",
+      "markdown": "ai_db_output/markdown/Plan_kjeller.md",
+      "page_count": 1,
+      "text_chars": 22344,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Rammetillatelse (1).pdf",
+      "json": "ai_db_output/json/Rammetillatelse (1).json",
+      "markdown": "ai_db_output/markdown/Rammetillatelse (1).md",
+      "page_count": 4,
+      "text_chars": 7172,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Rammetillatelse.pdf",
+      "json": "ai_db_output/json/Rammetillatelse.json",
+      "markdown": "ai_db_output/markdown/Rammetillatelse.md",
+      "page_count": 4,
+      "text_chars": 7172,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Samtykke_fra_Arbeidstilsynet (1).pdf",
+      "json": "ai_db_output/json/Samtykke_fra_Arbeidstilsynet (1).json",
+      "markdown": "ai_db_output/markdown/Samtykke_fra_Arbeidstilsynet (1).md",
+      "page_count": 4,
+      "text_chars": 7587,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Samtykke_fra_Arbeidstilsynet.pdf",
+      "json": "ai_db_output/json/Samtykke_fra_Arbeidstilsynet.json",
+      "markdown": "ai_db_output/markdown/Samtykke_fra_Arbeidstilsynet.md",
+      "page_count": 4,
+      "text_chars": 7587,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Situasjonsplan (1).pdf",
+      "json": "ai_db_output/json/Situasjonsplan (1).json",
+      "markdown": "ai_db_output/markdown/Situasjonsplan (1).md",
+      "page_count": 1,
+      "text_chars": 53,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Situasjonsplan.pdf",
+      "json": "ai_db_output/json/Situasjonsplan.json",
+      "markdown": "ai_db_output/markdown/Situasjonsplan.md",
+      "page_count": 1,
+      "text_chars": 6504,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Sluttrapport_med_avfallsplan.pdf",
+      "json": "ai_db_output/json/Sluttrapport_med_avfallsplan.json",
+      "markdown": "ai_db_output/markdown/Sluttrapport_med_avfallsplan.md",
+      "page_count": 2,
+      "text_chars": 13772,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Snitt_forsterkning_akse_C.pdf",
+      "json": "ai_db_output/json/Snitt_forsterkning_akse_C.json",
+      "markdown": "ai_db_output/markdown/Snitt_forsterkning_akse_C.md",
+      "page_count": 1,
+      "text_chars": 13337,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Snitt_forsterkning_akse_D.pdf",
+      "json": "ai_db_output/json/Snitt_forsterkning_akse_D.json",
+      "markdown": "ai_db_output/markdown/Snitt_forsterkning_akse_D.md",
+      "page_count": 1,
+      "text_chars": 27645,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Soeknad_om_ferdigattest.pdf",
+      "json": "ai_db_output/json/Soeknad_om_ferdigattest.json",
+      "markdown": "ai_db_output/markdown/Soeknad_om_ferdigattest.md",
+      "page_count": 3,
+      "text_chars": 4282,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Soeknad_om_rammetillatelse.pdf",
+      "json": "ai_db_output/json/Soeknad_om_rammetillatelse.json",
+      "markdown": "ai_db_output/markdown/Soeknad_om_rammetillatelse.md",
+      "page_count": 4,
+      "text_chars": 9841,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Tilsynsrapport_-_Hoffsveien_17_-_19_-_Hovfaret_10_-_14.pdf",
+      "json": "ai_db_output/json/Tilsynsrapport_-_Hoffsveien_17_-_19_-_Hovfaret_10_-_14.json",
+      "markdown": "ai_db_output/markdown/Tilsynsrapport_-_Hoffsveien_17_-_19_-_Hovfaret_10_-_14.md",
+      "page_count": 2,
+      "text_chars": 2394,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "Tiltaksplan_for_forurenset_grunn.pdf",
+      "json": "ai_db_output/json/Tiltaksplan_for_forurenset_grunn.json",
+      "markdown": "ai_db_output/markdown/Tiltaksplan_for_forurenset_grunn.md",
+      "page_count": 16,
+      "text_chars": 38193,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "showfile.pdf",
+      "json": "ai_db_output/json/showfile.json",
+      "markdown": "ai_db_output/markdown/showfile.md",
+      "page_count": 1,
+      "text_chars": 19434,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "vedlegg-5---skoyen-i-berg---miljogeologisk-datarapport-og-tiltaksplan (1).pdf",
+      "json": "ai_db_output/json/vedlegg-5---skoyen-i-berg---miljogeologisk-datarapport-og-tiltaksplan (1).json",
+      "markdown": "ai_db_output/markdown/vedlegg-5---skoyen-i-berg---miljogeologisk-datarapport-og-tiltaksplan (1).md",
+      "page_count": 300,
+      "text_chars": 1711499,
+      "has_text": true,
+      "ocr": false
+    },
+    {
+      "file": "vedlegg-5---skoyen-i-berg---miljogeologisk-datarapport-og-tiltaksplan.pdf",
+      "json": "ai_db_output/json/vedlegg-5---skoyen-i-berg---miljogeologisk-datarapport-og-tiltaksplan.json",
+      "markdown": "ai_db_output/markdown/vedlegg-5---skoyen-i-berg---miljogeologisk-datarapport-og-tiltaksplan.md",
+      "page_count": 300,
+      "text_chars": 1711499,
+      "has_text": true,
+      "ocr": false
+    }
+  ],
+  "errors": []
+}

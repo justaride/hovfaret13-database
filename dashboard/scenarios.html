@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Scenarioanalyse - Sammenligning av utviklingsalternativer for Hovfaret 13"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scenarier - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Prefetch related pages -->
+    <link rel="prefetch" href="index.html" />
+    <link rel="prefetch" href="sustainability-complete.html" />
+
+    <!-- Font with display=swap to prevent render blocking -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      /* ===== RESET & BASE ===== */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-hover: #f1f5f9;
+        --bg-selected: #eff6ff;
+        --bg-accent: #dbeafe;
+
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --text-accent: #2563eb;
+
+        --border-light: #e2e8f0;
+        --border-medium: #cbd5e1;
+
+        --success: #22c55e;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --info: #3b82f6;
+
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+
+        --radius-sm: 6px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.5;
+        font-size: 14px;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .app-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      /* Header */
+      .app-header {
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-light);
+        padding: var(--space-4) var(--space-6);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+      }
+
+      .back-link {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.875rem;
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--radius-sm);
+        transition: all 0.15s;
+      }
+
+      .back-link:hover {
+        background: var(--bg-hover);
+        color: var(--text-primary);
+      }
+
+      .page-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .header-stats {
+        display: flex;
+        gap: var(--space-6);
+      }
+
+      .stat {
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-accent);
+      }
+
+      .stat-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Main Content */
+      .main-content {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      /* Left Panel */
+      .list-panel {
+        width: 380px;
+        min-width: 380px;
+        background: var(--bg-card);
+        border-right: 1px solid var(--border-light);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .list-header {
+        padding: var(--space-4);
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .list-title {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-1);
+      }
+
+      .list-subtitle {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .scenario-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: var(--space-2);
+      }
+
+      .scenario-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-4);
+        margin: var(--space-2) 0;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        transition: all 0.15s;
+        border: 2px solid transparent;
+      }
+
+      .scenario-item:hover {
+        background: var(--bg-hover);
+      }
+
+      .scenario-item.selected {
+        background: var(--bg-selected);
+        border-color: var(--text-accent);
+      }
+
+      .scenario-item.preferred {
+        border-color: var(--success);
+      }
+
+      .scenario-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      .scenario-icon.demolition {
+        background: #fef2f2;
+      }
+      .scenario-icon.rehabilitation {
+        background: #f0fdf4;
+      }
+      .scenario-icon.omsorgplus {
+        background: #eff6ff;
+      }
+
+      .scenario-content {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .scenario-name {
+        font-weight: 600;
+        color: var(--text-primary);
+        font-size: 0.95rem;
+        margin-bottom: var(--space-1);
+      }
+
+      .scenario-desc {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .preferred-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 4px 8px;
+        background: rgba(34, 197, 94, 0.15);
+        color: var(--success);
+        border-radius: var(--radius-sm);
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      /* Right Panel */
+      .detail-panel {
+        flex: 1;
+        overflow-y: auto;
+        background: var(--bg-main);
+      }
+
+      .detail-empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: var(--text-muted);
+        text-align: center;
+        padding: var(--space-8);
+      }
+
+      .detail-empty-icon {
+        font-size: 4rem;
+        margin-bottom: var(--space-4);
+        opacity: 0.3;
+      }
+
+      .detail-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: var(--space-6);
+      }
+
+      .detail-header {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: var(--space-6);
+        margin-bottom: var(--space-4);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .detail-icon {
+        font-size: 3rem;
+        margin-bottom: var(--space-4);
+      }
+
+      .detail-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-2);
+      }
+
+      .detail-subtitle {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: var(--space-4);
+      }
+
+      .detail-description {
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* Metrics Grid */
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--space-4);
+        margin-bottom: var(--space-4);
+      }
+
+      .metric-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: var(--space-5);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .metric-icon {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-3);
+      }
+
+      .metric-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: var(--space-1);
+      }
+
+      .metric-value.positive {
+        color: var(--success);
+      }
+      .metric-value.negative {
+        color: var(--danger);
+      }
+
+      .metric-label {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .metric-comparison {
+        font-size: 0.75rem;
+        margin-top: var(--space-2);
+        padding: var(--space-1) var(--space-2);
+        border-radius: var(--radius-sm);
+        display: inline-flex;
+      }
+
+      .metric-comparison.better {
+        background: rgba(34, 197, 94, 0.1);
+        color: var(--success);
+      }
+
+      .metric-comparison.worse {
+        background: rgba(239, 68, 68, 0.1);
+        color: var(--danger);
+      }
+
+      /* Comparison Chart */
+      .comparison-section {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: var(--space-5);
+        margin-bottom: var(--space-4);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .section-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-4);
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+
+      .bar-chart {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+      }
+
+      .bar-item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-1);
+      }
+
+      .bar-label {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+
+      .bar-track {
+        height: 32px;
+        background: var(--bg-main);
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .bar-fill {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: var(--space-3);
+        border-radius: var(--radius-sm);
+        transition: width 0.5s ease;
+      }
+
+      .bar-fill.demolition {
+        background: linear-gradient(90deg, #fca5a5, #ef4444);
+      }
+      .bar-fill.rehabilitation {
+        background: linear-gradient(90deg, #86efac, #22c55e);
+      }
+      .bar-fill.omsorgplus {
+        background: linear-gradient(90deg, #93c5fd, #3b82f6);
+      }
+
+      .bar-value {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Loading */
+      .loading-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-8);
+        color: var(--text-muted);
+      }
+
+      .spinner {
+        width: 32px;
+        height: 32px;
+        border: 3px solid var(--border-light);
+        border-top-color: var(--text-accent);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin-bottom: var(--space-4);
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-medium);
+        border-radius: 4px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .main-content {
+          flex-direction: column;
+        }
+
+        .list-panel {
+          width: 100%;
+          min-width: 100%;
+          max-height: 40vh;
+        }
+
+        .header-stats {
+          display: none;
+        }
+
+        .metrics-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("scenarios");
+    </script>
+    <div class="app-container">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <a href="index.html" class="back-link">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Dashboard
+          </a>
+          <h1 class="page-title">Scenarier</h1>
+        </div>
+        <div class="header-stats">
+          <div class="stat">
+            <div class="stat-value" id="stat-scenarios">-</div>
+            <div class="stat-label">Scenarier</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="stat-co2-savings">-</div>
+            <div class="stat-label">CO₂ Spart</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Left Panel -->
+        <aside class="list-panel">
+          <div class="list-header">
+            <div class="list-title">Utviklingsscenarier</div>
+            <div class="list-subtitle">
+              Sammenlign alternativer for Hovfaret 13
+            </div>
+          </div>
+          <div class="scenario-list" id="scenario-list">
+            <div class="loading-state">
+              <div class="spinner"></div>
+              <span>Laster scenarier...</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Panel -->
+        <section class="detail-panel" id="detail-panel">
+          <div class="detail-empty">
+            <div class="detail-empty-icon">♻️</div>
+            <h3>Velg et scenario</h3>
+            <p>
+              Velg et scenario fra listen for å se detaljer og sammenligning
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="lib/data-loader.js"></script>
+    <script>
+      // ===== STATE =====
+      let scenarios = [];
+      let selectedScenarioId = null;
+      let preferredScenarioId = null;
+
+      // ===== HELPERS =====
+      function getScenarioMeta(id) {
+        const meta = {
+          demolition_new: {
+            icon: "🏗️",
+            iconClass: "demolition",
+            label: "Riving og nybygg",
+            subtitle: "Riv eksisterende bygg og bygg nytt",
+            color: "#ef4444",
+          },
+          rehabilitation_extension: {
+            icon: "🔧",
+            iconClass: "rehabilitation",
+            label: "Rehabilitering med påbygg",
+            subtitle: "Bevar og utvid eksisterende struktur",
+            color: "#22c55e",
+          },
+          omsorg_plus: {
+            icon: "🏠",
+            iconClass: "omsorgplus",
+            label: "Omsorg+ konsept",
+            subtitle: "Rehabilitering med 3-etasjes påbygg for eldreboliger",
+            color: "#3b82f6",
+          },
+        };
+        return (
+          meta[id] || {
+            icon: "📊",
+            iconClass: "default",
+            label: id,
+            subtitle: "",
+            color: "#6b7280",
+          }
+        );
+      }
+
+      function formatNumber(num) {
+        if (num === undefined || num === null) return "-";
+        return num.toLocaleString("nb-NO");
+      }
+
+      function formatPercent(num) {
+        if (num === undefined || num === null) return "-";
+        const sign = num > 0 ? "+" : "";
+        return `${sign}${num}%`;
+      }
+
+      function sanitize(str) {
+        if (!str) return "";
+        const div = document.createElement("div");
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      // ===== RENDERING =====
+      function renderScenarioList() {
+        const container = document.getElementById("scenario-list");
+
+        if (scenarios.length === 0) {
+          container.innerHTML =
+            '<div class="loading-state"><span>Ingen scenarier funnet</span></div>';
+          return;
+        }
+
+        let html = "";
+        scenarios.forEach((scenario) => {
+          const meta = getScenarioMeta(scenario.id);
+          const isSelected = scenario.id === selectedScenarioId;
+          const isPreferred = scenario.id === preferredScenarioId;
+
+          html += `
+          <div class="scenario-item ${isSelected ? "selected" : ""} ${isPreferred ? "preferred" : ""}" data-id="${scenario.id}">
+            <div class="scenario-icon ${meta.iconClass}">${meta.icon}</div>
+            <div class="scenario-content">
+              <div class="scenario-name">${meta.label}</div>
+              <div class="scenario-desc">${meta.subtitle}</div>
+              ${isPreferred ? '<span class="preferred-badge">⭐ Foretrukket</span>' : ""}
+            </div>
+          </div>
+        `;
+        });
+
+        container.innerHTML = html;
+
+        // Add click handlers
+        container.querySelectorAll(".scenario-item").forEach((item) => {
+          item.addEventListener("click", () => {
+            selectScenario(item.dataset.id);
+          });
+        });
+      }
+
+      function selectScenario(scenarioId) {
+        selectedScenarioId = scenarioId;
+
+        // Update list selection
+        document.querySelectorAll(".scenario-item").forEach((item) => {
+          item.classList.toggle("selected", item.dataset.id === scenarioId);
+        });
+
+        // Render detail
+        const scenario = scenarios.find((s) => s.id === scenarioId);
+        if (scenario) {
+          renderScenarioDetail(scenario);
+        }
+      }
+
+      function renderScenarioDetail(scenario) {
+        const panel = document.getElementById("detail-panel");
+        const meta = getScenarioMeta(scenario.id);
+        const isPreferred = scenario.id === preferredScenarioId;
+
+        // Find demolition scenario for comparison
+        const demolition = scenarios.find((s) => s.id === "demolition_new");
+        const demolitionCO2 = demolition?.co2_per_m2 || 1;
+
+        // Calculate comparison
+        const co2Comparison =
+          demolition && scenario.co2_per_m2
+            ? Math.round(
+                ((scenario.co2_per_m2 - demolition.co2_per_m2) /
+                  demolition.co2_per_m2) *
+                  100,
+              )
+            : null;
+
+        let html = `
+        <div class="detail-content">
+          <div class="detail-header">
+            <div class="detail-icon">${meta.icon}</div>
+            <h2 class="detail-title">${meta.label}</h2>
+            <p class="detail-subtitle">${meta.subtitle}</p>
+            ${isPreferred ? '<span class="preferred-badge" style="margin-top: 1rem;">⭐ Foretrukket scenario</span>' : ""}
+            ${scenario.description ? `<p class="detail-description" style="margin-top: 1rem;">${sanitize(scenario.description)}</p>` : ""}
+          </div>
+
+          <!-- Metrics -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-icon">🌍</div>
+              <div class="metric-value ${co2Comparison && co2Comparison < 0 ? "positive" : ""}">${formatNumber(scenario.co2_per_m2)} kg</div>
+              <div class="metric-label">CO₂ per m²</div>
+              ${
+                co2Comparison !== null && co2Comparison !== 0
+                  ? `
+                <span class="metric-comparison ${co2Comparison < 0 ? "better" : "worse"}">
+                  ${formatPercent(co2Comparison)} vs riving
+                </span>
+              `
+                  : ""
+              }
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon">🏭</div>
+              <div class="metric-value">${formatNumber(scenario.material_emissions)} t</div>
+              <div class="metric-label">Materialutslipp</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon">⚡</div>
+              <div class="metric-value">${formatNumber(scenario.energy_consumption)}</div>
+              <div class="metric-label">Energiforbruk kWh/m²</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon">📏</div>
+              <div class="metric-value">${formatNumber(scenario.total_area)} m²</div>
+              <div class="metric-label">Totalt areal</div>
+            </div>
+          </div>
+
+          <!-- CO2 Comparison Chart -->
+          <div class="comparison-section">
+            <h3 class="section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20V10"/>
+                <path d="M18 20V4"/>
+                <path d="M6 20v-4"/>
+              </svg>
+              CO₂-sammenligning (kg per m²)
+            </h3>
+            <div class="bar-chart">
+              ${scenarios
+                .map((s) => {
+                  const sMeta = getScenarioMeta(s.id);
+                  const maxCO2 = Math.max(
+                    ...scenarios.map((x) => x.co2_per_m2 || 0),
+                  );
+                  const width =
+                    maxCO2 > 0 ? ((s.co2_per_m2 || 0) / maxCO2) * 100 : 0;
+                  const isActive = s.id === scenario.id;
+
+                  return `
+                  <div class="bar-item">
+                    <span class="bar-label">${sMeta.label}</span>
+                    <div class="bar-track">
+                      <div class="bar-fill ${sMeta.iconClass}" style="width: ${width}%; opacity: ${isActive ? 1 : 0.5}">
+                        <span class="bar-value">${formatNumber(s.co2_per_m2)} kg</span>
+                      </div>
+                    </div>
+                  </div>
+                `;
+                })
+                .join("")}
+            </div>
+          </div>
+
+          <!-- Material Comparison Chart -->
+          <div class="comparison-section">
+            <h3 class="section-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+              Materialutslipp (tonn CO₂)
+            </h3>
+            <div class="bar-chart">
+              ${scenarios
+                .map((s) => {
+                  const sMeta = getScenarioMeta(s.id);
+                  const maxMaterial = Math.max(
+                    ...scenarios.map((x) => x.material_emissions || 0),
+                  );
+                  const width =
+                    maxMaterial > 0
+                      ? ((s.material_emissions || 0) / maxMaterial) * 100
+                      : 0;
+                  const isActive = s.id === scenario.id;
+
+                  return `
+                  <div class="bar-item">
+                    <span class="bar-label">${sMeta.label}</span>
+                    <div class="bar-track">
+                      <div class="bar-fill ${sMeta.iconClass}" style="width: ${width}%; opacity: ${isActive ? 1 : 0.5}">
+                        <span class="bar-value">${formatNumber(s.material_emissions)} t</span>
+                      </div>
+                    </div>
+                  </div>
+                `;
+                })
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+        panel.innerHTML = html;
+      }
+
+      // ===== INITIALIZATION =====
+      async function init() {
+        try {
+          const data = await DataLoader.loadAllData();
+
+          // Get scenarios from project data
+          if (data.project?.scenarios) {
+            scenarios = Object.entries(data.project.scenarios).map(
+              ([id, s]) => ({
+                id,
+                ...s,
+              }),
+            );
+            preferredScenarioId = data.project.preferred_scenario;
+          }
+
+          // Update stats
+          document.getElementById("stat-scenarios").textContent =
+            scenarios.length;
+
+          // Calculate CO2 savings of preferred vs demolition
+          const demolition = scenarios.find((s) => s.id === "demolition_new");
+          const preferred = scenarios.find((s) => s.id === preferredScenarioId);
+          if (
+            demolition &&
+            preferred &&
+            demolition.co2_per_m2 &&
+            preferred.co2_per_m2
+          ) {
+            const savings = Math.round(
+              ((demolition.co2_per_m2 - preferred.co2_per_m2) /
+                demolition.co2_per_m2) *
+                100,
+            );
+            document.getElementById("stat-co2-savings").textContent =
+              `${savings}%`;
+          }
+
+          // Render list
+          renderScenarioList();
+
+          // Auto-select preferred scenario
+          if (
+            preferredScenarioId &&
+            scenarios.find((s) => s.id === preferredScenarioId)
+          ) {
+            selectScenario(preferredScenarioId);
+          } else if (scenarios.length > 0) {
+            selectScenario(scenarios[0].id);
+          }
+        } catch (error) {
+          console.error("Error loading data:", error);
+          document.getElementById("scenario-list").innerHTML =
+            '<div class="loading-state"><span>Feil ved lasting av scenarier</span></div>';
+        }
+      }
+
+      // Start
+      init();
+    </script>
+  </body>
+</html>

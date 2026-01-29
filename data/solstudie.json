@@ -1,0 +1,110 @@
+{
+  "title": "Solstudie Hovfaret 13",
+  "updated": "2026-01-26",
+  "series": [
+    {
+      "id": "01mai",
+      "label": "1. mai",
+      "frames": [
+        {
+          "src": "assets/solstudie/frames/01mai-1800.png",
+          "time": "18:00",
+          "label": "1. mai kl. 18:00",
+          "source": "A10-18 Sol - 01. Mai  - Kl.18_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/01mai-1900.png",
+          "time": "19:00",
+          "label": "1. mai kl. 19:00",
+          "source": "A10-19 Sol - 01. Mai  - Kl.19_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/01mai-2000.png",
+          "time": "20:00",
+          "label": "1. mai kl. 20:00",
+          "source": "A10-20 Sol - 01. Mai  - Kl.20_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/01mai-2100.png",
+          "time": "21:00",
+          "label": "1. mai kl. 21:00",
+          "source": "A10-21 Sol - 01. Mai - Kl.21_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/01mai-2200.png",
+          "time": "22:00",
+          "label": "1. mai kl. 22:00",
+          "source": "A10-22 Sol - 01. Mai - Kl.22_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/01mai-2300.png",
+          "time": "23:00",
+          "label": "1. mai kl. 23:00",
+          "source": "A10-23 Sol - 01. Mai - Kl.23_00.pdf"
+        }
+      ],
+      "video": {
+        "mp4": "assets/solstudie/video/01mai.mp4",
+        "fps": 24,
+        "interpolated": true,
+        "input_fps": 1.0,
+        "grade": "cinematic",
+        "webm": "assets/solstudie/video/01mai.webm"
+      }
+    },
+    {
+      "id": "20juni",
+      "label": "20. juni",
+      "frames": [
+        {
+          "src": "assets/solstudie/frames/20juni-1800.png",
+          "time": "18:00",
+          "label": "20. juni kl. 18:00",
+          "source": "A10-12 Sol - 20.Juni - Kl.18_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/20juni-1900.png",
+          "time": "19:00",
+          "label": "20. juni kl. 19:00",
+          "source": "A10-13 Sol - 20.Juni - Kl.19_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/20juni-2000.png",
+          "time": "20:00",
+          "label": "20. juni kl. 20:00",
+          "source": "A10-14 Sol - 20.Juni - Kl.20_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/20juni-2100.png",
+          "time": "21:00",
+          "label": "20. juni kl. 21:00",
+          "source": "A10-15 Sol - 20.Juni - Kl.21_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/20juni-2200.png",
+          "time": "22:00",
+          "label": "20. juni kl. 22:00",
+          "source": "A10-16 Sol - 20.Juni - Kl.22_00.pdf"
+        },
+        {
+          "src": "assets/solstudie/frames/20juni-2300.png",
+          "time": "23:00",
+          "label": "20. juni kl. 23:00",
+          "source": "A10-17 Sol - 20.Juni - Kl.23_00.pdf"
+        }
+      ],
+      "video": {
+        "mp4": "assets/solstudie/video/20juni.mp4",
+        "fps": 24,
+        "interpolated": true,
+        "input_fps": 1.0,
+        "grade": "cinematic",
+        "webm": "assets/solstudie/video/20juni.webm"
+      }
+    }
+  ],
+  "defaults": {
+    "fps": 1,
+    "loop": true
+  }
+}

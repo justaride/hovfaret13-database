@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "version": "2.1",
+    "created": "2025-11-21",
+    "last_updated": "2025-12-07",
+    "total": 16,
+    "description": "Organizations involved in Hovfaret 13 project"
+  },
+  "organizations": {
+    "urbania_eiendom": {
+      "id": "urbania_eiendom",
+      "name": "Urbania Eiendom AS",
+      "type": "property_owner",
+      "category": "Core Project Team",
+      "description": "Property owner and main developer. Owns Hovfaret 13 through property SPV Hovfaret 13 AS.",
+      "role_in_project": "Property Owner / Client",
+      "website": null,
+      "address": null,
+      "key_people": ["andreas_thorsnes"],
+      "related_entities": ["hovfaret_13_as"],
+      "engagement_level": "primary",
+      "first_involvement": "2024-03-11"
+    },
+    "hovfaret_13_as": {
+      "id": "hovfaret_13_as",
+      "name": "Hovfaret 13 AS",
+      "type": "property_spv",
+      "category": "Core Project Team",
+      "description": "Single Purpose Vehicle (SPV) that owns the property",
+      "role_in_project": "Legal property owner",
+      "parent_company": "urbania_eiendom",
+      "engagement_level": "primary"
+    },
+    "natural_state": {
+      "id": "natural_state",
+      "name": "Natural State AS",
+      "type": "consultant",
+      "category": "Core Project Team",
+      "description": "Sustainability and strategy consultancy leading project coordination, digital strategy, and bærekraft documentation.",
+      "role_in_project": "Project Coordinator / Sustainability Strategy / Digital",
+      "website": "naturalstate.no",
+      "key_people": ["gabriel_boen", "einar_holthe", "laara", "severin_docker", "trym", "knut_halvor", "kristian", "linda_marie_aas"],
+      "expertise": ["Sustainability strategy", "Project management", "Digital strategy", "Communications"],
+      "engagement_level": "primary",
+      "first_involvement": "2024-03-11",
+      "total_meetings": 27
+    },
+    "r21_arkitekter": {
+      "id": "r21_arkitekter",
+      "name": "R21 Arkitekter",
+      "type": "consultant",
+      "category": "Core Project Team",
+      "description": "Architecture firm responsible for transformation designs, plantegninger, and visualizations for all scenarios.",
+      "role_in_project": "Architecture / Design",
+      "website": "r21.no",
+      "key_people": ["thomas_thorsen", "andrea", "francisco"],
+      "expertise": ["Architecture", "Urban planning", "Sustainability design", "Omsorg+ design"],
+      "key_deliverables": [
+        "6 development scenario designs",
+        "Floor plans (A20-series)",
+        "Visualization renders",
+        "Omsorg+ concept development"
+      ],
+      "engagement_level": "primary",
+      "first_involvement": "2024-05-06",
+      "total_meetings": 10
+    },
+    "vill_energi": {
+      "id": "vill_energi",
+      "name": "Vill Energi",
+      "type": "consultant",
+      "category": "Technical Consultants",
+      "description": "Energy consultancy firm responsible for energy mapping, climate calculations, and sustainability reporting.",
+      "role_in_project": "Energy / Climate Analysis",
+      "key_people": ["petter", "trym_osborg"],
+      "expertise": ["Energy mapping", "Climate calculations", "LCA analysis", "Enova applications"],
+      "key_deliverables": [
+        "Energikartlegging Hovfaret 13 (April 2025)",
+        "Klimagassberegninger v2 (April 2025)",
+        "Scenario comparison (CO₂ analysis)"
+      ],
+      "engagement_level": "secondary",
+      "first_involvement": "2024-12-11"
+    },
+    "byggekonsulent": {
+      "id": "byggekonsulent",
+      "name": "Byggekonsulent / Bykon",
+      "type": "consultant",
+      "category": "Technical Consultants",
+      "description": "Building consultant providing technical advice on construction and structural matters.",
+      "role_in_project": "Building Technical Consultant",
+      "key_people": ["knut_halvor_hogseth"],
+      "engagement_level": "secondary"
+    },
+    "bsrg": {
+      "id": "bsrg",
+      "name": "BSRG",
+      "type": "consultant",
+      "category": "Technical Consultants",
+      "description": "Sustainability consulting firm",
+      "role_in_project": "Sustainability Consultant",
+      "key_people": ["liv"],
+      "engagement_level": "supporting"
+    },
+    "ber_consulting": {
+      "id": "ber_consulting",
+      "name": "BER Consulting",
+      "type": "consultant",
+      "category": "Technical Consultants",
+      "description": "Consulting services",
+      "role_in_project": "Consultant",
+      "key_people": ["nec"],
+      "engagement_level": "supporting"
+    },
+    "oslo_kommune": {
+      "id": "oslo_kommune",
+      "name": "Oslo Kommune",
+      "type": "government",
+      "category": "Government / Regulatory",
+      "description": "Municipality of Oslo - regulatory authority for building permits and area planning.",
+      "role_in_project": "Regulatory Authority",
+      "departments": [
+        {
+          "name": "Plan- og bygningsetaten (PBE)",
+          "role": "Building permits and regulatory approval"
+        },
+        {
+          "name": "Byantikvaren",
+          "role": "Cultural heritage considerations"
+        }
+      ],
+      "key_context": "Vedtok områderegulering September 2023 med rivingskrav",
+      "engagement_level": "regulatory"
+    },
+    "bydel_ullern": {
+      "id": "bydel_ullern",
+      "name": "Bydel Ullern",
+      "type": "government",
+      "category": "Government / Regulatory",
+      "description": "Local district administration. Key stakeholder for Omsorg+ concept due to their housing needs for elderly.",
+      "role_in_project": "Local Government / Potential Omsorg+ Partner",
+      "key_people": ["ingrid_hopp", "tore_strandskog", "bente_otto"],
+      "interest": "Omsorg+ housing - need for 70+ elderly housing units in coming years",
+      "engagement_level": "stakeholder",
+      "first_contact": "2025-05-05"
+    },
+    "skoyen_omradeforum": {
+      "id": "skoyen_omradeforum",
+      "name": "Skøyen Områdeforum",
+      "type": "community",
+      "category": "Community / Neighbors",
+      "description": "Local area forum for Skøyen stakeholders coordinating area development interests.",
+      "role_in_project": "Community Stakeholder",
+      "key_context": "Submitted joint input to Oslo KPS (October 2024)",
+      "engagement_level": "stakeholder"
+    },
+    "fram_eiendom": {
+      "id": "fram_eiendom",
+      "name": "Fram Eiendom (Group)",
+      "type": "neighbor_developer",
+      "category": "Neighbors / Related Projects",
+      "description": "Real estate group owning neighboring properties including Hovfaret 10, 17. Part of coordinated area development.",
+      "role_in_project": "Neighboring Property Owner",
+      "related_properties": [
+        "Hovfaret 10 (Fram Hovfaret 10 AS)",
+        "Hovfaret 17 (Fram H 17 AS)",
+        "Karenslyst Alle 55-57 (Fram Investments AS)"
+      ],
+      "key_context": "Hovfaret 10 also fundamented for 12 floors but limited to 7 by regulations",
+      "engagement_level": "neighbor"
+    },
+    "statsforvalteren": {
+      "id": "statsforvalteren",
+      "name": "Statsforvalteren i Oslo og Viken",
+      "type": "government",
+      "category": "Government / Regulatory",
+      "description": "State representative handling appeals and objections to area plans.",
+      "role_in_project": "Regulatory oversight - handling objections from Bane NOR and Statens vegvesen",
+      "key_context": "Plan not legally binding due to pending objections",
+      "engagement_level": "regulatory"
+    },
+    "byggesaksradgivning": {
+      "id": "byggesaksradgivning",
+      "name": "Byggesaksrådgivning AS",
+      "type": "consultant",
+      "category": "Technical Consultants",
+      "description": "Building permit consultancy with 25+ years experience in Oslo. Specializes in building permits, user change applications, and sectioning cases. Previously handled the Covid-center conversion at Hovfaret 13.",
+      "role_in_project": "Responsible Applicant (Ansvarlig søker) - handles bruksendringssøknad to Omsorg+ and regulatory process with PBE",
+      "website": "byggesaksradgivning.com",
+      "key_context": "Has previous experience with Hovfaret 13 - handled conversion to Skøyen Covid-senter and back. Key expertise in navigating PBE processes.",
+      "engagement_level": "active",
+      "first_involvement": "2025-09-05"
+    },
+    "parabol": {
+      "id": "parabol",
+      "name": "Parabol",
+      "type": "consultant",
+      "category": "Technical Consultants",
+      "description": "Digital agency responsible for building and hosting the Hovfaret13.no website.",
+      "role_in_project": "Website development and hosting for hovfaret13.no",
+      "website": null,
+      "key_deliverables": [
+        "hovfaret13.no website development",
+        "Landing page for nabolagsmøte"
+      ],
+      "engagement_level": "support",
+      "first_involvement": "2025-05-01"
+    },
+    "nordic_circle_hotspot": {
+      "id": "nordic_circle_hotspot",
+      "name": "Nordic Circle Hotspot / NCC",
+      "type": "network",
+      "category": "Strategic Partners",
+      "description": "Network for circular economy in construction. Hovfaret 13 serves as a pilot project for testing circular building principles and materials.",
+      "role_in_project": "Strategic partner - Hovfaret 13 is pilot customer for circular economy testing",
+      "key_context": "Part of Nordic Circle Construction initiative. Project will test sirkulære byggematerialer and become living laboratory for circular principles.",
+      "engagement_level": "strategic",
+      "first_involvement": "2025-09-05"
+    }
+  },
+  "organization_categories": {
+    "Core Project Team": {
+      "description": "Organizations directly involved in project execution",
+      "members": ["urbania_eiendom", "natural_state", "r21_arkitekter"]
+    },
+    "Technical Consultants": {
+      "description": "Specialized consultants for technical aspects",
+      "members": ["vill_energi", "byggekonsulent", "bsrg", "ber_consulting"]
+    },
+    "Government / Regulatory": {
+      "description": "Public authorities and regulatory bodies",
+      "members": ["oslo_kommune", "bydel_ullern", "statsforvalteren"]
+    },
+    "Community / Neighbors": {
+      "description": "Local stakeholders and neighboring property owners",
+      "members": ["skoyen_omradeforum", "fram_eiendom"]
+    }
+  }
+}

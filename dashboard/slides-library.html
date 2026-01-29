@@ -1,0 +1,1932 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide-bibliotek | Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        background: #0f172a;
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .header {
+        background: #1e293b;
+        border-bottom: 1px solid #334155;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .header-content {
+        max-width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .back-link {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .back-link:hover {
+        color: #fff;
+      }
+      .header h1 {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      .header-badge {
+        background: #f59e0b;
+        color: #000;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      /* Main */
+      .main {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Info */
+      .info-banner {
+        background: linear-gradient(135deg, #1e3a5f 0%, #0d1f33 100%);
+        border: 1px solid #2563eb;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .info-banner h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: #60a5fa;
+      }
+      .info-banner p {
+        color: #94a3b8;
+        font-size: 0.875rem;
+      }
+
+      /* Category sections */
+      .category {
+        margin-bottom: 3rem;
+      }
+      .category-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #334155;
+      }
+      .category-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+      .category-icon.transform {
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+      }
+      .category-icon.ncc {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+      }
+      .category-icon.social {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+      }
+      .category-icon.technical {
+        background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      }
+      .category-icon.financial {
+        background: linear-gradient(135deg, #ec4899, #db2777);
+      }
+
+      .category-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .category-desc {
+        font-size: 0.875rem;
+        color: #94a3b8;
+      }
+
+      /* Slides grid */
+      .slides-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 1.5rem;
+      }
+
+      /* Slide card */
+      .slide-card {
+        background: #1e293b;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #334155;
+        transition: all 0.2s;
+      }
+      .slide-card:hover {
+        border-color: #3b82f6;
+        transform: translateY(-2px);
+      }
+
+      .slide-preview {
+        aspect-ratio: 16/9;
+        background: #fff;
+        color: #1a1a1a;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slide-preview.dark {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: #fff;
+      }
+
+      .slide-preview.green {
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        color: #166534;
+      }
+
+      .slide-preview.blue {
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        color: #1e40af;
+      }
+
+      .slide-preview.amber {
+        background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
+        color: #92400e;
+      }
+
+      .slide-info {
+        padding: 1rem 1.5rem;
+      }
+      .slide-title {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .slide-desc {
+        font-size: 0.8rem;
+        color: #94a3b8;
+        margin-bottom: 0.75rem;
+      }
+      .slide-tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .slide-tag {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        background: #334155;
+        color: #94a3b8;
+      }
+      .slide-tag.primary {
+        background: #1e40af;
+        color: #dbeafe;
+      }
+
+      /* Slide content styles */
+      .slide-headline {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+      .slide-subline {
+        font-size: 0.75rem;
+        opacity: 0.8;
+        margin-bottom: 1rem;
+      }
+      .stat-row {
+        display: flex;
+        gap: 1rem;
+        margin: 0.5rem 0;
+      }
+      .stat-box {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem;
+        border-radius: 6px;
+        background: rgba(0, 0, 0, 0.05);
+      }
+      .stat-box.dark {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .stat-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .stat-label {
+        font-size: 0.55rem;
+        opacity: 0.7;
+        text-transform: uppercase;
+      }
+      .quote-block {
+        font-style: italic;
+        padding: 0.5rem;
+        border-left: 3px solid currentColor;
+        margin: 0.5rem 0;
+        font-size: 0.7rem;
+      }
+      .logo-footer {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.75rem;
+        font-size: 0.5rem;
+        opacity: 0.5;
+      }
+
+      /* Copy button */
+      .copy-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.65rem;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .slide-preview:hover .copy-btn {
+        opacity: 1;
+      }
+      .copy-btn:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      /* Comparison layout */
+      .comparison-cols {
+        display: flex;
+        gap: 0.5rem;
+        flex: 1;
+      }
+      .comparison-col {
+        flex: 1;
+        padding: 0.5rem;
+        border-radius: 6px;
+        font-size: 0.6rem;
+      }
+      .comparison-col.bad {
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+      }
+      .comparison-col.good {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+      }
+      .comparison-col h4 {
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+      }
+      .comparison-col ul {
+        padding-left: 1rem;
+      }
+      .comparison-col li {
+        margin: 0.25rem 0;
+      }
+
+      /* NCC specific */
+      .partner-logos {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin: 0.5rem 0;
+      }
+      .partner-logo {
+        padding: 0.5rem 1rem;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        font-size: 0.7rem;
+        font-weight: 600;
+      }
+
+      /* Bullet list */
+      .bullet-list {
+        font-size: 0.65rem;
+        padding-left: 1rem;
+      }
+      .bullet-list li {
+        margin: 0.3rem 0;
+      }
+
+      /* Timeline mini */
+      .timeline-mini {
+        display: flex;
+        gap: 0.25rem;
+        margin: 0.5rem 0;
+      }
+      .timeline-item {
+        flex: 1;
+        padding: 0.4rem;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+        text-align: center;
+        font-size: 0.55rem;
+      }
+      .timeline-item.active {
+        background: #22c55e;
+        color: #fff;
+      }
+      .timeline-item .year {
+        font-weight: 700;
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("slides-library");
+    </script>
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="back-link">← Tilbake til dashboard</a>
+        <h1>Slide-bibliotek</h1>
+        <span class="header-badge">15 slides</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="info-banner">
+        <h2>Standalone presentasjons-slides</h2>
+        <p>
+          Ferdige slides for ulike formål: investorpresentasjoner, politisk
+          dialog, presseoppslag, NCC-samarbeid, med mer. Hver slide kan brukes
+          selvstendig eller kombineres.
+        </p>
+      </div>
+
+      <!-- KATEGORI: Transformasjonsargumentasjon -->
+      <section class="category">
+        <div class="category-header">
+          <div class="category-icon transform">♻️</div>
+          <div>
+            <h2 class="category-title">Transformasjonsargumentasjon</h2>
+            <p class="category-desc">
+              Hvorfor rehabilitering er bedre enn riving
+            </p>
+          </div>
+        </div>
+
+        <div class="slides-grid">
+          <!-- Slide: 48% headline -->
+          <div class="slide-card">
+            <div class="slide-preview dark">
+              <button class="copy-btn">Kopier</button>
+              <div
+                class="slide-headline"
+                style="font-size: 2.5rem; color: #22c55e"
+              >
+                48%
+              </div>
+              <div class="slide-subline" style="font-size: 1rem; color: #fff">
+                lavere CO₂-utslipp med transformasjon
+              </div>
+              <div class="stat-row">
+                <div class="stat-box dark">
+                  <div class="stat-value" style="color: #ef4444">5 343</div>
+                  <div class="stat-label">Tonn CO₂ ved riving</div>
+                </div>
+                <div class="stat-box dark">
+                  <div class="stat-value" style="color: #22c55e">2 794</div>
+                  <div class="stat-label">Tonn CO₂ ved rehabilitering</div>
+                </div>
+              </div>
+              <p style="font-size: 0.6rem; color: #94a3b8; margin-top: auto">
+                Kilde: Vill Energi AS, Klimagassberegninger v2 (april 2025)
+              </p>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">48% CO₂-reduksjon — Hovedbudskap</div>
+              <div class="slide-desc">
+                Kraftig visuell fremstilling av klimagevinsten. Perfekt for
+                åpning av presentasjoner.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Klima</span>
+                <span class="slide-tag">Åpningsslide</span>
+                <span class="slide-tag">Investor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Riving vs rehabilitering sammenligning -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Riving vs Rehabilitering</div>
+              <div class="slide-subline">
+                Miljømessige konsekvenser av hvert valg
+              </div>
+              <div class="comparison-cols">
+                <div class="comparison-col bad">
+                  <h4 style="color: #dc2626">❌ Riving</h4>
+                  <ul>
+                    <li>5 343 tonn CO₂</li>
+                    <li>312 kg/m² materialutslipp</li>
+                    <li>Ødelegger 11 års biotop</li>
+                    <li>Risiko i kvikkleire</li>
+                    <li>2-3 år anleggsperiode</li>
+                  </ul>
+                </div>
+                <div class="comparison-col good">
+                  <h4 style="color: #166534">✓ Rehabilitering</h4>
+                  <ul>
+                    <li>2 794 tonn CO₂</li>
+                    <li>62 kg/m² materialutslipp</li>
+                    <li>Bevarer etablert natur</li>
+                    <li>Ingen geoteknisk risiko</li>
+                    <li>Kortere byggetid</li>
+                  </ul>
+                </div>
+              </div>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Side-by-side sammenligning</div>
+              <div class="slide-desc">
+                Tydelig visualisering av forskjellene mellom riving og
+                rehabilitering.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Sammenligning</span>
+                <span class="slide-tag">Politikere</span>
+                <span class="slide-tag">Presse</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Materialbesparelse -->
+          <div class="slide-card">
+            <div class="slide-preview green">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">80% materialbesparelse</div>
+              <div class="slide-subline">Ved å bevare bærekonstruksjonen</div>
+              <div class="stat-row">
+                <div class="stat-box">
+                  <div class="stat-value" style="color: #166534">62</div>
+                  <div class="stat-label">kg CO₂/m² rehab</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-value" style="color: #dc2626">312</div>
+                  <div class="stat-label">kg CO₂/m² nybygg</div>
+                </div>
+              </div>
+              <div class="quote-block" style="border-color: #166534">
+                "Grunn og fundamenter står for 100 kg CO₂/m² ved nybygg — kun 5
+                kg ved rehabilitering"
+              </div>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Materialutslipp — Detaljert</div>
+              <div class="slide-desc">
+                Fokus på materialbesparelsen ved å bevare eksisterende
+                konstruksjon.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Materialer</span>
+                <span class="slide-tag">Teknisk</span>
+                <span class="slide-tag">LCA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Reservekapasitet -->
+          <div class="slide-card">
+            <div class="slide-preview blue">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Har 5, kan bli 8</div>
+              <div class="slide-subline">
+                Reservekapasitet for 3 nye etasjer
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 0.25rem;
+                  margin: 0.5rem 0;
+                  align-items: flex-end;
+                "
+              >
+                <div
+                  style="
+                    width: 30px;
+                    height: 60px;
+                    background: #3b82f6;
+                    border-radius: 4px 4px 0 0;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 30px;
+                    height: 60px;
+                    background: #3b82f6;
+                    border-radius: 4px 4px 0 0;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 30px;
+                    height: 60px;
+                    background: #3b82f6;
+                    border-radius: 4px 4px 0 0;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 30px;
+                    height: 60px;
+                    background: #3b82f6;
+                    border-radius: 4px 4px 0 0;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 30px;
+                    height: 60px;
+                    background: #3b82f6;
+                    border-radius: 4px 4px 0 0;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 30px;
+                    height: 36px;
+                    background: #93c5fd;
+                    border-radius: 4px 4px 0 0;
+                    border: 2px dashed #3b82f6;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 30px;
+                    height: 36px;
+                    background: #93c5fd;
+                    border-radius: 4px 4px 0 0;
+                    border: 2px dashed #3b82f6;
+                  "
+                ></div>
+                <div
+                  style="
+                    width: 30px;
+                    height: 36px;
+                    background: #93c5fd;
+                    border-radius: 4px 4px 0 0;
+                    border: 2px dashed #3b82f6;
+                  "
+                ></div>
+              </div>
+              <div style="display: flex; gap: 1rem; font-size: 0.6rem">
+                <span>● Eksisterende 5 etasjer</span>
+                <span style="color: #3b82f6">◌ Mulig påbygg 3 etasjer</span>
+              </div>
+              <p style="font-size: 0.6rem; margin-top: 0.5rem">
+                Fundamentet fra 1989 har reservekapasitet for 3 nye etasjer.
+                Påbygg fra 5 til 8 etasjer uten nye grunnarbeider.
+              </p>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Reservekapasitet i fundamentet</div>
+              <div class="slide-desc">
+                Visualisering av byggets unike strukturelle potensial.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Struktur</span>
+                <span class="slide-tag">Teknisk</span>
+                <span class="slide-tag">Unik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KATEGORI: NCC / Nordic Circle -->
+      <section class="category">
+        <div class="category-header">
+          <div class="category-icon ncc">🔄</div>
+          <div>
+            <h2 class="category-title">NCC & Nordic Circle Hotspot</h2>
+            <p class="category-desc">Sirkulær økonomi og nordisk samarbeid</p>
+          </div>
+        </div>
+
+        <div class="slides-grid">
+          <!-- Slide: NCC Partnership -->
+          <div class="slide-card">
+            <div class="slide-preview dark">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Nordic Circle Hotspot</div>
+              <div class="slide-subline">
+                Pilotprosjekt for sirkulær bygging
+              </div>
+              <div
+                class="partner-logos"
+                style="
+                  background: rgba(255, 255, 255, 0.1);
+                  padding: 0.75rem;
+                  border-radius: 8px;
+                "
+              >
+                <div
+                  class="partner-logo"
+                  style="background: rgba(255, 255, 255, 0.2); color: #fff"
+                >
+                  Natural State
+                </div>
+                <div
+                  class="partner-logo"
+                  style="background: rgba(255, 255, 255, 0.2); color: #fff"
+                >
+                  NCC
+                </div>
+                <div
+                  class="partner-logo"
+                  style="background: rgba(255, 255, 255, 0.2); color: #fff"
+                >
+                  Urbania
+                </div>
+              </div>
+              <ul
+                class="bullet-list"
+                style="color: #94a3b8; margin-top: 0.5rem"
+              >
+                <li>Pilotkunde for sirkulære byggeløsninger</li>
+                <li>Biodiversitetsanalyse gjennomført</li>
+                <li>Klimakalkyler (riving vs bevaring)</li>
+                <li>Nordisk materialintelligens-konsept</li>
+              </ul>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">NCC-samarbeid oversikt</div>
+              <div class="slide-desc">
+                Hovfaret 13 som pilotprosjekt for Nordic Circle Hotspot.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">NCC</span>
+                <span class="slide-tag">Sirkulær</span>
+                <span class="slide-tag">Partnerskap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Sirkulær økonomi -->
+          <div class="slide-card">
+            <div class="slide-preview green">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Sirkulær stedsutvikling</div>
+              <div class="slide-subline">Et ledende eksempel i Oslo</div>
+              <div
+                class="quote-block"
+                style="
+                  border-color: #166534;
+                  background: rgba(0, 0, 0, 0.05);
+                  padding: 0.75rem;
+                "
+              >
+                "Dette kan bli et ledende eksempel på sirkulær økonomi i Oslo."
+                <div
+                  style="
+                    font-size: 0.55rem;
+                    font-style: normal;
+                    margin-top: 0.25rem;
+                    opacity: 0.7;
+                  "
+                >
+                  — Fra strategimøte, september 2025
+                </div>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 0.5rem;
+                  margin-top: 0.5rem;
+                  font-size: 0.6rem;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(0, 0, 0, 0.05);
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <strong>Gjenbruk</strong><br />
+                  Bærekonstruksjon bevares
+                </div>
+                <div
+                  style="
+                    background: rgba(0, 0, 0, 0.05);
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <strong>Lokale kretsløp</strong><br />
+                  Energi og ressurser
+                </div>
+                <div
+                  style="
+                    background: rgba(0, 0, 0, 0.05);
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <strong>Lang levetid</strong><br />
+                  Design for fremtiden
+                </div>
+                <div
+                  style="
+                    background: rgba(0, 0, 0, 0.05);
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <strong>Avfallsreduksjon</strong><br />
+                  85% mindre avfall
+                </div>
+              </div>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Sirkulære prinsipper</div>
+              <div class="slide-desc">
+                Hovfaret 13 som demonstrasjon av sirkulær økonomi.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Sirkulær</span>
+                <span class="slide-tag">Bærekraft</span>
+                <span class="slide-tag">Visjon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KATEGORI: Samfunnsverdi -->
+      <section class="category">
+        <div class="category-header">
+          <div class="category-icon social">👴</div>
+          <div>
+            <h2 class="category-title">Samfunnsverdi & Omsorg+</h2>
+            <p class="category-desc">Bydelens behov og sosial nytte</p>
+          </div>
+        </div>
+
+        <div class="slides-grid">
+          <!-- Slide: Bydelens behov -->
+          <div class="slide-card">
+            <div class="slide-preview amber">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">150-200 omsorgsboliger</div>
+              <div class="slide-subline">
+                Bydel Ullerns dokumenterte behov mot 2040
+              </div>
+              <div class="stat-row">
+                <div class="stat-box">
+                  <div class="stat-value" style="color: #b45309">73</div>
+                  <div class="stat-label">Enheter H13</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-value" style="color: #b45309">~40%</div>
+                  <div class="stat-label">Av behovet</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-value" style="color: #b45309">61</div>
+                  <div class="stat-label">Eksist. plasser</div>
+                </div>
+              </div>
+              <div class="quote-block" style="border-color: #b45309">
+                "Det er anslått et behov for 150-200 nye boenheter frem til 2040
+                i Bydel Ullern."
+                <div
+                  style="
+                    font-size: 0.5rem;
+                    font-style: normal;
+                    margin-top: 0.25rem;
+                  "
+                >
+                  — Ingrid Hopp, Leder Bydelsutvalget
+                </div>
+              </div>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Bydelens behov — Nøkkeltall</div>
+              <div class="slide-desc">
+                Dokumentert behov for omsorgsboliger fra bydelsledelsen.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Omsorg+</span>
+                <span class="slide-tag">Bydel</span>
+                <span class="slide-tag">Behov</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Omsorg+ konsept -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Omsorg+ Hovfaret 13</div>
+              <div class="slide-subline">
+                73 eldreboliger med fellesfunksjoner
+              </div>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 0.5rem;
+                  font-size: 0.6rem;
+                "
+              >
+                <div
+                  style="
+                    background: #f0fdf4;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <strong style="color: #166534">66 enkeltrom</strong><br />42
+                  m²
+                </div>
+                <div
+                  style="
+                    background: #eff6ff;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <strong style="color: #1e40af">7 dobbeltrom</strong><br />67
+                  m²
+                </div>
+                <div
+                  style="
+                    background: #fef3c7;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <strong style="color: #b45309">8 etasjer</strong><br />Boliger
+                  etg. 2-8
+                </div>
+                <div
+                  style="
+                    background: #fce7f3;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <strong style="color: #be185d">1. etasje</strong
+                  ><br />Fellesfunksjoner
+                </div>
+              </div>
+              <div
+                style="font-size: 0.55rem; margin-top: 0.5rem; color: #64748b"
+              >
+                Kantine • Dagsenter • Aktivitetsrom • Uteservering mot elven •
+                Takhage
+              </div>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Omsorg+ programoversikt</div>
+              <div class="slide-desc">
+                Oversikt over leilighetsfordeling og fellesfunksjoner.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Program</span>
+                <span class="slide-tag">Omsorg+</span>
+                <span class="slide-tag">Arkitektur</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Interessentstøtte -->
+          <div class="slide-card">
+            <div class="slide-preview dark">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Bred interessentstøtte</div>
+              <div class="slide-subline">Fra nabolag til byråd</div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.4rem;
+                  margin: 0.5rem 0;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(34, 197, 94, 0.2);
+                    padding: 0.4rem 0.6rem;
+                    border-radius: 4px;
+                    font-size: 0.6rem;
+                    display: flex;
+                    justify-content: space-between;
+                  "
+                >
+                  <span>Nabolagsmøte 14. okt</span>
+                  <span style="color: #22c55e">~30 deltakere ✓</span>
+                </div>
+                <div
+                  style="
+                    background: rgba(59, 130, 246, 0.2);
+                    padding: 0.4rem 0.6rem;
+                    border-radius: 4px;
+                    font-size: 0.6rem;
+                    display: flex;
+                    justify-content: space-between;
+                  "
+                >
+                  <span>Bydelsutvalgsmøte 29. okt</span>
+                  <span style="color: #3b82f6">Politisk støtte ✓</span>
+                </div>
+                <div
+                  style="
+                    background: rgba(168, 85, 247, 0.2);
+                    padding: 0.4rem 0.6rem;
+                    border-radius: 4px;
+                    font-size: 0.6rem;
+                    display: flex;
+                    justify-content: space-between;
+                  "
+                >
+                  <span>Møte m/byråd Lorentzen</span>
+                  <span style="color: #a855f7">24. juni 2025 ✓</span>
+                </div>
+                <div
+                  style="
+                    background: rgba(245, 158, 11, 0.2);
+                    padding: 0.4rem 0.6rem;
+                    border-radius: 4px;
+                    font-size: 0.6rem;
+                    display: flex;
+                    justify-content: space-between;
+                  "
+                >
+                  <span>13 dialog-hendelser</span>
+                  <span style="color: #f59e0b">Dokumentert ✓</span>
+                </div>
+              </div>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Interessentdialog-oversikt</div>
+              <div class="slide-desc">Dokumentert støtte fra alle nivåer.</div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Dialog</span>
+                <span class="slide-tag">Politisk</span>
+                <span class="slide-tag">Støtte</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KATEGORI: Teknisk -->
+      <section class="category">
+        <div class="category-header">
+          <div class="category-icon technical">🔧</div>
+          <div>
+            <h2 class="category-title">Teknisk & Økologisk</h2>
+            <p class="category-desc">
+              Bygningstekniske og økologiske argumenter
+            </p>
+          </div>
+        </div>
+
+        <div class="slides-grid">
+          <!-- Slide: Hoffselva -->
+          <div class="slide-card">
+            <div class="slide-preview green">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">11 år etablert biotop</div>
+              <div class="slide-subline">Økologisk verdi langs Hoffselva</div>
+              <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0">
+                <div
+                  style="
+                    flex: 1;
+                    background: #fef2f2;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    font-size: 0.55rem;
+                    border-left: 3px solid #ef4444;
+                  "
+                >
+                  <strong style="color: #dc2626">Ved riving:</strong><br />
+                  • Ødelegger 11 års vegetasjon<br />
+                  • 2-3 år forstyrret økosystem<br />
+                  • Risiko i kvikkleiresone<br />
+                  • Avbrutt kobling til elven
+                </div>
+                <div
+                  style="
+                    flex: 1;
+                    background: #f0fdf4;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    font-size: 0.55rem;
+                    border-left: 3px solid #22c55e;
+                  "
+                >
+                  <strong style="color: #166534">Ved bevaring:</strong><br />
+                  • Bevarer etablert natur<br />
+                  • Mulighet for restaurering<br />
+                  • Ingen geoteknisk risiko<br />
+                  • Takhage for pollinatorer
+                </div>
+              </div>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Økologisk argument</div>
+              <div class="slide-desc">
+                Biotop og naturverdier langs Hoffselva.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Økologi</span>
+                <span class="slide-tag">Hoffselva</span>
+                <span class="slide-tag">Natur</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Kvikkleire -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Geoteknisk risiko</div>
+              <div class="slide-subline">Kvikkleire langs Hoffselva</div>
+              <div
+                style="
+                  background: #fef2f2;
+                  border: 1px solid #fecaca;
+                  padding: 0.75rem;
+                  border-radius: 6px;
+                  margin: 0.5rem 0;
+                "
+              >
+                <p style="font-size: 0.65rem; color: #991b1b">
+                  <strong>⚠️ Risiko ved riving:</strong><br />
+                  Bygget er fundamentert på peler ned til fast grunn. Ved riving
+                  må disse fjernes, noe som skaper risiko i kvikkleiresonen.
+                </p>
+              </div>
+              <div
+                style="
+                  background: #f0fdf4;
+                  border: 1px solid #bbf7d0;
+                  padding: 0.75rem;
+                  border-radius: 6px;
+                "
+              >
+                <p style="font-size: 0.65rem; color: #166534">
+                  <strong>✓ Konklusjon fra bærekraftsrapport:</strong><br />
+                  "På bakgrunn av geotekniske forhold er en avlastning av
+                  området fra ytterligere geoteknisk belastning det mest
+                  rasjonelle valget."
+                </p>
+              </div>
+              <p style="font-size: 0.5rem; color: #64748b; margin-top: 0.5rem">
+                Ref: ROS-analyse Hoff Skole
+              </p>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Kvikkleire-argumentet</div>
+              <div class="slide-desc">
+                Geoteknisk risiko ved riving vs bevaring.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Geoteknikk</span>
+                <span class="slide-tag">Risiko</span>
+                <span class="slide-tag">Unik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KATEGORI: Finansiell -->
+      <section class="category">
+        <div class="category-header">
+          <div class="category-icon financial">💰</div>
+          <div>
+            <h2 class="category-title">Finansiering & Økonomi</h2>
+            <p class="category-desc">
+              Økonomiske muligheter og støtteordninger
+            </p>
+          </div>
+        </div>
+
+        <div class="slides-grid">
+          <!-- Slide: Husbanken -->
+          <div class="slide-card">
+            <div class="slide-preview blue">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Husbanken-støtte</div>
+              <div class="slide-subline">
+                Investeringstilskudd for omsorgsboliger
+              </div>
+              <div class="stat-row">
+                <div class="stat-box">
+                  <div class="stat-value" style="color: #1e40af">45%</div>
+                  <div class="stat-label">Tilskudd</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-value" style="color: #1e40af">2,1</div>
+                  <div class="stat-label">MNOK/enhet maks</div>
+                </div>
+              </div>
+              <div
+                style="
+                  font-size: 0.55rem;
+                  background: rgba(0, 0, 0, 0.05);
+                  padding: 0.5rem;
+                  border-radius: 4px;
+                  margin-top: 0.5rem;
+                "
+              >
+                <strong>Krav:</strong>
+                <ul style="padding-left: 1rem; margin-top: 0.25rem">
+                  <li>Kun kommuner kan søke</li>
+                  <li>Beboere må ha heldøgns vedtak</li>
+                  <li>30 års bindingstid</li>
+                </ul>
+              </div>
+              <p style="font-size: 0.5rem; color: #64748b; margin-top: 0.5rem">
+                Kilde: Husbanken.no, satser 2025
+              </p>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Husbanken investeringstilskudd</div>
+              <div class="slide-desc">Verifiserte satser og krav for 2025.</div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Husbanken</span>
+                <span class="slide-tag">Finansiering</span>
+                <span class="slide-tag">Verifisert</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Prosjekttidslinje -->
+          <div class="slide-card">
+            <div class="slide-preview dark">
+              <button class="copy-btn">Kopier</button>
+              <div class="slide-headline">Prosjektreisen</div>
+              <div class="slide-subline">
+                Fra rivningsvedtak til transformasjon
+              </div>
+              <div class="timeline-mini">
+                <div class="timeline-item active">
+                  <div class="year">2023</div>
+                  <div>Rivningsvedtak</div>
+                </div>
+                <div class="timeline-item active">
+                  <div class="year">2024</div>
+                  <div>Mobilisering</div>
+                </div>
+                <div class="timeline-item active">
+                  <div class="year">Q1-Q2 25</div>
+                  <div>Dokumentasjon</div>
+                </div>
+                <div class="timeline-item active">
+                  <div class="year">Q3 25</div>
+                  <div>Akselerasjon</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="year">Q4 25</div>
+                  <div>Søknad</div>
+                </div>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 0.5rem;
+                  margin-top: 0.5rem;
+                  font-size: 0.55rem;
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 0.4rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <div style="font-size: 1rem; font-weight: 700">70</div>
+                  <div style="color: #94a3b8">Møter</div>
+                </div>
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 0.4rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <div style="font-size: 1rem; font-weight: 700">271</div>
+                  <div style="color: #94a3b8">Dokumenter</div>
+                </div>
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.1);
+                    padding: 0.4rem;
+                    border-radius: 4px;
+                  "
+                >
+                  <div style="font-size: 1rem; font-weight: 700">20</div>
+                  <div style="color: #94a3b8">Måneder</div>
+                </div>
+              </div>
+              <span class="logo-footer">Hovfaret 13</span>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Prosjekttidslinje</div>
+              <div class="slide-desc">
+                Kompakt oversikt over prosjektets faser.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag primary">Tidslinje</span>
+                <span class="slide-tag">Oversikt</span>
+                <span class="slide-tag">Status</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KATEGORI: Skandinavisk Minimal -->
+      <section class="category">
+        <div class="category-header">
+          <div
+            class="category-icon"
+            style="background: linear-gradient(135deg, #001f3f, #1e3a5f)"
+          >
+            ◇
+          </div>
+          <div>
+            <h2 class="category-title">Skandinavisk Minimal</h2>
+            <p class="category-desc">
+              Renlinjet design med hvitt rom og dempet marine aksent
+            </p>
+          </div>
+        </div>
+
+        <div class="slides-grid">
+          <!-- Slide: Hero Minimal -->
+          <div class="slide-card">
+            <div
+              class="slide-preview"
+              style="
+                background: #ffffff;
+                color: #001f3f;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+              "
+            >
+              <button class="copy-btn" style="background: #001f3f">
+                Kopier
+              </button>
+              <div
+                style="
+                  font-size: 4rem;
+                  font-weight: 300;
+                  letter-spacing: -0.03em;
+                  line-height: 1;
+                "
+              >
+                48%
+              </div>
+              <div
+                style="
+                  font-size: 0.9rem;
+                  font-weight: 400;
+                  color: #64748b;
+                  margin-top: 0.75rem;
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                "
+              >
+                Lavere klimagassutslipp
+              </div>
+              <div
+                style="
+                  width: 40px;
+                  height: 2px;
+                  background: #001f3f;
+                  margin: 1.5rem auto 0;
+                "
+              ></div>
+              <div
+                style="
+                  font-size: 0.65rem;
+                  color: #94a3b8;
+                  margin-top: 1rem;
+                  max-width: 200px;
+                "
+              >
+                Rehabilitering vs. riving og nybygg
+              </div>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Klimatall — Minimal</div>
+              <div class="slide-desc">
+                Rent skandinavisk design med fokus på nøkkeltall.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag" style="background: #001f3f; color: #fff"
+                  >Minimal</span
+                >
+                <span class="slide-tag">Klima</span>
+                <span class="slide-tag">Hvitt</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Tall Grid Minimal -->
+          <div class="slide-card">
+            <div
+              class="slide-preview"
+              style="background: #f5f5f5; color: #001f3f; padding: 2rem"
+            >
+              <button class="copy-btn" style="background: #001f3f">
+                Kopier
+              </button>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 1.5rem;
+                  height: 100%;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <div style="font-size: 2.5rem; font-weight: 300">73</div>
+                  <div
+                    style="
+                      font-size: 0.6rem;
+                      color: #64748b;
+                      text-transform: uppercase;
+                      letter-spacing: 0.1em;
+                    "
+                  >
+                    Omsorgsboliger
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <div style="font-size: 2.5rem; font-weight: 300">160</div>
+                  <div
+                    style="
+                      font-size: 0.6rem;
+                      color: #64748b;
+                      text-transform: uppercase;
+                      letter-spacing: 0.1em;
+                    "
+                  >
+                    Bydelens behov
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <div style="font-size: 2.5rem; font-weight: 300">5→8</div>
+                  <div
+                    style="
+                      font-size: 0.6rem;
+                      color: #64748b;
+                      text-transform: uppercase;
+                      letter-spacing: 0.1em;
+                    "
+                  >
+                    Etasjer
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <div style="font-size: 2.5rem; font-weight: 300">85%</div>
+                  <div
+                    style="
+                      font-size: 0.6rem;
+                      color: #64748b;
+                      text-transform: uppercase;
+                      letter-spacing: 0.1em;
+                    "
+                  >
+                    Material bevart
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Nøkkeltall Grid — Minimal</div>
+              <div class="slide-desc">Fire nøkkeltall i asymmetrisk grid.</div>
+              <div class="slide-tags">
+                <span class="slide-tag" style="background: #001f3f; color: #fff"
+                  >Minimal</span
+                >
+                <span class="slide-tag">Grid</span>
+                <span class="slide-tag">Nøkkeltall</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Quote Minimal -->
+          <div class="slide-card">
+            <div
+              class="slide-preview"
+              style="
+                background: #ffffff;
+                color: #001f3f;
+                justify-content: center;
+                padding: 2rem;
+              "
+            >
+              <button class="copy-btn" style="background: #001f3f">
+                Kopier
+              </button>
+              <div style="border-left: 2px solid #001f3f; padding-left: 1.5rem">
+                <div
+                  style="
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    font-style: italic;
+                  "
+                >
+                  «Bydelen trenger dette. Vi akselererer strategien for å møte
+                  det dokumenterte behovet.»
+                </div>
+                <div
+                  style="
+                    margin-top: 1rem;
+                    font-size: 0.6rem;
+                    color: #64748b;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                  "
+                >
+                  Strategisk beslutning — 5. september 2025
+                </div>
+              </div>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Sitat — Minimal</div>
+              <div class="slide-desc">Rent sitatformat med vertikal linje.</div>
+              <div class="slide-tags">
+                <span class="slide-tag" style="background: #001f3f; color: #fff"
+                  >Minimal</span
+                >
+                <span class="slide-tag">Sitat</span>
+                <span class="slide-tag">Beslutning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Sammenligning Minimal -->
+          <div class="slide-card">
+            <div
+              class="slide-preview"
+              style="background: #ffffff; color: #001f3f; padding: 1.5rem"
+            >
+              <button class="copy-btn" style="background: #001f3f">
+                Kopier
+              </button>
+              <div
+                style="
+                  font-size: 0.55rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.15em;
+                  color: #94a3b8;
+                  margin-bottom: 1rem;
+                "
+              >
+                Klimasammenligning
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 2rem;
+                  align-items: flex-end;
+                  height: calc(100% - 2rem);
+                "
+              >
+                <div style="flex: 1; text-align: center">
+                  <div
+                    style="
+                      width: 100%;
+                      height: 120px;
+                      background: #f5f5f5;
+                      display: flex;
+                      align-items: flex-end;
+                      justify-content: center;
+                      border-radius: 2px;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 80%;
+                        background: #ef4444;
+                        height: 100%;
+                        border-radius: 2px 2px 0 0;
+                        opacity: 0.8;
+                      "
+                    ></div>
+                  </div>
+                  <div
+                    style="
+                      font-size: 1.25rem;
+                      font-weight: 300;
+                      margin-top: 0.75rem;
+                    "
+                  >
+                    5 343
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.5rem;
+                      color: #64748b;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Riving
+                  </div>
+                </div>
+                <div style="flex: 1; text-align: center">
+                  <div
+                    style="
+                      width: 100%;
+                      height: 120px;
+                      background: #f5f5f5;
+                      display: flex;
+                      align-items: flex-end;
+                      justify-content: center;
+                      border-radius: 2px;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 80%;
+                        background: #001f3f;
+                        height: 52%;
+                        border-radius: 2px 2px 0 0;
+                      "
+                    ></div>
+                  </div>
+                  <div
+                    style="
+                      font-size: 1.25rem;
+                      font-weight: 300;
+                      margin-top: 0.75rem;
+                    "
+                  >
+                    2 794
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.5rem;
+                      color: #64748b;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Rehabilitering
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  font-size: 0.5rem;
+                  color: #94a3b8;
+                  text-align: center;
+                  margin-top: 0.5rem;
+                "
+              >
+                tonn CO₂-ekv. over 50 år
+              </div>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Klimasammenligning — Minimal</div>
+              <div class="slide-desc">Enkel søylediagram uten dekorasjon.</div>
+              <div class="slide-tags">
+                <span class="slide-tag" style="background: #001f3f; color: #fff"
+                  >Minimal</span
+                >
+                <span class="slide-tag">Sammenligning</span>
+                <span class="slide-tag">Graf</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Tidslinje Minimal -->
+          <div class="slide-card">
+            <div
+              class="slide-preview"
+              style="background: #f5f5f5; color: #001f3f; padding: 1.5rem"
+            >
+              <button class="copy-btn" style="background: #001f3f">
+                Kopier
+              </button>
+              <div
+                style="
+                  font-size: 0.55rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.15em;
+                  color: #94a3b8;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                Prosjektreise 2024—2025
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem">
+                <div style="display: flex; align-items: center; gap: 1rem">
+                  <div
+                    style="
+                      width: 6px;
+                      height: 6px;
+                      background: #001f3f;
+                      border-radius: 50%;
+                    "
+                  ></div>
+                  <div style="font-size: 0.7rem; font-weight: 500">
+                    Rivningsvedtak i områdeplan
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.55rem;
+                      color: #94a3b8;
+                      margin-left: auto;
+                    "
+                  >
+                    2023
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem">
+                  <div
+                    style="
+                      width: 6px;
+                      height: 6px;
+                      background: #001f3f;
+                      border-radius: 50%;
+                    "
+                  ></div>
+                  <div style="font-size: 0.7rem; font-weight: 500">
+                    Bærekraftsrapport ferdigstilt
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.55rem;
+                      color: #94a3b8;
+                      margin-left: auto;
+                    "
+                  >
+                    Jul 2025
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem">
+                  <div
+                    style="
+                      width: 6px;
+                      height: 6px;
+                      background: #001f3f;
+                      border-radius: 50%;
+                    "
+                  ></div>
+                  <div style="font-size: 0.7rem; font-weight: 500">
+                    Strategisk akselerasjon til Omsorg+
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.55rem;
+                      color: #94a3b8;
+                      margin-left: auto;
+                    "
+                  >
+                    Sep 2025
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem">
+                  <div
+                    style="
+                      width: 6px;
+                      height: 6px;
+                      background: #001f3f;
+                      border-radius: 50%;
+                    "
+                  ></div>
+                  <div style="font-size: 0.7rem; font-weight: 500">
+                    Nabovarsel fullført
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.55rem;
+                      color: #94a3b8;
+                      margin-left: auto;
+                    "
+                  >
+                    Okt 2025
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem">
+                  <div
+                    style="
+                      width: 6px;
+                      height: 6px;
+                      background: #f5f5f5;
+                      border: 1.5px solid #001f3f;
+                      border-radius: 50%;
+                    "
+                  ></div>
+                  <div
+                    style="font-size: 0.7rem; font-weight: 500; color: #64748b"
+                  >
+                    Rammesøknad
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.55rem;
+                      color: #94a3b8;
+                      margin-left: auto;
+                    "
+                  >
+                    Q1 2026
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Tidslinje — Minimal</div>
+              <div class="slide-desc">
+                Vertikal tidslinje med ren typografi.
+              </div>
+              <div class="slide-tags">
+                <span class="slide-tag" style="background: #001f3f; color: #fff"
+                  >Minimal</span
+                >
+                <span class="slide-tag">Tidslinje</span>
+                <span class="slide-tag">Vertikal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide: Omsorg+ Minimal -->
+          <div class="slide-card">
+            <div
+              class="slide-preview"
+              style="
+                background: #ffffff;
+                color: #001f3f;
+                padding: 2rem;
+                justify-content: space-between;
+              "
+            >
+              <button class="copy-btn" style="background: #001f3f">
+                Kopier
+              </button>
+              <div>
+                <div
+                  style="
+                    font-size: 0.55rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.15em;
+                    color: #94a3b8;
+                  "
+                >
+                  Omsorg+ Hovfaret
+                </div>
+                <div
+                  style="
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    margin-top: 0.5rem;
+                    line-height: 1.2;
+                  "
+                >
+                  Generasjon Skøyen
+                </div>
+              </div>
+              <div style="display: flex; gap: 2rem">
+                <div>
+                  <div style="font-size: 2rem; font-weight: 300">66</div>
+                  <div
+                    style="
+                      font-size: 0.5rem;
+                      color: #64748b;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Enkeltrom 42m²
+                  </div>
+                </div>
+                <div>
+                  <div style="font-size: 2rem; font-weight: 300">7</div>
+                  <div
+                    style="
+                      font-size: 0.5rem;
+                      color: #64748b;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Dobbeltrom 67m²
+                  </div>
+                </div>
+              </div>
+              <div style="width: 100%; height: 1px; background: #e5e7eb"></div>
+              <div style="font-size: 0.6rem; color: #64748b">
+                Husbanken-godkjent · 8 etasjer · Ved Hoffselva
+              </div>
+            </div>
+            <div class="slide-info">
+              <div class="slide-title">Omsorg+ Konsept — Minimal</div>
+              <div class="slide-desc">Boligkonsept i rent format.</div>
+              <div class="slide-tags">
+                <span class="slide-tag" style="background: #001f3f; color: #fff"
+                  >Minimal</span
+                >
+                <span class="slide-tag">Omsorg+</span>
+                <span class="slide-tag">Konsept</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Copy functionality (placeholder)
+      document.querySelectorAll(".copy-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          btn.textContent = "Kopiert!";
+          setTimeout(() => (btn.textContent = "Kopier"), 2000);
+        });
+      });
+    </script>
+  </body>
+</html>

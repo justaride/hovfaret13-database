@@ -1,0 +1,47 @@
+{
+  "source": {
+    "file_name": "Fundamentplan_utvidelse.pdf",
+    "relative_path": "Fundamentplan_utvidelse.pdf",
+    "size_bytes": 2659292,
+    "modified_time": "2026-01-26T18:49:49.045668+00:00",
+    "sha256": "9bfaf1858c0ebdfa9f541de1cc824dc064f9ace4d6410cfd59ca9392d461f56b"
+  },
+  "pdfinfo": {
+    "Title": "Layout1",
+    "Author": "",
+    "Creator": "Autodesk Civil 3D 2023 - English 2023 (24.2s (LMS Tech))",
+    "Producer": "PixEdit AS,  PixToolsLib Version 2.6.5.14",
+    "CreationDate": "Mon Feb 12 17:52:36 2024 CET",
+    "ModDate": "Mon Mar 18 16:44:28 2024 CET",
+    "Custom Metadata": "no",
+    "Metadata Stream": "yes",
+    "Tagged": "no",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "1",
+    "Encrypted": "no",
+    "Page size": "1191.12 x 842.16 pts (A3)",
+    "Page rot": "0",
+    "File size": "2659292 bytes",
+    "Optimized": "no",
+    "PDF version": "1.7"
+  },
+  "extraction": {
+    "tool": "pdftotext",
+    "options": "-layout",
+    "extracted_at": "2026-01-26T19:16:02.941101+00:00",
+    "page_count": 1,
+    "has_text": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "                            3 645,84 mm\n\n\n\n\n                                          52,97 m²\n\n\n\n\n                                                                          57,79 m²\n\n\n\n\n                                                     Rev.   Beskrivelse                      Dato             Tegn.           Kontr.\nTEGNFORKLARING :\n                                                                                             Dato             Tegn.           Kontr.\n                                                      WSP Norge AS                             12.02.24         EH               KEL\n             Fundamentutvidelse                                                              Målestokk        Orginalformat\n                                                      Oslo. Skøyen terrasse 1                                   A3\n                                                                                             Status\n                                                      Plantegning utvidelse av fundamenter     Foreløpig\n                                                                                             Tegningsnummer                   Rev.\n\nKartgrunnlag: Mottatt fundamentplan\nKoordinatsystem og høydesystem: N/A                  GRUNN EKNIKK www.grunnteknikk.no\n                                                                  Tlf.:45904500                     117810-100                    0\n",
+      "char_count": 1432,
+      "line_count": 29
+    }
+  ],
+  "text": "                            3 645,84 mm\n\n\n\n\n                                          52,97 m²\n\n\n\n\n                                                                          57,79 m²\n\n\n\n\n                                                     Rev.   Beskrivelse                      Dato             Tegn.           Kontr.\nTEGNFORKLARING :\n                                                                                             Dato             Tegn.           Kontr.\n                                                      WSP Norge AS                             12.02.24         EH               KEL\n             Fundamentutvidelse                                                              Målestokk        Orginalformat\n                                                      Oslo. Skøyen terrasse 1                                   A3\n                                                                                             Status\n                                                      Plantegning utvidelse av fundamenter     Foreløpig\n                                                                                             Tegningsnummer                   Rev.\n\nKartgrunnlag: Mottatt fundamentplan\nKoordinatsystem og høydesystem: N/A                  GRUNN EKNIKK www.grunnteknikk.no\n                                                                  Tlf.:45904500                     117810-100                    0\n\f"
+}

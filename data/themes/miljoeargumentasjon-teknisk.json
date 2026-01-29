@@ -1,0 +1,700 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-01-27",
+    "description": "Teknisk utdypet miljøargumentasjon med full rapportreferanse",
+    "purpose": "Rammesøknad og dispensasjonsgrunnlag",
+    "base_document": "environmental-arguments.json"
+  },
+  "report_sources": {
+    "primary": [
+      {
+        "id": "vill_klima",
+        "title": "Klimagassberegninger Hovfaret 13 v2",
+        "author": "Vill Energi AS (Martin Skjøstad Andersen, Malene E. Leirpoll)",
+        "date": "2025-04-22",
+        "pages": 18,
+        "type": "LCA-rapport",
+        "methodology": "NS 3720:2018 og EN 15978",
+        "scope": "50-års livsløp, moduler A1-A3, A4, A5, B1-B5, B6, C1-C4"
+      },
+      {
+        "id": "vill_energi",
+        "title": "Energikartlegging Hovfaret 13",
+        "author": "Vill Energi AS",
+        "date": "2025-04-11",
+        "pages": 14,
+        "type": "Energianalyse",
+        "methodology": "SN-NSPEK 3031:2023"
+      },
+      {
+        "id": "ns_barekraft",
+        "title": "Bærekraftsrapport Hovfaret 13",
+        "author": "Natural State AS",
+        "date": "2025-07-04",
+        "pages": 83,
+        "type": "ESRS-rapport",
+        "standards": ["ESRS E1", "ESRS E4", "ESRS E5", "ESRS S3"]
+      }
+    ],
+    "regulatory": [
+      {
+        "id": "pbe_ros",
+        "title": "ROS-analyse Skøyen områderegulering",
+        "author": "Plan- og bygningsetaten",
+        "date": "2023",
+        "document_number": "08"
+      },
+      {
+        "id": "pbe_overvann",
+        "title": "Vurdering av håndtering av overvann",
+        "author": "Plan- og bygningsetaten",
+        "date": "2023",
+        "document_number": "11"
+      },
+      {
+        "id": "pbe_natur",
+        "title": "Naturmiljø",
+        "author": "Plan- og bygningsetaten",
+        "date": "2023",
+        "document_number": "13"
+      },
+      {
+        "id": "pbe_geo",
+        "title": "Områdestabilitet",
+        "author": "Plan- og bygningsetaten",
+        "date": "2023",
+        "document_number": "18"
+      },
+      {
+        "id": "pbe_kvalitet",
+        "title": "Kvalitetsprogram for miljø og energi",
+        "author": "Plan- og bygningsetaten",
+        "date": "2023",
+        "document_number": "21"
+      },
+      {
+        "id": "pbe_trafikk",
+        "title": "Notat grønn mobilitet og trafikk",
+        "author": "Plan- og bygningsetaten",
+        "date": "2023",
+        "document_number": "10"
+      }
+    ],
+    "external_evidence": [
+      {
+        "id": "miljo_h17",
+        "title": "Miljøteknisk grunnundersøkelse Hoffsveien 17",
+        "author": "Multiconsult / Fram Eiendom",
+        "date": "2016",
+        "relevance": "Dokumenterer forurensede fyllmasser og leiregrunn ved naboeiendommen"
+      },
+      {
+        "id": "st1_tillatelse",
+        "title": "Rammetillatelse Skøyen Terrasse 1",
+        "author": "Oslobygg KF / PBE",
+        "date": "2024-2025",
+        "case_number": "202453701",
+        "relevance": "Bekrefter setningsskader og stålforsterkning i nabobygg"
+      }
+    ]
+  },
+  "arguments_technical": [
+    {
+      "id": "arg_001",
+      "title": "Klimagassbesparelse ved rehabilitering vs. riving",
+      "theme": "Sirkulærøkonomi / Klima",
+      "technical_summary": "LCA-analyse dokumenterer 48% reduksjon i totale klimagassutslipp ved rehabilitering (Scenario 2) sammenlignet med riving og nybygg (Scenario 1).",
+      "quantified_data": {
+        "scenario_1_nybygg": {
+          "total_co2_tonnes": 5343,
+          "per_m2_bta_kg": 631,
+          "materials_a1_a3_kg_m2": 312
+        },
+        "scenario_2_rehabilitering": {
+          "total_co2_tonnes": 2794,
+          "per_m2_bta_kg": 456,
+          "materials_a1_a3_kg_m2": 62
+        },
+        "scenario_3_pabygg": {
+          "total_co2_tonnes": 4161,
+          "per_m2_bta_kg": 491,
+          "materials_a1_a3_kg_m2": 123
+        },
+        "besparelse": {
+          "co2_tonnes_saved": 2549,
+          "percent_reduction": 48,
+          "material_reduction_percent": 80
+        }
+      },
+      "methodology_note": "Beregnet iht. NS 3720:2018 og EN 15978. Livsløp 50 år. Europeisk forbruksmiks (EU28+NO). Massebehandling ved riving er IKKE inkludert - faktiske utslipp ved Scenario 1 vil være høyere.",
+      "report_references": [
+        {
+          "source": "vill_klima",
+          "section": "Kapittel 4: Resultater",
+          "page": "8-12",
+          "quote": "Rehabilitering reduserer klimautslipp med 48% sammenlignet med riving og nybygg"
+        },
+        {
+          "source": "ns_barekraft",
+          "section": "ESRS E1 - Klimaendring",
+          "page": "24-31"
+        }
+      ],
+      "regulatory_alignment": "Oslo kommunes Klimastrategi mot 2030: Mål om 95% reduksjon i klimagassutslipp. Byggenæringen står for 40% av globale utslipp."
+    },
+    {
+      "id": "arg_002",
+      "title": "Materialutslipp og sirkulær ressursbruk",
+      "theme": "Sirkulærøkonomi",
+      "technical_summary": "Produksjonsfasen (A1-A3) utgjør den største differansen mellom scenarioene. Ved rehabilitering bevares 80% av materialverdien i eksisterende konstruksjon.",
+      "quantified_data": {
+        "material_emissions_comparison": {
+          "scenario_1_kg_m2": 312,
+          "scenario_2_kg_m2": 62,
+          "reduction_percent": 80
+        },
+        "waste_generation": {
+          "demolition_tonnes": "5000-7000",
+          "rehabilitation_tonnes": "500-1000",
+          "reduction_percent": 85
+        },
+        "preserved_materials": [
+          "Bærende betongkonstruksjon (ca. 2400 m³)",
+          "Forspente hulldekker (5 etasjer)",
+          "Fundamenter dimensjonert for 12 etasjer",
+          "Yttervegger og fasadeelementer"
+        ]
+      },
+      "methodology_note": "Materialutslipp beregnet per bygningsdel. Grunn/fundamenter: 100 vs 5 kg CO₂/m². Bæresystem: 80 vs 8 kg CO₂/m². Verifisert mot Reduzer-database.",
+      "report_references": [
+        {
+          "source": "vill_klima",
+          "section": "Tabell 3: Utslipp per bygningsdel",
+          "page": "10"
+        },
+        {
+          "source": "ns_barekraft",
+          "section": "ESRS E5 - Sirkulær økonomi",
+          "page": "45-52"
+        }
+      ],
+      "regulatory_alignment": "EUs handlingsplan for sirkulær økonomi. Byggavfall utgjør 30-40% av alt avfall i EU."
+    },
+    {
+      "id": "arg_003",
+      "title": "Energieffektivisering og oppgraderingspotensial",
+      "theme": "Energi",
+      "technical_summary": "Bygget har energikarakter F (232 kWh/m²/år), men kan oppgraderes til C (116 kWh/m²) med anbefalt tiltakspakke. 50% energireduksjon uten riving.",
+      "quantified_data": {
+        "current_state": {
+          "energy_rating": "F",
+          "consumption_kwh_m2": 232,
+          "total_consumption_kwh_year": 1425000
+        },
+        "after_upgrade_package_2": {
+          "energy_rating": "C (B fra 2026)",
+          "consumption_kwh_m2": 116,
+          "reduction_percent": 50
+        },
+        "recommended_measures": {
+          "investment_nok": 9667000,
+          "annual_savings_nok": 862000,
+          "npv_25_years_nok": 3800000,
+          "measures": [
+            "VAV-ventilasjon med nye aggregater",
+            "Oppgradering vinduer plan 1",
+            "Luft-til-vann varmepumpe"
+          ]
+        },
+        "enova_eligibility": {
+          "requirement": "20% forbedring",
+          "achieved": "50% forbedring",
+          "eligible": true
+        }
+      },
+      "methodology_note": "Beregnet iht. SN-NSPEK 3031:2023. Fra 2026 vektes fjernvarme 0,45 i energimerkeberegning.",
+      "report_references": [
+        {
+          "source": "vill_energi",
+          "section": "Kapittel 5: Anbefalte tiltak",
+          "page": "9-12"
+        },
+        {
+          "source": "vill_energi",
+          "section": "Tabell: Følsomhetsanalyse",
+          "page": "13"
+        }
+      ]
+    },
+    {
+      "id": "arg_004",
+      "title": "Geoteknisk risiko og grunnstabilitet",
+      "theme": "Geoteknikk",
+      "technical_summary": "Området har dokumentert kvikkleireforekomst og setningsproblematikk. Nabobygget Skøyen Terrasse 1 har gjennomgått omfattende stålforsterkning pga. setningsskader (2024-2025).",
+      "quantified_data": {
+        "documented_conditions": [
+          "Kvikkleire påvist i to borepunkter ved elven (PBE dok. 18)",
+          "Forurensede fyllmasser over dyp leire ved Hoffsveien 17",
+          "Skøyen Terrasse 1: Skjevstilling og setningsskader bekreftet"
+        ],
+        "risk_comparison": {
+          "rehabilitation": "Eksisterende fundament beholdes. Minimal ny graving.",
+          "demolition": "Nytt fundament 2m fra elven. Omfattende graving i ustabil grunn. Økt risiko for setninger på naboeiendommer."
+        }
+      },
+      "evidence": {
+        "skoyen_terrasse_1": {
+          "case": "202453701",
+          "finding": "Bygget forsterket med stål fra kjeller til tak",
+          "cause": "Setningsskader og skjevstilling",
+          "timeline": "2024-2025",
+          "source": "Rammetillatelse og ferdigattest Oslobygg KF"
+        },
+        "hoffsveien_17": {
+          "finding": "Forurensede fyllmasser, ingen fjell i dagen",
+          "source": "Miljøteknisk grunnundersøkelse Multiconsult 2016"
+        }
+      },
+      "report_references": [
+        {
+          "source": "pbe_geo",
+          "section": "Områdestabilitet",
+          "finding": "Fare for sprøbruddmaterialer/kvikkleire nær elva"
+        },
+        {
+          "source": "miljo_h17",
+          "section": "Grunnforhold",
+          "page": "5-8"
+        },
+        {
+          "source": "st1_tillatelse",
+          "section": "Rammetillatelse",
+          "relevance": "Fysisk bevis på geoteknisk risiko"
+        }
+      ],
+      "regulatory_alignment": "NVE retningslinjer for kvikkleirekartlegging. Krav om geoteknisk vurdering ved inngrep i ustabile masser."
+    },
+    {
+      "id": "arg_005",
+      "title": "Overvannshåndtering og flomrisiko",
+      "theme": "Overvann / Klimarisiko",
+      "technical_summary": "Riving og nybygg øker tette flater og forverrer overvannssituasjonen. Rehabilitering bevarer etablert drenering og muliggjør grønne løsninger.",
+      "quantified_data": {
+        "area_considerations": {
+          "building_footprint_m2": 1079,
+          "roof_area_m2": 1079,
+          "potential_green_roof_m2": 1079
+        },
+        "risk_factors": {
+          "climate_change": "Økt intensitet i nedbør (IVF-kurver)",
+          "hoffselva_flood_zone": "Bygget innenfor 10-metersbeltet",
+          "urban_runoff": "Skøyen har høy andel tette flater"
+        }
+      },
+      "technical_measures": {
+        "rehabilitation_options": [
+          "Grønne tak med fordrøyningskapasitet",
+          "Regnbed i utearealer",
+          "Fordrøyningsbasseng i kjeller (eksisterende volum)",
+          "Permeable belegg på p-plasser"
+        ],
+        "demolition_consequences": [
+          "Midlertidig tap av drenering i anleggsfase",
+          "Økt avrenning til Hoffselva under bygging",
+          "Nye tette flater krever dimensjonering fra grunnen"
+        ]
+      },
+      "report_references": [
+        {
+          "source": "pbe_overvann",
+          "section": "Krav til overvannshåndtering",
+          "requirement": "Lokal håndtering av 20-års regn"
+        },
+        {
+          "source": "pbe_ros",
+          "section": "Flomrisiko",
+          "finding": "Økt sannsynlighet for flomhendelser"
+        },
+        {
+          "source": "ns_barekraft",
+          "section": "Klimatilpasning",
+          "page": "33-38"
+        }
+      ]
+    },
+    {
+      "id": "arg_006",
+      "title": "Biologisk mangfold og Hoffselva",
+      "theme": "Miljø / Økologi",
+      "technical_summary": "Hoffselva er anadrom elvestrekning med sjøørret og laks. Anleggsarbeid ved riving truer vannkvalitet og økosystemtjenester.",
+      "quantified_data": {
+        "hoffselva_status": {
+          "classification": "Anadrom vassdrag",
+          "species": ["Sjøørret", "Laks (begrenset)", "Ål"],
+          "ecological_corridor": true,
+          "buffer_zone_requirement_m": 10
+        },
+        "identified_species_onsite": {
+          "invasive": ["Kanadagullris", "Alaska-kornell", "Sibir-kornell"],
+          "native_trees": "Bevares ved rehabilitering"
+        }
+      },
+      "risk_assessment": {
+        "demolition_risks": [
+          "Sedimentavrenning til Hoffselva",
+          "Spredning av fremmede arter",
+          "Tap av kantvegetasjon",
+          "Forstyrrelse i gyteperiode"
+        ],
+        "rehabilitation_benefits": [
+          "Minimal forstyrrelse av elveøkosystem",
+          "Mulighet for naturpositiv utforming",
+          "Styrket riparvegetas jon",
+          "Kortere anleggsfase"
+        ]
+      },
+      "report_references": [
+        {
+          "source": "pbe_natur",
+          "section": "Naturmiljø",
+          "finding": "Hoffselva har høy økologisk verdi. Fremmedarter identifisert."
+        },
+        {
+          "source": "ns_barekraft",
+          "section": "ESRS E4 - Biologisk mangfold",
+          "page": "39-44"
+        }
+      ],
+      "regulatory_alignment": "Vannforskriften. Naturmangfoldloven §§ 8-12. Krav om kantvegetasjon langs vassdrag."
+    },
+    {
+      "id": "arg_007",
+      "title": "Anleggstrafikk og lokalmiljøbelastning",
+      "theme": "Trafikk / Naboforhold",
+      "technical_summary": "Riving genererer 10x mer massetransport enn rehabilitering. Kortere anleggsfase reduserer støy, støv og trafikkbelastning.",
+      "quantified_data": {
+        "mass_transport_comparison": {
+          "demolition": {
+            "waste_out_tonnes": "5000-7000",
+            "materials_in_tonnes": "~8000",
+            "truck_loads_estimate": "500-700"
+          },
+          "rehabilitation": {
+            "waste_out_tonnes": "500-1000",
+            "materials_in_tonnes": "~1000",
+            "truck_loads_estimate": "50-100"
+          },
+          "reduction_percent": 85
+        },
+        "construction_duration": {
+          "demolition_months": "24-30",
+          "rehabilitation_months": "12-18",
+          "reduction_months": "12+"
+        }
+      },
+      "local_impact": {
+        "affected_areas": [
+          "Hovfaret (adkomstvei)",
+          "Hoffsveien (hovedvei)",
+          "Skøyen skole (200m)",
+          "Naboboliger (umiddelbar nærhet)"
+        ],
+        "mitigation_rehabilitation": [
+          "Kortere periode med tung trafikk",
+          "Mindre støv fra rivningsarbeid",
+          "Redusert støybelastning",
+          "Bevart gang- og sykkeltilgjengelighet"
+        ]
+      },
+      "report_references": [
+        {
+          "source": "pbe_trafikk",
+          "section": "Anleggstrafikk",
+          "finding": "Midlertidig forverring av sykkel- og gåmiljø"
+        },
+        {
+          "source": "pbe_ros",
+          "section": "Anleggsfase",
+          "finding": "Støy og støv fra anleggsarbeid"
+        }
+      ]
+    },
+    {
+      "id": "arg_008",
+      "title": "Konstruksjonsmessig reservekapasitet",
+      "theme": "Teknisk robusthet",
+      "technical_summary": "Bygget er dimensjonert for påbygg. Fundamenter tåler 12 etasjer, kun 5 er bygget. Denne reservekapasiteten representerer betydelig investert karbon.",
+      "quantified_data": {
+        "structural_capacity": {
+          "current_floors": 5,
+          "foundation_capacity_floors": 12,
+          "available_expansion_floors": 3,
+          "construction_type": "Forspente hulldekker, betongbæresystem"
+        },
+        "scenario_3_utilization": {
+          "new_floors": 3,
+          "additional_area_m2": 2472,
+          "units_omsorgplus": 73,
+          "co2_per_m2": 491
+        }
+      },
+      "technical_assessment": "Byggets bærende konstruksjon og fundamenter er verifisert til å tåle påbygg iht. opprinnelig dimensjonering. Ved riving kastes denne strukturelle investeringen.",
+      "report_references": [
+        {
+          "source": "vill_klima",
+          "section": "Scenario 3: Påbygg",
+          "page": "9"
+        },
+        {
+          "source": "ns_barekraft",
+          "section": "Teknisk potensial",
+          "page": "15-18"
+        }
+      ]
+    },
+    {
+      "id": "arg_009",
+      "title": "Samsvar med klimapolitiske mål",
+      "theme": "Policy / Strategi",
+      "technical_summary": "Rehabilitering er i tråd med Oslo kommunes klimastrategi, KPA 2030 og EUs taksonomi. Riving undergraver vedtatte klimamål.",
+      "policy_alignment": {
+        "oslo_klimastrategi": {
+          "goal": "95% reduksjon i klimagassutslipp innen 2030",
+          "building_sector": "40% av globale utslipp",
+          "reuse_priority": "Ombruk før nybygg"
+        },
+        "kpa_2030": {
+          "principle": "Klimahensyn skal vektlegges i alle plansaker",
+          "circular_economy": "Stimulere til ombruk og materialgjenvinning"
+        },
+        "eu_taxonomy": {
+          "substantial_contribution": "Rehabilitering bidrar til klimatilpasning",
+          "do_no_significant_harm": "Unngår skade på biologisk mangfold"
+        }
+      },
+      "report_references": [
+        {
+          "source": "pbe_kvalitet",
+          "section": "Kvalitetsprogram for miljø og energi",
+          "requirement": "Dokumentasjon av klimagassutslipp"
+        },
+        {
+          "source": "ns_barekraft",
+          "section": "Regulatory compliance",
+          "page": "60-65"
+        }
+      ]
+    },
+    {
+      "id": "arg_010",
+      "title": "Forbildeprosjekt for sirkulær transformasjon",
+      "theme": "Innovasjon / Presedens",
+      "technical_summary": "Hovfaret 13 kan demonstrere at rivningsvedtatte bygg kan rehabiliteres med 48% klimabesparelse. Skaper presedens for fremtidige saker.",
+      "strategic_value": {
+        "demonstration_effect": [
+          "Første store ombruksprosjekt på Skøyen",
+          "Dokumentert LCA-sammenligning",
+          "Omsorg+ konsept med samfunnsnytte",
+          "Replicerbar metodikk"
+        ],
+        "stakeholder_support": {
+          "bydel_ullern": "Behov for 160 omsorgsboliger dokumentert",
+          "oslo_kommune": "Klimastrategi støtter ombruk",
+          "husbanken": "HDO-finansiering mulig"
+        }
+      },
+      "report_references": [
+        {
+          "source": "ns_barekraft",
+          "section": "Forbildeverdi",
+          "page": "70-75"
+        }
+      ]
+    },
+    {
+      "id": "arg_011",
+      "title": "Sosial bærekraft og Omsorg+ konsept",
+      "theme": "Sosial verdi",
+      "technical_summary": "73 Omsorg+ boliger dekker 46% av Bydel Ullerns dokumenterte behov for 160 omsorgsboliger. Samfunnsøkonomisk verdi utover klimagevinst.",
+      "quantified_data": {
+        "omsorgplus_concept": {
+          "units": 73,
+          "unit_sizes_m2": "42-67",
+          "floors": "2-8 (eksisterende + påbygg)",
+          "common_facilities": [
+            "Kantine",
+            "Aktivitetsrom",
+            "Takhage",
+            "Hjemmetjenestebase"
+          ]
+        },
+        "district_need": {
+          "bydel_ullern_need_2040": 160,
+          "h13_coverage_percent": 46,
+          "source": "Bydelsutvalgsmøte 29.10.2025"
+        }
+      },
+      "financing": {
+        "husbanken_hdo": {
+          "program": "Heldøgns omsorgsboliger",
+          "potential_coverage": "Opptil 50% av byggekostnader",
+          "requirement": "Avtale med kommunen om omsorgstjenester"
+        }
+      },
+      "report_references": [
+        {
+          "source": "ns_barekraft",
+          "section": "ESRS S3 - Berørte samfunn",
+          "page": "55-59"
+        }
+      ]
+    },
+    {
+      "id": "arg_012",
+      "title": "Redusert dispensasjonsrisiko",
+      "theme": "Regulatorisk",
+      "technical_summary": "Områdeplanen er ikke rettskraftig pga. uavklarte innsigelser. Rehabilitering innebærer mindre avvik og enklere dispensasjonsprosess.",
+      "regulatory_status": {
+        "omradeplan_skoyen": {
+          "vedtatt": "September 2023",
+          "rettskraftig": false,
+          "innsigelser": ["Bane NOR", "Statens vegvesen"],
+          "behandling": "Hos Statsforvalteren"
+        },
+        "10m_setback": {
+          "requirement": "Byggegrense 10m fra Hoffselva",
+          "h13_status": "Innenfor 10-metersbeltet",
+          "dispensation_needed": true
+        }
+      },
+      "dispensation_argument": {
+        "climate_benefit": "48% CO₂-besparelse dokumentert",
+        "social_benefit": "73 omsorgsboliger",
+        "minimal_new_footprint": "Påbygg på eksisterende grunnflate",
+        "precedent": "PBL § 19-2: Dispensasjon kan gis når fordelene er klart større enn ulempene"
+      },
+      "report_references": [
+        {
+          "source": "pbe_ros",
+          "section": "Planstatus"
+        },
+        {
+          "source": "ns_barekraft",
+          "section": "Regulatorisk analyse",
+          "page": "66-69"
+        }
+      ]
+    },
+    {
+      "id": "arg_013",
+      "title": "Stedsidentitet og arkitektonisk mangfold",
+      "theme": "Kulturmiljø",
+      "technical_summary": "Bygget bidrar til variert bygningsmasse langs Hoffselva. Riving reduserer arkitektonisk mangfold i et område under transformasjon.",
+      "assessment": {
+        "building_character": {
+          "year": 1989,
+          "style": "Sen-modernisme",
+          "materials": "Betong, glass, tegl",
+          "contribution": "Variert skala i ellers storstilt utbygging"
+        },
+        "area_development": {
+          "trend": "Høy, ensartet nybebyggelse",
+          "h13_role": "Mellomskala, menneskelig målestokk",
+          "hoffselva_interface": "Direkte kontakt med grønnstruktur"
+        }
+      },
+      "report_references": [
+        {
+          "source": "pbe_stedsanalyse",
+          "section": "Arkitektonisk egenart",
+          "year": 2018
+        }
+      ]
+    },
+    {
+      "id": "arg_014",
+      "title": "Livsløpskostnader og økonomisk bærekraft",
+      "theme": "Økonomi",
+      "technical_summary": "Rehabilitering har lavere totalkostnad over livsløpet. Energitiltak har positiv NPV på 3,8 MNOK over 25 år.",
+      "quantified_data": {
+        "energy_investment": {
+          "package_2_investment_nok": 9667000,
+          "annual_savings_nok": 862000,
+          "npv_25_years_nok": 3800000,
+          "payback_years": 11
+        },
+        "construction_cost_comparison": {
+          "note": "Detaljert kostnadssammenligning krever prosjektering",
+          "general_principle": "Rehabilitering 20-40% lavere enn nybygg per m² (bransjesnitt)"
+        }
+      },
+      "report_references": [
+        {
+          "source": "vill_energi",
+          "section": "Følsomhetsanalyse",
+          "page": "13-14"
+        }
+      ]
+    },
+    {
+      "id": "arg_015",
+      "title": "ESRS-rapportering og EU-taksonomi",
+      "theme": "Rapportering / Compliance",
+      "technical_summary": "Prosjektet er dokumentert iht. ESRS (European Sustainability Reporting Standards) og kan klassifiseres som bærekraftig aktivitet under EU-taksonomien.",
+      "esrs_coverage": {
+        "e1_climate": {
+          "status": "Fullt dokumentert",
+          "content": "LCA-beregninger, utslippsscenarier, energieffektivisering"
+        },
+        "e4_biodiversity": {
+          "status": "Dokumentert",
+          "content": "Hoffselva-påvirkning, naturpositiv utforming"
+        },
+        "e5_circular": {
+          "status": "Dokumentert",
+          "content": "Materialgjenbruk, avfallsreduksjon"
+        },
+        "s3_communities": {
+          "status": "Dokumentert",
+          "content": "Omsorg+ konsept, nabodialog, samfunnsnytte"
+        }
+      },
+      "taxonomy_alignment": {
+        "activity": "Rehabilitering av eksisterende bygninger",
+        "substantial_contribution": "Klimatilpasning og -begrensning",
+        "dnsh_assessment": "Ingen vesentlig skade på andre miljømål"
+      },
+      "report_references": [
+        {
+          "source": "ns_barekraft",
+          "section": "ESRS-mapping",
+          "page": "5-10"
+        }
+      ]
+    }
+  ],
+  "summary_table": {
+    "description": "Sammenligning av scenarioer på tvers av alle argumenter",
+    "headers": [
+      "Indikator",
+      "Riving (S1)",
+      "Rehabilitering (S2)",
+      "Påbygg (S3)",
+      "Besparelse"
+    ],
+    "rows": [
+      ["CO₂ totalt (tonn)", "5 343", "2 794", "4 161", "48%"],
+      ["CO₂ per m² (kg)", "631", "456", "491", "28%"],
+      ["Materialutslipp (kg/m²)", "312", "62", "123", "80%"],
+      ["Avfall (tonn)", "5-7 000", "500-1 000", "800-1 200", "85%"],
+      ["Anleggstid (mnd)", "24-30", "12-18", "18-24", "40%"],
+      ["Energiforbruk etter (kWh/m²)", "115 (TEK17)", "116", "116", "0%"],
+      ["Geoteknisk risiko", "Høy", "Lav", "Lav", "Betydelig"],
+      ["Hoffselva-påvirkning", "Høy", "Minimal", "Minimal", "Betydelig"],
+      ["Omsorgsboliger", "0*", "~50", "73", "+73"],
+      ["Klimapolitisk samsvar", "Nei", "Ja", "Ja", "-"]
+    ],
+    "footnote": "*Ved riving må Omsorg+ bygges fra grunnen, med høyere utslipp og lengre tidslinje."
+  }
+}

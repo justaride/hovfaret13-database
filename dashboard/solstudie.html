@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';"
+    />
+    <title>Solstudie – Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/solstudie.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("solstudie");
+    </script>
+    <div class="app-container">
+      <header class="app-header">
+        <div class="header-left">
+          <a class="back-link" href="index.html">← Tilbake</a>
+          <div class="logo">
+            <div class="logo-icon">☀️</div>
+            <span>Solstudie</span>
+          </div>
+        </div>
+        <div class="header-stats">
+          <div class="stat">
+            <div class="stat-value" id="stat-series">0</div>
+            <div class="stat-label">Datoer</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="stat-frames">0</div>
+            <div class="stat-label">Frames</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="stat-fps">1.0x</div>
+            <div class="stat-label">Hastighet</div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-content solstudie-layout">
+        <aside class="list-panel solstudie-panel">
+          <div class="list-header">
+            <div class="list-title">Solforhold Hovfaret 13</div>
+            <div class="list-subtitle">Animasjon og grafikkjustering</div>
+          </div>
+
+          <div class="panel-section">
+            <div class="section-title">Datoer</div>
+            <div id="series-buttons" class="series-buttons"></div>
+          </div>
+
+          <div class="panel-section">
+            <div class="section-title">Avspilling</div>
+            <div class="control-row" style="margin-bottom: var(--space-3)">
+              <button id="play-toggle" class="btn-primary">Spill</button>
+              <button id="prev-frame" class="btn-secondary">◀</button>
+              <button id="next-frame" class="btn-secondary">▶</button>
+            </div>
+            <label class="control-label" for="speed-input">Hastighet</label>
+            <input
+              id="speed-input"
+              class="control-input"
+              type="range"
+              min="0.5"
+              max="2.5"
+              step="0.1"
+              value="1"
+            />
+            <div class="control-label" id="speed-value">1.0x</div>
+            <div class="toggle-row">
+              <span>Loop avspilling</span>
+              <input id="loop-toggle" type="checkbox" checked />
+            </div>
+          </div>
+
+          <div class="panel-section">
+            <div class="section-title">Grafikk</div>
+            <label class="control-label" for="brightness-input"
+              >Lysstyrke</label
+            >
+            <input
+              id="brightness-input"
+              class="control-input"
+              type="range"
+              min="0.7"
+              max="1.4"
+              step="0.05"
+              value="1"
+            />
+            <label class="control-label" for="contrast-input">Kontrast</label>
+            <input
+              id="contrast-input"
+              class="control-input"
+              type="range"
+              min="0.8"
+              max="1.4"
+              step="0.05"
+              value="1"
+            />
+            <div class="toggle-row">
+              <span>Rutenett</span>
+              <input id="toggle-grid" type="checkbox" checked />
+            </div>
+            <div class="toggle-row">
+              <span>Solbane</span>
+              <input id="toggle-sunpath" type="checkbox" checked />
+            </div>
+            <div class="toggle-row">
+              <span>Glød</span>
+              <input id="toggle-shadow" type="checkbox" checked />
+            </div>
+          </div>
+
+          <div class="panel-section">
+            <div class="section-title">Import</div>
+            <div class="note-card">
+              Kjør <code>python3 scripts/build-solstudie-assets.py</code> for å
+              hente PDF-rammene fra
+              <code>~/Downloads/hovfaret solstudiet</code>.
+            </div>
+          </div>
+        </aside>
+
+        <section class="detail-panel solstudie-viewer">
+          <div class="viewer-card">
+            <div class="viewer-header">
+              <div>
+                <div class="viewer-title">Solstudie · 3D solskygger</div>
+                <div class="viewer-subtitle" id="frame-label">
+                  Velg serie for å starte
+                </div>
+              </div>
+            </div>
+
+            <div class="viewer-frame" id="viewer-frame">
+              <video
+                id="frame-video"
+                class="frame-media"
+                muted
+                playsinline
+              ></video>
+              <img id="frame-image" alt="Solstudie frame" />
+              <div class="overlay overlay-grid" data-overlay="grid"></div>
+              <svg
+                class="overlay overlay-sunpath"
+                data-overlay="sunpath"
+                viewBox="0 0 1000 600"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M120 480 C 320 160, 680 160, 880 480"
+                  fill="none"
+                  stroke="rgba(251, 191, 36, 0.7)"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-dasharray="10 12"
+                />
+                <circle
+                  cx="120"
+                  cy="480"
+                  r="10"
+                  fill="rgba(251, 191, 36, 0.9)"
+                />
+                <circle
+                  cx="500"
+                  cy="210"
+                  r="12"
+                  fill="rgba(253, 224, 71, 0.9)"
+                />
+                <circle
+                  cx="880"
+                  cy="480"
+                  r="10"
+                  fill="rgba(251, 191, 36, 0.9)"
+                />
+              </svg>
+              <div class="overlay overlay-shadow" data-overlay="shadow"></div>
+              <div class="viewer-empty" id="viewer-empty">
+                <div>
+                  <h3>Ingen frames funnet</h3>
+                  <p>
+                    Eksporter PDF-rammene med scriptet og oppdater
+                    <code>dashboard/data/solstudie.json</code>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <input id="frame-slider" type="range" min="0" max="0" value="0" />
+              <div class="timeline-meta">
+                <span id="frame-index">0 / 0</span>
+                <span id="frame-time">--</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/solstudie-player.js"></script>
+  </body>
+</html>

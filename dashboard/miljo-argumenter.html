@@ -518,6 +518,22 @@
         color: var(--text-accent);
       }
 
+      .status-tag {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.65rem;
+        color: var(--text-muted);
+      }
+
+      .research-note {
+        font-style: italic;
+        background: #f1f5f9;
+        padding: 0.5rem;
+        border-radius: var(--radius-sm);
+        margin-top: 0.5rem !important;
+        border-left: 2px solid var(--text-muted);
+      }
+
       .priority-high {
         border-left-color: var(--danger);
       }
@@ -528,6 +544,11 @@
 
       .priority-low {
         border-left-color: var(--text-muted);
+      }
+
+      .status-identified {
+        background-color: #f0fdf4; /* Light green background */
+        border-color: #22c55e;
       }
 
       @media (max-width: 768px) {
@@ -549,8 +570,15 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
   </head>
   <body>
+    <script>
+      ContentHeader.inject("miljo-argumenter");
+    </script>
     <div id="auth-wall" class="auth-wall" style="display: none">
       <div class="auth-container">
         <h2>Tilgangskontroll</h2>
@@ -883,10 +911,11 @@ ${arg.references.map((r) => r.citation).join("\n")}`;
         container.innerHTML = data.missing_documents
           .map(
             (doc) => `
-        <div class="missing-doc-card priority-${doc.priority}">
-          <div class="category">${doc.category}</div>
+        <div class="missing-doc-card priority-${doc.priority} status-${doc.status}">
+          <div class="category">${doc.category} • <span class="status-tag">${doc.status.replace("_", " ")}</span></div>
           <h4>${doc.title}</h4>
           <p>${doc.description}</p>
+          ${doc.research_note ? `<p class="research-note"><strong>Status 2026:</strong> ${doc.research_note}</p>` : ""}
           <div class="source">Kilde: ${doc.source}</div>
         </div>
       `,

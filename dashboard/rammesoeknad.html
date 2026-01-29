@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rammesøknad - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-sidebar: #1e293b;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --text-accent: #2563eb;
+        --border-light: #e2e8f0;
+        --green-primary: #059669;
+        --green-light: #d1fae5;
+        --space-4: 1rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .page-layout {
+        display: flex;
+        min-height: calc(100vh - 48px);
+      }
+
+      /* Sidebar TOC */
+      .doc-sidebar {
+        width: 280px;
+        min-width: 280px;
+        background: var(--bg-sidebar);
+        color: white;
+        position: sticky;
+        top: 48px;
+        height: calc(100vh - 48px);
+        overflow-y: auto;
+        padding: var(--space-6);
+      }
+
+      .doc-sidebar-header {
+        padding-bottom: var(--space-4);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: var(--space-4);
+      }
+
+      .doc-sidebar-title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      .doc-sidebar-subtitle {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .toc-section {
+        margin-bottom: var(--space-4);
+      }
+
+      .toc-section-title {
+        font-size: 0.65rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 0.5rem;
+      }
+
+      .toc-link {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        border-radius: 6px;
+        margin-bottom: 2px;
+        transition: all 0.15s;
+      }
+
+      .toc-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+      }
+      .toc-link.active {
+        background: var(--text-accent);
+        color: white;
+      }
+
+      .toc-link-number {
+        display: inline-block;
+        width: 20px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Main content */
+      .doc-main {
+        flex: 1;
+        padding: var(--space-8);
+        max-width: 900px;
+      }
+
+      /* Document header */
+      .doc-header {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-lg);
+        padding: var(--space-8);
+        margin-bottom: var(--space-6);
+      }
+
+      .doc-badge {
+        display: inline-block;
+        padding: 0.375rem 0.75rem;
+        background: var(--green-light);
+        color: var(--green-primary);
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 50px;
+        margin-bottom: var(--space-4);
+      }
+
+      .doc-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .doc-subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: var(--space-6);
+      }
+
+      .doc-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-6);
+        padding-top: var(--space-4);
+        border-top: 1px solid var(--border-light);
+      }
+
+      .doc-meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .doc-meta-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-muted);
+      }
+
+      .doc-meta-value {
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      /* Sections */
+      .doc-section {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-lg);
+        margin-bottom: var(--space-4);
+        overflow: hidden;
+        scroll-margin-top: 80px;
+      }
+
+      .doc-section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-4) var(--space-6);
+        background: var(--bg-main);
+        border-bottom: 1px solid var(--border-light);
+        cursor: pointer;
+      }
+
+      .doc-section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .doc-section-number {
+        width: 28px;
+        height: 28px;
+        background: var(--text-accent);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .doc-section-toggle {
+        color: var(--text-muted);
+        transition: transform 0.2s;
+      }
+
+      .doc-section.expanded .doc-section-toggle {
+        transform: rotate(180deg);
+      }
+
+      .doc-section-content {
+        display: none;
+        padding: var(--space-6);
+      }
+
+      .doc-section.expanded .doc-section-content {
+        display: block;
+      }
+
+      /* Content styles */
+      .doc-section-content p {
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+      }
+      .doc-section-content p:last-child {
+        margin-bottom: 0;
+      }
+      .doc-section-content strong {
+        color: var(--text-primary);
+      }
+
+      .doc-list {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+      }
+
+      .doc-list li {
+        margin-bottom: 0.5rem;
+        color: var(--text-secondary);
+      }
+
+      /* Stats grid */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .stat-card {
+        background: var(--bg-main);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-accent);
+      }
+      .stat-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-top: 0.25rem;
+      }
+
+      /* Document embed */
+      .doc-embed {
+        background: var(--bg-main);
+        border-radius: var(--radius-md);
+        padding: var(--space-4);
+        margin: 1rem 0;
+      }
+
+      .doc-embed-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      .doc-embed-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+      }
+
+      .doc-embed-icon {
+        font-size: 1.5rem;
+      }
+
+      .doc-embed-actions {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .doc-embed-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: 6px;
+        color: var(--text-secondary);
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.15s;
+      }
+
+      .doc-embed-btn:hover {
+        background: var(--text-accent);
+        color: white;
+        border-color: var(--text-accent);
+      }
+
+      .doc-embed-placeholder {
+        background: var(--bg-card);
+        border: 2px dashed var(--border-light);
+        border-radius: var(--radius-md);
+        padding: 3rem;
+        text-align: center;
+        color: var(--text-muted);
+      }
+
+      /* Table */
+      .doc-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+      }
+
+      .doc-table th,
+      .doc-table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .doc-table th {
+        background: var(--bg-main);
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .doc-table td {
+        color: var(--text-secondary);
+      }
+
+      .status-badge {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 600;
+      }
+
+      .status-badge.complete {
+        background: var(--green-light);
+        color: var(--green-primary);
+      }
+      .status-badge.pending {
+        background: #fef3c7;
+        color: #d97706;
+      }
+      .status-badge.planned {
+        background: #dbeafe;
+        color: var(--text-accent);
+      }
+
+      /* Download section */
+      .download-section {
+        background: linear-gradient(135deg, var(--bg-sidebar) 0%, #334155 100%);
+        color: white;
+        padding: var(--space-8);
+        border-radius: var(--radius-lg);
+        margin-top: var(--space-6);
+        text-align: center;
+      }
+
+      .download-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .download-desc {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: var(--space-6);
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.875rem 1.5rem;
+        background: white;
+        color: var(--text-primary);
+        font-weight: 600;
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        transition: all 0.15s;
+      }
+
+      .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Print styles */
+      @media print {
+        .tab-header,
+        .doc-sidebar {
+          display: none;
+        }
+        body {
+          padding-top: 0;
+        }
+        .doc-main {
+          max-width: 100%;
+          padding: 1rem;
+        }
+        .doc-section {
+          break-inside: avoid;
+        }
+        .doc-section-content {
+          display: block !important;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .page-layout {
+          flex-direction: column;
+        }
+        .doc-sidebar {
+          width: 100%;
+          min-width: 100%;
+          position: relative;
+          top: 0;
+          height: auto;
+        }
+        .doc-main {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="tab-header">
+      <div class="tab-header-content">
+        <a href="index.html" class="tab-logo">
+          <div class="tab-logo-icon">H13</div>
+          <span class="tab-logo-text">Hovfaret 13</span>
+        </a>
+        <nav class="tab-nav">
+          <a href="index.html?tab=prosjektstyring" class="tab-nav-item"
+            ><span class="tab-nav-icon">📊</span
+            ><span class="tab-nav-label">Prosjektstyring</span></a
+          >
+          <a href="index.html?tab=presentasjoner" class="tab-nav-item active"
+            ><span class="tab-nav-icon">📖</span
+            ><span class="tab-nav-label">Presentasjoner</span></a
+          >
+          <a href="index.html?tab=produksjon" class="tab-nav-item"
+            ><span class="tab-nav-icon">🔧</span
+            ><span class="tab-nav-label">Produksjonsrom</span></a
+          >
+        </nav>
+        <div class="tab-header-stats">
+          <div class="tab-stat">
+            <span class="tab-stat-value">70</span
+            ><span class="tab-stat-label">Møter</span>
+          </div>
+          <div class="tab-stat">
+            <span class="tab-stat-value">271</span
+            ><span class="tab-stat-label">Dokumenter</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-layout">
+      <aside class="doc-sidebar">
+        <div class="doc-sidebar-header">
+          <div class="doc-sidebar-title">Rammesøknad</div>
+          <div class="doc-sidebar-subtitle">Hovfaret 13</div>
+        </div>
+
+        <div class="toc-section">
+          <div class="toc-section-title">Innhold</div>
+          <a href="#sammendrag" class="toc-link active"
+            ><span class="toc-link-number">1</span>Sammendrag</a
+          >
+          <a href="#prosjektoversikt" class="toc-link"
+            ><span class="toc-link-number">2</span>Prosjektoversikt</a
+          >
+          <a href="#barekraft" class="toc-link"
+            ><span class="toc-link-number">3</span>Bærekraftsrapport</a
+          >
+          <a href="#konseptskisse" class="toc-link"
+            ><span class="toc-link-number">4</span>Konseptskisse 3.0</a
+          >
+          <a href="#lca" class="toc-link"
+            ><span class="toc-link-number">5</span>LCA-analyse</a
+          >
+          <a href="#regulatorisk" class="toc-link"
+            ><span class="toc-link-number">6</span>Regulatoriske argumenter</a
+          >
+          <a href="#interessenter" class="toc-link"
+            ><span class="toc-link-number">7</span>Interessentdokumentasjon</a
+          >
+          <a href="#tegninger" class="toc-link"
+            ><span class="toc-link-number">8</span>Tekniske tegninger</a
+          >
+        </div>
+
+        <div class="toc-section">
+          <div class="toc-section-title">Handlinger</div>
+          <a
+            href="#"
+            class="toc-link"
+            onclick="
+              window.print();
+              return false;
+            "
+            >🖨️ Skriv ut</a
+          >
+          <a href="master.html?tab=presentasjoner" class="toc-link"
+            >📜 Master longread</a
+          >
+        </div>
+      </aside>
+
+      <main class="doc-main">
+        <header class="doc-header">
+          <div class="doc-badge">Rammesøknad Q1 2026</div>
+          <h1 class="doc-title">Søknadspakke for Hovfaret 13</h1>
+          <p class="doc-subtitle">
+            Komplett dokumentasjonspakke for dispensasjonssøknad fra
+            områderegulering Skøyen. Transformasjon av kontorbygg til 73
+            Omsorg+-boliger.
+          </p>
+          <div class="doc-meta">
+            <div class="doc-meta-item">
+              <span class="doc-meta-label">Søker</span>
+              <span class="doc-meta-value">Urbania Eiendom AS</span>
+            </div>
+            <div class="doc-meta-item">
+              <span class="doc-meta-label">Adresse</span>
+              <span class="doc-meta-value">Hovfaret 13, 0275 Oslo</span>
+            </div>
+            <div class="doc-meta-item">
+              <span class="doc-meta-label">GNR/BNR</span>
+              <span class="doc-meta-value">3/123</span>
+            </div>
+            <div class="doc-meta-item">
+              <span class="doc-meta-label">Status</span>
+              <span class="doc-meta-value">Under utarbeidelse</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- 1. Sammendrag -->
+        <section class="doc-section expanded" id="sammendrag">
+          <div
+            class="doc-section-header"
+            onclick="this.parentElement.classList.toggle('expanded')"
+          >
+            <div class="doc-section-title">
+              <span class="doc-section-number">1</span>
+              Sammendrag
+            </div>
+            <svg
+              class="doc-section-toggle"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="doc-section-content">
+            <p>
+              Denne søknadspakken dokumenterer hvorfor
+              <strong>rehabilitering og påbygg av Hovfaret 13</strong>
+              er et bedre alternativ enn riving og nybygg, som områdeplanen for
+              Skøyen forutsetter.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-value">48%</div>
+                <div class="stat-label">CO₂-besparelse</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">73</div>
+                <div class="stat-label">Omsorg+ enheter</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">80%</div>
+                <div class="stat-label">Materialbesparelse</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">2027</div>
+                <div class="stat-label">Ferdigstillelse</div>
+              </div>
+            </div>
+
+            <p>
+              <strong>Kjerneargument:</strong> Bygget har allerede et fundament
+              med reservekapasitet for 3 nye etasjer. Å rive dette for å bygge
+              nytt er klimamessig uansvarlig når rehabilitering kan oppnå samme
+              resultater med 48% lavere CO₂-utslipp.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Prosjektoversikt -->
+        <section class="doc-section expanded" id="prosjektoversikt">
+          <div
+            class="doc-section-header"
+            onclick="this.parentElement.classList.toggle('expanded')"
+          >
+            <div class="doc-section-title">
+              <span class="doc-section-number">2</span>
+              Prosjektoversikt
+            </div>
+            <svg
+              class="doc-section-toggle"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="doc-section-content">
+            <table class="doc-table">
+              <tr>
+                <th>Parameter</th>
+                <th>Verdi</th>
+              </tr>
+              <tr>
+                <td>Byggeår</td>
+                <td>1989</td>
+              </tr>
+              <tr>
+                <td>Eksisterende areal (BTA)</td>
+                <td>6.100 m²</td>
+              </tr>
+              <tr>
+                <td>Eksisterende etasjer</td>
+                <td>5 + 2 kjeller</td>
+              </tr>
+              <tr>
+                <td>Planlagt påbygg</td>
+                <td>3 etasjer</td>
+              </tr>
+              <tr>
+                <td>Totalt areal etter påbygg</td>
+                <td>~9.500 m²</td>
+              </tr>
+              <tr>
+                <td>Antall boliger</td>
+                <td>73 Omsorg+ enheter</td>
+              </tr>
+              <tr>
+                <td>Boligstørrelser</td>
+                <td>42-67 m²</td>
+              </tr>
+            </table>
+
+            <p>
+              Bygget er konstruert med forspente hulldekker og et fundament som
+              tåler betydelig mer belastning enn dagens bruk. Denne
+              overkapasiteten er dokumentert av byggeteknisk konsulent og
+              muliggjør påbygg uten nytt fundamenteringsarbeid.
+            </p>
+          </div>
+        </section>
+
+        <!-- 3. Bærekraftsrapport -->
+        <section class="doc-section" id="barekraft">
+          <div
+            class="doc-section-header"
+            onclick="this.parentElement.classList.toggle('expanded')"
+          >
+            <div class="doc-section-title">
+              <span class="doc-section-number">3</span>
+              Bærekraftsrapport
+            </div>
+            <svg
+              class="doc-section-toggle"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="doc-section-content">
+            <div class="doc-embed">
+              <div class="doc-embed-header">
+                <div class="doc-embed-title">
+                  <span class="doc-embed-icon">📊</span>
+                  Bærekraftsrapport ESRS (83 sider)
+                </div>
+                <div class="doc-embed-actions">
+                  <a
+                    href="sustainability-report.html?tab=produksjon"
+                    class="doc-embed-btn"
+                    >Åpne viewer</a
+                  >
+                </div>
+              </div>
+              <div class="doc-embed-placeholder">
+                <p>📄 Bærekraftsrapport etter ESRS-standard</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem">
+                  Levert 4. juli 2025 - 83 sider
+                </p>
+              </div>
+            </div>
+
+            <p>
+              Rapporten dekker E1 (klimaendringer), E4 (biologisk mangfold), E5
+              (sirkulær økonomi) og S3 (berørte samfunn) i henhold til European
+              Sustainability Reporting Standards.
+            </p>
+          </div>
+        </section>
+
+        <!-- 4. Konseptskisse -->
+        <section class="doc-section" id="konseptskisse">
+          <div
+            class="doc-section-header"
+            onclick="this.parentElement.classList.toggle('expanded')"
+          >
+            <div class="doc-section-title">
+              <span class="doc-section-number">4</span>
+              Konseptskisse 3.0
+            </div>
+            <svg
+              class="doc-section-toggle"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="doc-section-content">
+            <div class="doc-embed">
+              <div class="doc-embed-header">
+                <div class="doc-embed-title">
+                  <span class="doc-embed-icon">📗</span>
+                  Konseptskisse 3.0 (16 slides)
+                </div>
+                <div class="doc-embed-actions">
+                  <a
+                    href="konseptskisse-3.html?tab=produksjon"
+                    class="doc-embed-btn"
+                    >Åpne presentasjon</a
+                  >
+                </div>
+              </div>
+              <div class="doc-embed-placeholder">
+                <p>📑 Fullstendig konseptpresentasjon</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem">
+                  16 slides med pedagogisk oppbygging
+                </p>
+              </div>
+            </div>
+
+            <p>
+              Konseptskissen presenterer transformasjonsprosjektet i et
+              pedagogisk format med scenariosammenligning, etasjeprogram,
+              leilighetstyper og faseplan.
+            </p>
+          </div>
+        </section>
+
+        <!-- 5. LCA-analyse -->
+        <section class="doc-section" id="lca">
+          <div
+            class="doc-section-header"
+            onclick="this.parentElement.classList.toggle('expanded')"
+          >
+            <div class="doc-section-title">
+              <span class="doc-section-number">5</span>
+              LCA-analyse
+            </div>
+            <svg
+              class="doc-section-toggle"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="doc-section-content">
+            <table class="doc-table">
+              <tr>
+                <th>Indikator</th>
+                <th>Riving/nybygg</th>
+                <th>Rehabilitering</th>
+                <th>Besparelse</th>
+              </tr>
+              <tr>
+                <td>Total CO₂</td>
+                <td>5.340 tonn</td>
+                <td>2.800 tonn</td>
+                <td style="color: var(--green-primary); font-weight: 600">
+                  -48%
+                </td>
+              </tr>
+              <tr>
+                <td>CO₂ per m² BTA</td>
+                <td>631 kg</td>
+                <td>456 kg</td>
+                <td style="color: var(--green-primary); font-weight: 600">
+                  -28%
+                </td>
+              </tr>
+              <tr>
+                <td>Materialutslipp per m²</td>
+                <td>312 kg</td>
+                <td>62 kg</td>
+                <td style="color: var(--green-primary); font-weight: 600">
+                  -80%
+                </td>
+              </tr>
+              <tr>
+                <td>Bygge- og riveavfall</td>
+                <td>5-7.000 tonn</td>
+                <td>500-1.000 tonn</td>
+                <td style="color: var(--green-primary); font-weight: 600">
+                  -85%
+                </td>
+              </tr>
+            </table>
+
+            <p>
+              <strong>Kilde:</strong> Klimagassberegninger Hovfaret 13 v2, Vill
+              Energi AS ved Trym Osborg (22. april 2025)
+            </p>
+
+            <div class="doc-embed">
+              <div class="doc-embed-header">
+                <div class="doc-embed-title">
+                  <span class="doc-embed-icon">🌱</span>
+                  Bærekraft dashboard
+                </div>
+                <div class="doc-embed-actions">
+                  <a
+                    href="sustainability-complete.html?tab=produksjon"
+                    class="doc-embed-btn"
+                    >Åpne dashboard</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Regulatoriske argumenter -->
+        <section class="doc-section" id="regulatorisk">
+          <div
+            class="doc-section-header"
+            onclick="this.parentElement.classList.toggle('expanded')"
+          >
+            <div class="doc-section-title">
+              <span class="doc-section-number">6</span>
+              Regulatoriske argumenter
+            </div>
+            <svg
+              class="doc-section-toggle"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="doc-section-content">
+            <p><strong>Juridisk grunnlag for dispensasjon:</strong></p>
+            <ul class="doc-list">
+              <li>
+                Områdeplanen er ikke rettskraftig (uavklarte innsigelser fra
+                Bane NOR og Statens vegvesen)
+              </li>
+              <li>Unntaksbestemmelser i Plan- og bygningsloven § 19-2</li>
+              <li>Nye krav om vurdering av ombruksalternativ (TEK17 § 9-4)</li>
+              <li>Kommunalt skjønn for bærekraftige prosjekter</li>
+            </ul>
+
+            <div class="doc-embed">
+              <div class="doc-embed-header">
+                <div class="doc-embed-title">
+                  <span class="doc-embed-icon">🎯</span>
+                  Miljøargumentasjonsbase
+                </div>
+                <div class="doc-embed-actions">
+                  <a
+                    href="miljo-argumenter.html?tab=produksjon"
+                    class="doc-embed-btn"
+                    >Åpne argumentbase</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Interessentdokumentasjon -->
+        <section class="doc-section" id="interessenter">
+          <div
+            class="doc-section-header"
+            onclick="this.parentElement.classList.toggle('expanded')"
+          >
+            <div class="doc-section-title">
+              <span class="doc-section-number">7</span>
+              Interessentdokumentasjon
+            </div>
+            <svg
+              class="doc-section-toggle"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="doc-section-content">
+            <table class="doc-table">
+              <tr>
+                <th>Prosess</th>
+                <th>Dato</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>Møte med byråd James Lorentzen</td>
+                <td>15. jan 2024</td>
+                <td><span class="status-badge complete">Fullført</span></td>
+              </tr>
+              <tr>
+                <td>Presentasjon for bydelsledelsen</td>
+                <td>22. mai 2025</td>
+                <td><span class="status-badge complete">Fullført</span></td>
+              </tr>
+              <tr>
+                <td>Nabolagsmøte</td>
+                <td>14. okt 2025</td>
+                <td><span class="status-badge complete">Fullført</span></td>
+              </tr>
+              <tr>
+                <td>Nabovarsel sendt</td>
+                <td>16. okt 2025</td>
+                <td><span class="status-badge complete">Fullført</span></td>
+              </tr>
+              <tr>
+                <td>Bydelsutvalgsmøte</td>
+                <td>29. okt 2025</td>
+                <td><span class="status-badge complete">Fullført</span></td>
+              </tr>
+              <tr>
+                <td>Bruksendringssøknad</td>
+                <td>Q4 2025</td>
+                <td><span class="status-badge pending">Pågår</span></td>
+              </tr>
+              <tr>
+                <td>Rammesøknad</td>
+                <td>Q1 2026</td>
+                <td><span class="status-badge planned">Planlagt</span></td>
+              </tr>
+            </table>
+
+            <p>
+              <strong>Nøkkelfunn fra bydelsdialogen:</strong> Bydel Ullern har
+              dokumentert behov for 160 nye omsorgsboliger innen 2040. Hovfaret
+              13 dekker 46% av dette behovet.
+            </p>
+          </div>
+        </section>
+
+        <!-- 8. Tekniske tegninger -->
+        <section class="doc-section" id="tegninger">
+          <div
+            class="doc-section-header"
+            onclick="this.parentElement.classList.toggle('expanded')"
+          >
+            <div class="doc-section-title">
+              <span class="doc-section-number">8</span>
+              Tekniske tegninger
+            </div>
+            <svg
+              class="doc-section-toggle"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="doc-section-content">
+            <p>Vedlagt tegninger fra R21 Arkitekter:</p>
+            <ul class="doc-list">
+              <li>A20-serien: Plantegninger alle etasjer</li>
+              <li>Fasadetegninger (nord, sør, øst, vest)</li>
+              <li>Snittegninger</li>
+              <li>Situasjonsplan</li>
+              <li>Solstudier (21. mars og 21. juni)</li>
+            </ul>
+
+            <div class="doc-embed">
+              <div class="doc-embed-header">
+                <div class="doc-embed-title">
+                  <span class="doc-embed-icon">☀️</span>
+                  Solstudie animasjon
+                </div>
+                <div class="doc-embed-actions">
+                  <a href="solstudie.html?tab=produksjon" class="doc-embed-btn"
+                    >Åpne solstudie</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="download-section">
+          <h3 class="download-title">Last ned komplett pakke</h3>
+          <p class="download-desc">
+            Alle dokumenter samlet i én ZIP-fil for innsending til Plan- og
+            bygningsetaten.
+          </p>
+          <a href="#" class="download-btn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Last ned (kommer snart)
+          </a>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      ContentHeader.inject("rammesoeknad");
+      // TOC scroll spy
+      const sections = document.querySelectorAll(".doc-section");
+      const tocLinks = document.querySelectorAll(".toc-link");
+
+      function updateTOC() {
+        let current = "";
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100) current = section.id;
+        });
+        tocLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            link.classList.toggle("active", href === `#${current}`);
+          }
+        });
+      }
+
+      window.addEventListener("scroll", updateTOC);
+      updateTOC();
+    </script>
+  </body>
+</html>

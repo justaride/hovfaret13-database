@@ -1,0 +1,5 @@
+{
+  "chunk_chars": 1500,
+  "chunk_overlap": 200,
+  "separator": "\\f"
+}

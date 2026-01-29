@@ -1,0 +1,2532 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bærekraftsrapport 2.0 - Arbeidsrom</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-dark: #3d4a3a;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --accent-green: #3d4a3a;
+        --accent-light-green: #4a5a47;
+        --accent-emerald: #059669;
+        --accent-red: #dc2626;
+        --accent-amber: #f59e0b;
+        --accent-blue: #3b82f6;
+        --border-color: #e2e8f0;
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .header {
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .back-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+      }
+      .back-link:hover {
+        color: var(--accent-green);
+      }
+      .header h1 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .version-badge {
+        background: var(--accent-emerald);
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      /* Navigation */
+      .nav-container {
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.75rem 2rem;
+      }
+      .nav-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .nav-btn {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--border-color);
+        background: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        transition: all 0.2s;
+      }
+      .nav-btn:hover {
+        border-color: var(--accent-green);
+        color: var(--accent-green);
+      }
+      .nav-btn.active {
+        background: var(--accent-green);
+        color: white;
+        border-color: var(--accent-green);
+      }
+      .nav-btn.new {
+        border-color: var(--accent-emerald);
+      }
+      .nav-btn.new::after {
+        content: " NY";
+        color: var(--accent-emerald);
+        font-weight: 600;
+      }
+      .nav-btn.active.new::after {
+        color: white;
+      }
+      .nav-btn.update {
+        border-color: var(--accent-amber);
+      }
+      .nav-btn.update::after {
+        content: " ⚡";
+      }
+
+      /* Main container */
+      .main-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Slide container */
+      .slide-container {
+        background: var(--bg-card);
+        border-radius: 12px;
+        box-shadow: var(--shadow-lg);
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+      .slide-header {
+        background: linear-gradient(
+          135deg,
+          var(--accent-green),
+          var(--accent-light-green)
+        );
+        color: white;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .slide-header h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .slide-meta {
+        font-size: 0.875rem;
+        opacity: 0.9;
+      }
+      .slide-content {
+        padding: 2rem;
+        min-height: 500px;
+      }
+
+      /* Slide mockup */
+      .slide-mockup {
+        aspect-ratio: 16/9;
+        background: linear-gradient(180deg, #f0f4f0 0%, #e8ece8 100%);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+      .slide-title-bar {
+        background: var(--accent-green);
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .slide-body {
+        flex: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      /* Content elements */
+      .content-section {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      .content-section h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--accent-green);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .content-section h3::before {
+        content: "";
+        width: 4px;
+        height: 1em;
+        background: var(--accent-green);
+        border-radius: 2px;
+      }
+
+      /* Stats grid */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+      .stat-card {
+        background: white;
+        padding: 1.25rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      .stat-card.highlight {
+        background: var(--accent-green);
+        color: white;
+      }
+      .stat-value {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+        opacity: 0.8;
+      }
+
+      /* Timeline */
+      .timeline {
+        position: relative;
+        padding-left: 2rem;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0.5rem;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--border-color);
+      }
+      .timeline-item {
+        position: relative;
+        padding-bottom: 1.5rem;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: 0.25rem;
+        width: 10px;
+        height: 10px;
+        background: var(--accent-green);
+        border-radius: 50%;
+      }
+      .timeline-item.highlight::before {
+        background: var(--accent-emerald);
+      }
+      .timeline-date {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+      }
+      .timeline-title {
+        font-weight: 600;
+      }
+      .timeline-desc {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      /* Data table */
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+      }
+      .data-table th,
+      .data-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .data-table th {
+        background: #f8fafc;
+        font-weight: 600;
+        color: var(--text-secondary);
+      }
+      .data-table tr:hover {
+        background: #f8fafc;
+      }
+
+      /* Status badges */
+      .status-badge {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      .status-badge.completed {
+        background: #dcfce7;
+        color: #166534;
+      }
+      .status-badge.in-progress {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .status-badge.planned {
+        background: #e0e7ff;
+        color: #3730a3;
+      }
+
+      /* Change indicator */
+      .change-indicator {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: #fef3c7;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .change-indicator.new {
+        background: #dcfce7;
+      }
+      .change-indicator .icon {
+        font-size: 1.5rem;
+      }
+      .change-indicator .text {
+        flex: 1;
+      }
+      .change-indicator .label {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+      }
+      .change-indicator .value {
+        font-weight: 600;
+      }
+
+      /* Two column layout */
+      .two-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      @media (max-width: 768px) {
+        .two-columns {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Notes section */
+      .notes-section {
+        background: #fffbeb;
+        border: 1px solid #fcd34d;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+      .notes-section h4 {
+        font-size: 0.875rem;
+        color: #92400e;
+        margin-bottom: 0.5rem;
+      }
+      .notes-section ul {
+        font-size: 0.875rem;
+        color: #78350f;
+        margin-left: 1.25rem;
+      }
+
+      /* Keyboard navigation */
+      .keyboard-hint {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--bg-card);
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        box-shadow: var(--shadow-lg);
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+      }
+      .keyboard-hint kbd {
+        background: var(--bg-main);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("barekraftsrapport-2");
+    </script>
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <a href="sustainability.html" class="back-link"
+            >← Tilbake til Bærekraft</a
+          >
+          <h1>
+            📊 Bærekraftsrapport 2.0 - Arbeidsrom
+            <span class="version-badge">v2.0</span>
+          </h1>
+        </div>
+        <div class="header-right">
+          <span style="color: var(--text-secondary); font-size: 0.875rem">
+            Original: 83 sider → Oppdatert: ~97 sider
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav-container">
+      <div class="nav-content">
+        <button class="nav-btn active new" data-slide="84">
+          84: Del 6 Divider
+        </button>
+        <button class="nav-btn new" data-slide="86">
+          86: Strategisk Akselerasjon
+        </button>
+        <button class="nav-btn new" data-slide="88">
+          88: Interessentdialog
+        </button>
+        <button class="nav-btn new" data-slide="90">90: Nordic Circle</button>
+        <button class="nav-btn new" data-slide="91">
+          91: Regulatorisk Status
+        </button>
+        <button class="nav-btn new" data-slide="93">
+          93: Omsorg+ Detaljer
+        </button>
+        <button class="nav-btn new" data-slide="95">
+          95: Prosjektdatabase
+        </button>
+        <button class="nav-btn update" data-slide="2">S.2: Sammendrag</button>
+        <button class="nav-btn update" data-slide="19">S.19: Demografi</button>
+        <button class="nav-btn update" data-slide="60">
+          S.60: Medvirkning
+        </button>
+      </div>
+    </nav>
+
+    <main class="main-container">
+      <!-- Slide 84: Del 6 Divider -->
+      <div class="slide-container" id="slide-84">
+        <div class="slide-header">
+          <div>
+            <h2>Side 84: Del 6 - Status Desember 2025</h2>
+            <div class="slide-meta">
+              NY SEKSJON - Dokumenterer prosjektutvikling siden juli 2025
+            </div>
+          </div>
+          <span class="status-badge completed">NY SIDE</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-mockup">
+            <div
+              class="slide-title-bar"
+              style="padding: 3rem; font-size: 2.5rem; text-align: center"
+            >
+              Del 6
+            </div>
+            <div
+              class="slide-body"
+              style="
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+              "
+            >
+              <h2
+                style="
+                  font-size: 3rem;
+                  font-weight: 800;
+                  color: var(--accent-green);
+                "
+              >
+                Status Desember 2025
+              </h2>
+              <p
+                style="
+                  font-size: 1.25rem;
+                  color: var(--text-secondary);
+                  max-width: 600px;
+                "
+              >
+                Strategisk akselerasjon, interessentdialog, og regulatorisk
+                fremdrift
+              </p>
+
+              <!-- Hero infografikk med sirkler -->
+              <div
+                style="
+                  display: flex;
+                  gap: 2.5rem;
+                  margin-top: 2.5rem;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                "
+              >
+                <!-- Sirkel 1: Møter -->
+                <div style="position: relative; width: 110px; height: 110px">
+                  <svg
+                    viewBox="0 0 36 36"
+                    style="transform: rotate(-90deg); width: 100%; height: 100%"
+                  >
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.5"
+                      fill="none"
+                      stroke="#e2e8f0"
+                      stroke-width="2.5"
+                    />
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.5"
+                      fill="none"
+                      stroke="#3b82f6"
+                      stroke-width="2.5"
+                      stroke-dasharray="100, 100"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <div
+                    style="
+                      position: absolute;
+                      inset: 0;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <span
+                      style="font-size: 2rem; font-weight: 800; color: #1e40af"
+                      >70</span
+                    >
+                    <span style="font-size: 0.7rem; color: #64748b">møter</span>
+                  </div>
+                </div>
+
+                <!-- Sirkel 2: Behov (større) -->
+                <div style="position: relative; width: 130px; height: 130px">
+                  <svg
+                    viewBox="0 0 36 36"
+                    style="transform: rotate(-90deg); width: 100%; height: 100%"
+                  >
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.5"
+                      fill="none"
+                      stroke="#e2e8f0"
+                      stroke-width="2.5"
+                    />
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.5"
+                      fill="none"
+                      stroke="#16a34a"
+                      stroke-width="3"
+                      stroke-dasharray="46, 100"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <div
+                    style="
+                      position: absolute;
+                      inset: 0;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <span
+                      style="
+                        font-size: 2.25rem;
+                        font-weight: 800;
+                        color: #166534;
+                      "
+                      >160</span
+                    >
+                    <span style="font-size: 0.7rem; color: #64748b"
+                      >enheter behov</span
+                    >
+                    <span
+                      style="
+                        font-size: 0.6rem;
+                        color: #16a34a;
+                        font-weight: 600;
+                      "
+                      >73 dekkes</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Sirkel 3: Nabovarsel -->
+                <div style="position: relative; width: 110px; height: 110px">
+                  <svg
+                    viewBox="0 0 36 36"
+                    style="transform: rotate(-90deg); width: 100%; height: 100%"
+                  >
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.5"
+                      fill="none"
+                      stroke="#e2e8f0"
+                      stroke-width="2.5"
+                    />
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.5"
+                      fill="none"
+                      stroke="#22c55e"
+                      stroke-width="2.5"
+                      stroke-dasharray="100, 100"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <div
+                    style="
+                      position: absolute;
+                      inset: 0;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <span
+                      style="font-size: 2rem; font-weight: 800; color: #166534"
+                      >✓</span
+                    >
+                    <span style="font-size: 0.7rem; color: #64748b"
+                      >nabovarsel</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nøkkelhendelser -->
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  margin-top: 2rem;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                "
+              >
+                <div
+                  style="
+                    background: #fef3c7;
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    color: #b45309;
+                  "
+                >
+                  ⚡ Strategisk skifte 5. sept
+                </div>
+                <div
+                  style="
+                    background: #dcfce7;
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    color: #166534;
+                  "
+                >
+                  🤝 ~30 naboer på møte
+                </div>
+                <div
+                  style="
+                    background: #eff6ff;
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    color: #1e40af;
+                  "
+                >
+                  📋 Bruksendring sendt
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notes-section">
+            <h4>📝 Produksjonsnotater</h4>
+            <ul>
+              <li>Samme visuell stil som andre seksjonsdelere i rapporten</li>
+              <li>Grønn farge fra Natural State brandprofil</li>
+              <li>Nøkkeltall som "teaser" for innholdet som kommer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 86: Strategisk Akselerasjon -->
+      <div class="slide-container" id="slide-86" style="display: none">
+        <div class="slide-header">
+          <div>
+            <h2>Side 86-87: Strategisk Akselerasjon</h2>
+            <div class="slide-meta">
+              NY - Dokumenterer beslutningen 5. september 2025
+            </div>
+          </div>
+          <span class="status-badge completed">NY SIDE</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-mockup">
+            <div class="slide-title-bar">Strategisk Akselerasjon</div>
+            <div class="slide-body">
+              <div class="two-columns">
+                <div class="content-section">
+                  <h3>Bakgrunn</h3>
+                  <ul style="margin-left: 1rem; color: var(--text-secondary)">
+                    <li>
+                      <strong>Skøyen Aktivitetssenter</strong> har
+                      rivningsvedtak
+                    </li>
+                    <li>Bydel Ullern mister kritisk infrastruktur</li>
+                    <li>Akutt behov for <strong>160 omsorgsboliger</strong></li>
+                    <li>Hovfaret 13 kan dekke 46% av behovet</li>
+                  </ul>
+                </div>
+                <div class="content-section">
+                  <h3>Beslutning 5. september 2025</h3>
+                  <div
+                    style="
+                      background: var(--accent-green);
+                      color: white;
+                      padding: 1rem;
+                      border-radius: 8px;
+                      margin-top: 0.5rem;
+                    "
+                  >
+                    <strong>Akselerert strategi:</strong> Gå direkte til Omsorg+
+                    (steg 2) i stedet for trinnvis tilnærming via studiokontor
+                    (steg 1).
+                  </div>
+                </div>
+              </div>
+              <!-- Strategidiagram -->
+              <div
+                style="
+                  margin-top: 1.5rem;
+                  padding: 1.5rem;
+                  background: white;
+                  border-radius: 12px;
+                "
+              >
+                <p
+                  style="
+                    font-size: 0.8rem;
+                    color: var(--text-secondary);
+                    margin-bottom: 1rem;
+                    text-align: center;
+                  "
+                >
+                  Strategiendring
+                </p>
+
+                <!-- Gammel strategi -->
+                <div style="opacity: 0.5; margin-bottom: 1.5rem">
+                  <p
+                    style="
+                      font-size: 0.75rem;
+                      color: #94a3b8;
+                      margin-bottom: 0.5rem;
+                      text-decoration: line-through;
+                    "
+                  >
+                    Opprinnelig plan (trinnvis)
+                  </p>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 0.75rem;
+                      flex-wrap: wrap;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #e2e8f0;
+                        padding: 0.6rem 1rem;
+                        border-radius: 8px;
+                        font-size: 0.8rem;
+                        color: #64748b;
+                      "
+                    >
+                      Kontor
+                    </div>
+                    <svg width="30" height="12" viewBox="0 0 30 12">
+                      <path
+                        d="M0 6h24M20 2l4 4-4 4"
+                        stroke="#94a3b8"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                    <div
+                      style="
+                        background: #e2e8f0;
+                        padding: 0.6rem 1rem;
+                        border-radius: 8px;
+                        font-size: 0.8rem;
+                        color: #64748b;
+                      "
+                    >
+                      Studio
+                    </div>
+                    <svg width="30" height="12" viewBox="0 0 30 12">
+                      <path
+                        d="M0 6h24M20 2l4 4-4 4"
+                        stroke="#94a3b8"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                    <div
+                      style="
+                        background: #e2e8f0;
+                        padding: 0.6rem 1rem;
+                        border-radius: 8px;
+                        font-size: 0.8rem;
+                        color: #64748b;
+                      "
+                    >
+                      Bolig
+                    </div>
+                    <span
+                      style="
+                        font-size: 0.7rem;
+                        color: #94a3b8;
+                        margin-left: 0.5rem;
+                      "
+                      >5+ år</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Ny strategi -->
+                <div>
+                  <p
+                    style="
+                      font-size: 0.75rem;
+                      color: #166534;
+                      margin-bottom: 0.5rem;
+                      font-weight: 600;
+                    "
+                  >
+                    ✓ Ny strategi (akselerert)
+                  </p>
+                  <div style="display: flex; align-items: center; gap: 0.75rem">
+                    <div
+                      style="
+                        background: #f0fdf4;
+                        border: 2px solid #166534;
+                        padding: 0.6rem 1rem;
+                        border-radius: 8px;
+                        font-size: 0.8rem;
+                        color: #166534;
+                        font-weight: 600;
+                      "
+                    >
+                      I dag
+                    </div>
+                    <svg width="60" height="12" viewBox="0 0 60 12">
+                      <defs>
+                        <marker
+                          id="arrow-strat"
+                          markerWidth="8"
+                          markerHeight="6"
+                          refX="7"
+                          refY="3"
+                          orient="auto"
+                        >
+                          <polygon points="0 0, 8 3, 0 6" fill="#166534" />
+                        </marker>
+                      </defs>
+                      <line
+                        x1="0"
+                        y1="6"
+                        x2="50"
+                        y2="6"
+                        stroke="#166534"
+                        stroke-width="2"
+                        marker-end="url(#arrow-strat)"
+                      />
+                    </svg>
+                    <div
+                      style="
+                        background: #166534;
+                        padding: 0.6rem 1rem;
+                        border-radius: 8px;
+                        font-size: 0.8rem;
+                        color: white;
+                        font-weight: 600;
+                      "
+                    >
+                      Omsorg+
+                    </div>
+                    <span
+                      style="
+                        font-size: 0.7rem;
+                        color: #166534;
+                        margin-left: 0.5rem;
+                        font-weight: 600;
+                      "
+                      >2-3 år</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Besparelse badge -->
+                <div
+                  style="
+                    background: #dcfce7;
+                    padding: 0.75rem 1.5rem;
+                    border-radius: 8px;
+                    text-align: center;
+                    margin-top: 1.5rem;
+                  "
+                >
+                  <span
+                    style="font-size: 0.9rem; color: #166534; font-weight: 600"
+                    >⚡ 2-3 år raskere realisering</span
+                  >
+                </div>
+              </div>
+
+              <div class="stats-grid" style="margin-top: 1rem">
+                <div class="stat-card highlight">
+                  <div class="stat-value">73</div>
+                  <div class="stat-label">Omsorg+ enheter</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">160</div>
+                  <div class="stat-label">Bydel Ullern behov</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">46%</div>
+                  <div class="stat-label">Dekningsgrad</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">48%</div>
+                  <div class="stat-label">CO₂-reduksjon</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 88: Interessentdialog -->
+      <div class="slide-container" id="slide-88" style="display: none">
+        <div class="slide-header">
+          <div>
+            <h2>Side 88-89: Interessentdialog 2025</h2>
+            <div class="slide-meta">
+              NY - 13 verifiserte interessent-hendelser
+            </div>
+          </div>
+          <span class="status-badge completed">NY SIDE</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-mockup">
+            <div class="slide-title-bar">Interessentdialog 2025</div>
+            <div class="slide-body">
+              <div class="two-columns">
+                <div class="content-section">
+                  <h3>Tidslinje januar - november 2025</h3>
+                  <!-- Forbedret visuell tidslinje -->
+                  <div
+                    style="
+                      position: relative;
+                      padding-left: 2rem;
+                      margin-top: 1rem;
+                    "
+                  >
+                    <!-- Vertikal linje med gradient -->
+                    <div
+                      style="
+                        position: absolute;
+                        left: 0.5rem;
+                        top: 0;
+                        bottom: 0;
+                        width: 3px;
+                        background: linear-gradient(
+                          to bottom,
+                          #3b82f6 0%,
+                          #8b5cf6 40%,
+                          #f59e0b 60%,
+                          #22c55e 100%
+                        );
+                        border-radius: 2px;
+                      "
+                    ></div>
+
+                    <!-- Januar: Leietaker -->
+                    <div style="position: relative; padding-bottom: 1rem">
+                      <div
+                        style="
+                          position: absolute;
+                          left: -1.65rem;
+                          width: 14px;
+                          height: 14px;
+                          background: #3b82f6;
+                          border-radius: 50%;
+                          border: 3px solid white;
+                          box-shadow: 0 0 0 2px #3b82f6;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background: #eff6ff;
+                          padding: 0.5rem 0.75rem;
+                          border-radius: 6px;
+                        "
+                      >
+                        <div style="font-size: 0.65rem; color: #64748b">
+                          10. jan
+                        </div>
+                        <div
+                          style="
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            color: #1e40af;
+                          "
+                        >
+                          Leietakermøte
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Mai: Bydel -->
+                    <div style="position: relative; padding-bottom: 1rem">
+                      <div
+                        style="
+                          position: absolute;
+                          left: -1.65rem;
+                          width: 14px;
+                          height: 14px;
+                          background: #8b5cf6;
+                          border-radius: 50%;
+                          border: 3px solid white;
+                          box-shadow: 0 0 0 2px #8b5cf6;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background: #f5f3ff;
+                          padding: 0.5rem 0.75rem;
+                          border-radius: 6px;
+                        "
+                      >
+                        <div style="font-size: 0.65rem; color: #64748b">
+                          5. + 22. mai
+                        </div>
+                        <div
+                          style="
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            color: #6d28d9;
+                          "
+                        >
+                          Bydel Ullern (2 møter)
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Juni: Byråd -->
+                    <div style="position: relative; padding-bottom: 1rem">
+                      <div
+                        style="
+                          position: absolute;
+                          left: -1.65rem;
+                          width: 16px;
+                          height: 16px;
+                          background: #f59e0b;
+                          border-radius: 50%;
+                          border: 3px solid white;
+                          box-shadow: 0 0 0 2px #f59e0b;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background: #fef3c7;
+                          padding: 0.5rem 0.75rem;
+                          border-radius: 6px;
+                          border: 1px solid #f59e0b;
+                        "
+                      >
+                        <div style="font-size: 0.65rem; color: #64748b">
+                          24. juni
+                        </div>
+                        <div
+                          style="
+                            font-size: 0.8rem;
+                            font-weight: 700;
+                            color: #b45309;
+                          "
+                        >
+                          James Lorentzen (Byråd) ⭐
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- September: Strategisk skifte -->
+                    <div style="position: relative; padding-bottom: 1rem">
+                      <div
+                        style="
+                          position: absolute;
+                          left: -1.65rem;
+                          width: 16px;
+                          height: 16px;
+                          background: #ef4444;
+                          border-radius: 50%;
+                          border: 3px solid white;
+                          box-shadow: 0 0 0 2px #ef4444;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background: #fef2f2;
+                          padding: 0.5rem 0.75rem;
+                          border-radius: 6px;
+                          border: 1px solid #ef4444;
+                        "
+                      >
+                        <div style="font-size: 0.65rem; color: #64748b">
+                          5. sept
+                        </div>
+                        <div
+                          style="
+                            font-size: 0.8rem;
+                            font-weight: 700;
+                            color: #dc2626;
+                          "
+                        >
+                          Strategisk skifte ⚡
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Oktober: Nabolagsmøte -->
+                    <div style="position: relative; padding-bottom: 1rem">
+                      <div
+                        style="
+                          position: absolute;
+                          left: -1.65rem;
+                          width: 14px;
+                          height: 14px;
+                          background: #22c55e;
+                          border-radius: 50%;
+                          border: 3px solid white;
+                          box-shadow: 0 0 0 2px #22c55e;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background: #f0fdf4;
+                          padding: 0.5rem 0.75rem;
+                          border-radius: 6px;
+                        "
+                      >
+                        <div style="font-size: 0.65rem; color: #64748b">
+                          14. okt
+                        </div>
+                        <div
+                          style="
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            color: #166534;
+                          "
+                        >
+                          Nabolagsmøte (~30)
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Oktober: Bydelsutvalg -->
+                    <div style="position: relative">
+                      <div
+                        style="
+                          position: absolute;
+                          left: -1.65rem;
+                          width: 14px;
+                          height: 14px;
+                          background: #22c55e;
+                          border-radius: 50%;
+                          border: 3px solid white;
+                          box-shadow: 0 0 0 2px #22c55e;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background: #f0fdf4;
+                          padding: 0.5rem 0.75rem;
+                          border-radius: 6px;
+                        "
+                      >
+                        <div style="font-size: 0.65rem; color: #64748b">
+                          29. okt
+                        </div>
+                        <div
+                          style="
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            color: #166534;
+                          "
+                        >
+                          Bydelsutvalgsmøte ✓
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-section">
+                  <h3>Interessentgrupper</h3>
+                  <div class="stats-grid">
+                    <div class="stat-card">
+                      <div class="stat-value">4</div>
+                      <div class="stat-label">Bydel Ullern møter</div>
+                    </div>
+                    <div class="stat-card">
+                      <div class="stat-value">2</div>
+                      <div class="stat-label">Leietaker-dialoger</div>
+                    </div>
+                    <div class="stat-card">
+                      <div class="stat-value">1</div>
+                      <div class="stat-label">Byrådsmøte</div>
+                    </div>
+                    <div class="stat-card">
+                      <div class="stat-value">2</div>
+                      <div class="stat-label">Nabomøter</div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      margin-top: 1rem;
+                      padding: 1rem;
+                      background: #dcfce7;
+                      border-radius: 8px;
+                    "
+                  >
+                    <strong style="color: #166534">Resultat:</strong>
+                    <p style="color: #166534; margin-top: 0.5rem">
+                      Bred støtte fra bydel, politikere og naboer. Behov for 160
+                      omsorgsboliger dokumentert.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 90: Nordic Circle -->
+      <div class="slide-container" id="slide-90" style="display: none">
+        <div class="slide-header">
+          <div>
+            <h2>Side 90: Nordic Circle Hotspot</h2>
+            <div class="slide-meta">NY - Sirkulær partner og pilotprosjekt</div>
+          </div>
+          <span class="status-badge completed">NY SIDE</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-mockup">
+            <div class="slide-title-bar">Nordic Circle Hotspot</div>
+            <div
+              class="slide-body"
+              style="justify-content: center; align-items: center"
+            >
+              <div style="max-width: 700px; text-align: center">
+                <h2
+                  style="
+                    font-size: 2rem;
+                    color: var(--accent-green);
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Hovfaret 13 som sirkulær pilot
+                </h2>
+                <p
+                  style="
+                    font-size: 1.1rem;
+                    color: var(--text-secondary);
+                    margin-bottom: 2rem;
+                  "
+                >
+                  Partnerskap med Nordic Circle Construction etablert 5.
+                  september 2025
+                </p>
+                <div
+                  class="stats-grid"
+                  style="max-width: 500px; margin: 0 auto"
+                >
+                  <div class="stat-card">
+                    <div class="stat-value">🔄</div>
+                    <div class="stat-label">Sirkulære materialer</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">🧪</div>
+                    <div class="stat-label">Living laboratory</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">🌍</div>
+                    <div class="stat-label">Nordic Innovation</div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    margin-top: 2rem;
+                    padding: 1.5rem;
+                    background: #f0fdf4;
+                    border-radius: 12px;
+                    text-align: left;
+                  "
+                >
+                  <h4 style="color: var(--accent-green); margin-bottom: 0.5rem">
+                    Prosjektmål
+                  </h4>
+                  <ul
+                    style="color: var(--text-secondary); margin-left: 1.25rem"
+                  >
+                    <li>
+                      Teste sirkulære byggematerialer i rehabiliteringsprosjekt
+                    </li>
+                    <li>Dokumentere erfaringer for fremtidige prosjekter</li>
+                    <li>Bidra til Nordic Innovation-søknad</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 91: Regulatorisk Status -->
+      <div class="slide-container" id="slide-91" style="display: none">
+        <div class="slide-header">
+          <div>
+            <h2>Side 91-92: Regulatorisk Status</h2>
+            <div class="slide-meta">NY - Nabovarsel og rammesøknad</div>
+          </div>
+          <span class="status-badge completed">NY SIDE</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-mockup">
+            <div class="slide-title-bar">Regulatorisk Status Desember 2025</div>
+            <div class="slide-body">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Element</th>
+                    <th>Status</th>
+                    <th>Dato</th>
+                    <th>Ansvarlig</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Nabovarsel</strong></td>
+                    <td>
+                      <span class="status-badge completed">✓ Fullført</span>
+                    </td>
+                    <td>16. oktober 2025</td>
+                    <td>Byggesaksrådgivning AS</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Rammesøknad</strong></td>
+                    <td>
+                      <span class="status-badge in-progress">🔄 Pågår</span>
+                    </td>
+                    <td>Q1 2026</td>
+                    <td>Byggesaksrådgivning AS</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Igangsettingssøknad</strong></td>
+                    <td>
+                      <span class="status-badge planned">📅 Planlagt</span>
+                    </td>
+                    <td>2026</td>
+                    <td>TBD</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- Horisontal prosess-tidslinje -->
+              <div
+                style="
+                  margin-top: 2rem;
+                  padding: 1.5rem;
+                  background: white;
+                  border-radius: 12px;
+                "
+              >
+                <p
+                  style="
+                    font-size: 0.8rem;
+                    color: var(--text-secondary);
+                    margin-bottom: 1.5rem;
+                    text-align: center;
+                  "
+                >
+                  Regulatorisk prosess
+                </p>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <!-- Steg 1: Nabovarsel -->
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      min-width: 120px;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 50px;
+                        height: 50px;
+                        background: #16a34a;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                      "
+                    >
+                      ✓
+                    </div>
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        color: #16a34a;
+                        margin-top: 0.5rem;
+                      "
+                    >
+                      Nabovarsel
+                    </div>
+                    <div style="font-size: 0.65rem; color: #64748b">
+                      16. okt 2025
+                    </div>
+                  </div>
+
+                  <!-- Pil 1 -->
+                  <svg
+                    width="40"
+                    height="20"
+                    viewBox="0 0 40 20"
+                    style="flex-shrink: 0"
+                  >
+                    <line
+                      x1="0"
+                      y1="10"
+                      x2="30"
+                      y2="10"
+                      stroke="#16a34a"
+                      stroke-width="3"
+                    />
+                    <polygon points="28,5 38,10 28,15" fill="#16a34a" />
+                  </svg>
+
+                  <!-- Steg 2: Rammesøknad -->
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      min-width: 120px;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 50px;
+                        height: 50px;
+                        background: #f59e0b;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 1rem;
+                        font-weight: 700;
+                      "
+                    >
+                      🔄
+                    </div>
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        color: #b45309;
+                        margin-top: 0.5rem;
+                      "
+                    >
+                      Rammesøknad
+                    </div>
+                    <div style="font-size: 0.65rem; color: #64748b">
+                      Q1 2026
+                    </div>
+                  </div>
+
+                  <!-- Pil 2 -->
+                  <svg
+                    width="40"
+                    height="20"
+                    viewBox="0 0 40 20"
+                    style="flex-shrink: 0"
+                  >
+                    <line
+                      x1="0"
+                      y1="10"
+                      x2="30"
+                      y2="10"
+                      stroke="#e2e8f0"
+                      stroke-width="3"
+                    />
+                    <polygon points="28,5 38,10 28,15" fill="#e2e8f0" />
+                  </svg>
+
+                  <!-- Steg 3: Igangsetting -->
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      min-width: 120px;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 50px;
+                        height: 50px;
+                        background: #e2e8f0;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #64748b;
+                        font-size: 1rem;
+                        font-weight: 700;
+                      "
+                    >
+                      📋
+                    </div>
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        color: #64748b;
+                        margin-top: 0.5rem;
+                      "
+                    >
+                      Igangsetting
+                    </div>
+                    <div style="font-size: 0.65rem; color: #64748b">2026</div>
+                  </div>
+                </div>
+
+                <!-- Legend -->
+                <div
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+                    margin-top: 1.5rem;
+                    font-size: 0.7rem;
+                  "
+                >
+                  <div style="display: flex; align-items: center; gap: 0.4rem">
+                    <div
+                      style="
+                        width: 12px;
+                        height: 12px;
+                        background: #16a34a;
+                        border-radius: 50%;
+                      "
+                    ></div>
+                    <span style="color: #64748b">Fullført</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.4rem">
+                    <div
+                      style="
+                        width: 12px;
+                        height: 12px;
+                        background: #f59e0b;
+                        border-radius: 50%;
+                      "
+                    ></div>
+                    <span style="color: #64748b">Pågår</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.4rem">
+                    <div
+                      style="
+                        width: 12px;
+                        height: 12px;
+                        background: #e2e8f0;
+                        border-radius: 50%;
+                      "
+                    ></div>
+                    <span style="color: #64748b">Planlagt</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="two-columns" style="margin-top: 1.5rem">
+                <div class="content-section">
+                  <h3>Rammesøknad - Transformasjon til Omsorg+</h3>
+                  <ul style="margin-left: 1rem; color: var(--text-secondary)">
+                    <li>Transformasjon fra kontor til bolig</li>
+                    <li>73 Omsorg+ eldreboliger</li>
+                    <li>Krever dispensasjon fra områdeplan</li>
+                    <li>Bærekraftsrapport som vedlegg</li>
+                  </ul>
+                </div>
+                <div class="content-section">
+                  <h3>Ansvarlig søker</h3>
+                  <div
+                    style="
+                      background: #f0fdf4;
+                      padding: 1rem;
+                      border-radius: 8px;
+                      margin-top: 0.5rem;
+                    "
+                  >
+                    <div style="font-weight: 600; color: var(--accent-green)">
+                      Byggesaksrådgivning AS
+                    </div>
+                    <div
+                      style="
+                        font-size: 0.8rem;
+                        color: var(--text-secondary);
+                        margin-top: 0.25rem;
+                      "
+                    >
+                      Erfaring fra Covid-senter transformasjon
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 93: Omsorg+ Detaljer -->
+      <div class="slide-container" id="slide-93" style="display: none">
+        <div class="slide-header">
+          <div>
+            <h2>Side 93-94: Omsorg+ Konseptdetaljer</h2>
+            <div class="slide-meta">
+              NY - R21 spesifikasjoner og Husbanken compliance
+            </div>
+          </div>
+          <span class="status-badge completed">NY SIDE</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-mockup">
+            <div class="slide-title-bar">Omsorg+ Konsept - 73 Enheter</div>
+            <div class="slide-body">
+              <div class="stats-grid">
+                <div class="stat-card highlight">
+                  <div class="stat-value">73</div>
+                  <div class="stat-label">Totalt enheter</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">66</div>
+                  <div class="stat-label">Enkeltrom (42m²)</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">7</div>
+                  <div class="stat-label">Dobbeltrom (67m²)</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">8</div>
+                  <div class="stat-label">Etasjer totalt</div>
+                </div>
+              </div>
+              <div class="two-columns" style="margin-top: 1.5rem">
+                <div class="content-section">
+                  <h3>Etasjefordeling</h3>
+                  <!-- Visuelt etasjediagram -->
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      gap: 3px;
+                      margin-top: 1rem;
+                    "
+                  >
+                    <!-- Etasje 8: Takhage -->
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >8</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 18px;
+                          background: linear-gradient(90deg, #86efac, #22c55e);
+                          border-radius: 4px;
+                          display: flex;
+                          align-items: center;
+                          padding-left: 8px;
+                        "
+                      >
+                        <span
+                          style="
+                            font-size: 0.65rem;
+                            color: white;
+                            font-weight: 600;
+                          "
+                          >Takterrasse</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Etasje 6-7: Påbygg -->
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >7</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 18px;
+                          background: #3b82f6;
+                          border-radius: 4px;
+                          display: flex;
+                          align-items: center;
+                          padding-left: 8px;
+                        "
+                      >
+                        <span style="font-size: 0.65rem; color: white"
+                          >Påbygg (nytt)</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >6</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 18px;
+                          background: #3b82f6;
+                          border-radius: 4px;
+                        "
+                      ></div>
+                    </div>
+                    <!-- Etasje 2-5: Eksisterende -->
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >5</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 18px;
+                          background: #60a5fa;
+                          border-radius: 4px;
+                          display: flex;
+                          align-items: center;
+                          padding-left: 8px;
+                        "
+                      >
+                        <span style="font-size: 0.65rem; color: white"
+                          >Boliger (rehab)</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >4</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 18px;
+                          background: #60a5fa;
+                          border-radius: 4px;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >3</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 18px;
+                          background: #60a5fa;
+                          border-radius: 4px;
+                        "
+                      ></div>
+                    </div>
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >2</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 18px;
+                          background: #60a5fa;
+                          border-radius: 4px;
+                        "
+                      ></div>
+                    </div>
+                    <!-- Etasje 1: Service -->
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >1</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 22px;
+                          background: #f59e0b;
+                          border-radius: 4px;
+                          display: flex;
+                          align-items: center;
+                          padding-left: 8px;
+                        "
+                      >
+                        <span
+                          style="
+                            font-size: 0.65rem;
+                            color: white;
+                            font-weight: 600;
+                          "
+                          >Resepsjon / Kafé</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Kjeller -->
+                    <div
+                      style="display: flex; align-items: center; gap: 0.5rem"
+                    >
+                      <span
+                        style="
+                          font-size: 0.7rem;
+                          color: #64748b;
+                          width: 20px;
+                          text-align: right;
+                        "
+                        >U</span
+                      >
+                      <div
+                        style="
+                          flex: 1;
+                          height: 16px;
+                          background: #94a3b8;
+                          border-radius: 4px;
+                          display: flex;
+                          align-items: center;
+                          padding-left: 8px;
+                        "
+                      >
+                        <span style="font-size: 0.6rem; color: white"
+                          >Parkering / Teknisk</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Legend -->
+                  <div
+                    style="
+                      display: flex;
+                      gap: 1rem;
+                      margin-top: 1rem;
+                      font-size: 0.65rem;
+                      flex-wrap: wrap;
+                    "
+                  >
+                    <div
+                      style="display: flex; align-items: center; gap: 0.3rem"
+                    >
+                      <div
+                        style="
+                          width: 10px;
+                          height: 10px;
+                          background: #3b82f6;
+                          border-radius: 2px;
+                        "
+                      ></div>
+                      <span style="color: #64748b">Nytt påbygg</span>
+                    </div>
+                    <div
+                      style="display: flex; align-items: center; gap: 0.3rem"
+                    >
+                      <div
+                        style="
+                          width: 10px;
+                          height: 10px;
+                          background: #60a5fa;
+                          border-radius: 2px;
+                        "
+                      ></div>
+                      <span style="color: #64748b">Rehabilitering</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-section">
+                  <h3>Husbanken Compliance</h3>
+                  <!-- Radial progress -->
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 1.5rem;
+                      margin-bottom: 1rem;
+                    "
+                  >
+                    <div style="position: relative; width: 80px; height: 80px">
+                      <svg
+                        viewBox="0 0 36 36"
+                        style="transform: rotate(-90deg)"
+                      >
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#e2e8f0"
+                          stroke-width="3"
+                        />
+                        <path
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke="#16a34a"
+                          stroke-width="3"
+                          stroke-dasharray="100, 100"
+                        />
+                      </svg>
+                      <div
+                        style="
+                          position: absolute;
+                          inset: 0;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          flex-direction: column;
+                        "
+                      >
+                        <span
+                          style="
+                            font-size: 1.25rem;
+                            font-weight: 700;
+                            color: #166534;
+                          "
+                          >12</span
+                        >
+                        <span style="font-size: 0.6rem; color: #64748b"
+                          >/12</span
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <div style="font-weight: 600; color: #166534">
+                        100% oppfylt
+                      </div>
+                      <div
+                        style="font-size: 0.75rem; color: var(--text-secondary)"
+                      >
+                        Alle Husbanken-krav
+                      </div>
+                    </div>
+                  </div>
+                  <ul
+                    style="
+                      margin-left: 1rem;
+                      color: var(--text-secondary);
+                      font-size: 0.8rem;
+                    "
+                  >
+                    <li>✓ Universell utforming</li>
+                    <li>✓ Fellesrom i hver etasje</li>
+                    <li>✓ Døgnbemannet resepsjon</li>
+                    <li>✓ Kafé m/middagsservering</li>
+                    <li>✓ Hjemmetjenestebase</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 95: Prosjektdatabase -->
+      <div class="slide-container" id="slide-95" style="display: none">
+        <div class="slide-header">
+          <div>
+            <h2>Side 95: Prosjektdatabase</h2>
+            <div class="slide-meta">
+              NY - Dokumentasjon av prosjekthistorikk
+            </div>
+          </div>
+          <span class="status-badge completed">NY SIDE</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-mockup">
+            <div class="slide-title-bar">Prosjektdatabase - Hovfaret 13</div>
+            <div class="slide-body">
+              <div class="stats-grid" style="margin-bottom: 2rem">
+                <div class="stat-card highlight">
+                  <div class="stat-value">70</div>
+                  <div class="stat-label">Møter</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">271</div>
+                  <div class="stat-label">Dokumenter</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">75</div>
+                  <div class="stat-label">Leveranser</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">22</div>
+                  <div class="stat-label">Nøkkelpersoner</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">13</div>
+                  <div class="stat-label">Organisasjoner</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">20</div>
+                  <div class="stat-label">Måneder</div>
+                </div>
+              </div>
+              <div class="two-columns">
+                <div class="content-section">
+                  <h3>Prosjektperiode</h3>
+                  <p style="color: var(--text-secondary)">
+                    <strong>Start:</strong> Mars 2024<br />
+                    <strong>Status:</strong> Desember 2025<br />
+                    <strong>Varighet:</strong> 21 måneder
+                  </p>
+                </div>
+                <div class="content-section">
+                  <h3>Kjerneleveranser</h3>
+                  <ul style="margin-left: 1rem; color: var(--text-secondary)">
+                    <li>Energikartlegging (april 2025)</li>
+                    <li>Klimagassberegninger (april 2025)</li>
+                    <li>Bærekraftsrapport (juli 2025)</li>
+                    <li>Konseptskisse 2.0 (des 2025)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Update Slide 2: Sammendrag -->
+      <div class="slide-container" id="slide-2" style="display: none">
+        <div
+          class="slide-header"
+          style="background: linear-gradient(135deg, #f59e0b, #d97706)"
+        >
+          <div>
+            <h2>Side 2: Sammendrag - OPPDATERINGER</h2>
+            <div class="slide-meta">Endringer til eksisterende side</div>
+          </div>
+          <span class="status-badge in-progress">OPPDATER</span>
+        </div>
+        <div class="slide-content">
+          <div class="change-indicator new">
+            <div class="icon">➕</div>
+            <div class="text">
+              <div class="label">Legg til</div>
+              <div class="value">
+                Strategisk akselerasjon - direkte til Omsorg+ (besluttet 5. sept
+                2025)
+              </div>
+            </div>
+          </div>
+          <div class="change-indicator new">
+            <div class="icon">➕</div>
+            <div class="text">
+              <div class="label">Legg til</div>
+              <div class="value">Nabovarsel fullført 16. oktober 2025</div>
+            </div>
+          </div>
+          <div class="change-indicator new">
+            <div class="icon">➕</div>
+            <div class="text">
+              <div class="label">Legg til</div>
+              <div class="value">Rammesøknad pågår (Q1 2026)</div>
+            </div>
+          </div>
+          <div class="change-indicator">
+            <div class="icon">✏️</div>
+            <div class="text">
+              <div class="label">Oppdater</div>
+              <div class="value">
+                Status fra "UTKAST juli 2025" til "Oppdatert desember 2025"
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Update Slide 19: Demografi -->
+      <div class="slide-container" id="slide-19" style="display: none">
+        <div
+          class="slide-header"
+          style="background: linear-gradient(135deg, #f59e0b, #d97706)"
+        >
+          <div>
+            <h2>Side 19-26: Demografiske behov - OPPDATERINGER</h2>
+            <div class="slide-meta">KRITISK endring til eksisterende sider</div>
+          </div>
+          <span class="status-badge in-progress">OPPDATER</span>
+        </div>
+        <div class="slide-content">
+          <div class="change-indicator" style="background: #fee2e2">
+            <div class="icon">⚠️</div>
+            <div class="text">
+              <div class="label">KRITISK ENDRING</div>
+              <div class="value">
+                Bydel Ullern behov: "70+ eldreboliger" →
+                <strong>160 omsorgsboliger</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visuell før/etter sammenligning -->
+          <div
+            style="
+              display: flex;
+              gap: 2rem;
+              align-items: center;
+              justify-content: center;
+              margin: 2rem 0;
+              flex-wrap: wrap;
+            "
+          >
+            <!-- Før -->
+            <div style="text-align: center">
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: #dc2626;
+                  font-weight: 600;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                FØR (juli 2025)
+              </div>
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  background: linear-gradient(135deg, #fecaca, #fca5a5);
+                  border-radius: 50%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  border: 3px solid #dc2626;
+                "
+              >
+                <span
+                  style="font-size: 2.5rem; font-weight: 800; color: #dc2626"
+                  >70+</span
+                >
+                <span style="font-size: 0.65rem; color: #7f1d1d"
+                  >eldreboliger</span
+                >
+              </div>
+            </div>
+
+            <!-- Pil -->
+            <svg
+              width="60"
+              height="40"
+              viewBox="0 0 60 40"
+              style="flex-shrink: 0"
+            >
+              <defs>
+                <marker
+                  id="arrow-compare"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="9"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#166534" />
+                </marker>
+              </defs>
+              <line
+                x1="5"
+                y1="20"
+                x2="45"
+                y2="20"
+                stroke="#166534"
+                stroke-width="3"
+                marker-end="url(#arrow-compare)"
+              />
+            </svg>
+
+            <!-- Etter -->
+            <div style="text-align: center">
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: #166534;
+                  font-weight: 600;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                ETTER (des 2025)
+              </div>
+              <div
+                style="
+                  width: 140px;
+                  height: 140px;
+                  background: linear-gradient(135deg, #bbf7d0, #86efac);
+                  border-radius: 50%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  border: 4px solid #166534;
+                  box-shadow: 0 4px 20px rgba(22, 101, 52, 0.3);
+                "
+              >
+                <span style="font-size: 3rem; font-weight: 800; color: #166534"
+                  >160</span
+                >
+                <span style="font-size: 0.7rem; color: #14532d"
+                  >omsorgsboliger</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Økning badge -->
+          <div style="text-align: center; margin-bottom: 1.5rem">
+            <div
+              style="
+                display: inline-block;
+                background: #fef3c7;
+                border: 2px solid #f59e0b;
+                padding: 0.5rem 1.5rem;
+                border-radius: 20px;
+              "
+            >
+              <span style="font-size: 1rem; font-weight: 700; color: #b45309"
+                >+129% økning i dokumentert behov</span
+              >
+            </div>
+          </div>
+
+          <div
+            style="
+              background: #f0fdf4;
+              padding: 1rem;
+              border-radius: 8px;
+              text-align: center;
+            "
+          >
+            <p style="color: #166534; font-size: 0.9rem">
+              <strong>Hovfaret 13 dekker 46%</strong> av bydelens dokumenterte
+              behov (73/160 enheter)
+            </p>
+            <p style="color: #64748b; font-size: 0.75rem; margin-top: 0.5rem">
+              Kilde: Bydelsutvalgsmøte 29. oktober 2025
+            </p>
+          </div>
+          <div class="change-indicator new" style="margin-top: 1rem">
+            <div class="icon">📊</div>
+            <div class="text">
+              <div class="label">Legg til beregning</div>
+              <div class="value">
+                Hovfaret 13 dekker 46% av behovet (73/160 enheter)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Update Slide 60: Medvirkning -->
+      <div class="slide-container" id="slide-60" style="display: none">
+        <div
+          class="slide-header"
+          style="background: linear-gradient(135deg, #f59e0b, #d97706)"
+        >
+          <div>
+            <h2>Side 60-66: Samfunnsinvolvering - OPPDATERINGER</h2>
+            <div class="slide-meta">
+              Betydelig oppdatering med nye hendelser
+            </div>
+          </div>
+          <span class="status-badge in-progress">OPPDATER</span>
+        </div>
+        <div class="slide-content">
+          <div class="change-indicator new">
+            <div class="icon">➕</div>
+            <div class="text">
+              <div class="label">Legg til</div>
+              <div class="value">
+                Nabolagsmøte 14. oktober 2025 (~30 deltakere)
+              </div>
+            </div>
+          </div>
+          <div class="change-indicator new">
+            <div class="icon">➕</div>
+            <div class="text">
+              <div class="label">Legg til</div>
+              <div class="value">
+                Bydelsutvalgsmøte 29. oktober 2025 - politisk støtte bekreftet
+              </div>
+            </div>
+          </div>
+          <div class="change-indicator new">
+            <div class="icon">➕</div>
+            <div class="text">
+              <div class="label">Legg til</div>
+              <div class="value">
+                Møte med James Lorentzen (Byutviklingsbyråd) 24. juni 2025
+              </div>
+            </div>
+          </div>
+          <div class="change-indicator">
+            <div class="icon">📈</div>
+            <div class="text">
+              <div class="label">Oppdater statistikk</div>
+              <div class="value">
+                13 dokumenterte interessent-hendelser (jan-nov 2025)
+              </div>
+            </div>
+          </div>
+          <div class="notes-section">
+            <h4>📝 Interessentgrupper å dokumentere</h4>
+            <ul>
+              <li>
+                <strong>Bydel Ullern:</strong> 4 møter (Bente Otto, Ingrid Hopp,
+                Tore Strandskog, Bydelsutvalget)
+              </li>
+              <li><strong>Politikere:</strong> 1 møte (James Lorentzen)</li>
+              <li><strong>Leietakere:</strong> 2 møter (januar, mars 2025)</li>
+              <li>
+                <strong>Naboer:</strong> 2 møter (planlegging sept, nabolagsmøte
+                okt)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="keyboard-hint">
+      <kbd>←</kbd> <kbd>→</kbd> Naviger mellom sider
+    </div>
+
+    <script>
+      // Slide navigation
+      const slides = [
+        "84",
+        "86",
+        "88",
+        "90",
+        "91",
+        "93",
+        "95",
+        "2",
+        "19",
+        "60",
+      ];
+      let currentIndex = 0;
+
+      function showSlide(slideId) {
+        document
+          .querySelectorAll(".slide-container")
+          .forEach((s) => (s.style.display = "none"));
+        document
+          .querySelectorAll(".nav-btn")
+          .forEach((b) => b.classList.remove("active"));
+
+        const slide = document.getElementById("slide-" + slideId);
+        if (slide) {
+          slide.style.display = "block";
+          currentIndex = slides.indexOf(slideId);
+        }
+
+        const btn = document.querySelector(`[data-slide="${slideId}"]`);
+        if (btn) btn.classList.add("active");
+      }
+
+      // Nav buttons
+      document.querySelectorAll(".nav-btn").forEach((btn) => {
+        btn.addEventListener("click", () => showSlide(btn.dataset.slide));
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" && currentIndex < slides.length - 1) {
+          showSlide(slides[currentIndex + 1]);
+        } else if (e.key === "ArrowLeft" && currentIndex > 0) {
+          showSlide(slides[currentIndex - 1]);
+        }
+      });
+
+      // Show first slide
+      showSlide("84");
+    </script>
+  </body>
+</html>

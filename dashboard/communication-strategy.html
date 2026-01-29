@@ -1,0 +1,2268 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kommunikasjonsstrategi — Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <style>
+      :root {
+        --primary: #1e3a5f;
+        --primary-dark: #152a45;
+        --primary-light: #e8f0f8;
+        --green: #22c55e;
+        --green-dark: #15803d;
+        --green-light: #dcfce7;
+        --orange: #f59e0b;
+        --orange-light: #fef3c7;
+        --purple: #7c3aed;
+        --purple-light: #ede9fe;
+        --red: #ef4444;
+        --blue-light: #dbeafe;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --bg-page: #f8fafc;
+        --bg-card: white;
+        --bg-light: #f1f5f9;
+        --border: #e2e8f0;
+        --radius-sm: 6px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: var(--bg-page);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .header {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: white;
+        padding: 1.5rem 2rem;
+      }
+
+      .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .header-subtitle {
+        font-size: 0.875rem;
+        opacity: 0.8;
+        margin-top: 0.25rem;
+      }
+
+      .back-link {
+        color: white;
+        opacity: 0.8;
+        text-decoration: none;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .back-link:hover {
+        opacity: 1;
+      }
+
+      .back-link svg {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+      }
+
+      /* Main */
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, var(--primary) 0%, #2563eb 100%);
+        border-radius: var(--radius-lg);
+        padding: 3rem;
+        color: white;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='80' cy='20' r='40' fill='rgba(255,255,255,0.05)'/%3E%3Ccircle cx='90' cy='60' r='25' fill='rgba(255,255,255,0.03)'/%3E%3C/svg%3E")
+          no-repeat;
+        background-size: cover;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+
+      .hero p {
+        font-size: 1.125rem;
+        opacity: 0.9;
+        max-width: 700px;
+        position: relative;
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 3rem;
+        margin-top: 2rem;
+        position: relative;
+      }
+
+      .hero-stat {
+        text-align: center;
+      }
+
+      .hero-stat-value {
+        font-size: 2.5rem;
+        font-weight: 800;
+      }
+
+      .hero-stat-label {
+        font-size: 0.875rem;
+        opacity: 0.8;
+      }
+
+      /* Section */
+      .section {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border);
+      }
+
+      .section-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .section-icon.blue {
+        background: var(--primary-light);
+      }
+      .section-icon.blue svg {
+        stroke: var(--primary);
+      }
+      .section-icon.green {
+        background: var(--green-light);
+      }
+      .section-icon.green svg {
+        stroke: var(--green-dark);
+      }
+      .section-icon.orange {
+        background: var(--orange-light);
+      }
+      .section-icon.orange svg {
+        stroke: #92400e;
+      }
+      .section-icon.purple {
+        background: var(--purple-light);
+      }
+      .section-icon.purple svg {
+        stroke: #6b21a8;
+      }
+
+      .section-icon svg {
+        width: 24px;
+        height: 24px;
+        fill: none;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .section-subtitle {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        margin-top: 0.25rem;
+      }
+
+      /* Text Variants */
+      .text-variants {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .text-variant {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        border: 1px solid var(--border);
+      }
+
+      .variant-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      .variant-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+      }
+
+      .variant-label.formal {
+        background: var(--primary-light);
+        color: var(--primary);
+      }
+      .variant-label.narrative {
+        background: var(--green-light);
+        color: var(--green-dark);
+      }
+      .variant-label.compact {
+        background: var(--orange-light);
+        color: #92400e;
+      }
+      .variant-label.slide {
+        background: var(--purple-light);
+        color: #6b21a8;
+      }
+
+      .variant-text {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+      }
+
+      .variant-text p {
+        margin-bottom: 1rem;
+      }
+      .variant-text p:last-child {
+        margin-bottom: 0;
+      }
+
+      .variant-note {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-top: 1rem;
+        font-style: italic;
+      }
+
+      .copy-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        padding: 0.5rem 0.75rem;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .copy-btn:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+
+      .copy-btn svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      /* Framework Grid */
+      .framework-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .framework-card {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        border: 1px solid var(--border);
+      }
+
+      .framework-card h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+
+      .framework-card p {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+      }
+
+      .framework-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .framework-list li {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        padding: 0.375rem 0;
+        border-bottom: 1px dashed var(--border);
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .framework-list li:last-child {
+        border-bottom: none;
+      }
+
+      .framework-list li::before {
+        content: "→";
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      /* Target Groups */
+      .target-groups {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .target-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        overflow: hidden;
+      }
+
+      .target-header {
+        padding: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .target-header.blue {
+        background: var(--primary-light);
+      }
+      .target-header.blue svg {
+        stroke: var(--primary-dark);
+      }
+      .target-header.green {
+        background: var(--green-light);
+      }
+      .target-header.green svg {
+        stroke: var(--green-dark);
+      }
+      .target-header.purple {
+        background: var(--purple-light);
+      }
+      .target-header.purple svg {
+        stroke: #6b21a8;
+      }
+      .target-header.orange {
+        background: var(--orange-light);
+      }
+      .target-header.orange svg {
+        stroke: #92400e;
+      }
+
+      .target-header svg {
+        width: 24px;
+        height: 24px;
+        fill: none;
+        stroke-width: 1.5;
+      }
+
+      .target-header h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .target-content {
+        padding: 1.25rem;
+      }
+
+      .target-content p {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+      }
+
+      .target-content p:last-child {
+        margin-bottom: 0;
+      }
+
+      .target-messages {
+        background: var(--bg-light);
+        border-radius: var(--radius-sm);
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+
+      .target-messages h5 {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+        margin-bottom: 0.75rem;
+      }
+
+      .target-messages ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .target-messages li {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        padding: 0.375rem 0;
+        padding-left: 1rem;
+        position: relative;
+      }
+
+      .target-messages li::before {
+        content: "•";
+        color: var(--primary);
+        position: absolute;
+        left: 0;
+      }
+
+      /* Channels */
+      .channels-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+
+      .channel-card {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        text-align: center;
+        border: 1px solid var(--border);
+      }
+
+      .channel-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 1rem;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+      }
+
+      .channel-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--primary);
+        fill: none;
+        stroke-width: 1.5;
+      }
+
+      .channel-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 0.375rem;
+      }
+
+      .channel-status {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 0.75rem;
+      }
+
+      .channel-status.active {
+        background: var(--green-light);
+        color: var(--green-dark);
+      }
+
+      .channel-status.planning {
+        background: var(--orange-light);
+        color: #92400e;
+      }
+
+      .channel-desc {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      /* Timeline */
+      .comm-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .timeline-phase {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        overflow: hidden;
+      }
+
+      .phase-header {
+        background: white;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .phase-badge {
+        background: var(--primary);
+        color: white;
+        padding: 0.375rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .phase-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .phase-content {
+        padding: 1.5rem;
+      }
+
+      .phase-activities {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+
+      .activity-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .activity-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--primary);
+        margin-top: 0.5rem;
+        flex-shrink: 0;
+      }
+
+      .activity-text {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      /* Stedsidentitet */
+      .identity-model {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .identity-pillar {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        text-align: center;
+        border: 2px solid var(--border);
+        position: relative;
+      }
+
+      .identity-pillar::after {
+        content: "+";
+        position: absolute;
+        right: -1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-muted);
+      }
+
+      .identity-pillar:last-child::after {
+        content: "=";
+      }
+
+      .identity-pillar h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.75rem;
+      }
+
+      .identity-pillar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+      }
+
+      .identity-pillar li {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        padding: 0.375rem 0;
+      }
+
+      .identity-result {
+        grid-column: 1 / -1;
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: white;
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .identity-result h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .identity-result p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      /* Personality Tags */
+      .personality-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .personality-tag {
+        padding: 0.5rem 1rem;
+        background: var(--bg-light);
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        border: 1px solid var(--border);
+      }
+
+      /* Deliverables Status */
+      .deliverables-status {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .deliverable-item {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .deliverable-status {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .deliverable-status.completed {
+        background: var(--green);
+      }
+      .deliverable-status.in-progress {
+        background: var(--orange);
+      }
+      .deliverable-status.not-started {
+        background: var(--text-muted);
+      }
+
+      .deliverable-name {
+        font-size: 0.875rem;
+        color: var(--text-primary);
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 2rem;
+        color: var(--text-muted);
+        font-size: 0.875rem;
+      }
+
+      /* Growth Section */
+      .growth-intro {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--green);
+      }
+
+      .growth-intro p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        margin: 0;
+      }
+
+      .growth-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .growth-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        overflow: hidden;
+      }
+
+      .growth-header {
+        padding: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .growth-header.blue {
+        background: var(--primary-light);
+      }
+      .growth-header.blue svg {
+        stroke: var(--primary-dark);
+      }
+      .growth-header.orange {
+        background: var(--orange-light);
+      }
+      .growth-header.orange svg {
+        stroke: #92400e;
+      }
+      .growth-header.purple {
+        background: var(--purple-light);
+      }
+      .growth-header.purple svg {
+        stroke: #6b21a8;
+      }
+
+      .growth-header h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .growth-content {
+        padding: 1.25rem;
+      }
+
+      .growth-lead {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+      }
+
+      .growth-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .growth-list li {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        padding: 0.5rem 0;
+        border-bottom: 1px dashed var(--border);
+        line-height: 1.5;
+      }
+
+      .growth-list li:last-child {
+        border-bottom: none;
+      }
+
+      .growth-list li strong {
+        color: var(--text-primary);
+      }
+
+      /* Milestones Content */
+      .milestones-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .milestone-item {
+        background: var(--bg-light);
+        border-radius: var(--radius-md);
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        border: 1px solid var(--border);
+      }
+
+      .milestone-date {
+        background: var(--primary);
+        color: white;
+        padding: 0.375rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        white-space: nowrap;
+        min-width: 80px;
+        text-align: center;
+      }
+
+      .milestone-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .milestone-text strong {
+        font-size: 0.9rem;
+        color: var(--text-primary);
+      }
+
+      .milestone-text span {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      /* KPI Grid */
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+
+      .kpi-card {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        text-align: center;
+        color: white;
+      }
+
+      .kpi-value {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+      }
+
+      .kpi-label {
+        font-size: 0.875rem;
+        opacity: 0.9;
+        margin-bottom: 0.5rem;
+      }
+
+      .kpi-target {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.7;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        display: inline-block;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .channels-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .growth-grid {
+          grid-template-columns: 1fr;
+        }
+        .kpi-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 1.75rem;
+        }
+        .hero-stats {
+          gap: 1.5rem;
+          flex-wrap: wrap;
+        }
+        .framework-grid {
+          grid-template-columns: 1fr;
+        }
+        .identity-model {
+          grid-template-columns: 1fr;
+        }
+        .identity-pillar::after {
+          display: none;
+        }
+        .channels-grid {
+          grid-template-columns: 1fr;
+        }
+        .kpi-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .milestone-item {
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+        .milestone-date {
+          min-width: auto;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("communication-strategy");
+    </script>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div>
+          <h1>Kommunikasjonsstrategi</h1>
+          <p class="header-subtitle">
+            Hovfaret 13 — Formidling og identitetsbygging
+          </p>
+        </div>
+        <a href="index.html" class="back-link">
+          <svg viewBox="0 0 24 24">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Tilbake til oversikt
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <h2>Kommunikasjon som verktøy for god stedsutvikling</h2>
+        <p>
+          Formidling er en integrert del av utviklingsprosessen. Fra tidlig fase
+          brukes kommunikasjon til å bygge stedsidentitet, forankre visjon hos
+          interessenter, og skape engasjement rundt prosjektet.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">4</div>
+            <div class="hero-stat-label">Målgrupper</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">11</div>
+            <div class="hero-stat-label">Leveranser</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">hovfaret13.no</div>
+            <div class="hero-stat-label">Prosjektnettside</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- HVORFOR KOMMUNIKASJON -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon blue">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Hvorfor kommunikasjonsstrategi?</h2>
+            <p class="section-subtitle">
+              Tekstforslag for konseptskisse kapittel om formidling
+            </p>
+          </div>
+        </div>
+
+        <div class="text-variants">
+          <div class="text-variant formal">
+            <div class="variant-header">
+              <span class="variant-label formal">Formell / Konseptskisse</span>
+              <button class="copy-btn" onclick="copyText(this)">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" />
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  />
+                </svg>
+                Kopier
+              </button>
+            </div>
+            <div class="variant-text">
+              <p>
+                Kommunikasjon er et strategisk verktøy i Hovfaret 13-prosjektet.
+                Gjennom målrettet formidling bygges stedsidentitet, skapes
+                forankring hos nøkkelaktører, og legges grunnlag for effektiv
+                utvikling og senere realisering.
+              </p>
+              <p>
+                Transformasjonsprosjekter krever en trinnvis tilnærming til
+                kommunikasjon. I tidlig fase handler det om å etablere
+                stedsidentitet og forene aktører. I utviklingsfasen flyttes
+                fokus til medvirkning, rekruttering og omdømmebygging. Ved
+                realisering dreier kommunikasjonen seg om synlighet, aktivitet
+                og markedsføring.
+              </p>
+            </div>
+            <div class="variant-note">
+              Egnet for: Konseptskisse 2.0, kapittel om formidling/kommunikasjon
+            </div>
+          </div>
+
+          <div class="text-variant narrative">
+            <div class="variant-header">
+              <span class="variant-label narrative"
+                >Narrativ / Forklarende</span
+              >
+              <button class="copy-btn" onclick="copyText(this)">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" />
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  />
+                </svg>
+                Kopier
+              </button>
+            </div>
+            <div class="variant-text">
+              <p>
+                God stedsutvikling handler ikke bare om hva som bygges — det
+                handler om hvordan historien fortelles. Hovfaret 13 er mer enn
+                et bygg. Det er en fortelling om transformasjon: fra kontorbygg
+                til omsorgsboliger, fra rivningstruet til klimaforbilde, fra grå
+                betong til grønt fellesskap.
+              </p>
+              <p>
+                Gjennom kommunikasjon gjør vi denne fortellingen tilgjengelig.
+                For bydelen, som ser et svar på eldrebølgen. For naboene, som
+                får et aktivt nabolagshjerte. For politikere, som ser et
+                pilotprosjekt for bærekraftig byutvikling. For utviklere, som
+                ser at det lønner seg å ta vare på det som allerede finnes.
+              </p>
+            </div>
+            <div class="variant-note">
+              Egnet for: Presentasjoner, nettsiden, prosjekthistorie
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- STEDSIDENTITET -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon green">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Stedsidentitet</h2>
+            <p class="section-subtitle">
+              Summen av stedets egenart, konsept og formidling
+            </p>
+          </div>
+        </div>
+
+        <div class="identity-model">
+          <div class="identity-pillar">
+            <h4>Stedets egenart</h4>
+            <ul>
+              <li>Kontorbygg fra 1989</li>
+              <li>Robust betongkonstruksjon</li>
+              <li>Beliggenhet ved Hoffselva</li>
+              <li>Nærhet til Skøyen stasjon</li>
+              <li>Grønt område mot elv</li>
+              <li>Rivningstruet i områdeplan</li>
+            </ul>
+          </div>
+
+          <div class="identity-pillar">
+            <h4>Konsept</h4>
+            <ul>
+              <li>73 Omsorg+-boliger</li>
+              <li>Transformasjon, ikke riving</li>
+              <li>48% lavere CO₂-utslipp</li>
+              <li>«Generasjon Skøyen»</li>
+              <li>Fellesarealer og aktivitet</li>
+              <li>Sirkulær stedsutvikling</li>
+            </ul>
+          </div>
+
+          <div class="identity-pillar">
+            <h4>Formidling</h4>
+            <ul>
+              <li>hovfaret13.no</li>
+              <li>Facebook / Instagram</li>
+              <li>Nabolagsmøter</li>
+              <li>Presentasjoner</li>
+              <li>Konseptskisse 2.0</li>
+              <li>Bærekraftsrapport</li>
+            </ul>
+          </div>
+
+          <div class="identity-result">
+            <h4>= Hovfaret 13 Stedsidentitet</h4>
+            <p>
+              Bærekraftig transformasjon for Generasjon Skøyen — et sted der
+              eldre kan ta vare på hverandre
+            </p>
+          </div>
+        </div>
+
+        <h4
+          style="
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: var(--text-primary);
+          "
+        >
+          Personlighet / Oppfatning
+        </h4>
+        <div class="personality-tags">
+          <span class="personality-tag">Bærekraftig</span>
+          <span class="personality-tag">Omsorgsfull</span>
+          <span class="personality-tag">Innovativ</span>
+          <span class="personality-tag">Lokalt forankret</span>
+          <span class="personality-tag">Fellesskapsorientert</span>
+          <span class="personality-tag">Transformativ</span>
+          <span class="personality-tag">Fremtidsrettet</span>
+          <span class="personality-tag">Trygg</span>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- MÅLGRUPPER -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon purple">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Målgrupper og budskap</h2>
+            <p class="section-subtitle">
+              Tilpasset kommunikasjon per interessentgruppe
+            </p>
+          </div>
+        </div>
+
+        <div class="target-groups">
+          <!-- B2C - Naboer og lokalmiljø -->
+          <div class="target-card">
+            <div class="target-header blue">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <h4>Naboer og lokalmiljø (B2C)</h4>
+            </div>
+            <div class="target-content">
+              <p>
+                Folk i nabolaget, potensielle beboere, lokalsamfunnet på Skøyen.
+              </p>
+              <div class="target-messages">
+                <h5>Nøkkelbudskap</h5>
+                <ul>
+                  <li>Et sted for nabolaget — aktivitet og møteplasser</li>
+                  <li>Medvirkning — din stemme former prosjektet</li>
+                  <li>Bærekraftig valg — 48% lavere klimaavtrykk</li>
+                  <li>
+                    Generasjoner sammen — boliger for de som vil ta vare på
+                    hverandre
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- B2B - Leietakere og partnere -->
+          <div class="target-card">
+            <div class="target-header orange">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+              <h4>Leietakere og partnere (B2B)</h4>
+            </div>
+            <div class="target-content">
+              <p>
+                Eksisterende leietakere, potensielle drivere,
+                samarbeidspartnere, leverandører.
+              </p>
+              <div class="target-messages">
+                <h5>Nøkkelbudskap</h5>
+                <ul>
+                  <li>Forutsigbarhet — 5-års kontrakter gjelder</li>
+                  <li>Fleksible lokaler — tilpasses deres behov</li>
+                  <li>Trygg utleier — langsiktig eierskap</li>
+                  <li>Del av noe større — bærekraftig stedsutvikling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- B2PA - Offentlige -->
+          <div class="target-card">
+            <div class="target-header purple">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 21h18M5 21V7l8-4 8 4v14" />
+                <path d="M9 21v-6h6v6" />
+              </svg>
+              <h4>Offentlige instanser (B2PA)</h4>
+            </div>
+            <div class="target-content">
+              <p>Bydel Ullern, Oslo kommune, PBE, Husbanken, politikere.</p>
+              <div class="target-messages">
+                <h5>Nøkkelbudskap</h5>
+                <ul>
+                  <li>Løser samfunnsbehov — 150-200 omsorgsboliger trengs</li>
+                  <li>Pilotprosjekt — modell for bærekraftig transformasjon</li>
+                  <li>Klimamål — støtter Oslos klimastrategi</li>
+                  <li>Offentlig-privat samarbeid — felles mål</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Internt -->
+          <div class="target-card">
+            <div class="target-header green">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              <h4>Prosjektteam (Internt)</h4>
+            </div>
+            <div class="target-content">
+              <p>
+                Natural State, Urbania, R21 Arkitekter, konsulenter,
+                samarbeidspartnere.
+              </p>
+              <div class="target-messages">
+                <h5>Nøkkelbudskap</h5>
+                <ul>
+                  <li>Felles visjon — transformasjon for mennesker og klima</li>
+                  <li>Flaggskipprosjekt — demonstrerer vår metodikk</li>
+                  <li>
+                    Tverrfaglig samarbeid — arkitektur, bærekraft,
+                    stedsutvikling
+                  </li>
+                  <li>Langsiktig verdi — omdømmebygging</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- KOMMUNIKASJONSKANALER -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon blue">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Kommunikasjonskanaler</h2>
+            <p class="section-subtitle">Hovfaret 13 sin tilstedeværelse</p>
+          </div>
+        </div>
+
+        <div class="channels-grid">
+          <div class="channel-card">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+            <div class="channel-name">hovfaret13.no</div>
+            <span class="channel-status active">Aktiv</span>
+            <p class="channel-desc">
+              Prosjektnettside via Parabol. Informasjon, nyheter og kontakt.
+            </p>
+          </div>
+
+          <div class="channel-card">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </div>
+            <div class="channel-name">Instagram</div>
+            <span class="channel-status active">Aktiv</span>
+            <p class="channel-desc">
+              Visuelt innhold, prosessbilder, arrangementer.
+            </p>
+          </div>
+
+          <div class="channel-card">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </div>
+            <div class="channel-name">Facebook</div>
+            <span class="channel-status active">Aktiv</span>
+            <p class="channel-desc">
+              Nyheter, arrangementer, dialog med lokalmiljøet.
+            </p>
+          </div>
+
+          <div class="channel-card">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="channel-name">Nabolagsmøter</div>
+            <span class="channel-status active">Gjennomført</span>
+            <p class="channel-desc">
+              Fysiske møter med naboer og lokalmiljø. 14. okt 2025.
+            </p>
+          </div>
+
+          <div class="channel-card">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14,2 14,8 20,8" />
+              </svg>
+            </div>
+            <div class="channel-name">Presentasjoner</div>
+            <span class="channel-status active">Aktiv</span>
+            <p class="channel-desc">
+              Konseptskisser, møtepresentasjoner, rapporter.
+            </p>
+          </div>
+
+          <div class="channel-card">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"
+                />
+              </svg>
+            </div>
+            <div class="channel-name">Presse/PR</div>
+            <span class="channel-status planning">Planlagt</span>
+            <p class="channel-desc">
+              Pressemelding ved milepæler. Artikler og intervjuer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- KOMMUNIKASJONSFASER -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon orange">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Kommunikasjonsfaser</h2>
+            <p class="section-subtitle">
+              Trinnvis tilnærming per utviklingsfase
+            </p>
+          </div>
+        </div>
+
+        <div class="comm-timeline">
+          <div class="timeline-phase">
+            <div class="phase-header">
+              <span class="phase-badge">Fase 1</span>
+              <span class="phase-title"
+                >Tidlig fase — Etablering (2024–Q3 2025)</span
+              >
+            </div>
+            <div class="phase-content">
+              <div class="phase-activities">
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">
+                    Etablere stedsidentitet og konsept
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">
+                    Forene prosjektteam og aktører
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Lansere prosjektnettside</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Første kontakt med bydel</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-phase">
+            <div class="phase-header">
+              <span class="phase-badge">Fase 2</span>
+              <span class="phase-title"
+                >Utviklingsfase — Forankring (Q4 2025–2026)</span
+              >
+            </div>
+            <div class="phase-content">
+              <div class="phase-activities">
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Nabolagsmøte og medvirkning</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">
+                    Rekruttering av drivere/leietakere
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Markedsavklaringsdialoger</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Omdømmebygging og PR</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Månedlig SoMe-innhold</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">
+                    Artikler og historiefortelling
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-phase">
+            <div class="phase-header">
+              <span class="phase-badge">Fase 3</span>
+              <span class="phase-title">Realisering — Synlighet (2026→)</span>
+            </div>
+            <div class="phase-content">
+              <div class="phase-activities">
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">
+                    Prosessformidling — «følg utviklingen»
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Markedsføring av boliger</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Arrangementer og aktiviteter</div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-text">Pressedekning og PR</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- LEVERANSER STATUS -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon green">
+            <svg viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">
+              Leveranser — Nettside og kommunikasjon
+            </h2>
+            <p class="section-subtitle">Status per desember 2025</p>
+          </div>
+        </div>
+
+        <div class="deliverables-status">
+          <div class="deliverable-item">
+            <div class="deliverable-status completed"></div>
+            <span class="deliverable-name">Landing page før nabolagsmøtet</span>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-status in-progress"></div>
+            <span class="deliverable-name">Lansere hovfaret13.no</span>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-status in-progress"></div>
+            <span class="deliverable-name">Kommunikasjonsstrategi</span>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-status not-started"></div>
+            <span class="deliverable-name">4 artikler før jul</span>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-status completed"></div>
+            <span class="deliverable-name">Facebook-side</span>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-status completed"></div>
+            <span class="deliverable-name">Instagram-konto</span>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-status completed"></div>
+            <span class="deliverable-name">Post SoMe Hovfaret</span>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-status completed"></div>
+            <span class="deliverable-name">Post SoMe Natural State/NCC</span>
+          </div>
+          <div class="deliverable-item">
+            <div class="deliverable-status in-progress"></div>
+            <span class="deliverable-name">1 post per måned</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- TEKSTFORSLAG FORMIDLING -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon purple">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <polyline points="14,2 14,8 20,8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Tekstforslag: Formidling</h2>
+            <p class="section-subtitle">For bruk i konseptskisse 2.0</p>
+          </div>
+        </div>
+
+        <div class="text-variants">
+          <div class="text-variant formal">
+            <div class="variant-header">
+              <span class="variant-label formal">Konseptskisse / Formelt</span>
+              <button class="copy-btn" onclick="copyText(this)">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" />
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  />
+                </svg>
+                Kopier
+              </button>
+            </div>
+            <div class="variant-text">
+              <p><strong>Formidling og kommunikasjon</strong></p>
+              <p>
+                Formidling er ett av seks suksesskriterier for god
+                stedsutvikling. Hovfaret 13 har etablert kommunikasjonskanaler
+                som støtter prosjektets mål om forankring, synlighet og
+                rekruttering.
+              </p>
+              <p>
+                <strong>Kanaler:</strong> Prosjektnettside (hovfaret13.no) via
+                Parabol, sosiale medier (Facebook, Instagram), nabolagsmøter,
+                presentasjoner og konseptskisser.
+              </p>
+              <p>
+                <strong>Målgrupper:</strong> Naboer og lokalmiljø, leietakere og
+                partnere, offentlige instanser (bydel, kommune, Husbanken), og
+                internt prosjektteam.
+              </p>
+              <p>
+                <strong>Budskap:</strong> Bærekraftig transformasjon som løser
+                samfunnsbehov — omsorgsboliger for «Generasjon Skøyen» med 48%
+                lavere klimaavtrykk enn riving og nybygg.
+              </p>
+            </div>
+            <div class="variant-note">
+              Egnet for: Konseptskisse 2.0 kapittel 4 (Utviklingsstrategi)
+            </div>
+          </div>
+
+          <div class="text-variant compact">
+            <div class="variant-header">
+              <span class="variant-label slide">Slide / Kompakt</span>
+              <button class="copy-btn" onclick="copyText(this)">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" />
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  />
+                </svg>
+                Kopier
+              </button>
+            </div>
+            <div class="variant-text">
+              <p><strong>Kommunikasjonsstrategi</strong></p>
+              <p>
+                • <strong>Nettside:</strong> hovfaret13.no — informasjon og
+                kontakt<br />
+                • <strong>SoMe:</strong> Facebook + Instagram — prosess og
+                arrangementer<br />
+                • <strong>Møter:</strong> Nabolagsmøter — dialog og
+                medvirkning<br />
+                • <strong>Dokumenter:</strong> Konseptskisse, presentasjoner,
+                bærekraftsrapport
+              </p>
+              <p>
+                <strong>Målgrupper:</strong> Naboer · Leietakere · Bydel/kommune
+                · Prosjektteam
+              </p>
+            </div>
+            <div class="variant-note">
+              Egnet for: Presentasjonsslide, oppsummering
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- AKTIVITET OG VEKST -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon green">
+            <svg viewBox="0 0 24 24">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Aktivitet og vekst</h2>
+            <p class="section-subtitle">
+              Hvordan bygge engasjement og følgerskare
+            </p>
+          </div>
+        </div>
+
+        <!-- Vekststrategi kort -->
+        <div class="growth-intro">
+          <p>
+            Hovfaret 13 har et unikt potensial for å bygge en engasjert
+            følgerskare. Prosjektet kombinerer flere elementer som skaper
+            naturlig interesse: en sterk bærekraftshistorie, et tydelig
+            samfunnsbehov, og en transformasjonsprosess folk kan følge over tid.
+          </p>
+        </div>
+
+        <div class="growth-grid">
+          <!-- Innholdsstrategi -->
+          <div class="growth-card">
+            <div class="growth-header blue">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14,2 14,8 20,8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+              <h4>Innholdsstrategi</h4>
+            </div>
+            <div class="growth-content">
+              <p class="growth-lead">Fortell historien i kapitler</p>
+              <ul class="growth-list">
+                <li>
+                  <strong>Transformasjonsreisen:</strong> Før/etter,
+                  prosessbilder, milepæler
+                </li>
+                <li>
+                  <strong>Menneskene:</strong> Portretter av teamet,
+                  bydelsrepresentanter, naboer
+                </li>
+                <li>
+                  <strong>Bærekraft i praksis:</strong> Konkrete tall,
+                  visualiseringer, sammenligninger
+                </li>
+                <li>
+                  <strong>Generasjon Skøyen:</strong> Historier om hvem som skal
+                  bo her
+                </li>
+                <li>
+                  <strong>Bak kulissene:</strong> Møter, beslutninger,
+                  utfordringer
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Aktivitetsplan -->
+          <div class="growth-card">
+            <div class="growth-header orange">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              <h4>Aktivitetsplan</h4>
+            </div>
+            <div class="growth-content">
+              <p class="growth-lead">Jevn tilstedeværelse bygger tillit</p>
+              <ul class="growth-list">
+                <li>
+                  <strong>Ukentlig:</strong> 1-2 stories (prosess, team, behind
+                  the scenes)
+                </li>
+                <li>
+                  <strong>Månedlig:</strong> 2-4 feed-poster (milepæler, fakta,
+                  artikler)
+                </li>
+                <li>
+                  <strong>Kvartalsvis:</strong> Statusoppdatering, video, lengre
+                  artikkel
+                </li>
+                <li>
+                  <strong>Ved milepæler:</strong> Pressemelding, kampanje,
+                  arrangement
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Engasjementstaktikker -->
+          <div class="growth-card">
+            <div class="growth-header purple">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                />
+              </svg>
+              <h4>Engasjementstaktikker</h4>
+            </div>
+            <div class="growth-content">
+              <p class="growth-lead">Involver publikum aktivt</p>
+              <ul class="growth-list">
+                <li>
+                  <strong>Spørsmål:</strong> «Hva ønsker du i 1. etasje?» —
+                  polls og avstemninger
+                </li>
+                <li>
+                  <strong>Deling:</strong> Oppfordre naboer til å dele sine
+                  tanker
+                </li>
+                <li>
+                  <strong>Tagging:</strong> Samarbeidspartnere, bydel,
+                  arkitekter
+                </li>
+                <li>
+                  <strong>Bruker-generert:</strong> Del innhold fra
+                  nabolagsmøter
+                </li>
+                <li>
+                  <strong>Hashtags:</strong> #Hovfaret13 #GenerasjonSkøyen
+                  #BærekraftigOslo
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milepæler som innholdsmuligheter -->
+        <h4
+          style="
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--text-primary);
+          "
+        >
+          Milepæler som innholdsmuligheter
+        </h4>
+        <div class="milestones-content">
+          <div class="milestone-item">
+            <div class="milestone-date">Des 2025</div>
+            <div class="milestone-text">
+              <strong>Konseptskisse 2.0 ferdig</strong>
+              <span
+                >Lanseringspost, artikkel om prosessen, video-gjennomgang</span
+              >
+            </div>
+          </div>
+          <div class="milestone-item">
+            <div class="milestone-date">Q1 2026</div>
+            <div class="milestone-text">
+              <strong>Bruksendringssøknad innsendt</strong>
+              <span>«Nå skjer det» — markering av formell milepæl</span>
+            </div>
+          </div>
+          <div class="milestone-item">
+            <div class="milestone-date">Q2 2026</div>
+            <div class="milestone-text">
+              <strong>Husbanken-dialog</strong>
+              <span>Finansiering og offentlig samarbeid — tillitsbyggende</span>
+            </div>
+          </div>
+          <div class="milestone-item">
+            <div class="milestone-date">2026-2027</div>
+            <div class="milestone-text">
+              <strong>Byggestart</strong>
+              <span>Transformasjonsreisen begynner — «Følg utviklingen»</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mål og KPIer -->
+        <h4
+          style="
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--text-primary);
+          "
+        >
+          Mål for digital tilstedeværelse
+        </h4>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-value">500+</div>
+            <div class="kpi-label">Følgere på Instagram</div>
+            <div class="kpi-target">Mål Q2 2026</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">2-4</div>
+            <div class="kpi-label">Poster per måned</div>
+            <div class="kpi-target">Jevn aktivitet</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">5%+</div>
+            <div class="kpi-label">Engasjementsrate</div>
+            <div class="kpi-target">Over bransjesnittet</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">4</div>
+            <div class="kpi-label">Artikler før jul</div>
+            <div class="kpi-target">Leveranse 2025</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- TEKSTFORSLAG: VEKST OG AKTIVITET -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon orange">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <polyline points="14,2 14,8 20,8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">
+              Tekstforslag: Aktivitet og engasjement
+            </h2>
+            <p class="section-subtitle">For kommunikasjonsstrategidokument</p>
+          </div>
+        </div>
+
+        <div class="text-variants">
+          <div class="text-variant formal">
+            <div class="variant-header">
+              <span class="variant-label formal">Strategidokument</span>
+              <button class="copy-btn" onclick="copyText(this)">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" />
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  />
+                </svg>
+                Kopier
+              </button>
+            </div>
+            <div class="variant-text">
+              <p><strong>Aktivitet og engasjement</strong></p>
+              <p>
+                Hovfaret 13 har et sterkt potensial for å bygge en engasjert
+                følgerskare gjennom transformasjonsprosessen. Prosjektet
+                kombinerer flere elementer som skaper naturlig interesse: en
+                dokumenterbar bærekraftshistorie (48% lavere CO₂), et tydelig
+                samfunnsbehov (150-200 omsorgsboliger i bydelen), og en synlig
+                transformasjonsprosess som kan følges over tid.
+              </p>
+              <p>
+                <strong>Innholdsstrategi:</strong> Kommunikasjonen skal fortelle
+                prosjektets historie i kapitler — fra transformasjonsreisen med
+                før/etter-bilder, via portretter av menneskene bak prosjektet,
+                til konkrete bærekraftstall og historiene om «Generasjon
+                Skøyen».
+              </p>
+              <p>
+                <strong>Aktivitetsnivå:</strong> Jevn tilstedeværelse bygger
+                tillit. Planen er 1-2 stories ukentlig, 2-4 feed-poster
+                månedlig, kvartalsvis statusoppdatering, og dedikerte kampanjer
+                ved milepæler (konseptskisse, søknad, byggestart).
+              </p>
+              <p>
+                <strong>Engasjement:</strong> Publikum involveres aktivt gjennom
+                avstemninger, spørsmål og oppfordringer til deling. Hashtags som
+                #Hovfaret13 og #GenerasjonSkøyen bygger gjenkjennelighet.
+              </p>
+            </div>
+            <div class="variant-note">
+              Egnet for: Kommunikasjonsstrategi-dokument, konseptskisse
+            </div>
+          </div>
+
+          <div class="text-variant narrative">
+            <div class="variant-header">
+              <span class="variant-label narrative">Narrativ / Pitch</span>
+              <button class="copy-btn" onclick="copyText(this)">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" />
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  />
+                </svg>
+                Kopier
+              </button>
+            </div>
+            <div class="variant-text">
+              <p>
+                De fleste eiendomsprosjekter dukker opp når de er ferdige.
+                Hovfaret 13 gjør det motsatte: vi inviterer folk inn i reisen.
+              </p>
+              <p>
+                Tenk på det som en dokumentarserie i sakte film. Hvert kapittel
+                — fra første møte med bydelen til den dagen de første beboerne
+                flytter inn — er en mulighet til å fortelle en historie. Ikke
+                bare om et bygg, men om hvordan vi bygger for fremtiden.
+              </p>
+              <p>
+                Når Ingrid fra Bydelsutvalget snakker om «Generasjon Skøyen», er
+                det ikke et slagord. Det er en invitasjon til å følge med på
+                hvordan et helt nabolag kan tenke nytt om aldring. Når vi viser
+                at å bevare betongskjelettet sparer 48% CO₂, er det ikke
+                statistikk. Det er et argument som treffer.
+              </p>
+              <p>Folk vil følge historier som betyr noe. Dette er en av dem.</p>
+            </div>
+            <div class="variant-note">
+              Egnet for: Presentasjon, pitch, artikkel
+            </div>
+          </div>
+
+          <div class="text-variant compact">
+            <div class="variant-header">
+              <span class="variant-label compact">Kompakt / Oppsummering</span>
+              <button class="copy-btn" onclick="copyText(this)">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" />
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  />
+                </svg>
+                Kopier
+              </button>
+            </div>
+            <div class="variant-text">
+              <p><strong>Vekststrategi i kortversjon:</strong></p>
+              <p>
+                • <strong>Innhold:</strong> Transformasjonsreise, mennesker,
+                bærekraft, Generasjon Skøyen<br />
+                • <strong>Frekvens:</strong> 1-2 stories/uke, 2-4 poster/mnd,
+                kvartalsvis status<br />
+                • <strong>Engasjement:</strong> Polls, deling, tagging,
+                #Hovfaret13<br />
+                • <strong>Milepæler:</strong> Konseptskisse → Søknad → Husbanken
+                → Byggestart<br />
+                • <strong>Mål:</strong> 500+ følgere, 5%+ engasjement, 4
+                artikler før jul
+              </p>
+            </div>
+            <div class="variant-note">
+              Egnet for: Slide, faktaboks, intern oppsummering
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================== -->
+      <!-- NETTSIDE-STRUKTUR -->
+      <!-- ====================================== -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon blue">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Nettside-struktur</h2>
+            <p class="section-subtitle">Anbefalt innhold for hovfaret13.no</p>
+          </div>
+        </div>
+
+        <div class="framework-grid">
+          <div class="framework-card">
+            <h4>Om prosjektet</h4>
+            <p>Hovedinformasjon</p>
+            <ul class="framework-list">
+              <li>Visjon og konsept</li>
+              <li>Hovfaret 13 — historien</li>
+              <li>Omsorg+-konseptet</li>
+              <li>Prosjektteamet</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h4>Utviklingen</h4>
+            <p>Prosess og fremdrift</p>
+            <ul class="framework-list">
+              <li>Tidslinje</li>
+              <li>Status og milepæler</li>
+              <li>Bærekraft og klima</li>
+              <li>Arkitektur</li>
+            </ul>
+          </div>
+
+          <div class="framework-card">
+            <h4>For nabolaget</h4>
+            <p>Dialog og medvirkning</p>
+            <ul class="framework-list">
+              <li>Nabolagsmøter</li>
+              <li>Innspill og kontakt</li>
+              <li>Ofte stilte spørsmål</li>
+              <li>Nabovarsel</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        Hovfaret 13 Prosjektdatabase — Kommunikasjonsstrategi v1.0 — Desember
+        2025<br />
+        Natural State × Urbania Eiendom
+      </p>
+    </footer>
+
+    <script>
+      function copyText(button) {
+        const variant = button.closest(".text-variant");
+        const textEl = variant.querySelector(".variant-text");
+        const text = textEl.innerText;
+
+        navigator.clipboard.writeText(text).then(() => {
+          const originalText = button.innerHTML;
+          button.innerHTML =
+            '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Kopiert!';
+          button.style.background = "#22c55e";
+          button.style.color = "white";
+          button.style.borderColor = "#22c55e";
+
+          setTimeout(() => {
+            button.innerHTML = originalText;
+            button.style.background = "";
+            button.style.color = "";
+            button.style.borderColor = "";
+          }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>

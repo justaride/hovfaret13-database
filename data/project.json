@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "created": "2025-11-21",
+    "last_updated": "2025-12-03",
+    "description": "Master project file for Hovfaret 13 Transformation"
+  },
+  "project": {
+    "name": "Hovfaret 13 Transformation",
+    "short_name": "H13",
+    "type": "Real Estate Development - Transformation/Rehabilitation",
+    "status": "Active - Pre-submission Phase",
+    "current_phase": "phase_6"
+  },
+  "building": {
+    "address": "Hovfaret 13",
+    "district": "Skøyen",
+    "city": "Oslo",
+    "country": "Norway",
+    "coordinates": {
+      "lat": 59.9207,
+      "lng": 10.6778
+    },
+    "construction_year": 1989,
+    "building_type": "Office building (Kontorbygg)",
+    "structural_system": "Concrete frame (Betongstruktur)",
+    "current_floors": 5,
+    "extension_capacity": "3 additional floors (reserve capacity in foundation)",
+    "planned_total_floors": 8,
+    "area": {
+      "bta_m2": 6100,
+      "bra_m2": 5800,
+      "units": "square meters"
+    },
+    "current_use": "Office space (Kontorer)",
+    "key_features": [
+      "Robust concrete foundation with reserve capacity for 3 additional floors",
+      "Location adjacent to Hoffselva (river)",
+      "Central Skøyen location with transit access",
+      "Pre-stressed hollow core decks (forspente hulldekker)"
+    ],
+    "energy": {
+      "current_rating": "F",
+      "current_consumption_kwh_m2_year": 232,
+      "target_rating": "C (B with 2026 standards)",
+      "target_consumption_kwh_m2_year": 116
+    }
+  },
+  "ownership": {
+    "property_owner": {
+      "name": "Urbania Eiendom AS",
+      "type": "Real Estate Company",
+      "role": "Property Owner and Developer"
+    },
+    "property_company": {
+      "name": "Hovfaret 13 AS",
+      "type": "Property SPV (Single Purpose Vehicle)"
+    }
+  },
+  "project_context": {
+    "challenge": {
+      "description": "Oslo kommune's 2023 area regulation requires demolition of Hovfaret 13 and 10m setback from Hoffselva river. The project mobilized to demonstrate that transformation/rehabilitation is superior to demolition.",
+      "regulatory_trigger": "Områderegulering Skøyen vedtatt September 2023 - krav om riving",
+      "key_argument": "Building foundation has reserve capacity for 3 additional floors (currently 5, can become 8). Transformation preserves embodied carbon and enables vertical extension without new foundation work."
+    },
+    "transformation_rationale": [
+      "48% lower CO₂ emissions vs demolition/rebuild (2794 vs 5343 tonnes total)",
+      "80% lower material emissions (62 vs 312 kg CO₂-ekv/m²)",
+      "Foundation has reserve capacity for 3 additional floors (5→8)",
+      "Preserves biodiversity along Hoffselva",
+      "Reduces construction waste by 80%",
+      "Circular economy principles"
+    ]
+  },
+  "phases": [
+    {
+      "id": "phase_1",
+      "name": "Historical Context",
+      "name_no": "Historisk kontekst",
+      "period": "1989-2023",
+      "description": "Building construction and area development planning",
+      "status": "completed",
+      "color": "#9CA3AF"
+    },
+    {
+      "id": "phase_2",
+      "name": "Critical Juncture",
+      "name_no": "Kritisk vendepunkt",
+      "period": "2023",
+      "description": "Demolition requirement imposed, project mobilization begins",
+      "status": "completed",
+      "color": "#EF4444"
+    },
+    {
+      "id": "phase_3",
+      "name": "Project Mobilization",
+      "name_no": "Prosjektmobilisering",
+      "period": "Q1-Q2 2024",
+      "description": "Team assembly, concept development, stakeholder mapping",
+      "status": "completed",
+      "color": "#3B82F6"
+    },
+    {
+      "id": "phase_4",
+      "name": "Documentation & Analysis",
+      "name_no": "Dokumentasjon og analyse",
+      "period": "Q3-Q4 2024",
+      "description": "Technical assessments, energy mapping, scenario development",
+      "status": "completed",
+      "color": "#8B5CF6"
+    },
+    {
+      "id": "phase_5",
+      "name": "Stakeholder Intensification",
+      "name_no": "Interessentintensivering",
+      "period": "Q1-Q2 2025",
+      "description": "Tenant engagement, political outreach, sustainability reporting",
+      "status": "completed",
+      "color": "#10B981"
+    },
+    {
+      "id": "phase_6",
+      "name": "Pre-submission Phase",
+      "name_no": "Før-søknadsfase",
+      "period": "Q3 2025",
+      "description": "Final documentation, framework application coordination",
+      "status": "in_progress",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "phase_7",
+      "name": "Future Milestones",
+      "name_no": "Fremtidige milepæler",
+      "period": "Q4 2025 - 2026",
+      "description": "Regulatory decision, construction planning (projected)",
+      "status": "planned",
+      "color": "#6B7280"
+    }
+  ],
+  "scenarios": {
+    "description": "Three development scenarios have been analyzed and compared",
+    "preferred": "scenario_2",
+    "options": [
+      {
+        "id": "scenario_1",
+        "name": "Demolition and Rebuild",
+        "name_no": "Nybygg og riving",
+        "description": "Demolish existing building, construct new building 2m further from river",
+        "climate_impact": {
+          "total_co2_tonnes": 5340,
+          "co2_per_m2_bta": 631,
+          "material_emissions_per_m2": 312
+        },
+        "energy_consumption_kwh_m2": 115,
+        "status": "Not recommended"
+      },
+      {
+        "id": "scenario_2",
+        "name": "Rehabilitation",
+        "name_no": "Rehabilitering",
+        "description": "Preserve and upgrade existing building, improve energy efficiency",
+        "climate_impact": {
+          "total_co2_tonnes": 2800,
+          "co2_per_m2_bta": 456,
+          "material_emissions_per_m2": 62
+        },
+        "energy_consumption_kwh_m2": 161,
+        "comparison_to_demolition": "-48% total emissions, -80% material emissions",
+        "status": "Recommended baseline"
+      },
+      {
+        "id": "scenario_3",
+        "name": "Rehabilitation with Extension",
+        "name_no": "Påbygg",
+        "description": "Rehabilitate existing + add 3 floors of housing on top (Omsorg+ concept)",
+        "climate_impact": {
+          "total_co2_tonnes": 4160,
+          "co2_per_m2_bta": 491,
+          "material_emissions_per_m2": 123
+        },
+        "energy_consumption_kwh_m2": "95 (new) / 161 (existing)",
+        "comparison_to_demolition": "-22% total emissions, -60% material emissions",
+        "status": "Preferred option - maximizes social benefit"
+      }
+    ]
+  },
+  "key_dates": {
+    "building_constructed": "1989",
+    "demolition_requirement_imposed": "2023-09",
+    "project_kickoff": "2024-03-11",
+    "energy_report_delivered": "2025-04-11",
+    "climate_calculations_delivered": "2025-04-22",
+    "sustainability_report_delivered": "2025-07-04",
+    "target_application_submission": "2026-Q1"
+  },
+  "data_sources": {
+    "primary": [
+      "PROJECT_MILESTONES.json from h13-project-database",
+      "baerekraftsrapport_hovfaret13.md extraction",
+      "STAKEHOLDER_PROFILES_360.json",
+      "MASTER_MEETINGS.json"
+    ],
+    "source_documents_count": 349,
+    "extracted_documents_count": 271,
+    "meetings_tracked": 70,
+    "original_database_path": "/Users/gabrielboen/h13-project-database"
+  }
+}

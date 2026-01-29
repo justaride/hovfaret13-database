@@ -1,0 +1,288 @@
+{
+  "overview": {
+    "key_findings": [
+      {
+        "category": "Art",
+        "text": "Sjøørret (Salmo trutta) er rapportert å gyte i denne strekningen om høsten."
+      },
+      {
+        "category": "Økologi",
+        "text": "Gråhegre (Ardea cinerea) observeres jaktende ved kulvertutløpet."
+      },
+      {
+        "category": "Trusselbilde",
+        "text": "Elva er under press fra utbygging, trafikk og ulovlig parkering."
+      },
+      {
+        "category": "Status",
+        "text": "Bestanden er sårbar og trenger kartlegging for å verifisere påstander."
+      }
+    ],
+    "work_items": [
+      {
+        "task": "Engasjere ferskvannsbiolog",
+        "status": "not_started"
+      },
+      {
+        "task": "Verifisere gyteforhold (høst)",
+        "status": "not_started"
+      },
+      {
+        "task": "Kartlegge Gråhegre-aktivitet",
+        "status": "not_started"
+      },
+      {
+        "task": "Vurdere skyggeeffekt på elveløpet",
+        "status": "complete",
+        "result": "Skygge er primært positivt for temperaturregulering (kjøling), men bygningsskygge mangler andre økologiske fordeler som vegetasjon gir."
+      },
+      {
+        "task": "Evaluere avstandskrav (§ 13.3) vs eksisterende bygningsmasse",
+        "status": "not_started"
+      }
+    ]
+  },
+  "stakeholder_input": {
+    "source": "Hoffvassdragets venner",
+    "date": "2025-11-11",
+    "subject": "Innspill til planer for Hovfaret 13",
+    "concerns": [
+      {
+        "topic": "Gyting",
+        "claim": "Denne strekningen av elva er kjent for at ørreten går opp her og gyter om høsten."
+      },
+      {
+        "topic": "Fugleliv",
+        "claim": "Gråhegren sees på jakt i utløpet av kulverten."
+      },
+      {
+        "topic": "Skygge",
+        "claim": "Økt høyde vil kaste sterkere skygge over elveløpet og virke intimiderende på tursti A5."
+      },
+      {
+        "topic": "Avstand",
+        "claim": "Kommuneplanen § 13.3 krever 20m (hovedløp) / 12m (sideløp) byggegrense."
+      }
+    ]
+  },
+  "data_gathering_plan": {
+    "internal_sources": [
+      {
+        "name": "Naturmiljø Hoff Skole",
+        "file": "13_Naturmiljoe.pdf",
+        "relevance": "Direkte relevant nabotomt. Inneholder sannsynligvis biologisk mangfold-kartlegging."
+      },
+      {
+        "name": "ROS Analyse Hoff Skole",
+        "file": "08_ROS-analyse.pdf",
+        "relevance": "Vurdering av flom og skred, men ofte også naturfare."
+      },
+      {
+        "name": "Overvannshåndtering",
+        "file": "11_Vurdering_av_haandtering_av_overvann.pdf",
+        "relevance": "Vannkvalitet og avrenning til Hoffselva."
+      }
+    ],
+    "external_sources": [
+      {
+        "name": "Naturbase (Miljødirektoratet)",
+        "url": "https://kart.naturbase.no/",
+        "target_data": "Registrerte forekomster av Sjøørret og rødlistearter."
+      },
+      {
+        "name": "Vann-nett (NVE)",
+        "url": "https://vann-nett.no/portal/",
+        "target_data": "Miljømål og økologisk tilstand for vannforekomsten 'Hoffselva'."
+      },
+      {
+        "name": "Artsdatabanken",
+        "url": "https://artskart.artsdatabanken.no/",
+        "target_data": "Publikumsobservasjoner av Gråhegre og fisk."
+      },
+      {
+        "name": "OFA (Oslomarka Fiskeadministrasjon)",
+        "url": "https://www.ofa.no/",
+        "target_data": "Kultiveringsrapporter og gytegroptellinger."
+      }
+    ]
+  },
+  "research": {
+    "methods": [
+      "Elektrisk fiske (elfiske)",
+      "Gytegroptelling",
+      "Vannprøver",
+      "Habitatkartlegging",
+      "Skyggesimulering (før/etter)"
+    ],
+    "goals": [
+      "Kartlegge bestandsstørrelse og gytesuksess",
+      "Dokumentere biologisk mangfold ved kulvert",
+      "Vurdere vannkvalitetens påvirkning",
+      "Avklare konflikt mellom rehabilitering og 20-meterssonen"
+    ],
+    "shadow_impact": {
+      "summary": "Skygge fra bygninger kan ha en positiv effekt ved å dempe vanntemperatur, som er kritisk for ørret, men mangler de økologiske tilleggsverdiene (mat, skjul, erosjonssikring) som naturlig kantvegetasjon gir.",
+      "key_points": [
+        {
+          "factor": "Temperaturregulering",
+          "effect": "Positivt. Skygge reduserer direkte solinnstråling og hindrer dødelig oppvarming. Usjaterte elver kan være opptil 9°C varmere.",
+          "relevance": "Kritisk. Ørret trives best ved 13°C og stresser over 20°C.",
+          "citations": [
+            {
+                "text": "Removing vegetation can lead to undesirable summer temperature increases ranging from 5 to 11°C.",
+                "source": "USDA National Agroforestry Center",
+                "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
+            },
+            {
+                "text": "Water temperatures between approximately 23-25°C are considered lethal for salmon and steelhead.",
+                "source": "WA Dept of Fish & Wildlife",
+                "url": "https://wdfw.wa.gov/sites/default/files/publications/00003/wdfw00003.pdf"
+            }
+          ]
+        },
+        {
+          "factor": "Oksygennivå",
+          "effect": "Positivt. Kjøligere vann holder på mer oppløst oksygen, som er essensielt for fisk.",
+          "relevance": "Høy.",
+          "citations": [
+            {
+                "text": "Cold water naturally holds more dissolved oxygen than warm water.",
+                "source": "USGS Water Science School",
+                "url": "https://www.usgs.gov/special-topics/water-science-school/science/dissolved-oxygen-and-water"
+            }
+          ]
+        },
+        {
+          "factor": "Matproduksjon",
+          "effect": "Blandet/Negativt. Bygningsskygge gir ingen tilførsel av insekter/løv (som vegetasjon gjør).",
+          "relevance": "Middels.",
+          "citations": [
+             {
+                "text": "Riparian vegetation provides essential organic matter (leaves, insects) which drives the aquatic food web.",
+                "source": "USDA National Agroforestry Center",
+                "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
+            }
+          ]
+        },
+        {
+          "factor": "Skjul/Habitat",
+          "effect": "Nøytral. Bygg gir skygge, men ikke fysisk skjul (røtter/kvister) i elva.",
+          "relevance": "Høy. Må kompenseres.",
+          "citations": [
+            {
+                "text": "Roots stabilize the trapped sediment and hold riparian soil in place.",
+                "source": "USDA National Agroforestry Center",
+                "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "USDA Forest Service: Riparian Shading",
+          "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
+        },
+        {
+          "title": "WDFW: Stream Habitat Restoration Guidelines",
+          "url": "https://wdfw.wa.gov/sites/default/files/publications/00003/wdfw00003.pdf"
+        },
+        {
+          "title": "USGS: Dissolved Oxygen and Water",
+          "url": "https://www.usgs.gov/special-topics/water-science-school/science/dissolved-oxygen-and-water"
+        },
+        {
+          "title": "The Fish Site: Light intensity effects on trout",
+          "url": "https://thefishsite.com/articles/light-intensity-effects-on-trout"
+        }
+      ]
+    },
+    "phase_1_analysis": [
+      {
+        "task": "Gjennomgå 13_Naturmiljoe.pdf for omtale av fisk",
+        "status": "complete",
+        "result": "Bekreftet anadrom strekning med sjøørretbestand og laks."
+      },
+      {
+        "task": "Sjekke ROS-analyse for avstandskrav og flomsone",
+        "status": "complete",
+        "result": "Kulvertkapasitet er en flaskehals. Kvikkleire påvist, men stabil."
+      },
+      {
+        "task": "Sammenligne planforslagets byggegrense med § 13.3",
+        "status": "in_progress",
+        "result": "Må måles nøyaktig mot kart."
+      }
+    ],
+    "documented_findings": [
+      {
+        "source": "13_Naturmiljoe.pdf (Norconsult)",
+        "category": "Biologi",
+        "text": "Hoffsbekken er identifisert som et viktig bekkedrag og er anadrom, med sjøørretbestand og noe laks."
+      },
+      {
+        "source": "08_ROS-analyse.pdf (Asplan Viak)",
+        "category": "Flom",
+        "text": "Begrenset kapasitet i kulverter gir risiko for oppstuving. Området ligger i hensynssone elveflom."
+      },
+      {
+        "source": "13_Naturmiljoe.pdf",
+        "category": "Fremmedarter",
+        "text": "Kanadagullris og kornell dominerer kantvegetasjonen og bør fjernes."
+      }
+    ],
+    "external_findings": [
+      {
+        "source": "Fylkesmannen / UiO (2016)",
+        "category": "Fisk",
+        "text": "Bestanden av sjøørret har tatt seg opp igjen etter akutt forurensning i 2009. Ørret er nå dominerende fiskeart."
+      },
+      {
+        "source": "Vann-nett (2018)",
+        "category": "Vannkvalitet",
+        "text": "Økologisk tilstand klassifisert som 'moderat' til 'dårlig'. Ingen av Oslos hovedvassdrag oppnår 'svært god'."
+      },
+      {
+        "source": "Naturvernforbundet (2022)",
+        "category": "Fugleliv",
+        "text": "Kartlegging nevner hettemåke (CR) og sivhøne (VU) ved Smestaddammen. Ingen spesifikk rapport for gråhegre ved Hovfaret funnet ennå."
+      }
+    ]
+  },
+  "measures": [
+    {
+      "title": "Utlegging av gytegrus",
+      "description": "Forbedre gyteforholdene ved å tilføre egnet grus i elveløpet, spesielt der bunnforholdene er dårlige.",
+      "status": "proposed"
+    },
+    {
+      "title": "Habitatforbedring med stein/stokker",
+      "description": "Skape skjul og variasjon i strømforholdene ved å plassere steiner og dødt trevirke i elva. Dette kompenserer for manglende røtter/kantvegetasjon.",
+      "status": "proposed"
+    },
+    {
+      "title": "Reetablering av kantvegetasjon",
+      "description": "Plante stedegen vegetasjon der det er mulig langs elvebredden for å gi skygge, næringstilførsel og erosjonssikring.",
+      "status": "proposed"
+    },
+    {
+      "title": "Fjerning av fremmedarter",
+      "description": "Bekjempe kanadagullris og kornell for å gi plass til naturlig flora.",
+      "status": "planned"
+    }
+  ],
+  "sources": [
+    {
+      "title": "E-post: Innspill fra Hoffvassdragets venner",
+      "url": "#",
+      "date": "2025-11-11"
+    },
+    {
+      "title": "Kommuneplanen § 13.3",
+      "url": "https://www.oslo.kommune.no/"
+    },
+    {
+      "title": "Vannforskriften",
+      "url": "https://lovdata.no/dokument/SF/forskrift/2006-12-15-1446"
+    }
+  ]
+}

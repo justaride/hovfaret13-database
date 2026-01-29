@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teknisk Miljøargumentasjon - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-hover: #f1f5f9;
+        --bg-subtle: #f9fafb;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --text-accent: #2563eb;
+        --border-color: #e2e8f0;
+        --success: #22c55e;
+        --success-bg: #dcfce7;
+        --warning: #f59e0b;
+        --warning-bg: #fef3c7;
+        --danger: #ef4444;
+        --danger-bg: #fee2e2;
+        --radius-sm: 6px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+        font-size: 14px;
+      }
+      main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .page-header {
+        margin-bottom: 2rem;
+      }
+      .page-header h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .subtitle {
+        color: var(--text-secondary);
+        max-width: 700px;
+      }
+
+      .key-figures {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .key-figure {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        text-align: center;
+      }
+      .key-figure .value {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-accent);
+      }
+      .key-figure .value.success {
+        color: var(--success);
+      }
+      .key-figure .value.warning {
+        color: var(--warning);
+      }
+      .key-figure .label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-top: 0.25rem;
+      }
+
+      .sources-section {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .sources-section h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .source-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 0.75rem;
+      }
+      .source-item {
+        background: var(--bg-subtle);
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius-sm);
+        font-size: 0.85rem;
+      }
+      .source-item .title {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+      .source-item .meta {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-top: 0.25rem;
+      }
+      .source-category {
+        margin-bottom: 1rem;
+      }
+      .source-category h3 {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+      }
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 0.85rem;
+      }
+      .comparison-table th {
+        background: var(--bg-subtle);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .comparison-table tr:last-child td {
+        border-bottom: none;
+      }
+      .comparison-table .scenario-1 {
+        color: var(--danger);
+      }
+      .comparison-table .scenario-2 {
+        color: var(--success);
+      }
+      .comparison-table .scenario-3 {
+        color: var(--text-accent);
+      }
+      .comparison-table .savings {
+        font-weight: 600;
+        color: var(--success);
+      }
+
+      .arguments-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .argument-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+      .argument-header {
+        padding: 1.25rem;
+        border-bottom: 1px solid var(--border-color);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .argument-header:hover {
+        background: var(--bg-subtle);
+      }
+      .argument-number {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        margin-bottom: 0.25rem;
+      }
+      .argument-title {
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--text-primary);
+      }
+      .argument-theme-tag {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 999px;
+        background: var(--bg-hover);
+        color: var(--text-secondary);
+        white-space: nowrap;
+      }
+      .argument-summary {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
+      .argument-body {
+        padding: 1.25rem;
+        display: none;
+        border-top: 1px solid var(--border-color);
+      }
+      .argument-card.expanded .argument-body {
+        display: block;
+      }
+      .argument-card.expanded .argument-header {
+        background: var(--bg-subtle);
+      }
+      .expand-icon {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+        transition: transform 0.2s;
+      }
+      .argument-card.expanded .expand-icon {
+        transform: rotate(180deg);
+      }
+
+      .data-section {
+        margin-bottom: 1.5rem;
+      }
+      .data-section h4 {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .data-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.75rem;
+      }
+      .data-item {
+        background: var(--bg-subtle);
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius-sm);
+      }
+      .data-item .label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+      .data-item .value {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+      .data-item .value.highlight {
+        color: var(--text-accent);
+      }
+      .data-item .value.success {
+        color: var(--success);
+      }
+      .data-item .value.danger {
+        color: var(--danger);
+      }
+
+      .methodology-note {
+        background: #fffbeb;
+        border-left: 3px solid var(--warning);
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        margin-bottom: 1rem;
+      }
+
+      .references-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .reference-item {
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+        padding: 0.75rem;
+        background: var(--bg-subtle);
+        border-radius: var(--radius-sm);
+        font-size: 0.85rem;
+      }
+      .reference-icon {
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .reference-content .source {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+      .reference-content .detail {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+      .reference-content .quote {
+        font-style: italic;
+        color: var(--text-secondary);
+        margin-top: 0.25rem;
+        padding-left: 0.75rem;
+        border-left: 2px solid var(--border-color);
+      }
+
+      .comparison-boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      .comparison-box {
+        padding: 1rem;
+        border-radius: var(--radius-sm);
+      }
+      .comparison-box.rehab {
+        background: var(--success-bg);
+        border: 1px solid var(--success);
+      }
+      .comparison-box.demolition {
+        background: var(--danger-bg);
+        border: 1px solid var(--danger);
+      }
+      .comparison-box h5 {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+      }
+      .comparison-box.rehab h5 {
+        color: #166534;
+      }
+      .comparison-box.demolition h5 {
+        color: #991b1b;
+      }
+      .comparison-box ul {
+        margin: 0;
+        padding-left: 1.25rem;
+        font-size: 0.85rem;
+      }
+      .comparison-box.rehab ul {
+        color: #166534;
+      }
+      .comparison-box.demolition ul {
+        color: #991b1b;
+      }
+
+      .nav-tabs {
+        display: flex;
+        gap: 0.25rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0;
+      }
+      .nav-tab {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        background: none;
+        border: none;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        transition: all 0.15s;
+      }
+      .nav-tab:hover {
+        color: var(--text-primary);
+      }
+      .nav-tab.active {
+        color: var(--text-accent);
+        border-bottom-color: var(--text-accent);
+      }
+
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          padding: 1rem;
+        }
+        .comparison-boxes {
+          grid-template-columns: 1fr;
+        }
+        .data-grid {
+          grid-template-columns: 1fr;
+        }
+        .comparison-table {
+          font-size: 0.75rem;
+        }
+        .comparison-table th,
+        .comparison-table td {
+          padding: 0.5rem;
+        }
+      }
+    </style>
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("miljo-argumenter");
+    </script>
+
+    <main>
+      <header class="page-header">
+        <h1>Teknisk Miljøargumentasjon</h1>
+        <p class="subtitle">
+          15 dokumenterte argumenter med kvantifiserte data og fulle
+          rapportreferanser for rammesøknad og dispensasjonsgrunnlag.
+        </p>
+      </header>
+
+      <div class="key-figures" id="key-figures"></div>
+
+      <div class="nav-tabs">
+        <button class="nav-tab active" data-tab="overview">Oversikt</button>
+        <button class="nav-tab" data-tab="arguments">Argumenter (15)</button>
+        <button class="nav-tab" data-tab="sources">Kilder</button>
+      </div>
+
+      <div id="tab-overview" class="tab-content active">
+        <h2 style="font-size: 1.1rem; margin-bottom: 1rem">
+          Scenariosammenligning
+        </h2>
+        <table class="comparison-table" id="comparison-table"></table>
+      </div>
+
+      <div id="tab-arguments" class="tab-content">
+        <div class="arguments-list" id="arguments-list"></div>
+      </div>
+
+      <div id="tab-sources" class="tab-content">
+        <div
+          class="sources-section"
+          id="sources-section"
+          style="border: none; padding: 0"
+        ></div>
+      </div>
+    </main>
+
+    <script>
+      let data = null;
+
+      async function loadData() {
+        const response = await fetch(
+          "data/themes/miljoeargumentasjon-teknisk.json",
+        );
+        data = await response.json();
+        renderKeyFigures();
+        renderComparisonTable();
+        renderArguments();
+        renderSources();
+      }
+
+      function renderKeyFigures() {
+        const container = document.getElementById("key-figures");
+        const figures = [
+          { value: "48%", label: "CO₂-besparelse", class: "success" },
+          { value: "2 549", label: "Tonn CO₂ spart", class: "" },
+          { value: "80%", label: "Materialbesparelse", class: "success" },
+          { value: "85%", label: "Avfallsreduksjon", class: "success" },
+          { value: "73", label: "Omsorg+ boliger", class: "" },
+          { value: "15", label: "Dokumenterte argumenter", class: "" },
+        ];
+        container.innerHTML = figures
+          .map(
+            (f) => `
+          <div class="key-figure">
+            <div class="value ${f.class}">${f.value}</div>
+            <div class="label">${f.label}</div>
+          </div>
+        `,
+          )
+          .join("");
+      }
+
+      function renderComparisonTable() {
+        const table = document.getElementById("comparison-table");
+        const rows = data.summary_table.rows;
+        table.innerHTML = `
+          <thead>
+            <tr>
+              ${data.summary_table.headers.map((h) => `<th>${h}</th>`).join("")}
+            </tr>
+          </thead>
+          <tbody>
+            ${rows
+              .map(
+                (row) => `
+              <tr>
+                <td><strong>${row[0]}</strong></td>
+                <td class="scenario-1">${row[1]}</td>
+                <td class="scenario-2">${row[2]}</td>
+                <td class="scenario-3">${row[3]}</td>
+                <td class="savings">${row[4]}</td>
+              </tr>
+            `,
+              )
+              .join("")}
+          </tbody>
+        `;
+      }
+
+      function renderArguments() {
+        const container = document.getElementById("arguments-list");
+        container.innerHTML = data.arguments_technical
+          .map(
+            (arg, i) => `
+          <div class="argument-card" data-id="${arg.id}">
+            <div class="argument-header" onclick="toggleArgument('${arg.id}')">
+              <div>
+                <div class="argument-number">Argument ${i + 1} / ${arg.id}</div>
+                <div class="argument-title">${arg.title}</div>
+                <div class="argument-summary">${arg.technical_summary}</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span class="argument-theme-tag">${arg.theme}</span>
+                <span class="expand-icon">▼</span>
+              </div>
+            </div>
+            <div class="argument-body">
+              ${renderArgumentBody(arg)}
+            </div>
+          </div>
+        `,
+          )
+          .join("");
+      }
+
+      function renderArgumentBody(arg) {
+        let html = "";
+
+        if (arg.quantified_data) {
+          html += `<div class="data-section">
+            <h4>📊 Kvantifiserte data</h4>
+            <div class="data-grid">
+              ${renderQuantifiedData(arg.quantified_data)}
+            </div>
+          </div>`;
+        }
+
+        if (arg.methodology_note) {
+          html += `<div class="methodology-note">
+            <strong>Metodologi:</strong> ${arg.methodology_note}
+          </div>`;
+        }
+
+        if (arg.risk_assessment || arg.technical_measures) {
+          html += `<div class="comparison-boxes">
+            <div class="comparison-box rehab">
+              <h5>✓ Rehabilitering</h5>
+              <ul>${getRehabBenefits(arg)
+                .map((b) => `<li>${b}</li>`)
+                .join("")}</ul>
+            </div>
+            <div class="comparison-box demolition">
+              <h5>✗ Riving</h5>
+              <ul>${getDemolitionRisks(arg)
+                .map((r) => `<li>${r}</li>`)
+                .join("")}</ul>
+            </div>
+          </div>`;
+        }
+
+        if (arg.report_references && arg.report_references.length > 0) {
+          html += `<div class="data-section">
+            <h4>📚 Rapportreferanser</h4>
+            <div class="references-list">
+              ${arg.report_references
+                .map(
+                  (ref) => `
+                <div class="reference-item">
+                  <span class="reference-icon">📄</span>
+                  <div class="reference-content">
+                    <div class="source">${getSourceTitle(ref.source)}</div>
+                    <div class="detail">${ref.section || ""}${ref.page ? `, s. ${ref.page}` : ""}</div>
+                    ${ref.quote ? `<div class="quote">"${ref.quote}"</div>` : ""}
+                    ${ref.finding ? `<div class="quote">${ref.finding}</div>` : ""}
+                  </div>
+                </div>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>`;
+        }
+
+        if (arg.regulatory_alignment) {
+          html += `<div class="data-section">
+            <h4>⚖️ Regulatorisk samsvar</h4>
+            <div class="methodology-note" style="background: #f0fdf4; border-color: var(--success);">
+              ${typeof arg.regulatory_alignment === "string" ? arg.regulatory_alignment : formatPolicyAlignment(arg.policy_alignment)}
+            </div>
+          </div>`;
+        }
+
+        return html;
+      }
+
+      function renderQuantifiedData(data, prefix = "") {
+        let items = [];
+        for (const [key, value] of Object.entries(data)) {
+          if (typeof value === "object" && !Array.isArray(value)) {
+            items.push(...renderQuantifiedDataItems(value, key));
+          } else if (Array.isArray(value)) {
+            items.push(`<div class="data-item" style="grid-column: 1 / -1;">
+              <div class="label">${formatLabel(key)}</div>
+              <div class="value" style="font-size: 0.85rem; font-weight: 400;">${value.join(", ")}</div>
+            </div>`);
+          } else {
+            items.push(`<div class="data-item">
+              <div class="label">${formatLabel(key)}</div>
+              <div class="value ${getValueClass(key, value)}">${formatValue(value)}</div>
+            </div>`);
+          }
+        }
+        return items.join("");
+      }
+
+      function renderQuantifiedDataItems(obj, parentKey) {
+        let items = [];
+        for (const [key, value] of Object.entries(obj)) {
+          if (typeof value === "object" && !Array.isArray(value)) {
+            items.push(
+              ...renderQuantifiedDataItems(value, `${parentKey} - ${key}`),
+            );
+          } else if (Array.isArray(value)) {
+            items.push(`<div class="data-item" style="grid-column: 1 / -1;">
+              <div class="label">${formatLabel(parentKey)} - ${formatLabel(key)}</div>
+              <div class="value" style="font-size: 0.85rem; font-weight: 400;">${value.join(", ")}</div>
+            </div>`);
+          } else {
+            items.push(`<div class="data-item">
+              <div class="label">${formatLabel(parentKey)} - ${formatLabel(key)}</div>
+              <div class="value ${getValueClass(key, value)}">${formatValue(value)}</div>
+            </div>`);
+          }
+        }
+        return items;
+      }
+
+      function formatLabel(key) {
+        return key
+          .replace(/_/g, " ")
+          .replace(/([A-Z])/g, " $1")
+          .trim();
+      }
+
+      function formatValue(val) {
+        if (typeof val === "number") {
+          return val.toLocaleString("nb-NO");
+        }
+        return val;
+      }
+
+      function getValueClass(key, value) {
+        if (
+          key.includes("reduction") ||
+          key.includes("savings") ||
+          key.includes("saved")
+        )
+          return "success";
+        if (key.includes("scenario_1") || key.includes("demolition"))
+          return "danger";
+        if (key.includes("scenario_2") || key.includes("rehab"))
+          return "success";
+        return "";
+      }
+
+      function getRehabBenefits(arg) {
+        if (arg.risk_assessment?.rehabilitation_benefits)
+          return arg.risk_assessment.rehabilitation_benefits;
+        if (arg.technical_measures?.rehabilitation_options)
+          return arg.technical_measures.rehabilitation_options;
+        return [
+          "Lavere klimagassutslipp",
+          "Bevart struktur",
+          "Kortere anleggsfase",
+        ];
+      }
+
+      function getDemolitionRisks(arg) {
+        if (arg.risk_assessment?.demolition_risks)
+          return arg.risk_assessment.demolition_risks;
+        if (arg.technical_measures?.demolition_consequences)
+          return arg.technical_measures.demolition_consequences;
+        return ["Høyere utslipp", "Mer avfall", "Lengre anleggsfase"];
+      }
+
+      function getSourceTitle(sourceId) {
+        const sources = {
+          vill_klima: "Klimagassberegninger Hovfaret 13 v2 (Vill Energi)",
+          vill_energi: "Energikartlegging Hovfaret 13 (Vill Energi)",
+          ns_barekraft: "Bærekraftsrapport (Natural State)",
+          pbe_ros: "ROS-analyse (PBE dok. 08)",
+          pbe_overvann: "Overvannshåndtering (PBE dok. 11)",
+          pbe_natur: "Naturmiljø (PBE dok. 13)",
+          pbe_geo: "Områdestabilitet (PBE dok. 18)",
+          pbe_kvalitet: "Kvalitetsprogram miljø og energi (PBE dok. 21)",
+          pbe_trafikk: "Grønn mobilitet og trafikk (PBE dok. 10)",
+          pbe_stedsanalyse: "PBEs stedsanalyse (2018)",
+          miljo_h17: "Miljøteknisk grunnundersøkelse Hoffsveien 17",
+          st1_tillatelse: "Rammetillatelse Skøyen Terrasse 1",
+        };
+        return sources[sourceId] || sourceId;
+      }
+
+      function formatPolicyAlignment(policy) {
+        if (!policy) return "";
+        let html = '<ul style="margin: 0; padding-left: 1.25rem;">';
+        if (policy.oslo_klimastrategi) {
+          html += `<li><strong>Oslo klimastrategi:</strong> ${policy.oslo_klimastrategi.goal}</li>`;
+        }
+        if (policy.kpa_2030) {
+          html += `<li><strong>KPA 2030:</strong> ${policy.kpa_2030.principle}</li>`;
+        }
+        if (policy.eu_taxonomy) {
+          html += `<li><strong>EU-taksonomi:</strong> ${policy.eu_taxonomy.substantial_contribution}</li>`;
+        }
+        html += "</ul>";
+        return html;
+      }
+
+      function renderSources() {
+        const container = document.getElementById("sources-section");
+        const sources = data.report_sources;
+
+        container.innerHTML = `
+          <div class="source-category">
+            <h3>Primærkilder (LCA og energi)</h3>
+            <div class="source-grid">
+              ${sources.primary
+                .map(
+                  (s) => `
+                <div class="source-item">
+                  <div class="title">${s.title}</div>
+                  <div class="meta">${s.author} • ${s.date} • ${s.pages} sider</div>
+                  <div class="meta">${s.methodology || s.standards?.join(", ") || ""}</div>
+                </div>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+          <div class="source-category">
+            <h3>Regulatoriske dokumenter (PBE)</h3>
+            <div class="source-grid">
+              ${sources.regulatory
+                .map(
+                  (s) => `
+                <div class="source-item">
+                  <div class="title">${s.title}</div>
+                  <div class="meta">${s.author} • ${s.date} • Dok. ${s.document_number}</div>
+                </div>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+          <div class="source-category">
+            <h3>Ekstern dokumentasjon</h3>
+            <div class="source-grid">
+              ${sources.external_evidence
+                .map(
+                  (s) => `
+                <div class="source-item">
+                  <div class="title">${s.title}</div>
+                  <div class="meta">${s.author} • ${s.date}${s.case_number ? ` • Sak ${s.case_number}` : ""}</div>
+                  <div class="meta" style="color: var(--text-secondary);">${s.relevance}</div>
+                </div>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      function toggleArgument(id) {
+        const card = document.querySelector(`.argument-card[data-id="${id}"]`);
+        card.classList.toggle("expanded");
+      }
+
+      document.querySelectorAll(".nav-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".nav-tab")
+            .forEach((t) => t.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-content")
+            .forEach((c) => c.classList.remove("active"));
+          tab.classList.add("active");
+          document
+            .getElementById("tab-" + tab.dataset.tab)
+            .classList.add("active");
+        });
+      });
+
+      loadData();
+    </script>
+  </body>
+</html>

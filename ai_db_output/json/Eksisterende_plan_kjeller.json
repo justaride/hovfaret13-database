@@ -1,0 +1,46 @@
+{
+  "source": {
+    "file_name": "Eksisterende_plan_kjeller.pdf",
+    "relative_path": "Eksisterende_plan_kjeller.pdf",
+    "size_bytes": 816760,
+    "modified_time": "2026-01-26T18:51:05.472388+00:00",
+    "sha256": "db4e267ac3032e9e93446be5cf44e89800ada902cfb69da297eddae1877b77d6"
+  },
+  "pdfinfo": {
+    "Author": "",
+    "Creator": "PDF-XChange Standard (9.2 build 359) [GDI] [Windows 10 Enterprise x64 (Build 19045)]",
+    "Producer": "PixEdit AS,  PixToolsLib Version 2.6.5.14",
+    "CreationDate": "Wed Feb 14 14:05:57 2024 CET",
+    "ModDate": "Mon Mar 18 16:44:27 2024 CET",
+    "Custom Metadata": "no",
+    "Metadata Stream": "yes",
+    "Tagged": "no",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "1",
+    "Encrypted": "no",
+    "Page size": "841.92 x 595.2 pts (A4)",
+    "Page rot": "0",
+    "File size": "816760 bytes",
+    "Optimized": "no",
+    "PDF version": "1.7"
+  },
+  "extraction": {
+    "tool": "pdftotext",
+    "options": "-layout",
+    "extracted_at": "2026-01-26T19:16:02.647175+00:00",
+    "page_count": 1,
+    "has_text": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "                      2   4\n\n\n                                                               OSL\n                                                                 O BYGHI\n                                                                      NGSKoNrnc\n                                                                          u l\n                                                                  MO1t a r\n\n\n\n\nBRUTTOA\n      REAL: 797,0M'\n\n\n\n\n                          =\n\n                              ' ' I   ' ' ' j ' 'I ' ' I\n                                          \"' ·\"            '\n",
+      "char_count": 586,
+      "line_count": 23
+    }
+  ],
+  "text": "                      2   4\n\n\n                                                               OSL\n                                                                 O BYGHI\n                                                                      NGSKoNrnc\n                                                                          u l\n                                                                  MO1t a r\n\n\n\n\nBRUTTOA\n      REAL: 797,0M'\n\n\n\n\n                          =\n\n                              ' ' I   ' ' ' j ' 'I ' ' I\n                                          \"' ·\"            '\n\f"
+}

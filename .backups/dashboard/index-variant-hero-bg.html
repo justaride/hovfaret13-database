@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hovfaret 13 - Dashboard (Hero BG Variant)</title>
+  <link rel="stylesheet" href="skins/technical.css">
+  <style>
+    /* Hero Background Variant */
+    .hero-bg-variant {
+      position: relative;
+      overflow: hidden;
+      padding: var(--space-xl) 0;
+      margin-bottom: var(--space-xl);
+    }
+
+    .hero-bg-variant::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      background-image: url('assets/building-elevation.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: var(--space-md);
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-content .subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xl);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-lg);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: var(--space-xl);
+      background: rgba(20, 25, 31, 0.8);
+      border: 1px solid var(--border-primary);
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      font-family: var(--font-mono);
+      display: block;
+      margin-bottom: var(--space-xs);
+    }
+
+    .hero-stat-label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      display: block;
+    }
+
+    .hero-stat-sublabel {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      display: block;
+      margin-top: var(--space-xs);
+    }
+
+    /* Dashboard grid adjustments */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero with Background Building -->
+    <div class="hero-bg-variant">
+      <div class="hero-content">
+        <h1>Hovfaret 13</h1>
+        <div class="subtitle">Transformation Project • Technical Dashboard</div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value">1989</span>
+            <span class="hero-stat-label">Byggeår</span>
+            <span class="hero-stat-sublabel">5 etasjer (kapasitet 12)</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">6,100</span>
+            <span class="hero-stat-label">m² BTA</span>
+            <span class="hero-stat-sublabel">Skøyen, Oslo</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">48%</span>
+            <span class="hero-stat-label">Lower CO₂</span>
+            <span class="hero-stat-sublabel">vs demolition</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">50%</span>
+            <span class="hero-stat-label">Energy Cut</span>
+            <span class="hero-stat-sublabel">Target: 116 kWh/m²</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Cards -->
+    <div class="dashboard-grid">
+      <!-- Timeline -->
+      <a href="timeline-v2.html" class="dashboard-card available" style="text-decoration: none;">
+        <span class="card-badge">Available</span>
+        <div class="card-icon">📅</div>
+        <div class="card-title">Project Timeline</div>
+        <div class="card-description">
+          Interaktiv tidslinje med strategiske og operasjonelle hendelser. Fulldybde visning med møter, dokumenter og executive summaries.
+        </div>
+        <div class="card-stats">
+          <div class="card-stat">
+            <div class="card-stat-value">32</div>
+            <div class="card-stat-label">Events</div>
+          </div>
+          <div class="card-stat">
+            <div class="card-stat-value">37</div>
+            <div class="card-stat-label">Meetings</div>
+          </div>
+          <div class="card-stat">
+            <div class="card-stat-value">3</div>
+            <div class="card-stat-label">Views</div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Documents -->
+      <div class="dashboard-card coming-soon">
+        <span class="card-badge coming-soon">Coming Soon</span>
+        <div class="card-icon">📄</div>
+        <div class="card-title">Document Explorer</div>
+        <div class="card-description">
+          Søkbar database med alle prosjektdokumenter. Filtrering på kategori, dato, og type.
+        </div>
+        <div class="card-stats">
+          <div class="card-stat">
+            <div class="card-stat-value">271</div>
+            <div class="card-stat-label">Documents</div>
+          </div>
+          <div class="card-stat">
+            <div class="card-stat-value">10</div>
+            <div class="card-stat-label">Categories</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stakeholders -->
+      <div class="dashboard-card coming-soon">
+        <span class="card-badge coming-soon">Coming Soon</span>
+        <div class="card-icon">👥</div>
+        <div class="card-title">Stakeholder Network</div>
+        <div class="card-description">
+          Interaktiv visualisering av prosjektets stakeholders. Organisasjoner, nøkkelpersoner, og relasjoner.
+        </div>
+        <div class="card-stats">
+          <div class="card-stat">
+            <div class="card-stat-value">22</div>
+            <div class="card-stat-label">People</div>
+          </div>
+          <div class="card-stat">
+            <div class="card-stat-value">13</div>
+            <div class="card-stat-label">Organizations</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenarios -->
+      <div class="dashboard-card coming-soon">
+        <span class="card-badge coming-soon">Coming Soon</span>
+        <div class="card-icon">📊</div>
+        <div class="card-title">Scenario Comparison</div>
+        <div class="card-description">
+          Side-by-side sammenligning av 6 utviklingsscenarier med CO₂, kostnader, areal, og bærekraftsmål.
+        </div>
+        <div class="card-stats">
+          <div class="card-stat">
+            <div class="card-stat-value">6</div>
+            <div class="card-stat-label">Scenarios</div>
+          </div>
+          <div class="card-stat">
+            <div class="card-stat-value">48%</div>
+            <div class="card-stat-label">CO₂ Saved</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meetings -->
+      <div class="dashboard-card coming-soon">
+        <span class="card-badge coming-soon">Coming Soon</span>
+        <div class="card-icon">📋</div>
+        <div class="card-title">Meeting Browser</div>
+        <div class="card-description">
+          Søkbar oversikt over alle prosjektmøter. Full transkripsjoner, deltakere, og beslutninger.
+        </div>
+        <div class="card-stats">
+          <div class="card-stat">
+            <div class="card-stat-value">37</div>
+            <div class="card-stat-label">Meetings</div>
+          </div>
+          <div class="card-stat">
+            <div class="card-stat-value">2024</div>
+            <div class="card-stat-label">From</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sustainability -->
+      <div class="dashboard-card coming-soon">
+        <span class="card-badge coming-soon">Coming Soon</span>
+        <div class="card-icon">🌱</div>
+        <div class="card-title">Sustainability Report</div>
+        <div class="card-description">
+          ESRS-alignert bærekraftsrapport. Energi, klima, sosial påvirkning, og økonomiske argumenter.
+        </div>
+        <div class="card-stats">
+          <div class="card-stat">
+            <div class="card-stat-value">456</div>
+            <div class="card-stat-label">kg CO₂/m²</div>
+          </div>
+          <div class="card-stat">
+            <div class="card-stat-value">50%</div>
+            <div class="card-stat-label">Energy Cut</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: var(--space-xl) 0; color: var(--text-muted); border-top: 1px solid var(--border-primary);">
+      <p>Hovfaret 13 Transformation Project Database v2.7</p>
+      <p style="font-size: 0.85rem; margin-top: var(--space-sm);">
+        Hero Background Variant • Building as Background Element
+      </p>
+    </div>
+  </div>
+</body>
+</html>

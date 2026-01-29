@@ -1,0 +1,1530 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miljøargumentasjon - Formelt Dokument - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <style>
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          padding: 0;
+          font-size: 11pt;
+        }
+        .document {
+          box-shadow: none;
+          max-width: 100%;
+        }
+        .page-break {
+          page-break-before: always;
+        }
+        h2 {
+          page-break-after: avoid;
+        }
+        .argument-section {
+          page-break-inside: avoid;
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --text-body: #1a1a1a;
+        --text-secondary: #4a4a4a;
+        --text-muted: #6b7280;
+        --border: #d1d5db;
+        --bg-highlight: #f9fafb;
+        --accent: #1e40af;
+        --success: #166534;
+        --danger: #991b1b;
+      }
+
+      body {
+        font-family: "Crimson Pro", Georgia, serif;
+        background: #e5e7eb;
+        color: var(--text-body);
+        line-height: 1.7;
+        font-size: 16px;
+      }
+
+      .toolbar {
+        position: fixed;
+        top: 48px;
+        right: 2rem;
+        z-index: 100;
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .toolbar button {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        font-family: "Inter", sans-serif;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .toolbar button:hover {
+        background: var(--bg-highlight);
+      }
+
+      .document {
+        max-width: 850px;
+        margin: 2rem auto;
+        background: white;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        padding: 3rem 4rem;
+      }
+
+      .document-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid var(--text-body);
+      }
+
+      .document-header .org {
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+      }
+
+      .document-header h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.01em;
+      }
+
+      .document-header .subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+
+      .document-header .meta {
+        margin-top: 1.5rem;
+        font-family: "Inter", sans-serif;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .toc {
+        margin-bottom: 3rem;
+        padding: 1.5rem 2rem;
+        background: var(--bg-highlight);
+        border: 1px solid var(--border);
+      }
+
+      .toc h2 {
+        font-size: 1rem;
+        font-family: "Inter", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+        color: var(--text-muted);
+      }
+
+      .toc ol {
+        margin: 0;
+        padding-left: 1.5rem;
+      }
+
+      .toc li {
+        margin-bottom: 0.35rem;
+        font-size: 0.95rem;
+      }
+
+      .toc a {
+        color: var(--text-body);
+        text-decoration: none;
+      }
+
+      .toc a:hover {
+        color: var(--accent);
+      }
+
+      .section {
+        margin-bottom: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-body);
+      }
+
+      h2 .section-number {
+        color: var(--text-muted);
+        font-weight: 400;
+        margin-right: 0.5rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 1.5rem 0 0.75rem;
+        color: var(--text-body);
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 1rem 0 0.5rem;
+        color: var(--text-secondary);
+      }
+
+      p {
+        margin-bottom: 1rem;
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+        font-style: italic;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 3px solid var(--border);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+      }
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border: 1px solid var(--border);
+      }
+
+      th {
+        background: var(--bg-highlight);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .table-caption {
+        font-family: "Inter", sans-serif;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+        font-style: italic;
+      }
+
+      .highlight-box {
+        background: var(--bg-highlight);
+        border: 1px solid var(--border);
+        padding: 1.25rem 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .highlight-box.success {
+        background: #f0fdf4;
+        border-color: #86efac;
+      }
+
+      .highlight-box.warning {
+        background: #fffbeb;
+        border-color: #fcd34d;
+      }
+
+      .highlight-box.danger {
+        background: #fef2f2;
+        border-color: #fca5a5;
+      }
+
+      .highlight-box h4 {
+        margin-top: 0;
+        font-family: "Inter", sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .highlight-box.success h4 {
+        color: var(--success);
+      }
+      .highlight-box.danger h4 {
+        color: var(--danger);
+      }
+
+      .reference {
+        font-family: "Inter", sans-serif;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        background: var(--bg-highlight);
+        padding: 0.75rem 1rem;
+        margin: 0.75rem 0;
+        border-left: 3px solid var(--accent);
+      }
+
+      .reference strong {
+        color: var(--text-secondary);
+      }
+
+      .reference .quote {
+        display: block;
+        margin-top: 0.5rem;
+        font-style: italic;
+        color: var(--text-secondary);
+      }
+
+      .argument-section {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        border: 1px solid var(--border);
+        background: white;
+      }
+
+      .argument-section h3 {
+        margin-top: 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .argument-number {
+        font-family: "Inter", sans-serif;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .data-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      .data-item {
+        background: var(--bg-highlight);
+        padding: 0.75rem 1rem;
+        text-align: center;
+      }
+
+      .data-item .value {
+        font-family: "Inter", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--accent);
+      }
+
+      .data-item .value.success {
+        color: var(--success);
+      }
+      .data-item .value.danger {
+        color: var(--danger);
+      }
+
+      .data-item .label {
+        font-family: "Inter", sans-serif;
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-top: 0.25rem;
+      }
+
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      ul,
+      ol {
+        margin: 1rem 0 1rem 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footnotes {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        font-size: 0.9rem;
+      }
+
+      .footnotes h2 {
+        font-size: 1rem;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .sources-list {
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+      }
+
+      .sources-list .source-item {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        text-indent: -2rem;
+      }
+
+      .sources-list .source-id {
+        font-weight: 600;
+        color: var(--accent);
+      }
+
+      .executive-summary {
+        background: var(--bg-highlight);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 2px solid var(--border);
+      }
+
+      .executive-summary h2 {
+        border-bottom: none;
+        margin-bottom: 1rem;
+      }
+
+      .key-finding {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: var(--success);
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .summary-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .summary-stat .value {
+        font-family: "Inter", sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .summary-stat .label {
+        font-family: "Inter", sans-serif;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+      }
+
+      @media (max-width: 900px) {
+        .document {
+          padding: 2rem;
+          margin: 1rem;
+        }
+        .data-grid,
+        .comparison-grid,
+        .summary-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .toolbar {
+          position: static;
+          margin: 1rem;
+          justify-content: center;
+        }
+      }
+    </style>
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("miljoeargumentasjon-dokument");
+    </script>
+
+    <div class="toolbar no-print">
+      <button onclick="window.print()">🖨️ Skriv ut / PDF</button>
+      <button onclick="toggleAllSections()">📖 Vis alle seksjoner</button>
+    </div>
+
+    <article class="document" id="document">
+      <header class="document-header">
+        <div class="org">Hovfaret 13 Transformasjonsprosjekt</div>
+        <h1>Miljøargumentasjon for Rehabilitering</h1>
+        <p class="subtitle">
+          Teknisk dokumentasjon med kvantifiserte data og rapportreferanser
+        </p>
+        <div class="meta">
+          Versjon 1.0 • Januar 2027 • Utarbeidet for rammesøknad og
+          dispensasjonsgrunnlag
+        </div>
+      </header>
+
+      <section class="executive-summary">
+        <h2>Sammendrag</h2>
+        <p class="key-finding">
+          Rehabilitering av Hovfaret 13 gir 48% reduksjon i klimagassutslipp
+          sammenlignet med riving og nybygg.
+        </p>
+        <div class="summary-stats">
+          <div class="summary-stat">
+            <div class="value">2 549</div>
+            <div class="label">Tonn CO₂ spart</div>
+          </div>
+          <div class="summary-stat">
+            <div class="value">80%</div>
+            <div class="label">Materialbesparelse</div>
+          </div>
+          <div class="summary-stat">
+            <div class="value">85%</div>
+            <div class="label">Avfallsreduksjon</div>
+          </div>
+          <div class="summary-stat">
+            <div class="value">73</div>
+            <div class="label">Omsorg+ boliger</div>
+          </div>
+        </div>
+        <p style="margin-top: 1.5rem; margin-bottom: 0">
+          Dette dokumentet presenterer 15 teknisk dokumenterte argumenter for
+          rehabilitering fremfor riving av Hovfaret 13. Alle påstander er
+          underbygget med kvantifiserte data fra uavhengige fagrapporter og
+          regulatoriske dokumenter.
+        </p>
+      </section>
+
+      <nav class="toc">
+        <h2>Innhold</h2>
+        <ol>
+          <li><a href="#section-1">Klimagassregnskap og LCA-analyse</a></li>
+          <li><a href="#section-2">Sirkulærøkonomi og materialbruk</a></li>
+          <li><a href="#section-3">Energieffektivisering</a></li>
+          <li><a href="#section-4">Geoteknisk risiko</a></li>
+          <li><a href="#section-5">Overvann og flomrisiko</a></li>
+          <li><a href="#section-6">Biologisk mangfold og Hoffselva</a></li>
+          <li><a href="#section-7">Anleggsfase og lokalmiljø</a></li>
+          <li><a href="#section-8">Sosial bærekraft og Omsorg+</a></li>
+          <li><a href="#section-9">Regulatorisk samsvar</a></li>
+          <li><a href="#section-10">Scenariosammenligning</a></li>
+          <li><a href="#sources">Kildehenvisninger</a></li>
+        </ol>
+      </nav>
+
+      <!-- SECTION 1: KLIMAGASS -->
+      <section class="section page-break" id="section-1">
+        <h2>
+          <span class="section-number">1.</span> Klimagassregnskap og
+          LCA-analyse
+        </h2>
+
+        <p class="lead">
+          Livsløpsanalyse (LCA) dokumenterer at rehabilitering av Hovfaret 13
+          gir 48% lavere klimagassutslipp enn riving og nybygg over en 50-års
+          analyseperiode.
+        </p>
+
+        <h3>1.1 Metodologi</h3>
+        <p>
+          Klimagassberegningene er utført av Vill Energi AS i henhold til NS
+          3720:2018 og EN 15978. Analysen dekker livsløpsmodulene A1-A3
+          (produksjon), A4 (transport), A5 (bygging), B1-B5 (bruk og
+          vedlikehold), B6 (energibruk) og C1-C4 (avhending). Analyseperioden er
+          50 år med europeisk forbruksmiks (EU28+NO) som emisjonsfaktor.
+        </p>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Vill Energi AS (2025). Klimagassberegninger
+          Hovfaret 13 v2. Datert 22.04.2025. 18 sider.
+          <span class="quote"
+            >"Rehabilitering reduserer klimautslipp med 48% sammenlignet med
+            riving og nybygg"</span
+          >
+        </div>
+
+        <h3>1.2 Kvantifiserte resultater</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Materialer (tonn CO₂)</th>
+              <th>Energi (tonn CO₂)</th>
+              <th>Totalt (tonn CO₂)</th>
+              <th>Per m² BTA (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Scenario 1: Nybygg og riving</strong></td>
+              <td>2 641</td>
+              <td>2 702</td>
+              <td style="color: var(--danger); font-weight: 600">5 343</td>
+              <td>631</td>
+            </tr>
+            <tr>
+              <td><strong>Scenario 2: Rehabilitering</strong></td>
+              <td>377</td>
+              <td>2 417</td>
+              <td style="color: var(--success); font-weight: 600">2 794</td>
+              <td>456</td>
+            </tr>
+            <tr>
+              <td><strong>Scenario 3: Rehabilitering + påbygg</strong></td>
+              <td>1 043</td>
+              <td>3 118</td>
+              <td style="color: var(--accent); font-weight: 600">4 161</td>
+              <td>491</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-caption">
+          Tabell 1: Klimagassutslipp per scenario. Kilde: Vill Energi (2025), s.
+          8-12.
+        </p>
+
+        <div class="highlight-box success">
+          <h4>Dokumentert besparelse</h4>
+          <p style="margin-bottom: 0">
+            <strong>2 549 tonn CO₂</strong> spares ved å velge rehabilitering
+            (Scenario 2) fremfor riving (Scenario 1). Dette tilsvarer årlige
+            utslipp fra ca. 500 personbiler.
+          </p>
+        </div>
+
+        <h3>1.3 Utslipp per bygningsdel</h3>
+        <p>
+          Den største differansen mellom scenarioene finnes i produksjonsfasen
+          (A1-A3), særlig for grunn/fundamenter og bærende konstruksjoner. Ved
+          rehabilitering bevares eksisterende betongkonstruksjon med tilhørende
+          innbygget karbon.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Bygningsdel</th>
+              <th>Nybygg (kg CO₂/m²)</th>
+              <th>Rehabilitering (kg CO₂/m²)</th>
+              <th>Besparelse</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Grunn og fundamenter</td>
+              <td>100</td>
+              <td>5</td>
+              <td style="color: var(--success)">95%</td>
+            </tr>
+            <tr>
+              <td>Bæresystem</td>
+              <td>80</td>
+              <td>8</td>
+              <td style="color: var(--success)">90%</td>
+            </tr>
+            <tr>
+              <td>Dekker</td>
+              <td>45</td>
+              <td>8</td>
+              <td style="color: var(--success)">82%</td>
+            </tr>
+            <tr>
+              <td>Yttervegger</td>
+              <td>35</td>
+              <td>12</td>
+              <td style="color: var(--success)">66%</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-caption">
+          Tabell 2: Utslipp per bygningsdel. Kilde: Vill Energi (2025), Tabell
+          3.
+        </p>
+
+        <div class="highlight-box warning">
+          <h4>Viktig merknad</h4>
+          <p style="margin-bottom: 0">
+            Massebehandling ved riving er <strong>ikke inkludert</strong> i
+            beregningene. Ved Scenario 1 skal bygget graves opp og flyttes 2
+            meter fra elven, noe som vil medføre betydelige tilleggsutslipp
+            utover det som er beregnet.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 2: SIRKULÆR -->
+      <section class="section page-break" id="section-2">
+        <h2>
+          <span class="section-number">2.</span> Sirkulærøkonomi og materialbruk
+        </h2>
+
+        <p class="lead">
+          Rehabilitering bevarer 80% av materialverdien i eksisterende
+          konstruksjon og reduserer avfallsgenerering med 85%.
+        </p>
+
+        <h3>2.1 Bevart materialverdi</h3>
+        <p>
+          Hovfaret 13 er bygget i 1989 med bærende betongkonstruksjon og
+          forspente hulldekker. Fundamentene er dimensjonert for 12 etasjer, men
+          kun 5 er bygget. Ved rehabilitering bevares følgende
+          konstruksjonselementer:
+        </p>
+        <ul>
+          <li>Bærende betongkonstruksjon (ca. 2 400 m³)</li>
+          <li>Forspente hulldekker (5 etasjer)</li>
+          <li>Fundamenter dimensjonert for påbygg</li>
+          <li>Yttervegger og fasadeelementer</li>
+        </ul>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Natural State AS (2025). Bærekraftsrapport
+          Hovfaret 13. ESRS E5 - Sirkulær økonomi, s. 45-52.
+        </div>
+
+        <h3>2.2 Avfallsreduksjon</h3>
+
+        <div class="comparison-grid">
+          <div class="highlight-box danger">
+            <h4>Riving genererer</h4>
+            <p
+              style="
+                margin-bottom: 0;
+                font-size: 1.5rem;
+                font-weight: 600;
+                text-align: center;
+              "
+            >
+              5 000 - 7 000 tonn
+            </p>
+            <p style="text-align: center; margin-bottom: 0">rivningsavfall</p>
+          </div>
+          <div class="highlight-box success">
+            <h4>Rehabilitering genererer</h4>
+            <p
+              style="
+                margin-bottom: 0;
+                font-size: 1.5rem;
+                font-weight: 600;
+                text-align: center;
+              "
+            >
+              500 - 1 000 tonn
+            </p>
+            <p style="text-align: center; margin-bottom: 0">byggavfall</p>
+          </div>
+        </div>
+
+        <p>
+          Differansen på 4 500 - 6 000 tonn avfall tilsvarer ca. 500-700
+          lastebillass som unngås. Dette reduserer både deponibehov og
+          transportutslipp betydelig.
+        </p>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Plan- og bygningsetaten (2023). ROS-analyse
+          (dok. 08). Avfallshåndtering og massetransport.
+        </div>
+      </section>
+
+      <!-- SECTION 3: ENERGI -->
+      <section class="section page-break" id="section-3">
+        <h2><span class="section-number">3.</span> Energieffektivisering</h2>
+
+        <p class="lead">
+          Bygget kan oppgraderes fra energikarakter F til C med 50% reduksjon i
+          energiforbruk, uten behov for riving.
+        </p>
+
+        <h3>3.1 Nåværende energistatus</h3>
+        <table>
+          <tr>
+            <th>Parameter</th>
+            <th>Verdi</th>
+          </tr>
+          <tr>
+            <td>Energikarakter</td>
+            <td><strong style="color: var(--danger)">F</strong></td>
+          </tr>
+          <tr>
+            <td>Forbruk</td>
+            <td>232 kWh/m²/år</td>
+          </tr>
+          <tr>
+            <td>Totalt årlig forbruk</td>
+            <td>1 425 000 kWh</td>
+          </tr>
+          <tr>
+            <td>Oppvarming</td>
+            <td>Fjernvarme + elektrisk</td>
+          </tr>
+          <tr>
+            <td>Ventilasjon</td>
+            <td>CAV (konstant luftmengde)</td>
+          </tr>
+        </table>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Vill Energi AS (2025). Energikartlegging
+          Hovfaret 13. Datert 11.04.2025. Beregnet iht. SN-NSPEK 3031:2023.
+        </div>
+
+        <h3>3.2 Anbefalt tiltakspakke</h3>
+        <p>
+          Følgende tiltak anbefales for optimal kostnadseffektivitet og
+          energiforbedring:
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Tiltak</th>
+              <th>Investering (NOK)</th>
+              <th>Besparelse/år</th>
+              <th>NPV 25 år</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>VAV-ventilasjon med nye aggregater</td>
+              <td>6 025 000</td>
+              <td>570 000</td>
+              <td>2 880 000</td>
+            </tr>
+            <tr>
+              <td>Oppgradering vinduer plan 1</td>
+              <td>150 000</td>
+              <td>21 000</td>
+              <td>178 000</td>
+            </tr>
+            <tr>
+              <td>Luft-til-vann varmepumpe</td>
+              <td>3 492 000</td>
+              <td>574 000</td>
+              <td>5 475 000</td>
+            </tr>
+            <tr style="font-weight: 600; background: var(--bg-highlight)">
+              <td>Totalt tiltakspakke</td>
+              <td>9 667 000</td>
+              <td>862 000</td>
+              <td style="color: var(--success)">3 800 000</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-caption">
+          Tabell 3: Anbefalt tiltakspakke. NPV beregnet med 4% rente og
+          strømpris 1,2 kr/kWh.
+        </p>
+
+        <div class="highlight-box success">
+          <h4>Resultat etter oppgradering</h4>
+          <div class="data-grid" style="margin-bottom: 0">
+            <div class="data-item">
+              <div class="value success">C</div>
+              <div class="label">Ny energikarakter</div>
+            </div>
+            <div class="data-item">
+              <div class="value">116</div>
+              <div class="label">kWh/m²/år</div>
+            </div>
+            <div class="data-item">
+              <div class="value success">50%</div>
+              <div class="label">Reduksjon</div>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Tiltakspakken kvalifiserer for Enova-støtte (krav: 20% forbedring,
+          oppnådd: 50%). Fra 2026 vektes fjernvarme med faktor 0,45 i
+          energimerkeberegningen, noe som ytterligere forbedrer energikarakteren
+          til <strong>B</strong>.
+        </p>
+      </section>
+
+      <!-- SECTION 4: GEOTEKNIKK -->
+      <section class="section page-break" id="section-4">
+        <h2><span class="section-number">4.</span> Geoteknisk risiko</h2>
+
+        <p class="lead">
+          Området har dokumentert kvikkleireforekomst. Nabobygget Skøyen
+          Terrasse 1 har gjennomgått omfattende stålforsterkning pga.
+          setningsskader (2024-2025).
+        </p>
+
+        <h3>4.1 Dokumenterte grunnforhold</h3>
+        <ul>
+          <li>
+            <strong>Kvikkleire påvist</strong> i to borepunkter ved elven (PBE
+            dok. 18)
+          </li>
+          <li>
+            <strong>Forurensede fyllmasser</strong> over dyp leire ved
+            Hoffsveien 17
+          </li>
+          <li>
+            <strong>Skøyen Terrasse 1:</strong> Skjevstilling og setningsskader
+            bekreftet og utbedret
+          </li>
+        </ul>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Plan- og bygningsetaten (2023).
+          Områdestabilitet (dok. 18).
+          <span class="quote"
+            >"Fare for sprøbruddmaterialer/kvikkleire nær elva"</span
+          >
+        </div>
+
+        <h3>4.2 Bevis fra naboeiendommer</h3>
+
+        <div class="highlight-box danger">
+          <h4>Skøyen Terrasse 1 - Setningsskader</h4>
+          <p>
+            Bygget har gjennomgått omfattende
+            <strong>stålforsterkning fra kjeller til tak</strong>
+            som følge av setningsskader og skjevstilling. Arbeidet ble utført
+            2024-2025.
+          </p>
+          <p style="margin-bottom: 0">
+            <strong>Saksnummer:</strong> 202453701 (Oslobygg KF / Plan- og
+            bygningsetaten)
+          </p>
+        </div>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Multiconsult (2016). Miljøteknisk
+          grunnundersøkelse Hoffsveien 17. Dokumenterer forurensede fyllmasser
+          og leiregrunn ved naboeiendommen.
+        </div>
+
+        <h3>4.3 Risikovurdering</h3>
+
+        <div class="comparison-grid">
+          <div class="highlight-box success">
+            <h4>Rehabilitering</h4>
+            <ul style="margin-bottom: 0">
+              <li>Eksisterende fundament beholdes</li>
+              <li>Minimal ny graving</li>
+              <li>Ingen destabilisering av naboeiendommer</li>
+            </ul>
+          </div>
+          <div class="highlight-box danger">
+            <h4>Riving og nybygg</h4>
+            <ul style="margin-bottom: 0">
+              <li>Nytt fundament 2m fra elven</li>
+              <li>Omfattende graving i ustabil grunn</li>
+              <li>Økt risiko for setninger på naboeiendommer</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: OVERVANN -->
+      <section class="section" id="section-5">
+        <h2><span class="section-number">5.</span> Overvann og flomrisiko</h2>
+
+        <p class="lead">
+          Riving og nybygg øker tette flater og forverrer overvannssituasjonen.
+          Rehabilitering bevarer etablert drenering og muliggjør grønne
+          løsninger.
+        </p>
+
+        <h3>5.1 Klimarisiko</h3>
+        <p>
+          Hovfaret 13 ligger innenfor 10-metersbeltet til Hoffselva.
+          Klimaendringer gir økt intensitet i nedbør (oppdaterte IVF-kurver) og
+          økt flomfare. Skøyen har høy andel tette flater, noe som forsterker
+          utfordringene med overvannshåndtering.
+        </p>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Plan- og bygningsetaten (2023). Vurdering av
+          håndtering av overvann (dok. 11). Krav om lokal håndtering av 20-års
+          regn.
+        </div>
+
+        <h3>5.2 Mulige tiltak ved rehabilitering</h3>
+        <ul>
+          <li>Grønne tak med fordrøyningskapasitet (1 079 m² takflate)</li>
+          <li>Regnbed i utearealer</li>
+          <li>Fordrøyningsbasseng i eksisterende kjeller</li>
+          <li>Permeable belegg på parkeringsarealer</li>
+        </ul>
+
+        <div class="highlight-box warning">
+          <h4>Risiko ved riving</h4>
+          <p style="margin-bottom: 0">
+            Anleggsfasen ved riving medfører midlertidig tap av etablert
+            drenering, økt avrenning til Hoffselva under bygging, og behov for
+            helt ny dimensjonering av overvannshåndtering.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 6: BIOLOGI -->
+      <section class="section page-break" id="section-6">
+        <h2>
+          <span class="section-number">6.</span> Biologisk mangfold og Hoffselva
+        </h2>
+
+        <p class="lead">
+          Hoffselva er anadrom elvestrekning med sjøørret og laks. Anleggsarbeid
+          ved riving truer vannkvalitet og økosystemtjenester.
+        </p>
+
+        <h3>6.1 Hoffselvas status</h3>
+        <table>
+          <tr>
+            <th>Parameter</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>Klassifisering</td>
+            <td>Anadromt vassdrag</td>
+          </tr>
+          <tr>
+            <td>Arter</td>
+            <td>Sjøørret, laks (begrenset), ål</td>
+          </tr>
+          <tr>
+            <td>Funksjon</td>
+            <td>Økologisk korridor</td>
+          </tr>
+          <tr>
+            <td>Buffersone</td>
+            <td>10 meter byggegrense</td>
+          </tr>
+        </table>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Plan- og bygningsetaten (2023). Naturmiljø
+          (dok. 13).
+          <span class="quote"
+            >"Hoffselva har høy økologisk verdi. Fremmedarter
+            identifisert."</span
+          >
+        </div>
+
+        <h3>6.2 Identifiserte fremmede arter</h3>
+        <p>
+          Følgende problematiske fremmedarter er identifisert på eiendommen:
+        </p>
+        <ul>
+          <li>Kanadagullris</li>
+          <li>Alaska-kornell</li>
+          <li>Sibir-kornell</li>
+        </ul>
+        <p>
+          Omfattende anleggsarbeid ved riving gir
+          <strong>svært høy spredningsrisiko</strong>
+          for disse artene til omkringliggende naturområder og Hoffselva.
+        </p>
+
+        <h3>6.3 Sammenligning</h3>
+        <div class="comparison-grid">
+          <div class="highlight-box success">
+            <h4>Rehabilitering</h4>
+            <ul style="margin-bottom: 0">
+              <li>Minimal forstyrrelse av elveøkosystem</li>
+              <li>Mulighet for naturpositiv utforming</li>
+              <li>Styrket riparvegetasjon</li>
+              <li>Kortere anleggsfase</li>
+            </ul>
+          </div>
+          <div class="highlight-box danger">
+            <h4>Riving</h4>
+            <ul style="margin-bottom: 0">
+              <li>Sedimentavrenning til Hoffselva</li>
+              <li>Spredning av fremmede arter</li>
+              <li>Tap av kantvegetasjon</li>
+              <li>Forstyrrelse i gyteperiode</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reference">
+          <strong>Hjemmel:</strong> Vannforskriften. Naturmangfoldloven §§ 8-12.
+          Krav om kantvegetasjon langs vassdrag.
+        </div>
+      </section>
+
+      <!-- SECTION 7: ANLEGG -->
+      <section class="section" id="section-7">
+        <h2>
+          <span class="section-number">7.</span> Anleggsfase og lokalmiljø
+        </h2>
+
+        <p class="lead">
+          Riving genererer 10x mer massetransport enn rehabilitering. Kortere
+          anleggsfase reduserer støy, støv og trafikkbelastning.
+        </p>
+
+        <h3>7.1 Massetransport</h3>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Riving + nybygg</th>
+              <th>Rehabilitering</th>
+              <th>Reduksjon</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Avfall ut (tonn)</td>
+              <td>5 000 - 7 000</td>
+              <td>500 - 1 000</td>
+              <td style="color: var(--success)">85%</td>
+            </tr>
+            <tr>
+              <td>Materialer inn (tonn)</td>
+              <td>~8 000</td>
+              <td>~1 000</td>
+              <td style="color: var(--success)">87%</td>
+            </tr>
+            <tr>
+              <td>Lastebillass (estimat)</td>
+              <td>500 - 700</td>
+              <td>50 - 100</td>
+              <td style="color: var(--success)">85%</td>
+            </tr>
+            <tr>
+              <td>Anleggsperiode</td>
+              <td>24 - 30 mnd</td>
+              <td>12 - 18 mnd</td>
+              <td style="color: var(--success)">40%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>7.2 Berørte områder</h3>
+        <ul>
+          <li>Hovfaret (adkomstvei)</li>
+          <li>Hoffsveien (hovedvei)</li>
+          <li>Skøyen skole (200 meter)</li>
+          <li>Naboboliger i umiddelbar nærhet</li>
+        </ul>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Plan- og bygningsetaten (2023). Notat grønn
+          mobilitet og trafikk (dok. 10).
+          <span class="quote"
+            >"Midlertidig forverring av sykkel- og gåmiljø"</span
+          >
+        </div>
+      </section>
+
+      <!-- SECTION 8: SOSIAL -->
+      <section class="section page-break" id="section-8">
+        <h2>
+          <span class="section-number">8.</span> Sosial bærekraft og Omsorg+
+        </h2>
+
+        <p class="lead">
+          73 Omsorg+ boliger dekker 46% av Bydel Ullerns dokumenterte behov for
+          160 omsorgsboliger innen 2040.
+        </p>
+
+        <h3>8.1 Omsorg+ konsept</h3>
+        <table>
+          <tr>
+            <th>Parameter</th>
+            <th>Verdi</th>
+          </tr>
+          <tr>
+            <td>Antall enheter</td>
+            <td>73 boliger</td>
+          </tr>
+          <tr>
+            <td>Størrelse</td>
+            <td>42-67 m² per enhet</td>
+          </tr>
+          <tr>
+            <td>Etasjer</td>
+            <td>2-8 (eksisterende + påbygg)</td>
+          </tr>
+          <tr>
+            <td>Fellesfasiliteter</td>
+            <td>Kantine, aktivitetsrom, takhage, hjemmetjenestebase</td>
+          </tr>
+        </table>
+
+        <h3>8.2 Bydelsbehovet</h3>
+        <div class="highlight-box success">
+          <h4>Dekningsgrad</h4>
+          <div
+            class="data-grid"
+            style="grid-template-columns: 1fr 1fr; margin-bottom: 0"
+          >
+            <div class="data-item">
+              <div class="value">160</div>
+              <div class="label">Bydel Ullerns behov 2040</div>
+            </div>
+            <div class="data-item">
+              <div class="value success">46%</div>
+              <div class="label">Dekket av H13</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Bydelsutvalgsmøte 29.10.2025. Behovsanalyse
+          for omsorgsboliger.
+        </div>
+
+        <h3>8.3 Finansieringsmuligheter</h3>
+        <p>
+          Prosjektet kan kvalifisere for Husbankens HDO-finansiering (Heldøgns
+          omsorgsboliger) med potensiell dekning opptil 50% av byggekostnader.
+          Forutsetter avtale med kommunen om omsorgstjenester.
+        </p>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Natural State AS (2025). Bærekraftsrapport.
+          ESRS S3 - Berørte samfunn, s. 55-59.
+        </div>
+      </section>
+
+      <!-- SECTION 9: REGULATORISK -->
+      <section class="section" id="section-9">
+        <h2><span class="section-number">9.</span> Regulatorisk samsvar</h2>
+
+        <p class="lead">
+          Rehabilitering er i tråd med Oslo kommunes klimastrategi, KPA 2030 og
+          EUs taksonomi. Riving undergraver vedtatte klimamål.
+        </p>
+
+        <h3>9.1 Oslo klimastrategi mot 2030</h3>
+        <ul>
+          <li>
+            <strong>Mål:</strong> 95% reduksjon i klimagassutslipp innen 2030
+          </li>
+          <li>
+            <strong>Byggesektoren:</strong> 40% av globale utslipp - prioritert
+            sektor
+          </li>
+          <li><strong>Prinsipp:</strong> Ombruk før nybygg</li>
+        </ul>
+
+        <h3>9.2 Kommuneplanens arealdel (KPA) 2030</h3>
+        <ul>
+          <li>Klimahensyn skal vektlegges i alle plansaker</li>
+          <li>Stimulere til ombruk og materialgjenvinning</li>
+        </ul>
+
+        <h3>9.3 EU-taksonomi</h3>
+        <table>
+          <tr>
+            <th>Kriterie</th>
+            <th>Vurdering</th>
+          </tr>
+          <tr>
+            <td>Aktivitet</td>
+            <td>Rehabilitering av eksisterende bygninger</td>
+          </tr>
+          <tr>
+            <td>Substantial contribution</td>
+            <td>Klimatilpasning og -begrensning</td>
+          </tr>
+          <tr>
+            <td>Do No Significant Harm</td>
+            <td>Ingen vesentlig skade på andre miljømål</td>
+          </tr>
+        </table>
+
+        <h3>9.4 ESRS-rapportering</h3>
+        <p>
+          Prosjektet er dokumentert iht. European Sustainability Reporting
+          Standards:
+        </p>
+        <ul>
+          <li>
+            <strong>ESRS E1 (Klimaendring):</strong> LCA-beregninger,
+            utslippsscenarier
+          </li>
+          <li>
+            <strong>ESRS E4 (Biologisk mangfold):</strong> Hoffselva-påvirkning
+          </li>
+          <li><strong>ESRS E5 (Sirkulær økonomi):</strong> Materialgjenbruk</li>
+          <li><strong>ESRS S3 (Berørte samfunn):</strong> Omsorg+ konsept</li>
+        </ul>
+
+        <div class="reference">
+          <strong>Kilde:</strong> Natural State AS (2025). Bærekraftsrapport.
+          ESRS-mapping, s. 5-10.
+        </div>
+
+        <h3>9.5 Dispensasjonsgrunnlag</h3>
+        <p>
+          Områdeplanen for Skøyen er vedtatt (september 2023) men ikke
+          rettskraftig pga. uavklarte innsigelser fra Bane NOR og Statens
+          vegvesen. Hovfaret 13 ligger innenfor 10-metersbeltet og vil kreve
+          dispensasjon fra byggegrensen.
+        </p>
+        <p>
+          <strong>Hjemmel:</strong> Plan- og bygningsloven § 19-2: Dispensasjon
+          kan gis når fordelene er klart større enn ulempene.
+        </p>
+        <p>
+          <strong>Argumentasjon:</strong>
+        </p>
+        <ul>
+          <li>48% CO₂-besparelse er dokumentert klimafordel</li>
+          <li>73 omsorgsboliger er betydelig samfunnsnytte</li>
+          <li>Påbygg på eksisterende grunnflate - minimalt nytt fotavtrykk</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 10: SAMMENLIGNING -->
+      <section class="section page-break" id="section-10">
+        <h2><span class="section-number">10.</span> Scenariosammenligning</h2>
+
+        <p class="lead">
+          Samlet vurdering av alle miljø- og bærekraftsindikatorer på tvers av
+          tre scenarier.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Indikator</th>
+              <th>S1: Riving</th>
+              <th>S2: Rehabilitering</th>
+              <th>S3: Påbygg</th>
+              <th>Besparelse</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CO₂ totalt (tonn)</td>
+              <td style="color: var(--danger)">5 343</td>
+              <td style="color: var(--success)">2 794</td>
+              <td>4 161</td>
+              <td style="font-weight: 600; color: var(--success)">48%</td>
+            </tr>
+            <tr>
+              <td>CO₂ per m² (kg)</td>
+              <td style="color: var(--danger)">631</td>
+              <td style="color: var(--success)">456</td>
+              <td>491</td>
+              <td style="font-weight: 600; color: var(--success)">28%</td>
+            </tr>
+            <tr>
+              <td>Materialutslipp (kg/m²)</td>
+              <td style="color: var(--danger)">312</td>
+              <td style="color: var(--success)">62</td>
+              <td>123</td>
+              <td style="font-weight: 600; color: var(--success)">80%</td>
+            </tr>
+            <tr>
+              <td>Avfall (tonn)</td>
+              <td style="color: var(--danger)">5-7 000</td>
+              <td style="color: var(--success)">500-1 000</td>
+              <td>800-1 200</td>
+              <td style="font-weight: 600; color: var(--success)">85%</td>
+            </tr>
+            <tr>
+              <td>Anleggstid (mnd)</td>
+              <td style="color: var(--danger)">24-30</td>
+              <td style="color: var(--success)">12-18</td>
+              <td>18-24</td>
+              <td style="font-weight: 600; color: var(--success)">40%</td>
+            </tr>
+            <tr>
+              <td>Energiforbruk etter (kWh/m²)</td>
+              <td>115</td>
+              <td>116</td>
+              <td>116</td>
+              <td>~0%</td>
+            </tr>
+            <tr>
+              <td>Geoteknisk risiko</td>
+              <td style="color: var(--danger)">Høy</td>
+              <td style="color: var(--success)">Lav</td>
+              <td style="color: var(--success)">Lav</td>
+              <td>Betydelig</td>
+            </tr>
+            <tr>
+              <td>Hoffselva-påvirkning</td>
+              <td style="color: var(--danger)">Høy</td>
+              <td style="color: var(--success)">Minimal</td>
+              <td style="color: var(--success)">Minimal</td>
+              <td>Betydelig</td>
+            </tr>
+            <tr>
+              <td>Omsorgsboliger</td>
+              <td>0*</td>
+              <td>~50</td>
+              <td style="color: var(--success); font-weight: 600">73</td>
+              <td>+73</td>
+            </tr>
+            <tr>
+              <td>Klimapolitisk samsvar</td>
+              <td style="color: var(--danger)">Nei</td>
+              <td style="color: var(--success)">Ja</td>
+              <td style="color: var(--success)">Ja</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-caption">
+          *Ved riving må Omsorg+ bygges fra grunnen, med høyere utslipp og
+          lengre tidslinje.
+        </p>
+
+        <div class="highlight-box success" style="margin-top: 2rem">
+          <h4>Konklusjon</h4>
+          <p style="margin-bottom: 0; font-size: 1.1rem">
+            Scenario 3 (Rehabilitering med påbygg) anbefales som optimal
+            løsning. Dette scenariet kombinerer betydelig klimabesparelse (22%
+            vs. riving) med maksimal samfunnsnytte (73 omsorgsboliger) og
+            utnytter byggets strukturelle reservekapasitet.
+          </p>
+        </div>
+      </section>
+
+      <!-- SOURCES -->
+      <section class="footnotes page-break" id="sources">
+        <h2>Kildehenvisninger</h2>
+
+        <h3>Primærkilder (LCA og energi)</h3>
+        <div class="sources-list">
+          <div class="source-item">
+            <span class="source-id">[1]</span> Vill Energi AS (2025).
+            <em>Klimagassberegninger Hovfaret 13 v2</em>. Martin Skjøstad
+            Andersen og Malene E. Leirpoll. Datert 22.04.2025. 18 sider.
+            Metodologi: NS 3720:2018 og EN 15978.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[2]</span> Vill Energi AS (2025).
+            <em>Energikartlegging Hovfaret 13</em>. Datert 11.04.2025. 14 sider.
+            Metodologi: SN-NSPEK 3031:2023.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[3]</span> Natural State AS (2025).
+            <em>Bærekraftsrapport Hovfaret 13</em>. Datert 04.07.2025. 83 sider.
+            Standarder: ESRS E1, E4, E5, S3.
+          </div>
+        </div>
+
+        <h3>Regulatoriske dokumenter (Plan- og bygningsetaten)</h3>
+        <div class="sources-list">
+          <div class="source-item">
+            <span class="source-id">[4]</span> Plan- og bygningsetaten (2023).
+            <em>ROS-analyse</em>. Dokument 08.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[5]</span> Plan- og bygningsetaten (2023).
+            <em>Notat grønn mobilitet og trafikk</em>. Dokument 10.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[6]</span> Plan- og bygningsetaten (2023).
+            <em>Vurdering av håndtering av overvann</em>. Dokument 11.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[7]</span> Plan- og bygningsetaten (2023).
+            <em>Naturmiljø</em>. Dokument 13.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[8]</span> Plan- og bygningsetaten (2023).
+            <em>Områdestabilitet</em>. Dokument 18.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[9]</span> Plan- og bygningsetaten (2023).
+            <em>Kvalitetsprogram for miljø og energi</em>. Dokument 21.
+          </div>
+        </div>
+
+        <h3>Ekstern dokumentasjon</h3>
+        <div class="sources-list">
+          <div class="source-item">
+            <span class="source-id">[10]</span> Multiconsult / Fram Eiendom
+            (2016). <em>Miljøteknisk grunnundersøkelse Hoffsveien 17</em>.
+            Dokumenterer forurensede fyllmasser og leiregrunn.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[11]</span> Oslobygg KF / Plan- og
+            bygningsetaten (2024-2025).
+            <em>Rammetillatelse Skøyen Terrasse 1</em>. Saksnummer 202453701.
+            Dokumenterer setningsskader og stålforsterkning.
+          </div>
+        </div>
+
+        <h3>Overordnede føringer</h3>
+        <div class="sources-list">
+          <div class="source-item">
+            <span class="source-id">[12]</span> Oslo kommune (2020).
+            <em>Klimastrategi mot 2030</em>.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[13]</span> Oslo kommune (2023).
+            <em>Kommuneplanens arealdel 2030</em>.
+          </div>
+          <div class="source-item">
+            <span class="source-id">[14]</span> EU-kommisjonen (2020).
+            <em>Taxonomy Regulation</em>. Forordning 2020/852.
+          </div>
+        </div>
+      </section>
+
+      <footer
+        style="
+          margin-top: 3rem;
+          padding-top: 1.5rem;
+          border-top: 2px solid var(--text-body);
+          text-align: center;
+        "
+      >
+        <p
+          style="
+            font-family: &quot;Inter&quot;, sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+          "
+        >
+          Hovfaret 13 Transformasjonsprosjekt • Urbania Eiendom AS<br />
+          Dokumentversjon 1.0 • Januar 2027
+        </p>
+      </footer>
+    </article>
+
+    <script>
+      function toggleAllSections() {
+        // Scroll to top for print view
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </body>
+</html>

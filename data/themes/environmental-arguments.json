@@ -1,9 +1,10 @@
 {
   "metadata": {
-    "version": "1.0",
+    "version": "1.1",
     "created": "2026-01-26",
     "last_updated": "2026-01-26",
     "description": "Strukturert argumentasjonsbase for miljø og klima",
+    "research_note": "Kartlegging av dokumentasjonsgap utført 2026-01-26",
     "content_classification": {
       "type": "project_data",
       "deliverable_id": null,
@@ -584,6 +585,42 @@
       "year": 2025,
       "relevance": "Hovedargumentasjon mot riving",
       "status": "available"
+    },
+    {
+      "id": "doc_ext_miljo_h17",
+      "filename": "Miljoeteknisk_grunnundersoekelse_Hoffsveien_17.pdf",
+      "title": "Miljøteknisk grunnundersøkelse Hoffsveien 17",
+      "source": "Multiconsult / Fram Eiendom",
+      "year": 2016,
+      "relevance": "Dokumenterer forurensede fyllmasser og leiregrunn rett ved siden av H13.",
+      "status": "available"
+    },
+    {
+      "id": "doc_ext_geotek_ns2",
+      "filename": "GEOTEKNISK RAPPORT Nedre Skøyen vei 2.pdf",
+      "title": "Geoteknisk Rapport Nedre Skøyen vei 2",
+      "source": "Multiconsult",
+      "year": 2016,
+      "relevance": "Referanse for grunnforhold sør for H13. Bekrefter geoteknisk kompleksitet.",
+      "status": "identified_external"
+    },
+    {
+      "id": "doc_ext_geotek_dv131",
+      "filename": "610419A OSLO RIDEHUS AS.pdf",
+      "title": "Geoteknisk grunnundersøkelse Drammensveien 131",
+      "source": "Scandiaconsult",
+      "year": 2001,
+      "relevance": "Historiske grunnforholdsdata for området.",
+      "status": "identified_external"
+    },
+    {
+      "id": "doc_ext_miljo_fornebu",
+      "filename": "Skøyen i berg - Miljøgeologisk datarapport.pdf",
+      "title": "Skøyen i berg - Miljøgeologisk datarapport",
+      "source": "Statsforvalteren",
+      "year": 2020,
+      "relevance": "Omfattende kartlegging av forurenset grunn og masser.",
+      "status": "identified_external"
     }
   ],
   "missing_documents": [
@@ -595,7 +632,9 @@
       "source": "Biolog/konsulent",
       "priority": "high",
       "estimated_cost": null,
-      "action": "Engasjere biolog for feltarbeid"
+      "action": "Engasjere biolog for feltarbeid",
+      "status": "pending",
+      "research_note": "Eirik (naturforvalter) ble tildelt oppgaven 2023-06-27. Endelig rapport ikke funnet i lokalt arkiv."
     },
     {
       "id": "missing_02",
@@ -605,7 +644,9 @@
       "source": "Statsforvalter/NINA",
       "priority": "high",
       "estimated_cost": null,
-      "action": "Kontakte Statsforvalter for eksisterende data, vurdere NINA-oppdrag"
+      "action": "Kontakte Statsforvalter for eksisterende data, vurdere NINA-oppdrag",
+      "status": "not_started",
+      "research_note": "Relevant pga. anadrom status bekreftet i nabovurdering (doc_pdf_13)."
     },
     {
       "id": "missing_03",
@@ -615,7 +656,9 @@
       "source": "Geoteknisk firma",
       "priority": "high",
       "estimated_cost": null,
-      "action": "Innhente tilbud fra geoteknisk konsulent"
+      "action": "Innhente tilbud fra geoteknisk konsulent",
+      "status": "critical_gap",
+      "research_note": "Påvist kvikkleire i to borepunkter ved elva på nabotomt (doc_pdf_18). Boreprøver på H13 er påkrevd for stabilitetsverifisering."
     },
     {
       "id": "missing_04",
@@ -625,7 +668,9 @@
       "source": "NGU/NVE",
       "priority": "medium",
       "estimated_cost": null,
-      "action": "Hente kart fra NGU, kontakte NVE for utfyllende info"
+      "action": "Hente kart fra NGU, kontakte NVE for utfyllende info",
+      "status": "partial_proxy",
+      "research_note": "Generell info finnes i ROS-analyser for Skøyen, men stedsspesifikk tolkning for H13 mangler."
     },
     {
       "id": "missing_05",
@@ -635,7 +680,9 @@
       "source": "Natural State/konsulent",
       "priority": "medium",
       "estimated_cost": null,
-      "action": "Vurdere utvidelse av Natural State-oppdrag"
+      "action": "Vurdere utvidelse av Natural State-oppdrag",
+      "status": "requirements_defined",
+      "research_note": "Vill Energi definerte krav i e-post 2025-02-11. Avhenger av grunnundersøkelser (missing_03)."
     },
     {
       "id": "missing_06",
@@ -645,7 +692,9 @@
       "source": "VA-konsulent",
       "priority": "high",
       "estimated_cost": null,
-      "action": "Innhente tilbud fra VA-rådgiver"
+      "action": "Innhente tilbud fra VA-rådgiver",
+      "status": "not_started",
+      "research_note": "Kritisk for rammesøknad og 10-meters setback problematikk."
     },
     {
       "id": "missing_07",
@@ -655,7 +704,9 @@
       "source": "Byantikvaren",
       "priority": "low",
       "estimated_cost": null,
-      "action": "Sende forespørsel til Byantikvaren"
+      "action": "Sende forespørsel til Byantikvaren",
+      "status": "recommended",
+      "research_note": "Nevnt som mulig forsterkning i interne notater (Jan 2026)."
     },
     {
       "id": "missing_08",
@@ -665,7 +716,21 @@
       "source": "Trafikkonsulent",
       "priority": "medium",
       "estimated_cost": null,
-      "action": "Innhente tilbud fra trafikkrådgiver"
+      "action": "Innhente tilbud fra trafikkrådgiver",
+      "status": "not_started",
+      "research_note": "Må dokumentere endret belastning ved konseptendring."
+    },
+    {
+      "id": "missing_09",
+      "category": "Geoteknikk",
+      "title": "Rammetillatelse & Ferdigattest Skøyen Terrasse 1",
+      "description": "Dokumentasjon på setningsskader, skjevstilling og omfattende stålforsterkning av nabobygget (2024-2025).",
+      "source": "Oslobygg KF / PBE (Sak 202453701)",
+      "priority": "high",
+      "estimated_cost": null,
+      "action": "Lastet ned og analysert",
+      "status": "available",
+      "research_note": "BEKREFTET: Bygget har setningsskader og er forsterket med stål fra kjeller til tak (2025). Kritisk bevis."
     }
   ],
   "comparison_matrix": {

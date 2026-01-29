@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Analyse - Statistikk og innsikt fra prosjektdata for Hovfaret 13"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyse - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-hover: #f1f5f9;
+        --bg-selected: #eff6ff;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --text-accent: #2563eb;
+        --border-light: #e2e8f0;
+        --border-medium: #cbd5e1;
+        --blue-primary: #3b82f6;
+        --blue-light: #dbeafe;
+        --green-primary: #10b981;
+        --green-light: #d1fae5;
+        --purple-primary: #8b5cf6;
+        --purple-light: #ede9fe;
+        --orange-primary: #f59e0b;
+        --orange-light: #fef3c7;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      .header {
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-light);
+        padding: 1rem 1.5rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .back-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        transition: all 0.2s;
+      }
+
+      .back-link:hover {
+        background: var(--bg-hover);
+        color: var(--text-primary);
+      }
+
+      .page-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .main-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Hero section */
+      .hero-section {
+        background: linear-gradient(
+          135deg,
+          var(--blue-light) 0%,
+          var(--bg-card) 100%
+        );
+        border: 1px solid var(--border-light);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        color: var(--text-secondary);
+      }
+
+      /* Metrics grid */
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .metric-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: 10px;
+        padding: 1.25rem;
+        text-align: center;
+        transition: all 0.2s;
+      }
+
+      .metric-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transform: translateY(-2px);
+      }
+
+      .metric-value {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--blue-primary);
+        margin-bottom: 0.25rem;
+      }
+
+      .metric-label {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .metric-badge {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        background: var(--green-light);
+        color: var(--green-primary);
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+      }
+
+      /* Section headers */
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .section-icon {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--blue-light);
+        border-radius: 8px;
+        font-size: 1.125rem;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      /* Chart containers */
+      .chart-container {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .chart-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+      }
+
+      /* Bar chart */
+      .bar-chart {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .bar-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .bar-label {
+        min-width: 140px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .bar-track {
+        flex: 1;
+        height: 28px;
+        background: var(--bg-main);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      .bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--blue-primary), #60a5fa);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 0.5rem;
+        transition: width 0.6s ease;
+      }
+
+      .bar-value {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: white;
+      }
+
+      /* Timeline chart */
+      .timeline-chart {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+        height: 200px;
+        padding: 1rem 0;
+        border-bottom: 2px solid var(--border-light);
+      }
+
+      .timeline-bar {
+        flex: 1;
+        min-width: 30px;
+        background: linear-gradient(180deg, var(--blue-primary), #60a5fa);
+        border-radius: 4px 4px 0 0;
+        position: relative;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .timeline-bar:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+      }
+
+      .timeline-bar-value {
+        position: absolute;
+        top: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .timeline-bar-label {
+        position: absolute;
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        white-space: nowrap;
+      }
+
+      /* Grid layout */
+      .chart-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .chart-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Stakeholder list */
+      .stakeholder-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .stakeholder-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.875rem 1rem;
+        background: var(--bg-main);
+        border: 1px solid var(--border-light);
+        border-radius: 8px;
+        transition: all 0.2s;
+      }
+
+      .stakeholder-item:hover {
+        background: var(--bg-hover);
+        border-color: var(--blue-primary);
+      }
+
+      .stakeholder-info {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .stakeholder-rank {
+        width: 28px;
+        height: 28px;
+        background: linear-gradient(135deg, var(--blue-primary), #60a5fa);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: white;
+        font-size: 0.8rem;
+      }
+
+      .stakeholder-name {
+        font-weight: 600;
+        color: var(--text-primary);
+        font-size: 0.9rem;
+      }
+
+      .stakeholder-org {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .stakeholder-count {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--blue-primary);
+      }
+
+      /* Loading state */
+      .loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem;
+        color: var(--text-muted);
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid var(--border-light);
+        border-top-color: var(--blue-primary);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 1rem;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .main-content {
+          padding: 1rem;
+        }
+
+        .metrics-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .bar-label {
+          min-width: 100px;
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("analytics");
+    </script>
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <a href="index.html" class="back-link">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Tilbake
+          </a>
+          <h1 class="page-title">Avansert analyse</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h2 class="hero-title">Prosjektanalyse</h2>
+        <p class="hero-subtitle">
+          Møteaktivitet, dokumentproduksjon og interessentengasjement
+        </p>
+      </section>
+
+      <!-- Key Metrics -->
+      <div class="metrics-grid" id="metrics-grid">
+        <div class="loading">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <!-- Meeting Activity Over Time -->
+      <div class="section-header">
+        <div class="section-icon">📈</div>
+        <h2 class="section-title">Møteaktivitet over tid</h2>
+      </div>
+      <div class="chart-container">
+        <div class="chart-title">Møter per måned</div>
+        <div class="timeline-chart" id="meetings-timeline">
+          <div class="loading">
+            <div class="spinner"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Document Activity -->
+      <div class="section-header">
+        <div class="section-icon">📄</div>
+        <h2 class="section-title">Dokumentaktivitet</h2>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-container">
+          <div class="chart-title">Dokumenter per kategori</div>
+          <div class="bar-chart" id="documents-by-category"></div>
+        </div>
+        <div class="chart-container">
+          <div class="chart-title">Dokumenter over tid</div>
+          <div class="timeline-chart" id="documents-timeline"></div>
+        </div>
+      </div>
+
+      <!-- Stakeholder Engagement -->
+      <div class="section-header">
+        <div class="section-icon">👥</div>
+        <h2 class="section-title">Interessentengasjement</h2>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-container">
+          <div class="chart-title">Mest aktive deltakere (topp 10)</div>
+          <div class="stakeholder-list" id="top-participants"></div>
+        </div>
+        <div class="chart-container">
+          <div class="chart-title">Organisasjonspartisipasjon</div>
+          <div class="bar-chart" id="org-participation"></div>
+        </div>
+      </div>
+
+      <!-- Decisions & Actions -->
+      <div class="section-header">
+        <div class="section-icon">✅</div>
+        <h2 class="section-title">Beslutninger og handlinger</h2>
+      </div>
+      <div class="chart-container">
+        <div class="chart-title">Beslutninger og action items per møte</div>
+        <div class="timeline-chart" id="decisions-actions"></div>
+      </div>
+    </main>
+
+    <script src="lib/data-loader.js"></script>
+    <script>
+      let meetingsData = [];
+      let documentsData = [];
+
+      async function init() {
+        try {
+          const allData = await DataLoader.loadAllData();
+          meetingsData = allData.meetings || [];
+          documentsData = allData.documents || [];
+
+          renderKeyMetrics();
+          renderMeetingsTimeline();
+          renderDocumentsByCategory();
+          renderDocumentsTimeline();
+          renderTopParticipants();
+          renderOrgParticipation();
+          renderDecisionsActions();
+        } catch (error) {
+          console.error("Feil ved lasting av data:", error);
+        }
+      }
+
+      function renderKeyMetrics() {
+        const totalMeetings = meetingsData.length;
+        const totalDocs = documentsData.length;
+        const embeddedReports = meetingsData.filter(
+          (m) => m.report_link,
+        ).length;
+        const coverageRate =
+          totalMeetings > 0
+            ? Math.round((embeddedReports / totalMeetings) * 100)
+            : 0;
+
+        const totalDecisions = meetingsData.reduce(
+          (sum, m) => sum + (m.decisions?.length || 0),
+          0,
+        );
+        const totalActions = meetingsData.reduce(
+          (sum, m) => sum + (m.action_items?.length || 0),
+          0,
+        );
+        const avgParticipants =
+          totalMeetings > 0
+            ? Math.round(
+                meetingsData.reduce(
+                  (sum, m) => sum + (m.participant_count || 0),
+                  0,
+                ) / totalMeetings,
+              )
+            : 0;
+
+        const metrics = [
+          { value: totalMeetings, label: "Totalt møter", badge: null },
+          { value: totalDecisions, label: "Beslutninger fattet", badge: null },
+          { value: totalActions, label: "Action items", badge: null },
+          { value: avgParticipants, label: "Snitt deltakere", badge: null },
+          { value: totalDocs, label: "Dokumenter", badge: null },
+          {
+            value: `${coverageRate}%`,
+            label: "Møter med referat",
+            badge: "Sterkt",
+          },
+        ];
+
+        const container = document.getElementById("metrics-grid");
+        container.innerHTML = metrics
+          .map(
+            (metric) => `
+        <div class="metric-card">
+          <div class="metric-value">${metric.value}</div>
+          <div class="metric-label">${metric.label}</div>
+          ${metric.badge ? `<div class="metric-badge">${metric.badge}</div>` : ""}
+        </div>
+      `,
+          )
+          .join("");
+      }
+
+      function renderMeetingsTimeline() {
+        const monthlyMeetings = {};
+        meetingsData.forEach((meeting) => {
+          if (!meeting.date) return;
+          const monthKey = meeting.date.substring(0, 7);
+          monthlyMeetings[monthKey] = (monthlyMeetings[monthKey] || 0) + 1;
+        });
+
+        const sortedMonths = Object.keys(monthlyMeetings).sort();
+        const maxMeetings = Math.max(...Object.values(monthlyMeetings), 1);
+
+        const container = document.getElementById("meetings-timeline");
+        if (sortedMonths.length === 0) {
+          container.innerHTML =
+            '<div style="text-align: center; color: var(--text-muted); padding: 2rem;">Ingen data</div>';
+          return;
+        }
+
+        container.innerHTML = sortedMonths
+          .map((month) => {
+            const count = monthlyMeetings[month];
+            const heightPercent = (count / maxMeetings) * 100;
+            const [year, monthNum] = month.split("-");
+            const monthName = new Date(
+              year,
+              parseInt(monthNum) - 1,
+            ).toLocaleDateString("no-NO", { month: "short" });
+
+            return `
+          <div class="timeline-bar" style="height: ${heightPercent}%">
+            <div class="timeline-bar-value">${count}</div>
+            <div class="timeline-bar-label">${monthName} '${year.slice(2)}</div>
+          </div>
+        `;
+          })
+          .join("");
+      }
+
+      function renderDocumentsByCategory() {
+        const categoryCount = {};
+        documentsData.forEach((doc) => {
+          const category = doc.category || "Ukategorisert";
+          categoryCount[category] = (categoryCount[category] || 0) + 1;
+        });
+
+        const sorted = Object.entries(categoryCount)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 10);
+
+        const maxCount = sorted[0]?.[1] || 1;
+
+        const container = document.getElementById("documents-by-category");
+        container.innerHTML = sorted
+          .map(([category, count]) => {
+            const widthPercent = (count / maxCount) * 100;
+            return `
+          <div class="bar-item">
+            <div class="bar-label">${category}</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="width: ${widthPercent}%">
+                <div class="bar-value">${count}</div>
+              </div>
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+      }
+
+      function renderDocumentsTimeline() {
+        const monthlyDocs = {};
+        documentsData.forEach((doc) => {
+          if (!doc.date) return;
+          const monthKey = doc.date.substring(0, 7);
+          monthlyDocs[monthKey] = (monthlyDocs[monthKey] || 0) + 1;
+        });
+
+        const sortedMonths = Object.keys(monthlyDocs).sort();
+        const maxDocs = Math.max(...Object.values(monthlyDocs), 1);
+
+        const container = document.getElementById("documents-timeline");
+        if (sortedMonths.length === 0) {
+          container.innerHTML =
+            '<div style="text-align: center; color: var(--text-muted); padding: 2rem;">Ingen datoinformasjon</div>';
+          return;
+        }
+
+        container.innerHTML = sortedMonths
+          .map((month) => {
+            const count = monthlyDocs[month];
+            const heightPercent = (count / maxDocs) * 100;
+            const [year, monthNum] = month.split("-");
+            const monthName = new Date(
+              year,
+              parseInt(monthNum) - 1,
+            ).toLocaleDateString("no-NO", { month: "short" });
+
+            return `
+          <div class="timeline-bar" style="height: ${heightPercent}%">
+            <div class="timeline-bar-value">${count}</div>
+            <div class="timeline-bar-label">${monthName} '${year.slice(2)}</div>
+          </div>
+        `;
+          })
+          .join("");
+      }
+
+      function renderTopParticipants() {
+        const participantCount = {};
+        meetingsData.forEach((meeting) => {
+          meeting.participants?.forEach((participant) => {
+            const name = participant.name || "Ukjent";
+            if (!participantCount[name]) {
+              participantCount[name] = {
+                count: 0,
+                org: participant.organization || "Ukjent organisasjon",
+              };
+            }
+            participantCount[name].count++;
+          });
+        });
+
+        const sorted = Object.entries(participantCount)
+          .sort((a, b) => b[1].count - a[1].count)
+          .slice(0, 10);
+
+        const container = document.getElementById("top-participants");
+        container.innerHTML = sorted
+          .map(
+            ([name, data], index) => `
+        <div class="stakeholder-item">
+          <div class="stakeholder-info">
+            <div class="stakeholder-rank">${index + 1}</div>
+            <div>
+              <div class="stakeholder-name">${name}</div>
+              <div class="stakeholder-org">${data.org}</div>
+            </div>
+          </div>
+          <div class="stakeholder-count">${data.count}</div>
+        </div>
+      `,
+          )
+          .join("");
+      }
+
+      function renderOrgParticipation() {
+        const orgCount = {};
+        meetingsData.forEach((meeting) => {
+          meeting.participants?.forEach((participant) => {
+            const org = participant.organization || "Ukjent";
+            orgCount[org] = (orgCount[org] || 0) + 1;
+          });
+        });
+
+        const sorted = Object.entries(orgCount)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 10);
+
+        const maxCount = sorted[0]?.[1] || 1;
+
+        const container = document.getElementById("org-participation");
+        container.innerHTML = sorted
+          .map(([org, count]) => {
+            const widthPercent = (count / maxCount) * 100;
+            return `
+          <div class="bar-item">
+            <div class="bar-label">${org}</div>
+            <div class="bar-track">
+              <div class="bar-fill" style="width: ${widthPercent}%">
+                <div class="bar-value">${count}</div>
+              </div>
+            </div>
+          </div>
+        `;
+          })
+          .join("");
+      }
+
+      function renderDecisionsActions() {
+        const meetingsWithData = meetingsData
+          .filter((m) => m.date)
+          .map((m) => ({
+            date: m.date,
+            decisions: m.decisions?.length || 0,
+            actions: m.action_items?.length || 0,
+          }))
+          .sort((a, b) => a.date.localeCompare(b.date));
+
+        const maxValue = Math.max(
+          ...meetingsWithData.map((m) => m.decisions + m.actions),
+          1,
+        );
+
+        const container = document.getElementById("decisions-actions");
+        if (meetingsWithData.length === 0) {
+          container.innerHTML =
+            '<div style="text-align: center; color: var(--text-muted); padding: 2rem;">Ingen data</div>';
+          return;
+        }
+
+        container.innerHTML = meetingsWithData
+          .slice(0, 20)
+          .map((meeting) => {
+            const total = meeting.decisions + meeting.actions;
+            const heightPercent = (total / maxValue) * 100;
+            const date = new Date(meeting.date);
+            const label = date.toLocaleDateString("no-NO", {
+              day: "numeric",
+              month: "short",
+            });
+
+            return `
+          <div class="timeline-bar" style="height: ${heightPercent}%">
+            <div class="timeline-bar-value">${total}</div>
+            <div class="timeline-bar-label">${label}</div>
+          </div>
+        `;
+          })
+          .join("");
+      }
+
+      init();
+    </script>
+  </body>
+</html>

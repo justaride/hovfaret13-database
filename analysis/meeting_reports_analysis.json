@@ -1,0 +1,441 @@
+{
+  "generated": "2026-01-26T15:19:59.224951",
+  "summary": {
+    "total_meetings": 61,
+    "meetings_with_reports": 0,
+    "meetings_without_reports": 61,
+    "coverage_percentage": 0.0,
+    "unmatched_reports": 0
+  },
+  "matched": [],
+  "unmatched_reports": [],
+  "meetings_without_reports": [
+    {
+      "meeting_id": "m_2023-06-27_strategimote_hovfaret_13",
+      "meeting_title": "Strategimøte Hovfaret 13 - Økologisk restaurering og sirkulær stedsutvikling",
+      "date": "2023-06-27",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 4
+    },
+    {
+      "meeting_id": "m_2023-11-24_urbania_prosjekt_oppstart",
+      "meeting_title": "Møte Urbania - Prosjekt oppstart og gjennomgang",
+      "date": "2023-11-24",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-02-21_strategisk_avklaring_konseptskisse",
+      "meeting_title": "Strategisk Avklaring og Konseptskisse Hovfaret",
+      "date": "2024-02-21",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-03-11_urbania_hovfaret_13_konseptskisse_1_0",
+      "meeting_title": "Urbania Hovfaret 13 - Konseptskisse 1.0",
+      "date": "2024-03-11",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2024-04-03_urbania_leveransem_te_konsepskisse_og_st",
+      "meeting_title": "Urbania - Leveransemøte Konsepskisse og Strategi Hovfaret 13.",
+      "date": "2024-04-03",
+      "organizer": "einar@naturalstate.no",
+      "participant_count": 7
+    },
+    {
+      "meeting_id": "m_2024-05-06_hovfaret_13_med_r21",
+      "meeting_title": "Hovfaret 13 med R21",
+      "date": "2024-05-06",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2024-06-03_hovfaret_13_stand_up_",
+      "meeting_title": "Hovfaret 13 Stand Up ",
+      "date": "2024-06-03",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-06-27_strategimøte_urbania/natural_s",
+      "meeting_title": "Strategimøte Urbania/Natural State - Hovfaret 13",
+      "date": "2024-06-27",
+      "organizer": "helene@naturalstate.no",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2024-06-27_sirkular_okonomi_strategi",
+      "meeting_title": "Sirkulær økonomi - Strateginotat og slides",
+      "date": "2024-06-27",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2024-09-03_urbania_baerekraft_introduksjon",
+      "meeting_title": "Urbania Eiendom - Bærekraft og videre bruk, byggenæringen - Introduksjon",
+      "date": "2024-09-03",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-09-09_l_renveien_hovfaret_13",
+      "meeting_title": "Lørenveien + Hovfaret 13",
+      "date": "2024-09-09",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-09-19_laara_gabriel_a_closer_look_hovfaret_13",
+      "meeting_title": "Laara / Gabriel - A closer look - Hovfaret 13",
+      "date": "2024-09-19",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-09-24_laara_gabriel_urbania_hovfaret_13_coms_t",
+      "meeting_title": "Laara / Gabriel URBANIA HOVFARET 13 COMS TALK ?",
+      "date": "2024-09-24",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-09-27_urbania_r21_natural_state_hovfaret_13",
+      "meeting_title": "Urbania/R21/Natural State - Hovfaret 13",
+      "date": "2024-09-27",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2024-10-15_hovfaret_13_oppf_lging_",
+      "meeting_title": "Hovfaret 13 Oppfølging ",
+      "date": "2024-10-15",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2024-10-31_hovfaret_13_nettside_workshop_",
+      "meeting_title": "Hovfaret 13 - Nettside Workshop ",
+      "date": "2024-10-31",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 4
+    },
+    {
+      "meeting_id": "m_2024-11-06_rask_avklaring_hovfaret_13_elementer_",
+      "meeting_title": "Rask Avklaring . Hovfaret 13 elementer ",
+      "date": "2024-11-06",
+      "organizer": "",
+      "participant_count": 1
+    },
+    {
+      "meeting_id": "m_2024-11-12_hovfaret_13_website_framework_",
+      "meeting_title": "Hovfaret 13 Website  ( framework ) ",
+      "date": "2024-11-12",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2024-11-27__27_november_24",
+      "meeting_title": "Hovfaret 13 - Statusmøte november",
+      "date": "2024-11-27",
+      "organizer": null,
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2024-12-03_hovfaret_ncc_ombruk",
+      "meeting_title": "Hovfaret 13 - NCC og ombrukskartlegging",
+      "date": "2024-12-03",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-12-09_h13_presentation_3",
+      "meeting_title": "H13 Presentation #3",
+      "date": "2024-12-09",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2024-12-10_snakke_med_akt_r_for_1_etg_hovfaret_13_",
+      "meeting_title": "Snakke med Aktør for 1 etg  Hovfaret 13 - ",
+      "date": "2024-12-10",
+      "organizer": "",
+      "participant_count": 1
+    },
+    {
+      "meeting_id": "m_2024-12-11_befaring_hovfaret_13_energikartlegging_m",
+      "meeting_title": "Befaring Hovfaret 13 - Energikartlegging mm. ",
+      "date": "2024-12-11",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 4
+    },
+    {
+      "meeting_id": "m_2024-12-18_trym_vill_energi_tilbud",
+      "meeting_title": "Trym - Vill Energi tilbud og Enova-støtte",
+      "date": "2024-12-18",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2024-12-19_oppf_lging_og_status_m_te_veien_videre_h",
+      "meeting_title": "Oppfølging og Status møte veien videre Hovfaret 13  - 2025",
+      "date": "2024-12-19",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2025-01-08_hovfaret_13",
+      "meeting_title": "Strategisk Årsmøte med Knut Halvor - Hovfaret 13",
+      "date": "2025-01-08",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-01-09_status_hovfaret_13_web",
+      "meeting_title": "Status Hovfaret 13 web",
+      "date": "2025-01-09",
+      "organizer": "laara@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-01-10__hovfaret_13_leietaker_m_te_",
+      "meeting_title": " HOVFARET 13 - LEIETAKER MØTE ",
+      "date": "2025-01-10",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2025-01-17_hovfaret_13_status_m_te_",
+      "meeting_title": "Hovfaret 13 Status Møte ",
+      "date": "2025-01-17",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 7
+    },
+    {
+      "meeting_id": "m_2025-01-27_viderefakturering_hovfaret_13",
+      "meeting_title": "viderefakturering hovfaret 13",
+      "date": "2025-01-27",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-02-04_urbania_knut_halvor",
+      "meeting_title": "URBANIA samtale med Knut Halvor",
+      "date": "2025-02-04",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-02-11_milj_risiko_kartlegging_hovfaret_13_i_sa",
+      "meeting_title": "Miljørisiko kartlegging Hovfaret 13 ( I sammeheng med arbeidet til Vill Energi ) ",
+      "date": "2025-02-11",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-03-04_trym_einar_vill_energi",
+      "meeting_title": "Trym og Einar - Vill Energi og klimarapporter",
+      "date": "2025-03-04",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-03-07_hovfaret_13_statusm_tet",
+      "meeting_title": "Hovfaret 13 - Statusmøtet",
+      "date": "2025-03-07",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2025-03-07_urbania_prosess_workshop",
+      "meeting_title": "Urbania prosess - Dispensasjonsstrategi og leietakerdialog",
+      "date": "2025-03-07",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2025-03-17_status_hovfaret",
+      "meeting_title": "Status Hovfaret",
+      "date": "2025-03-17",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-04-29_trym_vill_energi_hovfaret",
+      "meeting_title": "Trym - Vill Energi Hovfaret 13",
+      "date": "2025-04-29",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-05-05_m_te_med_bente_otto_bydel_ullern_",
+      "meeting_title": "Møte med Bente Otto Bydel Ullern - ",
+      "date": "2025-05-05",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-05-06_jan_thomas_ncc_hovfaret",
+      "meeting_title": "Jan Thomas - Nordic Circle Construction + Andreas oppfølging",
+      "date": "2025-05-06",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_unknown_date_rapport_fra_pent_mte_bydel_ullern",
+      "meeting_title": "Rapport fra åpent møte: Bydel Ullern 2035",
+      "date": "2025-05-13",
+      "organizer": null,
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-05-21_barekraftsrapport_struktur",
+      "meeting_title": "Bærekraftsrapport - Strukturering og ESRS",
+      "date": "2025-05-21",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-05-22_m_te_med_bydels_leder_p_hovfaret_13_vi_m",
+      "meeting_title": "Presentasjon for Bydelsledere Ullern - Omsorg+ Hovfaret 13",
+      "date": "2025-05-22",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2025-05-23_hovfaret_debrief",
+      "meeting_title": "Hovfaret Debrief + Planlegge neste steg",
+      "date": "2025-05-23",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-06-03_oppf_lging_prosjekt_gruppen_hovfaret_13_",
+      "meeting_title": "Oppfølging Prosjekt Gruppen Hovfaret 13 ",
+      "date": "2025-06-03",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 4
+    },
+    {
+      "meeting_id": "m_2025_06_24_med_james_lorentzen",
+      "meeting_title": "Møte med James Lorentzen - Hovfaret 13",
+      "date": "2025-06-24",
+      "organizer": null,
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-07-04_b_rekraftsrapport_hovfaret_13",
+      "meeting_title": "Bærekraftsrapport - Hovfaret 13",
+      "date": "2025-07-04",
+      "organizer": "linda@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-08-22_andreas_energiklassifisering",
+      "meeting_title": "Andreas - Energiklassifisering og grønn finansiering",
+      "date": "2025-08-22",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-08-25_energikartlegging_hovfaret_13_avklaringe",
+      "meeting_title": "Energikartlegging Hovfaret 13 - Avklaringer ",
+      "date": "2025-08-25",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-08-28_kort_brief_om_utviklingsprosess_hovfaret",
+      "meeting_title": "Kort Brief med Thomas Thorsnes (Urbania) - Rammesøknad Omsorg+",
+      "date": "2025-08-28",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-08-29_barekraft_og_koms_brief",
+      "meeting_title": "Bærekraftsstatus + KOMS kommunikasjonsbriefing",
+      "date": "2025-08-29",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-09-02_andreas_og_einar_stedsokonomi",
+      "meeting_title": "Andreas oppfølging + Stedsøkonomisk prognose Einar",
+      "date": "2025-09-02",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-09-04_hovfaret_13_koordinere_rammes_knad",
+      "meeting_title": "Hovfaret 13 , koordinere rammesøknad",
+      "date": "2025-09-04",
+      "organizer": "thomas@r21.no",
+      "participant_count": 6
+    },
+    {
+      "meeting_id": "m_2025-09-05_hovfaret_13_strategimote",
+      "meeting_title": "Hovfaret 13 - Strategimøte og prosjektgjennomgang",
+      "date": "2025-09-05",
+      "organizer": "Natural State AS",
+      "participant_count": 4
+    },
+    {
+      "meeting_id": "m_2025-09-08_nce_soknad_oppfolging",
+      "meeting_title": "Oppfølging NCE søknad - Nordic Innovation",
+      "date": "2025-09-08",
+      "organizer": "Natural State AS",
+      "participant_count": 5
+    },
+    {
+      "meeting_id": "m_2025-09-19_tlf_thomas_nabolagsmote",
+      "meeting_title": "Telefonsamtale Thomas - Planlegging nabolagsmøte",
+      "date": "2025-09-19",
+      "organizer": "Linda Marie Aas",
+      "participant_count": 2
+    },
+    {
+      "meeting_id": "m_2025-09-27_urbania_hovfaret_workshop",
+      "meeting_title": "Urbania Hovfaret 13 - Konseptworkshop med R21",
+      "date": "2025-09-27",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 4
+    },
+    {
+      "meeting_id": "m_2025-10-14_hovfaret_befaring_og_diskusjon",
+      "meeting_title": "Hovfaret 13 - Befaring og prosjektdiskusjon",
+      "date": "2025-10-14",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-10-14_nabolagsmote_hovfaret",
+      "meeting_title": "Nabolagsmøte Hovfaret 13",
+      "date": "2025-10-14",
+      "organizer": "Urbania Eiendom AS",
+      "participant_count": 30
+    },
+    {
+      "meeting_id": "m_2025-10-29_bydelsutvalgsmoete",
+      "meeting_title": "Bydelsutvalgsmøte - Hovfaret 13 presentasjon",
+      "date": "2025-10-29",
+      "organizer": "Bydel Ullern",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2025-12-19_strategimote_status",
+      "meeting_title": "Strategimøte - Prosjektstatus og Nordic Circular Construction",
+      "date": "2025-12-19",
+      "organizer": "gabriel@naturalstate.no",
+      "participant_count": 3
+    },
+    {
+      "meeting_id": "m_2026-01-06_internt_disp_nabovarsel",
+      "meeting_title": "Internt møte - Dispensasjonssøknad og nabovarsel-status",
+      "date": "2026-01-06",
+      "organizer": "Natural State AS",
+      "participant_count": 3
+    }
+  ]
+}

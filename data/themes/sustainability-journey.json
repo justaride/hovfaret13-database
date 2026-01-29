@@ -1,0 +1,348 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-12-03",
+    "description": "Kronologisk bærekraftsreise for Hovfaret 13 prosjektet",
+    "purpose": "Dokumenterer alle bærekraftsrelaterte prosesser, beslutninger og leveranser",
+    "content_classification": {
+      "type": "project_data",
+      "deliverable_id": null,
+      "deliverable_version": null,
+      "source_document": "Meeting notes and project records",
+      "is_primary_source": true
+    }
+  },
+  "journey": [
+    {
+      "id": "s_001",
+      "date": "2023-11-21",
+      "type": "foundation",
+      "title": "Bærekraft som grunnprinsipp",
+      "title_no": "Sirkulær stedsutvikling etableres",
+      "description": "Første strategimøte etablerer bærekraft og sirkulær økonomi som kjerneargumentasjon mot rivningskravet.",
+      "details": [
+        "Økologisk restaurering som strategi",
+        "Sirkulære prinsipper skal gjennomsyre prosjektet",
+        "Signalprosjekt for fremtidens bygging"
+      ],
+      "quote": "Vi må vise at sirkulære prinsipper fungerer i praksis. At det er mulig å beskrive og måle bærekraft på alle nivåer.",
+      "linked_meeting": "m_2023-11-21_strategimote_hovfaret_13",
+      "icon": "leaf",
+      "category": "strategy"
+    },
+    {
+      "id": "s_002",
+      "date": "2024-03-11",
+      "type": "strategy",
+      "title": "Bærekraftsargumentasjon formalisert",
+      "title_no": "Miljøgevinster som politisk verktøy",
+      "description": "Møte etablerer bærekraft som hovedargument for å påvirke politikere til å endre områdeplanen.",
+      "details": [
+        "Politisk påvirkning gjennom miljødokumentasjon",
+        "Behov for CO₂-regnskap identifisert",
+        "Demonstrere prosjektets verdi (miljø, samfunn, økonomi)"
+      ],
+      "linked_meeting": "m_2024-03-11_hovfaret_13_oppstartsmote",
+      "icon": "strategy",
+      "category": "strategy"
+    },
+    {
+      "id": "s_003",
+      "date": "2024-04-12",
+      "type": "strategy",
+      "title": "Hovfaret 13 som katalysator",
+      "title_no": "Referanseprosjekt for bærekraftig byutvikling",
+      "description": "Strateginotat posisjonerer prosjektet som potensielt referanseprosjekt for bærekraftig byutvikling.",
+      "details": [
+        "Områdeplanens indre motsetninger analysert",
+        "Gap mellom politiske ambisjoner og realitet",
+        "Hva har samfunnet spart i klimautslipp ved å bevare bygget?"
+      ],
+      "quote": "Vi snakker om et bygg som er fleksibelt. Det er bygd og prosjektert for utvikling. Fortiden beregnet inn det økte behovet. Det var bærekraftig... skal man kaste bort det verdifulle i det?",
+      "linked_meeting": "m_2024-04-12_hovfaret_notat_og_dokumentasjon",
+      "icon": "document",
+      "category": "strategy"
+    },
+    {
+      "id": "s_004",
+      "date": "2024-05-08",
+      "type": "content",
+      "title": "Sirkulære slides utviklet",
+      "title_no": "Fyrtårn for sirkulær stedsutvikling",
+      "description": "11 strategiske hovedpunkter og 4 slides utviklet som posisjonerer Hovfaret 13 som fyrtårn for sirkulær stedsutvikling.",
+      "details": [
+        "Bevaring og ressursutnyttelse",
+        "Delingstjenester og lokal produksjon",
+        "Sirkulære verdikjeder og nettverk",
+        "Katalysator for sirkulær bydel"
+      ],
+      "linked_meeting": "m_2024-05-08_sirkul_r_konomi_strateginotat_og_sli",
+      "icon": "recycle",
+      "category": "content"
+    },
+    {
+      "id": "s_005",
+      "date": "2024-05-30",
+      "type": "analysis",
+      "title": "Grunnvannsundersøkelser",
+      "title_no": "Geoteknisk analyse startet",
+      "description": "Befaring og analyse av geotekniske forhold inkludert grunnvann og kvikkleire-risiko.",
+      "details": [
+        "Hoffselva som økologisk korridor",
+        "Kvikkleire dokumentert i området",
+        "Riving medfører høy geoteknisk belastning"
+      ],
+      "linked_meeting": "m_2024-05-30_befaring_grunnvannsundersoekelser_ho",
+      "icon": "terrain",
+      "category": "technical"
+    },
+    {
+      "id": "s_006",
+      "date": "2024-06-03",
+      "type": "milestone",
+      "title": "Energimerke utstedt",
+      "title_no": "Energimerke F dokumentert",
+      "description": "Offisielt energimerke utstedt som viser nåværende tilstand og forbedringspotensial.",
+      "details": [
+        "Nåværende energimerke: F",
+        "Forbruk: 232 kWh/m²/år",
+        "Grunnlag for forbedringsanalyse"
+      ],
+      "icon": "energy",
+      "category": "technical"
+    },
+    {
+      "id": "s_007",
+      "date": "2024-12-11",
+      "type": "milestone",
+      "title": "Vill Energi-samarbeid startet",
+      "title_no": "Befaring for energikartlegging",
+      "description": "Første befaring med Vill Energi AS for å starte teknisk energikartlegging og klimagassberegninger.",
+      "details": [
+        "Byggets tekniske tilstand kartlagt",
+        "Ventilasjonssystem analysert (CAV)",
+        "Potensielle tiltak identifisert"
+      ],
+      "linked_meeting": "m_2024-12-11_befaring_hovfaret_13_energikartlegging_m",
+      "icon": "inspection",
+      "category": "technical"
+    },
+    {
+      "id": "s_008",
+      "date": "2025-01-23",
+      "type": "analysis",
+      "title": "Miljørisiko kartlegging",
+      "title_no": "Geoteknisk risikovurdering",
+      "description": "Kartlegging av miljørisiko i sammenheng med Vill Energi-arbeidet, inkludert kvikkleirevurdering.",
+      "details": [
+        "ROS-analyse Hoff Skole som referanse",
+        "Minimal terrenginngrep anbefalt",
+        "Rehabilitering avlaster området"
+      ],
+      "linked_meeting": "m_2025-01-23_miljorisiko_kartlegging_hovfaret_13",
+      "icon": "risk",
+      "category": "technical"
+    },
+    {
+      "id": "s_009",
+      "date": "2025-04-11",
+      "type": "deliverable",
+      "title": "Energikartlegging ferdig",
+      "title_no": "Vill Energi rapport levert",
+      "description": "Komplett energikartlegging med 10 vurderte tiltak, kostnader og lønnsomhetsanalyse.",
+      "details": [
+        "14 siders teknisk rapport",
+        "50% energireduksjon mulig",
+        "Energimerke F → C oppnåelig",
+        "Enova-støtte kvalifisert"
+      ],
+      "metrics": {
+        "current_consumption": "232 kWh/m²/år",
+        "target_consumption": "116 kWh/m²/år",
+        "potential_rating": "C (fra F)"
+      },
+      "document": "20250411 Energikartlegging Hovfaret 13.pdf",
+      "icon": "report",
+      "category": "deliverable"
+    },
+    {
+      "id": "s_010",
+      "date": "2025-04-22",
+      "type": "deliverable",
+      "title": "Klimagassberegninger ferdig",
+      "title_no": "48% besparelse dokumentert",
+      "description": "LCA-analyse over 50 år viser at rehabilitering sparer 48% CO₂ sammenlignet med riving og nybygg.",
+      "details": [
+        "18 siders LCA-rapport",
+        "3 scenarier analysert",
+        "2 549 tonn CO₂ spart",
+        "80% reduksjon i materialutslipp"
+      ],
+      "metrics": {
+        "scenario_1_tonnes": 5343,
+        "scenario_2_tonnes": 2794,
+        "co2_saved_tonnes": 2549,
+        "reduction_percent": 48
+      },
+      "document": "Klimagassberegninger Hovfaret 13 v2.pdf",
+      "icon": "co2",
+      "category": "deliverable"
+    },
+    {
+      "id": "s_011",
+      "date": "2025-07-04",
+      "type": "deliverable",
+      "title": "Bærekraftsrapport levert",
+      "title_no": "83-siders ESRS-rapport",
+      "description": "Omfattende bærekraftsrapport som konsoliderer alle miljømessige, sosiale og økonomiske argumenter.",
+      "details": [
+        "ESRS-tilpasset struktur",
+        "Triple Bottom Line-rammeverk",
+        "Klima, natur, sosial, økonomi",
+        "Helhetlig vurdering"
+      ],
+      "esrs_coverage": [
+        {"code": "ESRS E1", "name": "Klimaendring"},
+        {"code": "ESRS E4", "name": "Biologisk mangfold"},
+        {"code": "ESRS E5", "name": "Sirkulær økonomi"},
+        {"code": "ESRS S3", "name": "Berørte samfunn"}
+      ],
+      "document": "Bærekraftsrapport - Hovfaret 13.pdf",
+      "icon": "book",
+      "category": "deliverable"
+    },
+    {
+      "id": "s_012",
+      "date": "2025-09-05",
+      "type": "decision",
+      "title": "Strategisk akselerasjon",
+      "title_no": "Direkte til Omsorg+",
+      "description": "Beslutning om å akselerere strategi mot Omsorg+ basert på bydelens behov og bærekraftsargumentasjon.",
+      "details": [
+        "Dropper studiokontor-fasen",
+        "Bærekraft + samfunnsnytte = sterkere case",
+        "73 Omsorg+ enheter dekker 46% av bydelens behov"
+      ],
+      "linked_meeting": "m_2025-09-05_hovfaret_13_strategimote",
+      "icon": "accelerate",
+      "category": "decision"
+    },
+    {
+      "id": "s_013",
+      "date": "2025-09-05",
+      "type": "partnership",
+      "title": "Nordic Circle Hotspot",
+      "title_no": "Sirkulær pilot-partner",
+      "description": "Hovfaret 13 blir pilot-kunde for Nordic Circle Construction, testing av sirkulære byggematerialer.",
+      "details": [
+        "Sirkulære byggematerialer skal testes",
+        "Living laboratory for sirkulære prinsipper",
+        "Del av Nordic Innovation-søknad"
+      ],
+      "linked_meeting": "m_2025-09-05_hovfaret_13_strategimote",
+      "icon": "partnership",
+      "category": "partnership"
+    },
+    {
+      "id": "s_014",
+      "date": "2025-10-14",
+      "type": "engagement",
+      "title": "Nabolagsmøte",
+      "title_no": "~30 naboer informert",
+      "description": "Første offentlige presentasjon av bærekraftscasen og transformasjonsplanene for nabolaget.",
+      "details": [
+        "Bærekraftsargumentasjon presentert",
+        "Positiv respons på transformasjon",
+        "Interesse for Omsorg+ eldreboliger"
+      ],
+      "linked_meeting": "m_2025-10-14_nabolagsmote_hovfaret",
+      "icon": "community",
+      "category": "engagement"
+    },
+    {
+      "id": "s_015",
+      "date": "2025-10-16",
+      "type": "regulatory",
+      "title": "Nabovarsel sendt",
+      "title_no": "Formelt nabovarsel utsendt",
+      "description": "Formelt nabovarsel sendt til alle berørte naboer som del av bruksendringsprosessen.",
+      "details": [
+        "Sendt via Byggesaksrådgivning AS",
+        "Forutsetning for bruksendringssøknad",
+        "Del av regulatorisk prosess"
+      ],
+      "icon": "mail",
+      "category": "regulatory"
+    },
+    {
+      "id": "s_016",
+      "date": "2025-10-30",
+      "type": "regulatory",
+      "title": "Bruksendringssøknad pågår",
+      "title_no": "Søknad under utarbeidelse",
+      "description": "Bruksendringssøknad til PBE under utarbeidelse med bærekraftsargumentasjon.",
+      "details": [
+        "Status: Pågår (mål nov 2025)",
+        "Byggesaksrådgivning AS som ansvarlig søker",
+        "Klimagass-dokumentasjon skal vedlegges"
+      ],
+      "icon": "application",
+      "category": "regulatory"
+    },
+    {
+      "id": "s_017",
+      "date": "2025-12-01",
+      "type": "milestone",
+      "title": "Konseptskisse 2.0",
+      "title_no": "Oppdatert bærekraftsdokumentasjon",
+      "description": "Konseptskisse oppdatert med alle bærekraftsleveranser og strategiske beslutninger.",
+      "details": [
+        "Del 5: Progresjon (13 sider)",
+        "Energirapport integrert",
+        "Klimagassberegninger integrert",
+        "Bærekraftsrapport referert"
+      ],
+      "icon": "document",
+      "category": "deliverable"
+    }
+  ],
+  "summary": {
+    "total_events": 17,
+    "timespan": "2023-11-21 til 2025-12-01",
+    "duration_months": 25,
+    "categories": {
+      "strategy": 3,
+      "content": 1,
+      "technical": 4,
+      "deliverable": 4,
+      "decision": 1,
+      "partnership": 1,
+      "engagement": 1,
+      "regulatory": 2
+    },
+    "key_deliverables": [
+      {
+        "date": "2025-04-11",
+        "title": "Energikartlegging",
+        "source": "Vill Energi AS"
+      },
+      {
+        "date": "2025-04-22",
+        "title": "Klimagassberegninger",
+        "source": "Vill Energi AS"
+      },
+      {
+        "date": "2025-07-04",
+        "title": "Bærekraftsrapport",
+        "source": "Natural State"
+      }
+    ],
+    "key_metrics": {
+      "co2_reduction_percent": 48,
+      "co2_saved_tonnes": 2549,
+      "material_savings_percent": 80,
+      "energy_improvement": "F → C",
+      "energy_reduction_percent": 50
+    }
+  }
+}

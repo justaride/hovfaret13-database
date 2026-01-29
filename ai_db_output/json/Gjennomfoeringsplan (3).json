@@ -1,0 +1,45 @@
+{
+  "source": {
+    "file_name": "Gjennomfoeringsplan (3).pdf",
+    "relative_path": "Gjennomfoeringsplan (3).pdf",
+    "size_bytes": 447896,
+    "modified_time": "2026-01-26T19:00:55.801842+00:00",
+    "sha256": "e61995f650e6ad169bece11000801514d57505112a542b619d3207903e3aa275"
+  },
+  "pdfinfo": {
+    "Author": "pbejob",
+    "Producer": "PixEdit AS,  PixToolsLib Version 2.6.4.6",
+    "CreationDate": "Mon Dec 15 12:30:11 2014 CET",
+    "ModDate": "Tue Jan 14 12:03:16 2020 CET",
+    "Custom Metadata": "no",
+    "Metadata Stream": "yes",
+    "Tagged": "no",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "1",
+    "Encrypted": "no",
+    "Page size": "842.16 x 595.2 pts (A4)",
+    "Page rot": "0",
+    "File size": "447896 bytes",
+    "Optimized": "no",
+    "PDF version": "1.4"
+  },
+  "extraction": {
+    "tool": "pdftotext",
+    "options": "-layout",
+    "extracted_at": "2026-01-26T19:16:03.089474+00:00",
+    "page_count": 1,
+    "has_text": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Gjennomføringsplan\n\n Søknaden gjelder\n\n Eiendom/Byggested\n  Kommune      Gnr.   Bnr.   Adresse                    Versjonsnr.   Dato                   Sign.Ansv.søker\n  Oslo         31     145    Hoffsveien 17, 0275 OSLO   1             15.12.2014             Elektronisk signert\n\n\n Beskrivelse fagområde\n\n Prosjektering\n  Fagområde                            Ansvarsområde                               e          Foretakets navn           e               d        s       m ts   r r\n                                                                                   ss                                   ls              a        k       o      fo e\n                                                                                                                                 s      n        ru              n n\n                                                                                    la                             m te          g kø             b      d te    e\n                                                                                     k                             o         m              m            a a     n te\n                                                                                     sk                            d tila    o tin s        o ig         n\n                                                                                                                                                         k ig    in re\n                                                                                                                   a e       d e     e n    d rtid e     ø rd     t      t\n                                                                                      ilta                         n m       a sg ls        a ls         S fe     e rs\n                                                                                                                   k m       n n te         n                     id a   te\n                                                                                         T                         ø         k a t-rin      k le    te             e vs lu\n                                                                                                                   S ra      ø              ø id                   rb n sv\n                                                                                                                             S ig tila /e   S m tila                Aa a\n\n  Arkitektur                           Arkitektur og brukbarhet               2               879423392            2 4       X\n                                                                                               SJ ARKITEKTER AS    .1 1\n                                                                                                                    5 0\n                                                                                                                    1 2\n\n\n\n\n Direktoratet for byggkvalitet                                ByggSøkID: 63817563 Utskriftstidsdato: 15.12.2014                                          Side 1 av 1\n",
+      "char_count": 3144,
+      "line_count": 36
+    }
+  ],
+  "text": "Gjennomføringsplan\n\n Søknaden gjelder\n\n Eiendom/Byggested\n  Kommune      Gnr.   Bnr.   Adresse                    Versjonsnr.   Dato                   Sign.Ansv.søker\n  Oslo         31     145    Hoffsveien 17, 0275 OSLO   1             15.12.2014             Elektronisk signert\n\n\n Beskrivelse fagområde\n\n Prosjektering\n  Fagområde                            Ansvarsområde                               e          Foretakets navn           e               d        s       m ts   r r\n                                                                                   ss                                   ls              a        k       o      fo e\n                                                                                                                                 s      n        ru              n n\n                                                                                    la                             m te          g kø             b      d te    e\n                                                                                     k                             o         m              m            a a     n te\n                                                                                     sk                            d tila    o tin s        o ig         n\n                                                                                                                                                         k ig    in re\n                                                                                                                   a e       d e     e n    d rtid e     ø rd     t      t\n                                                                                      ilta                         n m       a sg ls        a ls         S fe     e rs\n                                                                                                                   k m       n n te         n                     id a   te\n                                                                                         T                         ø         k a t-rin      k le    te             e vs lu\n                                                                                                                   S ra      ø              ø id                   rb n sv\n                                                                                                                             S ig tila /e   S m tila                Aa a\n\n  Arkitektur                           Arkitektur og brukbarhet               2               879423392            2 4       X\n                                                                                               SJ ARKITEKTER AS    .1 1\n                                                                                                                    5 0\n                                                                                                                    1 2\n\n\n\n\n Direktoratet for byggkvalitet                                ByggSøkID: 63817563 Utskriftstidsdato: 15.12.2014                                          Side 1 av 1\n\f"
+}

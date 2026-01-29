@@ -1,0 +1,1579 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Møterapport 19.12.2025 - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-hover: #f1f5f9;
+        --bg-accent: #dbeafe;
+        --bg-success: #dcfce7;
+        --bg-warning: #fef3c7;
+        --bg-info: #e0f2fe;
+
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --text-accent: #2563eb;
+
+        --border-light: #e2e8f0;
+        --border-medium: #cbd5e1;
+
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+        --color-success: #10b981;
+        --color-warning: #f59e0b;
+        --color-info: #3b82f6;
+        --color-accent: #8b5cf6;
+
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+
+        --radius-sm: 6px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+        font-size: 14px;
+        min-height: 100vh;
+      }
+
+      .app-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: var(--space-6);
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: white;
+        }
+        .app-container {
+          max-width: 100%;
+          padding: 0;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .card {
+          break-inside: avoid;
+          box-shadow: none;
+          border: 1px solid var(--border-light);
+        }
+      }
+
+      /* Header */
+      .page-header {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: var(--space-6);
+        margin-bottom: var(--space-6);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .header-top {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+        margin-bottom: var(--space-4);
+      }
+
+      .back-link {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.875rem;
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--radius-sm);
+        transition: all 0.15s;
+      }
+
+      .back-link:hover {
+        background: var(--bg-hover);
+        color: var(--text-primary);
+      }
+
+      .meeting-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        background: var(--bg-accent);
+        color: var(--text-accent);
+        padding: var(--space-1) var(--space-3);
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      .page-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: var(--space-2);
+      }
+
+      .page-subtitle {
+        font-size: 1rem;
+        color: var(--text-secondary);
+      }
+
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-6);
+        padding-top: var(--space-4);
+        margin-top: var(--space-4);
+        border-top: 1px solid var(--border-light);
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        font-size: 0.875rem;
+      }
+
+      .meta-icon {
+        color: var(--text-muted);
+      }
+
+      .meta-label {
+        color: var(--text-muted);
+      }
+
+      .meta-value {
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+
+      /* Cards */
+      .card {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        margin-bottom: var(--space-6);
+        overflow: hidden;
+      }
+
+      .card-header {
+        padding: var(--space-5);
+        border-bottom: 1px solid var(--border-light);
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+      }
+
+      .card-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+      }
+
+      .card-icon.blue {
+        background: var(--bg-accent);
+      }
+      .card-icon.green {
+        background: var(--bg-success);
+      }
+      .card-icon.yellow {
+        background: var(--bg-warning);
+      }
+      .card-icon.purple {
+        background: #f3e8ff;
+      }
+
+      .card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .card-content {
+        padding: var(--space-5);
+      }
+
+      /* Summary box */
+      .summary-box {
+        background: var(--bg-main);
+        border-radius: var(--radius-md);
+        padding: var(--space-5);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      /* Participants */
+      .participants-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--space-4);
+      }
+
+      .participant-card {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-4);
+        background: var(--bg-main);
+        border-radius: var(--radius-md);
+      }
+
+      .participant-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--bg-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        color: var(--text-accent);
+        font-size: 0.875rem;
+      }
+
+      .participant-info {
+        flex: 1;
+      }
+
+      .participant-name {
+        font-weight: 600;
+        color: var(--text-primary);
+        font-size: 0.875rem;
+      }
+
+      .participant-org {
+        color: var(--text-muted);
+        font-size: 0.75rem;
+      }
+
+      /* Topics list */
+      .topics-list {
+        list-style: none;
+      }
+
+      .topics-list li {
+        padding: var(--space-3) 0;
+        border-bottom: 1px solid var(--border-light);
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-3);
+      }
+
+      .topics-list li:last-child {
+        border-bottom: none;
+      }
+
+      .topic-bullet {
+        width: 8px;
+        height: 8px;
+        background: var(--color-info);
+        border-radius: 50%;
+        margin-top: 6px;
+        flex-shrink: 0;
+      }
+
+      /* Decisions */
+      .decision-item {
+        padding: var(--space-4);
+        background: var(--bg-success);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--space-3);
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-3);
+      }
+
+      .decision-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .decision-check {
+        color: var(--color-success);
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      /* Action items */
+      .action-item {
+        padding: var(--space-4);
+        background: var(--bg-main);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--space-3);
+        border-left: 3px solid var(--color-warning);
+      }
+
+      .action-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .action-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: var(--space-2);
+      }
+
+      .action-task {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .action-meta {
+        display: flex;
+        gap: var(--space-4);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .action-status {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-1);
+        padding: var(--space-1) var(--space-2);
+        border-radius: 999px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        background: var(--bg-warning);
+        color: #92400e;
+      }
+
+      /* Discussion section */
+      .discussion-item {
+        padding: var(--space-4);
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .discussion-item:last-child {
+        border-bottom: none;
+      }
+
+      .discussion-heading {
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-2);
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+
+      .discussion-content {
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        line-height: 1.7;
+      }
+
+      /* Links section */
+      .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--space-4);
+      }
+
+      .link-card {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-4);
+        background: var(--bg-main);
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        color: var(--text-primary);
+        transition: all 0.15s;
+        border: 1px solid transparent;
+      }
+
+      .link-card:hover {
+        background: var(--bg-accent);
+        border-color: var(--text-accent);
+      }
+
+      .link-icon {
+        font-size: 1.5rem;
+      }
+
+      .link-text {
+        flex: 1;
+      }
+
+      .link-title {
+        font-weight: 500;
+        font-size: 0.875rem;
+      }
+
+      .link-desc {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      /* Footer */
+      .report-footer {
+        text-align: center;
+        padding: var(--space-6);
+        color: var(--text-muted);
+        font-size: 0.75rem;
+      }
+
+      .print-button {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-3) var(--space-5);
+        background: var(--text-accent);
+        color: white;
+        border: none;
+        border-radius: var(--radius-md);
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+
+      .print-button:hover {
+        background: #1d4ed8;
+      }
+
+      /* Transcript section */
+      .transcript-toggle {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-5);
+        background: var(--bg-card);
+        border: none;
+        border-radius: var(--radius-lg);
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        box-shadow: var(--shadow-sm);
+        margin-bottom: var(--space-3);
+        transition: all 0.15s;
+      }
+
+      .transcript-toggle:hover {
+        background: var(--bg-hover);
+      }
+
+      .transcript-toggle-icon {
+        transition: transform 0.2s;
+      }
+
+      .transcript-toggle.open .transcript-toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      .transcript-content {
+        display: none;
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+        margin-bottom: var(--space-6);
+      }
+
+      .transcript-content.open {
+        display: block;
+      }
+
+      .transcript-header {
+        padding: var(--space-4) var(--space-5);
+        background: var(--bg-main);
+        border-bottom: 1px solid var(--border-light);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .transcript-body {
+        padding: var(--space-5);
+        max-height: 600px;
+        overflow-y: auto;
+      }
+
+      .transcript-text {
+        font-size: 0.8rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        white-space: pre-wrap;
+        font-family:
+          "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+      }
+
+      .speaker-label {
+        font-weight: 600;
+        color: var(--text-accent);
+        display: block;
+        margin-top: var(--space-4);
+        margin-bottom: var(--space-2);
+      }
+
+      .speaker-label:first-child {
+        margin-top: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject(null);
+    </script>
+    <div class="app-container">
+      <!-- Header -->
+      <header class="page-header">
+        <div class="header-top no-print">
+          <a href="meetings.html" class="back-link">
+            <span>←</span> Tilbake til møter
+          </a>
+          <span class="meeting-badge">Internt møte</span>
+        </div>
+
+        <h1 class="page-title">
+          Møterapport: Prosjektstatus og Nordic Circular Construction
+        </h1>
+        <p class="page-subtitle">Strategisk statusmøte - Hovfaret 13</p>
+
+        <div class="meta-row">
+          <div class="meta-item">
+            <span class="meta-icon">📅</span>
+            <span class="meta-value">19. desember 2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">📍</span>
+            <span class="meta-value">Hovfaret 13, Oslo</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">👥</span>
+            <span class="meta-value">3 deltakere</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Deltakere -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-icon blue">👥</div>
+          <h2 class="card-title">Deltakere</h2>
+        </div>
+        <div class="card-content">
+          <div class="participants-grid">
+            <div class="participant-card">
+              <div class="participant-avatar">GF</div>
+              <div class="participant-info">
+                <div class="participant-name">Gabriel B Freeman</div>
+                <div class="participant-org">Natural State AS</div>
+              </div>
+            </div>
+            <div class="participant-card">
+              <div class="participant-avatar">AT</div>
+              <div class="participant-info">
+                <div class="participant-name">Andreas Thorsnes</div>
+                <div class="participant-org">Urbania Eiendom AS</div>
+              </div>
+            </div>
+            <div class="participant-card">
+              <div class="participant-avatar">EH</div>
+              <div class="participant-info">
+                <div class="participant-name">Einar Kleppe Holthe</div>
+                <div class="participant-org">Natural State AS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sammendrag -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-icon purple">📋</div>
+          <h2 class="card-title">Sammendrag</h2>
+        </div>
+        <div class="card-content">
+          <div class="summary-box">
+            Strategisk statusmøte om Hovfaret 13 prosjektets fremdrift mot
+            slutten av 2025. Prosjektet har fått betydelig økt synlighet gjennom
+            presentasjoner for Nordic Innovation, Husbanken og bydelsutvalget.
+            <br /><br />
+            <strong
+              >Hovfaret 13 er nå bekreftet som pilotprosjekt for Nordic Circular
+              Construction</strong
+            >
+            sammen med KPMG-bygget på Majorstua. Vi diskuterte
+            <strong>FRAVIK</strong> som nøkkelstrategi for regulatorisk
+            fleksibilitet ved transformasjonsprosjekter - anbefalt av
+            Riksantikvaren fremfor dispensasjon. <br /><br />
+            Viktig læring fra Einars Villa Granli-prosjekt om pragmatisk
+            tilnærming til transformasjon og dialog med kommunen.
+          </div>
+        </div>
+      </section>
+
+      <!-- Nøkkelpunkter -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-icon blue">💡</div>
+          <h2 class="card-title">Diskusjon - Nøkkelpunkter</h2>
+        </div>
+        <div class="card-content">
+          <div class="discussion-item">
+            <div class="discussion-heading">
+              🌍 Nordic Circular Construction
+            </div>
+            <div class="discussion-content">
+              Presenterte Hovfaret 13 for ledelsen i Nordic Innovation. Hydro
+              Construction (KPMG-bygget på Majorstua) blir pilot nummer to.
+              Prosjektet løftes frem i hele Norden som referanse for sirkulær
+              transformasjon. Ca 150 sirkulære løsninger identifisert, 20
+              produktark innhentet med priser.
+            </div>
+          </div>
+          <div class="discussion-item">
+            <div class="discussion-heading">⚖️ FRAVIK-strategi</div>
+            <div class="discussion-content">
+              Riksantikvaren og andre eksperter anbefaler
+              <strong>FRAVIK</strong> fremfor dispensasjon. FRAVIK ble etablert
+              for å gi fleksibilitet ved transformasjon, men brukes ikke korrekt
+              i dag. Dette blir nøkkelstrategi for å håndtere TEK-17 krav
+              pragmatisk.
+            </div>
+          </div>
+          <div class="discussion-item">
+            <div class="discussion-heading">💰 Priskalkyle-bevis</div>
+            <div class="discussion-content">
+              Vist på Husbank-seminar: Tåsen-case hadde standardkalkyle på 38
+              mill, deleentreprise-tilnærming verifisert til 22 mill.
+              <strong
+                >Beviset: transformasjon trenger ikke være dyrere - kalkylen er
+                feil, ikke konseptet.</strong
+              >
+            </div>
+          </div>
+          <div class="discussion-item">
+            <div class="discussion-heading">🏢 Utleiestrategi</div>
+            <div class="discussion-content">
+              Arkitektene i 4. etasje flytter ut i mars. Mulighet for å omgjøre
+              til studioer. Rom 302 aktuelt. Andreas nærmer seg 9 mill i årlig
+              leie. Diskuterte å bryte opp arealer for mer fleksibel utleie.
+            </div>
+          </div>
+          <div class="discussion-item">
+            <div class="discussion-heading">🏥 Fredrikstad referanse</div>
+            <div class="discussion-content">
+              Gamle sykehuset i Fredrikstad - lokal gruppe har opsjon, ulike
+              konsepter per etasje (eldre-fellesskap, ungdomskollektiv,
+              nabolagshus). Ønsker å bruke Hovfaret 13 som referanse. Potensielt
+              interessant for erfaringsutveksling.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beslutninger -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-icon green">✅</div>
+          <h2 class="card-title">Beslutninger</h2>
+        </div>
+        <div class="card-content">
+          <div class="decision-item">
+            <span class="decision-check">✓</span>
+            <span
+              >Hovfaret 13 bekreftet som pilotprosjekt for Nordic Circular
+              Construction</span
+            >
+          </div>
+          <div class="decision-item">
+            <span class="decision-check">✓</span>
+            <span>Bruke FRAVIK-tilnærming fremfor dispensasjonssøknader</span>
+          </div>
+          <div class="decision-item">
+            <span class="decision-check">✓</span>
+            <span>Endre "Aktiviteter" til "Utleie" på nettsiden</span>
+          </div>
+          <div class="decision-item">
+            <span class="decision-check">✓</span>
+            <span
+              >Fortsette arbeid uten ekstra fakturering til neste fase
+              starter</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Oppfølging -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-icon yellow">📌</div>
+          <h2 class="card-title">Oppfølgingsoppgaver</h2>
+        </div>
+        <div class="card-content">
+          <div class="action-item">
+            <div class="action-header">
+              <span class="action-task">Sende mail med linker til Andreas</span>
+              <span class="action-status">⏳ Åpen</span>
+            </div>
+            <div class="action-meta">
+              <span>👤 Gabriel</span>
+              <span>📅 20. desember 2025</span>
+            </div>
+          </div>
+          <div class="action-item">
+            <div class="action-header">
+              <span class="action-task"
+                >Oppdatere nettside - endre "Aktiviteter" til "Utleie"</span
+              >
+              <span class="action-status">⏳ Åpen</span>
+            </div>
+            <div class="action-meta">
+              <span>👤 Gabriel</span>
+            </div>
+          </div>
+          <div class="action-item">
+            <div class="action-header">
+              <span class="action-task"
+                >Lage utleieside med tegninger og kontaktskjema</span
+              >
+              <span class="action-status">⏳ Åpen</span>
+            </div>
+            <div class="action-meta">
+              <span>👤 Gabriel</span>
+            </div>
+          </div>
+          <div class="action-item">
+            <div class="action-header">
+              <span class="action-task"
+                >Utvikle priskalkyler for prosjektet</span
+              >
+              <span class="action-status">⏳ Åpen</span>
+            </div>
+            <div class="action-meta">
+              <span>👤 Natural State</span>
+            </div>
+          </div>
+          <div class="action-item">
+            <div class="action-header">
+              <span class="action-task"
+                >Vurdere Fredrikstad sykehusprosjekt som referanse</span
+              >
+              <span class="action-status">⏳ Åpen</span>
+            </div>
+            <div class="action-meta">
+              <span>👤 Andreas / Einar</span>
+              <span>📅 Julen 2025</span>
+            </div>
+          </div>
+          <div class="action-item">
+            <div class="action-header">
+              <span class="action-task"
+                >Besøk Villa Granli for referanseerfaring</span
+              >
+              <span class="action-status">⏳ Åpen</span>
+            </div>
+            <div class="action-meta">
+              <span>👤 Team</span>
+              <span>📅 Neste uke</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Linker -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-icon blue">🔗</div>
+          <h2 class="card-title">Relevante linker</h2>
+        </div>
+        <div class="card-content">
+          <div class="links-grid">
+            <a href="#" class="link-card">
+              <span class="link-icon">🏠</span>
+              <div class="link-text">
+                <div class="link-title">Hovedsiden</div>
+                <div class="link-desc">hfv.net.no</div>
+              </div>
+            </a>
+            <a href="#" class="link-card">
+              <span class="link-icon">📊</span>
+              <div class="link-text">
+                <div class="link-title">Aktiviteter / Utleie</div>
+                <div class="link-desc">Prosjektaktiviteter</div>
+              </div>
+            </a>
+            <a href="#" class="link-card">
+              <span class="link-icon">📽️</span>
+              <div class="link-text">
+                <div class="link-title">Presentasjonen</div>
+                <div class="link-desc">Konseptskisse</div>
+              </div>
+            </a>
+            <a href="#" class="link-card">
+              <span class="link-icon">👥</span>
+              <div class="link-text">
+                <div class="link-title">Nabolagsmøtet</div>
+                <div class="link-desc">14. oktober 2025</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Råtranskripsjon -->
+      <section class="no-print">
+        <button class="transcript-toggle" onclick="toggleTranscript()">
+          <span>📝 Rå transkripsjon fra møtet</span>
+          <span class="transcript-toggle-icon">▼</span>
+        </button>
+        <div class="transcript-content" id="transcriptContent">
+          <div class="transcript-header">
+            Automatisk transkribert møteopptak • 19. desember 2025 • Hovfaret 13
+          </div>
+          <div class="transcript-body">
+            <div class="transcript-text">
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det var Tiber i andre etasje, og det var Senter for Hjertesyke i
+              første etasje, og det var vevstupeloft, og det var herplaner fra
+              1820 og 15 år. Og så tenkte jeg: "Var jeg, hvor jeg var?" Det er
+              litt kort sagt. Vi fant hovedstrukturen, BNA, som Thomas kaller
+              det, for bygget. Og så reer vi alt dette inn til Afteprøgg. Det er
+              en av de første industrifremstilte uingene i dag, maskinlaften.
+              Veldig, veldig liten sanggangs i historien, der maskinlaften er
+              ikke veien 12-15 cm. Alle stokkler er forbundet med
+              stålkonstusjon. Så det er en forsterkning med stålover, ikke varje
+              med stengel, sånn stålstengel på 12-16 cm på hver 60 cm. Og her
+              ble de bare kappet enk som lafteregg, så det var hang og slang og
+              masse. Så gikk jeg i gang med å gjøre det her, og så fikk jeg
+              kommet med en sånn mer eller mindre. Det er bevaringsfeilig, men
+              hvis de hadde kjøpt det, så hadde det vært. Og så hadde jeg
+              startet en regulering, for det er regulering til anvendte forhold
+              som bor der. Så enkelt kan det bli gode og ta denne tur. Men det
+              er helt greit. Her har fra 4 til 40 personer hatt bostadsadresse.
+              Og ikke bare de barnene, men betjeningsbolig og bestyrer. Så det
+              er bolig opp. Men kommunen da, når de kom nå, og så etter 2-3 år
+              så klarer jeg å lenge seg hatt kontakt med, så sa du: "Du har tatt
+              samfunnsansvar."
+
+              <span class="speaker-label">Speaker 2 (Gabriel/Andreas)</span>
+              - Ja, og mer å ta vare på den. - Ja, og bygge den.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Men den er helt ubruk. Du har forskjell på det du har klart, det
+              er at det er natt det blir helt uten plan. Jeg har bare sagt at
+              det er rommene riktig foran til bygget stena, men det er ikke noe
+              riktig foran til en bruk som du har rettet imot. Men så går vi
+              videre med regulering. Og da igjen så sier vi: "Takk er på ni mål,
+              det er stortant." Og så skiljer vi to boligstamter. En får skille
+              opp for å få mer pastere blod og så greier. Og da, vi er jo for,
+              men vi vet jo at regelverket i kommunen er vondt. Og det er det,
+              så vil jeg bare sende det til politisk handling.
+
+              <span class="speaker-label">Speaker 2</span>
+              Det heter Vilagranli.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Nei, det er Vilagranli. Granli, ja. Granli. Ok, Vilagranli er jo
+              den, Kristian. Ja, ja, det er tyskeren. Jeg tror ikke det er så
+              mye forløpninger for at det er Vilagranli. Vilagranli. Det er 2017
+              som var noe som gifte seg. Hva?
+
+              <span class="speaker-label">Speaker 2</span>
+              Det er noe som gifte seg på Vilagranli. Nei, det var ikke noe her.
+              Det var hvor vi lave bord. Han? Nei.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det er ikke det er lyd. Det er ikke det er lyd. Ja, det er ikke
+              det er lyd. Der!
+
+              <span class="speaker-label">Speaker 2</span>
+              Nei, det var det jeg ville gav henne inn i Augustan. Det er den
+              her. Du bor der. Ja, det var pent. Så gøy.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det har vært masse debatter, og den kommunen burde ikke kjøpt der.
+              Og så ville de ikke gå ut kjøpt den, fordi det hadde blitt
+              forsånnet, så hadde de bilt masse penger på denne randmennom. Men
+              det jeg har sagt er at hvis man stasjoner kan gidde ikke å
+              byggesøke dette, jeg gjør det som fallet naturlig for det huset.
+              Så jeg har tatt en kjempe… Jeg har sprinklet det. Jeg har tatt en
+              nytt entrasjonsalleg, men ikke til tekstetten. Jeg har sagt at
+              mitt kjærligheter er til byggesøkkel, så jeg har satt en entrasjon
+              på Voltron, ikke fordi det er for sammen å skrive på det. Men jeg
+              har gått nesten at det skal være for sammen å skrive på det. Det
+              er godt å høre at du bare har gjort det. Det tør på sida, ikke
+              sant? Jeg satte i en ikke ordentlig heis, men det er mer… Stor
+              heis? Nei, det er med sånn heis-sjakt. Sånn som det ser ut som
+              heis. Ja, det er sånn som vi har her borte. Ja, men den er bare
+              plattformen?
+
+              <span class="speaker-label">Speaker 2</span>
+              Nei, det er plattformen. Den har vi en hånd. Jeg kan vise deg et
+              par.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det er det samme. Løft og plattform i sjakt. Ja, men inni sjakten
+              er det en heis-sjakt med skyler og sånt.
+
+              <span class="speaker-label">Speaker 2</span>
+              Sett her litt.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Men poenget er at det å gjøre det til forskjellskrav og gjøre det
+              til retningslinjer. Så det er utfordringen vi får her. Hvordan
+              skal vi komme på nå? For det er der vi er nå på sammen med.
+              Hvordan skal vi finne den av, bruke den av og dra den rundt på det
+              bygget? og tilsvarende så har vi gjort det på øynefelskater på
+              analyserende bygge og bygget opp igjen. Vi har gjort flere sånne
+              bygg som vi har dratt opp igjen, bruk det som står der. Og det er
+              det jeg skal gjøre i vårtfaget.
+
+              <span class="speaker-label">Speaker 2</span>
+              Det blir veldig spennende å se reaksjonene nå. Nå skal vi svare ut
+              de der EU-folket, og så får vi svare ut de som kommer inn og sånne
+              ting.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det er jo litt teknisk, som Solgjerg og det er litt sånn da. Men
+              det er litt teknisk.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, og vi svarer også ute med verkraft på helva. Hvordan det er
+              varetatt med å sende verkraftsrapporten til deg og si deg sånn at
+              det har gjort et ordentlig stikker arbeid. Så det skal vi få satt
+              sammen. Og så går den jo inn da, rett og over nytta da. For det er
+              ikke noe av vanskelen da. Og så har vi fått dokumentet, så det
+              tenkte vi skulle se på på mandag/kristdag og…
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det jeg tenker er å ha andre merket av, men det er i stedet for at
+              jeg gjorde det jeg ville, og så ble jeg heia på fordi dette var
+              veldig bra. Har du fått diskusset? Har du fått… Jeg har bare sendt
+              informasjon til formen at jeg gjør det slik, og jeg gjør det slik,
+              og jeg gjør det slik. Det er forholdet ikke til TX-17 på det. Det
+              gjør det så sikkert, så har de ikke en sjakto. Fordi de har bare
+              lagt det. Så de går jo ikke vanlig sted. Men samtidig må man ta
+              den kampen, sammen med den lovbebyggingen.
+
+              <span class="speaker-label">Speaker 2</span>
+              Men har du brukt kulturminnefonden på fasaden?
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Ja, vi har brukt hva?
+
+              <span class="speaker-label">Speaker 2</span>
+              Vi fikk jo 1 million til å ta fasaden på kulturminnefonden.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Ja, du vet da, jeg er så… Jeg har så… Jeg er så… Hva skal jeg
+              si? Jeg er så sliten av det der søknadsgreiene. Vi bruker opp like
+              mye penger på rådgiver for å få inn søknad for å få det riktig
+              for. Så det er… Men det kan gå i gang på nå, så det er jo litt det
+              huset. Det er ikke mitt. Det skulle jo vært guldrun fra det som
+              jeg har funnet
+
+              <span class="speaker-label">Speaker 2</span>
+              urminalfagene på… Det er med laske søknader. Det er en 2 av 4
+              site. Og de utbetalingene er superkjappe. Så hvis du vil så kan vi
+              veldig raskt sette opp en søknader hvis du vil ha det i en annen
+              farge. Og det er akkurat sånn vi fant dokumentasjonen. Lagte en
+              superenkel skisse. Sånn ser det ut i verden. Dette er liksom
+              fargen jeg har lyst til å gjøre. Det er jukenstil. Blablabla. Vitt
+              var inn. Fikk 800 000.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Ja, og du kan godt tenke at jeg, men nå kan jeg være blakk for å
+              si det på godt, men da har jeg siste kjelleren vårt, da jeg redde
+              meg litt igjen med kjelleren, jeg har ikke meg på rødene, men jeg
+              har bare en kalk av vegger, da. Det var grann bygget i 1982. Da
+              fanns det en styrlåsvare i Grønnes er det en kus og den svarte
+              lukta hadde vi hele bygget. Så når vi leir på hvert plate sitt, så
+              var det sot og nytt sot. Helt til vi kom inn til Aften hvor det
+              var akselt sot, så vasket det ned og så vi var grann. Blaner jo
+              helt. Og i Skjernsjø var det brukt av spesplater uten å jobbe.
+              Sånn at det var et nytt begynnelser, så det var et sånt som heter
+              spesplater.
+
+              <span class="speaker-label">Speaker 2</span>
+              Her fant du 50 tonn av spesplater. Ja, pakket!
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Hvordan tok du det helt?
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, det gikk folk i sånne månedvakter. Og kostet det? Ja, det
+              kostet mye. Det var en grunn til at vi brukte 20 000 per kvadrat
+              her. Og ikke 10. Vi brukte jo 10 på det bygget her. Der har vi
+              kommet til 11 000 per kvadrat i år. Det har gjort det utrolig og
+              snill.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det går an, men variabitasjonen koster jo penger.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, det var ikke så stor. Det er jo ikke et stort
+              antivariabitasjon. Men da fungerer det litt mer.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Men da er vi tilbake. Poenget mitt er at nå skal vi se hva de sier
+              på denne tanker. Det går etakt her. - Ja, det er sant. - Jeg har
+              fått det, men nå er vi der.
+
+              <span class="speaker-label">Speaker 2</span>
+              - Men det der, det der, Villa Kvanli. - Ja, ja. - Se de bygene du
+              har funnet. - Ja. - Skal jeg be, for de har, de jaktjektene som
+              gjorde det bygget der, de gjør sånn på, hvis ikke de får noe, så
+              tar de ikke tilast. Så de kunne sett på om du ville, hvis du ville
+              liksom søke penger til å få noe.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Hva skal jeg ha med han? Jeg har jobbet på en gammel pensjoner
+              som har jobbet i en gang, og han kjenner han male. Nå kommer jeg
+              på en annen, han sa han som er sånn super, jeg vil si ikke han til
+              gang, maler farger. Han kommer ut en gang og har vært sammen med
+              han, så jeg må vente til de har vært der. Det er ikke noe stress
+              der. Nå er jeg på å røre meg som kjenner Siraas.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, ja. Her er jo alt som har skjedd. Ja. Nå så jeg på utsendelsen
+              til OMA på det gode jul. Ja. Og skrev inn om målefore. Så er det
+              mailen.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Fra han, ja.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, han har lagt en link til Sida og… Det sa jeg ikke. Og noen
+              bilder av når Thomas var presentert det. Ja, det sa jeg. Og han
+              har lagt en link av dette prosjektet må dere følge. Til alle
+              grunner. Så bra. Den har fått forankringen der nå, så er det
+              bydelsutvalget som er veldig positive. Nabolaget har vi vært
+              igjennom, så er det jo helse og møte med Vonsbyroskjelleren. Så
+              har vi lagt ut alle, nå har vi dokumentert den prosessen. Det er
+              klart, nå ligger det ute med saker på alle gansene da. Helt
+              tilbake til legetargemøtet vi har. Så nå er dette her ganske bra
+              dokumentert. Og det finnes det jo den oppsummeringen for noen av
+              dere som etter med bildet. Og der vi har vært forbi det. Har du
+              sett dette før den? Har du ikke sett dette? Nei, jeg er verdens
+              sløveste på det vet du om.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Og her ligger presentasjonen i hadden.
+
+              <span class="speaker-label">Speaker 2</span>
+              Den er ute blant folk, så vi kan sende og beskrive. Så denne har
+              fått vanske mye oppmerksomhet nå. Så det har skjedd. Så nå er hele
+              prosessen godt dokumentert. Nå skal vi lese ned gjennom det
+              byggesaksrådgjøren har sendt over. Så skal vi se hvordan vi MDP-ne
+              beriker det. Henvise til, her kan vi legge en linke til disse
+              artiklene som viser hvordan dette har blitt gjort. Og forankringen
+              og alt det der. Nå begynner dette å funke. Nå er det jo de tingene
+              her og vi har gjort det. Det andre vi har gjort er at vi i går
+              presenterte vi bare for å ta oss, på onsdag, så presenterte vi
+              Nordic Circular Construction for ledelsen i Nordic Innovation. Der
+              vi presenterte Ubania og Hoffa som pilot prosjekt på
+              prosjektering. Så nå har vi hentet inn, - Så viser jeg at vi har
+              hentet en ca 150 cirkulære løsninger i orden, så hadde vi gått
+              videre med 20, som vi har fått produktarkene til, og
+              produktløsningene og priser. Så nå må vi gjøre en liten oppgave på
+              å ta prosjektet, og gjøre en teoretisk prosjektering med cirkulære
+              løsninger. Så hadde vi møtt med Hydro Construction i går. De gjør
+              jo nå det bygget på Marostua, hele KPMG bygget. Og de skal også
+              bli med som pilot nummer to. Så har vi to ganske kule bygg på Oslo
+              Vest. Håffare og KPMG bygget. Og så skal vi løfte det frem i
+              Norden som pilotprosjekter. Sånn som vi har gjort her, det er et
+              prosjekt vi gjorde for Husbanken på omsorgsboliger i
+              funksjonstømte offentlige private bygg. Det var det seminaret vi
+              hadde, så vi initierte oss til det seminaret forrøstensiden, to
+              måneder siden, eller to måneder siden. Der har vi fått gjøre
+              analyser på bygget med kommunene. Og så har vi lagt
+              mulighetsstudier, og det er det vi har her, på de dele byggene, i
+              eksemplisering på hvordan vi lager nettet det samme. Vi viste frem
+              dette prosjektet til Husbanket og alle kommunale instanser i hele
+              Norge, som var på seminar her. Og et kondalseminar. Så vi løfter
+              dette frem som et transportsekt. Så det er veldig, veldig greit.
+              Så vi prøver med.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Har man nå kontakt med politikerne i dette også? Når du sier
+              kommunale… Husbanken er ikke bra. Kommunalbanken, Husbanken… Nei,
+              jeg tenkte på politiske beslutter i Oslo.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ikke bare vi har hatt med James og byrådsutdragene, så nå må vi
+              gjøre det i vår.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Ja, ja, ja. Dette er brukerne, du snakker om, det er de som har på
+              hov, men det er ikke beslutte. Det er Husbanken som er
+              finansierende, og det er kommunene som har hånd. De må lære seg å
+              gjøre sånn som dette. Kan de få, for det er det grensinsnittet som
+              du sier der, det er telt vesen til å være, er kommunene, må
+              kommunene være aktørene i HFA-ariteten for å ta det helt konkret?
+              Eller for å få finansiert på best mulig måte den husmaken? Men kan
+              det endes? Altså jeg tenker man politikere, så er det ikke noe som
+              er sånn, altså det er Oslobondet selv, de selv er gul, de vil ikke
+              kjøpe. De vil ikke kjøpe det, de vil sende det leie. De vil bare
+              leie.
+
+              <span class="speaker-label">Speaker 2</span>
+              Og det er jo fint, hvis du har en leie-kontrakt, så får du
+              utgangspunktet. Ikke utgangspunktets beste generosering. Nei, den
+              går kun til kommunen.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det bør også komme inn i en bisetning. For meg er det den morsomt
+              klimaer. Nå er vi leie. Men det å vise "er jeg for det ambisjøst?"
+              Det er det for langt vi sier "fokk-sivilt". At vi skal lære opp
+              kommunpolitiker til å være økonomiske. For det beste med å komme
+              inn er å hoppe opp finansierte.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, uten til. Men det vi må gjøre nå, det jeg setter meg nå som
+              gjør på det her, Vi får lagt noen priskalkyler.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Noen?
+
+              <span class="speaker-label">Speaker 2</span>
+              Priskalkyler, ja. Da har vi sett på verdiene, stedet økonomiske
+              brev, det som vi har med banken, det har vi glemt å legge ut. Vi
+              har ikke lagt ut bankmøte, det holder vi nede til en kei. Det har
+              vi også gjort, i vår interne rapport. Og der har vi jo fått, som
+              jeg forstår det, godkjent at hvis dette kommer, så vil vi
+              finansiere det. Og du har fått de lånebetingelsene du skulle ha på
+              plass. Ja, det går litt mer kjøy, skille jeg. Det går inn i en
+              par. Det vi hadde sendt i går. Da kan du sende link til alt dette
+              her. Og si bare: "Følg her, her er adraktiviteten lagt ut. Her er
+              forankringene, og nå har vi sendt nabobasset, og den går inn i
+              Myanmar. Så det er jo fantastisk. Det forteller jo historien. Nå
+              begynner du å bruke den nettsiden her, sånn som du bruker den
+              verktøy. Den ligger inne på boffaaren på nettsiden. Men det sender
+              vi. Vi kan sende litt annet på mail etterpå. Til hovedsiden og til
+              den aktivitetssiden. Og til presentasjonen, så du har egentlig
+              alle ting. Du kan bare klippe og lille meg inn i mailet.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det gikk jo at hun har, for det er det hun sier, hun liker å bli
+              opptatt her til.
+
+              <span class="speaker-label">Speaker 2</span>
+              Nei, jeg er veldig rettatt av det. Nå skal vi legge inn link til
+              det sosiale kanalen. Sosialfederkanalen, så vi kan følge dere. Vi
+              har lagt dette ut på sosiale medier, så vi kan dele det videre. Så
+              skal vi gjøre et push på dette i Anna. Om vi ønsker å bruke dette
+              som eksempel i Danmark, på Søklerbildforum i Gjøna, så blir det nå
+              ditt prosjekt, referansecase i Søklerbiltonstruksjonprosjektet. Nå
+              begynner den der perspektivet.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Ja, og da tyngre den delen er til verre blir for politikerne. -
+              Og si nei.
+
+              <span class="speaker-label">Speaker 2</span>
+              Dette prosjektet, det vi skal prise og prosjektere, er inn disse
+              produktene som er full sekulære for hele Norden. Og så skal vi
+              prøve å lage en ordinær priserkelle, sånn som vi jo
+              klimaregnskapet, Så lager vi en standardkalkyre, og så lager vi en
+              delenterprisekalkyre med Trym. Sånn som vi har skjønt oss i går.
+              Det vi viste til US Bankene når vi hadde seminar her, så var Knut
+              Halvor og Trym og meg, og snakket om realisering. Så tok vi
+              standardkalkyre med, og vi fikk lov å vise case til Tåsen på
+              Soland. Der vi fikk en standardkalkyre på 38 millioner på
+              realisering, og så gjorde vi delenterprise tilnæring, og fikk
+              verifisert signettopriset folk stedet opp der, 22. Det vi prøver å
+              bevise nå er at kalkylen er feil. Og transformasjon er ikke
+              dyrere, det kan bli bedre. Det jobber ikke i riktig måte.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det er en viktig beskjed. Men så er det det. Jeg har ikke plattatt
+              disse kravene.
+
+              <span class="speaker-label">Speaker 2</span>
+              Og der kommer vi inn i dette som heter "fravik". Ja, nemlig. Og
+              det hadde Riksantikvalet og par andre full gjennomgående av. Og de
+              sier: Vi anbefaler ikke DISP, vi anbefaler FRAVIP. Så nå får vi se
+              om vi søker DISP-er i huttugudere, men så må vi etterpå ta den
+              FRAVIK-forståelsen. Og de sier FRAVIK ble etabert for noen år
+              siden for å gi fleksibilitet på transformasjon. Og det brukes ikke
+              riktig.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det forstås ikke. Og det hadde vi fire timer seminar om. Det med
+              Fravik er veldig bra.
+
+              <span class="speaker-label">Speaker 2</span>
+              Så det tror jeg gøy.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Ja, det tror jeg gøy. Nå begynner det å smake fruller.
+
+              <span class="speaker-label">Speaker 2</span>
+              Så da får vi dette på plass. Og så skal vi selvfølgelig snakke om
+              biodiversitet i veringen. Vi skal lage de så greiene, ta
+              fullførdige lagene, slik at det blir bra. Men her har du altså
+              alt, alt er dokumentert, skrev ned. Det ser veldig bra ut. Du kan
+              også godt ta denne kopien av den som handler om om lønnsmøtet, og
+              den er så pen. Vi sender jo disse linkene. Og så ligger jo alt på
+              hovedsiden her. Alt ligger på samme side, hfv.net.no. Verdens
+              fineste nettside.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det er det som jeg nå har oppventet her. Nå har du snakket litt
+              mer om utleie, altså. Ja, det skal vi gjøre. Fordi det jeg
+              nevneskrivelet var med er dette med, jeg er jo bare dunder, står
+              en standard-annonse i Aksjøvn og sånn, og så bare slår.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, vil du sende en link på den på oss? Da må vi legge inn på nett
+              siden. Vi må lage på den.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Ja, gjerne. Det skal jeg ha den.
+
+              <span class="speaker-label">Speaker 2</span>
+              - Vi må bare få opp i ryggen min. - Ja, vi må legge til at vi kan
+              endre den aktiviteten. Jeg tror vi skal endre til på en måte
+              eventuelt utleie. Slik at vi får en utleieside som skal gå oppleie
+              hos oss. Da kan vi legge inn de tegningene, og så kan vi gjøre det
+              som vi tar. Så skal vi vise deg hvordan vi gjør det her. Det er jo
+              her vi kommer nå. Dette er litt mer aktivt, sier jeg. Da forteller
+              vi om hvor fint det er, hvor mange leietagere og dette her. Og
+              masse fine bilder. Men her er jo dette med hvordan du leier et
+              sted. Så lager du enkel skjema her, også en veldig bra for
+              Susfluent, Contact, de forskjellige, hvorfor mye lagetasjer du har
+              lyst til å leie ut av.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det er veldig, det er for nå… Så har du bildet. - Ja, eller nei. -
+              Som vi fyller opp her. - Ja. Nå har jeg… - Hva er det da? - Det er
+              ikke vekk, men det sitter på et overforstort her i all. - Ja. -
+              Fyller opp til faden til burten. - Ja. - Som det er kjempeøyere
+              på. - Men der finner vi oss interessert i at vi kan spille av. -
+              Ja. - Og at vi legger ut det som er etterkjort innenfor. - Og da
+              spør jeg litt hvordan, for jeg så du hadde skist, du har jo skist
+              på her, ikke sant? - Ja. - Og vi har de arealoppsattene der, som
+              også kan ligge der, det er også skjønner også. - Men det er jo
+              ikke helt riktig. - Det er veldig viktig å si at det er sånn som
+              arealtreversjon som jeg snakket om nå, det går fra 290 til 84, så
+              det er jo veldig store forskjellige felserier av det her. I stedet
+              for å stå der kontoret er det 480. Hvordan kommuniserer man det?
+
+              <span class="speaker-label">Speaker 2</span>
+              Det unngår å innebryt studier til fastighets. Rom, volum.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det gjør altså for de små… Det er jo det vi skal kaste 3000 g. -
+              Ja, det er billig. - Ja, det er billig. - Hvis man lager det
+              systemet, så kan du… - Vi får 25 000 på et lommet. - Ja, ja. - Og
+              så har du litt mer tilbud her. Det som er en kantina hvor det er
+              en svarte natt av det. - Ja, det er det andre. Det er laget den
+              litt virkelig. - Ja, alt dette vil fungere helt annerledes om at
+              vi begynner å leve.
+
+              <span class="speaker-label">Speaker 2</span>
+              - Ja, men der har vi jo den femhåndsplanen. Ja, det er det vi har.
+              Så den var gangen også. Og den ligger i våre arbeid. På våre.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Men så er det femårsmannen, det er en ting. Men en annen ting er
+              jo alt det. Hvis vi skulle lykkes, så er det tre år. Ja, det er
+              treårsmannen, men du liker å ha det. Ja, det er jo gått ett år til
+              den. Ja, femårsmannen.
+
+              <span class="speaker-label">Speaker 2</span>
+              Så det blir litt sant. Det var under seg. Det var januar i fjor,
+              vi sa fem år. Nei, men vi har aldri gått et år med det.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det er fire eksempler. Ja. Men hvordan, så det jeg utvikler, det
+              er å tenke den inn… Den konsekvaliseringen av kommunikasjonen? Ja,
+              fra akkuratene, de ser at her er bare i bakkommentarer, det her er
+              fint med begjert nå. Veldig. Så de… Men vil de helt ut, eller vil
+              de bare ned i stedet? Vi, jeg ble litt overrasket i går, fordi jeg
+              har hatt så god kommunikasjon med de trodde. Så skulle de opp i
+              femte for å kontrollere seg til, og så skulle de krympe til at de
+              skulle være de tolv, pluss at SEMI kunne bare sitte åpnet til og
+              sitte på døgnene og koser. Og så sier jeg at dette ville jeg, som
+              han er laget ved at SEMI er satt i SEMI. Men så hadde det vært
+              styrmet, så hadde de besluttet at de ville være der de var. Fikk
+              de avgjort. Men det de har fått på med var å forhandle med et
+              annet firma om at de skulle bli kjøpt opp. - Så de er jo slutt av
+              en av de andre… - To selskapene? - Ja, jeg vil ikke si hvem, for
+              det var konferensielt forløbende. - Men da lykker de ut? Da blir
+              de fullt der? - De flytter ut til de andre, og det er over. Det er
+              ikke noe slåss med å bare vilse å lykke til, og det var det. Det
+              var til fri år. Og var veldig fornøyt. Så det er fullt jeg.
+
+              <span class="speaker-label">Speaker 2</span>
+              Hvor mye mer tomt bruker har du nå?
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Jeg har 1 eller 2 som kontor. Jeg sendte deg til en lille og sier:
+              Nå er jeg på 8,990, og jeg er på 9 billioner på 1. februar.
+              Fantastisk. Så det er ikke det. Det er en kontrakt for 500 000. I
+              år? Ja, det er jo for mange ting. Men spørsmålet er om man skal
+              bryte opp. Jeg glopper på om du burde bryte opp. Her er det ingen,
+              for du har ingen der. Og så tar vi en der, så har du den.
+
+              <span class="speaker-label">Speaker 2</span>
+              Det er ingen problemer å lage dette området her, og den, til
+              felles avian. Og så leie ut for 7000 tester som vi har gjort her.
+              Det er det vi har snakket om om. - Vi skal prøve. Vi skal se om
+              det er noen av de andre som vil åpne.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Det kan ta på sende.
+
+              <span class="speaker-label">Speaker 2</span>
+              - Det er spennende. Dette må vi bare få sette på i hjemme februar.
+              Fordi de flytter ut i Mars.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Andres? - Ja, og da filmen
+
+              <span class="speaker-label">Speaker 2</span>
+              - Det er et prosjekt i Fredrikstad, som er litt spesielt, men som
+              trenger nivester.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Jeg hører ikke. Jeg er jo…
+
+              <span class="speaker-label">Speaker 2</span>
+              - Det er jo det gamle sykehuset i Fredrikstad. Der har en
+              gruppering med lokale fått en opsjon på det ene bygget med fokus
+              på transformasjon. Og så har de egentlig i det seksetasje, så har
+              de et konsept per etasje. Ulike leilighetstypologier med ulike
+              målgrupper. Et eldre fellesskap, et ungdoms- eller et formidling
+              kollektiv. Så har de et nabolagshus i Møteforsen. De har jobbet
+              med de to av, og de har fått en kjøpsopsjon på 100 min på dette
+              rett stort prosjektet. Og så spurte de meg om jeg sendte noen som
+              ville være interessert i et delt. Det er veldig riktig, hvorfor
+              jeg? Vi spørte også her. Hva er det du har? Det er han kinesen som
+              er det. Det er han kinesen som er igjen nå. Men de har fått en…
+              Hva er det? Det er det Mamas, det er hun der…
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Hvorfor har jeg spurt etter det? Jeg har vært en del… Jeg har
+              brukt Sparbankens… Akkurat syd-øst folk. Så har jeg vært på tur
+              med en del folk fra området. Og de gjør på hvorfor jeg ikke går
+              inn i deres område da. Samt sett sånn. Han har jo… Det er ti år
+              siden han har kjept her. Ja, han fikk en 70 millioner fra EU for å
+              kjøre på energiløsninger. Har du vært for det? Ja, han har gjort
+              masse forskjellig. Har du lykt til meg fra meg da?
+
+              <span class="speaker-label">Speaker 2</span>
+              Nei, så de her…
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Her har du planen. Og så har du bil i den.
+
+              <span class="speaker-label">Speaker 2</span>
+              Jeg har de tegner.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det var en… Det er bare 302 av dem. Det er halv leve.
+
+              <span class="speaker-label">Speaker 2</span>
+              Det er halv strepa det inn. På å holde den ibygg i trappelsen. Og
+              så har de fått tegnet opp masse prosjekter, og har drivere og
+              konsepter og hele folkene. Så jeg har bedt om å få kalkylene. Og
+              de er litt til det kjærping. Og så har de kjøpsløpet. De har tatt
+              kontakt med skolen nettet i forhold til at de ønsker å ha en
+              kommun på en etasje til omsorgsskoliet for henkaperne og unge
+              henkaperne, en for omsorgsskoliet og robolliet for eldre. Så jeg
+              ønsker å bruke litt samme modell, så jeg viste om hva far er
+              siden, nettsiden. De hadde veldig lyst til å høre om det ville
+              være en interessant case. For det gjorde dere. Om du er noe du
+              kjenner.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Men hva bygger de? Vil de selv bygge? - De vil selv bygge.
+
+              <span class="speaker-label">Speaker 2</span>
+              De vil bygge og selge. Skal vi se på seksjonen så ut sånn, så vil
+              de drive underbansjen selv. Og så vil de ha en helhet lærer der
+              klaren. Men vi vil utvikle, og så er det kjempe, det er kanskje
+              man har gjort masse engasjementsfrihet i hvert fall. Det var de
+              femte stykken som var med, det er så nabolagsutdragivåplein. Og så
+              har jeg vennlig ekspert på det vi jobbet, så de synes jo at de har
+              spurt om vi kan vise. Så jeg har sett at det kan vi prøvere, men
+              for oss er det mest interessant, Jeg vet ikke, da, som det er av
+              det en gang som det er ikke sett i talet, så det er da liksom det.
+              Det er bare enormt en del tid og festenhet og en spennende
+              spennende.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Vi har jo sjonen et minnå. Og så har vi jo bare betalt i gang for
+              det. Nei, nei, men for normalt å betale noe litt til.
+
+              <span class="speaker-label">Speaker 2</span>
+              Er du inne?
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Nei, det er bra for det.
+
+              <span class="speaker-label">Speaker 2</span>
+              Hva er det? - Jeg tror han er… - Han er… - Han er…
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Han er… - Han er… - Han er… - Jeg tror ikke det er sånn… - Men…
+              - Du kom ikke inn på da
+
+              <span class="speaker-label">Speaker 2</span>
+              - Han er… - Han er som en doktor da - Jeg er litt kjærlig for ikke
+              - Det er et stort om det er det han fortsetter på - Men jeg har
+              ikke… - Ja, det er 6.50 i grunnfaltet, og så er det jo 700 000 kr.
+              - Hva er det etasje? - 1, 2, 3, 4, 5, 6, 7, 8, 9000 kr. - Så det
+              er jo 7-8000 kr. - Så det nærmer seg 12 000 kr.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Det er ofte i Lærermann, du må spørre spørsmål, men du ligger alt
+              for helt. Ja, det er litt svære for det. Nei, der går det an, for
+              der er det, på to og med middag er det dobbeltalder det ble vært,
+              og her er det dobbeltalder det ble vært. Der er det Vi er litt,
+              det tenker jeg, men vi er helt røy. Nå har jeg et nøttemember og
+              en rose her i om to minutter.
+
+              <span class="speaker-label">Speaker 2</span>
+              Det siste var jo en vår avtale, det er jo fastprisvannet, men det
+              har fulgt en fakturingsplan som vi sendte overforlengd her lenge
+              siden. Men alt det vi har snakket om nå, det skal skje allikevel
+              innenfor emlandet.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              - Den ligger, jeg får ikke se tørre, men jeg tror det skriver til
+              at det er jo på h - Det tror jeg det er. - Filiene faktisk helt
+              opp med i freder,
+
+              <span class="speaker-label">Speaker 2</span>
+              Det går frem dit. Men det som jeg består det, så skal vi i hvert
+              fall gjøre alt det vi snakker om. Vi ginner for det som vi har. Og
+              at det er viktig å bli for gjort nå.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              For det er nå du begynner.
+
+              <span class="speaker-label">Speaker 2</span>
+              Og det med noten, det er jo nå som blir grann med. Så alle disse
+              tingene skal vi jobbe med videre.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Men snakker vi med Venke. Snakk med deg, for jeg synes vi stemmer
+              takkig for dette gjennom alle fallet. Det er derfor jeg snakker
+              med deg og jeg har fått en mening til bak.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, det gjør vi nok i forhold til den tiden som satt av, men vi
+              leverer på den tiden som kommer nå. Nå har vi jo jobbet frem til
+              innsendelsen, nå kommer det, nå aner vi ikke hva som skjer. Nå kan
+              det gå et seks måneder, eller gå to av, der vi må bare jobbe
+              sammen med å realisere prosjektet. Men jobber du da uten å
+              fakturere? Ja, frem til vi blir enige om at nå har vi kommet inn i
+              morgenen, ja. Hvis vi, alt det med leietagene, den biten her, det
+              ligger i at vi må følge opp dette nå. Til vi blir enige om at nå
+              er vi på neste leg.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Og det er derfor jeg synes du ligger jo litt begynt opp med det
+              totalt, at du kjenner, jeg skal ta opp bak meg, så skal jeg se det
+              av deg.
+
+              <span class="speaker-label">Speaker 2</span>
+              Ja, men det er jo fordi at det er nå vi har gjort hovedjobben. Nå
+              er alt som tar plass, og nå er det oppfølging. Da fakturerer ikke
+              vi tid mer. Vi fakturerer ikke fordi møtene vi har de samtalen. Så
+              det er litt sånn vi leverer for de testkrisene med. Jeg kommer inn
+              for meg. Så det er viktig, så jeg ser for meg at hvis dette går
+              sånn som det går nå, så er det ganske små justeringer som har i
+              grunn av ulas. Og vi skal følge opp møtene, vi skal gjøre
+              justeringene, men det er jo Thomas og byggesolksrådgiver som skal
+              følge prosessene tomt. og vi som strategisk skal lide det her
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              det som er viktig er at dere er dere er motoren dere er motoren og
+              den strategiske driften
+
+              <span class="speaker-label">Speaker 2</span>
+              det ligger i det du har betalt og det er selvfølgelig at det
+              kanskje kommer dere hele året uten at det kommer flere partier det
+              er sånn det funker så
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              sånn nå er jeg nå er jeg virkelig Nå begynner det! God jul! Nå
+              blir det grei, så må du ta med deg. Ja, jeg skal ta med deg.
+
+              <span class="speaker-label">Speaker 2</span>
+              Og så ringer jeg kanskje neste uke, og se nå hva er det jeg ligner
+              med i Fredrikstad, så du kan se på julen.
+
+              <span class="speaker-label">Speaker 1 (Einar)</span>
+              Gjør det, og så skal jeg neste uke til, så skal vi ta møte ut i
+              Gilla Gradia. God jul, god jul! Det var så bra. Da kan du se det,
+              for der er det som sagt at det er mye.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Print button -->
+      <div class="report-footer no-print">
+        <button class="print-button" onclick="window.print()">
+          🖨️ Skriv ut rapport
+        </button>
+        <p style="margin-top: var(--space-4)">
+          Hovfaret 13 Prosjektdatabase • Generert 20. desember 2025
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Toggle transcript visibility
+      function toggleTranscript() {
+        const toggle = document.querySelector(".transcript-toggle");
+        const content = document.getElementById("transcriptContent");
+        toggle.classList.toggle("open");
+        content.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

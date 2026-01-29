@@ -1,0 +1,68 @@
+{
+  "generated": "2025-11-22T10:28:28.255899",
+  "backup_file": "/Users/gabrielboen/2.0-Hovfaret13-NewStructureSimplified/data/meetings.backup_20251122_102828.json",
+  "statistics": {
+    "total_meetings_before": 37,
+    "total_meetings_after": 45,
+    "meetings_enriched": 16,
+    "new_meetings_created": 8,
+    "high_confidence_matches": 9
+  },
+  "matched_notes": [
+    {
+      "note": "MØTE  27 JUNI   2024.md",
+      "meeting": "Hovfaret 13",
+      "score": 50
+    },
+    {
+      "note": "MØTE  25 JUNI   Transkripsjon-av-mte-om-Prosjektet-Hovfaret-13.md",
+      "meeting": "Hovfaret 13",
+      "score": 50
+    },
+    {
+      "note": "usikker hvilket møte .md",
+      "meeting": "Møte med Bydels leder på Hovfaret 13 ( Vi møtes en 1 time før ) ",
+      "score": 80
+    },
+    {
+      "note": "MTEREFERAT---INFORMASJONSMTE-MED-LEIETAKERE-HOVFARET-13.md",
+      "meeting": "Hovfaret 13",
+      "score": 50
+    },
+    {
+      "note": "06 August 2025.md",
+      "meeting": "Møte med Bydels leder på Hovfaret 13 ( Vi møtes en 1 time før ) ",
+      "score": 60
+    },
+    {
+      "note": "MØTE  27 November  .md",
+      "meeting": "Hovfaret 13",
+      "score": 50
+    },
+    {
+      "note": "19 August 2025.md",
+      "meeting": "Hovfaret 13",
+      "score": 50
+    },
+    {
+      "note": "MØTE  22 MAI notater videre.md",
+      "meeting": "Hovfaret 13",
+      "score": 50
+    },
+    {
+      "note": "Januar 2025.md",
+      "meeting": "Hovfaret 13",
+      "score": 70
+    }
+  ],
+  "new_meetings": [
+    "m_unknown_date_umiddelbare_oppgaver_denne_uken",
+    "m_unknown_date_notat_hva_skal_vi_mles_mot",
+    "m_unknown_date_rapport_bydelsledernes_uttalelser_mte_om_omsorg",
+    "m_unknown_date_detaljert_sammendrag_av_samtalen_om_skolebygget",
+    "m_unknown_date_det_er_jo_det",
+    "m_2025_06_24_med_james_lorentzen",
+    "m_unknown_date_rapport_mte_om_utviklingsprosjekt_p_skyen",
+    "m_unknown_date_rapport_fra_pent_mte_bydel_ullern"
+  ]
+}

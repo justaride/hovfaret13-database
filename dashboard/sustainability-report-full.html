@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bærekraftsrapport - Hovfaret 13 - Komplett</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-dark: #3d4a3a;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --accent-green: #3d4a3a;
+        --accent-red: #dc2626;
+        --accent-blue: #3b82f6;
+        --accent-amber: #f59e0b;
+        --border-color: #e2e8f0;
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .header {
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .header-content {
+        max-width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .back-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+      }
+      .back-link:hover {
+        color: var(--accent-green);
+      }
+      .header h1 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .draft-badge {
+        background: var(--accent-red);
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      /* Main layout */
+      .main-container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Section tabs */
+      .section-tabs {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        background: var(--bg-card);
+        padding: 0.5rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+      }
+      .section-tab {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background: transparent;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        transition: all 0.2s;
+      }
+      .section-tab:hover {
+        background: var(--bg-main);
+      }
+      .section-tab.active {
+        background: var(--accent-green);
+        color: white;
+      }
+
+      /* Content sections */
+      .content-section {
+        display: none;
+      }
+      .content-section.active {
+        display: block;
+      }
+
+      /* Summary cards */
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .summary-card {
+        background: var(--bg-card);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+      }
+      .summary-card.highlight {
+        background: linear-gradient(135deg, var(--accent-green), #4a5a47);
+        color: white;
+      }
+      .summary-card h3 {
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        opacity: 0.8;
+      }
+      .summary-card .value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+      .summary-card .detail {
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+        opacity: 0.8;
+      }
+
+      /* Chapter list */
+      .chapter-list {
+        background: var(--bg-card);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .chapter-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .chapter-item:hover {
+        background: var(--bg-main);
+      }
+      .chapter-item:last-child {
+        border-bottom: none;
+      }
+      .chapter-number {
+        width: 40px;
+        height: 40px;
+        background: var(--accent-green);
+        color: white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        margin-right: 1rem;
+      }
+      .chapter-info {
+        flex: 1;
+      }
+      .chapter-title {
+        font-weight: 600;
+      }
+      .chapter-pages {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+      .chapter-arrow {
+        color: var(--text-secondary);
+      }
+
+      /* Pages grid */
+      .pages-section {
+        margin-top: 2rem;
+      }
+      .pages-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .pages-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+      }
+      .page-thumb {
+        background: var(--bg-card);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+      }
+      .page-thumb:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+      .page-thumb img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .page-thumb .page-num {
+        position: absolute;
+        bottom: 6px;
+        right: 6px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+      }
+      .chapter-divider-row {
+        grid-column: 1 / -1;
+        background: var(--accent-green);
+        color: white;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-weight: 600;
+        margin: 0.5rem 0;
+      }
+
+      /* Data extract section */
+      .data-section {
+        background: var(--bg-card);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        margin-bottom: 2rem;
+      }
+      .data-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      /* Key findings */
+      .findings-list {
+        display: grid;
+        gap: 1rem;
+      }
+      .finding-item {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--bg-main);
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-green);
+      }
+      .finding-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--accent-green);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-shrink: 0;
+      }
+      .finding-content h4 {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .finding-content p {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+
+      /* Scenarios comparison */
+      .scenarios-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .scenario-card {
+        background: var(--bg-main);
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 2px solid transparent;
+      }
+      .scenario-card.recommended {
+        border-color: var(--accent-green);
+        background: rgba(61, 74, 58, 0.05);
+      }
+      .scenario-card h4 {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .scenario-num {
+        width: 28px;
+        height: 28px;
+        background: var(--accent-green);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+      .scenario-card.not-recommended .scenario-num {
+        background: var(--accent-red);
+      }
+      .scenario-stats {
+        display: grid;
+        gap: 0.75rem;
+      }
+      .scenario-stat {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+      }
+      .scenario-stat .label {
+        color: var(--text-secondary);
+      }
+      .scenario-stat .value {
+        font-weight: 600;
+      }
+      .rec-badge {
+        background: var(--accent-green);
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        margin-left: auto;
+      }
+
+      /* Sources */
+      .sources-list {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+      .source-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--bg-main);
+        border-radius: 8px;
+      }
+      .source-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--border-color);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .source-info {
+        flex: 1;
+      }
+      .source-title {
+        font-weight: 500;
+      }
+      .source-meta {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      /* Fullscreen modal */
+      .fullscreen-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        flex-direction: column;
+      }
+      .fullscreen-modal.active {
+        display: flex;
+      }
+      .fullscreen-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .fullscreen-title {
+        color: white;
+      }
+      .fullscreen-controls {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .fullscreen-btn {
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .fullscreen-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .fullscreen-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        position: relative;
+      }
+      .fullscreen-image {
+        max-width: 100%;
+        max-height: 100%;
+        transition: transform 0.3s;
+      }
+      .fullscreen-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 2rem 1rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+      .fullscreen-nav:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .fullscreen-nav.prev {
+        left: 0;
+        border-radius: 0 8px 8px 0;
+      }
+      .fullscreen-nav.next {
+        right: 0;
+        border-radius: 8px 0 0 8px;
+      }
+      .fullscreen-footer {
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: white;
+      }
+      .zoom-controls {
+        display: inline-flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+      .zoom-btn {
+        width: 32px;
+        height: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: transparent;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .zoom-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      @media (max-width: 1200px) {
+        .pages-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .scenarios-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .pages-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .summary-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject(null);
+    </script>
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <a href="sustainability.html" class="back-link">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Tilbake
+          </a>
+          <h1>
+            Bærekraftsrapport - Hovfaret 13
+            <span class="draft-badge">UTKAST</span>
+          </h1>
+        </div>
+        <div style="font-size: 0.875rem; color: var(--text-secondary)">
+          83 sider | Natural State | 2025
+        </div>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <!-- Section tabs -->
+      <div class="section-tabs">
+        <button class="section-tab active" data-section="overview">
+          Oversikt
+        </button>
+        <button class="section-tab" data-section="report">
+          Rapportsider (83)
+        </button>
+        <button class="section-tab" data-section="data">Eksportert data</button>
+        <button class="section-tab" data-section="sources">Kilder</button>
+      </div>
+
+      <!-- Overview section -->
+      <div id="overview" class="content-section active">
+        <div class="summary-grid">
+          <div class="summary-card highlight">
+            <h3>CO₂-reduksjon</h3>
+            <div class="value">48%</div>
+            <div class="detail">2 549 tonn CO₂ spart</div>
+          </div>
+          <div class="summary-card">
+            <h3>Materialbesparelse</h3>
+            <div class="value">85%</div>
+            <div class="detail">Ved å bevare bygningskroppen</div>
+          </div>
+          <div class="summary-card">
+            <h3>Avfallsreduksjon</h3>
+            <div class="value">80%</div>
+            <div class="detail">100-200 vs 800-1200 kg/m²</div>
+          </div>
+          <div class="summary-card">
+            <h3>Energibesparelse</h3>
+            <div class="value">50%</div>
+            <div class="detail">F → C energimerke</div>
+          </div>
+        </div>
+
+        <div class="data-section">
+          <h2>Hovedfunn</h2>
+          <div class="findings-list" id="findingsList"></div>
+        </div>
+
+        <div class="data-section">
+          <h2>Kapitteloversikt</h2>
+          <div class="chapter-list" id="chapterList"></div>
+        </div>
+      </div>
+
+      <!-- Report pages section -->
+      <div id="report" class="content-section">
+        <div class="pages-section">
+          <h2>Alle rapportsider</h2>
+          <div class="pages-grid" id="pagesGrid"></div>
+        </div>
+      </div>
+
+      <!-- Data extract section -->
+      <div id="data" class="content-section">
+        <div class="data-section">
+          <h2>Scenariosammenligning</h2>
+          <div class="scenarios-grid" id="scenariosGrid"></div>
+        </div>
+
+        <div class="data-section">
+          <h2>Rammeverk: Triple Bottom Line</h2>
+          <div class="findings-list" id="frameworkList"></div>
+        </div>
+
+        <div class="data-section">
+          <h2>Konklusjon</h2>
+          <div id="conclusionContent"></div>
+        </div>
+      </div>
+
+      <!-- Sources section -->
+      <div id="sources" class="content-section">
+        <div class="data-section">
+          <h2>Kilder og referanser</h2>
+          <div class="sources-list" id="sourcesList"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Fullscreen modal -->
+    <div class="fullscreen-modal" id="fullscreenModal">
+      <div class="fullscreen-header">
+        <span class="fullscreen-title" id="fullscreenTitle">Side 1 av 83</span>
+        <div class="fullscreen-controls">
+          <div class="zoom-controls">
+            <button class="zoom-btn" onclick="zoomOut()">−</button>
+            <span id="zoomLevel">100%</span>
+            <button class="zoom-btn" onclick="zoomIn()">+</button>
+          </div>
+          <button class="fullscreen-btn" onclick="closeFullscreen()">
+            Lukk (ESC)
+          </button>
+        </div>
+      </div>
+      <div class="fullscreen-content">
+        <button class="fullscreen-nav prev" onclick="navigateFullscreen(-1)">
+          ‹
+        </button>
+        <img class="fullscreen-image" id="fullscreenImg" src="" alt="" />
+        <button class="fullscreen-nav next" onclick="navigateFullscreen(1)">
+          ›
+        </button>
+      </div>
+      <div class="fullscreen-footer">
+        <span id="pageCounter">1 / 83</span>
+      </div>
+    </div>
+
+    <script>
+      // Report data
+      const reportData = {
+        totalPages: 83,
+        imageFolder: "assets/reports/barekraftsrapport-utkast",
+        chapters: [
+          { num: 1, title: "Forside", start: 1, end: 1 },
+          { num: 2, title: "Sammendrag", start: 2, end: 2 },
+          { num: 3, title: "Innledning", start: 3, end: 3 },
+          { num: 4, title: "Bakgrunn for vurderingen", start: 4, end: 4 },
+          { num: 5, title: "Prosjektbeskrivelse", start: 5, end: 5 },
+          { num: 6, title: "Rammeverk (TBL)", start: 6, end: 6 },
+          { num: 7, title: "Hovfaret 13", start: 7, end: 10 },
+          { num: 8, title: "Regulatorisk kontekst", start: 11, end: 18 },
+          {
+            num: 9,
+            title: "Demografiske og sosiale behov",
+            start: 19,
+            end: 26,
+          },
+          {
+            num: 10,
+            title: "Klima - LCA klimagassberegninger",
+            start: 27,
+            end: 47,
+          },
+          {
+            num: 11,
+            title: "Klima - Natur og biodiversitet",
+            start: 48,
+            end: 56,
+          },
+          { num: 12, title: "Sosial bærekraft", start: 57, end: 59 },
+          {
+            num: 13,
+            title: "Samfunnsinvolvering og medvirkning",
+            start: 60,
+            end: 66,
+          },
+          { num: 14, title: "Økonomisk bærekraft", start: 67, end: 72 },
+          { num: 15, title: "Geotekniske risikoer", start: 73, end: 79 },
+          { num: 16, title: "Helhetlig vurdering", start: 80, end: 82 },
+          { num: 17, title: "Bakside", start: 83, end: 83 },
+        ],
+        findings: [
+          {
+            icon: "🌍",
+            category: "Klimaavtrykk",
+            text: "Rehabilitering reduserer de totale klimagassutslippene med 48% sammenlignet med riving og nybygg",
+          },
+          {
+            icon: "🏗️",
+            category: "Materialbruk",
+            text: "Bevaring av bygningskroppen reduserer behovet for nye materialer med over 85%",
+          },
+          {
+            icon: "♻️",
+            category: "Avfall",
+            text: "Rehabilitering reduserer avfallsmengden fra 800-1200 kg/m² til kun 100-200 kg/m²",
+          },
+          {
+            icon: "⚡",
+            category: "Energieffektivitet",
+            text: "Oppgradering kan redusere energibehovet med cirka 50%, og oppnå en standard på nivå med et TEK17-nybygg",
+          },
+          {
+            icon: "⚠️",
+            category: "Risikoreduksjon",
+            text: "Riving unngås, som reduserer de geotekniske risikoene i et område utsatt for kvikkleireproblematikk",
+          },
+        ],
+        scenarios: [
+          {
+            num: 1,
+            name: "Riving og nybygg",
+            materials: 2641,
+            energy: 2702,
+            total: 5343,
+            perM2: 631,
+            recommended: false,
+          },
+          {
+            num: 2,
+            name: "Rehabilitering",
+            materials: 377,
+            energy: 2417,
+            total: 2794,
+            perM2: 456,
+            recommended: true,
+          },
+          {
+            num: 3,
+            name: "Rehabilitering + påbygg",
+            materials: 1043,
+            energy: 3118,
+            total: 4161,
+            perM2: 491,
+            recommended: true,
+          },
+        ],
+        framework: [
+          {
+            icon: "🌿",
+            name: "Klima og miljø",
+            desc: "Klimagassutslipp, ressursbruk, avfallshåndtering, konsekvenser for økosystemer og biologisk mangfold",
+          },
+          {
+            icon: "💰",
+            name: "Økonomi",
+            desc: "Finansiell levedyktighet, kostnadseffektivitet, risikoredusering, arbeidsplasser og verdiskaping",
+          },
+          {
+            icon: "👥",
+            name: "Sosial",
+            desc: "Universell utforming, sosiale møteplasser, folkehelse, livskvalitet, medvirkning",
+          },
+        ],
+        sources: [
+          {
+            title: "Klimagassberegninger Hovfaret 13 v2",
+            author: "Vill Energi AS",
+            date: "2025-04-22",
+            pages: "27-47",
+          },
+          {
+            title: "Energikartlegging Hovfaret 13",
+            author: "Vill Energi AS",
+            date: "2025-04-11",
+            pages: "Referert",
+          },
+          {
+            title: "ROS-analyse Hoff Skole",
+            author: "Asplan Viak / Oslobygg KF",
+            date: "2023-03-21",
+            pages: "35, 73-79",
+          },
+          {
+            title: "Oslo klimastrategi 2030",
+            author: "Oslo kommune",
+            date: "",
+            pages: "11-18",
+          },
+        ],
+        conclusion: {
+          main: "Prosjektets transformative tilnærming er i tråd med Oslos klimamål, samfunnsbehov og prinsipper for sirkulær økonomi.",
+          geotechnical:
+            "På bakgrunn av geotekniske forhold, er en avlastning av området fra ytterligere geoteknisk belastning det mest rasjonelle valget.",
+          recommendation:
+            "Det mest virkningsfulle tiltaket for prosjektet først og fremst være å unngå riving. Det unngår behovet for å bygge et nytt bygg og vil begrense uttak av jomfruelige materialer i svært stor grad.",
+        },
+      };
+
+      // State
+      let currentPage = 1;
+      let zoomLevel = 1;
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", () => {
+        renderFindings();
+        renderChapters();
+        renderPages();
+        renderScenarios();
+        renderFramework();
+        renderConclusion();
+        renderSources();
+        setupTabs();
+        setupKeyboard();
+      });
+
+      // Tab switching
+      function setupTabs() {
+        document.querySelectorAll(".section-tab").forEach((tab) => {
+          tab.addEventListener("click", () => {
+            document
+              .querySelectorAll(".section-tab")
+              .forEach((t) => t.classList.remove("active"));
+            document
+              .querySelectorAll(".content-section")
+              .forEach((s) => s.classList.remove("active"));
+            tab.classList.add("active");
+            document
+              .getElementById(tab.dataset.section)
+              .classList.add("active");
+          });
+        });
+      }
+
+      // Render findings
+      function renderFindings() {
+        const container = document.getElementById("findingsList");
+        container.innerHTML = reportData.findings
+          .map(
+            (f) => `
+                <div class="finding-item">
+                    <div class="finding-icon">${f.icon}</div>
+                    <div class="finding-content">
+                        <h4>${f.category}</h4>
+                        <p>${f.text}</p>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // Render chapters
+      function renderChapters() {
+        const container = document.getElementById("chapterList");
+        container.innerHTML = reportData.chapters
+          .map(
+            (ch) => `
+                <div class="chapter-item" onclick="goToChapter(${ch.start})">
+                    <div class="chapter-number">${ch.num}</div>
+                    <div class="chapter-info">
+                        <div class="chapter-title">${ch.title}</div>
+                        <div class="chapter-pages">Side ${ch.start}${ch.end > ch.start ? "-" + ch.end : ""}</div>
+                    </div>
+                    <div class="chapter-arrow">→</div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // Render pages grid
+      function renderPages() {
+        const container = document.getElementById("pagesGrid");
+        let html = "";
+
+        for (let page = 1; page <= reportData.totalPages; page++) {
+          const chapter = reportData.chapters.find((ch) => ch.start === page);
+          if (chapter && page > 1) {
+            html += `<div class="chapter-divider-row">${chapter.num}. ${chapter.title}</div>`;
+          }
+          html += `
+                    <div class="page-thumb" onclick="openFullscreen(${page})">
+                        <img src="${reportData.imageFolder}/page_${String(page).padStart(2, "0")}.jpg"
+                             alt="Side ${page}" loading="lazy">
+                        <span class="page-num">${page}</span>
+                    </div>
+                `;
+        }
+        container.innerHTML = html;
+      }
+
+      // Render scenarios
+      function renderScenarios() {
+        const container = document.getElementById("scenariosGrid");
+        container.innerHTML = reportData.scenarios
+          .map(
+            (s) => `
+                <div class="scenario-card ${s.recommended ? "recommended" : "not-recommended"}">
+                    <h4>
+                        <span class="scenario-num">${s.num}</span>
+                        ${s.name}
+                        ${s.recommended ? '<span class="rec-badge">ANBEFALT</span>' : ""}
+                    </h4>
+                    <div class="scenario-stats">
+                        <div class="scenario-stat">
+                            <span class="label">Materialer</span>
+                            <span class="value">${s.materials.toLocaleString()} t CO₂</span>
+                        </div>
+                        <div class="scenario-stat">
+                            <span class="label">Energi</span>
+                            <span class="value">${s.energy.toLocaleString()} t CO₂</span>
+                        </div>
+                        <div class="scenario-stat">
+                            <span class="label">Totalt</span>
+                            <span class="value">${s.total.toLocaleString()} t CO₂</span>
+                        </div>
+                        <div class="scenario-stat">
+                            <span class="label">Per m² BTA</span>
+                            <span class="value">${s.perM2} kg/m²</span>
+                        </div>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // Render framework
+      function renderFramework() {
+        const container = document.getElementById("frameworkList");
+        container.innerHTML = reportData.framework
+          .map(
+            (f) => `
+                <div class="finding-item">
+                    <div class="finding-icon">${f.icon}</div>
+                    <div class="finding-content">
+                        <h4>${f.name}</h4>
+                        <p>${f.desc}</p>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // Render conclusion
+      function renderConclusion() {
+        const container = document.getElementById("conclusionContent");
+        container.innerHTML = `
+                <div class="findings-list">
+                    <div class="finding-item">
+                        <div class="finding-icon">✓</div>
+                        <div class="finding-content">
+                            <h4>Hovedkonklusjon</h4>
+                            <p>${reportData.conclusion.main}</p>
+                        </div>
+                    </div>
+                    <div class="finding-item">
+                        <div class="finding-icon">⚠️</div>
+                        <div class="finding-content">
+                            <h4>Geoteknisk vurdering</h4>
+                            <p>${reportData.conclusion.geotechnical}</p>
+                        </div>
+                    </div>
+                    <div class="finding-item">
+                        <div class="finding-icon">💡</div>
+                        <div class="finding-content">
+                            <h4>Anbefaling</h4>
+                            <p>${reportData.conclusion.recommendation}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+      }
+
+      // Render sources
+      function renderSources() {
+        const container = document.getElementById("sourcesList");
+        container.innerHTML = reportData.sources
+          .map(
+            (s) => `
+                <div class="source-item">
+                    <div class="source-icon">📄</div>
+                    <div class="source-info">
+                        <div class="source-title">${s.title}</div>
+                        <div class="source-meta">${s.author}${s.date ? " • " + s.date : ""} • Sider: ${s.pages}</div>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // Go to chapter
+      function goToChapter(page) {
+        document.querySelectorAll(".section-tab")[1].click();
+        setTimeout(() => {
+          openFullscreen(page);
+        }, 100);
+      }
+
+      // Fullscreen functions
+      function openFullscreen(page) {
+        currentPage = page;
+        document.getElementById("fullscreenModal").classList.add("active");
+        updateFullscreen();
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeFullscreen() {
+        document.getElementById("fullscreenModal").classList.remove("active");
+        document.body.style.overflow = "";
+        zoomLevel = 1;
+        applyZoom();
+      }
+
+      function updateFullscreen() {
+        const img = document.getElementById("fullscreenImg");
+        img.src = `${reportData.imageFolder}/page_${String(currentPage).padStart(2, "0")}.jpg`;
+
+        const chapter = reportData.chapters.find(
+          (ch) => currentPage >= ch.start && currentPage <= ch.end,
+        );
+        document.getElementById("fullscreenTitle").textContent =
+          `${chapter ? chapter.title + " - " : ""}Side ${currentPage} av ${reportData.totalPages}`;
+        document.getElementById("pageCounter").textContent =
+          `${currentPage} / ${reportData.totalPages}`;
+      }
+
+      function navigateFullscreen(dir) {
+        const newPage = currentPage + dir;
+        if (newPage >= 1 && newPage <= reportData.totalPages) {
+          currentPage = newPage;
+          updateFullscreen();
+        }
+      }
+
+      function zoomIn() {
+        zoomLevel = Math.min(zoomLevel + 0.25, 3);
+        applyZoom();
+      }
+      function zoomOut() {
+        zoomLevel = Math.max(zoomLevel - 0.25, 0.5);
+        applyZoom();
+      }
+      function applyZoom() {
+        document.getElementById("fullscreenImg").style.transform =
+          `scale(${zoomLevel})`;
+        document.getElementById("zoomLevel").textContent =
+          `${Math.round(zoomLevel * 100)}%`;
+      }
+
+      // Keyboard
+      function setupKeyboard() {
+        document.addEventListener("keydown", (e) => {
+          if (
+            document
+              .getElementById("fullscreenModal")
+              .classList.contains("active")
+          ) {
+            if (e.key === "Escape") closeFullscreen();
+            if (e.key === "ArrowLeft") navigateFullscreen(-1);
+            if (e.key === "ArrowRight") navigateFullscreen(1);
+            if (e.key === "+" || e.key === "=") zoomIn();
+            if (e.key === "-") zoomOut();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

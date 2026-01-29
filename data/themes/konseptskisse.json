@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-12-02",
+    "title": "Konseptskisse September 2025",
+    "subtitle": "Hovfaret 13 - Hoff ved Skøyen",
+    "author": "Natural State / R21 Arkitekter / Urbania Eiendom",
+    "date": "2025-09-04",
+    "total_pages": 113,
+    "image_folder": "assets/konseptskisser/v1-sept-2025",
+    "content_classification": {
+      "type": "deliverable_content",
+      "deliverable_id": "d_konseptskisse_1",
+      "deliverable_version": "1.0",
+      "source_document": "Konseptskisse September 2025",
+      "is_primary_source": false
+    }
+  },
+
+  "structure": {
+    "parts": [
+      {
+        "id": "part1",
+        "number": 1,
+        "title": "Bakgrunn",
+        "subtitle": "Hvor er vi og hva er prosjektets ambisjoner?",
+        "page_start": 1,
+        "page_end": 27,
+        "color": "#3b82f6"
+      },
+      {
+        "id": "part2",
+        "number": 2,
+        "title": "Stedsutvikling",
+        "subtitle": "Hvordan skape et godt og attraktivt sted?",
+        "page_start": 28,
+        "page_end": 53,
+        "color": "#10b981"
+      },
+      {
+        "id": "part3",
+        "number": 3,
+        "title": "Konseptskisse 1.0",
+        "subtitle": "Hvilken aktivitet passer for H13?",
+        "page_start": 54,
+        "page_end": 91,
+        "color": "#f59e0b"
+      },
+      {
+        "id": "part4",
+        "number": 4,
+        "title": "Utviklingsstrategi",
+        "subtitle": "Hvordan realisere H13 på en god og bærekraftig måte?",
+        "page_start": 92,
+        "page_end": 113,
+        "color": "#8b5cf6"
+      }
+    ],
+    "chapters": [
+      {
+        "id": "ch1",
+        "part": 1,
+        "title": "Forside",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "id": "ch2",
+        "part": 1,
+        "title": "Innholdsfortegnelse",
+        "page_start": 2,
+        "page_end": 2
+      },
+      {
+        "id": "ch3",
+        "part": 1,
+        "title": "Innsikt forprosjekt",
+        "page_start": 4,
+        "page_end": 6,
+        "key_content": ["Prosjektgruppe", "Natural State Metode", "Prosessbeskrivelse"]
+      },
+      {
+        "id": "ch4",
+        "part": 1,
+        "title": "Skøyen og nærområdet",
+        "page_start": 7,
+        "page_end": 14,
+        "key_content": ["Bydel Ullern", "Hovfaret 13", "Tilbud i nærområdet", "Mat & Drikke"]
+      },
+      {
+        "id": "ch5",
+        "part": 1,
+        "title": "Regulatorisk kontekst",
+        "page_start": 15,
+        "page_end": 20,
+        "key_content": ["Områderegulering Skøyen", "KPA Kommuneplanens arealdel", "Utearealsnorm Oslo"]
+      },
+      {
+        "id": "ch6",
+        "part": 1,
+        "title": "Bygningsmasse",
+        "page_start": 21,
+        "page_end": 24,
+        "key_content": ["Konstruksjon 1989", "Søyle-dekke-system", "3-4 påbyggetasjer", "Fleksibilitet"]
+      },
+      {
+        "id": "ch7",
+        "part": 1,
+        "title": "Scenarioer",
+        "page_start": 25,
+        "page_end": 27,
+        "key_content": ["3 transformasjonsalternativer"]
+      },
+      {
+        "id": "ch8",
+        "part": 2,
+        "title": "Fasadeendring",
+        "page_start": 28,
+        "page_end": 35,
+        "key_content": ["Solcellepaneler", "Grønne fasader", "Alternativ 1-3"]
+      },
+      {
+        "id": "ch9",
+        "part": 2,
+        "title": "Sirkulær økonomi",
+        "page_start": 36,
+        "page_end": 48,
+        "key_content": ["Sirkulær bydel", "Verdikjeder", "Ombruk", "Ressursutnyttelse"]
+      },
+      {
+        "id": "ch10",
+        "part": 2,
+        "title": "Naturpositive tiltak",
+        "page_start": 49,
+        "page_end": 53,
+        "key_content": ["Biodiversitet", "Fremmedarter", "Hoffsdammen", "NiN-kartlegging"]
+      },
+      {
+        "id": "ch11",
+        "part": 3,
+        "title": "Stedsidentitet",
+        "page_start": 55,
+        "page_end": 58,
+        "key_content": ["Aktiviteter", "Innovasjon", "Møteplasser", "Videre bruk"]
+      },
+      {
+        "id": "ch12",
+        "part": 3,
+        "title": "Muligheter og funksjoner",
+        "page_start": 59,
+        "page_end": 70,
+        "key_content": ["Møtested", "Arrangementer", "Kontor", "Grønne uterom", "Servering", "Boligtypologier", "Omsorg+"]
+      },
+      {
+        "id": "ch13",
+        "part": 3,
+        "title": "Etasjeplaner",
+        "page_start": 71,
+        "page_end": 82,
+        "key_content": ["U2", "U1", "1. etasje", "2. etasje", "3. etasje", "4. etasje", "5. etasje", "Påbygg"]
+      },
+      {
+        "id": "ch14",
+        "part": 3,
+        "title": "Strategisk involvering",
+        "page_start": 83,
+        "page_end": 91,
+        "key_content": ["Leietakersamtaler", "Nabolagsmøter", "Interessenter", "Omsorg+", "Sosial bærekraft", "Drivere"]
+      },
+      {
+        "id": "ch15",
+        "part": 4,
+        "title": "Energi & Klima",
+        "page_start": 92,
+        "page_end": 93,
+        "key_content": ["CO₂-analyse", "Materialutslipp", "Miljørisiko"]
+      },
+      {
+        "id": "ch16",
+        "part": 4,
+        "title": "Referanser",
+        "page_start": 94,
+        "page_end": 113,
+        "key_content": ["Natural State", "Prosessbeskrivelse", "Fuglen", "Prosjektreferanser"]
+      }
+    ]
+  },
+
+  "project_team": [
+    {
+      "name": "Urbania Eiendom",
+      "role": "Eier & utvikler",
+      "description": "Står bak en rekke nøye utvalgte prosjekter. Vektlegger bærekraft og langsiktig verdi i sine investeringer."
+    },
+    {
+      "name": "R21 Arkitekter",
+      "role": "Arkitekt",
+      "description": "Ser arkitekturen i sammenheng med den sosiale, kulturelle, økonomiske, geografiske og miljømessige konteksten."
+    },
+    {
+      "name": "Natural State",
+      "role": "Stedsutvikler",
+      "description": "Jobber med verdiorientert stedsutvikling og bærekraftig stedsøkonomi. The Natural State Method."
+    }
+  ],
+
+  "building": {
+    "address": "Hovfaret 13",
+    "location": "Hoff ved Skøyen, Oslo",
+    "built": 1989,
+    "area_m2": 6093,
+    "floors": "5 etasjer + 2 underetasjer",
+    "construction": {
+      "type": "Søyle-dekke-system i betong og stål",
+      "designed_for": "3-4 påbyggetasjer",
+      "ceiling_height": "2.7-2.8 meter",
+      "flexibility": "Åpne planløsninger, flyttbare skillevegger"
+    },
+    "technical_condition": {
+      "structure": "Robust bæresystem i god stand",
+      "facades": "Kan enkelt oppgraderes",
+      "systems": "Modne for modernisering",
+      "load_capacity": "Tåler ekstra belastning"
+    },
+    "challenge": "Rivningsvedtak grunnet 10-meters regelen mot Hoffselva"
+  },
+
+  "scenarios": [
+    {
+      "number": 1,
+      "title": "Transformasjon av kontor",
+      "subtitle": "Funksjon og form",
+      "description": "Riving og nybygg",
+      "material_emissions_kg_m2": 312,
+      "waste_kg_m2": "800-1200",
+      "structure_preserved": "0%",
+      "reuse_potential": "Lav",
+      "material_utilization": 0.25,
+      "recommended": false
+    },
+    {
+      "number": 2,
+      "title": "Transformasjon til flerbruk",
+      "subtitle": "Flerfunksjoner innenfor form",
+      "description": "Rehabilitering av eksisterende bygg",
+      "material_emissions_kg_m2": 62,
+      "waste_kg_m2": "100-200",
+      "structure_preserved": "≈90%",
+      "reuse_potential": "Høy - dører, himling, VVS/EL",
+      "material_utilization": 0.65,
+      "recommended": true
+    },
+    {
+      "number": 3,
+      "title": "Transformasjon til flerfunksjoner",
+      "subtitle": "Ny form - full realisering av påbygg",
+      "description": "Rehabilitering + påbygg i høyden",
+      "material_emissions_kg_m2": 123,
+      "waste_kg_m2": "170-250",
+      "structure_preserved": "≈90%",
+      "reuse_potential": "Middels - rehab høy, påbygg lav",
+      "material_utilization": 0.50,
+      "recommended": true,
+      "preferred": true
+    }
+  ],
+
+  "functions": [
+    {
+      "id": "motested",
+      "name": "Møtested",
+      "icon": "☕",
+      "description": "Møtested for eldre på dagtid, lokal møteplass for beboere, uteservering og kveldsaktiviteter",
+      "features": ["Kaffebar & Bar", "Spiseri / Utvidet Kantine", "Møteplass", "Uteservering", "Flerbruksområde for hele nabolaget"],
+      "pages": [60]
+    },
+    {
+      "id": "arrangementer",
+      "name": "Arrangementer",
+      "icon": "🎭",
+      "description": "Arrangementer for eldre på dagtid, utleie, tilbud til lokale organisasjoner og kulturarrangementer",
+      "features": ["Nabolagshus / Utleie", "Bryllup, konfirmasjon, bursdager", "Kultur, konsert, litteratur, teater", "Workshops"],
+      "pages": [61]
+    },
+    {
+      "id": "kontor",
+      "name": "Kontor",
+      "icon": "💼",
+      "description": "Fleksible kontorer og kontorfellesskap",
+      "features": ["Studioer", "Kontor", "Community Manager", "Åpent hus og arrangement", "Miks av næringer og oppstartbedrifter"],
+      "pages": [62]
+    },
+    {
+      "id": "uterom",
+      "name": "Grønne uterom",
+      "icon": "🌿",
+      "description": "Naturrestaurering av Hoffselven, ivaretakelse av natur, fremme biodiversitet",
+      "features": ["Grønne vegger", "Overvannshåndtering", "Froskedam", "Eng med lokale arter"],
+      "pages": [63, 49, 50, 51, 52]
+    },
+    {
+      "id": "servering",
+      "name": "Servering",
+      "icon": "🍽️",
+      "description": "Spiseri/Kantine, bærekraftig matproduksjon, uteservering",
+      "features": ["Bærekraftig mat", "Lokale råvarer", "Uteservering"],
+      "pages": [64]
+    },
+    {
+      "id": "bolig",
+      "name": "Boligtypologier",
+      "icon": "🏠",
+      "description": "Mangfoldige boformer tilpasset ulike livsfaser og behov",
+      "features": ["Fleksible boliger", "Generasjonsboliger", "Tilpasset ulike livsfaser"],
+      "pages": [65]
+    },
+    {
+      "id": "omsorg",
+      "name": "Omsorg+",
+      "icon": "❤️",
+      "description": "Trygg boform for eldre med tilgang til fellesskap, aktiviteter og tjenester",
+      "features": ["73 omsorgsboliger", "Fellesarealer", "Aktivitetstilbud", "Mellomtrinn mellom hjemme og sykehjem"],
+      "pages": [66, 88],
+      "key_info": {
+        "units": 73,
+        "target_group": "Eldre 67+",
+        "need_identified": "160 enheter i Bydel Ullern",
+        "stakeholders": ["Bydel Ullern", "Bente Nodland Otto", "Ida Saxebøl", "Ingrid Hopp", "Tore Strandskog"]
+      }
+    }
+  ],
+
+  "stakeholders": {
+    "public": [
+      {
+        "name": "Bydel Ullern",
+        "type": "Kommune",
+        "contacts": ["Bente Nodland Otto", "Ida Saxebøl"],
+        "interest": "Behov for 160 omsorgsboliger"
+      },
+      {
+        "name": "Bydelsutvalget",
+        "type": "Politisk",
+        "contacts": ["Ingrid Hopp (leder)", "Tore Strandskog (byutvikling)"],
+        "interest": "Omsorgsboliger høyt på agendaen"
+      }
+    ],
+    "local": [
+      {
+        "name": "Røde Hytta (Kirkens Bymisjon)",
+        "type": "Frivillig",
+        "status": "Står på dispensasjon som utløper",
+        "interest": "Ønsker å bygge Frivillighetens Hus"
+      },
+      {
+        "name": "Nabolagsfabrikken",
+        "type": "Aktivist",
+        "status": "Aktiviserer Karenslyst Allé",
+        "interest": "Tett dialog om Hovfaret 13"
+      },
+      {
+        "name": "Aktivitetssenteret",
+        "type": "Offentlig",
+        "status": "Plassmangel og økende brukere",
+        "interest": "Behov for flere lokaler"
+      }
+    ],
+    "potential_drivers": [
+      "Pådriv",
+      "Food Studios (Cecilie Dawes)",
+      "Lokale oppstartbedrifter",
+      "Kreative næringer"
+    ]
+  },
+
+  "sustainability": {
+    "circular_economy": {
+      "vision": "Hovfaret 13 som katalysator for sirkulær områdeutvikling på Skøyen",
+      "principles": [
+        "Implementere sirkulære prinsipper på tvers av bygg og tomter",
+        "Skøyen som levende lab for smart, bærekraftig byutvikling",
+        "Nav i en regional og nasjonal sirkulær klynge"
+      ]
+    },
+    "nature_positive": {
+      "actions": [
+        "Fjerne fremmedarter (gravmyrt, kjempebjørnekjeks)",
+        "Bevare og forbedre Hoffsdammen for damfrosk",
+        "Introdusere lokalt artsmangfold",
+        "Plante eng med regionale arter (NIBIO/KVANN)"
+      ]
+    },
+    "climate": {
+      "key_message": "Å la betongen stå er det største enkeltgrepet for å kutte CO₂",
+      "savings": "250 kg CO₂ per m² + 900 kg avfall per m² sammenlignet med riving"
+    }
+  },
+
+  "timeline": [
+    {"year": 1938, "event": "Veien Hovfaret navngis etter Hoff gård"},
+    {"year": 1964, "event": "Bakeriet G. Møllhausen åpner fabrikk i Hovfaret 17"},
+    {"year": 1978, "event": "Hoff gårds låve brenner ned"},
+    {"year": 1984, "event": "Låven gjenoppføres som næringsbygg"},
+    {"year": 1989, "event": "Hovfaret 13 bygges med kapasitet for påbygg"},
+    {"year": 1992, "event": "Møllhausens bakerivirksomhet legges ned"},
+    {"year": 2004, "event": "Gamle bakeriet blir Møllhausen Torg"},
+    {"year": 2023, "event": "Rivningsvedtak i områdeplan"},
+    {"year": 2024, "event": "Prosjektoppstart med Natural State og R21"},
+    {"year": 2025, "event": "Konseptskisse 1.0 ferdigstilt"}
+  ],
+
+  "key_quotes": [
+    {
+      "quote": "Forlat skogen like ren eller renere enn når du kom",
+      "context": "Naturpositiv tilnærming",
+      "page": 49
+    },
+    {
+      "quote": "En by er bra fordi den skaper et handlingsrom, et mangfold for mennesker",
+      "context": "Sosial bærekraft",
+      "page": 89
+    },
+    {
+      "quote": "To knappheter: penger og hender i hjemmesykepleie",
+      "context": "Bydelsledelsen om ressursutfordringer",
+      "page": 88
+    }
+  ],
+
+  "next_steps": [
+    "Rammesøknad for Omsorg+ konsept",
+    "Midlertidig bruksendring for 1. etasje",
+    "Driverdialog og konseptsamtaler",
+    "Nabolagsmøter og medvirkning",
+    "Utvikling av Konseptskisse 2.0"
+  ]
+}

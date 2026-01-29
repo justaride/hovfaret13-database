@@ -1,0 +1,46 @@
+{
+  "source": {
+    "file_name": "Situasjonsplan (1).pdf",
+    "relative_path": "Situasjonsplan (1).pdf",
+    "size_bytes": 448089,
+    "modified_time": "2026-01-26T18:50:59.105075+00:00",
+    "sha256": "1680178662814ff2cca7c902338fd4cc992532ac35858a8703991fc5983fc782"
+  },
+  "pdfinfo": {
+    "Title": "Microsoft Word - Situasjonsplan",
+    "Author": "",
+    "Producer": "PixEdit AS,  PixToolsLib Version 2.6.5.14",
+    "CreationDate": "Fri Feb 16 11:04:57 2024 CET",
+    "ModDate": "Mon Mar 18 16:44:25 2024 CET",
+    "Custom Metadata": "no",
+    "Metadata Stream": "yes",
+    "Tagged": "no",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "1",
+    "Encrypted": "no",
+    "Page size": "595.32 x 841.92 pts (A4)",
+    "Page rot": "0",
+    "File size": "448089 bytes",
+    "Optimized": "no",
+    "PDF version": "1.7"
+  },
+  "extraction": {
+    "tool": "pdftotext",
+    "options": "-layout",
+    "extracted_at": "2026-01-26T19:16:03.543934+00:00",
+    "page_count": 1,
+    "has_text": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Situasjonsplan. Skøyen terrasse 1. Gnr./bnr. 3/493.\n",
+      "char_count": 52,
+      "line_count": 2
+    }
+  ],
+  "text": "Situasjonsplan. Skøyen terrasse 1. Gnr./bnr. 3/493.\n\f"
+}

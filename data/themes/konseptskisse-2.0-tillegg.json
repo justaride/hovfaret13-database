@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "title": "Konseptskisse 2.0 - Del 5: Progresjon",
+    "version": "4.0",
+    "created": "2025-12-03",
+    "updated": "2025-12-03",
+    "author": "Natural State",
+    "base_document": "04.09.25 Hovfaret 13 - Konseptskisse.pdf",
+    "base_pages": 99,
+    "new_pages": "100-123",
+    "total_new_pages": 24,
+    "purpose": "Del 5: Progresjon - fortsetter etter originalens side 99 (Strategisk Akselerasjon)",
+    "revision_notes": "v4.0: Utvidet med 4 nye sider (120-123) basert på benchmark-analyse. Nettside, Markedsinnsikt, Stedsøkonomi med arealregnskap, Medvirkningsdokumentasjon.",
+    "content_classification": {
+      "type": "deliverable_content",
+      "deliverable_id": "d_025",
+      "deliverable_version": "2.0",
+      "source_document": "Konseptskisse 2.0 - Del 5: Progresjon",
+      "is_primary_source": false
+    }
+  },
+
+  "style_guide": {
+    "header": "Tittel øverst til venstre, undertittel under",
+    "footer": "The natural state of place | © 2025 naturalstate.no | Sidetall",
+    "fonts": "Clean sans-serif, Inter",
+    "colors": {
+      "primary": "#1a1a1a (tekst)",
+      "accent": "#4a7c59 (Natural State grønn)",
+      "background": "#ffffff",
+      "highlight": "#f5f5f5"
+    },
+    "layout": "Landskapsformat 16:9, tekst venstrejustert, bilder høyre/full bredde",
+    "bullets": "• for hovedpunkter, ○ for underpunkter"
+  },
+
+  "structure_note": {
+    "original_pages": 99,
+    "original_ending": "Side 99: Strategisk Akselerasjon",
+    "del_5_starts": 100,
+    "del_5_title": "Progresjon",
+    "del_5_tagline": "Faglige leveranser, metodikk og veien videre",
+    "continuation_logic": "Del 5 fortsetter direkte etter originalens Del 4 (Utviklingsstrategi)"
+  },
+
+  "new_pages": [
+    {
+      "page_number": 100,
+      "type": "section_divider",
+      "title": "5.",
+      "subtitle": "Progresjon",
+      "tagline": "Faglige leveranser, metodikk og veien videre\nFortsetter fra side 99 (Strategisk Akselerasjon)",
+      "design_notes": "Samme stil som side 3, 28, 54, 92 - mørk bakgrunn, stor tittel"
+    },
+    {
+      "page_number": 101,
+      "type": "content",
+      "title": "Energirapport",
+      "subtitle": "Vill Energi AS • 11. april 2025",
+      "content": {
+        "summary": "Komplett energikartlegging viser at rehabilitering kan oppnå TEK17-nivå med 50% reduksjon i energiforbruk.",
+        "key_findings": [
+          {"metric": "50%", "description": "Energireduksjon mulig"},
+          {"metric": "F → C", "description": "Energiklasseforbedring"},
+          {"metric": "TEK17", "description": "Målnivå oppnåelig"},
+          {"metric": "Enova", "description": "Støtte bekreftet"}
+        ]
+      }
+    },
+    {
+      "page_number": 102,
+      "type": "content",
+      "title": "Klimagassberegninger v2",
+      "subtitle": "Vill Energi AS • 22. april 2025",
+      "content": {
+        "headline": "Å bevare bærekonstruksjonen sparer 48% CO₂",
+        "key_message": "Materialutslipp utgjør den største forskjellen mellom scenarioene — ikke driftsfasen etterpå."
+      }
+    },
+    {
+      "page_number": 103,
+      "type": "content",
+      "title": "Bærekraftsvurdering",
+      "subtitle": "Natural State • 4. juli 2025",
+      "content": {
+        "summary": "83 siders praktisk bærekraftsvurdering som dokumenterer miljøgevinstene ved transformasjon.",
+        "note": "Dette er IKKE en ESRS-rapport, men en praktisk vurdering basert på tilgjengelige data."
+      }
+    },
+    {
+      "page_number": 104,
+      "type": "content",
+      "title": "R21 Endelig Leveranse",
+      "subtitle": "R21 Arkitekter • Oktober 2025",
+      "content": {
+        "summary": "Detaljerte tegninger, 3D-visualiseringer og tre fasadealternativer."
+      }
+    },
+    {
+      "page_number": 105,
+      "type": "content",
+      "title": "Interessentdialog",
+      "subtitle": "13 verifiserte hendelser 2025",
+      "content": {
+        "events": 13,
+        "highlights": ["Nabolagsmøte 14. okt (~30 deltakere)", "Bydelsutvalgsmøte 29. okt", "James Lorentzen 24. juni"]
+      }
+    },
+    {
+      "page_number": 106,
+      "type": "content",
+      "title": "Omsorg+ Fordypning",
+      "subtitle": "73 enheter som møter bydelens behov",
+      "content": {
+        "units": 73,
+        "breakdown": {"enkeltrom_42m2": 66, "dobbeltrom_67m2": 7},
+        "husbanken_compliance": "12/12 kategorier"
+      }
+    },
+    {
+      "page_number": 107,
+      "type": "content",
+      "title": "Geoteknisk Risiko",
+      "subtitle": "Kvikkleire — enda et argument for å la bygget stå",
+      "content": {
+        "conclusion": "Avlastning av området fra ytterligere geoteknisk belastning er det mest rasjonelle valget."
+      }
+    },
+    {
+      "page_number": 108,
+      "type": "content",
+      "title": "Prosjektdatabase",
+      "subtitle": "20 måneder med arbeid — dokumentert og søkbart",
+      "content": {
+        "meetings": 70,
+        "documents": 271,
+        "deliverables": 75,
+        "people": 22,
+        "organizations": 13
+      }
+    },
+    {
+      "page_number": 109,
+      "type": "content",
+      "title": "Neste Steg",
+      "subtitle": "Veien mot realisering",
+      "content": {
+        "completed": ["Nabovarsel (16. okt)", "Bruksendringssøknad sendt"],
+        "in_progress": ["Rammesøknad"]
+      }
+    },
+    {
+      "page_number": 110,
+      "type": "summary",
+      "title": "Oppsummering",
+      "subtitle": "Konseptskisse 2.0 Status",
+      "content": {
+        "key_numbers": [
+          {"value": "48%", "label": "Lavere CO₂"},
+          {"value": "73", "label": "Omsorg+ enheter"},
+          {"value": "70", "label": "Møter gjennomført"}
+        ]
+      }
+    },
+    {
+      "page_number": 111,
+      "type": "content",
+      "title": "Natural State Metodikk",
+      "subtitle": "Ref. Godsløkka konseptskisse s.7",
+      "content": {
+        "description": "Hvordan vi jobber med stedsutvikling og bærekraft"
+      }
+    },
+    {
+      "page_number": 112,
+      "type": "content",
+      "title": "Helhetlige Verdier",
+      "subtitle": "Ref. Godsløkka konseptskisse s.8-11",
+      "content": {
+        "pillars": ["Natur", "Menneske", "Samfunn", "Marked"]
+      }
+    },
+    {
+      "page_number": 113,
+      "type": "content",
+      "title": "Suksesskriterier",
+      "subtitle": "Ref. Godsløkka konseptskisse s.12",
+      "content": {
+        "criteria": ["Bærekraft", "Økonomi", "Samfunnsnytte", "Kvalitet"]
+      }
+    },
+    {
+      "page_number": 114,
+      "type": "content",
+      "title": "Formidlingsstrategi",
+      "subtitle": "Ref. Godsløkka konseptskisse s.24-28",
+      "content": {
+        "channels": ["Presentasjoner", "Digitalt", "Medier", "Nettverksbygging"]
+      }
+    },
+    {
+      "page_number": 115,
+      "type": "content",
+      "title": "Politisk Dialog",
+      "subtitle": "James Lorentzen • 24. juni 2025",
+      "content": {
+        "description": "Møte med byråden for byutvikling",
+        "source": "meetings.json #38"
+      }
+    },
+    {
+      "page_number": 116,
+      "type": "content",
+      "title": "Nordic Innovation",
+      "subtitle": "NCE søknad • 8. september 2025",
+      "content": {
+        "description": "Finansieringsmuligheter gjennom Nordic Circle Hotspot",
+        "source": "meetings.json #67"
+      }
+    },
+    {
+      "page_number": 117,
+      "type": "content",
+      "title": "Konseptworkshop R21",
+      "subtitle": "27. september 2025",
+      "content": {
+        "description": "6-timers workshop med R21 Arkitekter",
+        "outcomes": "Fasadealternativer, etasjeplaner, 3D-visualiseringer",
+        "source": "meetings.json #57"
+      }
+    },
+    {
+      "page_number": 118,
+      "type": "content",
+      "title": "Regulatorisk Prosess",
+      "subtitle": "Nabovarsel og søknader",
+      "content": {
+        "nabovarsel": {"status": "Fullført", "date": "16.10.2025"},
+        "bruksendringssoknad": {"status": "Sendt", "date": "nov 2025"},
+        "rammesoknad": {"status": "Planlagt", "date": "Q1 2026"}
+      }
+    },
+    {
+      "page_number": 119,
+      "type": "content",
+      "title": "Stedsøkonomi",
+      "subtitle": "Inntektspotensial og finansiering",
+      "content": {
+        "description": "Økonomisk modell for transformasjon",
+        "sources": ["Møte 2. sept 2025 (Andreas/Einar)", "Notion leveranser"]
+      }
+    },
+    {
+      "page_number": 120,
+      "type": "content",
+      "title": "Nettside & Digital Tilstedeværelse",
+      "subtitle": "hovfaret13.no — Lansert 29. september 2025",
+      "content": {
+        "website": {
+          "url": "hovfaret13.no",
+          "launched": "2025-09-29",
+          "developer": "Parabol",
+          "status": "active"
+        },
+        "social_media": ["Facebook", "Instagram"],
+        "deliverables": {
+          "communication": 11,
+          "social_media": 10
+        }
+      },
+      "design_notes": "Basert på benchmark vs Godsløkka kommunikasjonsstrategi"
+    },
+    {
+      "page_number": 121,
+      "type": "content",
+      "title": "Markedsinnsikt",
+      "subtitle": "Bydel Ullern — Demografi og behov",
+      "content": {
+        "demographics": {
+          "population": 35000,
+          "elderly_percent": 18,
+          "housing_need": "150-200 omsorgsboliger mot 2040"
+        },
+        "competition": {
+          "oslo_total": 13,
+          "skoyen_current": 1,
+          "hovfaret_position": "#14 i Oslo, #2 på Skøyen"
+        }
+      },
+      "design_notes": "Basert på benchmark vs Plaace-analyser i andre prosjekter"
+    },
+    {
+      "page_number": 122,
+      "type": "content",
+      "title": "Stedsøkonomi — Arealregnskap",
+      "subtitle": "Detaljert arealfordeling og verdimodell",
+      "content": {
+        "areas": {
+          "units_bra": 2958,
+          "service_area": 2068,
+          "communication_technical": 834,
+          "balcony": 662,
+          "basement": 2400
+        },
+        "economics": {
+          "units": 73,
+          "reference_price_per_unit": "~10 MNOK",
+          "husbanken_support": "45% (maks 2,1 MNOK/enhet i Oslo)",
+          "estimated_value": "~730 MNOK"
+        }
+      },
+      "design_notes": "Basert på Trykkeriet Nydalen og Sundland stedsøkonomi-kapitler"
+    },
+    {
+      "page_number": 123,
+      "type": "content",
+      "title": "Medvirkningsdokumentasjon",
+      "subtitle": "Nabolagsmøte 14. oktober 2025 — Oppsummering",
+      "content": {
+        "neighborhood_meeting": {
+          "date": "2025-10-14",
+          "participants": "~30",
+          "theme_stations": 4,
+          "summary_published": true
+        },
+        "other_events": [
+          "Bydelsutvalgsmøte 29. okt",
+          "Leietakermøte 10. jan",
+          "Bydelsmøter mai 2025",
+          "Byråd Lorentzen 24. juni"
+        ],
+        "verified_events_total": 13
+      },
+      "design_notes": "Basert på Godsløkka medvirkningsdokumentasjon"
+    }
+  ],
+
+  "changes_to_existing_pages": [
+    {
+      "page": 2,
+      "type": "update",
+      "section": "Innholdsfortegnelse",
+      "change": "Legg til '5. Progresjon' i kolonnestrukturen med sider 100-119"
+    }
+  ],
+
+  "summary_report": {
+    "title": "Konseptskisse 2.0 Del 5: Progresjon - Statusrapport v4.0",
+    "date": "2025-12-03",
+    "prepared_by": "Natural State / Claude Code",
+    "new_pages_count": 24,
+    "page_range": "100-123",
+    "status": "Klar for design og produksjon",
+    "key_changes_v4": [
+      "4 nye sider basert på benchmark-analyse vs Natural State portefølje",
+      "Side 120: Nettside & Digital Tilstedeværelse (hovfaret13.no)",
+      "Side 121: Markedsinnsikt (Bydel Ullern demografi)",
+      "Side 122: Stedsøkonomi — Arealregnskap (detaljert modell)",
+      "Side 123: Medvirkningsdokumentasjon (nabolagsmøte-oppsummering)",
+      "Side 114: Oppdatert med hovfaret13.no og sosiale medier status"
+    ],
+    "benchmark_gaps_addressed": [
+      "Stedsøkonomi - Tidligere KRITISK gap, nå DELVIS ADRESSERT med side 119 + 122",
+      "Markedsinnsikt - Tidligere KRITISK gap, nå ADRESSERT med side 121",
+      "Kommunikasjonsstrategi - Tidligere MEDIUM gap, nå ADRESSERT med side 114 + 120",
+      "Medvirkningsformat - Tidligere MEDIUM gap, nå ADRESSERT med side 123"
+    ]
+  }
+}

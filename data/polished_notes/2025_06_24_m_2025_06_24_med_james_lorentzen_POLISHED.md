@@ -1,0 +1,533 @@
+# med James Lorentzen
+
+**Dato:** 2025-06-24
+**Sted:** e så det blir\. Det blir å konsentrere seg om det vesentligste\. Der er det gode ja\.
+
+## Deltakere
+
+*Ingen deltakere registrert i metadata*
+
+## Sammendrag
+
+*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*
+
+## Diskusjon
+
+*[Original innhold følger - krever manuell renskrivning]*
+
+
+LukkOppfølging\.\.\.
+
+15:01:00: **Gabriel Bøen:** Cortana\.
+
+15:01:02: **Gabriel Bøen:** Hører du meg, Andreas? Jeg hører ikke nei\. Hører fortsatt ikke noe hos deg?
+
+15:01:35: **Gabriel Bøen:** Jeg ser deg, Andreas, men jeg hører ikke noe\. Jeg kan også se at det ikke blir lest inn noe lys lyd fra din side\. Som\.
+
+15:02:20: **Gabriel Bøen:** Altså vil helt sikkert bare si noe en gang til Andreas\.
+
+15:03:37: **Gabriel Bøen:** Play\.
+
+15:04:25: **Gabriel Bøen:** Play\.
+
+15:07:11: **Gabriel Bøen:** Play,
+
+15:07:41: **Gabriel Bøen:** 2\.
+
+15:08:37: **Gabriel Bøen:** Jeg hører det fortsatt, ikke? Skal jeg ta å ringe deg?
+
+15:10:09: **Gabriel Bøen:** Men det må jo\. Være noe? Ja\. Hører du Andreas Thomas? Du gjør det\. Så jeg som har problemet\.
+
+15:11:22: **Gabriel Bøen:** Klar\.
+
+15:11:26: **Gabriel Bøen:** Sun\.
+
+15:11:26: **Andreas Thorsnes:** Bye\.
+
+15:11:30: **Thomas:** Markedet har gått som er problemet? Ja\.
+
+15:11:37: **Andreas Thorsnes:** Da gjør han\. Nå, jeg hører hvertfall nå\. Ja\. Hei hei hei\! Ja det kondolerer så mye til dere begge\.
+
+15:11:53: **Thomas:** Takk, takk, takk\! Gratulerer så
+
+15:11:55: **Andreas Thorsnes:** mye\!
+
+15:11:58: **Thomas:** Takk, takk\!
+
+15:12:00: **Andreas Thorsnes:** Ja\. Ja, takk, takk, takk, takk\. Det er det\. Det er mye å si om det, men det får vi\. Ja, jeg er\. Jeg er som jeg er\. Hva skal jeg si? Sånn passe sløv og passe fraværende og passe til stede så det blir\. Det blir å konsentrere seg om det vesentligste\. Der er det gode ja\.
+
+15:12:21: **Andreas Thorsnes:** Ja, da må
+
+15:12:22: **Thomas:** vi ha\. Vi har fått møte i morgen\. Ja, det er jo veldig gøy\. Det er jo en liten milepæl\. Det er jo en milepæl\. Så vi tenker jo å presentere grunngrunnprosjektet og litt sånn\.
+
+15:12:39: **Andreas Thorsnes:** Problemstillingen
+
+15:12:41: **Thomas:** tenker jeg at du kan ta Thomas så
+
+15:12:44: **Andreas Thorsnes:** du kan ta\.
+
+15:12:45: **Thomas:** Helt overordnet Andreas veldig kort innpå prosjektet, og så eventuelt dette reguleringstekniske og bruksendring og sånt\. Og så kan vi snakke om byutviklingsgrep og og bærekraft og de argumentasjon politiske etterpå da\.
+
+15:13:04: **Thomas:** Men det er jo viktig å få presentert prosjektet godt og hvorfor man ønsker å adressere den saken helt på toppnivå i forhold til denne hovedagendaen med prosjektet og få løst opp i den bestemmelsens potensielle bestemmelsen da\. Ja, for det er viktig å være tydelig på hva vi ønsker å få ut av møtet
+
+15:13:25: **Thomas:** og hvorfor\. Vi er der og\. Adressere det veldig tidlig\. Ja, det tenker jeg på\. Ellers så blir det liksom en av mange prosjekter som skal inn og\. Få en sånn\. Jeg vet ikke priser aktig, men vi har klare forventninger til en tydelig tilbakemelding på\. På
+
+15:13:45: **Thomas:** at at dette er noe som støttes politisk på øverste hold\. Ellers så strammere ut i at politikerne ikke får det de har ønske om, nemlig en høy andel boliger\. Ja, eller eller omsorgsboliger, for eksempel\. Ja, og positiv og bærekraftig
+
+15:14:06: **Thomas:** utvikling av gode eiendomsprosjekter i byen, god byutvikling, rett og slett\. Og leveranse på bærekraftsansvar og arealbruk\. Det er jo veldig i tråd med de overordnede planene både på rikspolitisk og kommunalt nivå, som sier at alt byggeri skal i større
+
+15:14:26: **Thomas:** grad være transformasjon og gjenbruk\. Ja, og økt bolighandel\. Ja, og være god arkitektur og gode boliger\. Og på scenen så er det veldig vanskelig å få til gode boliger fordi det er veldig mye som er støy, altså basert på støy som utgangspunkt\. Så
+
+15:14:47: **Thomas:** ja, og og videre bruk da som Andreas sitt sitt på et vis ord\. Så jeg tenker jo at vi er veldig glad på et vis på at vi har fått kommet frem dit vi er\.
+
+15:15:06: **Thomas:** Og så tenkte jeg og snakke litt om kommunikasjonsuttaket på slutten og hvordan vi ønsker nå å lansere nettsiden etter hvert møte med ham og begynne å ta dette ut, og at dette kan være en politisk interessant sak å støtte seg eller bruke som referanse\. Men i
+
+15:15:13: **Andreas Thorsnes:** første
+
+15:15:13: **Thomas:** omgang
+
+15:15:14: **Andreas Thorsnes:** det
+
+15:15:14: **Thomas:** viktigste Thomas er jo nett\. Det er derfor jeg foreslår at\. Man gir en\. Tre minutters brief på
+
+15:15:23: **Andreas Thorsnes:** helheten på prosjektet
+
+15:15:24: **Thomas:** og hvorfor dette har blitt jobbet så møysommelig med i forhold til kvalitativ byutvikling og hvordan det svarer ut et behov for å få avklart en reguleringsbestemmelser som er helt ute og kjøre i forhold til videre bruk og bruksendring\. Og og og
+
+15:15:46: **Thomas:** røyka ut dette med unntaksbestemmelse i i i områdeplanen\. I forhold til hva som krever detaljregulering\. Og ikke da\. Ja, altså de tingene, her må du\. De regulatoriske tingene her må jo komme fra\. Deg mener jeg da\.
+
+15:16:07: **Thomas:** De viktigste tingene i forhold til hinder for den gode videre bruken\.
+
+15:16:15: **Andreas Thorsnes:** Og jeg sitter med et et notat som som som ble sendt til James I i 12\. mai 23, så altså to år siden\. Og det det\. Det tar jo fatt i veldig mye av det dere sier nå\. Jeg skal se om det\.
+
+15:16:37: **Andreas Thorsnes:** Gjør det og da\. Det var det jeg sa på å svare på hvordan kan jeg bringe den den videre? Eller eller blåser han i hva da? Hva han har fått tidligere? Det det det\.
+
+15:17:00: **Andreas Thorsnes:** Fordi det det er det jeg tenker at det det det som det legger opp til da det er jo innspill og bestemmelsene hva som gjorde bestemmelsene\. Så vi det? Det går kanskje an\. Jeg vet ikke om du så du ga, eller fikk du det fra meg nå? Du sendte en ny mail nå? Ja\.
+
+15:17:23: **Andreas Thorsnes:** Ser dere skjermen min nå? Ja, for det er det\. Det er det neste dokumentet\. Thomas som du har laget, det som du sendte i går, ikke sant?
+
+15:17:31: **Thomas:** Jeg synes\.
+
+15:17:32: **Andreas Thorsnes:** Dette her oppstår\.
+
+15:17:33: **Thomas:** Med veldig fint da egentlig\. Det er ikke så veldig stort sånn skrift, men vi tar med printer og ta med\.
+
+15:17:42: **Andreas Thorsnes:** Altså, det er viktig å peke på hva er det som er? Hva er det som er\.
+
+15:17:50: **Thomas:** Og hvis man lurer på hvorfor det må rives når liksom det er regulert? Her ligger bygget\. Ja, og det ligger her\. Så er det på en måte mer enn to meter her sånn, så det er liksom\. Her fyller det på en måte bygget Nesten ikke sant?
+
+15:18:10: **Thomas:** Det tar jo ikke med seg snu og uti her og sånn, men det er liksom litt sånn klønete\. Alle de grensesnittene her under bakken her for eksempel\. Dette skal jo videre brukes alt dette her, men terrassen her blir jo ikke grøntareal, enten det er det ene eller andre alternativet\.
+
+15:18:30: **Andreas Thorsnes:** Nei\. Jeg
+
+15:18:34: **Thomas:** Unntaksbestemmelsene i I områdeplanen gjelder jo disse mindre tiltak som ikke er kjempeviktig selvfølgelig\. Innvendig rehabilitering Greit innvendig ombygning uten bruksendring\. Greit, det er lov\.
+
+15:18:52: **Thomas:** Så innvendig bruksendring fra tilleggsdel til hoveddel eller omvendt innenfor boligformålet, altså hvis det er boligformål da, eller det er det vi må legge det på et ja fra tilleggsdel til hoveddel\.
+
+15:19:06: **Thomas:** Men om det også kan gjelde da fra kontor til boligformål, kan man spørre seg om fasadeendringer som ikke påvirker bygningsvolum eller hele bygg som skal bevares\. Altså det påvirket ikke bygningsvolum så lenge vi holder oss innenfor fasadeliv\.
+
+15:19:20: **Thomas:** Så mindre endringer som er en del av miljøtiltak for bygget\. Men det går jo på hele konseptet\.
+
+15:19:24: **Andreas Thorsnes:** Jeg tror det er det å fremheve disse dette\. Nå har jeg prøvd å koble til i bilen på, og så kommer det lavt batterinivå og maskinen går snart i dvale\. Hvis du ikke kobler den til strømkilde, og jeg trodde jeg du koblet til strømkilde, men det er altså ikke\. Det virker altså ikke\.
+
+15:19:38: **Andreas Thorsnes:** Så hvis jeg ble koblet nå, så bare fortsetter dere\. Er det greit? Så jeg får ikke gjort noe med det så og\. Og det er det som jeg tror dere er inne på der altså\. Hva er hensikten? Og så er det som er hovedspørsmålet\. Det er det vi har vært inne på\.
+
+15:19:54: **Andreas Thorsnes:** Hvis vi sender en rammesøknad ved bruksendring blir og den ble avslått av plan og bygg blir Hvordan behandler vi den? For
+
+15:19:58: **Thomas:** det
+
+15:19:59: **Andreas Thorsnes:** er de som kan pålegge plan og bygg og behandle den når og der det er der som er hovedhensikten\. Hvorfor? Hvordan nå fram med tillatelser til en behandling av rammesøknad med bruksendring? Ved bruksendring med rammesøknad for påbygg? Det det er, og om vi da velger omsorgsbolig eller bolig det\.
+
+15:20:18: **Andreas Thorsnes:** Det er ikke vesentlig for meg, men men, det er det det\. Det er de to hovedspørsmålene som er og\. Og for å få til det så har Thomas Plan Plan kravene eller hvordan, hvilke bestemmelser som man kan gi og hvordan de kan begrunne bestemmelsene for å gjøre det vedtaket\. Vi må hjelpe de til å gjøre det\.
+
+15:20:36: **Andreas Thorsnes:** Vedtaket
+
+15:20:37: **Thomas:** om
+
+15:20:37: **Andreas Thorsnes:** at ja, dette er et dette er med de bestemmelsene som gjelder\. Så kan vi pålegge Plan og bygg å behandle denne rammesøknaden\. Er det riktig?
+
+15:20:49: **Thomas:** Ja, vi må jo få de til å tro på det, men det er det er jo\. Plan\. Og vi ville i hvert fall ikke tenke at tre etasjer oppå her er mindre til påbygg\. Nei, så det vil jo komme et avslag\. Og så må da politikerne si at nei, dette prosjektet er så viktig
+
+15:21:10: **Thomas:** at dette vil vi stå ved eller gjøre om, fordi det har andre, altså en eventuell disp fra mindre tiltak\. Da er fordelene er langt større enn ulempene, og det er viktig å komme i gang med boligbygging\. Viktig å komme i gang med ditt eller datt, eller vi trenger omsorgsboliger
+
+15:21:31: **Thomas:** nå, ikke om fem år, og det koster for mye penger altså, det er Det er en økonomisk side\.
+
+15:21:37: **Andreas Thorsnes:** Du kan du bære fram\. Det er der kan du dra den slutningen hvor, hvordan de kan eller skal ta meg\. Altså at vi fordeler det jeg kan si innledningsvis\. Og jeg kan si at dette vi har vært med på\. Jeg kan dra historikken til hvordan vi kom inn i det, hva vi har gjort for nå og det det det fire meter\.
+
+15:21:54: **Andreas Thorsnes:** Jeg skal skrive den setningen jeg skal si om det og og det han tidligere har fått oversendt det som jeg sendte Gabriel
+
+15:22:00: **Thomas:** for
+
+15:22:00: **Andreas Thorsnes:** det\. Det er bakgrunnskunnskap som som var den gangen, og som vi foreslo\.
+
+15:22:18: **Andreas Thorsnes:** Hvis dere endrer reguleringsbestemmelser med de og de det ligger i Word dokumentet, så sa jeg hvis dere endrer de, og det var Andreas Thomas som har laget det dokumentet sammen med hvis dere får gjort det vedtaket og så skriver han tilbake til meg\.
+
+15:22:23: **Andreas Thorsnes:** Vi fikk ikke helt til det du ønsket, men bare kom til meg, så skal vi ordne det\. Men det var jo det\. Det var jo detaljregulering, og nå vil jeg gå lengre enn det jeg vil ha\. Jeg vil at de skal behandle saken uten detaljregulering\.
+
+15:22:35: **Thomas:** Mhm\. Men jeg er\. Vi får ikke noe behandling over bordet der, og det er forventet at jeg får ikke det sånn\. Men vi vi får noen signaler, men vi må forvente noen, altså, jeg tror vi må være tydelige på\. Hvilken mulighet, altså hvilke tilbud de
+
+15:22:56: **Thomas:** fremstår som en en mulighet og et tilbud til en lavthengende frukt\. Da\. I forhold til videre bruk skal vi presentere prosjektet raskt, først på verdiforslag til samfunn og marked på Skøyen og de som dette utviklingspotensialet, men som vi vet sånn at vi har tatt det med en gang\.
+
+15:23:16: **Thomas:** At vi synliggjør mulighetene for utvikling som er funnet frem, og det skal vi ta det etterpå at vi diskuterer sak først\. Jeg synes det er greit å ha 2 minutter med bakteppe først, både i forhold til at vi har vært en del av utviklingen av områdeplanen på Skøyen, og prøvd å spille inn
+
+15:23:36: **Thomas:** mot de tingene som har vært\. Positive og negative, og at vi nå sitter med et\. Vi sitter nå med en verktøykasse uten verktøy oppi, fordi områdeplanen vil dette\. Ja,
+
+15:23:59: **Thomas:** og vi opplever at prosjektene rundt også utfordrer områdeplanen i vesentlig grad, og at de delvis får gjennomslag for det til en viss grad\. I en sånn tung, tung reguleringsprosess med en masse kostnader mange år prøver å liksom ha en friksjon i å lande noen ting,
+
+15:24:20: **Thomas:** men vi ønsker å spille mer åpent før vi brenner alle disse pengene for å komme fram til et konsept som kan fokusere på å enten lage de gode boligene, gode hjemmene videre, brukerkontoer eller Omsorg\+ da\. Fordi vi opplever at behovet er til stede\.
+
+15:24:41: **Thomas:** Så vi må røyke ut dette tidlig, og vi har en klar forventning om at dette vil vi\. Dette vil vi at dere skal jobbe med, og at det følger noen forpliktelser knyttet til det før vi bruker penger på det\. Og og vi kommer det I denne så ligger at vi er forpliktet til å fremme et forslag\.
+
+15:24:56: **Thomas:** Altså hvis vi skal gjøre denne regulering til det vi tenker at vi har lyst å regulere til, Så følger det også et krav om at vi skal fremme et forslag om dette\. Men det er helt uaktuelt å bruke så mye som en verken utredningsteamet eller eller arkitektteamet på å tegne noe innenfor dette\.
+
+15:25:18: **Thomas:** Så de må frafalle på en måte det kravet allerede nå før vi eventuelt så skal vi inn på reguleringsbordet, så må vi ha helt klare føringer på at vi kan opp i det og det arealet for at det skal kunne gå og og vi må kunne utfordre eksisterende bygg under bakken, både garasjeanlegg og så hvis
+
+15:25:41: **Thomas:** vi skal regulere bort anlegg under bakken her, så så det det det Det er sårbar natur\. Det er som alt mulig greier\. Altså\. Dette er er det er så absurd som det kan få blitt\. Ja, og det er jo en viktig beskjed å gi, så jeg tenker det er veldig fint\.
+
+15:26:01: **Thomas:** Og så kan vi snakke litt om det, og derfor har vi også gjort\.
+
+15:26:16: **Thomas:** For å tydeliggjøre absurditeten så har vi konseptutvikling nå i forhold til samfunnsmessig verdi og markedsmessig verdi, og hvordan dette egentlig er en en planmessig feil da, Og det er vi klare til å publisere nettsider og gjøre på et vis publisitet på\. Og hvilken side av bordet vil han stå?
+
+15:26:23: **Thomas:** Da kan vi presentere prosjektet og og dette klimagass noe korte slide om det med med liksom og sirkulærøkonomi tikke av alle boksene Ja\. Det er en god prosess, en god plan\. Vet dere om vi får noe skjerm å vise på, eller er det\.
+
+15:26:45: **Thomas:** Vi tar med oss i verste fall og bare viser på bordet? Men det pleier jo ofte være skjerm der det har vært fordi de har en skjerm på kontoret, så jeg pleier å vise presentasjonene\. Jeg er der\. Hvis ikke så viser vi bare på dataen og tar det over\. Kaffe liksom\. Ja, men vi tar det\.
+
+15:27:04: **Thomas:** Da ringer Andreas noen
+
+15:27:05: **Andreas Thorsnes:** data og\. Da kan jeg bare høre litt\.
+
+15:27:09: **Thomas:** Hva dere sier\. Ja\.
+
+15:27:10: **Andreas Thorsnes:** Og den den den\. Den ledningen\. Den virket ikke, så det
+
+15:27:17: **Thomas:** var litt brutalt\. Ja\. Men jeg skulle bare sånn at vi ikke hopper i presentasjonen for mye\. Vil skal skal jeg ta de to første, og så tar dere den altså bare sånn at vi bare svitsjer kabel så vi kjenner hverandres utstyr\. Eller
+
+15:27:37: **Thomas:** hva tenker du om det? Vi setter sammen en vi\. Vi setter sammen en helhet\.
+
+15:27:42: **Andreas Thorsnes:** Vi setter sammen en helhet, og så\.
+
+15:27:44: **Thomas:** Har vi en maskin\. Vi svitsjer noen kabler og sånt, så vi tar inn de tingene vi bare legger de seg\.
+
+15:27:52: **Andreas Thorsnes:** Da lurer jeg på om vi skal ta\. Kan ikke du gå å vurdere litt i det jeg sendte deg nå på som vi hadde sendte James i sin tid det\. Det var eventuelt bare ha ha noen ord om det, som Thomas sier for det\. Det er litt hvor mye
+
+15:28:11: **Thomas:** husker den? Hvor mye vet han hvor mye
+
+15:28:13: **Andreas Thorsnes:** det
+
+15:28:15: **Thomas:** DSM historikken som var? Det var det og det og var altså
+
+15:28:17: **Andreas Thorsnes:** det og det det var også det da\. Så kan Thomas ta det tekniske etterpå med
+
+15:28:23: **Thomas:** det kravet som er i alternativ hovedalternativet som ikke ble vedtatt, og
+
+15:28:29: **Andreas Thorsnes:** en B
+
+15:28:29: **Thomas:** som ble vedtatt som la de begrensninger\.
+
+15:28:31: **Andreas Thorsnes:** Og dette vet
+
+15:28:32: **Thomas:** han, men han må minnes på det, og det er det vi, Det skal
+
+15:28:36: **Andreas Thorsnes:** vi ha
+
+15:28:36: **Thomas:** vekk\. Vi skal ha den begrensning, og vi skal ha dette kravet om
+
+15:28:40: **Andreas Thorsnes:** detaljregulering\. Men så skal vi tillegg
+
+15:28:42: **Thomas:** ha det detaljregulering av
+
+15:28:45: **Andreas Thorsnes:** alternativ
+
+15:28:46: **Thomas:** NB og så i tillegg så vil vi vite
+
+15:28:49: **Andreas Thorsnes:** om
+
+15:28:49: **Thomas:** de vil gå inn for at vi blir behandlet direkte
+
+15:28:53: **Andreas Thorsnes:** fra
+
+15:28:54: **Thomas:** bruksendring og ramme\.
+
+15:28:56: **Andreas Thorsnes:** Det er
+
+15:28:56: **Thomas:** de tre hovedpunktene, tenker jeg\.
+
+15:29:02: **Andreas Thorsnes:** Det er bra jeg skal jobbe
+
+15:29:03: **Thomas:** som fram den presentasjonen\.
+
+15:29:07: **Andreas Thorsnes:** Så møtet er
+
+15:29:08: **Thomas:** i morgen\. Har du beholdt vi, får du beholdt oppløsningen som i de andre som du har bygget om prestasjonene, så mister vi en del\. Av kvaliteten\.
+
+15:29:21: **Andreas Thorsnes:** Ja\. Det skal jeg få til\. Men har du noen originalfiler? Det var vel at den jeg fikk tilsendt forrige gang var en pdf, så da var det vanskelig for meg å hente ut filene\. Eller var det en PPT? Var det en tabell?
+
+15:29:41: **Thomas:** Eller PDF du\. Er det lett for
+
+15:29:45: **Andreas Thorsnes:** deg å hente ut som PowerPoint?
+
+15:29:49: **Thomas:** Nei, nei, vi vi bygger\. Vi bygger ting i Adobe, Vi bygger ikke PowerPoint\.
+
+15:29:56: **Andreas Thorsnes:** Ja, jeg
+
+15:29:58: **Thomas:** Adobe filene, ja\. Men vi\. Illustrator, Illustrator eller?
+
+15:30:12: **Andreas Thorsnes:** Ja, da tror jeg vi, hvis formålet Jeg oppfatter at vi er enige om formålet\. Og så er det viktig at du Einar,
+
+15:30:19: **Thomas:** bærer dette avslutningsvis
+
+15:30:21: **Andreas Thorsnes:** også dette med miljø og det disse disse forutsetningene er i forhold så overordnede planer for
+
+15:30:27: **Thomas:** for det å bevare det å bruke videre det å ikke å synes du\. Hvis
+
+15:30:32: **Andreas Thorsnes:** du kan si også dette med\. Jeg har jo et lite hakk i plata på hvis vi snakker om bærekraft\.
+
+15:30:40: **Thomas:** Det er all energien,
+
+15:30:42: **Andreas Thorsnes:** alle de kostnadene som går til en detaljregulering her og alt det som har å sparke
+
+15:30:48: **Thomas:** da\. Men
+
+15:30:49: **Andreas Thorsnes:** jeg nevnte jo for han og helt annet, men han han så var det på det siste møtet jeg nevnte for han at jeg hadde
+
+15:31:00: **Thomas:** kostet kanskje 1 milliard til å lage en
+
+15:31:03: **Andreas Thorsnes:** plan for kommunen\. Ja og nei\. Det var jo mer enn det\.
+
+15:31:07: **Thomas:** Det var mer enn ja, sånn er det\. Ja\.
+
+15:31:09: **Andreas Thorsnes:** Svarte han\. Da stemmer ikke Gabriel\. Ja, jeg mener stemmer\. Ja\. Ja, så så\.
+
+15:31:15: **Thomas:** Så jeg ble bare provosert jeg til å si det sånn\. interesserte,
+
+15:31:18: **Andreas Thorsnes:** De ja, det har kostet
+
+15:31:19: **Thomas:** mye penger\. Så står vi med en plan som er er\.
+
+15:31:23: **Andreas Thorsnes:** Begrepet har begrenset verdi, og jeg
+
+15:31:25: **Thomas:** var forsiktig med å si at det var bare bortkastet\.
+
+15:31:26: **Andreas Thorsnes:** Men det er det jeg mener da\. Men jeg sa ikke det så så\. Men det å si at bærekraft også i i utvikling av
+
+15:31:35: **Thomas:** prosjekter
+
+15:31:36: **Andreas Thorsnes:** hvor man tenker at det er ikke bare en planke som er bærekraft, det er der den bortkastet tid er tiden, energien, den bussen vi må ta til jobben, den leiligheten vi skal bo i\.
+
+15:31:46: **Thomas:** Det er et vanvittig
+
+15:31:47: **Andreas Thorsnes:** sløseri og overhode ikke bærekraftig å drive sånn planarbeid\. Så hvordan kan du si det uten? Ja, for jeg kan ikke si sånt\.
+
+15:31:56: **Thomas:** Nei, nei, men det kan jeg si litt om\.
+
+15:31:59: **Andreas Thorsnes:** Ressursbruk i dette? Ja\. I dette så ligger det at det substansen er der vi forholder oss til
+
+15:32:05: **Thomas:** områdereguleringsbestemmelser\.
+
+15:32:08: **Andreas Thorsnes:** Men men, hvorfor skal vi bruke 4 millioner kroner på å gå den veien? Og så er det en ting til som jeg tror vi, Det får jeg ikke gjennomslag for\. Men det
+
+15:32:17: **Thomas:** er
+
+15:32:19: **Andreas Thorsnes:** tillegget
+
+15:32:20: **Thomas:** for\. Byggherrebidrag eller hva det heter fra
+
+15:32:24: **Andreas Thorsnes:** utbyggings det det er i dag\. De ca 3000 til 5 1000
+
+15:32:29: **Thomas:** til 7000 kr per kvadratmeter, og hvis du begynner å legge inn det også i kostnaden
+
+15:32:34: **Andreas Thorsnes:** der og da, er det to verdier\. Det
+
+15:32:36: **Thomas:** ene er det gjelder
+
+15:32:38: **Andreas Thorsnes:** også
+
+15:32:39: **Thomas:** for eksisterende kvadratmeter,
+
+15:32:40: **Andreas Thorsnes:** eller er det bare for
+
+15:32:41: **Thomas:** nye? Eller er det altså,
+
+15:32:42: **Andreas Thorsnes:** hvilke
+
+15:32:43: **Thomas:** vilkår gjelder det for Og hvis man går for
+
+15:32:46: **Andreas Thorsnes:** et bo concept dette dette
+
+15:32:49: **Thomas:** Omsorg\+
+
+15:32:51: **Andreas Thorsnes:** kan man da få unngått det bidraget?
+
+15:32:58: **Thomas:** Ikke sant? Det kan vi jo se om vi får tid til å snakke med\. På slutten av\. Det tror jeg ikke, Men\. Men\. Jeg vet ikke hva\.
+
+15:33:16: **Thomas:** Vi skal bruke mye tid på det, men at man ønsker å se på samfunnsnytte å se på på et vis, konseptvalg i forhold til kostnader og og hvordan man på et vis gjør samfunnsnyttig utvikling i forhold til helhet og eksempelvis utbyggingsbidrag og sånt\. Da så kan jeg nevne det\.
+
+15:33:30: **Andreas Thorsnes:** På den\. Både det med ramme, altså hva, hva, hva eller fra forskjellen på ramme
+
+15:33:36: **Thomas:** og det særlig er to
+
+15:33:38: **Andreas Thorsnes:** 3 millioner vil jeg tro
+
+15:33:39: **Thomas:** I og og pluss
+
+15:33:42: **Andreas Thorsnes:** at det står for det står på en måte det står seg i stykker den det bygger fordi hvis jeg skal bruke to år på detaljering og så to år til
+
+15:33:51: **Thomas:** istedenfor vite nå
+
+15:33:53: **Andreas Thorsnes:** får vi det godkjent eller ikke, så det sløses jo penger også i ikke å ta vare på eller velge å ta vare på leietagerne innenfor avklarte rammer\. Så så\. Det med bærekraft har flere aspekter\.
+
+15:34:10: **Thomas:** Massevis\. Det er veldig\.
+
+15:34:14: **Andreas Thorsnes:** Viktig da tror jeg da\. Da tror jeg jeg prater da\.
+
+15:34:19: **Thomas:** Veldig bra\.
+
+15:34:21: **Andreas Thorsnes:** Vi
+
+15:34:22: **Thomas:** hade\! Ja\. Da har vi brukte da vi brukt opp de 25 minuttene vi har for i morgen, så\. Det vi må være veldig effektive så vi Vi lager en presentasjon utkast og så kjører du i\. Du får si hei og velkommen og sånt, Andreas\. Og så får du Thomas tar de tekniske tingene,
+
+15:34:44: **Thomas:** og så snakker vi om verdipotensialet, og så prøver vi å få til\. I hvert fall hvis vi klarer å levere på 10 minutter\. Våre presentasjoner, ja, 3 minutter vær og kontekst og få til dialog på 15 minutter, så er vi jo godt\. Ja\.
+
+15:35:02: **Andreas Thorsnes:** Det er det å styre stramt her, så derfor klarer jeg det\. Jeg tenker det er rett og slett å bare dra i strikken og dra at vi har glemt hva jeg har sagt før\. Han har fått dette til Gunnar og deretter og deretter har bedt meg tid til det\. Vi kommer med det\.
+
+15:35:15: **Thomas:** Og at vi ønsker å kjøre publisitet på det etter møtet hvis og hvor han står på det\. Ja\.
+
+15:35:22: **Andreas Thorsnes:** Veldig fint\. Takk, takk,
+
+15:35:25: **Thomas:** Thomas\. Har du husket? Å legge ut på Andreas
+
+15:35:30: **Andreas Thorsnes:** og jeg har det gått\.
+
+15:35:35: **Thomas:** I en sånn interessant fil, så vi har liksom en\. Og\. Tegningene ligger jo på en måte i\. En egen papp, altså en egen\. Lyngaas mappe\. Så skal vi se\.
+
+15:36:06: **Thomas:** Hmmm her\. Er det\. Beste\. Jeg klarer ikke å ta screenshot fra presentasjonen hvis du zoomer ut og ta
+
+15:36:29: **Thomas:** screenshot og så legge inn de bildene som screenshot oljerigger på\.
+
+15:36:35: **Andreas Thorsnes:** Jeg får det til,
+
+15:36:36: **Thomas:** men\. Tåler ikke kvaliteten bedre da\. Jeg tror vi får bedre screenshot plutselig, så det må vi få til\. Så jeg bare\. Hvis screenshots var Miro, så funker det ikke\.
+
+15:36:51: **Andreas Thorsnes:** Nei, jeg bare
+
+15:36:52: **Thomas:** skal gå på presentasjonen og se på hva
+
+15:36:55: **Andreas Thorsnes:** hva vi skal ha med da\.
+
+15:37:06: **Thomas:** Hvis jeg bare vise en sånn type\. Det har blitt så mange sånne presentasjoner da\. Blitt jævlig mange fikser ikke dette vi enige om sveitser og så tar Vi gleder meg skikkelig til byråets møte i morgen\. Det blir bra\. Det er bra han tok tid til å møte og snakke sammen\. Det er jævlig bra\.
+
+15:37:25: **Thomas:** Jeg synes jeg synes denne her som vi hadde tikker av alle boksene til omsorgsboliger\. Ja\. Dere har 5 minutter\. Bare bare se hva vi kan levere på i forhold til kravet til Oslo kommune og Husbanken har til boliger som et beregningskrav, fellesareal og serviceareal\. Helt sånn
+
+15:37:47: **Thomas:** jeg jobbet så grundig gjennom dette her\. Bokvalitet\. Kjempebra dunk, dunk, dunk\. Så var det jeg lurer på om om man klarer å åpne de bare suksessivt da? Ja\. Men istedenfor å bygge de om så bruker hun masse tid\. Altså denne her som som er de forutsetningene som\.
+
+15:38:09: **Thomas:** De som må inn pittelitt akkurat de der\. Og så kan det hende at vi skal rett å slett bare åpne nettsiden og ha den klar ved siden av å bytte\. Enkelt vise nettsider live istedenfor å legge de inn slides på det Vi bruker denne omsorgsbolig presentasjonen så kan vi
+
+15:38:30: **Thomas:** ta skjermdumper det der med planreguleringen og bare bytte bilde på samme datamaskin kan gjøre det veldig enkelt\. Men dette er jo en PDF, så det er veldig enkelt å bare\. Da kan
+
+15:38:43: **Andreas Thorsnes:** jeg ha peisen klar og ha alle alle presentasjonene og nettsiden, bare
+
+15:38:47: **Thomas:** sånn som man
+
+15:38:48: **Andreas Thorsnes:** veldig enkelt bytter over der\.
+
+15:38:52: **Thomas:** Det er de to jeg sendte i går da, men den han sendte til\. James for en stund siden er vel denne her da?
+
+15:39:03: **Andreas Thorsnes:** Ja, altså den den kan jeg lage en slide på i den vår presentasjon da for å vise\.
+
+15:39:11: **Thomas:** Vi ville ha forhåndsgrense et stykke ut, så vi trenger egentlig hele denne her og under bakken, for kjelleren går jo på en fem meter ut hele veien\.
+
+15:39:23: **Andreas Thorsnes:** Mhm\.
+
+15:39:24: **Thomas:** I snittet\.
+
+15:39:28: **Andreas Thorsnes:** Hmmm\.
+
+15:39:30: **Thomas:** Ja, ikke helt riktig, men den går jo ut i teknisk rom her\. Her går den ut\. Ja,
+
+15:39:42: **Andreas Thorsnes:** så det er den\. Det var en som et ekstra går det\. Det er den samme bare med litt ekstra ekstra tid\.
+
+15:39:55: **Thomas:** Den\.
+
+15:40:20: **Thomas:** Er ikke den\.
+
+15:40:40: **Andreas Thorsnes:** Da har vi den han Andreas sendte nå, som har bare kjapt åpner for å
+
+15:40:45: **Thomas:** vise han den
+
+15:40:47: **Andreas Thorsnes:** sendte vi da\. Da begynner det og så de to som du har og og en dokument med forenklet konseptskisse\. Med miljø og bærekraft og sirkulær økonomi og så videre og så videre\.
+
+15:41:08: **Thomas:** Så den siste du hadde, det var en sånn Ja, det var i betong er liksom hovedgreia mobilitet, altså det og naturmangfold da altså det sårbar natur\. Elven Ja, ja, sånn er det\. Noen opplagte ting som egentlig veldig mye høy
+
+15:41:28: **Thomas:** kompetanse på utredning for å skjønne at\. Ting som står seg\. Ja ja\.
+
+15:41:41: **Andreas Thorsnes:** Det var bra ja, Men det blir jo kjempefint at ja, jeg er veldig glad for at han at vi fikk det til
+
+15:41:52: **Thomas:** nå\. For det var bra\. Bra jobba\! Veldig bra jobba\! Ja, da har vi forhåpentligvis en klar strategi å jobbe med etter sommeren da hvordan vi skal angripe det, om det er\. Om det er bare å la det være eller om de har like dårlig tid som oss\.
+
+15:42:14: **Thomas:** De
+
+15:42:14: **Andreas Thorsnes:** har dårlig
+
+15:42:15: **Thomas:** tid\. Det er jo\.
+
+15:42:18: **Andreas Thorsnes:** Dere, en og en av oss\. Vi er mer erfarne, Men men sånn en idiot så er det virker jo som ja, ikke bare slå
+
+15:42:27: **Thomas:** til når de vet at det er så
+
+15:42:28: **Andreas Thorsnes:** mange boliger i manko på altså først og fremst omsorg\. At man må ha dårlig samvittighet når man sitter med det ansvaret og vet
+
+15:42:40: **Thomas:** hvor røde
+
+15:42:41: **Andreas Thorsnes:** tall i forhold til behovet er\.
+
+15:42:46: **Thomas:** Og og at det det er\. Det er bygget akkurat sånn som vi ønsker å bygge hus i dag, at det har en fleksibilitet og en reservekapasitet\. En struktur som tåler transformasjon\. Så det er en sånn\. Det kan virkelig bli forbildeprosjekt da, og at det er referanseprosjekter inn i Narvik Circular hotspot ting\.
+
+15:43:07: **Andreas Thorsnes:** Ja,
+
+15:43:07: **Thomas:** ja, ja\.
+
+15:43:09: **Andreas Thorsnes:** Sånn jeg ser det så kan James slå seg selv på ryggen med noe veldig bra ved et pennestrøk\.
+
+15:43:18: **Thomas:** Ja, så bra\! Morra da\! Sees i morgen\! Det tar jo litt tid
+
+15:43:25: **Andreas Thorsnes:** å komme gjennom sikkerhetskontrollen og sånn, men du er jo innom der hele tiden sikkert\.
+
+15:43:31: **Thomas:** Veldig sjeldent for å komme inn der går man inn på forsiden eller inne i mot atriet der nå\. Man går inn på forsiden
+
+15:43:40: **Andreas Thorsnes:** og
+
+15:43:40: **Thomas:** man må beregne
+
+15:43:41: **Andreas Thorsnes:** litt ekstra tid for man går sammen inn som turister og så videre\. Så
+
+15:43:45: **Thomas:** det kan være
+
+15:43:46: **Andreas Thorsnes:** uheldig å møte på en buss
+
+15:43:48: **Thomas:** med japanere som er på vei veien
+
+15:43:51: **Andreas Thorsnes:** akkurat da så vi Vi løper fra Aker Brygge fra et annet møte og
+
+15:43:56: **Thomas:** prøver å
+
+
+## Beslutninger
+
+*Ingen beslutninger registrert*
+
+## Action Items
+
+*Ingen action items registrert*
+
+## Prosjekt-kontekst
+
+**Hovfaret 13** er et transformasjonsprosjekt for et kontorbygg fra 1989 på Skøyen, Oslo.
+Bygget står overfor rivningskrav i områdeplanen (vedtatt sept 2023), men prosjektet argumenterer for at rehabilitering gir 48% lavere CO₂-utslipp sammenlignet med riving og nybygg (456 vs 631 kg CO₂-ekv/m² BTA).
+
+Bygget er fundamentert for 12 etasjer (kun 5 bygget), noe som muliggjør vertikal utvidelse uten ny fundamentering.
+
+---
+*Renskrevet: 2025-11-22*
+*Basert på: 2025-06-24_MØTE 24.06 2025 - avklaringer før møte med james .md*
+*Møte-ID: m_2025_06_24_med_james_lorentzen*
+*Status: AUTOMATISK PROSESSERT - KREVER MANUELL REDIGERING*

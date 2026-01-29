@@ -1,0 +1,387 @@
+{
+  "source": "Notion Export - ExportBlock-1a602b10-9457-4d83-91ca-0558723a56a6-Part-1",
+  "import_date": "2025-12-03",
+  "meetings": [
+    {
+      "id": "m_2025-09-05_hovfaret_13_strategimote",
+      "date": "2025-09-05",
+      "title": "Hovfaret 13 - Strategimøte og prosjektgjennomgang",
+      "organizer": "Natural State AS",
+      "location": "Natural State kontor",
+      "type": "Interne møter",
+      "participant_count": 4,
+      "participants": [
+        {
+          "name": "Einar Holthe",
+          "organization": "Natural State AS",
+          "role": "Prosjektleder"
+        },
+        {
+          "name": "Linda Marie Aas",
+          "organization": "Natural State AS",
+          "role": "Prosjektmedarbeider"
+        },
+        {
+          "name": "Kamran Surizehi",
+          "organization": "Natural State AS",
+          "role": "Arkitekt"
+        },
+        {
+          "name": "Gabriel Bøen",
+          "organization": "Natural State AS",
+          "role": "Observatør (sykemeldt)"
+        }
+      ],
+      "topics_discussed": [
+        "Rivningsvedtaket og 10-meters-regelen mot Hoffselva",
+        "Utviklingsalternativer: Studiokontor, Flerbruk, Transformasjon med Omsorg+",
+        "Strategi for bruksendring til Omsorg+",
+        "NCC/Nordic Circle Hotspot pilotkunde-rolle",
+        "Nabolagsmøte-planlegging (6-9. oktober)",
+        "Leietakerstrategi og orientering",
+        "Nettside-lansering via Parabol",
+        "Møte med James (Byrådet for byutvikling)"
+      ],
+      "decisions": [
+        "Går videre med alternativ 3: Transformasjon til Omsorg+ med påbygg",
+        "Bryter delvis tidligere strategi - går rett på steg 2 (bruksendring) i stedet for steg 1 først",
+        "Nabolagsmøte skal gjennomføres 6-9. oktober",
+        "Leietakere skal orienteres om endret strategi (de beholder 5-års kontrakter)",
+        "Nettside skal lanseres etter nabolagsmøte med frontpage-invitasjon",
+        "Linda tar ansvar for produksjon, Kamran for planlegging nabolagsmøte"
+      ],
+      "action_items": [
+        {
+          "task": "Få ut nettsiden med oppdatert informasjon (via Parabol)",
+          "responsible": "Linda Marie Aas",
+          "status": "completed"
+        },
+        {
+          "task": "Forberede nabolagsmøte (6-9. oktober)",
+          "responsible": "Kamran Surizehi",
+          "status": "completed"
+        },
+        {
+          "task": "Ny leietakerdialog - orientere om endret strategi",
+          "responsible": "Andreas Thorsnes",
+          "status": "completed"
+        },
+        {
+          "task": "Møte med Andreas og R21 - presentere plan for neste 2 måneder",
+          "responsible": "Einar Holthe",
+          "status": "completed"
+        },
+        {
+          "task": "Kartlegge viktige naboer (liste fra byggesaksrådgiverne)",
+          "responsible": "Team",
+          "status": "completed"
+        },
+        {
+          "task": "Kartlegge behov for finansiering og støtteordninger",
+          "responsible": "Team",
+          "status": "in_progress"
+        }
+      ],
+      "report": {
+        "summary": "Omfattende strategimøte der teamet gjennomgikk hele Hovfaret 13-prosjektet. Hovedbeslutningen var å akselerere strategien ved å gå direkte på bruksendring til Omsorg+ (steg 2), i stedet for den opprinnelige planen om først å gjøre om til studiokontor (steg 1). Dette skyldes et konkret samfunnsbehov: Skøyen Aktivitetssenter har fått rivningsvedtak og bydelen trenger Omsorg+ boliger. Bydelen har reagert svært positivt på konseptet.",
+        "discussion": [
+          {
+            "heading": "Bakgrunn og utfordring",
+            "content": "Hoffsvegen 13 har et rivningsvedtak på grunn av 10-meters-regelen mot Hoffselva. Bygget er solid konstruert fra 1989 med god fleksibilitet. Situasjonen er at bygget kun kan bestå hvis det forblir uendret - enhver bruksendring, påbygg eller transformasjon krever riving ifølge dagens vedtak. Hovedmålet er å fjerne rivningsvedtaket og vise byggets verdi gjennom bærekraftige transformasjonsalternativer."
+          },
+          {
+            "heading": "Utviklingsalternativer",
+            "content": "Tre hovedalternativer er utarbeidet med R21 arkitekter: 1) Studio-kontor konsept med 14 studioplasser og høyere leieinntekter (dispensasjonssøknad sendt inn), 2) Flerbruk innenfor eksisterende form med servering/butikk i 1. etasje (krever bruksendring), 3) Transformasjon med ny form - fullrealisering med påbygg i høyden til Omsorg+. Teamet går videre med alternativ 1 og 3."
+          },
+          {
+            "heading": "Omsorg+ konseptet",
+            "content": "Prosjektet kan erstatte Skøyen Aktivitetssenter som har fått rivningsvedtak om 10 år. Dette møter et reelt behov i bydelen. Bydelen (James/Byrådet) har reagert svært positivt på konseptet. En utlysning fra kommunen forventes i 3-5 år, og prosjektet må ha bruksendring klar for å delta i anbud."
+          },
+          {
+            "heading": "NCC og sirkulær økonomi",
+            "content": "Prosjektet er koblet til Nordic Circle Hotspot og skal være pilotkunde for sirkulær økonomi. NCC (Nordic Circle Construction) er involvert i å teste bærekraftige byggeløsninger. Omfattende analyser er gjort: biodiversitetsanalyse, klimakalkyler (riving vs bevaring), sirkulære økonomiprinsipper."
+          },
+          {
+            "heading": "Konkrete leveranser",
+            "content": "Linda tar produksjon av materialer og leietakerdialoger. Kamran tar nettside og plan for nabolagsmøte. Nabolagsmøtet skal være ca. 30 personer i byggets kantine (plass til 60). Deltakere: teamet, Andreas, R21, eventuelt byggesaksrådgiver. Temastasjoner: byutvikling, stedsutviklingsprosjekt, bærekraft, plan/regulering, arkitektur/høyder."
+          }
+        ],
+        "quotes": [
+          "Vi har gått inn for å beholde bygget... det høres jo ikke logisk ut å rive.",
+          "Dette kan bli et ledende eksempel på sirkulær økonomi i Oslo.",
+          "Bydelen elsker konseptet - de har et reelt behov for Omsorg+ boliger.",
+          "Vi bryter strategien litt fordi det er et behov fra kommunen."
+        ],
+        "context": "Dette møtet markerer et viktig strategisk skifte i prosjektet. Den opprinnelige planen var å ta transformasjonen trinnvis (først studiokontor, så eventuelt videre). Nå akselereres prosessen ved å gå direkte på Omsorg+ på grunn av bydelens konkrete behov og positive respons. Byggesaksrådgivning.com er engasjert som plankonsulent."
+      },
+      "notion_source": {
+        "file": "Hovfaret 13 265f447d5b43803bbdaee914fe16e6ff.md",
+        "has_transcript": true,
+        "transcript_length": 522
+      }
+    },
+    {
+      "id": "m_2025-09-08_nce_soknad_oppfolging",
+      "date": "2025-09-08",
+      "title": "Oppfølging NCE søknad - Nordic Innovation",
+      "organizer": "Natural State AS",
+      "location": "Digitalt",
+      "type": "Eksterne møter",
+      "participant_count": 5,
+      "participants": [
+        {
+          "name": "Einar Holthe",
+          "organization": "Natural State AS"
+        },
+        {
+          "name": "Linda Marie Aas",
+          "organization": "Natural State AS"
+        },
+        {
+          "name": "Kamran Surizehi",
+          "organization": "Natural State AS"
+        },
+        {
+          "name": "Jan Thomas",
+          "organization": "Natural State AS"
+        },
+        {
+          "name": "Cathrine",
+          "organization": "Natural State AS"
+        }
+      ],
+      "topics_discussed": [
+        "Nordisk materialintelligens-konsept",
+        "Hovfaret 13 som case-studie for søknaden",
+        "Nordic Innovation søknadsstrategier (2030 vs 2050 program)",
+        "Nordisk samarbeid og dimensjon",
+        "BIM-modeller og digitale produktpass",
+        "Offentlige anskaffelser og sirkulære krav"
+      ],
+      "decisions": [
+        "Hovfaret 13 kan fungere som pilotprosjekt for søknaden",
+        "Vurdere å søke både 2030- og 2050-programmene",
+        "2030 som grunnlag, 2050 for teknologisk videreføring",
+        "Utforske muligheten for flere nordiske case-studier"
+      ],
+      "action_items": [
+        {
+          "task": "Kontakte Nordic Innovation for utlysningsdatoer",
+          "responsible": "Team",
+          "status": "pending"
+        },
+        {
+          "task": "Vurdere om man skal søke én eller to programmer",
+          "responsible": "Team",
+          "status": "pending"
+        },
+        {
+          "task": "Kartlegge barrierer for sirkulære løsninger i byggebransjen",
+          "responsible": "Team",
+          "status": "pending"
+        },
+        {
+          "task": "Koble sammen nøkkelaktører fra verdikjeden",
+          "responsible": "Team",
+          "status": "pending"
+        }
+      ],
+      "report": {
+        "summary": "Strategimøte om Nordic Innovation-søknad med fokus på å utvikle konseptet 'nordisk materialintelligens'. Hovfaret 13 ble diskutert som potensielt pilotprosjekt. Teamet vurderte to søknadsretninger: 2030-programmet (eksisterende løsninger) og 2050-programmet (teknologidrevet/digital). Diskusjon om nordisk dimensjon med ulike lands komparative fortrinn.",
+        "discussion": [
+          {
+            "heading": "Nordisk materialintelligens",
+            "content": "Konseptet handler om en systematisk tilnærming for å forstå og optimalisere materialflyt i byggebransjen. Fire perspektiver: 1) Toppnivå - store byggaktørers behov, 2) Bunnivå - innovative løsninger, 3) Horisontale barrierer - reguleringer/markedstilgang, 4) Belønninger/insentiver - finansiering/grønne lån."
+          },
+          {
+            "heading": "Hovfaret som case",
+            "content": "Prosjektet søker å identifisere optimale sirkulære løsninger for bygget. Urbania er ambisjøs på bærekraft. Prosjektet kan fungere som konkret case for å demonstrere sirkulære prinsipper i praksis. Bygget vurderes rettet mot omsorgsbygg for mulig salg til kommunen."
+          },
+          {
+            "heading": "Nordisk samarbeid",
+            "content": "Diskusjon om å utnytte ulike lands komparative fortrinn: Finland for teknologisk raffinement (Make a BIM), Danmark for taktil/estetisk/materialorientert tilnærming, Grønland/Island for særlige utfordringer med materialtilgang."
+          }
+        ],
+        "context": "Møtet er del av Natural States arbeid med å posisjonere seg innen sirkulær økonomi og bærekraftig bygging på nordisk nivå. Hovfaret 13 kan bli et flaggskip-prosjekt som demonstrerer praktisk anvendelse av disse prinsippene."
+      },
+      "notion_source": {
+        "file": "Oppfølging NCE søknad 268f447d5b438028b905c9d4c337a49b.md",
+        "has_transcript": true,
+        "transcript_length": 400
+      }
+    },
+    {
+      "id": "m_2025-09-19_tlf_thomas_nabolagsmote",
+      "date": "2025-09-19",
+      "title": "Telefonsamtale Thomas - Planlegging nabolagsmøte",
+      "organizer": "Linda Marie Aas",
+      "location": "Telefon",
+      "type": "Interne møter",
+      "participant_count": 2,
+      "participants": [
+        {
+          "name": "Linda Marie Aas",
+          "organization": "Natural State AS"
+        },
+        {
+          "name": "Thomas",
+          "organization": "R21 Arkitekter"
+        }
+      ],
+      "topics_discussed": [
+        "Planlegging av nabolagsmøte 14. oktober",
+        "Første etasje - funksjoner og innhold",
+        "Omsorg+ krav og romprogram",
+        "Plantegninger for interaktiv workshop",
+        "Invitasjoner og tidslinje"
+      ],
+      "decisions": [
+        "Nabolagsmøte settes til 14. oktober",
+        "Invitasjoner må sendes ut 29. september (2 uker før)",
+        "Thomas lager plantegning uten foreslåtte funksjoner for workshop",
+        "Ingrid Hopp bekreftet som deltaker"
+      ],
+      "action_items": [
+        {
+          "task": "Sende plantegning for første etasje uten foreslåtte funksjoner",
+          "responsible": "Thomas",
+          "status": "completed"
+        },
+        {
+          "task": "Bestille plansje av første etasje for workshop",
+          "responsible": "Linda Marie Aas",
+          "status": "completed"
+        },
+        {
+          "task": "Sende over plakater og invitasjoner for gjennomgang",
+          "responsible": "Natural State",
+          "status": "completed"
+        },
+        {
+          "task": "Lage utkast til presentasjon",
+          "responsible": "Linda Marie Aas",
+          "status": "completed"
+        }
+      ],
+      "report": {
+        "summary": "Planleggingssamtale mellom Linda og Thomas (R21) om nabolagsmøtet. Diskuterte detaljer om første etasje og hva som er fastsatt vs. åpent for innspill. Thomas forklarte at noen funksjoner er nødvendige for Omsorg+ krav (kafe, dagsenter-arealer), men at det er åpent for forslag fra nabolaget. Linda foreslo en interaktiv del med plansje der deltakere kan gi innspill.",
+        "discussion": [
+          {
+            "heading": "Første etasje funksjoner",
+            "content": "Plantegningene inneholder forslag til funksjoner som delvis er nødvendige for Omsorg+ krav: kafe som kan være åpen for andre, funksjoner knyttet til dagsenter, arealer mot offentlig rom med boliger mot grønt terrasse. Noen elementer er nødvendige for å oppfylle krav, men åpent for forslag på andre."
+          },
+          {
+            "heading": "Interaktiv workshop",
+            "content": "Linda foreslo en versjon av plantegningen uten de foreslåtte funksjonene, slik at de kan lage en plansje for interaktiv del av nabolagsmøtet. Deltakere kan komme med innspill og forslag til innhold og funksjoner for første etasje."
+          }
+        ],
+        "context": "Forberedelse til nabolagsmøtet 14. oktober. Ingrid Hopp fra bydelen bekreftet deltakelse. Møtet skal ha presentasjon, åpen samtale og temastasjoner."
+      },
+      "notion_source": {
+        "file": "Tlf Thomas 273f447d5b438051964adf9586ff58e1.md",
+        "has_transcript": true,
+        "transcript_length": 77
+      }
+    },
+    {
+      "id": "m_2025-10-14_nabolagsmote_hovfaret",
+      "date": "2025-10-14",
+      "title": "Nabolagsmøte Hovfaret 13",
+      "organizer": "Urbania Eiendom AS",
+      "location": "Hovfaret 13, Oslo",
+      "type": "Eksterne møter",
+      "participant_count": 30,
+      "participants": [
+        {
+          "name": "Andreas Thorsnes",
+          "organization": "Urbania Eiendom AS",
+          "role": "Eier/Utbygger"
+        },
+        {
+          "name": "R21 Arkitekter",
+          "organization": "R21 Arkitekter",
+          "role": "Arkitekt"
+        },
+        {
+          "name": "Natural State",
+          "organization": "Natural State AS",
+          "role": "Utviklingsgruppe"
+        },
+        {
+          "name": "Ingrid Løfsgaard Hopp",
+          "organization": "Bydelsutvalget Ullern",
+          "role": "Bydelspolitiker"
+        },
+        {
+          "name": "Naboer og interessenter",
+          "organization": "Diverse",
+          "role": "Deltakere"
+        }
+      ],
+      "topics_discussed": [
+        "Transformasjonsprosjekt for Hovfaret 13",
+        "Omsorg+ boliger (ca. 70 enheter)",
+        "Bydelens behov for omsorgsboliger",
+        "Bærekraft og CO2-reduksjon (85% fra materialer)",
+        "Nordic Circular Construction",
+        "Arkitektur, landskap og volum",
+        "Byggehøyder og støy",
+        "Funksjoner i første etasje"
+      ],
+      "decisions": [
+        "Prosjektet går videre med Omsorg+ konsept",
+        "Rammesøknad skal sendes inn",
+        "Nabovarsel vil bli sendt ut formelt"
+      ],
+      "action_items": [
+        {
+          "task": "Sende inn bruksendringssøknad",
+          "responsible": "Byggesaksrådgivning",
+          "status": "in_progress"
+        },
+        {
+          "task": "Publisere presentasjon på hovfaret13.no",
+          "responsible": "Natural State",
+          "status": "completed"
+        },
+        {
+          "task": "Sende nabovarsel",
+          "responsible": "Byggesaksrådgivning",
+          "status": "pending"
+        }
+      ],
+      "report": {
+        "summary": "Nabolagsmøte for å presentere Omsorg+ transformasjonsprosjektet. Urbania Eiendom, R21 Arkitekter og Natural State presenterte visjonen om å transformere bygget fra 1989 til bærekraftige Omsorg+ boliger. Ingrid Løfsgaard Hopp fra Bydelsutvalget orienterte om bydelens behov (150-200 nye boenheter frem til 2040). Beregninger viser 85% reduksjon i klimagassutslipp fra materialer ved transformasjon fremfor riving.",
+        "discussion": [
+          {
+            "heading": "Presentasjon av prosjektet",
+            "content": "Visjonen er å viderebruke den robuste betongkonstruksjonen og bygge tre nye etasjer for å skape ca. 70 Omsorg+ boliger (etasje 2-8). Løsningen er resultat av grundig prosess der ulike scenarier ble vurdert: videre bruk som kontor, transformasjon til flerbruk, eller omfattende ombygging med påbygg."
+          },
+          {
+            "heading": "Bydelens behov",
+            "content": "Ingrid Løfsgaard Hopp orienterte om behov for 150-200 nye boenheter frem til 2040 i Bydel Ullern. Per i dag kun 61 plasser tilgjengelig de neste 10 årene på Skøyen terrasse før det rives. Omsorg+ er et mellomnivå mellom hjemmetjenester og sykehjem - 16 års erfaring med konseptet."
+          },
+          {
+            "heading": "Bærekraft",
+            "content": "Transformasjon av eksisterende bygg fremfor riving og nybygg reduserer klimagassutslipp fra materialer med opptil 85%. Prosjektet skal fungere som levende laboratorium for Nordic Circular Construction-nettverket."
+          },
+          {
+            "heading": "Innspill fra nabolaget",
+            "content": "Behov for lokaler til dans, kampsport, aktiviteter for ungdom, yoga og helsetilbud - lavterskeltilbud med fleksibilitet. Spørsmål om byggehøyder og støy. Naturen ses som viktig kvalitet - ønske om å dra den mer inn i prosjektet. Noen kommersielle funksjoner (restaurant) passer trolig ikke. Generelt positivt og godt gjennomarbeidet prosjekt."
+          }
+        ],
+        "quotes": [
+          "Det er anslått et behov for 150-200 nye boenheter frem til 2040 i Bydel Ullern.",
+          "Transformasjon reduserer klimagassutslipp fra materialer med opptil 85%.",
+          "Prosjektet oppleves som positivt og godt gjennomarbeidet."
+        ],
+        "context": "Viktig milepæl i prosjektet. Første offentlige presentasjon av Omsorg+ konseptet. Positiv respons fra naboer og bydel. Prosjektet går nå inn i rammesøknadsfasen."
+      },
+      "notion_source": {
+        "file": "Oppsummering nabolagsmøte 28df447d5b4381799cd0d520131c40cf.md",
+        "has_transcript": false,
+        "is_summary": true
+      }
+    }
+  ]
+}

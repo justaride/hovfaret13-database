@@ -1,0 +1,1845 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stedsøkonomi - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --green: #22c55e;
+        --green-dark: #166534;
+        --green-light: #dcfce7;
+        --blue: #3b82f6;
+        --blue-dark: #1e40af;
+        --purple: #8b5cf6;
+        --orange: #f59e0b;
+        --bg-light: #f8fafc;
+        --bg-card: #ffffff;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --border: #e2e8f0;
+        --radius-md: 8px;
+        --radius-lg: 16px;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-light);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .header {
+        background: linear-gradient(135deg, var(--green-dark) 0%, #064e3b 100%);
+        color: white;
+        padding: 1.5rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .back-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        transition: all 0.15s;
+      }
+
+      .back-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+      }
+
+      .header-title {
+        text-align: center;
+      }
+
+      .header-title h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .header-subtitle {
+        font-size: 0.875rem;
+        opacity: 0.8;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+      }
+
+      .hero-tagline {
+        font-size: 1.25rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+      }
+
+      .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-stat {
+        text-align: center;
+      }
+
+      .hero-stat-value {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--green);
+      }
+
+      .hero-stat-label {
+        font-size: 0.875rem;
+        opacity: 0.8;
+      }
+
+      /* Main Content */
+      .main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Section */
+      .section {
+        margin-bottom: 3rem;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--green-light);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .section-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--green-dark);
+        fill: none;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .section-icon.blue {
+        background: #dbeafe;
+      }
+
+      .section-icon.blue svg {
+        stroke: #1e40af;
+      }
+
+      .section-icon.purple {
+        background: #f3e8ff;
+      }
+
+      .section-icon.purple svg {
+        stroke: #7c3aed;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      /* Cards */
+      .card {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border);
+      }
+
+      .card-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      /* Economic Table */
+      .econ-table-wrapper {
+        overflow-x: auto;
+        margin-bottom: 1rem;
+      }
+
+      .econ-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+      }
+
+      .econ-table th,
+      .econ-table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .econ-table th {
+        background: var(--bg-light);
+        font-weight: 600;
+        color: var(--text-secondary);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .econ-table tr:hover {
+        background: rgba(34, 197, 94, 0.05);
+      }
+
+      .econ-table .num {
+        text-align: right;
+        font-family: "SF Mono", Monaco, monospace;
+      }
+
+      .econ-table .total-row {
+        background: var(--green-light);
+        font-weight: 700;
+      }
+
+      .econ-table .diff-row {
+        background: #fef3c7;
+        font-weight: 600;
+      }
+
+      .floor-badge {
+        display: inline-block;
+        padding: 0.125rem 0.5rem;
+        background: var(--bg-light);
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      .floor-badge.naring {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+      .floor-badge.kjeller {
+        background: #e5e7eb;
+        color: #374151;
+      }
+
+      /* Grid layouts */
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      /* Metric Cards */
+      .metric-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        text-align: center;
+        border: 1px solid var(--border);
+      }
+
+      .metric-value {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: var(--green-dark);
+      }
+
+      .metric-label {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        margin-top: 0.25rem;
+      }
+
+      .metric-note {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+      }
+
+      /* Area breakdown */
+      .area-breakdown {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .area-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .area-bar-container {
+        flex: 1;
+        height: 24px;
+        background: var(--bg-light);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .area-bar {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: white;
+      }
+
+      .area-bar.units {
+        background: var(--green);
+      }
+      .area-bar.service {
+        background: var(--blue);
+      }
+      .area-bar.technical {
+        background: var(--purple);
+      }
+      .area-bar.balcony {
+        background: var(--orange);
+      }
+      .area-bar.basement {
+        background: #64748b;
+      }
+
+      .area-label {
+        width: 180px;
+        font-size: 0.875rem;
+      }
+
+      .area-value {
+        width: 80px;
+        text-align: right;
+        font-weight: 600;
+        font-family: "SF Mono", Monaco, monospace;
+      }
+
+      /* Comparison cards */
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .comparison-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        border: 2px solid var(--border);
+        position: relative;
+      }
+
+      .comparison-card.current {
+        border-color: #94a3b8;
+      }
+
+      .comparison-card.projected {
+        border-color: var(--green);
+      }
+
+      .comparison-badge {
+        position: absolute;
+        top: -12px;
+        left: 1rem;
+        padding: 0.25rem 0.75rem;
+        background: var(--bg-card);
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .comparison-card.current .comparison-badge {
+        color: #64748b;
+      }
+      .comparison-card.projected .comparison-badge {
+        color: var(--green-dark);
+      }
+
+      .comparison-value {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-top: 0.5rem;
+      }
+
+      .comparison-card.current .comparison-value {
+        color: var(--text-secondary);
+      }
+      .comparison-card.projected .comparison-value {
+        color: var(--green-dark);
+      }
+
+      .comparison-details {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .comparison-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.25rem 0;
+        font-size: 0.875rem;
+      }
+
+      /* Slides Section */
+      .slides-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .slide-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border);
+      }
+
+      .slide-preview {
+        background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+        color: white;
+        padding: 2rem;
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .slide-number {
+        font-size: 0.75rem;
+        opacity: 0.6;
+        margin-bottom: 0.5rem;
+      }
+
+      .slide-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .slide-subtitle {
+        font-size: 0.875rem;
+        opacity: 0.8;
+        margin-bottom: 1.5rem;
+      }
+
+      .slide-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .slide-stat-row {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+      }
+
+      .slide-stat {
+        text-align: center;
+      }
+
+      .slide-stat-value {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--green);
+      }
+
+      .slide-stat-label {
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      .slide-meta {
+        padding: 1rem 1.5rem;
+        background: var(--bg-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+      }
+
+      /* Info boxes */
+      .info-box {
+        background: #f0fdf4;
+        border: 1px solid #86efac;
+        border-radius: var(--radius-md);
+        padding: 1rem 1.25rem;
+        margin-top: 1rem;
+      }
+
+      .info-box-title {
+        font-weight: 600;
+        color: var(--green-dark);
+        margin-bottom: 0.25rem;
+      }
+
+      .info-box-text {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      /* Omsorg+ Economics */
+      .omsorg-economics {
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        margin-top: 1.5rem;
+      }
+
+      .omsorg-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .omsorg-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--green);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .omsorg-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke: white;
+        fill: none;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .omsorg-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--green-dark);
+      }
+
+      .omsorg-subtitle {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      /* Floor plan indicator */
+      .floor-plan {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        padding: 1rem;
+        border: 1px solid var(--border);
+      }
+
+      .floor-row {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .floor-row:last-child {
+        border-bottom: none;
+      }
+
+      .floor-label {
+        width: 60px;
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+
+      .floor-bar {
+        flex: 1;
+        height: 28px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        padding-left: 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: white;
+      }
+
+      .floor-bar.servering {
+        background: #f59e0b;
+      }
+      .floor-bar.butikk {
+        background: #ef4444;
+      }
+      .floor-bar.kontor {
+        background: #3b82f6;
+      }
+      .floor-bar.fellesskap {
+        background: #8b5cf6;
+      }
+      .floor-bar.parkering {
+        background: #6b7280;
+      }
+
+      .floor-amount {
+        width: 100px;
+        text-align: right;
+        font-family: "SF Mono", Monaco, monospace;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+
+      /* Text variants */
+      .text-variants-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+
+      .text-variant-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        overflow: hidden;
+      }
+
+      .text-variant-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        background: var(--bg-light);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .text-variant-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--green-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .copy-btn {
+        padding: 0.25rem 0.75rem;
+        background: var(--green);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+
+      .copy-btn:hover {
+        background: var(--green-dark);
+      }
+
+      .copy-btn.copied {
+        background: #064e3b;
+      }
+
+      .text-variant-content {
+        padding: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--text-primary);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .footer-text {
+        opacity: 0.7;
+        font-size: 0.875rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 1.75rem;
+        }
+        .hero-stats {
+          gap: 1.5rem;
+        }
+        .comparison-grid {
+          grid-template-columns: 1fr;
+        }
+        .slides-grid {
+          grid-template-columns: 1fr;
+        }
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="back-link">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Tilbake
+        </a>
+        <div class="header-title">
+          <h1>Stedsøkonomi</h1>
+          <div class="header-subtitle">Hovfaret 13 — Økonomisk Verdimodell</div>
+        </div>
+        <div style="width: 100px"></div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Stedsøkonomisk Prognose</h2>
+        <p class="hero-tagline">
+          Inntektspotensial og finansiering for transformasjon av Hovfaret 13
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">12,4 M</div>
+            <div class="hero-stat-label">Årlig leieinntekt (Alt 1)</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">247 M</div>
+            <div class="hero-stat-label">Over 20 år</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">+89 M</div>
+            <div class="hero-stat-label">Identitetsverdi vs dagens</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Alt 1: Næring/Studiokontor -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M18 20V10M12 20V4M6 20v-6" />
+            </svg>
+          </div>
+          <h2 class="section-title">
+            Alternativ 1: Næring — Studiokontor Struktur
+          </h2>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Stedsøkonomiberegning — Detaljert Oversikt</h3>
+          <div class="econ-table-wrapper">
+            <table class="econ-table">
+              <thead>
+                <tr>
+                  <th>Etasje</th>
+                  <th>Type</th>
+                  <th>Funksjon</th>
+                  <th class="num">Areal m²</th>
+                  <th class="num">Pris/m²</th>
+                  <th class="num">Totalt pr år</th>
+                  <th class="num">Per måned</th>
+                  <th class="num">20 år</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="floor-badge naring">1.et</span></td>
+                  <td>Næring</td>
+                  <td>Servering & Personalrestaurant</td>
+                  <td class="num">307,2</td>
+                  <td class="num">3 000</td>
+                  <td class="num">921 600</td>
+                  <td class="num">76 800</td>
+                  <td class="num">18 432 000</td>
+                </tr>
+                <tr>
+                  <td><span class="floor-badge naring">1.et</span></td>
+                  <td>Næring</td>
+                  <td>Butikk & Kontor (Rødt)</td>
+                  <td class="num">160,0</td>
+                  <td class="num">3 000</td>
+                  <td class="num">480 000</td>
+                  <td class="num">40 000</td>
+                  <td class="num">9 600 000</td>
+                </tr>
+                <tr>
+                  <td><span class="floor-badge naring">1.et</span></td>
+                  <td>Næring</td>
+                  <td>Butikk & Kontor (Blått)</td>
+                  <td class="num">234,1</td>
+                  <td class="num">3 000</td>
+                  <td class="num">702 300</td>
+                  <td class="num">58 525</td>
+                  <td class="num">14 046 000</td>
+                </tr>
+                <tr>
+                  <td><span class="floor-badge naring">2.et</span></td>
+                  <td>Næring</td>
+                  <td>Kontorfellesskap 14 enheter</td>
+                  <td class="num">755,0</td>
+                  <td class="num">3 099</td>
+                  <td class="num">2 340 000</td>
+                  <td class="num">195 000</td>
+                  <td class="num">46 800 000</td>
+                </tr>
+                <tr>
+                  <td><span class="floor-badge naring">3.et</span></td>
+                  <td>Næring</td>
+                  <td>Kontorfellesskap 14 enheter</td>
+                  <td class="num">755,0</td>
+                  <td class="num">3 099</td>
+                  <td class="num">2 340 000</td>
+                  <td class="num">195 000</td>
+                  <td class="num">46 800 000</td>
+                </tr>
+                <tr>
+                  <td><span class="floor-badge naring">4.et</span></td>
+                  <td>Næring</td>
+                  <td>Kontor</td>
+                  <td class="num">700,0</td>
+                  <td class="num">2 500</td>
+                  <td class="num">1 750 000</td>
+                  <td class="num">145 833</td>
+                  <td class="num">35 000 000</td>
+                </tr>
+                <tr>
+                  <td><span class="floor-badge naring">5.et</span></td>
+                  <td>Næring</td>
+                  <td>Kontorfellesskap 14 enheter</td>
+                  <td class="num">755,0</td>
+                  <td class="num">3 099</td>
+                  <td class="num">2 340 000</td>
+                  <td class="num">195 000</td>
+                  <td class="num">46 800 000</td>
+                </tr>
+                <tr>
+                  <td><span class="floor-badge kjeller">U1</span></td>
+                  <td>Kjeller</td>
+                  <td>Parkering</td>
+                  <td class="num">500,0</td>
+                  <td class="num">1 500</td>
+                  <td class="num">750 000</td>
+                  <td class="num">62 500</td>
+                  <td class="num">15 000 000</td>
+                </tr>
+                <tr>
+                  <td><span class="floor-badge kjeller">U2</span></td>
+                  <td>Kjeller</td>
+                  <td>Parkering</td>
+                  <td class="num">500,0</td>
+                  <td class="num">1 500</td>
+                  <td class="num">750 000</td>
+                  <td class="num">62 500</td>
+                  <td class="num">15 000 000</td>
+                </tr>
+                <tr class="total-row">
+                  <td colspan="3"><strong>Sum</strong></td>
+                  <td class="num"><strong>4 666,3</strong></td>
+                  <td class="num"><strong>2 652</strong></td>
+                  <td class="num"><strong>12 373 900</strong></td>
+                  <td class="num"><strong>1 031 158</strong></td>
+                  <td class="num"><strong>247 478 000</strong></td>
+                </tr>
+                <tr>
+                  <td colspan="3">Snitt m² pris i dag</td>
+                  <td class="num">—</td>
+                  <td class="num">1 700</td>
+                  <td class="num" colspan="3">—</td>
+                </tr>
+                <tr class="diff-row">
+                  <td colspan="3">
+                    <strong
+                      >Differanse eksisterende mot nytt konsept
+                      (Identitetsverdiprognose)</strong
+                    >
+                  </td>
+                  <td class="num">4 666,3</td>
+                  <td class="num">+952</td>
+                  <td class="num"><strong>+4 441 190</strong></td>
+                  <td class="num">+370 099</td>
+                  <td class="num"><strong>+88 823 800</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="info-box">
+            <div class="info-box-title">Identitetsverdi</div>
+            <div class="info-box-text">
+              Ved å transformere bygget med studiokontor-struktur øker snittpris
+              fra 1 700 til 2 652 kr/m² — en økning på 56%. Over 20 år
+              representerer dette nesten 89 millioner kroner i ekstraverdi
+              sammenlignet med dagens bruk.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visual Floor Plan -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg>
+          </div>
+          <h2 class="section-title">Etasjefordeling — Visuell Oversikt</h2>
+        </div>
+
+        <div class="card">
+          <div class="floor-plan">
+            <div class="floor-row">
+              <div class="floor-label">5. et</div>
+              <div
+                class="floor-bar fellesskap"
+                style="width: calc(755 / 800 * 100%)"
+              >
+                Kontorfellesskap × 14
+              </div>
+              <div class="floor-amount">2,34 M/år</div>
+            </div>
+            <div class="floor-row">
+              <div class="floor-label">4. et</div>
+              <div
+                class="floor-bar kontor"
+                style="width: calc(700 / 800 * 100%)"
+              >
+                Kontor
+              </div>
+              <div class="floor-amount">1,75 M/år</div>
+            </div>
+            <div class="floor-row">
+              <div class="floor-label">3. et</div>
+              <div
+                class="floor-bar fellesskap"
+                style="width: calc(755 / 800 * 100%)"
+              >
+                Kontorfellesskap × 14
+              </div>
+              <div class="floor-amount">2,34 M/år</div>
+            </div>
+            <div class="floor-row">
+              <div class="floor-label">2. et</div>
+              <div
+                class="floor-bar fellesskap"
+                style="width: calc(755 / 800 * 100%)"
+              >
+                Kontorfellesskap × 14
+              </div>
+              <div class="floor-amount">2,34 M/år</div>
+            </div>
+            <div class="floor-row">
+              <div class="floor-label">1. et</div>
+              <div
+                class="floor-bar servering"
+                style="width: calc(701 / 800 * 100%)"
+              >
+                Servering + Butikk/Kontor
+              </div>
+              <div class="floor-amount">2,10 M/år</div>
+            </div>
+            <div class="floor-row">
+              <div class="floor-label">U1</div>
+              <div
+                class="floor-bar parkering"
+                style="width: calc(500 / 800 * 100%)"
+              >
+                Parkering
+              </div>
+              <div class="floor-amount">0,75 M/år</div>
+            </div>
+            <div class="floor-row">
+              <div class="floor-label">U2</div>
+              <div
+                class="floor-bar parkering"
+                style="width: calc(500 / 800 * 100%)"
+              >
+                Parkering
+              </div>
+              <div class="floor-amount">0,75 M/år</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison: Current vs Projected -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg>
+          </div>
+          <h2 class="section-title">Verdiskaping — Før og Etter</h2>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comparison-card current">
+            <div class="comparison-badge">Dagens situasjon</div>
+            <h3 style="margin-top: 0.5rem; color: var(--text-secondary)">
+              Kontorbygg (F-rating)
+            </h3>
+            <div class="comparison-value">7,9 M/år</div>
+            <div class="comparison-details">
+              <div class="comparison-row">
+                <span>Snittpris</span>
+                <span>1 700 kr/m²</span>
+              </div>
+              <div class="comparison-row">
+                <span>Energiklasse</span>
+                <span>F (232 kWh/m²)</span>
+              </div>
+              <div class="comparison-row">
+                <span>20-års verdi</span>
+                <span>~158 M</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="comparison-card projected">
+            <div class="comparison-badge">Etter transformasjon</div>
+            <h3 style="margin-top: 0.5rem; color: var(--green-dark)">
+              Studiokontor Struktur
+            </h3>
+            <div class="comparison-value">12,4 M/år</div>
+            <div class="comparison-details">
+              <div class="comparison-row">
+                <span>Snittpris</span>
+                <span>2 652 kr/m² (+56%)</span>
+              </div>
+              <div class="comparison-row">
+                <span>Energiklasse</span>
+                <span>C (116 kWh/m²)</span>
+              </div>
+              <div class="comparison-row">
+                <span>20-års verdi</span>
+                <span>247 M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Omsorg+ Economics -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <h2 class="section-title">Alternativ 3: Omsorg+ Påbygg — Økonomi</h2>
+        </div>
+
+        <div class="omsorg-economics">
+          <div class="omsorg-header">
+            <div class="omsorg-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <div>
+              <div class="omsorg-title">73 Omsorg+ Enheter</div>
+              <div class="omsorg-subtitle">
+                Seniorboliger med Husbanken-finansiering
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-4">
+            <div class="metric-card">
+              <div class="metric-value">~730 M</div>
+              <div class="metric-label">Estimert totalverdi</div>
+              <div class="metric-note">73 × ~10 MNOK/enhet</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">45%</div>
+              <div class="metric-label">Husbanken-støtte</div>
+              <div class="metric-note">Maks 2,1 MNOK/enhet i Oslo</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">~153 M</div>
+              <div class="metric-label">Potensiell støtte</div>
+              <div class="metric-note">73 × 2,1 MNOK</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">12/12</div>
+              <div class="metric-label">Husbanken-samsvar</div>
+              <div class="metric-note">Alle kategorier oppfylt</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arealregnskap for Omsorg+ -->
+        <div class="card" style="margin-top: 1.5rem">
+          <h3 class="card-title">
+            Arealregnskap — Omsorg+ Påbygg (Etasje 6-8)
+          </h3>
+
+          <div class="grid-2">
+            <div>
+              <h4
+                style="
+                  font-size: 0.875rem;
+                  color: var(--text-secondary);
+                  margin-bottom: 1rem;
+                "
+              >
+                Arealfordeling
+              </h4>
+              <div class="area-breakdown">
+                <div class="area-item">
+                  <div class="area-label">Enheter (BRA)</div>
+                  <div class="area-bar-container">
+                    <div class="area-bar units" style="width: 100%">
+                      2 958 m²
+                    </div>
+                  </div>
+                  <div class="area-value">2 958</div>
+                </div>
+                <div class="area-item">
+                  <div class="area-label">Fellesarealer/service</div>
+                  <div class="area-bar-container">
+                    <div class="area-bar service" style="width: 70%">
+                      2 068 m²
+                    </div>
+                  </div>
+                  <div class="area-value">2 068</div>
+                </div>
+                <div class="area-item">
+                  <div class="area-label">Kommunikasjon/teknisk</div>
+                  <div class="area-bar-container">
+                    <div class="area-bar technical" style="width: 28%">
+                      834 m²
+                    </div>
+                  </div>
+                  <div class="area-value">834</div>
+                </div>
+                <div class="area-item">
+                  <div class="area-label">Balkonger</div>
+                  <div class="area-bar-container">
+                    <div class="area-bar balcony" style="width: 22%">
+                      662 m²
+                    </div>
+                  </div>
+                  <div class="area-value">662</div>
+                </div>
+                <div class="area-item">
+                  <div class="area-label">Kjeller (eksist.)</div>
+                  <div class="area-bar-container">
+                    <div class="area-bar basement" style="width: 81%">
+                      2 400 m²
+                    </div>
+                  </div>
+                  <div class="area-value">2 400</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4
+                style="
+                  font-size: 0.875rem;
+                  color: var(--text-secondary);
+                  margin-bottom: 1rem;
+                "
+              >
+                Enhetsfordeling
+              </h4>
+              <div class="grid-2" style="gap: 1rem">
+                <div class="metric-card">
+                  <div class="metric-value">66</div>
+                  <div class="metric-label">Enkeltrom</div>
+                  <div class="metric-note">42 m² per enhet</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-value">7</div>
+                  <div class="metric-label">Dobbeltrom</div>
+                  <div class="metric-note">67 m² per enhet</div>
+                </div>
+              </div>
+
+              <div class="info-box" style="margin-top: 1rem">
+                <div class="info-box-title">Total BTA: 8 472 m²</div>
+                <div class="info-box-text">
+                  Eksisterende 5 etasjer + 3 nye etasjer med Omsorg+ enheter.
+                  Fundamentet har reservekapasitet for utvidelsen.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Presentation Slides -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+          </div>
+          <h2 class="section-title">
+            Presentasjonsmateriell — Utadvendt Kommunikasjon
+          </h2>
+        </div>
+
+        <div class="slides-grid">
+          <!-- Slide 1: Executive Summary -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <div class="slide-number">Slide 1 — Executive Summary</div>
+              <div class="slide-title">Verdiskaping gjennom transformasjon</div>
+              <div class="slide-subtitle">
+                Hovfaret 13: Fra kontorbygg til fremtidens arbeids- og
+                bofellesskap
+              </div>
+              <div class="slide-content">
+                <p
+                  style="
+                    font-size: 0.875rem;
+                    opacity: 0.9;
+                    line-height: 1.5;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Ved å transformere istedenfor å rive, skaper vi
+                  <strong style="color: var(--green)"
+                    >89 millioner kroner</strong
+                  >
+                  i identitetsverdi — samtidig som vi sparer miljøet.
+                </p>
+                <div class="slide-stat-row">
+                  <div class="slide-stat">
+                    <div class="slide-stat-value">+56%</div>
+                    <div class="slide-stat-label">Økt m²-verdi</div>
+                  </div>
+                  <div class="slide-stat">
+                    <div class="slide-stat-value">48%</div>
+                    <div class="slide-stat-label">Lavere CO₂</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-meta">
+              <span>Investorpresentasjon</span>
+              <span>Natural State</span>
+            </div>
+          </div>
+
+          <!-- Slide 2: The Opportunity -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <div class="slide-number">Slide 2 — Muligheten</div>
+              <div class="slide-title">Et bygg med skjult potensial</div>
+              <div class="slide-subtitle">
+                Fra 1 700 til 2 652 kr/m² — en økning på 56%
+              </div>
+              <div class="slide-content">
+                <ul
+                  style="
+                    list-style: none;
+                    padding: 0;
+                    font-size: 0.875rem;
+                    opacity: 0.9;
+                  "
+                >
+                  <li style="padding: 0.35rem 0">
+                    • <strong>Dagens situasjon:</strong> Kontorbygg med
+                    F-energiklasse
+                  </li>
+                  <li style="padding: 0.35rem 0">
+                    • <strong>Potensialet:</strong> Moderne studiokontor med
+                    C-klasse
+                  </li>
+                  <li style="padding: 0.35rem 0">
+                    • <strong>Resultatet:</strong> 247 MNOK i inntekter over 20
+                    år
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="slide-meta">
+              <span>Markedsposisjon</span>
+              <span>4 666 m²</span>
+            </div>
+          </div>
+
+          <!-- Slide 3: Studiokontor Vision -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <div class="slide-number">Slide 3 — Næringskonseptet</div>
+              <div class="slide-title">Fremtidens arbeidsfellesskap</div>
+              <div class="slide-subtitle">
+                Studiokontor: Fleksible arbeidsplasser for den nye
+                arbeidshverdagen
+              </div>
+              <div class="slide-content">
+                <ul
+                  style="
+                    list-style: none;
+                    padding: 0;
+                    font-size: 0.875rem;
+                    opacity: 0.9;
+                  "
+                >
+                  <li style="padding: 0.35rem 0">
+                    • <strong>42 studioenheter</strong> over tre etasjer
+                  </li>
+                  <li style="padding: 0.35rem 0">
+                    • <strong>Servering og møteplasser</strong> i 1. etasje
+                  </li>
+                  <li style="padding: 0.35rem 0">
+                    • <strong>Fleksible leiekontrakter</strong> for
+                    vekstbedrifter
+                  </li>
+                  <li style="padding: 0.35rem 0">
+                    • <strong>Bærekraftsprofil</strong> som tiltrekker talenter
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="slide-meta">
+              <span>Konseptbeskrivelse</span>
+              <span>12,4 M/år</span>
+            </div>
+          </div>
+
+          <!-- Slide 4: Omsorg+ Social Value -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <div class="slide-number">Slide 4 — Samfunnsverdi</div>
+              <div class="slide-title">Omsorg+ møter bydelens behov</div>
+              <div class="slide-subtitle">
+                73 seniorboliger i et nabolag som trenger dem
+              </div>
+              <div class="slide-content">
+                <p
+                  style="
+                    font-size: 0.875rem;
+                    opacity: 0.9;
+                    line-height: 1.5;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Bydel Ullern har behov for
+                  <strong>150-200 omsorgsboliger</strong> mot 2040. Hovfaret 13
+                  kan levere 73 enheter — og demonstrere en bærekraftig modell
+                  for flere prosjekter.
+                </p>
+                <div class="slide-stat-row">
+                  <div class="slide-stat">
+                    <div class="slide-stat-value">45%</div>
+                    <div class="slide-stat-label">Husbanken-støtte</div>
+                  </div>
+                  <div class="slide-stat">
+                    <div class="slide-stat-value">153 M</div>
+                    <div class="slide-stat-label">Potensiell støtte</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-meta">
+              <span>Politisk presentasjon</span>
+              <span>Bydel Ullern</span>
+            </div>
+          </div>
+
+          <!-- Slide 5: The Business Case -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <div class="slide-number">Slide 5 — Business Case</div>
+              <div class="slide-title">To veier til verdiskaping</div>
+              <div class="slide-subtitle">
+                Begge bygger på samme transformasjonsstrategi
+              </div>
+              <div class="slide-content">
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                    margin-top: 0.5rem;
+                  "
+                >
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.1);
+                      padding: 0.75rem;
+                      border-radius: 8px;
+                    "
+                  >
+                    <div style="font-weight: 600; font-size: 0.875rem">
+                      Studiokontor
+                    </div>
+                    <div
+                      style="
+                        font-size: 1.25rem;
+                        color: var(--green);
+                        font-weight: 700;
+                      "
+                    >
+                      12,4 M/år
+                    </div>
+                    <div style="font-size: 0.75rem; opacity: 0.7">
+                      Stabil leieinntekt
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      background: rgba(255, 255, 255, 0.1);
+                      padding: 0.75rem;
+                      border-radius: 8px;
+                    "
+                  >
+                    <div style="font-weight: 600; font-size: 0.875rem">
+                      Omsorg+ Påbygg
+                    </div>
+                    <div
+                      style="
+                        font-size: 1.25rem;
+                        color: var(--green);
+                        font-weight: 700;
+                      "
+                    >
+                      ~730 M
+                    </div>
+                    <div style="font-size: 0.75rem; opacity: 0.7">
+                      Totalverdi + støtte
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-meta">
+              <span>Sammenligning</span>
+              <span>48% CO₂-besparelse</span>
+            </div>
+          </div>
+
+          <!-- Slide 6: The Sustainability Story -->
+          <div class="slide-card">
+            <div class="slide-preview">
+              <div class="slide-number">Slide 6 — Bærekraftshistorien</div>
+              <div class="slide-title">
+                Transformasjon er det riktige valget
+              </div>
+              <div class="slide-subtitle">
+                Økonomisk smart. Miljømessig nødvendig.
+              </div>
+              <div class="slide-content">
+                <p style="font-size: 0.875rem; opacity: 0.9; line-height: 1.5">
+                  Ved å bevare bærekonstruksjonen sparer vi
+                  <strong style="color: var(--green)">2 549 tonn CO₂</strong> —
+                  tilsvarende 1 000 Oslo-Trondheim flyreiser. Samtidig skaper vi
+                  <strong>89 millioner</strong> i ekstraverdi.
+                </p>
+                <p
+                  style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.75rem"
+                >
+                  <em
+                    >God økonomi og godt miljøvalg er ikke motsetninger — de
+                    forsterker hverandre.</em
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="slide-meta">
+              <span>Avslutning</span>
+              <span>Call to action</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pitch Variants -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon blue">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              />
+            </svg>
+          </div>
+          <h2 class="section-title">Nøkkelbudskap — Ulike Målgrupper</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3 class="card-title" style="color: var(--blue)">
+              For Investorer
+            </h3>
+            <p
+              style="
+                font-size: 0.9rem;
+                line-height: 1.6;
+                color: var(--text-secondary);
+              "
+            >
+              «Hovfaret 13 representerer en unik mulighet til å skape
+              <strong>89 millioner kroner</strong> i identitetsverdi gjennom
+              transformasjon — med <strong>56% høyere leiepris</strong> enn
+              dagens bruk. Bærekraftsprofilen tiltrekker kvalitetsleietakere og
+              reduserer risiko.»
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title" style="color: var(--green-dark)">
+              For Politikere
+            </h3>
+            <p
+              style="
+                font-size: 0.9rem;
+                line-height: 1.6;
+                color: var(--text-secondary);
+              "
+            >
+              «Hovfaret 13 kan levere <strong>73 Omsorg+-boliger</strong> som
+              Bydel Ullern sårt trenger — med
+              <strong>45% Husbanken-finansiering</strong>. Samtidig sparer vi
+              <strong>2 549 tonn CO₂</strong>
+              ved å transformere istedenfor å rive. Et vinnerprosjekt for alle.»
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title" style="color: var(--purple)">For Naboer</h3>
+            <p
+              style="
+                font-size: 0.9rem;
+                line-height: 1.6;
+                color: var(--text-secondary);
+              "
+            >
+              «Ved å beholde bygget slipper vi støy og støv fra riving.
+              Istedenfor et tomt tomteområde i årevis, får dere et
+              <strong>oppgradert nabolag</strong>
+              med servering, arbeidsplasser og seniorboliger som styrker
+              lokalsamfunnet.»
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Konseptskisse-tekster -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 20h9" />
+              <path
+                d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+              />
+            </svg>
+          </div>
+          <h2 class="section-title">Tekster for Konseptskisse</h2>
+        </div>
+
+        <div
+          class="info-box"
+          style="
+            background: #fef3c7;
+            border-color: #fbbf24;
+            margin-bottom: 1.5rem;
+          "
+        >
+          <div class="info-box-title" style="color: #92400e">
+            Stedsøkonomi uten tall
+          </div>
+          <div class="info-box-text">
+            Korte tekster som forklarer den stedsøkonomiske logikken bak
+            transformasjonen — uten å bruke tall. Klikk for å kopiere.
+          </div>
+        </div>
+
+        <div class="text-variants-grid">
+          <div class="text-variant-card">
+            <div class="text-variant-header">
+              <span class="text-variant-label">Tekst 1 — Potensialet</span>
+              <button class="copy-btn" onclick="copyText('text1')">
+                Kopier
+              </button>
+            </div>
+            <div class="text-variant-content" id="text1">
+              Et bygg som står kan skape mer verdi enn et bygg som rives. Ved å
+              transformere istedenfor å rive, frigjør vi byggets skjulte
+              potensial — et potensial som ble designet inn fra starten.
+              Fundamentet er dimensjonert for mer enn det bærer i dag.
+            </div>
+          </div>
+
+          <div class="text-variant-card">
+            <div class="text-variant-header">
+              <span class="text-variant-label">Tekst 2 — Markedslogikken</span>
+              <button class="copy-btn" onclick="copyText('text2')">
+                Kopier
+              </button>
+            </div>
+            <div class="text-variant-content" id="text2">
+              Eiendommer med tydelig bærekraftsprofil oppnår høyere leiepriser
+              enn sammenlignbare bygg. Når vi transformerer fremfor å rive,
+              skaper vi ikke bare miljøgevinst — vi skaper identitetsverdi.
+              Leietakere vil betale mer for å være del av en historie som gir
+              mening.
+            </div>
+          </div>
+
+          <div class="text-variant-card">
+            <div class="text-variant-header">
+              <span class="text-variant-label"
+                >Tekst 3 — Den sirkulære logikken</span
+              >
+              <button class="copy-btn" onclick="copyText('text3')">
+                Kopier
+              </button>
+            </div>
+            <div class="text-variant-content" id="text3">
+              Det mest bærekraftige bygget er det som allerede står. Betongen i
+              Hovfaret 13 har gjort jobben sin i over tre tiår — og kan
+              fortsette i tre til. Å rive er å kaste bort verdifulle ressurser.
+              Å transformere er å forvalte dem klokt.
+            </div>
+          </div>
+
+          <div class="text-variant-card">
+            <div class="text-variant-header">
+              <span class="text-variant-label">Tekst 4 — Fremtidsrettet</span>
+              <button class="copy-btn" onclick="copyText('text4')">
+                Kopier
+              </button>
+            </div>
+            <div class="text-variant-content" id="text4">
+              Bygg som transformeres tiltrekker seg leietakere som ønsker å være
+              del av løsningen. De betaler for kvalitet, for historie, for
+              troverdighet. Det er ikke bare god miljøpolitikk — det er smart
+              forretning.
+            </div>
+          </div>
+
+          <div class="text-variant-card">
+            <div class="text-variant-header">
+              <span class="text-variant-label"
+                >Tekst 5 — Det verdifulle i det</span
+              >
+              <button class="copy-btn" onclick="copyText('text5')">
+                Kopier
+              </button>
+            </div>
+            <div class="text-variant-content" id="text5">
+              «Vi snakker om et bygg som er fleksibelt. Det er bygd og
+              prosjektert for utvikling. Fortiden beregnet inn det økte behovet.
+              Det var bærekraftig — skal man kaste bort det verdifulle i det?»
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sources -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-icon purple">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+              />
+            </svg>
+          </div>
+          <h2 class="section-title">Datakilder</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3 class="card-title">Stedsøkonomisk Prognose</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary)">
+              PDF-beregning for Alternativ 1 (Næring/Studiokontor). Detaljert
+              arealfordeling og leieprismodell per etasje.
+            </p>
+            <div
+              style="
+                margin-top: 1rem;
+                font-size: 0.75rem;
+                color: var(--text-muted);
+              "
+            >
+              Natural State • September 2025
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Konseptskisse 2.0</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary)">
+              Side 119 og 122: Stedsøkonomi og arealregnskap for Omsorg+
+              påbygget. Husbanken-krav og finansieringsmodell.
+            </p>
+            <div
+              style="
+                margin-top: 1rem;
+                font-size: 0.75rem;
+                color: var(--text-muted);
+              "
+            >
+              Konseptskisse Del 5: Progresjon
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Møtereferater</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary)">
+              Møte 2. september 2025 med Andreas og Einar — diskusjon av
+              økonomisk modell og stedsøkonomi.
+            </p>
+            <div
+              style="
+                margin-top: 1rem;
+                font-size: 0.75rem;
+                color: var(--text-muted);
+              "
+            >
+              meetings.json • Notion leveranser
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">
+        Hovfaret 13 Prosjektdatabase • Stedsøkonomi v1.1 • Desember 2025<br />
+        Natural State × Urbania Eiendom
+      </p>
+    </footer>
+
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+    <script>
+      ContentHeader.inject("place-economy");
+      function copyText(id) {
+        const element = document.getElementById(id);
+        const text = element.innerText;
+
+        navigator.clipboard.writeText(text).then(() => {
+          const btn =
+            element.previousElementSibling.querySelector(".copy-btn") ||
+            element.closest(".text-variant-card").querySelector(".copy-btn");
+          const originalText = btn.innerText;
+          btn.innerText = "Kopiert!";
+          btn.classList.add("copied");
+
+          setTimeout(() => {
+            btn.innerText = originalText;
+            btn.classList.remove("copied");
+          }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>

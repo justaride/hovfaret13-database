@@ -1,0 +1,72 @@
+{
+  "source": {
+    "file_name": "Avfallsrapport.pdf",
+    "relative_path": "Avfallsrapport.pdf",
+    "size_bytes": 2771821,
+    "modified_time": "2026-01-26T18:46:41.369027+00:00",
+    "sha256": "7f51c8a6c443220ac4ac4b28a07d6e55bc55d0d1acd6b65562f4c1fb98e60024"
+  },
+  "pdfinfo": {
+    "Title": "Avfallsrapport",
+    "Subject": "Avfallsrapport for 01.12.2024-30.07.2025",
+    "Keywords": "Avfallsrapport, 01.12.2024-30.07.2025, Skape Entreprenør As,ProRiv AS, EL-Bil Skøyen Terrasse 1 Pnr 1818 (Skøyen terrasse 1, 0276),EL-BIL  Skøyen Terrasse 1  Pnr: 2321 (Skøyen terrasse 1, 0276),EL-BIL  Skøyen Terrasse 1  Pnr: 2321 (Skøyen terrasse 1, 0276)",
+    "Author": "Engage - Løvås Transport",
+    "Creator": "react-pdf",
+    "Producer": "react-pdf",
+    "CreationDate": "Mon Aug  4 16:12:35 2025 CEST",
+    "Custom Metadata": "no",
+    "Metadata Stream": "no",
+    "Tagged": "no",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "5",
+    "Encrypted": "no",
+    "Page size": "595.28 x 841.89 pts (A4)",
+    "Page rot": "0",
+    "File size": "2771821 bytes",
+    "Optimized": "no",
+    "PDF version": "1.3"
+  },
+  "extraction": {
+    "tool": "pdftotext",
+    "options": "-layout",
+    "extracted_at": "2026-01-26T19:16:02.549045+00:00",
+    "page_count": 5,
+    "has_text": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Avfallsrapport\n\n\n\n\nRapporteringsperiode\n01.12.2024-30.07.2025\n\n\n                        For kunde/prosjektansvarlig\n                        Skape Entreprenør As\n                        ProRiv AS\n",
+      "char_count": 195,
+      "line_count": 13
+    },
+    {
+      "page_number": 2,
+      "text": "Rapport hentet ut\n04.08.2025\n\nRapporteringsperiode\n01.12.2024-30.07.2025\n\nProsjektansvarlig/Kunde\n126049764 Skape Entreprenør As                         828680 ProRiv AS\n\nHenteplasser\nEL-Bil Skøyen Terrasse 1 Pnr 1818    EL-BIL Skøyen Terrasse 1 Pnr:        EL-BIL Skøyen Terrasse 1 Pnr:\nSkøyen terrasse 1, 0276              2321                                 2321\n                                     Skøyen terrasse 1, 0276              Skøyen terrasse 1, 0276\n\n\n\n\nBehandlet av leverandør\nLøvås Transport\nbekrefter å ha mottatt følgende avfall og håndtert dette etter gjeldende lovverk og konsesjoner\n",
+      "char_count": 605,
+      "line_count": 21
+    },
+    {
+      "page_number": 3,
+      "text": "                                                                                               01.12.2024-30.07.2025\n\n\n\n\nNøkkeltall\nHvilken retning går avfallshåndteringen i bedriften din? Disse nøkkeltallene gir et raskt bilde av utviklingen:\nhvor mye avfall som genereres, hvor stor andel som gjenvinnes, og hvordan dette endrer seg over tid. Små\njusteringer kan gi store gevinster – her ser du hvor innsatsen gir størst effekt.\n\n\n\n\n  Total mengde avfall\n\n\n  205 446 kg\n    205 446 k fra samme periode året før\n\n\n\n\n  Totalt sortert avfall                                     Totalt usortert avfall\n\n  202 806 kg                                                2 640 kg\n    202 806 k fra samme periode året før                      2 640 k fra samme periode året før\n\n\n\n\n  Sorteringsgrad\n\n\n  98,7 %\n    98,7 % fra samme periode året før\n\n\n\n\n  Sorteringsgrad november 2024 - juli 2025\n\n    100%\n\n\n     75%\n\n\n     50%\n\n\n     25%\n\n\n       0%\n               nov '24    des '24     jan '25   feb '25   mar '25     apr '25        mai '25     jun '25   jul '25\n",
+      "char_count": 1054,
+      "line_count": 56
+    },
+    {
+      "page_number": 4,
+      "text": "                                                                           01.12.2024-30.07.2025\n\n\n\n\nDetaljer\nSorterte avfallstyper\n\n  Vare ruppe                  Vare                        Avfallsmen de     Avfallsmen de (andel)\n\n  1149 Bl. bearb. trevirke    114901 Trevirke - blandet      4 360,0 kg                     2,1 %\n\n  1221 Brunt papir            122106 Papp/papir                  60,0 kg                    0,0 %\n\n  1447 Rent magn. metall      149901 Komplekst jern           4 280,0 kg                    2,1 %\n\n  1599 Blandet EE-avfall      159903 Blandet EE-avfall           85,0 kg                    0,0 %\n                              - andre\n\n  1601 Rene masser            160107 Rene Gravemass-         43 150,0 kg                   21,3 %\n                              er\n\n  1603 Lett forur. masser     160301 Lett forurensede       106 750,0 kg                  52,6 %\n                              masser\n\n  1604 Forurensede mass-      160409 Urene masser           26 680,0 kg                    13,2 %\n  er\n\n  1604 Forurensede mass-      160408 Forurensede             6 460,0 kg                    3,2 %\n  er                          masser til behandling\n\n  1614 Forur. betong/tegl     160406 Forurenset be-               0,0 kg                    0,0 %\n                              tong med armering\n\n  1615 Gips                   161501 Gips                     9 747,0 kg                    4,8 %\n\n  1617 Mineralull             161703 Steinull isolasjon        360,0 kg                     0,2 %\n\n  1617 Mineralull             161701 Steinull/glassull          221,0 kg                    0,1 %\n                              isolasjon\n\n  1799 Bl. Plast Ikke embal   172901 Blandet plast             273,0 kg                     0,1 %\n\n  7155 Bromerte flamme-       71550032 Bromerte                380,0 kg                     0,2 %\n  hem.                        flammehemmere,\n                              Cont/sekk\n\n  7158 Klorp. Isolerglass     71580032 Isolerglass                0,0 kg                    0,0 %\n                              med klorparafiner\n\n  Total                                                    202 806,0 kg                  100,0 %\n\n\n\n\nUsortert avfallstyper\n\n  Vare ruppe                  Vare                        Avfallsmen de     Avfallsmen de (andel)\n\n  9912 Bl. næringsavfall      119901 Restavfall               2 640,0 kg                 100,0 %\n\n  Total                                                       2 640,0 kg                 100,0 %\n",
+      "char_count": 2519,
+      "line_count": 63
+    },
+    {
+      "page_number": 5,
+      "text": "                                                           01.12.2024-30.07.2025\n\n\nOppsummering for perioden\n\n                                           Avfallsmen de    Avfallsmen de (andel)\n\n  Totalt sortert avfall (sorteringsgrad)    202 806,0 kg                  98,7 %\n\n  Totalt usortert avfall                      2 640,0 kg                    1,3 %\n\n  Total                                     205 446,0 kg                 100,0 %\n",
+      "char_count": 439,
+      "line_count": 13
+    }
+  ],
+  "text": "Avfallsrapport\n\n\n\n\nRapporteringsperiode\n01.12.2024-30.07.2025\n\n\n                        For kunde/prosjektansvarlig\n                        Skape Entreprenør As\n                        ProRiv AS\n\fRapport hentet ut\n04.08.2025\n\nRapporteringsperiode\n01.12.2024-30.07.2025\n\nProsjektansvarlig/Kunde\n126049764 Skape Entreprenør As                         828680 ProRiv AS\n\nHenteplasser\nEL-Bil Skøyen Terrasse 1 Pnr 1818    EL-BIL Skøyen Terrasse 1 Pnr:        EL-BIL Skøyen Terrasse 1 Pnr:\nSkøyen terrasse 1, 0276              2321                                 2321\n                                     Skøyen terrasse 1, 0276              Skøyen terrasse 1, 0276\n\n\n\n\nBehandlet av leverandør\nLøvås Transport\nbekrefter å ha mottatt følgende avfall og håndtert dette etter gjeldende lovverk og konsesjoner\n\f                                                                                               01.12.2024-30.07.2025\n\n\n\n\nNøkkeltall\nHvilken retning går avfallshåndteringen i bedriften din? Disse nøkkeltallene gir et raskt bilde av utviklingen:\nhvor mye avfall som genereres, hvor stor andel som gjenvinnes, og hvordan dette endrer seg over tid. Små\njusteringer kan gi store gevinster – her ser du hvor innsatsen gir størst effekt.\n\n\n\n\n  Total mengde avfall\n\n\n  205 446 kg\n    205 446 k fra samme periode året før\n\n\n\n\n  Totalt sortert avfall                                     Totalt usortert avfall\n\n  202 806 kg                                                2 640 kg\n    202 806 k fra samme periode året før                      2 640 k fra samme periode året før\n\n\n\n\n  Sorteringsgrad\n\n\n  98,7 %\n    98,7 % fra samme periode året før\n\n\n\n\n  Sorteringsgrad november 2024 - juli 2025\n\n    100%\n\n\n     75%\n\n\n     50%\n\n\n     25%\n\n\n       0%\n               nov '24    des '24     jan '25   feb '25   mar '25     apr '25        mai '25     jun '25   jul '25\n\f                                                                           01.12.2024-30.07.2025\n\n\n\n\nDetaljer\nSorterte avfallstyper\n\n  Vare ruppe                  Vare                        Avfallsmen de     Avfallsmen de (andel)\n\n  1149 Bl. bearb. trevirke    114901 Trevirke - blandet      4 360,0 kg                     2,1 %\n\n  1221 Brunt papir            122106 Papp/papir                  60,0 kg                    0,0 %\n\n  1447 Rent magn. metall      149901 Komplekst jern           4 280,0 kg                    2,1 %\n\n  1599 Blandet EE-avfall      159903 Blandet EE-avfall           85,0 kg                    0,0 %\n                              - andre\n\n  1601 Rene masser            160107 Rene Gravemass-         43 150,0 kg                   21,3 %\n                              er\n\n  1603 Lett forur. masser     160301 Lett forurensede       106 750,0 kg                  52,6 %\n                              masser\n\n  1604 Forurensede mass-      160409 Urene masser           26 680,0 kg                    13,2 %\n  er\n\n  1604 Forurensede mass-      160408 Forurensede             6 460,0 kg                    3,2 %\n  er                          masser til behandling\n\n  1614 Forur. betong/tegl     160406 Forurenset be-               0,0 kg                    0,0 %\n                              tong med armering\n\n  1615 Gips                   161501 Gips                     9 747,0 kg                    4,8 %\n\n  1617 Mineralull             161703 Steinull isolasjon        360,0 kg                     0,2 %\n\n  1617 Mineralull             161701 Steinull/glassull          221,0 kg                    0,1 %\n                              isolasjon\n\n  1799 Bl. Plast Ikke embal   172901 Blandet plast             273,0 kg                     0,1 %\n\n  7155 Bromerte flamme-       71550032 Bromerte                380,0 kg                     0,2 %\n  hem.                        flammehemmere,\n                              Cont/sekk\n\n  7158 Klorp. Isolerglass     71580032 Isolerglass                0,0 kg                    0,0 %\n                              med klorparafiner\n\n  Total                                                    202 806,0 kg                  100,0 %\n\n\n\n\nUsortert avfallstyper\n\n  Vare ruppe                  Vare                        Avfallsmen de     Avfallsmen de (andel)\n\n  9912 Bl. næringsavfall      119901 Restavfall               2 640,0 kg                 100,0 %\n\n  Total                                                       2 640,0 kg                 100,0 %\n\f                                                           01.12.2024-30.07.2025\n\n\nOppsummering for perioden\n\n                                           Avfallsmen de    Avfallsmen de (andel)\n\n  Totalt sortert avfall (sorteringsgrad)    202 806,0 kg                  98,7 %\n\n  Totalt usortert avfall                      2 640,0 kg                    1,3 %\n\n  Total                                     205 446,0 kg                 100,0 %\n\f"
+}

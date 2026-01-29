@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.90.0",
+    "version": "2.97.0",
     "created": "2025-12-03",
-    "last_updated": "2026-01-26",
+    "last_updated": "2026-01-27",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 68
+    "database_phase": 75
   },
   "auth": {
     "enabled": true,
@@ -156,6 +156,13 @@
     "missing_document_count": 8,
     "themes": 7,
     "audiences": 5
+  },
+  "orret": {
+    "status": "not_started",
+    "content_file": "themes/orret.json",
+    "dashboard_page": "orret.html",
+    "research_partners": ["NIVA", "Oslomarka Fiskeadministrasjon"],
+    "species": "Salmo trutta"
   },
   "key_deliverables": {
     "energy_report": {

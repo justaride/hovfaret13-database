@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-01-21",
+    "content_classification": {
+      "type": "project_data",
+      "deliverable_id": null
+    }
+  },
+  "overview": {
+    "purpose": "Konsekvensutredning natur og miljø for tilbygg Hovfaret 13",
+    "key_findings": [],
+    "work_items": [
+      {
+        "id": "w1",
+        "task": "Engasjere biolog",
+        "status": "not_started",
+        "notes": ""
+      },
+      {
+        "id": "w2",
+        "task": "Gjennomgå skoletomten-dokumentasjon",
+        "status": "not_started",
+        "notes": ""
+      },
+      {
+        "id": "w3",
+        "task": "Kartlegge Hoffselva-data",
+        "status": "not_started",
+        "notes": ""
+      }
+    ]
+  },
+  "shadow_analysis": {
+    "status": "complete",
+    "diagrams": [],
+    "seasons": {
+      "spring": { "morning": null, "midday": null, "evening": null },
+      "summer": { "morning": null, "midday": null, "evening": null },
+      "autumn": { "morning": null, "midday": null, "evening": null },
+      "winter": { "morning": null, "midday": null, "evening": null }
+    },
+    "conclusion": "",
+    "neighbor_impact": []
+  },
+  "hoffselva": {
+    "status": "not_started",
+    "stream_info": {
+      "name": "Hoffselva",
+      "description": "",
+      "distance_to_building": null,
+      "water_quality": null
+    },
+    "trout_data": {
+      "species": "Sjøørret",
+      "population_status": "",
+      "spawning_areas": [],
+      "known_threats": []
+    },
+    "velforening_concerns": [],
+    "biologist": {
+      "status": "not_started",
+      "contact": null,
+      "scope": [
+        "Kartlegging av ørretbestand",
+        "Vurdering av påvirkning fra tilbygg",
+        "Anbefalte avbøtende tiltak"
+      ],
+      "findings": []
+    },
+    "mitigation_measures": []
+  },
+  "geotechnics": {
+    "status": "not_started",
+    "ground_conditions": {
+      "soil_type": "",
+      "bedrock_depth": null,
+      "groundwater_level": null
+    },
+    "landslide_risk": {
+      "current_assessment": "",
+      "risk_with_rehabilitation": "",
+      "risk_with_demolition": ""
+    },
+    "excavation_comparison": {
+      "rehabilitation": {
+        "depth": "",
+        "area": "",
+        "duration": ""
+      },
+      "demolition_rebuild": {
+        "depth": "",
+        "area": "",
+        "duration": ""
+      }
+    }
+  },
+  "comparison": {
+    "factors": [
+      {
+        "id": "co2",
+        "name": "CO₂-utslipp",
+        "rehabilitation": {
+          "value": "48% besparelse",
+          "details": "Bevaring av eksisterende struktur"
+        },
+        "demolition_rebuild": {
+          "value": "Fullt nybygg-utslipp",
+          "details": "Riving + nybygg med nye materialer"
+        }
+      },
+      {
+        "id": "materials",
+        "name": "Materialgjenbruk",
+        "rehabilitation": {
+          "value": "80% gjenbruk",
+          "details": "Bærestruktur, fasade delvis bevart"
+        },
+        "demolition_rebuild": {
+          "value": "0% gjenbruk",
+          "details": "Alt rives og erstattes"
+        }
+      },
+      {
+        "id": "construction_phase",
+        "name": "Anleggsfase",
+        "rehabilitation": {
+          "value": "",
+          "details": "Mindre støy, støv, trafikk"
+        },
+        "demolition_rebuild": {
+          "value": "",
+          "details": "Omfattende riving, lengre byggetid"
+        }
+      },
+      {
+        "id": "stream_impact",
+        "name": "Bekk-påvirkning",
+        "rehabilitation": {
+          "value": "",
+          "details": "Minimalt inngrep nær bekken"
+        },
+        "demolition_rebuild": {
+          "value": "",
+          "details": "Graving, peling, lengre eksponering"
+        }
+      },
+      {
+        "id": "geotechnics",
+        "name": "Geoteknikk",
+        "rehabilitation": {
+          "value": "",
+          "details": "Eksisterende fundament beholdes"
+        },
+        "demolition_rebuild": {
+          "value": "",
+          "details": "Nytt fundament, utglidningsrisiko"
+        }
+      },
+      {
+        "id": "setback",
+        "name": "Avstandskrav",
+        "rehabilitation": {
+          "value": "Eksisterende plassering",
+          "details": "Bygget står allerede der det står"
+        },
+        "demolition_rebuild": {
+          "value": "Ny plassering påkrevd",
+          "details": "Større avstand til bekk = større fotavtrykk"
+        }
+      }
+    ]
+  },
+  "sources": {
+    "school_site_documents": [],
+    "external_sources": [
+      {
+        "id": "s1",
+        "title": "Vannforskriften",
+        "url": "https://lovdata.no/dokument/SF/forskrift/2006-12-15-1446",
+        "relevance": "Krav til vannkvalitet og økologisk tilstand"
+      }
+    ],
+    "contact_log": []
+  }
+}
