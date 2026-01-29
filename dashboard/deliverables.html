@@ -691,41 +691,33 @@
   </head>
   <body>
     <div class="app-container">
-      <!-- Header -->
-      <header class="app-header">
-        <div class="header-left">
-          <a href="index.html" class="back-link">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Dashboard
-          </a>
-          <h1 class="page-title">Leveranser</h1>
-        </div>
-        <div class="header-stats">
-          <div class="stat">
-            <div class="stat-value" id="stat-total">-</div>
-            <div class="stat-label">Totalt</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value completed" id="stat-completed">-</div>
-            <div class="stat-label">Fullført</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value in-progress" id="stat-progress">-</div>
-            <div class="stat-label">Pågår</div>
-          </div>
-        </div>
-      </header>
-
       <!-- Main Content -->
+      <div
+        class="header-stats"
+        style="
+          background: var(--bg-card);
+          border-bottom: 1px solid var(--border-light);
+          padding: var(--space-3) var(--space-6);
+          display: flex;
+          justify-content: flex-end;
+          gap: var(--space-6);
+          flex-shrink: 0;
+        "
+      >
+        <div class="stat">
+          <div class="stat-value" id="stat-total">-</div>
+          <div class="stat-label">Totalt</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value completed" id="stat-completed">-</div>
+          <div class="stat-label">Fullført</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value in-progress" id="stat-progress">-</div>
+          <div class="stat-label">Pågår</div>
+        </div>
+      </div>
+
       <main class="main-content">
         <!-- Left Panel -->
         <aside class="list-panel">
