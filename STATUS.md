@@ -1,40 +1,40 @@
 # Project Status
 
-**Last Updated:** 2026-01-27
-**Dashboard Version:** 2.97
-**Status:** ✅ Phase 75 COMPLETE - Navigasjonsforenkling
+**Last Updated:** 2026-01-29
+**Dashboard Version:** 2.98
+**Status:** ✅ Phase 76 COMPLETE - Professorhenvendelse & Dashboard-fiks
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
+**Vercel:** https://hovfaret13-database.vercel.app
 **Auth Password:** `h13-skøyen-2025`
 
 ---
 
 ## Current Phase
 
-**Phase 75: Navigasjonsforenkling ✅ COMPLETE**
+**Phase 76: Professorhenvendelse & Dashboard-fiks ✅ COMPLETE**
 
-Forenklet navigasjon med "Index som Hub"-modell. index.html er navigasjons-hub, innholdssider har minimal header med tilbake-lenke.
-
-### Ny navigasjonsmodell
-
-| Kontekst      | Navigasjon                           |
-| ------------- | ------------------------------------ |
-| index.html    | Tab-header + sidebar + preview (hub) |
-| Innholdssider | Minimal header: [← Tab] Sidetittel   |
+Opprettet professorhenvendelse (fagvurdering ørret/skygge) som markdown og dashboard-side. Fikset kritisk ContentHeader-bug som ødela stats på 8 sider.
 
 ### Leveranser
 
-| Fil                                      | Formål                              |
-| ---------------------------------------- | ----------------------------------- |
-| `dashboard/components/content-header.js` | Ny minimal header for innholdssider |
-| `dashboard/css/tabs.css`                 | Oppdatert med content-header stiler |
-| Alle 43 innholdssider                    | Byttet til ContentHeader.inject()   |
+| Fil                                        | Formål                                |
+| ------------------------------------------ | ------------------------------------- |
+| `documents/professor-henvendelse-orret.md` | E-post-klar henvendelse til professor |
+| `dashboard/professor-henvendelse.html`     | Dashboard-side med formelt layout     |
 
-### Endringer
+### Bug-fiks: ContentHeader ødela stats
 
-- Erstattet TabHeader med ContentHeader på alle innholdssider
-- Fjerner automatisk gamle nav-elementer (.app-header, .back-link, .nav-bar)
-- Oppdatert header-høyde fra 60px til 48px
-- Fikset 6 sider med manglende pageId
+`ContentHeader.inject()` fjernet `.app-header` fra DOM, som ødela stat-elementer på 8 sider (deliverables, timeline, stakeholders, meetings, documents, scenarios, solstudie, timelines). Fikset ved å flytte stats til frittstående div.
+
+### Alle data-fetch stier verifisert på Vercel
+
+7 JSON-endepunkter testet og bekreftet fungerende.
+
+---
+
+**Phase 75: Navigasjonsforenkling ✅ COMPLETE**
+
+Forenklet navigasjon med "Index som Hub"-modell. ContentHeader på alle innholdssider.
 
 ---
 

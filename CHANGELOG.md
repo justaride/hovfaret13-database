@@ -2,6 +2,71 @@
 
 All notable changes to this project database.
 
+## [2.98.0] - 2026-01-29
+
+### Phase 76: Professorhenvendelse & Dashboard-fiks
+
+**Status:** ✅ COMPLETE
+
+#### Professorhenvendelse — fagvurdering ørret/skygge
+
+Opprettet formelt henvendelsesdokument til ferskvannsbiolog-professor for fagvurdering av bygningsskygge-effekt på sjøørret i Hoffselva.
+
+**Nye filer:**
+
+| Fil                                        | Formål                                    |
+| ------------------------------------------ | ----------------------------------------- |
+| `documents/professor-henvendelse-orret.md` | Markdown for copy-paste til e-post        |
+| `dashboard/professor-henvendelse.html`     | Dashboard-side med formelt dokumentlayout |
+
+**Dokumentinnhold (7 seksjoner):**
+
+1. Innledning og formål
+2. Prosjektbeskrivelse (bygningsdata fra project.json)
+3. Geografisk kontekst — Hoffselva (data fra orret.json)
+4. Solstudie — 4 vedlagte bilder med ærlig begrensning
+5. Foreløpig vurdering (temperatur, oksygen, mat, habitat)
+6. 7 spesifikke spørsmål til professor
+7. Vedlegg og offentlige lenker
+
+**Dashboard-side features:**
+
+- Serif-font (Crimson Pro), A4-layout
+- Fargekodede vurderingsbokser (grønn/rød/gul)
+- Inline solstudiebilder i 2x2 grid
+- Skriv ut / PDF-knapp
+- Kopier til e-post-knapp
+
+#### ContentHeader-fiks — 8 sider
+
+Kritisk bug: `ContentHeader.inject()` fjernet `.app-header` fra DOM, som ødela stat-tellere (`#stat-total` etc.) før JavaScript kunne populere dem. Sidene viste "Feil ved lasting" i stedet for innhold.
+
+**Fiks:** Flyttet stats ut av `.app-header` til frittstående `<div>` som ContentHeader ikke berører.
+
+| Side              | Stats reddet                          |
+| ----------------- | ------------------------------------- |
+| deliverables.html | Totalt, Fullført, Pågår               |
+| timeline.html     | Hendelser, Strategiske, Koblede møter |
+| stakeholders.html | Personer, Organisasjoner, Kategorier  |
+| meetings.html     | Totalt, Med rapporter, Deltakere      |
+| documents.html    | Totalt, Kategorier                    |
+| scenarios.html    | Scenarier, CO₂ Spart                  |
+| solstudie.html    | Datoer, Frames, Hastighet             |
+| timelines.html    | Header (ingen stats)                  |
+
+#### Dashboard-stifiks
+
+| Fil                                 | Endring                     |
+| ----------------------------------- | --------------------------- |
+| `miljoeargumentasjon-dokument.html` | Rettet ContentHeader pageId |
+| `miljoeargumentasjon-teknisk.html`  | Rettet JSON fetch-sti       |
+
+#### Registrering
+
+- `professor-henvendelse` lagt til i `page-config.js` under Analyser
+
+---
+
 ## [2.97.0] - 2026-01-27
 
 ### Phase 75: Navigasjonsforenkling
