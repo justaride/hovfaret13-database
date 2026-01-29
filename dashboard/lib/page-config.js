@@ -202,6 +202,12 @@ const PAGE_CONFIG = {
               href: "orret.html",
             },
             {
+              id: "professor-henvendelse",
+              name: "Professorhenvendelse",
+              desc: "Fagvurdering ørret/skygge",
+              href: "professor-henvendelse.html",
+            },
+            {
               id: "scenarios",
               name: "Scenarier",
               desc: "Sammenligning",

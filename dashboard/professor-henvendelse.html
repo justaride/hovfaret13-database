@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henvendelse til professor — Ørret og skygge - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/tabs.css" />
+    <style>
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          padding: 0;
+          font-size: 11pt;
+        }
+        .document {
+          box-shadow: none;
+          max-width: 100%;
+        }
+        .page-break {
+          page-break-before: always;
+        }
+        h2 {
+          page-break-after: avoid;
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --text-body: #1a1a1a;
+        --text-secondary: #4a4a4a;
+        --text-muted: #6b7280;
+        --border: #d1d5db;
+        --bg-highlight: #f9fafb;
+        --accent: #1e40af;
+        --success: #166534;
+        --warning: #92400e;
+        --danger: #991b1b;
+      }
+
+      body {
+        font-family: "Crimson Pro", Georgia, serif;
+        background: #e5e7eb;
+        color: var(--text-body);
+        line-height: 1.7;
+        font-size: 16px;
+      }
+
+      .toolbar {
+        position: fixed;
+        top: 48px;
+        right: 2rem;
+        z-index: 100;
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .toolbar button {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        font-family: "Inter", sans-serif;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .toolbar button:hover {
+        background: var(--bg-highlight);
+      }
+
+      .document {
+        max-width: 850px;
+        margin: 2rem auto;
+        background: white;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        padding: 3rem 4rem;
+      }
+
+      .document-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid var(--text-body);
+      }
+
+      .document-header .org {
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+      }
+
+      .document-header h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.01em;
+      }
+
+      .document-header .subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+
+      .document-header .meta {
+        margin-top: 1.5rem;
+        font-family: "Inter", sans-serif;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .meta-grid {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.25rem 1rem;
+        text-align: left;
+        max-width: 400px;
+        margin: 1.5rem auto 0;
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+      }
+
+      .meta-grid dt {
+        color: var(--text-muted);
+        font-weight: 500;
+      }
+
+      .meta-grid dd {
+        color: var(--text-secondary);
+      }
+
+      .section {
+        margin-bottom: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-body);
+      }
+
+      h2 .section-number {
+        color: var(--text-muted);
+        font-weight: 400;
+        margin-right: 0.5rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 1.5rem 0 0.75rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+        font-style: italic;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 3px solid var(--border);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+      }
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border: 1px solid var(--border);
+      }
+
+      th {
+        background: var(--bg-highlight);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      ul,
+      ol {
+        margin: 1rem 0 1rem 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      .highlight-box {
+        background: var(--bg-highlight);
+        border: 1px solid var(--border);
+        padding: 1.25rem 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .highlight-box h4 {
+        margin: 0 0 0.5rem;
+        font-family: "Inter", sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .highlight-box.success {
+        background: #f0fdf4;
+        border-color: #86efac;
+      }
+
+      .highlight-box.success h4 {
+        color: var(--success);
+      }
+
+      .highlight-box.warning {
+        background: #fffbeb;
+        border-color: #fcd34d;
+      }
+
+      .highlight-box.warning h4 {
+        color: var(--warning);
+      }
+
+      .highlight-box.neutral {
+        background: #f0f9ff;
+        border-color: #93c5fd;
+      }
+
+      .highlight-box.neutral h4 {
+        color: var(--accent);
+      }
+
+      .highlight-box.danger {
+        background: #fef2f2;
+        border-color: #fca5a5;
+      }
+
+      .highlight-box.danger h4 {
+        color: var(--danger);
+      }
+
+      .question-list {
+        counter-reset: question;
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+      }
+
+      .question-list li {
+        counter-increment: question;
+        padding: 1rem 1.25rem;
+        margin-bottom: 0.75rem;
+        background: var(--bg-highlight);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+      }
+
+      .question-list li::before {
+        content: counter(question) ".";
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        color: var(--accent);
+        margin-right: 0.5rem;
+      }
+
+      .question-list li strong {
+        color: var(--accent);
+      }
+
+      .solstudie-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .solstudie-grid img {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+      }
+
+      .solstudie-grid .caption {
+        font-family: "Inter", sans-serif;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-top: 0.25rem;
+        text-align: center;
+      }
+
+      .sources-list {
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+      }
+
+      .sources-list a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .sources-list a:hover {
+        text-decoration: underline;
+      }
+
+      .copy-btn {
+        background: var(--accent);
+        color: white;
+        border: none;
+      }
+
+      .copy-btn:hover {
+        background: #1e3a8a;
+      }
+
+      @media (max-width: 900px) {
+        .document {
+          padding: 2rem;
+          margin: 1rem;
+        }
+        .solstudie-grid {
+          grid-template-columns: 1fr;
+        }
+        .toolbar {
+          position: static;
+          margin: 1rem;
+          justify-content: center;
+        }
+      }
+    </style>
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("professor-henvendelse");
+    </script>
+
+    <div class="toolbar no-print">
+      <button onclick="window.print()">Skriv ut / PDF</button>
+      <button class="copy-btn" onclick="copyToClipboard()">
+        Kopier til e-post
+      </button>
+    </div>
+
+    <article class="document" id="document">
+      <header class="document-header">
+        <div class="org">Hovfaret 13 Transformasjonsprosjekt</div>
+        <h1>Henvendelse om fagvurdering</h1>
+        <p class="subtitle">Sjøørret og skyggeeffekt ved Hovfaret 13</p>
+        <dl class="meta-grid">
+          <dt>Til:</dt>
+          <dd>[Professorens navn], Institutt for [relevant institutt]</dd>
+          <dt>Fra:</dt>
+          <dd>Gabriel Boen, Urbania Eiendom AS</dd>
+          <dt>Emne:</dt>
+          <dd>Påvirkning av bygningsskygge på sjøørret i Hoffselva</dd>
+        </dl>
+      </header>
+
+      <!-- SECTION 1 -->
+      <section class="section" id="section-1">
+        <h2><span class="section-number">1.</span> Innledning og formål</h2>
+
+        <p>Kjære professor [etternavn],</p>
+
+        <p>
+          Jeg tar kontakt fordi vi søker en ærlig, uavhengig fagvurdering av
+          hvordan et planlagt påbygg på et eksisterende kontorbygg langs
+          Hoffselva kan påvirke sjøørretbestanden i elva.
+        </p>
+
+        <p>
+          Vi ønsker ikke en bestilt konklusjon. Det vi ber om er en skriftlig
+          vurdering — gjerne kort og direkte — av de økologiske konsekvensene vi
+          beskriver nedenfor. Dersom du vurderer at det ikke er grunnlag for
+          bekymring, er det like verdifullt som det motsatte.
+        </p>
+
+        <p>
+          Bakgrunnen er at vi forbereder en bruksendringssøknad for bygget, og
+          ønsker å møte naboinnspill og regulatoriske krav med faglig
+          kvalifiserte svar, ikke med antagelser.
+        </p>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section class="section" id="section-2">
+        <h2><span class="section-number">2.</span> Prosjektbeskrivelse</h2>
+
+        <p>
+          <strong>Hovfaret 13</strong> er et kontorbygg fra 1989, beliggende på
+          Skøyen i Oslo. Bygget er i betong med forspente hulldekker og har i
+          dag 5 etasjer.
+        </p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td><strong>Adresse</strong></td>
+              <td>Hovfaret 13, 0275 Oslo</td>
+            </tr>
+            <tr>
+              <td><strong>Koordinater</strong></td>
+              <td>59.9207°N, 10.6778°E</td>
+            </tr>
+            <tr>
+              <td><strong>Byggeår</strong></td>
+              <td>1989</td>
+            </tr>
+            <tr>
+              <td><strong>Konstruksjon</strong></td>
+              <td>Bærende betongkonstruksjon</td>
+            </tr>
+            <tr>
+              <td><strong>Etasjer i dag</strong></td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td><strong>Planlagt totalt</strong></td>
+              <td>8 (påbygg med 3 etasjer)</td>
+            </tr>
+            <tr>
+              <td><strong>Areal</strong></td>
+              <td>6 100 m² BTA / 5 800 m² BRA</td>
+            </tr>
+            <tr>
+              <td><strong>Planlagt bruk</strong></td>
+              <td>Omsorg+ (73 eldreboliger)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>Forslaget</strong> er å rehabilitere eksisterende bygg og
+          bygge på 3 etasjer i tre/lettere konstruksjon. Byggets fotavtrykk
+          endres ikke — kun høyden øker. Fundamentene ble opprinnelig
+          dimensjonert med reservekapasitet for dette.
+        </p>
+
+        <p>
+          <strong>Alternativet</strong> i gjeldende områdeplan (vedtatt
+          september 2023) er riving av bygget og nybygg med 10 meters
+          tilbaketrekking fra elva. Vi argumenterer for at rehabilitering er det
+          bedre alternativet — bl.a. med 48% lavere CO₂-utslipp (2 794 vs. 5 343
+          tonn over 50 år, beregnet av Vill Energi AS iht. NS 3720:2018).
+        </p>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section class="section" id="section-3">
+        <h2>
+          <span class="section-number">3.</span> Geografisk kontekst — bygget og
+          Hoffselva
+        </h2>
+
+        <p>
+          Hovfaret 13 ligger direkte langs Hoffselva. Elva passerer byggets
+          nordvestside.
+        </p>
+
+        <h3>Dokumentert status for Hoffselva ved denne strekningen:</h3>
+        <ul>
+          <li>
+            <strong>Anadromt vassdrag</strong> med sjøørretbestand og noe laks
+            (Norconsult, naturmiljøvurdering for Hoff Skole, dok. 13)
+          </li>
+          <li>
+            <strong>Gråhegre</strong> (Ardea cinerea) observeres jaktende ved
+            kulvertutløpet (Hoffvassdragets venner, 11.11.2025)
+          </li>
+          <li>
+            <strong>Kantvegetasjon</strong> dominert av fremmedarter:
+            kanadagullris og kornell (Norconsult, dok. 13)
+          </li>
+          <li>
+            <strong>Økologisk tilstand</strong> klassifisert som «moderat» til
+            «dårlig» (Vann-nett, 2018)
+          </li>
+          <li>
+            <strong>Sjøørretbestanden</strong> har tatt seg opp etter akutt
+            forurensning i 2009 (Fylkesmannen/UiO, 2016)
+          </li>
+        </ul>
+
+        <div class="highlight-box neutral">
+          <h4>Naboinnspill</h4>
+          <p style="margin-bottom: 0">
+            Hoffvassdragets venner har i innspill datert 11.11.2025 hevdet at
+            «denne strekningen av elva er kjent for at ørreten går opp her og
+            gyter om høsten», og at økt byggehøyde vil «kaste sterkere skygge
+            over elveløpet». Vi tar dette innspillet på alvor og ønsker en
+            faglig kvalifisert vurdering av den reelle påvirkningen.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 4 -->
+      <section class="section page-break" id="section-4">
+        <h2><span class="section-number">4.</span> Solstudie — skyggedata</h2>
+
+        <p>
+          R21 Arkitekter har utarbeidet solstudier som viser skyggeforhold før
+          og etter påbygg. Studiene viser fire paneler: eksisterende/planlagt,
+          med og uten trær.
+        </p>
+
+        <h3>Vedlagte solstudiebilder</h3>
+
+        <div class="solstudie-grid">
+          <div>
+            <img
+              src="assets/solstudie/frames/01mai-1800.png"
+              alt="Solstudie 1. mai kl. 18:00"
+            />
+            <div class="caption">1. mai — kl. 18:00</div>
+          </div>
+          <div>
+            <img
+              src="assets/solstudie/frames/01mai-2100.png"
+              alt="Solstudie 1. mai kl. 21:00"
+            />
+            <div class="caption">1. mai — kl. 21:00</div>
+          </div>
+          <div>
+            <img
+              src="assets/solstudie/frames/20juni-1800.png"
+              alt="Solstudie 20. juni kl. 18:00"
+            />
+            <div class="caption">20. juni — kl. 18:00</div>
+          </div>
+          <div>
+            <img
+              src="assets/solstudie/frames/20juni-2100.png"
+              alt="Solstudie 20. juni kl. 21:00"
+            />
+            <div class="caption">20. juni — kl. 21:00</div>
+          </div>
+        </div>
+
+        <div class="highlight-box warning">
+          <h4>Ærlig begrensning</h4>
+          <p style="margin-bottom: 0">
+            Vi har foreløpig kun digitalisert kveldstimer (kl. 18–23) for 1. mai
+            og 20. juni. Solstudien dekker også morgen- og middagstimer, men
+            disse er ikke lagt inn ennå. Vi kan ettersende fullstendig tidsserie
+            dersom det er nyttig for vurderingen.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 5 -->
+      <section class="section" id="section-5">
+        <h2><span class="section-number">5.</span> Vår foreløpige vurdering</h2>
+
+        <p class="lead">
+          Vi presenterer dette som utgangspunkt for diskusjon, ikke som en
+          konklusjon.
+        </p>
+
+        <div class="highlight-box success">
+          <h4>Temperaturregulering — potensielt positivt</h4>
+          <p style="margin-bottom: 0">
+            Skygge fra bygninger reduserer direkte solinnstråling og kan bidra
+            til å holde vanntemperaturen nede. Ørret trives best ved ca. 13°C og
+            stresses ved temperaturer over 20°C. Usjaterte elveløp kan bli
+            opptil 5–11°C varmere enn sjaterte (USDA National Agroforestry
+            Center). Temperaturer over 23–25°C regnes som dødelige for laksefisk
+            (WA Dept of Fish & Wildlife).
+          </p>
+        </div>
+
+        <div class="highlight-box success">
+          <h4>Oksygennivå — potensielt positivt</h4>
+          <p style="margin-bottom: 0">
+            Kjøligere vann holder på mer oppløst oksygen, som er essensielt for
+            fisk (USGS Water Science School).
+          </p>
+        </div>
+
+        <div class="highlight-box danger">
+          <h4>Matproduksjon — potensielt negativt</h4>
+          <p style="margin-bottom: 0">
+            Bygningsskygge gir ingen tilførsel av insekter eller løvfall.
+            Naturlig kantvegetasjon er en viktig kilde til organisk materiale
+            som driver det akvatiske næringsnettet (USDA).
+          </p>
+        </div>
+
+        <div class="highlight-box warning">
+          <h4>Skjul og habitat — nøytralt/negativt</h4>
+          <p style="margin-bottom: 0">
+            Bygg gir skygge, men ikke fysisk skjul i form av røtter, kvister
+            eller nedfallstrær i elva. Naturlig kantvegetasjon stabiliserer også
+            bredder og reduserer erosjon.
+          </p>
+        </div>
+
+        <p>
+          Vi erkjenner at bygningsskygge ikke er en erstatning for de økologiske
+          funksjonene kantvegetasjon gir, og vi ønsker en fagpersons vurdering
+          av den samlede effekten.
+        </p>
+      </section>
+
+      <!-- SECTION 6 -->
+      <section class="section page-break" id="section-6">
+        <h2><span class="section-number">6.</span> Spesifikke spørsmål</h2>
+
+        <p>Vi ber om din vurdering av følgende:</p>
+
+        <ol class="question-list">
+          <li>
+            <strong>Temperatur:</strong> Hva er den sannsynlige nettoeffekten av
+            økt bygningsskygge på vanntemperaturen i Hoffselva ved denne
+            strekningen? Er dette relevant gitt elvas størrelse og eksisterende
+            skyggelegging?
+          </li>
+          <li>
+            <strong>Gyting:</strong> Kan økt bygningsskygge påvirke
+            gyteforholdene for sjøørret? Gyting skjer om høsten, når solvinkelen
+            allerede er lav — har skygge fra et påbygg reell betydning i denne
+            perioden?
+          </li>
+          <li>
+            <strong>Næringsgrunnlag:</strong> Vil redusert lysinnstråling i
+            elvepartiet påvirke primærproduksjonen (alger, biofilm) som grunnlag
+            for næringskjeden?
+          </li>
+          <li>
+            <strong>Oppveksthabitat:</strong> Hva betyr skygge vs. fysisk
+            habitat for ungfisk (parr)? Er den ene faktoren viktigere enn den
+            andre i et urbanisert vassdrag som Hoffselva?
+          </li>
+          <li>
+            <strong>Kompenserende tiltak:</strong> Vi har vurdert følgende
+            tiltak og ønsker din vurdering av relevans og prioritering:
+            <ul style="margin-top: 0.5rem">
+              <li>Utlegging av gytegrus</li>
+              <li>
+                Habitatforbedring med stein og stokker (skjul, strømvariasjon)
+              </li>
+              <li>Reetablering av stedegen kantvegetasjon</li>
+              <li>Fjerning av fremmedarter (kanadagullris, kornell)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Samlet vurdering:</strong> Hvordan vurderer du
+            rehabilitering med påbygg (ingen endring i fotavtrykk, kun økt
+            høyde) sammenlignet med riving og nybygg — med tanke på
+            sedimentavrenning, tap av kantvegetasjon, og en anleggsfase på 24–30
+            måneder rett ved elva?
+          </li>
+          <li>
+            <strong>Videre kartlegging:</strong> Er det behov for
+            feltundersøkelser (elfiske, gytegroptelling, vanntemperaturmåling)
+            for å gi en kvalifisert vurdering, eller holder eksisterende data
+            fra Norconsult og øvrige kilder?
+          </li>
+        </ol>
+      </section>
+
+      <!-- SECTION 7 -->
+      <section class="section" id="section-7">
+        <h2><span class="section-number">7.</span> Vedlegg og ressurser</h2>
+
+        <h3>Offentlig tilgjengelige kilder</h3>
+        <div class="sources-list">
+          <table>
+            <thead>
+              <tr>
+                <th>Kilde</th>
+                <th>Lenke</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Google Maps (byggets posisjon)</td>
+                <td>
+                  <a
+                    href="https://www.google.com/maps/@59.9207,10.6778,18z"
+                    target="_blank"
+                    >google.com/maps</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Naturbase (Miljødirektoratet)</td>
+                <td>
+                  <a href="https://kart.naturbase.no/" target="_blank"
+                    >kart.naturbase.no</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Vann-nett (NVE)</td>
+                <td>
+                  <a href="https://vann-nett.no/portal/" target="_blank"
+                    >vann-nett.no</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Artskart (Artsdatabanken)</td>
+                <td>
+                  <a href="https://artskart.artsdatabanken.no/" target="_blank"
+                    >artskart.artsdatabanken.no</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>OFA (Oslo Fiskeadministrasjon)</td>
+                <td>
+                  <a href="https://www.ofa.no/" target="_blank">ofa.no</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Vannforskriften</td>
+                <td>
+                  <a
+                    href="https://lovdata.no/dokument/SF/forskrift/2006-12-15-1446"
+                    target="_blank"
+                    >lovdata.no</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Tilgjengelig på forespørsel</h3>
+        <ul>
+          <li>
+            Norconsult naturmiljøvurdering (13_Naturmiljoe.pdf) — direkte
+            relevant nabotomt (Hoff Skole)
+          </li>
+          <li>Full solstudie med alle tidsserier (R21 Arkitekter)</li>
+          <li>Klimagassberegninger (Vill Energi AS, 2025)</li>
+          <li>Bærekraftsrapport (Natural State AS, 2025)</li>
+        </ul>
+      </section>
+
+      <!-- AVSLUTNING -->
+      <section class="section" id="section-closing">
+        <h2>Avslutning</h2>
+
+        <p>
+          Vi setter stor pris på om du har anledning til å vurdere dette. Vi er
+          fleksible på format — en kort skriftlig vurdering er tilstrekkelig,
+          men vi stiller gjerne opp til et møte, en befaring langs elva, eller
+          kan sende ytterligere materialer etter behov.
+        </p>
+
+        <p>
+          Vi forstår at en slik vurdering kan ha et honorar tilknyttet, og ber
+          deg gjerne oppgi betingelser.
+        </p>
+
+        <p>Med vennlig hilsen,</p>
+
+        <p>
+          <strong>Gabriel Boen</strong><br />
+          Urbania Eiendom AS<br />
+          Hovfaret 13, 0275 Oslo<br />
+          [telefonnummer]<br />
+          [e-postadresse]
+        </p>
+      </section>
+    </article>
+
+    <script>
+      function copyToClipboard() {
+        const doc = document.getElementById("document");
+        const range = document.createRange();
+        range.selectNodeContents(doc);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand("copy");
+        selection.removeAllRanges();
+
+        const btn = document.querySelector(".copy-btn");
+        const original = btn.textContent;
+        btn.textContent = "Kopiert!";
+        setTimeout(() => {
+          btn.textContent = original;
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
