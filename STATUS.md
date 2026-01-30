@@ -1,40 +1,59 @@
 # Project Status
 
-**Last Updated:** 2026-01-29
-**Dashboard Version:** 2.99
-**Status:** Phase 77 COMPLETE - Naturpositivitet & Naturkartlegging
+**Last Updated:** 2026-01-30
+**Dashboard Version:** 3.00
+**Status:** Phase 78 COMPLETE - Upload 30.01 Integration
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 **Vercel:** https://hovfaret13-database.vercel.app
 **Auth Password:** `h13-skøyen-2025`
 
 ---
 
+## Current Metrics
+
+| Data            | Count                              |
+| --------------- | ---------------------------------- |
+| Meetings        | 62                                 |
+| Documents       | 276                                |
+| People          | 27                                 |
+| Organizations   | 19                                 |
+| Deliverables    | 37                                 |
+| Timeline events | 34 (10 strategic + 24 operational) |
+| Dashboard pages | 39                                 |
+
+---
+
 ## Current Phase
 
-**Phase 77: Naturpositivitet & Naturkartlegging COMPLETE**
+**Phase 78: Upload 30.01 — Dialogmøte #2, Professorhenvendelse & Nabomerknader COMPLETE**
 
-Integrert innhold fra Eirik Obrestad / Natural State PDF. Ny temafil og dashboardside med Nature Positive rammeverk, NiN-kartlegging, fremmedarter, biodiversitetstiltak og sirkulaere verdikjeder.
+Integrert 9 filer fra upload 30.01.2026. Tre innholdsområder:
+
+1. **Dialogmøte #2** (29.01.2026) — Nabomøte med Hoffsbyen Hageby & Hoffsgrenda (~28 deltakere). R21 presenterte sol/skyggediagrammer.
+2. **Professorhenvendelse** — Formell henvendelse til Prof. Asbjørn Vøllestad (UiO) om fagvurdering av skyggeeffekt på sjøørret.
+3. **Nabomerknad** — Merknad fra Sellevold/Fosli (Damliveien 2) mottatt via Byggesaksrådgivning AS.
+
+### Aktive oppfølgingspunkter
+
+- **Professor Vøllestad**: Avventer svar på fagvurdering (sendt 2026-01-29)
+- **Nabomerknad Sellevold/Fosli**: Mottatt, skal behandles
 
 ### Leveranser
 
-| Fil                                 | Formal                                           |
-| ----------------------------------- | ------------------------------------------------ |
-| `data/themes/naturpositivitet.json` | Temafil: NiN, fremmedarter, tiltak, sirkularitet |
-| `dashboard/naturpositivitet.html`   | Dashboard-side med 6 faner                       |
+| Endring            | Detalj                                                     |
+| ------------------ | ---------------------------------------------------------- |
+| +1 møte            | Dialogmøte #2                                              |
+| +5 dokumenter      | Presentasjon, plantegning, artikkel, fagvurdering, merknad |
+| +4 personer        | Vøllestad (UiO), Sellevold, Fosli, Tysnes                  |
+| +3 organisasjoner  | UiO, Hoffsgrenda, Hoffsbyen Hageby                         |
+| +2 timeline events | o_023, o_024                                               |
+| ørret-status       | not_started → in_progress                                  |
 
-### Nytt innhold
+---
 
-- Gravmyrt og kjempebjornekjeks (nye fremmedarter)
-- NiN-kartlegging: T37, T40, T4-C18
-- Spissnutefrosk ved Hoffsdammen
-- Froskedam + fiskesperre (biotoptiltak)
-- Regional eng (NIBIO/KVANN)
-- Nature Positive by 2030 rammeverk
-- Sirkulaere verdikjeder
+**Phase 77: Naturpositivitet & Naturkartlegging COMPLETE**
 
-### Oppdaterte filer
-
-orret.json, natur-miljo.json, config.json, page-config.js
+Integrert innhold fra Eirik Obrestad / Natural State PDF. Ny temafil og dashboardside.
 
 ---
 

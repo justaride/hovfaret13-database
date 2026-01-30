@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "version": "1.0",
-    "last_updated": "2025-01-21",
+    "version": "1.1",
+    "last_updated": "2026-01-30",
     "content_classification": {
       "type": "project_data",
       "deliverable_id": null
@@ -18,8 +18,8 @@
       {
         "id": "w1",
         "task": "Engasjere biolog",
-        "status": "not_started",
-        "notes": ""
+        "status": "in_progress",
+        "notes": "Henvendelse sendt til Prof. Asbjørn Vøllestad (UiO) 2026-01-29. Avventer svar."
       },
       {
         "id": "w2",
@@ -69,8 +69,13 @@
     },
     "velforening_concerns": [],
     "biologist": {
-      "status": "not_started",
-      "contact": null,
+      "status": "in_progress",
+      "contact": {
+        "name": "Prof. Asbjørn Vøllestad",
+        "institution": "Universitetet i Oslo (UiO)",
+        "date_contacted": "2026-01-29",
+        "status": "awaiting_response"
+      },
       "scope": [
         "Kartlegging av ørretbestand",
         "Vurdering av påvirkning fra tilbygg",
@@ -191,6 +196,23 @@
         "relevance": "Krav til vannkvalitet og økologisk tilstand"
       }
     ],
-    "contact_log": []
+    "contact_log": [
+      {
+        "date": "2026-01-29",
+        "type": "outreach_email",
+        "contact": "Prof. Asbjørn Vøllestad, UiO",
+        "subject": "Henvendelse om fagvurdering: Sjøørret og skyggeeffekt fra tilbygg Hovfaret 13",
+        "status": "awaiting_response",
+        "related_document": "doc_fagvurdering_sjoørret_vollestad"
+      },
+      {
+        "date": "2026-01-29",
+        "type": "merknad_received",
+        "contact": "Elizabeth Sellevold & Halvor Fosli (Damliveien 2)",
+        "subject": "Merknad til nabovarsel",
+        "status": "received",
+        "related_document": "doc_merknad_sellevold_fosli"
+      }
+    ]
   }
 }

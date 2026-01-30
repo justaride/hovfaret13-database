@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "version": "2.3",
+    "version": "2.4",
     "created": "2025-11-21",
-    "last_updated": "2025-12-07",
-    "total": 23,
+    "last_updated": "2026-01-30",
+    "total": 27,
     "description": "People involved in Hovfaret 13 project - enriched with bios from source documents",
     "source": "STAKEHOLDER_PROFILES_360.json from h13-project-database",
     "enrichment_sources": [
@@ -22,13 +22,22 @@
       "organization": "Natural State AS",
       "title": "Project Lead / Digital Strategy",
       "role_in_project": "Project Coordinator - leads day-to-day coordination, digital strategy, and stakeholder communications",
-      "expertise": ["Digital strategy", "Project management", "Sustainability", "Web development"],
+      "expertise": [
+        "Digital strategy",
+        "Project management",
+        "Sustainability",
+        "Web development"
+      ],
       "engagement": {
         "total_meetings": 66,
         "first_meeting": "2024-03-11",
         "last_meeting": "2025-10-14"
       },
-      "key_collaborators": ["einar_holthe", "andreas_thorsnes", "thomas_thorsen"],
+      "key_collaborators": [
+        "einar_holthe",
+        "andreas_thorsnes",
+        "thomas_thorsen"
+      ],
       "category": "Core Team"
     },
     "einar_holthe": {
@@ -41,7 +50,13 @@
       "title": "CEO / Strategy Lead",
       "role_in_project": "Strategic leadership, high-level stakeholder engagement, sustainability strategy",
       "bio": "CEO of Natural State AS and strategic leader with expertise in place economics (stedsøkonomi) and market economics. Initiated the Hovfaret 13 preproject in February 2024 with a vision for 'omtenksom verdiutvikling' (thoughtful value development). Key architect of the transformation strategy arguing against demolition in favor of rehabilitation. Leads client relationships with Urbania Eiendom.",
-      "expertise": ["Strategy", "Leadership", "Sustainability", "Stakeholder relations", "Place economics"],
+      "expertise": [
+        "Strategy",
+        "Leadership",
+        "Sustainability",
+        "Stakeholder relations",
+        "Place economics"
+      ],
       "engagement": {
         "total_meetings": 29,
         "first_meeting": "2024-03-11",
@@ -59,7 +74,11 @@
       "title": "Project Developer",
       "role_in_project": "Client representative - owns project decisions, financial oversight, developer perspective",
       "bio": "Project developer at Urbania Eiendom AS, property owner of Hovfaret 13. Key decision-maker on project direction and financial investments. Has been actively involved since project inception in March 2024. Responsible for evaluating development scenarios and making final calls on transformation vs. demolition approach. Works closely with R21 Arkitekter on architectural solutions.",
-      "expertise": ["Real estate development", "Project financing", "Property management"],
+      "expertise": [
+        "Real estate development",
+        "Project financing",
+        "Property management"
+      ],
       "engagement": {
         "total_meetings": 11,
         "first_meeting": "2024-03-11",
@@ -77,7 +96,12 @@
       "title": "Architect",
       "role_in_project": "Lead architect - transformation design, scenario development, regulatory drawings",
       "bio": "Lead architect from R21 Arkitekter (Rådhusgata 21, 0158 Oslo). Responsible for all architectural design work on Hovfaret 13 transformation. Developed multiple development scenarios including the Omsorg+ concept with 70-100 elderly care units. Created comprehensive floor plans (A20 series) showing rehabilitation and extension options. Key technical contributor on building assessment showing the structure was designed for 12 floors but built with only 5, supporting the extension argument.",
-      "expertise": ["Architecture", "Urban planning", "Sustainable building design", "Building transformation"],
+      "expertise": [
+        "Architecture",
+        "Urban planning",
+        "Sustainable building design",
+        "Building transformation"
+      ],
       "engagement": {
         "total_meetings": 16,
         "first_meeting": "2024-05-06",
@@ -200,7 +224,13 @@
       "title": "Project Manager / Sustainability Lead",
       "role_in_project": "Project management for Hovfaret 13 - responsible for deliverables, stakeholder coordination, nabolagsmøte planning, and sustainability documentation. Key coordinator for Notion-based project tracking.",
       "bio": "Project manager at Natural State AS with focus on sustainability and stakeholder engagement. Led the planning and execution of the neighborhood meeting (nabolagsmøte) on October 14, 2025. Primary responsible for leietaker dialogues, presentation development, and project deliverables tracking. Works closely with Kamran Surizehi on operational project management.",
-      "expertise": ["Sustainability", "ESG reporting", "Climate strategy", "Project management", "Stakeholder engagement"],
+      "expertise": [
+        "Sustainability",
+        "ESG reporting",
+        "Climate strategy",
+        "Project management",
+        "Stakeholder engagement"
+      ],
       "engagement": {
         "total_meetings": 15,
         "first_meeting": "2025-09-03",
@@ -223,7 +253,13 @@
       "title": "Architect / Project Coordinator",
       "role_in_project": "Operational project coordinator for Hovfaret 13 - responsible for visual production, nabolagsmøte materials, stakeholder mapping, and coordination with R21 Arkitekter. Key contributor to Notion-based project tracking.",
       "bio": "Architect at Natural State AS with background in project coordination and visual communication. Primary responsible for creating presentation materials, plakater, and visual assets for the Hovfaret 13 project. Led stakeholder mapping and neighbor coordination. Works closely with Linda Marie Aas on operational project management. Coordinates with R21 Arkitekter on architectural deliverables.",
-      "expertise": ["Architecture", "Visual communication", "Project coordination", "Stakeholder mapping", "Design production"],
+      "expertise": [
+        "Architecture",
+        "Visual communication",
+        "Project coordination",
+        "Stakeholder mapping",
+        "Design production"
+      ],
       "engagement": {
         "total_meetings": 20,
         "first_meeting": "2025-09-03",
@@ -246,7 +282,11 @@
       "organization": "Byggekonsulent / Bykon",
       "title": "Building Consultant",
       "role_in_project": "Technical building consultant - structural and construction advice",
-      "expertise": ["Building technology", "Structural assessment", "Construction"],
+      "expertise": [
+        "Building technology",
+        "Structural assessment",
+        "Construction"
+      ],
       "engagement": {
         "total_meetings": 3
       },
@@ -275,7 +315,12 @@
       "title": "Climate Consultant",
       "role_in_project": "Climate calculations and LCA analysis - key contact person for Natural State",
       "bio": "Climate consultant at Vill Energi AS (St. Olavs plass 2, 0165 Oslo). Served as Natural State's primary contact person for climate calculations on Hovfaret 13. Coordinated the critical 'Klimagassberegninger Hovfaret 13 v2' report (April 2025) that proved rehabilitation has 48% lower CO2 emissions than demolition/rebuild. This analysis became the cornerstone of the project's sustainability argument.",
-      "expertise": ["Climate calculations", "LCA", "Carbon accounting", "Building energy analysis"],
+      "expertise": [
+        "Climate calculations",
+        "LCA",
+        "Carbon accounting",
+        "Building energy analysis"
+      ],
       "key_deliverables": ["Klimagassberegninger Hovfaret 13 v2 (April 2025)"],
       "category": "Consultant",
       "notes": "Key technical contributor whose work provided the scientific basis for the transformation argument"
@@ -357,6 +402,47 @@
       "role_in_project": "Architecture team member",
       "notes": "Mentioned in milestone documentation",
       "category": "Extended Team"
+    },
+    "asbjorn_vollestad": {
+      "id": "asbjorn_vollestad",
+      "name": "Asbjørn Vøllestad",
+      "organization_id": "uio",
+      "organization": "Universitetet i Oslo (UiO)",
+      "title": "Professor — Freshwater Ecology",
+      "role_in_project": "Independent expert — fagvurdering av skyggeeffekt på sjøørret i Hoffselva",
+      "expertise": ["Fish ecology", "Freshwater biology", "Salmonid research"],
+      "category": "Consultant",
+      "notes": "Formell henvendelse sendt 2026-01-29. Avventer svar."
+    },
+    "elizabeth_sellevold": {
+      "id": "elizabeth_sellevold",
+      "name": "Elizabeth Sellevold",
+      "organization_id": null,
+      "organization": "Nabo (Damliveien 2)",
+      "title": "Nabo",
+      "role_in_project": "Sendte merknad til nabovarsel",
+      "category": "Neighbor",
+      "notes": "Merknad videresendt av Byggesaksrådgivning AS, januar 2026"
+    },
+    "halvor_fosli": {
+      "id": "halvor_fosli",
+      "name": "Halvor Fosli",
+      "organization_id": null,
+      "organization": "Nabo (Damliveien 2)",
+      "title": "Nabo",
+      "role_in_project": "Sendte merknad til nabovarsel (sammen med Elizabeth Sellevold)",
+      "category": "Neighbor",
+      "notes": "Merknad videresendt av Byggesaksrådgivning AS, januar 2026"
+    },
+    "are_tysnes": {
+      "id": "are_tysnes",
+      "name": "Are Tysnes",
+      "organization_id": "hoffsgrenda_borettslag",
+      "organization": "Hoffsgrenda Borettslag",
+      "title": "Styrerepresentant / kontaktperson",
+      "role_in_project": "Kontaktperson for Hoffsgrenda Borettslag — invitert til Dialogmøte #2",
+      "category": "Neighbor",
+      "notes": "Kontaktet i forbindelse med Dialogmøte #2 januar 2026"
     }
   },
   "people_categories": {
@@ -370,11 +456,15 @@
     },
     "Consultant": {
       "description": "External consultants and specialists",
-      "count": 5
+      "count": 6
     },
     "Government Stakeholder": {
       "description": "Government officials and contacts",
       "count": 4
+    },
+    "Neighbor": {
+      "description": "Neighbors and local residents engaged through nabovarsel or dialogmøter",
+      "count": 3
     }
   }
 }

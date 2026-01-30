@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "version": "2.1",
+    "version": "2.2",
     "created": "2025-11-21",
-    "last_updated": "2025-12-07",
-    "total": 16,
+    "last_updated": "2026-01-30",
+    "total": 19,
     "description": "Organizations involved in Hovfaret 13 project"
   },
   "organizations": {
@@ -39,8 +39,22 @@
       "description": "Sustainability and strategy consultancy leading project coordination, digital strategy, and bærekraft documentation.",
       "role_in_project": "Project Coordinator / Sustainability Strategy / Digital",
       "website": "naturalstate.no",
-      "key_people": ["gabriel_boen", "einar_holthe", "laara", "severin_docker", "trym", "knut_halvor", "kristian", "linda_marie_aas"],
-      "expertise": ["Sustainability strategy", "Project management", "Digital strategy", "Communications"],
+      "key_people": [
+        "gabriel_boen",
+        "einar_holthe",
+        "laara",
+        "severin_docker",
+        "trym",
+        "knut_halvor",
+        "kristian",
+        "linda_marie_aas"
+      ],
+      "expertise": [
+        "Sustainability strategy",
+        "Project management",
+        "Digital strategy",
+        "Communications"
+      ],
       "engagement_level": "primary",
       "first_involvement": "2024-03-11",
       "total_meetings": 27
@@ -54,7 +68,12 @@
       "role_in_project": "Architecture / Design",
       "website": "r21.no",
       "key_people": ["thomas_thorsen", "andrea", "francisco"],
-      "expertise": ["Architecture", "Urban planning", "Sustainability design", "Omsorg+ design"],
+      "expertise": [
+        "Architecture",
+        "Urban planning",
+        "Sustainability design",
+        "Omsorg+ design"
+      ],
       "key_deliverables": [
         "6 development scenario designs",
         "Floor plans (A20-series)",
@@ -73,7 +92,12 @@
       "description": "Energy consultancy firm responsible for energy mapping, climate calculations, and sustainability reporting.",
       "role_in_project": "Energy / Climate Analysis",
       "key_people": ["petter", "trym_osborg"],
-      "expertise": ["Energy mapping", "Climate calculations", "LCA analysis", "Enova applications"],
+      "expertise": [
+        "Energy mapping",
+        "Climate calculations",
+        "LCA analysis",
+        "Enova applications"
+      ],
       "key_deliverables": [
         "Energikartlegging Hovfaret 13 (April 2025)",
         "Klimagassberegninger v2 (April 2025)",
@@ -216,6 +240,38 @@
       "key_context": "Part of Nordic Circle Construction initiative. Project will test sirkulære byggematerialer and become living laboratory for circular principles.",
       "engagement_level": "strategic",
       "first_involvement": "2025-09-05"
+    },
+    "uio": {
+      "id": "uio",
+      "name": "Universitetet i Oslo (UiO)",
+      "type": "academic",
+      "category": "Academic / Research",
+      "description": "Norges eldste og høyest rangerte universitet. Kontaktet for uavhengig fagvurdering av skyggeeffekt på sjøørret i Hoffselva.",
+      "role_in_project": "Independent expert assessment — sjøørret/ecology",
+      "key_people": ["asbjorn_vollestad"],
+      "engagement_level": "consulting",
+      "first_involvement": "2026-01-29"
+    },
+    "hoffsgrenda_borettslag": {
+      "id": "hoffsgrenda_borettslag",
+      "name": "Hoffsgrenda Borettslag",
+      "type": "neighbor_association",
+      "category": "Community / Neighbors",
+      "description": "Borettslag i Skøyen Terrasse-området. Invitert til Dialogmøte #2 januar 2026.",
+      "role_in_project": "Neighbor organization — dialogmøte participant",
+      "key_people": ["are_tysnes"],
+      "engagement_level": "stakeholder",
+      "first_involvement": "2026-01-29"
+    },
+    "hoffsbyen_hageby": {
+      "id": "hoffsbyen_hageby",
+      "name": "Hoffsbyen Hageby",
+      "type": "neighbor_association",
+      "category": "Community / Neighbors",
+      "description": "Borettslag/sameie nær Hovfaret 13. Deltok på begge dialogmøter.",
+      "role_in_project": "Neighbor organization — dialogmøte participant",
+      "engagement_level": "stakeholder",
+      "first_involvement": "2025-10-14"
     }
   },
   "organization_categories": {
@@ -233,7 +289,16 @@
     },
     "Community / Neighbors": {
       "description": "Local stakeholders and neighboring property owners",
-      "members": ["skoyen_omradeforum", "fram_eiendom"]
+      "members": [
+        "skoyen_omradeforum",
+        "fram_eiendom",
+        "hoffsgrenda_borettslag",
+        "hoffsbyen_hageby"
+      ]
+    },
+    "Academic / Research": {
+      "description": "Academic institutions providing independent expert assessment",
+      "members": ["uio"]
     }
   }
 }

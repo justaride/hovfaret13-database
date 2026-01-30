@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.97.0",
+    "version": "2.98.0",
     "created": "2025-12-03",
-    "last_updated": "2026-01-27",
+    "last_updated": "2026-01-30",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 77
+    "database_phase": 78
   },
   "auth": {
     "enabled": true,
@@ -29,19 +29,19 @@
     "_note": "Page counts and structure details are in the content files, not here"
   },
   "metrics": {
-    "meetings_total": 61,
-    "documents_total": 271,
+    "meetings_total": 62,
+    "documents_total": 276,
     "deliverables_total": 37,
     "stakeholders": {
-      "people": 23,
-      "organizations": 16,
-      "total": 39
+      "people": 27,
+      "organizations": 19,
+      "total": 46
     },
     "project_duration_months": 21,
     "timeline": {
       "strategic_events": 10,
-      "operational_events": 22,
-      "total_events": 32,
+      "operational_events": 24,
+      "total_events": 34,
       "sustainability_events": 17
     },
     "notion": {
@@ -106,7 +106,9 @@
     "strategic_shift": "2025-09-05",
     "neighborhood_meeting": "2025-10-14",
     "neighbor_notice": "2025-10-16",
-    "konseptskisse_2": "2025-12-01"
+    "konseptskisse_2": "2025-12-01",
+    "dialogmote_2": "2026-01-29",
+    "professor_outreach": "2026-01-29"
   },
   "regulatory_status": {
     "nabovarsel": {
@@ -174,10 +176,10 @@
     "biodiversity_measures_count": 5
   },
   "orret": {
-    "status": "not_started",
+    "status": "in_progress",
     "content_file": "themes/orret.json",
     "dashboard_page": "orret.html",
-    "research_partners": ["NIVA", "Oslomarka Fiskeadministrasjon"],
+    "research_partners": ["NIVA", "Oslomarka Fiskeadministrasjon", "UiO"],
     "species": "Salmo trutta"
   },
   "key_deliverables": {

@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "version": "2.88",
+    "version": "2.89",
     "created": "2025-11-21",
-    "last_updated": "2026-01-07",
+    "last_updated": "2026-01-30",
     "description": "Meeting records for Hovfaret 13 project",
-    "total_meetings": 61,
+    "total_meetings": 62,
     "enrichment_note": "Outcomes derived from decisions, action_items, and summary text.",
     "cleanup_note": "Data quality cleanup phase 62 - removed duplicates, non-meetings, fixed corrupt data, added types"
   },
@@ -262,10 +262,7 @@
       "report_link": "data/polished_notes/2024-03-11_m_2024-03-11__11_mars_2024_POLISHED.md",
       "report_metadata": {
         "word_count": 356,
-        "people_mentioned": [
-          "Urbania Eiendom",
-          "Natural State"
-        ],
+        "people_mentioned": ["Urbania Eiendom", "Natural State"],
         "organizations_mentioned": [
           "Urbania Eiendom",
           "R21",
@@ -584,9 +581,7 @@
       "report_link": "data/polished_notes/2024-05-06_m_2024-05-06__6_mai_2024_POLISHED.md",
       "report_metadata": {
         "word_count": 300,
-        "people_mentioned": [
-          "Vestre Aker"
-        ],
+        "people_mentioned": ["Vestre Aker"],
         "organizations_mentioned": [],
         "extraction_date": "2025-11-20T16:03:21.786671",
         "polished": true,
@@ -856,10 +851,7 @@
         "context": "Dette møtet produserte konkret innhold til konseptskissen. De 11 punktene og fire slidene representerer kjernen i prosjektets bærekraftsargumentasjon. Dokumentet viser hvordan Natural State og Urbania samarbeider om å posisjonere prosjektet.",
         "metadata": {
           "source": "working_document",
-          "source_files": [
-            "27-JUNI TANKER.md",
-            "MØTE 27JUNI.md"
-          ],
+          "source_files": ["27-JUNI TANKER.md", "MØTE 27JUNI.md"],
           "word_count": 350,
           "consolidated_date": "2025-12-02"
         }
@@ -1197,10 +1189,7 @@
         }
       ],
       "action_items": [],
-      "topics_discussed": [
-        "Hovedpunkter fra diskusjonen",
-        "Strategiske grep"
-      ],
+      "topics_discussed": ["Hovedpunkter fra diskusjonen", "Strategiske grep"],
       "decisions": [],
       "report_link": "data/polished_notes/2024_10_15_m_2024-10-15_hovfaret_13_oppf_lging__POLISHED.md",
       "report_metadata": {
@@ -1213,10 +1202,7 @@
       "original_report_link": "data/restructured_notes/2024-10-15_MØTE  15 okt  2024.md",
       "report": {
         "summary": "*[Dette notatet er automatisk prosessert og krever manuell redigering av sammendrag]*",
-        "topics": [
-          "Hovedpunkter fra diskusjonen",
-          "Strategiske grep"
-        ],
+        "topics": ["Hovedpunkter fra diskusjonen", "Strategiske grep"],
         "discussion": [
           {
             "heading": "*[Original innhold følger - krever manuell renskrivning]*",
@@ -1231,11 +1217,7 @@
           "word_count": 182,
           "source": "polished_note",
           "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion"
-          ],
+          "sections": ["summary", "topics", "discussion"],
           "has_full_report": false
         }
       },
@@ -1438,9 +1420,7 @@
         }
       ],
       "data_quality_note": "Original data corrupted - participants unknown, needs manual verification",
-      "action_items": [
-        "srom:"
-      ],
+      "action_items": ["srom:"],
       "topics_discussed": [
         "Reguleringssituasjonen",
         "Strategisk tilnærming",
@@ -1523,9 +1503,7 @@
         "context": ""
       },
       "summary": "Møtereferat - Hovfaret 13: Utviklingsstrategi og reguleringsforhold",
-      "outcomes": [
-        "Oppgave: srom:"
-      ],
+      "outcomes": ["Oppgave: srom:"],
       "type": "Interne møter"
     },
     {
@@ -1909,10 +1887,7 @@
           "word_count": 7250,
           "source": "polished_note",
           "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "discussion"
-          ],
+          "sections": ["summary", "discussion"],
           "has_full_report": false
         }
       },
@@ -2312,9 +2287,7 @@
           "email": "knuthalvor@naturalstate.no"
         }
       ],
-      "action_items": [
-        "hos statsforvalteren"
-      ],
+      "action_items": ["hos statsforvalteren"],
       "topics_discussed": [
         "Konseptskisse og presentasjon",
         "Digital tilstedeværelse",
@@ -2419,9 +2392,7 @@
         "context": ""
       },
       "summary": "Prosessplan for Hovfaret 13 - 2025",
-      "outcomes": [
-        "Oppgave: hos statsforvalteren"
-      ],
+      "outcomes": ["Oppgave: hos statsforvalteren"],
       "type": "Prosjektmøte"
     },
     {
@@ -2719,9 +2690,7 @@
         }
       ],
       "action_items": [],
-      "topics_discussed": [
-        "Status og fremdrift i prosjektet"
-      ],
+      "topics_discussed": ["Status og fremdrift i prosjektet"],
       "decisions": [],
       "report_link": "data/polished_notes/2025_03_07_m_unknown_date_detaljert_sammendrag_av_samtalen_om_skolebygget_POLISHED.md",
       "report_metadata": {
@@ -2756,10 +2725,7 @@
           "word_count": 716,
           "source": "polished_note",
           "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "discussion"
-          ],
+          "sections": ["summary", "discussion"],
           "has_full_report": false
         }
       },
@@ -3101,11 +3067,7 @@
           "word_count": 158,
           "source": "polished_note",
           "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion"
-          ],
+          "sections": ["summary", "topics", "discussion"],
           "has_full_report": false
         }
       },
@@ -3301,11 +3263,7 @@
           "word_count": 192,
           "source": "polished_note",
           "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "topics",
-            "discussion"
-          ],
+          "sections": ["summary", "topics", "discussion"],
           "has_full_report": false
         }
       },
@@ -3656,10 +3614,7 @@
       ],
       "report_link": "data/polished_notes/2025_06_03_m_2025-06-03_oppf_lging_prosjekt_gruppen_hovfaret_13__POLISHED.md",
       "action_items": [],
-      "topics_discussed": [
-        "Sammendrag",
-        "Detaljert Temaanalyse"
-      ],
+      "topics_discussed": ["Sammendrag", "Detaljert Temaanalyse"],
       "decisions": [],
       "report_metadata": {
         "word_count": 1923,
@@ -3959,10 +3914,7 @@
           "word_count": 5787,
           "source": "polished_note",
           "consolidated_date": "2025-11-22",
-          "sections": [
-            "summary",
-            "discussion"
-          ],
+          "sections": ["summary", "discussion"],
           "has_full_report": false
         }
       },
@@ -5353,24 +5305,16 @@
         "Resultater fra nabolagsmøte 14. oktober",
         "Politisk forankring av prosjektet"
       ],
-      "decisions": [
-        "Politisk støtte til videre utvikling bekreftet"
-      ],
+      "decisions": ["Politisk støtte til videre utvikling bekreftet"],
       "report": {
         "summary": "Presentasjon for Ullern bydelsutvalg om Hovfaret 13 prosjektet. Oppfølging av nabolagsmøtet 14. oktober med fokus på politisk forankring og bydelens behov for Omsorg+ boliger.",
         "context": "Viktig politisk milepæl - forankring i bydelsutvalget styrker prosjektets posisjon mot områdeplanens rivningskrav."
       },
-      "linked_deliverables": [
-        "d_bydelsutvalgsmoete"
-      ],
-      "linked_timeline_events": [
-        "o_025"
-      ],
+      "linked_deliverables": ["d_bydelsutvalgsmoete"],
+      "linked_timeline_events": ["o_025"],
       "source_file": "deliverables-from-notion",
       "summary": "Presentasjon for Ullern bydelsutvalg om Hovfaret 13 prosjektet. Oppfølging av nabolagsmøtet 14. oktober med fokus på politisk forankring og bydelens behov for Omsorg+ boliger.",
-      "outcomes": [
-        "Politisk støtte til videre utvikling bekreftet"
-      ]
+      "outcomes": ["Politisk støtte til videre utvikling bekreftet"]
     },
     {
       "id": "m_2025-12-19_strategimote_status",
@@ -5601,6 +5545,88 @@
         "Kamran tar ansvar for juridisk vurdering og dokumentproduksjon"
       ],
       "source_file": "meeting-transcript-2026-01-06"
+    },
+    {
+      "id": "m_2026-01-29_dialogmote_2_hovfaret_13",
+      "date": "2026-01-29",
+      "title": "Dialogmøte #2 — Hovfaret 13 (Hoffsbyen Hageby & Skøyen Terrasse)",
+      "organizer": "kamran@naturalstate.no",
+      "location": "Hovfaret 13",
+      "type": "nabolagsmøte",
+      "participant_count": 28,
+      "participants": [
+        {
+          "name": "Kamran Surizehi",
+          "organization": "Natural State AS",
+          "email": "kamran@naturalstate.no",
+          "role": "Møteorganisator"
+        },
+        {
+          "name": "Gabriel Bøen",
+          "organization": "Natural State AS",
+          "email": "gabriel@naturalstate.no",
+          "role": "Prosjektleder"
+        },
+        {
+          "name": "Einar Kleppe Holthe",
+          "organization": "Natural State AS",
+          "email": "einar@naturalstate.no",
+          "role": "Strategisk rådgiver"
+        },
+        {
+          "name": "Thomas Thorsen",
+          "organization": "R21 Arkitekter",
+          "email": "thomas@r21.no",
+          "role": "Arkitekt — presentasjon sol/skyggediagrammer"
+        },
+        {
+          "name": "Andreas Thorsnes",
+          "organization": "Urbania Eiendom AS",
+          "email": "andreas@urbania.no",
+          "role": "Byggherre"
+        },
+        {
+          "name": "Liv Thorsnes",
+          "organization": "Byggesaksrådgivning AS",
+          "role": "Ansvarlig søker"
+        },
+        {
+          "name": "Knut Halvor",
+          "organization": "Natural State AS",
+          "role": "Prosjektstøtte"
+        },
+        {
+          "name": "Linda Marie Aas",
+          "organization": "Natural State AS",
+          "role": "Prosjektleder"
+        },
+        {
+          "name": "~20 naboer",
+          "organization": "Hoffsbyen Hageby / Hoffsgrenda (Skøyen Terrasse)",
+          "role": "Naboer"
+        }
+      ],
+      "topics_discussed": [
+        "Presentasjon av transformasjonsprosjektet",
+        "Omsorg+ konsept og 73 enheter",
+        "Sol/skyggediagrammer — R21 Arkitekter",
+        "Dispensasjonssøknad og nabovarsel-prosess",
+        "Spørsmål fra naboer",
+        "Videre prosess og tidsplan"
+      ],
+      "decisions": [],
+      "action_items": [],
+      "report": {
+        "summary": "Andre informasjonsmøte (dialogmøte) for naboer i Hoffsbyen Hageby og Hoffsgrenda/Skøyen Terrasse. Presentasjon av R21 Arkitekter med sol/skyggediagrammer. Ca. 25-28 naboer deltok. Invitasjon sendt via RSVP på hovfaret13.no/dialogmote.",
+        "context": "Oppfølging av Dialogmøte #1 (oktober 2025). Utvidet invitasjon til Hoffsgrenda Borettslag. Saksinnsyn referanse 202521699."
+      },
+      "summary": "Dialogmøte #2 for naboer fra Hoffsbyen Hageby og Hoffsgrenda. R21 presenterte sol/skyggediagrammer. Ca. 25-28 deltakere. Invitasjon via hovfaret13.no/dialogmote.",
+      "outcomes": [
+        "Naboer fra to borettslag informert om transformasjonsprosjektet",
+        "Sol/skyggediagrammer presentert for første gang i nabomøte",
+        "RSVP-system brukt via hovfaret13.no/dialogmote"
+      ],
+      "source_file": "upload-2026-01-30"
     }
   ]
 }

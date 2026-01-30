@@ -21,7 +21,8 @@
     "work_items": [
       {
         "task": "Engasjere ferskvannsbiolog",
-        "status": "not_started"
+        "status": "in_progress",
+        "result": "Formell henvendelse sendt til Prof. Asbjørn Vøllestad (UiO) 2026-01-29. Avventer svar."
       },
       {
         "task": "Verifisere gyteforhold (høst)",
@@ -283,6 +284,35 @@
       "ref": "themes/naturpositivitet.json"
     }
   ],
+  "professor_outreach": {
+    "contact": {
+      "name": "Prof. Asbjørn Vøllestad",
+      "institution": "Universitetet i Oslo (UiO)",
+      "department": "Freshwater Ecology / CEES",
+      "person_id": "asbjorn_vollestad",
+      "org_id": "uio"
+    },
+    "date_sent": "2026-01-29",
+    "status": "awaiting_response",
+    "request_scope": [
+      "Vurdering av skyggeeffekt fra 3-etasjers påbygg på sjøørret i Hoffselva",
+      "Prosjektbeskrivelse med bygningsdata og koordinater",
+      "Geografisk kontekst — Hoffselva og anadrom strekning",
+      "Solstudiedata med 4 sesonger / 3 tidspunkter per dag",
+      "Foreløpig vurdering av temperatur, oksygen, mat og habitat",
+      "7 spesifikke fagspørsmål",
+      "Vedlegg: R21 Arkitekter soldiagram"
+    ],
+    "building_parameters": {
+      "address": "Hovfaret 13, 0275 Oslo",
+      "coordinates": "59.9210°N, 10.6635°E",
+      "construction_year": 1989,
+      "current_floors": 5,
+      "planned_extension": 3,
+      "planned_use": "Omsorg+ (73 omsorgsboliger)"
+    },
+    "related_documents": ["doc_fagvurdering_sjoørret_vollestad"]
+  },
   "sources": [
     {
       "title": "E-post: Innspill fra Hoffvassdragets venner",

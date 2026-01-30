@@ -1,21 +1,21 @@
 {
   "metadata": {
-    "version": "2.1",
+    "version": "2.2",
     "created": "2025-11-21",
-    "last_updated": "2025-12-07",
+    "last_updated": "2026-01-30",
     "description": "Document registry for Hovfaret 13 project",
-    "total": 271,
-    "total_documents": 271,
+    "total": 276,
+    "total_documents": 276,
     "by_category": {
       "analysis_notes": 94,
-      "architecture": 9,
-      "communications": 2,
+      "architecture": 10,
+      "communications": 3,
       "meetings": 51,
       "omsorg_plus": 25,
       "other": 11,
-      "presentations": 61,
-      "regulatory": 5,
-      "stakeholder_engagement": 5,
+      "presentations": 62,
+      "regulatory": 6,
+      "stakeholder_engagement": 6,
       "sustainability": 8
     }
   },
@@ -2740,6 +2740,65 @@
       "category": "sustainability",
       "source_folder": "Trym grunlag",
       "extraction_date": "2025-11-20T16:04:26.965384",
+      "has_error": false
+    },
+    {
+      "id": "doc_presentasjon_dialogmote_2_2026-01-29",
+      "file_name": "Urbania Eiendom - Presentasjon - Informasjonsmøte.pdf",
+      "file_type": "pdf_document",
+      "document_type": "presentation",
+      "category": "presentations",
+      "date": "2026-01-29",
+      "source_folder": "Upload 30.01",
+      "description": "R21 Arkitekter presentasjon til Dialogmøte #2 med sol/skyggediagrammer",
+      "related_meeting": "m_2026-01-29_dialogmote_2_hovfaret_13",
+      "has_error": false
+    },
+    {
+      "id": "doc_plan_3etg_hovfaret_13",
+      "file_name": "Hovfaret 13 - Plan 3etg.pdf",
+      "file_type": "pdf_document",
+      "document_type": "floor_plan",
+      "category": "architecture",
+      "date": "2026-01-29",
+      "source_folder": "Upload 30.01",
+      "description": "Plantegning 3. etasje Hovfaret 13 — eksisterende kontorlandskap (178.7 m²), møterom",
+      "has_error": false
+    },
+    {
+      "id": "doc_artikkel_hovfaret13_transformasjon",
+      "file_name": "Artikkel hovfaret13.no - Transformasjon til Omsorg+ boliger.docx",
+      "file_type": "word_document",
+      "document_type": "article",
+      "category": "communications",
+      "date": "2026-01-15",
+      "source_folder": "Upload 30.01",
+      "description": "Nettartikkel for hovfaret13.no om Omsorg+ transformasjon, nabovarsel-prosess og dispensasjon. Utkast 2, godkjent av Einar 15.01.2026.",
+      "has_error": false
+    },
+    {
+      "id": "doc_fagvurdering_sjoørret_vollestad",
+      "file_name": "Henvendelse om fagvurdering - Sjøørret og skyggeeffekt.pdf",
+      "file_type": "pdf_document",
+      "document_type": "letter",
+      "category": "stakeholder_engagement",
+      "date": "2026-01-29",
+      "source_folder": "Upload 30.01",
+      "description": "Formell henvendelse til Prof. Asbjørn Vøllestad (UiO) om uavhengig fagvurdering av skyggeeffekt på sjøørret i Hoffselva. 5 seksjoner med prosjektbeskrivelse, geografisk kontekst, solstudiedata og foreløpig vurdering.",
+      "related_people": ["asbjorn_vollestad"],
+      "related_organizations": ["uio"],
+      "has_error": false
+    },
+    {
+      "id": "doc_merknad_sellevold_fosli",
+      "file_name": "Merknad til nabovarsel - Sellevold og Fosli (Damliveien 2).pdf",
+      "file_type": "pdf_document",
+      "document_type": "merknad",
+      "category": "regulatory",
+      "date": "2026-01-29",
+      "source_folder": "Upload 30.01",
+      "description": "Nabomerknad fra Elizabeth Sellevold og Halvor Fosli (Damliveien 2) til nabovarsel. Videresendt av Liv Thorsnes (Byggesaksrådgivning AS).",
+      "related_people": ["elizabeth_sellevold", "halvor_fosli"],
       "has_error": false
     }
   ]

@@ -1,8 +1,8 @@
 # CLAUDE.md - Project Instructions for Claude Code
 
-## Project: Hovfaret 13 Data Consolidation v2.90
+## Project: Hovfaret 13 Data Consolidation v3.00
 
-Real estate transformation project database. Version 2.90, Phase 68.
+Real estate transformation project database. Version 3.00, Phase 78.
 
 **Auth:** Password `h13-skøyen-2025` (24h localStorage session)
 
@@ -18,12 +18,12 @@ Real estate transformation project database. Version 2.90, Phase 68.
 
 | Data             | Count                              |
 | ---------------- | ---------------------------------- |
-| Meetings         | 60                                 |
-| Documents        | 271                                |
-| People           | 23                                 |
-| Organizations    | 16                                 |
+| Meetings         | 62                                 |
+| Documents        | 276                                |
+| People           | 27                                 |
+| Organizations    | 19                                 |
 | Deliverables     | 37 (verifisert)                    |
-| Timeline events  | 32 (10 strategic + 22 operational) |
+| Timeline events  | 34 (10 strategic + 24 operational) |
 | Dashboard pages  | 39 (all auth-protected)            |
 | Project duration | 21 months                          |
 | Notion databases | 12                                 |

@@ -2,6 +2,64 @@
 
 All notable changes to this project database.
 
+## [3.00.0] - 2026-01-30
+
+### Phase 78: Upload 30.01 — Dialogmøte #2, Professorhenvendelse & Nabomerknader
+
+**Status:** COMPLETE
+
+#### Nytt innhold fra Upload 30.01
+
+Integrert 9 filer fra upload 30.01.2026 som dekker tre innholdsområder: Dialogmøte #2 for naboer, professorhenvendelse om sjøørret-fagvurdering, og nabomerknad.
+
+**Nytt møte:**
+
+| ID                                      | Dato       | Tittel                                                             |
+| --------------------------------------- | ---------- | ------------------------------------------------------------------ |
+| `m_2026-01-29_dialogmote_2_hovfaret_13` | 2026-01-29 | Dialogmøte #2 — Hoffsbyen Hageby & Skøyen Terrasse (~28 deltakere) |
+
+**Nye dokumenter (5):**
+
+| ID                                         | Type         | Kategori               |
+| ------------------------------------------ | ------------ | ---------------------- |
+| `doc_presentasjon_dialogmote_2_2026-01-29` | presentation | presentations          |
+| `doc_plan_3etg_hovfaret_13`                | floor_plan   | architecture           |
+| `doc_artikkel_hovfaret13_transformasjon`   | article      | communications         |
+| `doc_fagvurdering_sjoørret_vollestad`      | letter       | stakeholder_engagement |
+| `doc_merknad_sellevold_fosli`              | merknad      | regulatory             |
+
+**Nye personer (4):**
+
+| Navn                | Organisasjon           | Rolle                         |
+| ------------------- | ---------------------- | ----------------------------- |
+| Asbjørn Vøllestad   | UiO                    | Professor — ferskvannsøkologi |
+| Elizabeth Sellevold | Nabo (Damliveien 2)    | Merknad til nabovarsel        |
+| Halvor Fosli        | Nabo (Damliveien 2)    | Merknad til nabovarsel        |
+| Are Tysnes          | Hoffsgrenda Borettslag | Styrerepresentant             |
+
+**Nye organisasjoner (3):**
+
+| Navn                       | Type                 |
+| -------------------------- | -------------------- |
+| Universitetet i Oslo (UiO) | academic             |
+| Hoffsgrenda Borettslag     | neighbor_association |
+| Hoffsbyen Hageby           | neighbor_association |
+
+**Oppdaterte filer:**
+
+| Fil                                    | Endring                                                 |
+| -------------------------------------- | ------------------------------------------------------- |
+| `data/meetings.json`                   | +1 møte (#62)                                           |
+| `data/documents.json`                  | +5 dokumenter (271→276)                                 |
+| `data/stakeholders/people.json`        | +4 personer (23→27)                                     |
+| `data/stakeholders/organizations.json` | +3 organisasjoner (16→19)                               |
+| `data/themes/orret.json`               | professor_outreach-seksjon, biolog-status → in_progress |
+| `data/themes/natur-miljo.json`         | biolog-status → in_progress, kontaktlogg                |
+| `data/config.json`                     | Alle metrikker oppdatert, fase 78                       |
+| `data/timeline.json`                   | +2 operasjonelle hendelser (o_023, o_024)               |
+
+---
+
 ## [2.99.0] - 2026-01-29
 
 ### Phase 77: Naturpositivitet & Naturkartlegging

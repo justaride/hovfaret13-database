@@ -2,7 +2,7 @@
   "metadata": {
     "version": "2.1",
     "created": "2025-11-21",
-    "last_updated": "2025-12-12",
+    "last_updated": "2026-01-30",
     "description": "Multi-layer curated timeline for Hovfaret 13 project",
     "source": "PROJECT_MILESTONES.json from h13-project-database",
     "verification_status": "verified",
@@ -24,7 +24,7 @@
       "name": "Operational Timeline",
       "name_no": "Operasjonell tidslinje",
       "description": "Key decisions, deliverables, and stakeholder engagements",
-      "event_count": 22,
+      "event_count": 24,
       "use_case": "Project management, team updates, progress tracking"
     },
     "detailed": {
@@ -58,9 +58,7 @@
         "phase": "phase_2",
         "importance": "critical",
         "icon": "alert",
-        "tags": [
-          "turning_point"
-        ]
+        "tags": ["turning_point"]
       },
       {
         "id": "s_003",
@@ -71,9 +69,7 @@
         "phase": "phase_3",
         "importance": "critical",
         "icon": "rocket",
-        "tags": [
-          "milestone"
-        ],
+        "tags": ["milestone"],
         "source_verified": "meetings.json - Urbania Hovfaret 13 - Konseptskisse 1.0"
       },
       {
@@ -106,9 +102,7 @@
         "phase": "phase_5",
         "importance": "critical",
         "icon": "lightning",
-        "tags": [
-          "key_deliverable"
-        ],
+        "tags": ["key_deliverable"],
         "source_verified": "20250411 Energikartlegging Hovfaret 13.pdf"
       },
       {
@@ -120,10 +114,7 @@
         "phase": "phase_5",
         "importance": "critical",
         "icon": "leaf",
-        "tags": [
-          "key_deliverable",
-          "sustainability"
-        ],
+        "tags": ["key_deliverable", "sustainability"],
         "source_verified": "Klimagassberegninger Hovfaret 13 v2.pdf - Rapportdato 22.04.2025"
       },
       {
@@ -146,9 +137,7 @@
         "phase": "phase_6",
         "importance": "critical",
         "icon": "document",
-        "tags": [
-          "key_deliverable"
-        ]
+        "tags": ["key_deliverable"]
       },
       {
         "id": "s_010",
@@ -366,6 +355,26 @@
         "category": "technical",
         "description": "R21 leverer endelige tegninger, 3D-visualiseringer og planmateriale.",
         "title_no": "Endelig R21 leveranse (tegninger og planer)"
+      },
+      {
+        "id": "o_023",
+        "date": "2026-01-29",
+        "title": "Dialogmøte #2 — Hoffsbyen Hageby & Skøyen Terrasse",
+        "phase": "phase_6",
+        "category": "stakeholder",
+        "description": "Andre informasjonsmøte for naboer. R21 presenterte sol/skyggediagrammer. Ca. 25-28 deltakere fra Hoffsbyen Hageby og Hoffsgrenda.",
+        "title_no": "Dialogmøte #2 — Hoffsbyen Hageby & Skøyen Terrasse",
+        "related_meeting": "m_2026-01-29_dialogmote_2_hovfaret_13"
+      },
+      {
+        "id": "o_024",
+        "date": "2026-01-29",
+        "title": "Professor Outreach — Sjøørret Fagvurdering",
+        "phase": "phase_6",
+        "category": "technical",
+        "description": "Formell henvendelse sendt til Prof. Asbjørn Vøllestad (UiO) om uavhengig fagvurdering av skyggeeffekt på sjøørret i Hoffselva.",
+        "title_no": "Professorhenvendelse — sjøørret fagvurdering",
+        "related_document": "doc_fagvurdering_sjoørret_vollestad"
       }
     ]
   },
