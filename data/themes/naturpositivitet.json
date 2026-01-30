@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-01-29",
+    "last_updated": "2026-01-29",
+    "content_classification": {
+      "type": "deliverable_content",
+      "deliverable_id": null,
+      "source_document": "Naturpositive tiltak - Eirik Obrestad / Natural State",
+      "is_primary_source": true
+    }
+  },
+  "concept": {
+    "title": "Nature Positive by 2030",
+    "description": "Rammeverk for naturpositiv transformasjon av Hovfaret 13. Målet er at prosjektet skal etterlate naturen i bedre stand enn før byggestart.",
+    "principles": [
+      "Nulltap av natur (no net loss)",
+      "Netto naturgevinst gjennom aktive tiltak",
+      "Lokal forankring med stedegne arter og naturtyper",
+      "Sirkulær materialbruk som reduserer press på natur"
+    ],
+    "target_year": 2030,
+    "framework": "Nature Positive Initiative / Kunming-Montreal Global Biodiversity Framework"
+  },
+  "invasive_species": {
+    "summary": "Kartlegging avdekket to fremmedarter på tomten som krever fjerning i henhold til naturmangfoldloven.",
+    "species": [
+      {
+        "name": "Gravmyrt",
+        "latin": "Vinca minor",
+        "status": "Større forekomster på tomten",
+        "risk_category": "Fremmedart",
+        "action": "Fjerne",
+        "method": "Manuell fjerning med rot, gjentatt oppfølging",
+        "source": "Eirik Obrestad / Natural State"
+      },
+      {
+        "name": "Kjempebjørnekjeks",
+        "latin": "Heracleum mantegazzianum",
+        "status": "Små forekomster",
+        "risk_category": "Fremmedart - svært høy risiko (SE)",
+        "action": "Fjerne umiddelbart",
+        "method": "Rotutskjæring, forsiktig håndtering (fototoksisk saft)",
+        "source": "Eirik Obrestad / Natural State"
+      }
+    ],
+    "previously_documented": [
+      {
+        "name": "Kanadagullris",
+        "latin": "Solidago canadensis",
+        "source": "13_Naturmiljoe.pdf (Norconsult)",
+        "ref": "orret.json"
+      },
+      {
+        "name": "Kornell",
+        "latin": "Cornus spp.",
+        "source": "13_Naturmiljoe.pdf (Norconsult)",
+        "ref": "orret.json"
+      }
+    ]
+  },
+  "nin_mapping": {
+    "description": "NiN-kartlegging (Natur i Norge) utført for tomten. Identifiserer naturtypene i henhold til NiN 2.0-systemet.",
+    "source": "Eirik Obrestad / Natural State",
+    "nature_types": [
+      {
+        "code": "T37",
+        "name": "Asfalt og sterkt endret fastmark",
+        "description": "Eksisterende parkeringsarealer og tilkomstveier. Dominerende naturtype på tomten.",
+        "area_share": "Dominerende",
+        "ecological_value": "Svært lav"
+      },
+      {
+        "code": "T40",
+        "name": "Sterkt endret fastmark med preg av semi-naturlig eng",
+        "description": "Gress-/plenareal rundt bygget som har utviklet semi-naturlige trekk over tid.",
+        "area_share": "Middels",
+        "ecological_value": "Lav til middels"
+      },
+      {
+        "code": "T4-C18",
+        "name": "Hogstaudeskog",
+        "description": "Liten skogsrest med hogstaudevegetasjon mot Hoffselva. Viktig buffer mot vassdraget.",
+        "area_share": "Liten",
+        "ecological_value": "Middels til hoy"
+      }
+    ]
+  },
+  "biodiversity_measures": [
+    {
+      "title": "Regional eng",
+      "description": "Etablering av artsrik eng med froblanding fra regionale genressurser. Samarbeid med NIBIO og KVANN for autentisk stedegen vegetasjon.",
+      "partners": ["NIBIO", "KVANN"],
+      "status": "proposed",
+      "area": "Friarealer rundt bygget",
+      "benefit": "Pollinatorhabitat, stedegen flora, estetisk verdi",
+      "nin_target": "T32 - Semi-naturlig eng"
+    },
+    {
+      "title": "Froskedam",
+      "description": "Anlegging av grunt dammer for spissnutefrosk (Rana dalmatina) som er observert ved Hoffsdammen. Skaper nytt habitat i forbindelse med overvannshaudtering.",
+      "species": "Spissnutefrosk (Rana dalmatina)",
+      "location": "Hoffsdammen-omradet",
+      "status": "proposed",
+      "benefit": "Amfibiehabitat, overvannshaudtering, pedagogisk verdi"
+    },
+    {
+      "title": "Fiskesperre",
+      "description": "Etablering av fiskesperre for a beskytte gyteomrader og hindre oppvandring av uonsket fisk. Biotoptiltak i samrad med ferskvannsbiolog.",
+      "status": "proposed",
+      "benefit": "Beskyttelse av sjoorretbestand, habitatforbedring",
+      "ref": "orret.json"
+    },
+    {
+      "title": "Fjerning av fremmedarter",
+      "description": "Systematisk kartlegging og fjerning av gravmyrt, kjempebjornekjeks, kanadagullris og kornell.",
+      "status": "planned",
+      "species_targeted": [
+        "Gravmyrt",
+        "Kjempebjornekjeks",
+        "Kanadagullris",
+        "Kornell"
+      ],
+      "benefit": "Gjenoppretting av naturlig artsmangfold"
+    },
+    {
+      "title": "Kantvegetasjon langs Hoffselva",
+      "description": "Reetablering av stedegen kantvegetasjon for a gi skygge, naeringstilforsel og erosjonssikring langs elvebredden.",
+      "status": "proposed",
+      "benefit": "Elvemiljo, orrethabitat, erosjonsvern",
+      "ref": "orret.json"
+    }
+  ],
+  "circular_value_chains": {
+    "title": "Sirkulaere verdikjeder",
+    "description": "Naturpositivitet kobles til sirkularokonomi gjennom gjenbruk av materialer og ressurser i transformasjonsprosessen.",
+    "principles": [
+      "Bevaring av baerekonstruksjon reduserer materialuttak fra natur",
+      "Gjenbruk av byggematerialer minimerer avfall til deponi",
+      "Overskuddsmasser fra graving brukes lokalt",
+      "Regnvann fanges og brukes til vanning av regional eng"
+    ],
+    "connection_to_project": {
+      "rehabilitation_vs_demolition": "Rehabilitering sparer 80% materialer sammenlignet med riving og nybygg",
+      "co2_savings": "48% CO2-besparelse gjennom transformasjon fremfor nybygg",
+      "waste_reduction": "85% reduksjon i avfall ved rehabilitering"
+    }
+  },
+  "sources": [
+    {
+      "title": "Naturpositive tiltak - Eirik Obrestad / Natural State",
+      "type": "PDF",
+      "date": "2026"
+    },
+    {
+      "title": "NiN 2.0 - Natur i Norge (Artsdatabanken)",
+      "url": "https://www.artsdatabanken.no/NiN"
+    },
+    {
+      "title": "NIBIO - Norsk institutt for biookonomi",
+      "url": "https://www.nibio.no/"
+    },
+    {
+      "title": "KVANN - Norsk genressurssenter",
+      "url": "https://www.kvann.no/"
+    },
+    {
+      "title": "Kunming-Montreal Global Biodiversity Framework",
+      "url": "https://www.cbd.int/gbf/"
+    }
+  ],
+  "cross_references": {
+    "orret": "themes/orret.json",
+    "natur_miljo": "themes/natur-miljo.json",
+    "sustainability": "themes/sustainability.json"
+  }
+}

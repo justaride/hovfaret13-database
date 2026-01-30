@@ -1,8 +1,8 @@
 # Project Status
 
 **Last Updated:** 2026-01-29
-**Dashboard Version:** 2.98
-**Status:** ✅ Phase 76 COMPLETE - Professorhenvendelse & Dashboard-fiks
+**Dashboard Version:** 2.99
+**Status:** Phase 77 COMPLETE - Naturpositivitet & Naturkartlegging
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 **Vercel:** https://hovfaret13-database.vercel.app
 **Auth Password:** `h13-skøyen-2025`
@@ -11,24 +11,36 @@
 
 ## Current Phase
 
-**Phase 76: Professorhenvendelse & Dashboard-fiks ✅ COMPLETE**
+**Phase 77: Naturpositivitet & Naturkartlegging COMPLETE**
 
-Opprettet professorhenvendelse (fagvurdering ørret/skygge) som markdown og dashboard-side. Fikset kritisk ContentHeader-bug som ødela stats på 8 sider.
+Integrert innhold fra Eirik Obrestad / Natural State PDF. Ny temafil og dashboardside med Nature Positive rammeverk, NiN-kartlegging, fremmedarter, biodiversitetstiltak og sirkulaere verdikjeder.
 
 ### Leveranser
 
-| Fil                                        | Formål                                |
-| ------------------------------------------ | ------------------------------------- |
-| `documents/professor-henvendelse-orret.md` | E-post-klar henvendelse til professor |
-| `dashboard/professor-henvendelse.html`     | Dashboard-side med formelt layout     |
+| Fil                                 | Formal                                           |
+| ----------------------------------- | ------------------------------------------------ |
+| `data/themes/naturpositivitet.json` | Temafil: NiN, fremmedarter, tiltak, sirkularitet |
+| `dashboard/naturpositivitet.html`   | Dashboard-side med 6 faner                       |
 
-### Bug-fiks: ContentHeader ødela stats
+### Nytt innhold
 
-`ContentHeader.inject()` fjernet `.app-header` fra DOM, som ødela stat-elementer på 8 sider (deliverables, timeline, stakeholders, meetings, documents, scenarios, solstudie, timelines). Fikset ved å flytte stats til frittstående div.
+- Gravmyrt og kjempebjornekjeks (nye fremmedarter)
+- NiN-kartlegging: T37, T40, T4-C18
+- Spissnutefrosk ved Hoffsdammen
+- Froskedam + fiskesperre (biotoptiltak)
+- Regional eng (NIBIO/KVANN)
+- Nature Positive by 2030 rammeverk
+- Sirkulaere verdikjeder
 
-### Alle data-fetch stier verifisert på Vercel
+### Oppdaterte filer
 
-7 JSON-endepunkter testet og bekreftet fungerende.
+orret.json, natur-miljo.json, config.json, page-config.js
+
+---
+
+**Phase 76: Professorhenvendelse & Dashboard-fiks COMPLETE**
+
+Opprettet professorhenvendelse (fagvurdering orret/skygge) som markdown og dashboard-side. Fikset kritisk ContentHeader-bug som odela stats pa 8 sider.
 
 ---
 

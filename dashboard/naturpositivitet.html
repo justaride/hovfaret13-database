@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naturpositivitet & Naturkartlegging - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-hover: #f1f5f9;
+        --bg-subtle: #f9fafb;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --text-accent: #2563eb;
+        --border-color: #e2e8f0;
+        --border-light: #e2e8f0;
+        --success: #22c55e;
+        --success-bg: #dcfce7;
+        --warning: #f59e0b;
+        --warning-bg: #fef3c7;
+        --danger: #ef4444;
+        --danger-bg: #fee2e2;
+        --nature: #16a34a;
+        --nature-bg: #f0fdf4;
+        --radius-sm: 6px;
+        --radius-md: 8px;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.5;
+        font-size: 14px;
+      }
+
+      .auth-wall {
+        position: fixed;
+        inset: 0;
+        background: var(--bg-main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .auth-container {
+        background: var(--bg-card);
+        padding: 2rem;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        text-align: center;
+        max-width: 320px;
+        width: 100%;
+      }
+
+      .auth-container h2 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .auth-container input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .auth-container button {
+        width: 100%;
+        padding: 0.75rem;
+        background: var(--text-accent);
+        color: white;
+        border: none;
+        border-radius: var(--radius-sm);
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .auth-container button:hover {
+        background: #1d4ed8;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .page-header {
+        margin-bottom: 2rem;
+      }
+
+      .breadcrumb {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .breadcrumb a {
+        color: var(--text-accent);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .page-header h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        color: var(--text-secondary);
+      }
+
+      .tabs {
+        display: flex;
+        gap: 0.5rem;
+        border-bottom: 2px solid var(--border-color);
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .tab {
+        padding: 0.75rem 1.25rem;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        transition: all 0.2s;
+        font-family: inherit;
+      }
+
+      .tab:hover {
+        color: var(--text-primary);
+        background: var(--bg-hover);
+      }
+
+      .tab.active {
+        color: var(--nature);
+        border-bottom-color: var(--nature);
+        font-weight: 500;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-header h2 {
+        margin: 0;
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+      }
+
+      .card h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .card .value {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+      }
+
+      .card.nature-accent {
+        border-left: 3px solid var(--nature);
+      }
+
+      .card.danger-accent {
+        border-left: 3px solid var(--danger);
+      }
+
+      .card.warning-accent {
+        border-left: 3px solid var(--warning);
+      }
+
+      .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      .status-badge.proposed {
+        background: var(--warning-bg);
+        color: #d97706;
+      }
+
+      .status-badge.planned {
+        background: #dbeafe;
+        color: #2563eb;
+      }
+
+      .status-badge.se {
+        background: var(--danger-bg);
+        color: #dc2626;
+      }
+
+      .status-badge.fremmedart {
+        background: var(--warning-bg);
+        color: #d97706;
+      }
+
+      .principle-list {
+        list-style: none;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+      }
+
+      .principle-list li {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .principle-list li:last-child {
+        border-bottom: none;
+      }
+
+      .principle-icon {
+        color: var(--nature);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .source-list {
+        list-style: none;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+      }
+
+      .source-list li {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .source-list li:last-child {
+        border-bottom: none;
+      }
+
+      .source-list a {
+        color: var(--text-accent);
+        text-decoration: none;
+      }
+
+      .source-list a:hover {
+        text-decoration: underline;
+      }
+
+      .nin-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+
+      .nin-table th {
+        background: var(--bg-subtle);
+        text-align: left;
+        padding: 0.75rem 1rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .nin-table td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 0.9rem;
+      }
+
+      .nin-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .nin-code {
+        font-family: monospace;
+        background: var(--nature-bg);
+        color: var(--nature);
+        padding: 0.15rem 0.5rem;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+
+      .cross-ref {
+        margin-top: 2rem;
+        padding: 1rem;
+        background: var(--bg-subtle);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+      }
+
+      .cross-ref a {
+        color: var(--text-accent);
+        text-decoration: none;
+      }
+
+      .cross-ref a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .tabs {
+          flex-direction: column;
+          border-bottom: none;
+        }
+
+        .tab {
+          border-bottom: 1px solid var(--border-color);
+          margin-bottom: 0;
+        }
+
+        .tab.active {
+          background: var(--nature);
+          color: white;
+          border-bottom-color: var(--border-color);
+        }
+
+        main {
+          padding: 1rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("naturpositivitet");
+    </script>
+    <div id="auth-wall" class="auth-wall" style="display: none">
+      <div class="auth-container">
+        <h2>Tilgangskontroll</h2>
+        <input type="password" id="password-input" placeholder="Passord" />
+        <button onclick="checkAuth()">Logg inn</button>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <header class="page-header">
+        <nav class="breadcrumb">
+          <a href="index.html">Dashboard</a> / Naturpositivitet
+        </nav>
+        <h1>Naturpositivitet & Naturkartlegging</h1>
+        <p class="subtitle">
+          Nature Positive by 2030 - rammeverk, kartlegging og tiltak for
+          Hovfaret 13
+        </p>
+      </header>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" data-tab="konsept">
+          Konsept
+        </button>
+        <button class="tab" role="tab" data-tab="fremmedarter">
+          Fremmedarter
+        </button>
+        <button class="tab" role="tab" data-tab="nin">NiN-kartlegging</button>
+        <button class="tab" role="tab" data-tab="tiltak">Tiltak</button>
+        <button class="tab" role="tab" data-tab="sirkular">
+          Sirkulære verdikjeder
+        </button>
+        <button class="tab" role="tab" data-tab="kilder">Kilder</button>
+      </div>
+
+      <!-- KONSEPT -->
+      <section id="konsept" class="tab-content active" role="tabpanel">
+        <div class="section-header">
+          <h2>Nature Positive by 2030</h2>
+        </div>
+        <div
+          id="concept-description"
+          class="card nature-accent"
+          style="margin-bottom: 2rem"
+        >
+          <p>Laster...</p>
+        </div>
+        <h3>Prinsipper</h3>
+        <ul class="principle-list" id="principles-list"></ul>
+      </section>
+
+      <!-- FREMMEDARTER -->
+      <section id="fremmedarter" class="tab-content" role="tabpanel">
+        <div class="section-header">
+          <h2>Fremmedarter kartlagt</h2>
+        </div>
+        <p
+          style="color: var(--text-secondary); margin-bottom: 1.5rem"
+          id="invasive-summary"
+        ></p>
+        <div class="card-grid" id="invasive-species-grid"></div>
+
+        <h3 style="margin-top: 2rem">Tidligere dokumenterte fremmedarter</h3>
+        <div class="card-grid" id="previously-documented-grid"></div>
+      </section>
+
+      <!-- NiN-KARTLEGGING -->
+      <section id="nin" class="tab-content" role="tabpanel">
+        <div class="section-header">
+          <h2>NiN-kartlegging (Natur i Norge)</h2>
+        </div>
+        <p
+          style="color: var(--text-secondary); margin-bottom: 1.5rem"
+          id="nin-description"
+        ></p>
+        <table class="nin-table" id="nin-table">
+          <thead>
+            <tr>
+              <th>NiN-kode</th>
+              <th>Naturtype</th>
+              <th>Beskrivelse</th>
+              <th>Andel</th>
+              <th>Verdi</th>
+            </tr>
+          </thead>
+          <tbody id="nin-tbody"></tbody>
+        </table>
+      </section>
+
+      <!-- TILTAK -->
+      <section id="tiltak" class="tab-content" role="tabpanel">
+        <div class="section-header">
+          <h2>Biodiversitetstiltak</h2>
+        </div>
+        <div class="card-grid" id="measures-grid"></div>
+      </section>
+
+      <!-- SIRKULÆRE VERDIKJEDER -->
+      <section id="sirkular" class="tab-content" role="tabpanel">
+        <div class="section-header">
+          <h2 id="circular-title">Sirkulære verdikjeder</h2>
+        </div>
+        <div
+          class="card nature-accent"
+          style="margin-bottom: 2rem"
+          id="circular-description"
+        >
+          <p>Laster...</p>
+        </div>
+        <h3>Prinsipper</h3>
+        <ul class="principle-list" id="circular-principles"></ul>
+
+        <h3 style="margin-top: 2rem">Kobling til prosjektet</h3>
+        <div class="card-grid" id="circular-connection"></div>
+      </section>
+
+      <!-- KILDER -->
+      <section id="kilder" class="tab-content" role="tabpanel">
+        <div class="section-header">
+          <h2>Kildemateriale</h2>
+        </div>
+        <ul class="source-list" id="source-list"></ul>
+
+        <div class="cross-ref">
+          Relaterte sider:
+          <a href="orret.html">Ørret i Hoffselva</a> |
+          <a href="natur-miljo.html">Natur & Miljø</a> |
+          <a href="sustainability-complete.html">Bærekraft</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const AUTH_PASSWORD = "h13-skøyen-2025";
+      const AUTH_KEY = "h13_auth";
+      const AUTH_DURATION = 24 * 60 * 60 * 1000;
+
+      function checkStoredAuth() {
+        const stored = localStorage.getItem(AUTH_KEY);
+        if (stored) {
+          const { timestamp } = JSON.parse(stored);
+          if (Date.now() - timestamp < AUTH_DURATION) {
+            return true;
+          }
+          localStorage.removeItem(AUTH_KEY);
+        }
+        return false;
+      }
+
+      function checkAuth() {
+        const input = document.getElementById("password-input");
+        if (input.value === AUTH_PASSWORD) {
+          localStorage.setItem(
+            AUTH_KEY,
+            JSON.stringify({ timestamp: Date.now() }),
+          );
+          document.getElementById("auth-wall").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        } else {
+          alert("Feil passord");
+        }
+      }
+
+      function initAuth() {
+        if (checkStoredAuth()) {
+          document.getElementById("auth-wall").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        } else {
+          document.getElementById("auth-wall").style.display = "flex";
+          document.getElementById("main-content").style.display = "none";
+        }
+      }
+
+      document.querySelectorAll(".tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab")
+            .forEach((t) => t.classList.remove("active"));
+          document
+            .querySelectorAll(".tab-content")
+            .forEach((c) => c.classList.remove("active"));
+          tab.classList.add("active");
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+
+      async function loadData() {
+        try {
+          const response = await fetch("data/themes/naturpositivitet.json");
+          const data = await response.json();
+          renderData(data);
+        } catch (error) {
+          console.error("Kunne ikke laste data:", error);
+        }
+      }
+
+      function renderData(data) {
+        if (data.concept) {
+          document.getElementById("concept-description").innerHTML = `
+            <h4>Rammeverk</h4>
+            <div class="value">${data.concept.title}</div>
+            <p>${data.concept.description}</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+              Basert på: ${data.concept.framework}
+            </p>
+          `;
+
+          document.getElementById("principles-list").innerHTML =
+            data.concept.principles
+              .map(
+                (p) => `
+              <li>
+                <span class="principle-icon">&#10003;</span>
+                <span>${p}</span>
+              </li>
+            `,
+              )
+              .join("");
+        }
+
+        if (data.invasive_species) {
+          document.getElementById("invasive-summary").textContent =
+            data.invasive_species.summary;
+
+          document.getElementById("invasive-species-grid").innerHTML =
+            data.invasive_species.species
+              .map(
+                (s) => `
+              <div class="card danger-accent">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                  <h4 style="margin: 0;">${s.risk_category.includes("SE") ? "Svært høy risiko" : "Fremmedart"}</h4>
+                  <span class="status-badge ${s.risk_category.includes("SE") ? "se" : "fremmedart"}">${s.risk_category.includes("SE") ? "SE" : "Fremmedart"}</span>
+                </div>
+                <div class="value">${s.name}</div>
+                <p style="font-style: italic; color: var(--text-muted); margin-bottom: 0.5rem;">${s.latin}</p>
+                <p><strong>Status:</strong> ${s.status}</p>
+                <p><strong>Tiltak:</strong> ${s.action}</p>
+                <p><strong>Metode:</strong> ${s.method}</p>
+              </div>
+            `,
+              )
+              .join("");
+
+          if (data.invasive_species.previously_documented) {
+            document.getElementById("previously-documented-grid").innerHTML =
+              data.invasive_species.previously_documented
+                .map(
+                  (s) => `
+                <div class="card warning-accent">
+                  <h4>Tidligere dokumentert</h4>
+                  <div class="value">${s.name}</div>
+                  <p style="font-style: italic; color: var(--text-muted); margin-bottom: 0.5rem;">${s.latin}</p>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">Kilde: ${s.source}</p>
+                </div>
+              `,
+                )
+                .join("");
+          }
+        }
+
+        if (data.nin_mapping) {
+          document.getElementById("nin-description").textContent =
+            data.nin_mapping.description;
+
+          document.getElementById("nin-tbody").innerHTML =
+            data.nin_mapping.nature_types
+              .map(
+                (nt) => `
+              <tr>
+                <td><span class="nin-code">${nt.code}</span></td>
+                <td><strong>${nt.name}</strong></td>
+                <td>${nt.description}</td>
+                <td>${nt.area_share}</td>
+                <td>${nt.ecological_value}</td>
+              </tr>
+            `,
+              )
+              .join("");
+        }
+
+        if (data.biodiversity_measures) {
+          document.getElementById("measures-grid").innerHTML =
+            data.biodiversity_measures
+              .map(
+                (m) => `
+              <div class="card nature-accent">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                  <h4 style="margin: 0;">Tiltak</h4>
+                  <span class="status-badge ${m.status}">${m.status === "proposed" ? "Foreslått" : "Planlagt"}</span>
+                </div>
+                <div class="value">${m.title}</div>
+                <p>${m.description}</p>
+                ${m.partners ? `<p style="margin-top: 0.5rem; font-size: 0.85rem;"><strong>Partnere:</strong> ${m.partners.join(", ")}</p>` : ""}
+                ${m.species ? `<p style="margin-top: 0.25rem; font-size: 0.85rem;"><strong>Art:</strong> ${m.species}</p>` : ""}
+                ${m.benefit ? `<p style="margin-top: 0.25rem; font-size: 0.85rem; color: var(--nature);"><strong>Gevinst:</strong> ${m.benefit}</p>` : ""}
+              </div>
+            `,
+              )
+              .join("");
+        }
+
+        if (data.circular_value_chains) {
+          const cv = data.circular_value_chains;
+          document.getElementById("circular-description").innerHTML = `
+            <h4>Konsept</h4>
+            <div class="value">${cv.title}</div>
+            <p>${cv.description}</p>
+          `;
+
+          document.getElementById("circular-principles").innerHTML =
+            cv.principles
+              .map(
+                (p) => `
+              <li>
+                <span class="principle-icon">&#9851;</span>
+                <span>${p}</span>
+              </li>
+            `,
+              )
+              .join("");
+
+          if (cv.connection_to_project) {
+            const conn = cv.connection_to_project;
+            document.getElementById("circular-connection").innerHTML = `
+              <div class="card nature-accent">
+                <h4>Rehabilitering vs. riving</h4>
+                <div class="value">80% materialgjenbruk</div>
+                <p>${conn.rehabilitation_vs_demolition}</p>
+              </div>
+              <div class="card nature-accent">
+                <h4>Klimaeffekt</h4>
+                <div class="value">48% CO&#8322;-besparelse</div>
+                <p>${conn.co2_savings}</p>
+              </div>
+              <div class="card nature-accent">
+                <h4>Avfallsreduksjon</h4>
+                <div class="value">85% mindre avfall</div>
+                <p>${conn.waste_reduction}</p>
+              </div>
+            `;
+          }
+        }
+
+        if (data.sources) {
+          document.getElementById("source-list").innerHTML = data.sources
+            .map(
+              (s) => `
+              <li>
+                ${s.url ? `<a href="${s.url}" target="_blank">${s.title}</a>` : `<strong>${s.title}</strong>`}
+                ${s.type ? `<span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 0.5rem;">(${s.type})</span>` : ""}
+                ${s.date ? `<span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 0.5rem;">${s.date}</span>` : ""}
+              </li>
+            `,
+            )
+            .join("");
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initAuth();
+        loadData();
+      });
+
+      document
+        .getElementById("password-input")
+        ?.addEventListener("keypress", (e) => {
+          if (e.key === "Enter") checkAuth();
+        });
+    </script>
+  </body>
+</html>

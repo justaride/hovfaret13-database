@@ -129,14 +129,14 @@
           "relevance": "Kritisk. Ørret trives best ved 13°C og stresser over 20°C.",
           "citations": [
             {
-                "text": "Removing vegetation can lead to undesirable summer temperature increases ranging from 5 to 11°C.",
-                "source": "USDA National Agroforestry Center",
-                "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
+              "text": "Removing vegetation can lead to undesirable summer temperature increases ranging from 5 to 11°C.",
+              "source": "USDA National Agroforestry Center",
+              "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
             },
             {
-                "text": "Water temperatures between approximately 23-25°C are considered lethal for salmon and steelhead.",
-                "source": "WA Dept of Fish & Wildlife",
-                "url": "https://wdfw.wa.gov/sites/default/files/publications/00003/wdfw00003.pdf"
+              "text": "Water temperatures between approximately 23-25°C are considered lethal for salmon and steelhead.",
+              "source": "WA Dept of Fish & Wildlife",
+              "url": "https://wdfw.wa.gov/sites/default/files/publications/00003/wdfw00003.pdf"
             }
           ]
         },
@@ -146,9 +146,9 @@
           "relevance": "Høy.",
           "citations": [
             {
-                "text": "Cold water naturally holds more dissolved oxygen than warm water.",
-                "source": "USGS Water Science School",
-                "url": "https://www.usgs.gov/special-topics/water-science-school/science/dissolved-oxygen-and-water"
+              "text": "Cold water naturally holds more dissolved oxygen than warm water.",
+              "source": "USGS Water Science School",
+              "url": "https://www.usgs.gov/special-topics/water-science-school/science/dissolved-oxygen-and-water"
             }
           ]
         },
@@ -157,10 +157,10 @@
           "effect": "Blandet/Negativt. Bygningsskygge gir ingen tilførsel av insekter/løv (som vegetasjon gjør).",
           "relevance": "Middels.",
           "citations": [
-             {
-                "text": "Riparian vegetation provides essential organic matter (leaves, insects) which drives the aquatic food web.",
-                "source": "USDA National Agroforestry Center",
-                "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
+            {
+              "text": "Riparian vegetation provides essential organic matter (leaves, insects) which drives the aquatic food web.",
+              "source": "USDA National Agroforestry Center",
+              "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
             }
           ]
         },
@@ -170,9 +170,9 @@
           "relevance": "Høy. Må kompenseres.",
           "citations": [
             {
-                "text": "Roots stabilize the trapped sediment and hold riparian soil in place.",
-                "source": "USDA National Agroforestry Center",
-                "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
+              "text": "Roots stabilize the trapped sediment and hold riparian soil in place.",
+              "source": "USDA National Agroforestry Center",
+              "url": "https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html"
             }
           ]
         }
@@ -228,6 +228,12 @@
         "source": "13_Naturmiljoe.pdf",
         "category": "Fremmedarter",
         "text": "Kanadagullris og kornell dominerer kantvegetasjonen og bør fjernes."
+      },
+      {
+        "source": "Eirik Obrestad / Natural State (2026)",
+        "category": "Fremmedarter",
+        "text": "Gravmyrt (Vinca minor) påvist i større forekomster på tomten. Kjempebjørnekjeks (Heracleum mantegazzianum) påvist i små forekomster. Begge krever fjerning.",
+        "ref": "themes/naturpositivitet.json"
       }
     ],
     "external_findings": [
@@ -266,8 +272,15 @@
     },
     {
       "title": "Fjerning av fremmedarter",
-      "description": "Bekjempe kanadagullris og kornell for å gi plass til naturlig flora.",
-      "status": "planned"
+      "description": "Bekjempe kanadagullris, kornell, gravmyrt og kjempebjørnekjeks for å gi plass til naturlig flora. Se også naturpositivitet.json for fullstendig fremmedart-kartlegging.",
+      "status": "planned",
+      "ref": "themes/naturpositivitet.json"
+    },
+    {
+      "title": "Fiskesperre",
+      "description": "Etablering av fiskesperre for å beskytte gyteområder. Biotoptiltak i samråd med ferskvannsbiolog.",
+      "status": "proposed",
+      "ref": "themes/naturpositivitet.json"
     }
   ],
   "sources": [

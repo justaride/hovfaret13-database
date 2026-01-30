@@ -2,6 +2,42 @@
 
 All notable changes to this project database.
 
+## [2.99.0] - 2026-01-29
+
+### Phase 77: Naturpositivitet & Naturkartlegging
+
+**Status:** COMPLETE
+
+#### Ny temafil og dashboardside
+
+Innhold fra PDF av Eirik Obrestad (Natural State) integrert i prosjektdatabasen. Nytt rammeverk for naturpositiv transformasjon.
+
+**Nye filer:**
+
+| Fil                                 | Formal                                                                        |
+| ----------------------------------- | ----------------------------------------------------------------------------- |
+| `data/themes/naturpositivitet.json` | Temafil med NiN-kartlegging, fremmedarter, biodiversitetstiltak, sirkularitet |
+| `dashboard/naturpositivitet.html`   | Dashboard-side med 6 faner                                                    |
+
+**Nytt innhold:**
+
+- Nature Positive by 2030 rammeverk
+- Fremmedarter: Gravmyrt (Vinca minor), Kjempebjornekjeks (Heracleum mantegazzianum)
+- NiN-kartlegging: T37 (asfalt), T40 (endret fastmark), T4-C18 (hogstaudeskog)
+- Biodiversitetstiltak: Regional eng (NIBIO/KVANN), froskedam (spissnutefrosk), fiskesperre
+- Sirkulaere verdikjeder koblet til rehabiliteringsargumentet
+
+**Oppdaterte filer:**
+
+| Fil                            | Endring                                                                  |
+| ------------------------------ | ------------------------------------------------------------------------ |
+| `data/themes/orret.json`       | Lagt til gravmyrt/kjempebjornekjeks i funn og tiltak, fiskesperre-tiltak |
+| `data/themes/natur-miljo.json` | Kryssreferanse til naturpositivitet.json, nytt arbeidsitem               |
+| `data/config.json`             | Naturpositivitet-seksjon, fase 77                                        |
+| `dashboard/lib/page-config.js` | Nav-oppforing under Analyser                                             |
+
+---
+
 ## [2.98.0] - 2026-01-29
 
 ### Phase 76: Professorhenvendelse & Dashboard-fiks

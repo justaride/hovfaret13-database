@@ -5,6 +5,10 @@
     "content_classification": {
       "type": "project_data",
       "deliverable_id": null
+    },
+    "cross_references": {
+      "naturpositivitet": "themes/naturpositivitet.json",
+      "orret": "themes/orret.json"
     }
   },
   "overview": {
@@ -28,6 +32,12 @@
         "task": "Kartlegge Hoffselva-data",
         "status": "not_started",
         "notes": ""
+      },
+      {
+        "id": "w4",
+        "task": "Naturpositivitet og NiN-kartlegging",
+        "status": "in_progress",
+        "notes": "Eirik Obrestad / Natural State har utfort NiN-kartlegging og identifisert fremmedarter. Se naturpositivitet.json."
       }
     ]
   },

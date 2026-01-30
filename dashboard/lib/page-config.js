@@ -196,6 +196,12 @@ const PAGE_CONFIG = {
               href: "miljoeargumentasjon-dokument.html",
             },
             {
+              id: "naturpositivitet",
+              name: "Naturpositivitet",
+              desc: "NiN-kartlegging & tiltak",
+              href: "naturpositivitet.html",
+            },
+            {
               id: "orret",
               name: "Ørret i Hoffselva",
               desc: "Forskningsprosjekt",

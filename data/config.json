@@ -5,7 +5,7 @@
     "last_updated": "2026-01-27",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 75
+    "database_phase": 77
   },
   "auth": {
     "enabled": true,
@@ -156,6 +156,22 @@
     "missing_document_count": 8,
     "themes": 7,
     "audiences": 5
+  },
+  "naturpositivitet": {
+    "status": "in_progress",
+    "content_file": "themes/naturpositivitet.json",
+    "dashboard_page": "naturpositivitet.html",
+    "source": "Eirik Obrestad / Natural State",
+    "sections": [
+      "concept",
+      "invasive_species",
+      "nin_mapping",
+      "biodiversity_measures",
+      "circular_value_chains"
+    ],
+    "nin_types_mapped": 3,
+    "invasive_species_count": 4,
+    "biodiversity_measures_count": 5
   },
   "orret": {
     "status": "not_started",
