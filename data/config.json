@@ -162,6 +162,7 @@
   "dialogmote_2_referat": {
     "status": "complete",
     "content_file": "themes/dialogmote-2-referat.json",
+    "dashboard_page": "dialogmote-2026-01-29.html",
     "meeting_ref": "m_2026-01-29_dialogmote_2_hovfaret_13",
     "source": "Auto-transkripsjon av dialogmøte 29.01.2026",
     "neighbor_concerns_count": 10,
