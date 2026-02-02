@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "title": "Dialogmote #2 — Transkripsjon & Strukturert Referat",
+    "date": "2026-01-29",
+    "created": "2026-02-02",
+    "version": "1.0",
+    "content_classification": {
+      "type": "project_data",
+      "deliverable_id": null,
+      "source_document": "29 JANUAR MOTE MED NABOENE HOVFARET 13 (auto-transkripsjon)",
+      "is_primary_source": true
+    }
+  },
+  "meeting_ref": "m_2026-01-29_dialogmote_2_hovfaret_13",
+  "attendance": {
+    "rsvp_count": 25,
+    "actual_count": "30+",
+    "note": "Forventet 5-6 deltakere, ble over 30 i rommet. Mange naboer hadde spredt ordet seg imellom."
+  },
+  "neighbor_concerns": [
+    {
+      "topic": "Skygge og sol — vintersesong",
+      "speaker_context": "Flere naboer, spesielt fra Hoffsbyen Hageby vestsiden",
+      "detail": "Naboer krever solstudier for november-februar, ikke bare 1. mars til 1. juni som er plan-kravet. Vestsiden av Hoffsbyen Hageby mister sol fra ca. kl 13 i perioden midten av november til februar. En nabo rapporterer 4 minutters gange i skyggen av eksisterende bygg allerede.",
+      "severity": "high"
+    },
+    {
+      "topic": "Byggehøyde — 12 meter ekstra",
+      "speaker_context": "Flere naboer, inkl. Speaker 15 med detaljert spørsmål",
+      "detail": "Tre ekstra etasjer = ca. 12 meter tilleggshøyde pluss heishus (12,5m totalt). Fra nordsiden dobles synlig fasade. Naboer påpeker at rekverk, solskjerming og aktivitet på takterrasse kommer i tillegg — reelt sett 'tre etasjer pluss'.",
+      "severity": "high"
+    },
+    {
+      "topic": "Kløfteffekt (canyon effect)",
+      "speaker_context": "Speaker 13 (erfaren nabo, trolig Hoffsbyen Hageby)",
+      "detail": "Passasjen mellom bygget og småhusbebyggelsen er allerede for smal. Påbygg skaper 'en mørk dal'. Områdeplanen krever nedtrapping mot Hoffselva — prosjektet gjor det motsatte. Krav om 20m fra elvekant til bebyggelse er ikke oppfylt i dag.",
+      "severity": "high"
+    },
+    {
+      "topic": "Biodiversitet og natur ved Hoffselva",
+      "speaker_context": "Speaker 3 (bor tvers over elven), Speaker 8",
+      "detail": "Bekymring for heggehogger, orretbestanden, fugler og insektkorridorer. Uteservering og balkongaktivitet vil forstyrre elvebiotopen. Gronndraget er viktig for dyrenes vandring. Prosjektteam har ikke utredet stoypavirkning pa natur spesifikt.",
+      "severity": "high"
+    },
+    {
+      "topic": "Stoy fra balkonger og uteservering",
+      "speaker_context": "Speaker 6, Speaker 8, Speaker 11",
+      "detail": "Forskjell pa kontorbruk (stille) og boligbruk med balkonger, barn, fest. Uteservering og cafeaktivitet i forste etasje oker stoy. Ikke utredet stoykonsekvens for natur eller naboer.",
+      "severity": "medium"
+    },
+    {
+      "topic": "Parkering",
+      "speaker_context": "Speaker 11 (Skoyen Terrasse)",
+      "detail": "Bekymring for at okt beboermasse overbelaster gjesteparkering i nabolaget. Skoyen Terrasse eier gjesteparkeringen og vil ikke ha overflod fra H13. Prosjektteamet hevder stor kapasitet i kjeller.",
+      "severity": "medium"
+    },
+    {
+      "topic": "Innsyn fra nye etasjer",
+      "speaker_context": "Speaker 7 (bor i nr. 5 i Hoffsbyen Hageby)",
+      "detail": "Nye balkonger og vinduer pa vestsiden mot enebolig-/smahusbebyggelse. Nabovarslet viser kun funksjoner i pabygget — ingen innsyn-illustrasjoner mot smahusene. Naboer etterspor lengdesnitt som viser reelle forhold.",
+      "severity": "medium"
+    },
+    {
+      "topic": "Smahusbebyggelse-kontekst mangler",
+      "speaker_context": "Speaker 6, Speaker 12, Speaker 13",
+      "detail": "Prosjektet viser ikke forholdet til verneverdig smahusbebyggelse i illustrasjonene. Skjaeringspunktet mellom knutepunkt-fortetting og smahusplan er kritisk. Naboer krever perspektivtegninger som inkluderer smahusmiljoet.",
+      "severity": "high"
+    },
+    {
+      "topic": "Invitasjonsprosess og informasjonstilgang",
+      "speaker_context": "Speaker 7, Speaker 3, Speaker 8",
+      "detail": "Flere naboer ble ikke informert om oktober-motet. Nabovarslet sendt 16. desember (juleferie) ga liten reell svartid. Noen som ga innspill ble ikke invitert til tilleggsmotet. Opplevd som selektiv informasjon.",
+      "severity": "medium"
+    },
+    {
+      "topic": "Regulatorisk kaos",
+      "speaker_context": "Speaker 12, Speaker 13, Speaker 2 (Andreas)",
+      "detail": "Omradeplanen er vedtatt men ikke stadfestet pga. statlige innsigelser. Ingen gyldig reguleringsplan eksisterer. Alt krever dispensasjoner 'til botter og spann'. Naboer oppfordrer til forhands-dialog med PBE for prosjektet sokes.",
+      "severity": "medium"
+    }
+  ],
+  "project_team_statements": [
+    {
+      "speaker": "Einar Kleppe Holthe",
+      "topic": "Tidshorisont",
+      "quote_summary": "Ingenting skjer for om ca. 5 ar (fra 2025). Bygget er fullt utleid naringsbygg. Rammesoknad sonderer muligheten, men realisering ligger langt frem."
+    },
+    {
+      "speaker": "Andreas Thorsnes",
+      "topic": "Regulatorisk situasjon",
+      "quote_summary": "Ingen gyldig reguleringsplan pa omradet. PBE forholder seg svakt til omradereguleringen. Dispensasjon kreves 'til botter og spann' for begge planer."
+    },
+    {
+      "speaker": "Einar Kleppe Holthe",
+      "topic": "70-enhets minimumskrav",
+      "quote_summary": "Bydelen sier minimum 70 enheter for at Omsorg+ skal vaere aktuelt — driftsokonomi krever kritisk masse for stottefunksjoner."
+    },
+    {
+      "speaker": "Thomas Thorsen (R21)",
+      "topic": "Hoyder innenfor omradeplan",
+      "quote_summary": "Prosjektet ligger innenfor omradeplanens regulerte hoyde (kote 36/37) og maks 28m over gjennomsnittlig terreng. Heishus er begrenset del av det som stikker opp."
+    },
+    {
+      "speaker": "Einar Kleppe Holthe",
+      "topic": "Samfunnsinteresse vs enkeltinteresse",
+      "quote_summary": "Det er opp til PBE og politikere a avgjore om samfunnsnytten er stor nok til at solforhold for enkeltinteressenter ikke stopper prosjektet. Prosjektet skal belyse konsekvensene sa godt som mulig."
+    },
+    {
+      "speaker": "Einar Kleppe Holthe",
+      "topic": "Riving ville odelegge natur",
+      "quote_summary": "Omradeplanens alternativ (rive og flytte bygget 2m) vil rive opp hele elveleiet og odelegge etablert natur. Prosjektet onsker a bevare den originale biotopen med frosk og orret."
+    },
+    {
+      "speaker": "Thomas Thorsen (R21)",
+      "topic": "Solstudier publiseres",
+      "quote_summary": "Alle solstudier (ca. 100 varianter) legges ut pa hovfaret13.no med adresser pafort for enklere navigering."
+    },
+    {
+      "speaker": "Thomas Thorsen (R21)",
+      "topic": "Rammesoknad tidsplan",
+      "quote_summary": "Saken sendes inn til PBE om ca. 1-2 uker etter at tilleggsinformasjon fra dette motet er innarbeidet."
+    }
+  ],
+  "action_items": [
+    {
+      "description": "Publisere alle solstudier (~100 varianter) pa hovfaret13.no",
+      "responsible": "R21 Arkitekter / Natural State",
+      "status": "pending"
+    },
+    {
+      "description": "Legge til adresser pa soldiagrammene for enklere navigering",
+      "responsible": "R21 Arkitekter",
+      "status": "pending"
+    },
+    {
+      "description": "Lage solstudier for vintersesongen (nov-feb) — utover plan-kravet",
+      "responsible": "R21 Arkitekter",
+      "status": "pending"
+    },
+    {
+      "description": "Lage perspektivtegning fra smahusbebyggelsen som viser reelle storrelsesforhold",
+      "responsible": "R21 Arkitekter",
+      "status": "pending"
+    },
+    {
+      "description": "Lage lengdesnitt som inkluderer smahusbebyggelse pa nordsiden",
+      "responsible": "R21 Arkitekter",
+      "status": "pending"
+    },
+    {
+      "description": "Sende biodiversitets- og stoyhensyn til biolog for profesjonell vurdering",
+      "responsible": "Natural State",
+      "status": "pending"
+    },
+    {
+      "description": "Publisere moterapport og oppsummering pa hovfaret13.no",
+      "responsible": "Natural State",
+      "status": "pending"
+    },
+    {
+      "description": "Vurdere nabolagsfunksjoner i 1. etasje: bibliotek, forsamlingshus, fastighetskontor",
+      "responsible": "Natural State / Urbania",
+      "status": "pending"
+    }
+  ],
+  "community_requests": [
+    {
+      "request": "Bibliotek",
+      "speaker_context": "Speaker 11 (Skoyen Terrasse)",
+      "detail": "Omradet mangler bibliotekstilbud, onskes i forste etasje"
+    },
+    {
+      "request": "Forsamlingshus / nabolagshus",
+      "speaker_context": "Speaker 11",
+      "detail": "Trenger motelokale for lokalmiljoet, ikke flere kafeer. Einar responderte positivt — 'perfekt funksjon i sambruk'."
+    },
+    {
+      "request": "Fastighetskontor",
+      "speaker_context": "Speaker 11",
+      "detail": "Lokalt kontor for eiendomsforvaltning etterspurt"
+    },
+    {
+      "request": "Detaljerte sol/skygge-studier tilgjengelig for alle",
+      "speaker_context": "Flere naboer",
+      "detail": "Alle solstudier onskes publisert med adresser og utvidet tidsperiode (hele aret)"
+    }
+  ],
+  "key_facts_disclosed": [
+    {
+      "fact": "5-ars tidshorisont for noe skjer",
+      "detail": "Bygget er fullt utleid. Konseptutvikling og regulatorisk avklaring tar mange ar."
+    },
+    {
+      "fact": "Minimum 70 enheter for Omsorg+-realisering",
+      "detail": "Oslo kommune krever minimum 70-71 enheter for at driftsokonomi og stottefunksjoner skal vaere lonnsomt."
+    },
+    {
+      "fact": "Regulatorisk kaos — ingen gyldig reguleringsplan",
+      "detail": "Omradeplan vedtatt men ikke stadfestet (statlige innsigelser). Gammel reguleringsplan heller ikke fulgt av PBE. Alt krever dispensasjoner."
+    },
+    {
+      "fact": "Over 30 deltakere (forventet 5-6)",
+      "detail": "Motet var ment som tilleggsmote for ett borettslag, men ryktet spredte seg. Dobbelt-tredobbelt oppmote vs. oktober-motet."
+    },
+    {
+      "fact": "Soknad sendes PBE om 1-2 uker",
+      "detail": "Etter innarbeiding av tilleggsinformasjon fra dette motet."
+    },
+    {
+      "fact": "Fundament designet i 1989 for 3 ekstra etasjer",
+      "detail": "OPAK (original byggherre) la inn reservekapasitet i struktur. 3 etasjer pabygg er allerede dimensjonert i fundamentet."
+    },
+    {
+      "fact": "Riving etter omradeplan ville odelegge elveleiet",
+      "detail": "Omradeplanens krav om a flytte bygget 2m innebarer a rive opp hele kjeller og naturomradet rundt."
+    },
+    {
+      "fact": "Stenhamm Omsorg+ (61 enheter) skal avvikles",
+      "detail": "Bydelen mister 61 omsorgsboliger, noe som gjor behovet akutt — 150-200 nye enheter trengs innen 2050."
+    }
+  ]
+}

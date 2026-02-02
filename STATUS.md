@@ -1,8 +1,8 @@
 # Project Status
 
-**Last Updated:** 2026-01-30
-**Dashboard Version:** 3.00
-**Status:** Phase 78 COMPLETE - Upload 30.01 Integration
+**Last Updated:** 2026-02-02
+**Dashboard Version:** 3.01
+**Status:** Phase 79 COMPLETE - Dialogmøte #2 Transkripsjon
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 **Vercel:** https://hovfaret13-database.vercel.app
 **Auth Password:** `h13-skøyen-2025`
@@ -25,18 +25,26 @@
 
 ## Current Phase
 
-**Phase 78: Upload 30.01 — Dialogmøte #2, Professorhenvendelse & Nabomerknader COMPLETE**
+**Phase 79: Dialogmøte #2 — Transkripsjon & Strukturert Referat COMPLETE**
 
-Integrert 9 filer fra upload 30.01.2026. Tre innholdsområder:
+Integrert full auto-transkripsjon (~863 linjer) fra Dialogmøte #2. Strukturert ekstraksjon:
 
-1. **Dialogmøte #2** (29.01.2026) — Nabomøte med Hoffsbyen Hageby & Hoffsgrenda (~28 deltakere). R21 presenterte sol/skyggediagrammer.
-2. **Professorhenvendelse** — Formell henvendelse til Prof. Asbjørn Vøllestad (UiO) om fagvurdering av skyggeeffekt på sjøørret.
-3. **Nabomerknad** — Merknad fra Sellevold/Fosli (Damliveien 2) mottatt via Byggesaksrådgivning AS.
+- **10 nabobekymringer** (skygge, høyde, kløfteffekt, biodiversitet, støy, parkering, innsyn, småhus-kontekst, informasjonstilgang, regulatorisk)
+- **8 handlingspunkter** (solstudier, perspektivtegninger, biolog-vurdering, m.m.)
+- **4 nabolagsønsker** (bibliotek, forsamlingshus, fastighetskontor, detaljerte solstudier)
+- **8 nøkkelfakta** (5-års horisont, 70 enheter minimum, regulatorisk kaos, 30+ deltakere)
 
 ### Aktive oppfølgingspunkter
 
 - **Professor Vøllestad**: Avventer svar på fagvurdering (sendt 2026-01-29)
 - **Nabomerknad Sellevold/Fosli**: Mottatt, skal behandles
+- **Søknad til PBE**: Skal sendes 1-2 uker etter dialogmøtet (ca. uke 6-7 2026)
+
+---
+
+**Phase 78: Upload 30.01 — Dialogmøte #2, Professorhenvendelse & Nabomerknader COMPLETE**
+
+Integrert 9 filer fra upload 30.01.2026. Tre innholdsområder.
 
 ### Leveranser
 

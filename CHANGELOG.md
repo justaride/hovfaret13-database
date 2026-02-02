@@ -2,6 +2,52 @@
 
 All notable changes to this project database.
 
+## [3.01.0] - 2026-02-02
+
+### Phase 79: Dialogmøte #2 — Transkripsjon & Strukturert Referat
+
+**Status:** COMPLETE
+
+Integrert full auto-transkripsjon (~863 linjer) fra Dialogmøte #2 (29.01.2026). Strukturert ekstraksjon av nabobekymringer, prosjektteam-uttalelser, handlingspunkter og nabolagsønsker.
+
+**Ny temafil:**
+
+| Fil                                     | Innhold                                                                                            |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `data/themes/dialogmote-2-referat.json` | 10 nabobekymringer, 8 prosjektteam-uttalelser, 8 handlingspunkter, 4 nabolagsønsker, 8 nøkkelfakta |
+
+**Oppdatert møtereferat:**
+
+| Endring             | Detalj                 |
+| ------------------- | ---------------------- |
+| `participant_count` | 28 → "30+"             |
+| `topics_discussed`  | 6 → 12 temaer          |
+| `decisions`         | 0 → 5 beslutninger     |
+| `action_items`      | 0 → 8 handlingspunkter |
+| `outcomes`          | 3 → 8 utfall           |
+| `transcript_ref`    | Lenke til ny temafil   |
+
+**Nøkkelfunn fra transkripsjonen:**
+
+- Naboer krever vintersolstudier (nov-feb), ikke bare 1. mars – 1. juni
+- Byggehøyde 12m+ oppfattes som dobling av synlig fasade fra nord
+- Kløfteffekt og manglende nedtrapping mot Hoffselva er hovedbekymring
+- Biodiversitet/støy ved Hoffselva ikke tilstrekkelig utredet
+- Nabolaget ønsker bibliotek og forsamlingshus, ikke kafé
+- Regulatorisk kaos: ingen gyldig reguleringsplan, alt krever dispensasjon
+- 5-års tidshorisont bekreftet av prosjektteamet
+- Minimum 70 enheter nødvendig for Omsorg+-realisering
+
+**Oppdaterte filer:**
+
+| Fil                                     | Endring                                  |
+| --------------------------------------- | ---------------------------------------- |
+| `data/themes/dialogmote-2-referat.json` | NY — strukturert transkripsjon           |
+| `data/meetings.json`                    | Beriket møtereferat m_2026-01-29         |
+| `data/config.json`                      | +dialogmote_2_referat-referanse, fase 79 |
+
+---
+
 ## [3.00.0] - 2026-01-30
 
 ### Phase 78: Upload 30.01 — Dialogmøte #2, Professorhenvendelse & Nabomerknader

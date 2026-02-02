@@ -5553,7 +5553,7 @@
       "organizer": "kamran@naturalstate.no",
       "location": "Hovfaret 13",
       "type": "nabolagsmøte",
-      "participant_count": 28,
+      "participant_count": "30+",
       "participants": [
         {
           "name": "Kamran Surizehi",
@@ -5611,21 +5611,48 @@
         "Omsorg+ konsept og 73 enheter",
         "Sol/skyggediagrammer — R21 Arkitekter",
         "Dispensasjonssøknad og nabovarsel-prosess",
-        "Spørsmål fra naboer",
-        "Videre prosess og tidsplan"
+        "Byggehøyde og kløfteffekt mot småhusbebyggelse",
+        "Biodiversitet og Hoffselva — ørret, frosk, fugler",
+        "Støy fra balkonger og uteservering",
+        "Parkeringshensyn og kapasitet",
+        "Innsyn mot enebolig-/småhusbebyggelse",
+        "Regulatorisk situasjon — ingen gyldig plan",
+        "Nabolagsfunksjoner i 1. etasje (bibliotek, forsamlingshus)",
+        "Videre prosess og tidsplan (5-års horisont)"
       ],
-      "decisions": [],
-      "action_items": [],
+      "decisions": [
+        "Alle solstudier (~100 varianter) skal publiseres på hovfaret13.no med adresser",
+        "Vintersolstudier (nov-feb) skal utarbeides utover plan-kravet",
+        "Perspektivtegninger fra småhusbebyggelse-siden skal lages",
+        "Biodiversitets- og støyhensyn sendes til biolog for fagvurdering",
+        "Nabolagsfunksjoner (bibliotek, forsamlingshus) vurderes for 1. etasje"
+      ],
+      "action_items": [
+        "Publisere alle solstudier på hovfaret13.no med adresser påført",
+        "Lage solstudier for vintersesongen (nov-feb)",
+        "Lage perspektivtegning og lengdesnitt fra småhusbebyggelsen",
+        "Sende biodiversitets-/støyspørsmål til biolog",
+        "Publisere møterapport på hovfaret13.no",
+        "Vurdere bibliotek/forsamlingshus-funksjon i 1. etasje",
+        "Sende søknad til PBE innen 1-2 uker",
+        "Tilgjengeliggjøre saksinnsyn-link på prosjektnettsiden"
+      ],
       "report": {
         "summary": "Andre informasjonsmøte (dialogmøte) for naboer i Hoffsbyen Hageby og Hoffsgrenda/Skøyen Terrasse. Presentasjon av R21 Arkitekter med sol/skyggediagrammer. Ca. 25-28 naboer deltok. Invitasjon sendt via RSVP på hovfaret13.no/dialogmote.",
         "context": "Oppfølging av Dialogmøte #1 (oktober 2025). Utvidet invitasjon til Hoffsgrenda Borettslag. Saksinnsyn referanse 202521699."
       },
-      "summary": "Dialogmøte #2 for naboer fra Hoffsbyen Hageby og Hoffsgrenda. R21 presenterte sol/skyggediagrammer. Ca. 25-28 deltakere. Invitasjon via hovfaret13.no/dialogmote.",
+      "summary": "Dialogmøte #2 for naboer fra Hoffsbyen Hageby, Hoffsgrenda og omliggende borettslag. Over 30 deltakere (forventet 5-6). R21 presenterte sol/skyggediagrammer. Sterkt engasjement fra naboer med bekymringer om skygge, høyde, kløfteffekt, biodiversitet og innsyn. Prosjektteamet bekreftet 5-års tidshorisont og minimum 70 enheter for Omsorg+-realisering. Regulatorisk kaos belyst — ingen gyldig reguleringsplan.",
       "outcomes": [
-        "Naboer fra to borettslag informert om transformasjonsprosjektet",
-        "Sol/skyggediagrammer presentert for første gang i nabomøte",
-        "RSVP-system brukt via hovfaret13.no/dialogmote"
+        "Naboer fra flere borettslag informert om transformasjonsprosjektet",
+        "Sol/skyggediagrammer presentert — naboer krever vinterstudier (nov-feb)",
+        "Sterke bekymringer om byggehøyde (12m+), kløfteffekt og biodiversitet registrert",
+        "Naboer etterspør perspektiver fra småhusbebyggelsen",
+        "Nabolagsfunksjoner (bibliotek, forsamlingshus) foreslått for 1. etasje",
+        "Prosjektteamet bekreftet at søknad sendes PBE om 1-2 uker",
+        "Over 30 deltakere — betydelig høyere enn forventet oppmøte",
+        "Regulatorisk situasjon belyst: ingen gyldig reguleringsplan, alt krever dispensasjon"
       ],
+      "transcript_ref": "themes/dialogmote-2-referat.json",
       "source_file": "upload-2026-01-30"
     }
   ]

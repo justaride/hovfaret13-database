@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.98.0",
+    "version": "2.99.0",
     "created": "2025-12-03",
-    "last_updated": "2026-01-30",
+    "last_updated": "2026-02-02",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 78
+    "database_phase": 79
   },
   "auth": {
     "enabled": true,
@@ -158,6 +158,15 @@
     "missing_document_count": 8,
     "themes": 7,
     "audiences": 5
+  },
+  "dialogmote_2_referat": {
+    "status": "complete",
+    "content_file": "themes/dialogmote-2-referat.json",
+    "meeting_ref": "m_2026-01-29_dialogmote_2_hovfaret_13",
+    "source": "Auto-transkripsjon av dialogmøte 29.01.2026",
+    "neighbor_concerns_count": 10,
+    "action_items_count": 8,
+    "community_requests_count": 4
   },
   "naturpositivitet": {
     "status": "in_progress",
