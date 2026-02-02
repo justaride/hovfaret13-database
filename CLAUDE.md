@@ -1,8 +1,8 @@
 # CLAUDE.md - Project Instructions for Claude Code
 
-## Project: Hovfaret 13 Data Consolidation v3.00
+## Project: Hovfaret 13 Data Consolidation v3.01
 
-Real estate transformation project database. Version 3.00, Phase 78.
+Real estate transformation project database. Version 3.01, Phase 79.
 
 **Auth:** Password `h13-skøyen-2025` (24h localStorage session)
 
@@ -24,7 +24,7 @@ Real estate transformation project database. Version 3.00, Phase 78.
 | Organizations    | 19                                 |
 | Deliverables     | 37 (verifisert)                    |
 | Timeline events  | 34 (10 strategic + 24 operational) |
-| Dashboard pages  | 39 (all auth-protected)            |
+| Dashboard pages  | 40 (all auth-protected)            |
 | Project duration | 21 months                          |
 | Notion databases | 12                                 |
 | Notion records   | 538                                |
@@ -36,21 +36,22 @@ data/
 ├── config.json           # Central config - single source of truth
 ├── project.json          # Building, phases, scenarios
 ├── timeline.json         # Multi-layer timeline (strategic/operational)
-├── meetings.json         # 60 meetings with summaries/outcomes
-├── documents.json        # 271 documents categorized
+├── meetings.json         # 62 meetings with summaries/outcomes
+├── documents.json        # 276 documents categorized
 ├── stakeholders/
-│   ├── organizations.json (16 orgs)
-│   └── people.json       (23 people)
+│   ├── organizations.json (19 orgs)
+│   └── people.json       (27 people)
 └── themes/
     ├── sustainability.json
     ├── regulatory.json
     ├── omsorg-plus.json
-    └── utleie.json
+    ├── utleie.json
+    └── dialogmote-2-referat.json
 
 dashboard/
 ├── auth.js               # Reusable auth module
 ├── index.html            # Main entry point
-└── *.html                # 38 pages total
+└── *.html                # 39 pages total
 ```
 
 ## Working Principles
@@ -104,7 +105,7 @@ npm run sync:dry    # Preview changes
 
 12 databases synced:
 
-- Organizations (16), People (23), Meetings (60), Documents (271)
+- Organizations (19), People (27), Meetings (62), Documents (276)
 - Timeline (32), Deliverables (37), Sustainability (3)
 - Omsorg+ Concept (1), Floors (7), Units (73), Facilities (11), Compliance (5)
 
@@ -134,8 +135,9 @@ npm run sync:dry    # Preview changes
 | Process             | Status         | Date           |
 | ------------------- | -------------- | -------------- |
 | Nabovarsel          | ✅ Complete    | 2025-10-16     |
+| Dialogmøte #2       | ✅ Complete    | 2026-01-29     |
 | Bruksendringssøknad | 🔄 In progress | Target Q4 2025 |
-| Rammesøknad         | ⏳ Not started | Target Q1 2026 |
+| Rammesøknad         | 🔄 In progress | Target Q1 2026 |
 
 ## Quality Checklist
 
