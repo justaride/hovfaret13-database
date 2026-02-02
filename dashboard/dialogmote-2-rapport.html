@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapport — Dialogmøte #2 — Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --green-900: #1a3a2a;
+        --green-800: #1e4d35;
+        --green-700: #276749;
+        --green-600: #2f855a;
+        --green-100: #e6f4ed;
+        --green-50: #f0faf5;
+        --amber-600: #d97706;
+        --amber-100: #fef3c7;
+        --red-600: #dc2626;
+        --red-100: #fee2e2;
+        --blue-600: #2563eb;
+        --blue-100: #dbeafe;
+        --text-primary: #1a202c;
+        --text-secondary: #4a5568;
+        --text-muted: #718096;
+        --border: #e2e8f0;
+      }
+
+      @page {
+        size: A4;
+        margin: 20mm 18mm;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        color: var(--text-primary);
+        line-height: 1.55;
+        font-size: 11pt;
+        background: #fff;
+      }
+
+      .rapport {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 40px 24px;
+      }
+
+      /* Header */
+      .rapport-header {
+        border-bottom: 3px solid var(--green-800);
+        padding-bottom: 20px;
+        margin-bottom: 28px;
+      }
+
+      .rapport-header .label {
+        font-size: 10pt;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--green-700);
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .rapport-header h1 {
+        font-size: 22pt;
+        font-weight: 700;
+        color: var(--green-900);
+        line-height: 1.2;
+        margin-bottom: 6px;
+      }
+
+      .rapport-header .meta {
+        font-size: 10pt;
+        color: var(--text-muted);
+      }
+
+      .rapport-header .meta span + span::before {
+        content: " · ";
+      }
+
+      /* Sections */
+      .section {
+        margin-bottom: 24px;
+        page-break-inside: avoid;
+      }
+
+      .section h2 {
+        font-size: 13pt;
+        font-weight: 700;
+        color: var(--green-800);
+        margin-bottom: 10px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section h3 {
+        font-size: 11pt;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 6px;
+      }
+
+      .section p {
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+      }
+
+      /* Summary box */
+      .summary-box {
+        background: var(--green-50);
+        border-left: 4px solid var(--green-600);
+        padding: 16px 18px;
+        border-radius: 0 6px 6px 0;
+        margin-bottom: 24px;
+      }
+
+      .summary-box p {
+        color: var(--text-primary);
+        margin-bottom: 6px;
+      }
+
+      .summary-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .summary-box strong {
+        color: var(--green-900);
+      }
+
+      /* Concern list */
+      .concern-list {
+        list-style: none;
+        margin-bottom: 8px;
+      }
+
+      .concern-list li {
+        padding: 8px 12px;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+      }
+
+      .concern-list li.high {
+        background: var(--red-100);
+      }
+
+      .concern-list li.medium {
+        background: var(--amber-100);
+      }
+
+      .badge {
+        font-size: 8pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 2px 7px;
+        border-radius: 4px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .badge.high {
+        background: var(--red-600);
+        color: #fff;
+      }
+
+      .badge.medium {
+        background: var(--amber-600);
+        color: #fff;
+      }
+
+      .concern-text {
+        color: var(--text-primary);
+        font-size: 10pt;
+      }
+
+      .concern-text strong {
+        font-weight: 600;
+      }
+
+      .concern-text .detail {
+        color: var(--text-secondary);
+        font-size: 9.5pt;
+      }
+
+      /* Quotes / statements */
+      .statement {
+        padding: 10px 14px;
+        background: var(--green-50);
+        border-radius: 6px;
+        margin-bottom: 8px;
+      }
+
+      .statement .speaker {
+        font-weight: 600;
+        font-size: 9.5pt;
+        color: var(--green-800);
+      }
+
+      .statement .topic {
+        font-size: 9pt;
+        color: var(--text-muted);
+      }
+
+      .statement .quote {
+        font-size: 10pt;
+        color: var(--text-secondary);
+        margin-top: 4px;
+      }
+
+      /* Signals */
+      .signal-list {
+        list-style: disc;
+        padding-left: 20px;
+      }
+
+      .signal-list li {
+        margin-bottom: 4px;
+        color: var(--text-secondary);
+        font-size: 10pt;
+      }
+
+      /* Action items table */
+      .action-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 9.5pt;
+      }
+
+      .action-table th {
+        text-align: left;
+        font-weight: 600;
+        font-size: 9pt;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-muted);
+        padding: 6px 10px;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .action-table td {
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        vertical-align: top;
+      }
+
+      .action-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .action-table .nr {
+        color: var(--text-muted);
+        font-weight: 600;
+        width: 30px;
+      }
+
+      .action-table .ansvarlig {
+        font-size: 9pt;
+        color: var(--green-700);
+        font-weight: 500;
+        width: 160px;
+      }
+
+      /* Next steps */
+      .next-box {
+        background: var(--blue-100);
+        border-left: 4px solid var(--blue-600);
+        padding: 14px 18px;
+        border-radius: 0 6px 6px 0;
+      }
+
+      .next-box p {
+        color: var(--text-primary);
+        margin-bottom: 4px;
+      }
+
+      .next-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Team list */
+      .team-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 24px;
+        font-size: 10pt;
+      }
+
+      .team-grid .person {
+        color: var(--text-secondary);
+      }
+
+      .team-grid .person strong {
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .team-grid .person .role {
+        font-size: 9pt;
+        color: var(--text-muted);
+      }
+
+      /* Footer */
+      .rapport-footer {
+        margin-top: 32px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+        font-size: 8.5pt;
+        color: var(--text-muted);
+        text-align: center;
+      }
+
+      /* Print */
+      @media print {
+        body {
+          font-size: 10pt;
+        }
+
+        .rapport {
+          max-width: none;
+          padding: 0;
+        }
+
+        .section {
+          page-break-inside: avoid;
+        }
+
+        .summary-box,
+        .next-box,
+        .statement,
+        .concern-list li {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rapport">
+      <header class="rapport-header">
+        <div class="label">Hovfaret 13 — Intern prosjektrapport</div>
+        <h1>Rapport fra Dialogmøte #2</h1>
+        <div class="meta">
+          <span>29. januar 2026</span>
+          <span>Hovfaret 13, Skøyen</span>
+          <span>30+ deltakere</span>
+        </div>
+      </header>
+
+      <!-- 1. Sammendrag -->
+      <section class="section">
+        <h2>Sammendrag</h2>
+        <div class="summary-box">
+          <p>
+            <strong>Over 30 naboer møtte opp</strong> — vi forventet 5-6. Møtet
+            var opprinnelig et tilleggsmøte for Hoffsgrenda Borettslag, men
+            invitasjonen spredte seg i nabolaget. Oppmøtet var overraskende
+            stort, men tonen var gjennomgående <strong>konstruktiv</strong>.
+          </p>
+          <p>
+            Bekymringene handlet hovedsakelig om
+            <strong>byggehøyde, sol/skygge og kløfteffekt</strong> mot
+            småhusbebyggelsen. Naboene forstår prosjektets rammer og retning —
+            dette er interesse, ikke motstand.
+          </p>
+          <p>
+            Flere naboer kom med <strong>konkrete ønsker</strong> om
+            nabolagsfunksjoner (bibliotek, forsamlingshus) i 1. etasje, noe som
+            viser at de ser muligheter i prosjektet.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Oppmøte & kontekst -->
+      <section class="section">
+        <h2>Oppmøte og kontekst</h2>
+        <p>
+          Møtet ble holdt i Hovfaret 13 den 29. januar 2026 som oppfølging av
+          Dialogmøte #1 (oktober 2025). Utvidet invitasjon ble sendt til
+          Hoffsgrenda Borettslag via RSVP på hovfaret13.no.
+        </p>
+        <p>
+          Ca. 25 personer bekreftet deltakelse —
+          <strong>over 30 møtte opp</strong>. Mange naboer hadde spredt ordet
+          seg imellom. Deltakerne representerte primært Hoffsbyen Hageby,
+          Hoffsgrenda og Skøyen Terrasse.
+        </p>
+
+        <h3 style="margin-top: 14px">Prosjektteam til stede</h3>
+        <div class="team-grid">
+          <div class="person">
+            <strong>Kamran Surizehi</strong>
+            <span class="role">— Natural State, organisator</span>
+          </div>
+          <div class="person">
+            <strong>Gabriel Bøen Freeman</strong>
+            <span class="role">— Natural State, prosjektleder</span>
+          </div>
+          <div class="person">
+            <strong>Einar Kleppe Holthe</strong>
+            <span class="role">— Natural State, strategi</span>
+          </div>
+          <div class="person">
+            <strong>Thomas Thorsen</strong>
+            <span class="role">— R21 Arkitekter</span>
+          </div>
+          <div class="person">
+            <strong>Andreas Thorsnes</strong>
+            <span class="role">— Urbania, byggherre</span>
+          </div>
+          <div class="person">
+            <strong>Liv Thorsnes</strong>
+            <span class="role">— Byggesaksrådgivning, ans. søker</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Topp-bekymringer -->
+      <section class="section">
+        <h2>Naboenes bekymringer</h2>
+        <p style="margin-bottom: 12px">
+          Bekymringene er prioritert etter alvorlighetsgrad basert på
+          engasjementet i rommet.
+        </p>
+
+        <h3>Hovedbekymringer</h3>
+        <ul class="concern-list">
+          <li class="high">
+            <span class="badge high">Høy</span>
+            <div class="concern-text">
+              <strong>Sol og skygge (vintersesong)</strong><br />
+              <span class="detail"
+                >Naboer krever solstudier for november–februar, ikke bare
+                plan-kravet (mars–juni). Vestsiden av Hoffsbyen Hageby mister
+                sol fra ca. kl. 13 i vinterhalvåret allerede i dag.</span
+              >
+            </div>
+          </li>
+          <li class="high">
+            <span class="badge high">Høy</span>
+            <div class="concern-text">
+              <strong>Byggehøyde — 12 meter ekstra</strong><br />
+              <span class="detail"
+                >Tre etasjer + heishus = ca. 12,5 m tilleggshøyde. Fra nordsiden
+                dobles synlig fasade. Naboer påpeker at rekverk, solskjerming og
+                aktivitet på takterrasse kommer i tillegg.</span
+              >
+            </div>
+          </li>
+          <li class="high">
+            <span class="badge high">Høy</span>
+            <div class="concern-text">
+              <strong>Kløfteffekt (canyon effect)</strong><br />
+              <span class="detail"
+                >Passasjen mellom bygget og småhusene er allerede smal. Påbygg
+                skaper «en mørk dal». Områdeplanen krever nedtrapping mot
+                Hoffselva — prosjektet gjør det motsatte.</span
+              >
+            </div>
+          </li>
+          <li class="high">
+            <span class="badge high">Høy</span>
+            <div class="concern-text">
+              <strong>Biodiversitet ved Hoffselva</strong><br />
+              <span class="detail"
+                >Bekymring for ørretbestanden, fugler og insektkorridorer.
+                Balkongaktivitet og uteservering kan forstyrre elvebiotopen.
+                Grønndraget er viktig for dyrelivet.</span
+              >
+            </div>
+          </li>
+        </ul>
+
+        <h3>Øvrige bekymringer</h3>
+        <ul class="concern-list">
+          <li class="medium">
+            <span class="badge medium">Middels</span>
+            <div class="concern-text">
+              <strong>Støy fra balkonger og uteservering</strong>
+              <span class="detail"
+                >— Forskjell på kontorbruk (stille) og boligbruk med balkonger,
+                barn, fest.</span
+              >
+            </div>
+          </li>
+          <li class="medium">
+            <span class="badge medium">Middels</span>
+            <div class="concern-text">
+              <strong>Parkering</strong>
+              <span class="detail"
+                >— Bekymring for at økt beboermasse overbelaster gjesteparkering
+                i nabolaget.</span
+              >
+            </div>
+          </li>
+          <li class="medium">
+            <span class="badge medium">Middels</span>
+            <div class="concern-text">
+              <strong>Innsyn fra nye etasjer</strong>
+              <span class="detail"
+                >— Nye balkonger og vinduer mot småhusbebyggelse. Naboer
+                etterspør lengdesnitt.</span
+              >
+            </div>
+          </li>
+          <li class="medium">
+            <span class="badge medium">Middels</span>
+            <div class="concern-text">
+              <strong>Invitasjonsprosess</strong>
+              <span class="detail"
+                >— Flere naboer ble ikke informert om oktober-møtet. Nabovarsel
+                i juleferien ga liten svartid.</span
+              >
+            </div>
+          </li>
+          <li class="medium">
+            <span class="badge medium">Middels</span>
+            <div class="concern-text">
+              <strong>Regulatorisk uklarhet</strong>
+              <span class="detail"
+                >— Ingen gyldig reguleringsplan. Alt krever dispensasjoner.
+                Naboer oppfordrer til forhåndsdialog med PBE.</span
+              >
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. Prosjektteamets respons -->
+      <section class="section">
+        <h2>Prosjektteamets respons</h2>
+
+        <div class="statement">
+          <div class="speaker">
+            Einar Kleppe Holthe <span class="topic">— Tidshorisont</span>
+          </div>
+          <div class="quote">
+            Ingenting skjer før om ca. 5 år. Bygget er fullt utleid næringsbygg.
+            Rammesøknad sonderer muligheten, men realisering ligger langt frem.
+          </div>
+        </div>
+
+        <div class="statement">
+          <div class="speaker">
+            Thomas Thorsen, R21 <span class="topic">— Høyder</span>
+          </div>
+          <div class="quote">
+            Prosjektet ligger innenfor områdeplanens regulerte høyde (kote
+            36/37) og maks 28 m over gjennomsnittlig terreng. Heishuset er en
+            begrenset del av det som stikker opp.
+          </div>
+        </div>
+
+        <div class="statement">
+          <div class="speaker">
+            Thomas Thorsen, R21 <span class="topic">— Solstudier</span>
+          </div>
+          <div class="quote">
+            Alle solstudier (~100 varianter) legges ut på hovfaret13.no med
+            adresser påført for enklere navigering.
+          </div>
+        </div>
+
+        <div class="statement">
+          <div class="speaker">
+            Einar Kleppe Holthe <span class="topic">— Riving vs. bevaring</span>
+          </div>
+          <div class="quote">
+            Områdeplanens alternativ — rive og flytte bygget 2 m — ville rive
+            opp hele elveleiet og ødelegge den etablerte naturen med frosk og
+            ørret. Vi ønsker å bevare biotopen.
+          </div>
+        </div>
+
+        <div class="statement">
+          <div class="speaker">
+            Andreas Thorsnes <span class="topic">— Regulatorisk</span>
+          </div>
+          <div class="quote">
+            Ingen gyldig reguleringsplan på området. PBE forholder seg svakt til
+            områdereguleringen. Dispensasjon kreves «til bøtter og spann» for
+            begge planer.
+          </div>
+        </div>
+
+        <div class="statement">
+          <div class="speaker">
+            Einar Kleppe Holthe <span class="topic">— Omsorg+</span>
+          </div>
+          <div class="quote">
+            Bydelen sier minimum 70 enheter for at Omsorg+ skal være aktuelt —
+            driftsøkonomi krever kritisk masse for støttefunksjoner.
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Positive signaler -->
+      <section class="section">
+        <h2>Positive signaler</h2>
+        <ul class="signal-list">
+          <li>
+            Flere naboer uttrykte forståelse for Omsorg+-konseptet og behovet
+            for eldreboliger i bydelen
+          </li>
+          <li>
+            <strong>Bibliotek</strong> etterspurt — området mangler
+            bibliotekstilbud, ønskes i 1. etasje
+          </li>
+          <li>
+            <strong>Forsamlingshus / nabolagshus</strong> — naboer ønsker
+            møtelokale, ikke flere kafeer. Einar responderte positivt: «perfekt
+            funksjon i sambruk»
+          </li>
+          <li>
+            <strong>Fastighetskontor</strong> — lokalt kontor for
+            eiendomsforvaltning etterspurt
+          </li>
+          <li>
+            Tonen var gjennomgående konstruktiv — naboer stilte kritiske
+            spørsmål, men lyttet til svarene
+          </li>
+          <li>
+            Flere uttrykte at de forstår at prosjektet befinner seg i en tidlig
+            fase
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. Action items -->
+      <section class="section">
+        <h2>Oppfølgingspunkter</h2>
+        <table class="action-table">
+          <thead>
+            <tr>
+              <th class="nr">#</th>
+              <th>Oppgave</th>
+              <th>Ansvarlig</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nr">1</td>
+              <td>
+                Publisere alle solstudier (~100 varianter) på hovfaret13.no
+              </td>
+              <td class="ansvarlig">R21 / Natural State</td>
+            </tr>
+            <tr>
+              <td class="nr">2</td>
+              <td>
+                Legge til adresser på soldiagrammene for enklere navigering
+              </td>
+              <td class="ansvarlig">R21 Arkitekter</td>
+            </tr>
+            <tr>
+              <td class="nr">3</td>
+              <td>
+                Lage solstudier for vintersesongen (nov–feb) — utover
+                plan-kravet
+              </td>
+              <td class="ansvarlig">R21 Arkitekter</td>
+            </tr>
+            <tr>
+              <td class="nr">4</td>
+              <td>
+                Lage perspektivtegning fra småhusbebyggelsen som viser reelle
+                størrelsesforhold
+              </td>
+              <td class="ansvarlig">R21 Arkitekter</td>
+            </tr>
+            <tr>
+              <td class="nr">5</td>
+              <td>
+                Lage lengdesnitt som inkluderer småhusbebyggelse på nordsiden
+              </td>
+              <td class="ansvarlig">R21 Arkitekter</td>
+            </tr>
+            <tr>
+              <td class="nr">6</td>
+              <td>
+                Sende biodiversitets- og støyhensyn til biolog for profesjonell
+                vurdering
+              </td>
+              <td class="ansvarlig">Natural State</td>
+            </tr>
+            <tr>
+              <td class="nr">7</td>
+              <td>Publisere møterapport og oppsummering på hovfaret13.no</td>
+              <td class="ansvarlig">Natural State</td>
+            </tr>
+            <tr>
+              <td class="nr">8</td>
+              <td>
+                Vurdere nabolagsfunksjoner i 1. etasje: bibliotek,
+                forsamlingshus, fastighetskontor
+              </td>
+              <td class="ansvarlig">Natural State / Urbania</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 7. Neste steg -->
+      <section class="section">
+        <h2>Neste steg</h2>
+        <div class="next-box">
+          <p>
+            <strong>Rammesøknad sendes til PBE om 1–2 uker</strong> etter at
+            tilleggsinformasjon fra dette møtet er innarbeidet.
+          </p>
+          <p>
+            Alle solstudier og møterapport publiseres på
+            <strong>hovfaret13.no</strong> før innsending.
+          </p>
+          <p>Saksinnsyn-referanse: <strong>202521699</strong></p>
+        </div>
+      </section>
+
+      <!-- 8. Nøkkelfakta -->
+      <section class="section">
+        <h2>Nøkkelfakta som ble delt</h2>
+        <ul class="signal-list">
+          <li>
+            <strong>5-års tidshorisont</strong> — bygget er fullt utleid,
+            konseptutvikling tar mange år
+          </li>
+          <li>
+            <strong>Minimum 70 enheter</strong> for at Omsorg+ skal være
+            driftsøkonomisk mulig
+          </li>
+          <li>
+            <strong>Fundamentet fra 1989</strong> er designet for 3 ekstra
+            etasjer (reservekapasitet i struktur)
+          </li>
+          <li>
+            <strong>Stenhamm Omsorg+ (61 enheter)</strong> skal avvikles —
+            bydelen trenger 150–200 nye enheter innen 2050
+          </li>
+          <li>
+            <strong>Riving etter områdeplanen</strong> ville ødelegge hele
+            elveleiet og etablert natur
+          </li>
+        </ul>
+      </section>
+
+      <footer class="rapport-footer">
+        Hovfaret 13 — Natural State AS — Intern prosjektrapport — Februar 2026
+      </footer>
+    </div>
+  </body>
+</html>
