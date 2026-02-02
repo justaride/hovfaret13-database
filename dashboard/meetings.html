@@ -1156,6 +1156,11 @@
           `
               : ""
           }
+          ${
+            meeting.transcript_ref
+              ? `<a href="dialogmote-2-rapport.html" style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:#1e4d35;color:#fff;border-radius:6px;font-size:0.78rem;font-weight:600;text-decoration:none;margin-top:10px;transition:background 0.15s" onmouseover="this.style.background='#276749'" onmouseout="this.style.background='#1e4d35'">&#x1F4C4; Last ned prosjektrapport (utskrivbar)</a>`
+              : ""
+          }
         </div>
       `;
 
