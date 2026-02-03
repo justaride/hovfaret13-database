@@ -24,7 +24,7 @@ Real estate transformation project database. Version 3.01, Phase 79.
 | Organizations    | 19                                 |
 | Deliverables     | 37 (verifisert)                    |
 | Timeline events  | 34 (10 strategic + 24 operational) |
-| Dashboard pages  | 40 (all auth-protected)            |
+| Dashboard pages  | 41 (all auth-protected)            |
 | Project duration | 21 months                          |
 | Notion databases | 12                                 |
 | Notion records   | 538                                |

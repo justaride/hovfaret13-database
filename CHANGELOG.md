@@ -2,6 +2,25 @@
 
 All notable changes to this project database.
 
+## [3.01.1] - 2026-02-03
+
+### Dialogmøte #2 — Utskrivbar prosjektrapport
+
+**Ny side:**
+
+| Fil                                   | Innhold                                                                |
+| ------------------------------------- | ---------------------------------------------------------------------- |
+| `dashboard/dialogmote-2-rapport.html` | Utskrivbar A4-rapport fra dialogmøte #2 for deling med prosjektgruppen |
+
+**Endringer:**
+
+- Rapport-link lagt til i `dashboard/dialogmote-2026-01-29.html` (møtesiden)
+- Rapport-link lagt til i `dashboard/meetings.html` detaljvisning for møter med `transcript_ref`
+- Fikset scroll-bug i meetings-panelet (`min-height: 0` på flex-children)
+- Dashboard pages: 39 → 40
+
+---
+
 ## [3.01.0] - 2026-02-02
 
 ### Phase 79: Dialogmøte #2 — Transkripsjon & Strukturert Referat
