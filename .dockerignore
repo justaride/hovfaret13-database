@@ -1,0 +1,17 @@
+node_modules
+.git
+.github
+.vercel
+.claude
+.backups
+source
+scripts
+analysis
+ai_db_output
+notion-sync
+*.md
+!dashboard/**/*.md
+*.py
+.DS_Store
+Hovfaret 13  - Klima , Miljø, Bærekraft
+documents
