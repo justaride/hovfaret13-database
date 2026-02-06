@@ -3,8 +3,8 @@
 **Last Updated:** 2026-02-03
 **Dashboard Version:** 3.01.1
 **Status:** Phase 79 COMPLETE - Dialogmøte #2 Transkripsjon + Prosjektrapport
+**Coolify:** https://hovfaret13.naturalstateproject.com
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
-**Vercel:** https://hovfaret13-database.vercel.app
 **Auth Password:** `h13-skøyen-2025`
 
 ---

@@ -18,6 +18,7 @@ All notable changes to this project database.
 - Rapport-link lagt til i `dashboard/meetings.html` detaljvisning for møter med `transcript_ref`
 - Fikset scroll-bug i meetings-panelet (`min-height: 0` på flex-children)
 - Dashboard pages: 39 → 40
+- Migrert hosting fra Vercel til Coolify (self-hosted på cloudbrain-server)
 
 ---
 
