@@ -54,55 +54,6 @@
         font-size: 14px;
       }
 
-      .auth-wall {
-        position: fixed;
-        inset: 0;
-        background: var(--bg-main);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-      }
-
-      .auth-container {
-        background: var(--bg-card);
-        padding: 2rem;
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-md);
-        text-align: center;
-        max-width: 320px;
-        width: 100%;
-      }
-
-      .auth-container h2 {
-        margin-bottom: 1rem;
-        font-size: 1.25rem;
-      }
-
-      .auth-container input {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-sm);
-        margin-bottom: 1rem;
-        font-size: 1rem;
-      }
-
-      .auth-container button {
-        width: 100%;
-        padding: 0.75rem;
-        background: var(--text-accent);
-        color: white;
-        border: none;
-        border-radius: var(--radius-sm);
-        font-size: 1rem;
-        cursor: pointer;
-      }
-
-      .auth-container button:hover {
-        background: #1d4ed8;
-      }
-
       main {
         max-width: 1200px;
         margin: 0 auto;
@@ -333,21 +284,13 @@
     <script>
       ContentHeader.inject("orret");
     </script>
-    <div id="auth-wall" class="auth-wall" style="display: none">
-      <div class="auth-container">
-        <h2>Tilgangskontroll</h2>
-        <input type="password" id="password-input" placeholder="Passord" />
-        <button onclick="checkAuth()">Logg inn</button>
-      </div>
-    </div>
-
     <main id="main-content">
       <header class="page-header">
-        <nav class="breadcrumb">
-          <a href="index.html">Dashboard</a> / Ørret
-        </nav>
+        <nav class="breadcrumb"><a href="index.html">Dashboard</a> / Ørret</nav>
         <h1>Ørret i Hoffselva</h1>
-        <p class="subtitle">Forskningsprosjekt og kartlegging av ørretbestand</p>
+        <p class="subtitle">
+          Forskningsprosjekt og kartlegging av ørretbestand
+        </p>
       </header>
 
       <div class="tabs" role="tablist">
@@ -367,7 +310,7 @@
         </div>
 
         <div class="key-findings" id="key-findings-container">
-           <!-- Populated by JS -->
+          <!-- Populated by JS -->
         </div>
 
         <h3>Arbeidsoppgaver</h3>
@@ -375,14 +318,16 @@
 
         <h3 style="margin-top: 2rem">Nøkkelfunn</h3>
         <div id="findings-list" class="empty-state">
-          <p>
-            Laster data...
-          </p>
+          <p>Laster data...</p>
         </div>
 
         <h3 style="margin-top: 2rem">Bakgrunn & Innspill</h3>
-        <div id="stakeholder-input" class="conclusion-card" style="margin-top: 1rem;">
-            <p class="empty-state">Laster innspill...</p>
+        <div
+          id="stakeholder-input"
+          class="conclusion-card"
+          style="margin-top: 1rem"
+        >
+          <p class="empty-state">Laster innspill...</p>
         </div>
       </section>
 
@@ -392,11 +337,12 @@
           <h2>Biologi: Ørret (Salmo trutta)</h2>
         </div>
         <div class="finding-card">
-            <h4>Art</h4>
-            <div class="value">Sjøørret / Bekkeørret</div>
-            <p style="margin-top: 0.5rem; color: var(--text-secondary);">
-                Hoffselva huser en stamme av ørret som er avhengig av god vannkvalitet og gyteforhold.
-            </p>
+          <h4>Art</h4>
+          <div class="value">Sjøørret / Bekkeørret</div>
+          <p style="margin-top: 0.5rem; color: var(--text-secondary)">
+            Hoffselva huser en stamme av ørret som er avhengig av god
+            vannkvalitet og gyteforhold.
+          </p>
         </div>
         <!-- More content can be added here -->
       </section>
@@ -408,28 +354,32 @@
         </div>
 
         <h3>Fase 1: Analyse av eksisterende dokumentasjon</h3>
-        <div id="phase-1-analysis" class="work-items" style="margin-bottom: 2rem;">
-            <!-- Populated by JS -->
+        <div
+          id="phase-1-analysis"
+          class="work-items"
+          style="margin-bottom: 2rem"
+        >
+          <!-- Populated by JS -->
         </div>
 
         <div class="diagram-grid">
-            <div>
-                <h3>Interne Kilder (Hovfaret 13 / Hoff Skole)</h3>
-                <ul id="internal-sources-list" class="source-list">
-                    <!-- Populated by JS -->
-                </ul>
-            </div>
-            <div>
-                <h3>Eksterne Databaser & Kilder</h3>
-                <ul id="external-sources-list" class="source-list">
-                    <!-- Populated by JS -->
-                </ul>
-            </div>
+          <div>
+            <h3>Interne Kilder (Hovfaret 13 / Hoff Skole)</h3>
+            <ul id="internal-sources-list" class="source-list">
+              <!-- Populated by JS -->
+            </ul>
+          </div>
+          <div>
+            <h3>Eksterne Databaser & Kilder</h3>
+            <ul id="external-sources-list" class="source-list">
+              <!-- Populated by JS -->
+            </ul>
+          </div>
         </div>
 
         <h3 style="margin-top: 2rem">Feltmetodikk (Fase 2)</h3>
         <div id="research-methods" class="key-findings">
-            <!-- Methods populated by JS or static -->
+          <!-- Methods populated by JS or static -->
         </div>
       </section>
 
@@ -439,7 +389,7 @@
           <h2>Bevaringstiltak</h2>
         </div>
         <div class="empty-state">
-            <p>Tiltaksplan utarbeides etter kartlegging.</p>
+          <p>Tiltaksplan utarbeides etter kartlegging.</p>
         </div>
       </section>
 
@@ -449,52 +399,12 @@
           <h2>Kildemateriale</h2>
         </div>
         <ul class="source-list" id="source-list">
-            <!-- Sources populated by JS -->
+          <!-- Sources populated by JS -->
         </ul>
       </section>
     </main>
 
     <script>
-      const AUTH_PASSWORD = "h13-skøyen-2025";
-      const AUTH_KEY = "h13_auth";
-      const AUTH_DURATION = 24 * 60 * 60 * 1000;
-
-      function checkStoredAuth() {
-        const stored = localStorage.getItem(AUTH_KEY);
-        if (stored) {
-          const { timestamp } = JSON.parse(stored);
-          if (Date.now() - timestamp < AUTH_DURATION) {
-            return true;
-          }
-          localStorage.removeItem(AUTH_KEY);
-        }
-        return false;
-      }
-
-      function checkAuth() {
-        const input = document.getElementById("password-input");
-        if (input.value === AUTH_PASSWORD) {
-          localStorage.setItem(
-            AUTH_KEY,
-            JSON.stringify({ timestamp: Date.now() }),
-          );
-          document.getElementById("auth-wall").style.display = "none";
-          document.getElementById("main-content").style.display = "block";
-        } else {
-          alert("Feil passord");
-        }
-      }
-
-      function initAuth() {
-        if (checkStoredAuth()) {
-          document.getElementById("auth-wall").style.display = "none";
-          document.getElementById("main-content").style.display = "block";
-        } else {
-          document.getElementById("auth-wall").style.display = "flex";
-          document.getElementById("main-content").style.display = "none";
-        }
-      }
-
       document.querySelectorAll(".tab").forEach((tab) => {
         tab.addEventListener("click", () => {
           document
@@ -535,8 +445,8 @@
 
         const findingsList = document.getElementById("findings-list");
         if (data.overview && data.overview.key_findings) {
-             findingsList.classList.remove("empty-state");
-             findingsList.innerHTML = data.overview.key_findings
+          findingsList.classList.remove("empty-state");
+          findingsList.innerHTML = data.overview.key_findings
             .map(
               (finding) => `
           <div class="finding-card">
@@ -550,172 +460,227 @@
 
         const stakeholderInput = document.getElementById("stakeholder-input");
         if (data.stakeholder_input) {
-            stakeholderInput.innerHTML = `
+          stakeholderInput.innerHTML = `
                 <div style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
                     <strong>Fra:</strong> ${data.stakeholder_input.source} <br>
                     <strong>Dato:</strong> ${data.stakeholder_input.date} <br>
                     <strong>Emne:</strong> ${data.stakeholder_input.subject}
                 </div>
                 <ul style="list-style: none; padding: 0;">
-                    ${data.stakeholder_input.concerns.map(c => `
+                    ${data.stakeholder_input.concerns
+                      .map(
+                        (c) => `
                         <li style="margin-bottom: 0.75rem;">
                             <span class="status-badge" style="background: var(--bg-subtle); color: var(--text-secondary); margin-bottom: 0.25rem; display: inline-block;">${c.topic}</span>
                             <p>${c.claim}</p>
                         </li>
-                    `).join("")}
+                    `,
+                      )
+                      .join("")}
                 </ul>
             `;
         }
 
         const sourceList = document.getElementById("source-list");
         if (data.sources) {
-            sourceList.innerHTML = data.sources.map(source => `
+          sourceList.innerHTML = data.sources
+            .map(
+              (source) => `
                 <li>
                     <a href="${source.url}" target="_blank">${source.title}</a>
-                    ${source.date ? `<span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 0.5rem;">(${source.date})</span>` : ''}
+                    ${source.date ? `<span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 0.5rem;">(${source.date})</span>` : ""}
                 </li>
-            `).join("");
+            `,
+            )
+            .join("");
         }
 
         // Research Tab Rendering
         if (data.research) {
-            if (data.research.phase_1_analysis) {
-                document.getElementById("phase-1-analysis").innerHTML = data.research.phase_1_analysis.map(item => `
+          if (data.research.phase_1_analysis) {
+            document.getElementById("phase-1-analysis").innerHTML =
+              data.research.phase_1_analysis
+                .map(
+                  (item) => `
                     <li class="work-item">
-                        <span class="status-badge ${item.status === 'complete' ? 'complete' : 'in-progress'}">
-                            ${item.status === 'complete' ? 'Fullført' : 'Pågår'}
+                        <span class="status-badge ${item.status === "complete" ? "complete" : "in-progress"}">
+                            ${item.status === "complete" ? "Fullført" : "Pågår"}
                         </span>
                         <div style="flex: 1;">
                             <div>${item.task}</div>
-                            ${item.result ? `<small style="color: var(--text-secondary); display: block; margin-top: 0.25rem;">Resultat: ${item.result}</small>` : ''}
+                            ${item.result ? `<small style="color: var(--text-secondary); display: block; margin-top: 0.25rem;">Resultat: ${item.result}</small>` : ""}
                         </div>
                     </li>
-                `).join("");
-            }
+                `,
+                )
+                .join("");
+          }
 
-            if (data.research.documented_findings) {
-                const container = document.createElement("div");
-                container.innerHTML = `<h4 style="margin: 1.5rem 0 1rem 0; color: var(--text-muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Funn fra dokumentgjennomgang (Internt)</h4>`;
-                const grid = document.createElement("div");
-                grid.className = "key-findings";
-                grid.innerHTML = data.research.documented_findings.map(finding => `
+          if (data.research.documented_findings) {
+            const container = document.createElement("div");
+            container.innerHTML = `<h4 style="margin: 1.5rem 0 1rem 0; color: var(--text-muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Funn fra dokumentgjennomgang (Internt)</h4>`;
+            const grid = document.createElement("div");
+            grid.className = "key-findings";
+            grid.innerHTML = data.research.documented_findings
+              .map(
+                (finding) => `
                     <div class="finding-card">
                         <h4>${finding.category}</h4>
                         <div class="value" style="font-size: 1rem; margin-bottom: 0.5rem;">${finding.text}</div>
                         <small style="color: var(--text-muted); font-size: 0.8rem;">Kilde: ${finding.source}</small>
                     </div>
-                `).join("");
-                container.appendChild(grid);
-                
-                // Insert after phase 1 analysis list
-                const phase1List = document.getElementById("phase-1-analysis");
-                if (phase1List.nextSibling) {
-                    phase1List.parentNode.insertBefore(container, phase1List.nextSibling);
-                } else {
-                    phase1List.parentNode.appendChild(container);
-                }
-            }
+                `,
+              )
+              .join("");
+            container.appendChild(grid);
 
-            if (data.research.external_findings) {
-                const container = document.createElement("div");
-                container.innerHTML = `<h4 style="margin: 1.5rem 0 1rem 0; color: var(--text-muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Funn fra eksterne søk</h4>`;
-                const grid = document.createElement("div");
-                grid.className = "key-findings";
-                grid.innerHTML = data.research.external_findings.map(finding => `
+            // Insert after phase 1 analysis list
+            const phase1List = document.getElementById("phase-1-analysis");
+            if (phase1List.nextSibling) {
+              phase1List.parentNode.insertBefore(
+                container,
+                phase1List.nextSibling,
+              );
+            } else {
+              phase1List.parentNode.appendChild(container);
+            }
+          }
+
+          if (data.research.external_findings) {
+            const container = document.createElement("div");
+            container.innerHTML = `<h4 style="margin: 1.5rem 0 1rem 0; color: var(--text-muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">Funn fra eksterne søk</h4>`;
+            const grid = document.createElement("div");
+            grid.className = "key-findings";
+            grid.innerHTML = data.research.external_findings
+              .map(
+                (finding) => `
                     <div class="finding-card" style="border-color: var(--text-accent);">
                         <h4 style="color: var(--text-accent);">${finding.category}</h4>
                         <div class="value" style="font-size: 1rem; margin-bottom: 0.5rem;">${finding.text}</div>
                         <small style="color: var(--text-muted); font-size: 0.8rem;">Kilde: ${finding.source}</small>
                     </div>
-                `).join("");
-                container.appendChild(grid);
-                
-                const phase1List = document.getElementById("phase-1-analysis");
-                phase1List.parentNode.appendChild(container); 
-            }
+                `,
+              )
+              .join("");
+            container.appendChild(grid);
 
-            if (data.research.shadow_impact) {
-                const container = document.createElement("div");
-                container.style.marginTop = "2rem";
-                container.style.padding = "1.5rem";
-                container.style.background = "var(--bg-subtle)";
-                container.style.borderRadius = "var(--radius-md)";
-                container.style.border = "1px solid var(--border-color)";
+            const phase1List = document.getElementById("phase-1-analysis");
+            phase1List.parentNode.appendChild(container);
+          }
 
-                container.innerHTML = `
+          if (data.research.shadow_impact) {
+            const container = document.createElement("div");
+            container.style.marginTop = "2rem";
+            container.style.padding = "1.5rem";
+            container.style.background = "var(--bg-subtle)";
+            container.style.borderRadius = "var(--radius-md)";
+            container.style.border = "1px solid var(--border-color)";
+
+            container.innerHTML = `
                     <h3 style="margin-bottom: 0.5rem;">Hypotese: Skyggeeffekt på ørret</h3>
                     <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">${data.research.shadow_impact.summary}</p>
                     <div class="diagram-grid">
-                        ${data.research.shadow_impact.key_points.map(point => `
+                        ${data.research.shadow_impact.key_points
+                          .map(
+                            (point) => `
                             <div class="finding-card" style="background: var(--bg-card);">
                                 <h4>${point.factor}</h4>
                                 <div class="value" style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary);">${point.effect}</div>
                                 <small style="color: var(--text-muted); display: block; margin-top: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 0.5rem;">Relevans: ${point.relevance}</small>
-                                ${point.citations ? point.citations.map(cit => `
+                                ${
+                                  point.citations
+                                    ? point.citations
+                                        .map(
+                                          (cit) => `
                                     <div style="margin-top: 0.75rem; padding-top: 0.5rem; border-top: 1px dashed var(--border-color);">
                                         <p style="font-size: 0.8rem; color: var(--text-secondary); font-style: italic;">"${cit.text}"</p>
                                         <a href="${cit.url}" target="_blank" style="font-size: 0.75rem; color: var(--text-accent); display: block; margin-top: 0.25rem;">Kilde: ${cit.source}</a>
                                     </div>
-                                `).join("") : ''}
+                                `,
+                                        )
+                                        .join("")
+                                    : ""
+                                }
                             </div>
-                        `).join("")}
+                        `,
+                          )
+                          .join("")}
                     </div>
                 `;
-                
-                // Append after external findings (or phase 1 analysis parent)
-                const phase1List = document.getElementById("phase-1-analysis");
-                phase1List.parentNode.appendChild(container);
-            }
 
-            if (data.research.methods) {
-                 document.getElementById("research-methods").innerHTML = data.research.methods.map(method => `
+            // Append after external findings (or phase 1 analysis parent)
+            const phase1List = document.getElementById("phase-1-analysis");
+            phase1List.parentNode.appendChild(container);
+          }
+
+          if (data.research.methods) {
+            document.getElementById("research-methods").innerHTML =
+              data.research.methods
+                .map(
+                  (method) => `
                     <div class="finding-card">
                         <h4>Metode</h4>
                         <div class="value" style="font-size: 1rem;">${method}</div>
                     </div>
-                 `).join("");
-            }
+                 `,
+                )
+                .join("");
+          }
         }
 
         // Measures Tab Rendering
         if (data.measures) {
-            const measuresContainer = document.querySelector("#measures");
-            // Clear existing content except header
-            const header = measuresContainer.querySelector(".section-header");
-            measuresContainer.innerHTML = "";
-            measuresContainer.appendChild(header);
+          const measuresContainer = document.querySelector("#measures");
+          // Clear existing content except header
+          const header = measuresContainer.querySelector(".section-header");
+          measuresContainer.innerHTML = "";
+          measuresContainer.appendChild(header);
 
-            const grid = document.createElement("div");
-            grid.className = "key-findings"; // Reuse grid style
-            grid.innerHTML = data.measures.map(measure => `
+          const grid = document.createElement("div");
+          grid.className = "key-findings"; // Reuse grid style
+          grid.innerHTML = data.measures
+            .map(
+              (measure) => `
                 <div class="finding-card">
-                    <h4>${measure.status === 'proposed' ? 'Foreslått' : 'Planlagt'}</h4>
+                    <h4>${measure.status === "proposed" ? "Foreslått" : "Planlagt"}</h4>
                     <div class="value" style="font-size: 1.1rem; margin-bottom: 0.5rem;">${measure.title}</div>
                     <p style="font-size: 0.9rem; color: var(--text-secondary);">${measure.description}</p>
                 </div>
-            `).join("");
-            measuresContainer.appendChild(grid);
+            `,
+            )
+            .join("");
+          measuresContainer.appendChild(grid);
         }
 
         if (data.data_gathering_plan) {
-            if (data.data_gathering_plan.internal_sources) {
-                document.getElementById("internal-sources-list").innerHTML = data.data_gathering_plan.internal_sources.map(src => `
+          if (data.data_gathering_plan.internal_sources) {
+            document.getElementById("internal-sources-list").innerHTML =
+              data.data_gathering_plan.internal_sources
+                .map(
+                  (src) => `
                     <li>
                         <strong>${src.name}</strong><br>
                         <small style="color: var(--text-muted)">${src.file}</small><br>
                         <span style="font-size: 0.85rem; color: var(--text-secondary);">${src.relevance}</span>
                     </li>
-                `).join("");
-            }
+                `,
+                )
+                .join("");
+          }
 
-            if (data.data_gathering_plan.external_sources) {
-                document.getElementById("external-sources-list").innerHTML = data.data_gathering_plan.external_sources.map(src => `
+          if (data.data_gathering_plan.external_sources) {
+            document.getElementById("external-sources-list").innerHTML =
+              data.data_gathering_plan.external_sources
+                .map(
+                  (src) => `
                     <li>
                         <a href="${src.url}" target="_blank"><strong>${src.name}</strong></a><br>
                         <span style="font-size: 0.85rem; color: var(--text-secondary);">${src.target_data}</span>
                     </li>
-                `).join("");
-            }
+                `,
+                )
+                .join("");
+          }
         }
       }
 
@@ -729,15 +694,8 @@
       }
 
       document.addEventListener("DOMContentLoaded", () => {
-        initAuth();
         loadData();
       });
-
-      document
-        .getElementById("password-input")
-        ?.addEventListener("keypress", (e) => {
-          if (e.key === "Enter") checkAuth();
-        });
     </script>
   </body>
 </html>

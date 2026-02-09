@@ -56,55 +56,6 @@
         font-size: 14px;
       }
 
-      .auth-wall {
-        position: fixed;
-        inset: 0;
-        background: var(--bg-main);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-      }
-
-      .auth-container {
-        background: var(--bg-card);
-        padding: 2rem;
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-md);
-        text-align: center;
-        max-width: 320px;
-        width: 100%;
-      }
-
-      .auth-container h2 {
-        margin-bottom: 1rem;
-        font-size: 1.25rem;
-      }
-
-      .auth-container input {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-sm);
-        margin-bottom: 1rem;
-        font-size: 1rem;
-      }
-
-      .auth-container button {
-        width: 100%;
-        padding: 0.75rem;
-        background: var(--text-accent);
-        color: white;
-        border: none;
-        border-radius: var(--radius-sm);
-        font-size: 1rem;
-        cursor: pointer;
-      }
-
-      .auth-container button:hover {
-        background: #1d4ed8;
-      }
-
       main {
         max-width: 1400px;
         margin: 0 auto;
@@ -579,14 +530,6 @@
     <script>
       ContentHeader.inject("miljo-argumenter");
     </script>
-    <div id="auth-wall" class="auth-wall" style="display: none">
-      <div class="auth-container">
-        <h2>Tilgangskontroll</h2>
-        <input type="password" id="password-input" placeholder="Passord" />
-        <button onclick="checkAuth()">Logg inn</button>
-      </div>
-    </div>
-
     <main id="main-content">
       <header class="page-header">
         <nav class="breadcrumb">
@@ -652,50 +595,10 @@
     <div class="copy-toast" id="copy-toast">Kopiert til utklippstavle</div>
 
     <script>
-      const AUTH_PASSWORD = "h13-skøyen-2025";
-      const AUTH_KEY = "h13_auth";
-      const AUTH_DURATION = 24 * 60 * 60 * 1000;
-
       let data = null;
       let activeTheme = null;
       let activeAudience = null;
       let searchTerm = "";
-
-      function checkStoredAuth() {
-        const stored = localStorage.getItem(AUTH_KEY);
-        if (stored) {
-          const { timestamp } = JSON.parse(stored);
-          if (Date.now() - timestamp < AUTH_DURATION) {
-            return true;
-          }
-          localStorage.removeItem(AUTH_KEY);
-        }
-        return false;
-      }
-
-      function checkAuth() {
-        const input = document.getElementById("password-input");
-        if (input.value === AUTH_PASSWORD) {
-          localStorage.setItem(
-            AUTH_KEY,
-            JSON.stringify({ timestamp: Date.now() }),
-          );
-          document.getElementById("auth-wall").style.display = "none";
-          document.getElementById("main-content").style.display = "block";
-        } else {
-          alert("Feil passord");
-        }
-      }
-
-      function initAuth() {
-        if (checkStoredAuth()) {
-          document.getElementById("auth-wall").style.display = "none";
-          document.getElementById("main-content").style.display = "block";
-        } else {
-          document.getElementById("auth-wall").style.display = "flex";
-          document.getElementById("main-content").style.display = "none";
-        }
-      }
 
       async function loadData() {
         try {
@@ -944,15 +847,8 @@ ${arg.references.map((r) => r.citation).join("\n")}`;
       });
 
       document.addEventListener("DOMContentLoaded", () => {
-        initAuth();
         loadData();
       });
-
-      document
-        .getElementById("password-input")
-        ?.addEventListener("keypress", (e) => {
-          if (e.key === "Enter") checkAuth();
-        });
     </script>
   </body>
 </html>
