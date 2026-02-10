@@ -208,6 +208,12 @@ const PAGE_CONFIG = {
               href: "nabomerknader.html",
             },
             {
+              id: "nabomerknader-rapport",
+              name: "Nabomerknader Rapport",
+              desc: "Delbar analyse A-G",
+              href: "nabomerknader-rapport.html",
+            },
+            {
               id: "orret",
               name: "Ørret i Hoffselva",
               desc: "Forskningsprosjekt",

@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapport — Analyse av nabomerknader — Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --green-900: #1a3a2a;
+        --green-800: #1e4d35;
+        --green-700: #276749;
+        --green-600: #2f855a;
+        --green-100: #e6f4ed;
+        --green-50: #f0faf5;
+        --amber-700: #b45309;
+        --amber-600: #d97706;
+        --amber-100: #fef3c7;
+        --amber-50: #fffbeb;
+        --red-600: #dc2626;
+        --red-100: #fee2e2;
+        --blue-600: #2563eb;
+        --blue-100: #dbeafe;
+        --text-primary: #1a202c;
+        --text-secondary: #4a5568;
+        --text-muted: #718096;
+        --border: #e2e8f0;
+      }
+
+      @page {
+        size: A4;
+        margin: 20mm 18mm;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        color: var(--text-primary);
+        line-height: 1.55;
+        font-size: 11pt;
+        background: #fff;
+      }
+
+      .rapport {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 40px 24px;
+      }
+
+      .rapport-header {
+        border-bottom: 3px solid var(--green-800);
+        padding-bottom: 20px;
+        margin-bottom: 28px;
+      }
+
+      .rapport-header .label {
+        font-size: 10pt;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--green-700);
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .rapport-header h1 {
+        font-size: 22pt;
+        font-weight: 700;
+        color: var(--green-900);
+        line-height: 1.2;
+        margin-bottom: 6px;
+      }
+
+      .rapport-header .meta {
+        font-size: 10pt;
+        color: var(--text-muted);
+      }
+
+      .rapport-header .meta span + span::before {
+        content: " · ";
+      }
+
+      .print-btn {
+        float: right;
+        margin-top: -36px;
+        padding: 6px 14px;
+        background: var(--green-600);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 9pt;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .print-btn:hover {
+        background: var(--green-800);
+      }
+
+      .section {
+        margin-bottom: 24px;
+        page-break-inside: avoid;
+      }
+
+      .section h2 {
+        font-size: 13pt;
+        font-weight: 700;
+        color: var(--green-800);
+        margin-bottom: 10px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section h3 {
+        font-size: 11pt;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 6px;
+        margin-top: 12px;
+      }
+
+      .section p {
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+      }
+
+      .summary-box {
+        background: var(--green-50);
+        border-left: 4px solid var(--green-600);
+        padding: 16px 18px;
+        border-radius: 0 6px 6px 0;
+        margin-bottom: 24px;
+      }
+
+      .summary-box p {
+        color: var(--text-primary);
+        margin-bottom: 6px;
+      }
+
+      .summary-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .summary-box strong {
+        color: var(--green-900);
+      }
+
+      .amber-box {
+        background: var(--amber-50);
+        border-left: 4px solid var(--amber-600);
+        padding: 12px 16px;
+        border-radius: 0 6px 6px 0;
+        margin-bottom: 12px;
+        margin-top: 8px;
+      }
+
+      .amber-box p {
+        color: var(--text-primary);
+        margin-bottom: 0;
+        font-size: 10pt;
+      }
+
+      .amber-box .amber-label {
+        font-weight: 600;
+        color: var(--amber-700);
+        font-size: 9pt;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 2px;
+      }
+
+      .next-box {
+        background: var(--blue-100);
+        border-left: 4px solid var(--blue-600);
+        padding: 14px 18px;
+        border-radius: 0 6px 6px 0;
+      }
+
+      .next-box p {
+        color: var(--text-primary);
+        margin-bottom: 4px;
+      }
+
+      .next-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .theme-block {
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+      }
+
+      .theme-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .letter-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        background: var(--green-800);
+        color: #fff;
+        font-weight: 700;
+        font-size: 12pt;
+        flex-shrink: 0;
+      }
+
+      .theme-name {
+        font-size: 12pt;
+        font-weight: 700;
+        color: var(--green-900);
+      }
+
+      .theme-freq {
+        font-size: 9pt;
+        color: var(--text-muted);
+        font-weight: 500;
+        margin-left: auto;
+        white-space: nowrap;
+      }
+
+      .freq-bar-wrap {
+        height: 6px;
+        background: var(--border);
+        border-radius: 3px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+
+      .freq-bar {
+        height: 100%;
+        background: var(--green-600);
+        border-radius: 3px;
+        transition: width 0.3s;
+      }
+
+      .theme-sub {
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-top: 8px;
+        margin-bottom: 4px;
+      }
+
+      .theme-concern {
+        color: var(--text-secondary);
+        font-size: 10pt;
+        margin-bottom: 8px;
+      }
+
+      .theme-args {
+        list-style: disc;
+        padding-left: 20px;
+        margin-bottom: 8px;
+      }
+
+      .theme-args li {
+        color: var(--text-secondary);
+        font-size: 10pt;
+        margin-bottom: 4px;
+      }
+
+      .action-list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 8px;
+      }
+
+      .action-list li {
+        color: var(--text-secondary);
+        font-size: 9.5pt;
+        padding: 3px 0;
+        padding-left: 16px;
+        position: relative;
+      }
+
+      .action-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--green-600);
+        font-weight: 600;
+      }
+
+      .minor-theme {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        padding: 4px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 10pt;
+      }
+
+      .minor-theme:last-child {
+        border-bottom: none;
+      }
+
+      .minor-code {
+        font-weight: 600;
+        color: var(--green-800);
+        min-width: 60px;
+      }
+
+      .minor-name {
+        color: var(--text-primary);
+        flex: 1;
+      }
+
+      .minor-freq {
+        color: var(--text-muted);
+        font-size: 9pt;
+        white-space: nowrap;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 9.5pt;
+        margin-bottom: 12px;
+      }
+
+      .data-table th {
+        text-align: left;
+        font-weight: 600;
+        font-size: 9pt;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-muted);
+        padding: 6px 10px;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .data-table td {
+        padding: 6px 10px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        vertical-align: top;
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .data-table .metric-val {
+        font-weight: 600;
+        color: var(--green-800);
+      }
+
+      .badge {
+        display: inline-block;
+        font-size: 7.5pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        padding: 1px 5px;
+        border-radius: 3px;
+        white-space: nowrap;
+      }
+
+      .badge.high {
+        background: var(--red-600);
+        color: #fff;
+      }
+
+      .badge.medium {
+        background: var(--amber-600);
+        color: #fff;
+      }
+
+      .badge.low {
+        background: #e2e8f0;
+        color: var(--text-muted);
+      }
+
+      .badge.theme {
+        background: var(--green-100);
+        color: var(--green-800);
+        font-size: 7pt;
+        margin-right: 2px;
+      }
+
+      .geo-group {
+        margin-bottom: 16px;
+        page-break-inside: avoid;
+      }
+
+      .geo-group h3 {
+        font-size: 10.5pt;
+        font-weight: 600;
+        color: var(--green-800);
+        margin-bottom: 6px;
+        margin-top: 0;
+      }
+
+      .remark-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 9.5pt;
+        align-items: start;
+      }
+
+      .remark-row:last-child {
+        border-bottom: none;
+      }
+
+      .remark-name {
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .remark-addr {
+        font-size: 8.5pt;
+        color: var(--text-muted);
+      }
+
+      .remark-summary {
+        color: var(--text-secondary);
+        font-size: 9pt;
+        margin-top: 2px;
+      }
+
+      .remark-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        justify-content: flex-end;
+      }
+
+      .cross-arg {
+        background: var(--green-50);
+        border-left: 4px solid var(--green-600);
+        padding: 14px 16px;
+        border-radius: 0 6px 6px 0;
+        margin-bottom: 10px;
+      }
+
+      .cross-arg h4 {
+        font-size: 10pt;
+        font-weight: 600;
+        color: var(--green-900);
+        margin-bottom: 4px;
+      }
+
+      .cross-arg p {
+        font-size: 10pt;
+        color: var(--text-secondary);
+        margin-bottom: 0;
+      }
+
+      .signal-list {
+        list-style: disc;
+        padding-left: 20px;
+      }
+
+      .signal-list li {
+        margin-bottom: 4px;
+        color: var(--text-secondary);
+        font-size: 10pt;
+      }
+
+      .rapport-footer {
+        margin-top: 32px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+        font-size: 8.5pt;
+        color: var(--text-muted);
+        text-align: center;
+      }
+
+      @media print {
+        body {
+          font-size: 10pt;
+        }
+
+        .rapport {
+          max-width: none;
+          padding: 0;
+        }
+
+        .no-print {
+          display: none !important;
+        }
+
+        .section {
+          page-break-inside: avoid;
+        }
+
+        .theme-block {
+          page-break-inside: avoid;
+        }
+
+        .geo-group {
+          page-break-inside: avoid;
+        }
+
+        .summary-box,
+        .amber-box,
+        .next-box,
+        .cross-arg,
+        .letter-badge,
+        .badge,
+        .freq-bar {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rapport" id="rapport"></div>
+
+    <script>
+      const THOMAS_THEMES = [
+        { letter: "A", codes: ["SOL"], name: "Sol, dagslys og skygge" },
+        { letter: "B", codes: ["INNSYN"], name: "Innsyn og privatliv" },
+        { letter: "C", codes: ["UTSIKT"], name: "Tap av utsikt" },
+        { letter: "D", codes: ["VERDI"], name: "Verditap på bolig" },
+        {
+          letter: "E",
+          codes: ["VASSDRAG", "NATUR"],
+          name: "Natur, miljø og vassdrag",
+        },
+        { letter: "F", codes: ["DISP"], name: "Plan og dispensasjon" },
+        { letter: "G", codes: ["ALT"], name: "Alternativ uten påbygg" },
+      ];
+
+      const MINOR_THEMES = [
+        "HOYDE",
+        "BOKVAL",
+        "KULTUR",
+        "SAMLET",
+        "BHAGE",
+        "TRAFIKK",
+        "DOK",
+      ];
+
+      const GEO_GROUPS = [
+        {
+          name: "Skøyen Terrasse 2–8 (nedre)",
+          match: (r) =>
+            /Skøyen Terrasse [2-8](?:\b|,)/.test(r.address) &&
+            r.type === "privatperson",
+        },
+        {
+          name: "Skøyen Terrasse 17–19 (øvre)",
+          match: (r) =>
+            /Skøyen Terrasse 1[7-9]\b/.test(r.address) &&
+            r.type === "privatperson",
+        },
+        {
+          name: "Engebrets vei 2–6",
+          match: (r) =>
+            /Engebrets vei/.test(r.address) && r.type === "privatperson",
+        },
+        {
+          name: "Konventveien 69–74",
+          match: (r) =>
+            /Konventveien (6[9]|7[0-4])/.test(r.address) &&
+            r.type === "privatperson",
+        },
+        {
+          name: "Borettslag og foreninger",
+          match: (r) =>
+            r.type === "borettslag" ||
+            r.type === "forening" ||
+            (/Konventveien 39/.test(r.address) && r.type !== "privatperson"),
+        },
+        { name: "Andre", match: () => true },
+      ];
+
+      function esc(s) {
+        const d = document.createElement("div");
+        d.textContent = s;
+        return d.innerHTML;
+      }
+
+      async function init() {
+        const [nabRes, svarRes] = await Promise.all([
+          fetch("data/themes/nabomerknader.json"),
+          fetch("data/themes/nabomerknad-svar.json"),
+        ]);
+        const nab = await nabRes.json();
+        const svar = await svarRes.json();
+
+        const remarks = nab.remarks;
+        const stats = nab.statistics;
+        const taxonomy = nab.theme_taxonomy;
+        const svarThemes = {};
+        svar.themes.forEach((t) => (svarThemes[t.theme_code] = t));
+        const cross = svar.cross_theme_arguments;
+
+        const el = document.getElementById("rapport");
+        el.innerHTML = renderAll(remarks, stats, taxonomy, svarThemes, cross);
+      }
+
+      function renderAll(remarks, stats, taxonomy, svarThemes, cross) {
+        return [
+          renderHeader(),
+          renderSammendrag(stats),
+          renderTemaanalyse(stats, svarThemes),
+          renderDisp(svarThemes, cross),
+          renderSol(svarThemes),
+          renderInnsyn(svarThemes, remarks),
+          renderSubmitters(remarks, taxonomy),
+          renderCrossArgs(cross),
+          renderNesteSteg(),
+          renderFooter(),
+        ].join("");
+      }
+
+      function renderHeader() {
+        return `
+          <header class="rapport-header">
+            <div class="label">Rapport</div>
+            <h1>Analyse av nabomerknader — Hovfaret 13</h1>
+            <div class="meta">
+              <span>PBE saksnr 2025/21699</span>
+              <span>Nabovarsel 2025-10-16</span>
+              <span>52 merknader</span>
+              <span>49 avsendere</span>
+            </div>
+            <button class="print-btn no-print" onclick="window.print()">Skriv ut / PDF</button>
+          </header>`;
+      }
+
+      function renderSammendrag(stats) {
+        return `
+          <section class="section">
+            <h2>Sammendrag</h2>
+            <div class="summary-box">
+              <p><strong>52 merknader fra 49 unike avsendere</strong> fordelt på 15 temaer. Merknadene ble mottatt mellom ${stats.date_range.earliest} og ${stats.date_range.latest}.</p>
+              <p><strong>Sol/skygge er hyppigst</strong> (88% av alle merknader), og 10 merknader har alvorlighetsgrad «høy» — med juridisk funderte innvendinger mot dispensasjon og vassdragsvern.</p>
+              <p><strong>Geografisk konsentrasjon:</strong> ~30 merknader fra Skøyen Terrasse (nedre og øvre rekke). Sterkest motstand fra beboere nærmest bygget.</p>
+              <p>Hovedfunn: sterk konsensus om sol/høyde-bekymringer, juridisk substansielle DISP- og VASSDRAG-innvendinger som krever solid motargumentasjon.</p>
+            </div>
+          </section>`;
+      }
+
+      function renderTemaanalyse(stats, svarThemes) {
+        let html = '<section class="section"><h2>Temaanalyse A–G</h2>';
+
+        const maxFreq = Math.max(
+          ...THOMAS_THEMES.map((t) =>
+            t.codes.reduce((s, c) => s + (stats.theme_frequency[c] || 0), 0),
+          ),
+        );
+
+        THOMAS_THEMES.forEach((t) => {
+          const freq = t.codes.reduce(
+            (s, c) => s + (stats.theme_frequency[c] || 0),
+            0,
+          );
+          const pct = Math.round((freq / maxFreq) * 100);
+          const combined = t.codes.map((c) => svarThemes[c]).filter(Boolean);
+          const primary = combined[0];
+
+          html += `<div class="theme-block">`;
+          html += `<div class="theme-header">
+            <span class="letter-badge">${t.letter}</span>
+            <span class="theme-name">${esc(t.name)}</span>
+            <span class="theme-freq">${freq} merknader</span>
+          </div>`;
+          html += `<div class="freq-bar-wrap"><div class="freq-bar" style="width:${pct}%"></div></div>`;
+
+          if (primary) {
+            const concerns = combined
+              .map((c) => c.concern_summary_no)
+              .join(" ");
+            html += `<div class="theme-sub">Hva sier naboene</div>`;
+            html += `<p class="theme-concern">${esc(concerns)}</p>`;
+
+            html += `<div class="theme-sub">Vår vurdering</div>`;
+            html += `<ul class="theme-args">`;
+            combined.forEach((c) => {
+              c.response_arguments_no.forEach((a) => {
+                html += `<li>${esc(a)}</li>`;
+              });
+            });
+            html += `</ul>`;
+
+            const concessions = combined
+              .filter((c) => c.concessions_no)
+              .map((c) => c.concessions_no);
+            if (concessions.length) {
+              html += `<div class="amber-box">
+                <div class="amber-label">Innrømmelse</div>
+                <p>${esc(concessions.join(" "))}</p>
+              </div>`;
+            }
+
+            const actions = combined.flatMap(
+              (c) => c.recommended_actions || [],
+            );
+            if (actions.length) {
+              html += `<div class="theme-sub">Anbefalte tiltak</div>`;
+              html += `<ul class="action-list">`;
+              actions.forEach((a) => {
+                html += `<li>${esc(a)}</li>`;
+              });
+              html += `</ul>`;
+            }
+          }
+
+          html += `</div>`;
+        });
+
+        html += `<h3 style="margin-top:16px">Øvrige temaer</h3>`;
+        MINOR_THEMES.forEach((code) => {
+          const t = svarThemes[code];
+          if (!t) return;
+          html += `<div class="minor-theme">
+            <span class="minor-code">${code}</span>
+            <span class="minor-name">${esc(t.name_no)}</span>
+            <span class="minor-freq">${t.frequency} merknader</span>
+          </div>`;
+        });
+
+        html += `</section>`;
+        return html;
+      }
+
+      function renderDisp(svarThemes, cross) {
+        const disp = svarThemes["DISP"];
+        const cd = disp.counter_data;
+        const b = cd.pbl_19_2_benefits;
+
+        return `
+          <section class="section">
+            <h2>Dispensasjonsvurdering — PBL § 19-2</h2>
+            <p>${esc(disp.concern_summary_no)}</p>
+
+            <h3>Motargumentasjon</h3>
+            <ul class="theme-args">
+              ${disp.response_arguments_no.map((a) => `<li>${esc(a)}</li>`).join("")}
+            </ul>
+
+            <h3>Kvantifiserte fordeler</h3>
+            <table class="data-table">
+              <thead><tr><th>Måltall</th><th>Verdi</th></tr></thead>
+              <tbody>
+                <tr><td>CO₂-reduksjon</td><td class="metric-val">${b.co2_reduction_percent}% (${b.co2_savings_tonnes} tonn spart)</td></tr>
+                <tr><td>Materialbesparelse</td><td class="metric-val">${b.material_savings_percent}%</td></tr>
+                <tr><td>Omsorg+-boliger</td><td class="metric-val">${b.omsorg_plus_units} enheter</td></tr>
+                <tr><td>Bydelsbehov dekket</td><td class="metric-val">${b.district_need_coverage_percent}% av 160 enheter</td></tr>
+                <tr><td>Avfallsreduksjon</td><td class="metric-val">${b.waste_reduction_percent}%</td></tr>
+                <tr><td>Biodiversitetstiltak</td><td class="metric-val">${b.biodiversity_measures} aktive tiltak</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Planstatus</h3>
+            <p>Områdereguleringsplanen er <strong>vedtatt men IKKE rettskraftig</strong> (stadfestet) grunnet innsigelser fra ${cd.blocking_objections.join(" og ")}. Den rettslige bindingseffekten er svekket.</p>
+            <p>Ny lovgivning: ${esc(cd.ombruk_requirement)}</p>
+
+            <div class="summary-box" style="margin-top:12px">
+              <p><strong>Regulatorisk vakuum:</strong> ${esc(cross.regulatory_vacuum.argument_no)}</p>
+            </div>
+
+            ${
+              disp.concessions_no
+                ? `<div class="amber-box"><div class="amber-label">Innrømmelse</div><p>${esc(disp.concessions_no)}</p></div>`
+                : ""
+            }
+          </section>`;
+      }
+
+      function renderSol(svarThemes) {
+        const sol = svarThemes["SOL"];
+        const cd = sol.counter_data;
+
+        return `
+          <section class="section">
+            <h2>Solvurdering</h2>
+            <p>Sentral problemstilling: vise om eiendommen blir vesentlig berørt av endrede solforhold.</p>
+
+            <h3>Dokumentasjonsstatus</h3>
+            <ul class="theme-args">
+              <li>Gjennomført: ${esc(cd.sol_studies_count)} solstudier for ${esc(cd.seasons_covered)}</li>
+              <li>Forpliktet: ${esc(cd.supplementary_commitment)}</li>
+              <li>${esc(cd.marginal_shadow_note)}</li>
+            </ul>
+
+            <h3>Sammenligningsargument</h3>
+            <p>Rivningsalternativet (områdeplanen) medfører CO₂-utslipp på ${esc(cd.demolition_alternative_co2)}. Den marginale skyggeøkningen fra påbygget må veies mot de massive klimakostnadene ved riving.</p>
+
+            <h3>Forpliktelser fra Dialogmøte #2</h3>
+            <ul class="signal-list">
+              <li>Publisere alle solstudier (~100 varianter) på hovfaret13.no med adresser</li>
+              <li>Utarbeide supplerende solstudier for november–februar</li>
+              <li>Inkludere sammenligningsdiagram: eksisterende skygge vs. etter påbygg</li>
+              <li>Spesifikk solanalyse for barnehagens uteområde</li>
+            </ul>
+
+            ${sol.concessions_no ? `<div class="amber-box"><div class="amber-label">Innrømmelse</div><p>${esc(sol.concessions_no)}</p></div>` : ""}
+          </section>`;
+      }
+
+      function renderInnsyn(svarThemes, remarks) {
+        const innsyn = svarThemes["INNSYN"];
+        const cd = innsyn.counter_data;
+
+        const innsynRemarks = remarks.filter((r) =>
+          r.themes.includes("INNSYN"),
+        );
+
+        return `
+          <section class="section">
+            <h2>Innsynsvurdering</h2>
+            <p>Sentral problemstilling: om innsynsproblematikken øker vesentlig med tre ekstra etasjer.</p>
+
+            <h3>Hvem reiser innsyn</h3>
+            <p>${innsynRemarks.length} merknader nevner innsyn spesifikt:</p>
+            <ul class="signal-list">
+              ${innsynRemarks
+                .map(
+                  (r) =>
+                    `<li><strong>${esc(r.submitter)}</strong>${r.address ? ` — ${esc(r.address)}` : ""}</li>`,
+                )
+                .join("")}
+            </ul>
+
+            <h3>Designtiltak</h3>
+            <ul class="theme-args">
+              ${cd.design_measures.map((m) => `<li>${esc(m)}</li>`).join("")}
+            </ul>
+
+            <h3>Beboerprofil</h3>
+            <p>${esc(cd.occupant_profile)} — rolig aktivitetsmønster med begrenset bruk av balkonger kveld/helg sammenlignet med ordinære boliger.</p>
+
+            <h3>Forpliktet dokumentasjon</h3>
+            <ul class="signal-list">
+              <li>Innsyn-illustrasjoner fra berørte naboeiendommer</li>
+              <li>Lengdesnitt som inkluderer Hoffsbyen Hageby og Engebrets vei</li>
+            </ul>
+
+            ${innsyn.concessions_no ? `<div class="amber-box"><div class="amber-label">Innrømmelse</div><p>${esc(innsyn.concessions_no)}</p></div>` : ""}
+          </section>`;
+      }
+
+      function renderSubmitters(remarks, taxonomy) {
+        let html =
+          '<section class="section"><h2>Hvem sa hva — Avsenderregister</h2>';
+
+        const assigned = new Set();
+
+        GEO_GROUPS.forEach((group) => {
+          const members = remarks.filter((r) => {
+            if (assigned.has(r.id)) return false;
+            return group.match(r);
+          });
+          members.forEach((r) => assigned.add(r.id));
+
+          if (!members.length) return;
+
+          html += `<div class="geo-group">`;
+          html += `<h3>${esc(group.name)} — ${members.length} merknader</h3>`;
+
+          members.forEach((r) => {
+            html += `<div class="remark-row">
+              <div>
+                <span class="remark-name">${esc(r.submitter)}</span>
+                ${r.address ? `<span class="remark-addr"> — ${esc(r.address)}</span>` : ""}
+                <div class="remark-badges" style="margin-top:3px;justify-content:flex-start;">
+                  ${r.themes.map((t) => `<span class="badge theme">${t}</span>`).join("")}
+                </div>
+                ${r.severity === "high" ? `<div class="remark-summary">${esc(r.summary_no)}</div>` : ""}
+              </div>
+              <span class="badge ${r.severity}">${r.severity === "high" ? "Høy" : r.severity === "medium" ? "Middels" : "Lav"}</span>
+            </div>`;
+          });
+
+          html += `</div>`;
+        });
+
+        html += `</section>`;
+        return html;
+      }
+
+      function renderCrossArgs(cross) {
+        const args = [
+          {
+            key: "demolition_comparison",
+            title: "Riving vs. bevaring",
+          },
+          {
+            key: "omsorg_plus_societal_need",
+            title: "Omsorg+ samfunnsbehov",
+          },
+          { key: "circular_economy", title: "Sirkulærøkonomi" },
+          { key: "regulatory_vacuum", title: "Regulatorisk vakuum" },
+        ];
+
+        let html = '<section class="section"><h2>Overordnede argumenter</h2>';
+
+        args.forEach((a) => {
+          const data = cross[a.key];
+          if (!data) return;
+          html += `<div class="cross-arg">
+            <h4>${esc(a.title)}</h4>
+            <p>${esc(data.argument_no)}</p>
+          </div>`;
+        });
+
+        html += `</section>`;
+        return html;
+      }
+
+      function renderNesteSteg() {
+        return `
+          <section class="section">
+            <h2>Neste steg</h2>
+            <div class="next-box">
+              <p><strong>Publisere solstudier</strong> (~100 varianter) på hovfaret13.no med adresser</p>
+              <p><strong>Utarbeide supplerende dokumentasjon:</strong> vinterstudier (nov–feb), perspektivtegninger, lengdesnitt, innsyn-illustrasjoner</p>
+              <p><strong>Sende fagvurdering</strong> fra Prof. Asbjørn Vøllestad (UiO/CEES) om sjøørret og skyggeeffekt</p>
+              <p><strong>Sende følgebrev til PBE</strong> med systematisk § 19-2 redegjørelse og kvantifiserte fordeler</p>
+            </div>
+          </section>`;
+      }
+
+      function renderFooter() {
+        return `<footer class="rapport-footer">Hovfaret 13 — Natural State AS — Prosjektrapport — Februar 2026</footer>`;
+      }
+
+      init();
+    </script>
+  </body>
+</html>
