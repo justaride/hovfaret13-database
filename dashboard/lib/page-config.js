@@ -202,6 +202,12 @@ const PAGE_CONFIG = {
               href: "naturpositivitet.html",
             },
             {
+              id: "nabomerknader",
+              name: "Nabomerknader",
+              desc: "52 merknader analysert",
+              href: "nabomerknader.html",
+            },
+            {
               id: "orret",
               name: "Ørret i Hoffselva",
               desc: "Forskningsprosjekt",

@@ -1,0 +1,1711 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nabomerknader | Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-primary: #f8fafc;
+        --bg-card: #ffffff;
+        --bg-tertiary: #f1f5f9;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --border: #e2e8f0;
+        --green-900: #1a3a2a;
+        --green-800: #1e4d35;
+        --green-700: #276749;
+        --green-600: #2f855a;
+        --green-100: #e6f4ed;
+        --green-50: #f0faf5;
+        --amber-700: #b45309;
+        --amber-600: #d97706;
+        --amber-100: #fef3c7;
+        --amber-50: #fffbeb;
+        --red-700: #b91c1c;
+        --red-600: #dc2626;
+        --red-100: #fee2e2;
+        --red-50: #fef2f2;
+        --blue-600: #2563eb;
+        --blue-100: #dbeafe;
+        --purple-600: #7c3aed;
+        --purple-100: #ede9fe;
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+
+      /* ===== PRINT BUTTON ===== */
+      .print-bar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-print {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: var(--green-800);
+        color: #fff;
+        border: none;
+        border-radius: var(--radius-sm);
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .btn-print:hover {
+        background: var(--green-900);
+      }
+
+      /* ===== KPI CARDS ===== */
+      .kpi-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .kpi-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        text-align: center;
+      }
+
+      .kpi-value {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--green-800);
+        line-height: 1.2;
+      }
+
+      .kpi-value.red {
+        color: var(--red-600);
+      }
+
+      .kpi-label {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-top: 0.25rem;
+      }
+
+      /* ===== SECTION HEADING ===== */
+      .section-heading {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--green-900);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--border);
+      }
+
+      /* ===== CHART CONTAINERS ===== */
+      .charts-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .charts-row-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .chart-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 1.25rem;
+      }
+
+      .chart-title {
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      /* ===== HORIZONTAL BAR CHART ===== */
+      .bar-chart {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .bar-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .bar-label {
+        width: 140px;
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+        flex-shrink: 0;
+        text-align: right;
+      }
+
+      .bar-track {
+        flex: 1;
+        height: 22px;
+        background: var(--bg-tertiary);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .bar-fill {
+        height: 100%;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #fff;
+        transition: width 0.4s ease-out;
+        min-width: 28px;
+      }
+
+      .bar-value-outside {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        width: 28px;
+        text-align: right;
+        flex-shrink: 0;
+      }
+
+      /* ===== DONUT CHART (CSS conic-gradient) ===== */
+      .donut-wrap {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .donut {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        position: relative;
+        flex-shrink: 0;
+      }
+
+      .donut::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 80px;
+        height: 80px;
+        background: var(--bg-card);
+        border-radius: 50%;
+      }
+
+      .donut-legend {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+      }
+
+      .legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      /* ===== THEME RESPONSE CARDS (Accordion) ===== */
+      .theme-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .theme-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+
+      .theme-card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+
+      .theme-card-header:hover {
+        background: var(--bg-tertiary);
+      }
+
+      .theme-badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        background: var(--green-800);
+        color: #fff;
+        flex-shrink: 0;
+        letter-spacing: 0.03em;
+      }
+
+      .theme-name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        flex: 1;
+      }
+
+      .theme-freq-bar {
+        width: 120px;
+        height: 8px;
+        background: var(--bg-tertiary);
+        border-radius: 4px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .theme-freq-fill {
+        height: 100%;
+        border-radius: 4px;
+      }
+
+      .theme-freq-num {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        width: 28px;
+        text-align: right;
+        flex-shrink: 0;
+      }
+
+      .severity-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .severity-high {
+        background: var(--red-600);
+      }
+      .severity-medium {
+        background: var(--amber-600);
+      }
+      .severity-low {
+        background: var(--green-600);
+      }
+
+      .theme-chevron {
+        color: var(--text-muted);
+        transition: transform 0.2s;
+        flex-shrink: 0;
+      }
+
+      .theme-card.open .theme-chevron {
+        transform: rotate(180deg);
+      }
+
+      .theme-card-body {
+        display: none;
+        padding: 0 1rem 1rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .theme-card.open .theme-card-body {
+        display: block;
+      }
+
+      .theme-section-title {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin: 1rem 0 0.5rem;
+      }
+
+      .theme-section-title:first-child {
+        margin-top: 0.75rem;
+      }
+
+      .theme-text {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      .theme-list {
+        list-style: disc;
+        padding-left: 1.25rem;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+      }
+
+      .theme-list li {
+        margin-bottom: 0.35rem;
+        line-height: 1.5;
+      }
+
+      .theme-counter-grid {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.25rem 1rem;
+        font-size: 0.82rem;
+      }
+
+      .counter-key {
+        color: var(--text-muted);
+      }
+      .counter-val {
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+
+      .concession-box {
+        background: var(--amber-50);
+        border-left: 3px solid var(--amber-600);
+        padding: 0.75rem 1rem;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+
+      .evidence-list {
+        list-style: none;
+        font-size: 0.8rem;
+      }
+
+      .evidence-list li {
+        padding: 0.25rem 0;
+        color: var(--blue-600);
+      }
+
+      /* ===== CROSS-THEME ARGUMENT CARDS ===== */
+      .cross-theme-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .cross-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+      }
+
+      .cross-card-title {
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        color: var(--green-900);
+      }
+
+      .cross-card-text {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* ===== RISK MATRIX ===== */
+      .risk-tables {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .risk-table-wrap {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+
+      .risk-table-title {
+        padding: 0.75rem 1rem;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .risk-table-title.strong {
+        background: var(--red-50);
+        color: var(--red-700);
+      }
+
+      .risk-table-title.weak {
+        background: var(--green-50);
+        color: var(--green-700);
+      }
+
+      .risk-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.82rem;
+      }
+
+      .risk-table th {
+        text-align: left;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-muted);
+        border-bottom: 1px solid var(--border);
+        background: var(--bg-tertiary);
+      }
+
+      .risk-table td {
+        padding: 0.5rem 0.75rem;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+      }
+
+      .risk-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .severity-badge {
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 0.15rem 0.5rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .severity-badge.high {
+        background: var(--red-100);
+        color: var(--red-700);
+      }
+
+      .severity-badge.medium {
+        background: var(--amber-100);
+        color: var(--amber-700);
+      }
+
+      .severity-badge.low {
+        background: var(--green-100);
+        color: var(--green-700);
+      }
+
+      /* ===== FILTERS ===== */
+      .filters-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        align-items: center;
+      }
+
+      .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .filter-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .search-input {
+        padding: 0.4rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        font-size: 0.85rem;
+        font-family: inherit;
+        outline: none;
+        width: 200px;
+        transition: border-color 0.2s;
+      }
+
+      .search-input:focus {
+        border-color: var(--blue-600);
+      }
+
+      .toggle-btn {
+        padding: 0.3rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        background: var(--bg-card);
+        font-size: 0.78rem;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.15s;
+        color: var(--text-secondary);
+      }
+
+      .toggle-btn:hover {
+        background: var(--bg-tertiary);
+      }
+
+      .toggle-btn.active {
+        background: var(--green-800);
+        color: #fff;
+        border-color: var(--green-800);
+      }
+
+      .theme-dropdown {
+        position: relative;
+      }
+
+      .theme-dropdown-btn {
+        padding: 0.4rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        background: var(--bg-card);
+        font-size: 0.82rem;
+        font-family: inherit;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+      }
+
+      .theme-dropdown-panel {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-md);
+        z-index: 50;
+        padding: 0.5rem;
+        max-height: 300px;
+        overflow-y: auto;
+        min-width: 220px;
+      }
+
+      .theme-dropdown.open .theme-dropdown-panel {
+        display: block;
+      }
+
+      .theme-check-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .theme-check-item:hover {
+        background: var(--bg-tertiary);
+      }
+
+      .filter-clear {
+        padding: 0.3rem 0.75rem;
+        border: none;
+        background: none;
+        font-size: 0.78rem;
+        color: var(--red-600);
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .filter-clear:hover {
+        text-decoration: underline;
+      }
+
+      /* ===== REMARKS TABLE ===== */
+      .remarks-table-wrap {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+
+      .remarks-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.82rem;
+      }
+
+      .remarks-table th {
+        text-align: left;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-muted);
+        border-bottom: 2px solid var(--border);
+        background: var(--bg-tertiary);
+        position: sticky;
+        top: 0;
+      }
+
+      .remarks-table td {
+        padding: 0.5rem 0.75rem;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        vertical-align: top;
+      }
+
+      .remarks-table tbody tr {
+        cursor: pointer;
+        transition: background 0.1s;
+      }
+
+      .remarks-table tbody tr:hover {
+        background: var(--bg-tertiary);
+      }
+
+      .remarks-table tbody tr.expanded {
+        background: var(--blue-100);
+      }
+
+      .theme-tag {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 600;
+        padding: 0.1rem 0.4rem;
+        border-radius: 3px;
+        background: var(--bg-tertiary);
+        color: var(--text-secondary);
+        margin: 1px 2px;
+      }
+
+      .detail-row {
+        display: none;
+      }
+
+      .detail-row.visible {
+        display: table-row;
+      }
+
+      .detail-row td {
+        padding: 1rem;
+        background: var(--bg-tertiary);
+        border-bottom: 2px solid var(--border);
+      }
+
+      .detail-panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .detail-section h4 {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.5rem;
+      }
+
+      .detail-section p,
+      .detail-section li {
+        font-size: 0.82rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+
+      .detail-section ul {
+        padding-left: 1.25rem;
+      }
+
+      .detail-section li {
+        margin-bottom: 0.25rem;
+      }
+
+      .detail-source {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        word-break: break-all;
+      }
+
+      .no-results {
+        padding: 2rem;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .result-count {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      /* ===== METADATA FOOTER ===== */
+      .meta-footer {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem 2rem;
+      }
+
+      .meta-footer strong {
+        color: var(--text-secondary);
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 900px) {
+        .kpi-row {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .charts-row,
+        .charts-row-3,
+        .cross-theme-grid,
+        .risk-tables {
+          grid-template-columns: 1fr;
+        }
+        .detail-panel {
+          grid-template-columns: 1fr;
+        }
+        .bar-label {
+          width: 100px;
+          font-size: 0.72rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .kpi-row {
+          grid-template-columns: 1fr 1fr;
+        }
+        .main-content {
+          padding: 1rem 0.75rem;
+        }
+        .filters-bar {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .search-input {
+          width: 100%;
+        }
+      }
+
+      /* ===== PRINT STYLES ===== */
+      @page {
+        size: A4;
+        margin: 18mm 15mm;
+      }
+
+      @media print {
+        body {
+          font-size: 10pt;
+          background: #fff;
+        }
+
+        .no-print,
+        .filters-bar,
+        .btn-print,
+        .print-bar,
+        .content-header {
+          display: none !important;
+        }
+
+        .main-content {
+          max-width: none;
+          padding: 0;
+        }
+
+        .chart-card,
+        .kpi-card,
+        .theme-card,
+        .cross-card,
+        .risk-table-wrap,
+        .remarks-table-wrap {
+          break-inside: avoid;
+        }
+
+        .theme-card-body {
+          display: block !important;
+        }
+
+        .theme-chevron {
+          display: none;
+        }
+
+        * {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("nabomerknader");
+    </script>
+
+    <div class="main-content">
+      <!-- 1. Print Button -->
+      <div class="print-bar no-print">
+        <button class="btn-print" onclick="window.print()">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M6 9V2h12v7" />
+            <path
+              d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+            />
+            <rect x="6" y="14" width="12" height="8" />
+          </svg>
+          Last ned PDF
+        </button>
+      </div>
+
+      <!-- 2. KPI Cards -->
+      <div class="kpi-row" id="kpi-row"></div>
+
+      <!-- 3. Charts Section -->
+      <h2 class="section-heading">Tematisk analyse</h2>
+
+      <!-- Row 1: Theme + Geographic -->
+      <div class="charts-row">
+        <div class="chart-card">
+          <div class="chart-title">Temafrekvens (15 temaer)</div>
+          <div class="bar-chart" id="theme-freq-chart"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Geografisk fordeling</div>
+          <div class="bar-chart" id="geo-chart"></div>
+        </div>
+      </div>
+
+      <!-- Row 2: Donuts + Channels -->
+      <div class="charts-row-3">
+        <div class="chart-card">
+          <div class="chart-title">Avsendertype</div>
+          <div class="donut-wrap" id="type-donut"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Alvorlighetsgrad</div>
+          <div class="donut-wrap" id="severity-donut"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Innsendelsekanal</div>
+          <div class="bar-chart" id="channel-chart"></div>
+        </div>
+      </div>
+
+      <!-- 4. Theme Response Cards -->
+      <h2 class="section-heading">Tematiske svar og argumenter</h2>
+      <div class="theme-cards" id="theme-cards"></div>
+
+      <!-- 5. Cross-Theme Arguments -->
+      <h2 class="section-heading">Overordnede argumenter</h2>
+      <div class="cross-theme-grid" id="cross-theme-grid"></div>
+
+      <!-- 6. Risk Assessment -->
+      <h2 class="section-heading">Risikovurdering</h2>
+      <div class="risk-tables" id="risk-tables"></div>
+
+      <!-- 7. Remarks Registry -->
+      <h2 class="section-heading">Register over nabomerknader</h2>
+      <div class="no-print">
+        <div class="filters-bar" id="filters-bar">
+          <div class="filter-group">
+            <span class="filter-label">Tema:</span>
+            <div class="theme-dropdown" id="theme-dropdown">
+              <button
+                class="theme-dropdown-btn"
+                onclick="toggleThemeDropdown()"
+              >
+                Alle temaer
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="theme-dropdown-panel" id="theme-dropdown-panel"></div>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Alvorlighet:</span>
+            <button
+              class="toggle-btn"
+              data-severity="high"
+              onclick="toggleSeverity(this)"
+            >
+              Hoy
+            </button>
+            <button
+              class="toggle-btn"
+              data-severity="medium"
+              onclick="toggleSeverity(this)"
+            >
+              Middels
+            </button>
+            <button
+              class="toggle-btn"
+              data-severity="low"
+              onclick="toggleSeverity(this)"
+            >
+              Lav
+            </button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Type:</span>
+            <button
+              class="toggle-btn"
+              data-type="privatperson"
+              onclick="toggleType(this)"
+            >
+              Privatperson
+            </button>
+            <button
+              class="toggle-btn"
+              data-type="borettslag"
+              onclick="toggleType(this)"
+            >
+              Borettslag
+            </button>
+            <button
+              class="toggle-btn"
+              data-type="forening"
+              onclick="toggleType(this)"
+            >
+              Forening
+            </button>
+          </div>
+          <div class="filter-group">
+            <input
+              type="text"
+              class="search-input"
+              id="search-input"
+              placeholder="Sok etter avsender..."
+              oninput="applyFilters()"
+            />
+          </div>
+          <button class="filter-clear" onclick="clearFilters()">
+            Nullstill
+          </button>
+        </div>
+      </div>
+      <div class="result-count" id="result-count"></div>
+      <div class="remarks-table-wrap">
+        <table class="remarks-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Avsender</th>
+              <th>Adresse</th>
+              <th>Dato</th>
+              <th>Temaer</th>
+              <th>Alvorlighet</th>
+            </tr>
+          </thead>
+          <tbody id="remarks-tbody"></tbody>
+        </table>
+        <div class="no-results" id="no-results" style="display: none">
+          Ingen merknader matcher filteret.
+        </div>
+      </div>
+
+      <!-- 8. Metadata Footer -->
+      <div class="meta-footer" id="meta-footer"></div>
+    </div>
+
+    <script>
+      let NM_DATA = null;
+      let SVAR_DATA = null;
+
+      const FILTER_STATE = {
+        themes: new Set(),
+        severities: new Set(),
+        types: new Set(),
+        search: "",
+      };
+
+      const SEVERITY_LABELS = { high: "Hoy", medium: "Middels", low: "Lav" };
+      const TYPE_LABELS = {
+        privatperson: "Privatperson",
+        borettslag: "Borettslag",
+        forening: "Forening",
+        summary_doc: "Sammendrag",
+      };
+      const CHANNEL_LABELS = {
+        pbe_post_i_sak: "PBE Post i sak",
+        byggesaksradgivning_direct: "Byggesaksradgivning",
+        email_to_pbe: "E-post til PBE",
+        summary_from_byggesaksradgivning: "Sammendrag",
+        email_thread: "E-post-trad",
+      };
+
+      const CROSS_THEME_TITLES = {
+        demolition_comparison: "Riving vs. bevaring",
+        omsorg_plus_societal_need: "Omsorg+ samfunnsbehov",
+        circular_economy: "Sirkulaerokonomi",
+        regulatory_vacuum: "Regulatorisk vakuum",
+      };
+
+      async function loadData() {
+        try {
+          const [nmResp, svarResp] = await Promise.all([
+            fetch("../data/themes/nabomerknader.json"),
+            fetch("../data/themes/nabomerknad-svar.json"),
+          ]);
+          NM_DATA = await nmResp.json();
+          SVAR_DATA = await svarResp.json();
+          renderAll();
+        } catch (e) {
+          document.querySelector(".main-content").innerHTML =
+            '<p style="padding:2rem;color:red;">Feil ved lasting av data: ' +
+            e.message +
+            "</p>";
+        }
+      }
+
+      function renderAll() {
+        renderKPIs();
+        renderThemeFreqChart();
+        renderGeoChart();
+        renderTypeDonut();
+        renderSeverityDonut();
+        renderChannelChart();
+        renderThemeCards();
+        renderCrossTheme();
+        renderRiskTables();
+        renderThemeDropdown();
+        renderRemarks();
+        renderMetaFooter();
+      }
+
+      // ===== KPIs =====
+      function renderKPIs() {
+        const stats = NM_DATA.statistics;
+        const highCount = NM_DATA.remarks.filter(
+          (r) => r.severity === "high",
+        ).length;
+        document.getElementById("kpi-row").innerHTML = [
+          { value: stats.total_submissions, label: "Merknader mottatt" },
+          { value: stats.unique_submitters, label: "Unike avsendere" },
+          {
+            value: Object.keys(stats.theme_frequency).length,
+            label: "Temaer klassifisert",
+          },
+          { value: highCount, label: "Hoy alvorlighetsgrad", red: true },
+        ]
+          .map(
+            (k) => `
+          <div class="kpi-card">
+            <div class="kpi-value${k.red ? " red" : ""}">${k.value}</div>
+            <div class="kpi-label">${k.label}</div>
+          </div>
+        `,
+          )
+          .join("");
+      }
+
+      // ===== THEME FREQUENCY CHART =====
+      function renderThemeFreqChart() {
+        const freq = NM_DATA.statistics.theme_frequency;
+        const sorted = Object.entries(freq).sort((a, b) => b[1] - a[1]);
+        const max = sorted[0][1];
+        const taxonomy = NM_DATA.theme_taxonomy;
+
+        document.getElementById("theme-freq-chart").innerHTML = sorted
+          .map(([code, count]) => {
+            const pct = (count / max) * 100;
+            const hue = 120 - (pct / 100) * 120;
+            const color = `hsl(${hue}, 70%, 45%)`;
+            const name = taxonomy[code]?.name_no || code;
+            return `
+            <div class="bar-row">
+              <div class="bar-label">${name}</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:${pct}%;background:${color}">${count}</div>
+              </div>
+            </div>
+          `;
+          })
+          .join("");
+      }
+
+      // ===== GEOGRAPHIC CHART =====
+      function renderGeoChart() {
+        const geo = NM_DATA.statistics.geographic_distribution;
+        const sorted = Object.entries(geo).sort((a, b) => b[1] - a[1]);
+        const max = sorted[0][1];
+        const colors = [
+          "#2563eb",
+          "#3b82f6",
+          "#60a5fa",
+          "#93c5fd",
+          "#bfdbfe",
+          "#dbeafe",
+          "#e0f2fe",
+          "#f0f9ff",
+          "#f8fafc",
+        ];
+
+        document.getElementById("geo-chart").innerHTML = sorted
+          .map(([area, count], i) => {
+            const pct = (count / max) * 100;
+            return `
+            <div class="bar-row">
+              <div class="bar-label">${area}</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:${pct}%;background:${colors[i] || colors[colors.length - 1]}">${count}</div>
+              </div>
+            </div>
+          `;
+          })
+          .join("");
+      }
+
+      // ===== DONUT: Submitter Type =====
+      function renderTypeDonut() {
+        const byType = NM_DATA.statistics.by_type;
+        const total = Object.values(byType).reduce((a, b) => a + b, 0);
+        const colors = {
+          privatperson: "#2563eb",
+          borettslag: "#7c3aed",
+          forening: "#f59e0b",
+          summary_doc: "#94a3b8",
+        };
+        const entries = Object.entries(byType);
+
+        let gradientParts = [];
+        let cumulative = 0;
+        entries.forEach(([key, val]) => {
+          const pct = (val / total) * 100;
+          gradientParts.push(
+            `${colors[key]} ${cumulative}% ${cumulative + pct}%`,
+          );
+          cumulative += pct;
+        });
+
+        const legendHtml = entries
+          .map(
+            ([key, val]) =>
+              `<div class="legend-item"><div class="legend-dot" style="background:${colors[key]}"></div>${TYPE_LABELS[key] || key}: ${val}</div>`,
+          )
+          .join("");
+
+        document.getElementById("type-donut").innerHTML = `
+          <div class="donut" style="background:conic-gradient(${gradientParts.join(",")})"></div>
+          <div class="donut-legend">${legendHtml}</div>
+        `;
+      }
+
+      // ===== DONUT: Severity =====
+      function renderSeverityDonut() {
+        const remarks = NM_DATA.remarks;
+        const counts = { high: 0, medium: 0, low: 0 };
+        remarks.forEach((r) => {
+          if (counts[r.severity] !== undefined) counts[r.severity]++;
+        });
+        const total = remarks.length;
+        const colors = { high: "#dc2626", medium: "#d97706", low: "#2f855a" };
+        const entries = Object.entries(counts);
+
+        let gradientParts = [];
+        let cumulative = 0;
+        entries.forEach(([key, val]) => {
+          const pct = (val / total) * 100;
+          gradientParts.push(
+            `${colors[key]} ${cumulative}% ${cumulative + pct}%`,
+          );
+          cumulative += pct;
+        });
+
+        const legendHtml = entries
+          .map(
+            ([key, val]) =>
+              `<div class="legend-item"><div class="legend-dot" style="background:${colors[key]}"></div>${SEVERITY_LABELS[key]}: ${val}</div>`,
+          )
+          .join("");
+
+        document.getElementById("severity-donut").innerHTML = `
+          <div class="donut" style="background:conic-gradient(${gradientParts.join(",")})"></div>
+          <div class="donut-legend">${legendHtml}</div>
+        `;
+      }
+
+      // ===== CHANNEL CHART =====
+      function renderChannelChart() {
+        const channels = NM_DATA.statistics.by_channel;
+        const sorted = Object.entries(channels).sort((a, b) => b[1] - a[1]);
+        const max = sorted[0][1];
+
+        document.getElementById("channel-chart").innerHTML = sorted
+          .map(([ch, count]) => {
+            const pct = (count / max) * 100;
+            return `
+            <div class="bar-row">
+              <div class="bar-label">${CHANNEL_LABELS[ch] || ch}</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:${pct}%;background:#6366f1">${count}</div>
+              </div>
+            </div>
+          `;
+          })
+          .join("");
+      }
+
+      // ===== THEME RESPONSE CARDS =====
+      function renderThemeCards() {
+        const themes = SVAR_DATA.themes;
+        const maxFreq = Math.max(...themes.map((t) => t.frequency));
+
+        document.getElementById("theme-cards").innerHTML = themes
+          .map((t) => {
+            const pct = (t.frequency / maxFreq) * 100;
+            const severityClass =
+              pct >= 70 ? "high" : pct >= 40 ? "medium" : "low";
+            const barColor =
+              severityClass === "high"
+                ? "var(--red-600)"
+                : severityClass === "medium"
+                  ? "var(--amber-600)"
+                  : "var(--green-600)";
+
+            const counterHtml = t.counter_data
+              ? Object.entries(t.counter_data)
+                  .filter(([k, v]) => typeof v !== "object")
+                  .map(
+                    ([k, v]) =>
+                      `<div class="counter-key">${k.replace(/_/g, " ")}</div><div class="counter-val">${v}</div>`,
+                  )
+                  .join("")
+              : "";
+
+            const actionsHtml = t.recommended_actions
+              ? `<ul class="theme-list">${t.recommended_actions.map((a) => `<li>${a}</li>`).join("")}</ul>`
+              : "";
+
+            const evidenceHtml = t.evidence_refs
+              ? `<ul class="evidence-list">${t.evidence_refs.map((e) => `<li>${e}</li>`).join("")}</ul>`
+              : "";
+
+            return `
+            <div class="theme-card" data-code="${t.theme_code}">
+              <div class="theme-card-header" onclick="this.parentElement.classList.toggle('open')">
+                <span class="theme-badge">${t.theme_code}</span>
+                <span class="theme-name">${t.name_no}</span>
+                <div class="theme-freq-bar">
+                  <div class="theme-freq-fill" style="width:${pct}%;background:${barColor}"></div>
+                </div>
+                <span class="theme-freq-num">${t.frequency}</span>
+                <div class="severity-dot severity-${severityClass}"></div>
+                <svg class="theme-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="theme-card-body">
+                <div class="theme-section-title">Bekymring</div>
+                <p class="theme-text">${t.concern_summary_no}</p>
+
+                <div class="theme-section-title">Svarargumenter</div>
+                <ul class="theme-list">
+                  ${t.response_arguments_no.map((a) => `<li>${a}</li>`).join("")}
+                </ul>
+
+                ${
+                  counterHtml
+                    ? `
+                  <div class="theme-section-title">Motdata</div>
+                  <div class="theme-counter-grid">${counterHtml}</div>
+                `
+                    : ""
+                }
+
+                ${
+                  t.concessions_no
+                    ? `
+                  <div class="theme-section-title">Innrommelse</div>
+                  <div class="concession-box">${t.concessions_no}</div>
+                `
+                    : ""
+                }
+
+                ${
+                  actionsHtml
+                    ? `
+                  <div class="theme-section-title">Anbefalte tiltak</div>
+                  ${actionsHtml}
+                `
+                    : ""
+                }
+
+                ${
+                  evidenceHtml
+                    ? `
+                  <div class="theme-section-title">Evidensreferanser</div>
+                  ${evidenceHtml}
+                `
+                    : ""
+                }
+              </div>
+            </div>
+          `;
+          })
+          .join("");
+      }
+
+      // ===== CROSS-THEME ARGUMENTS =====
+      function renderCrossTheme() {
+        const args = SVAR_DATA.cross_theme_arguments;
+        document.getElementById("cross-theme-grid").innerHTML = Object.entries(
+          args,
+        )
+          .map(
+            ([key, val]) => `
+          <div class="cross-card">
+            <div class="cross-card-title">${CROSS_THEME_TITLES[key] || key}</div>
+            <p class="cross-card-text">${val.argument_no}</p>
+          </div>
+        `,
+          )
+          .join("");
+      }
+
+      // ===== RISK TABLES =====
+      function renderRiskTables() {
+        const themes = SVAR_DATA.themes;
+        const strong = themes.filter((t) => t.frequency >= 20);
+        const weak = themes.filter((t) => t.frequency < 10);
+
+        function makeTable(items) {
+          return `
+            <table class="risk-table">
+              <thead><tr><th>Tema</th><th>Frekvens</th><th>Alvorlighet</th></tr></thead>
+              <tbody>
+                ${items
+                  .map((t) => {
+                    const sev =
+                      t.frequency >= 30
+                        ? "high"
+                        : t.frequency >= 15
+                          ? "medium"
+                          : "low";
+                    return `<tr><td>${t.name_no}</td><td>${t.frequency}</td><td><span class="severity-badge ${sev}">${SEVERITY_LABELS[sev]}</span></td></tr>`;
+                  })
+                  .join("")}
+              </tbody>
+            </table>
+          `;
+        }
+
+        document.getElementById("risk-tables").innerHTML = `
+          <div class="risk-table-wrap">
+            <div class="risk-table-title strong">Sterkeste nabotemaer (frekvens >= 20)</div>
+            ${makeTable(strong)}
+          </div>
+          <div class="risk-table-wrap">
+            <div class="risk-table-title weak">Svakeste nabotemaer (frekvens < 10)</div>
+            ${makeTable(weak)}
+          </div>
+        `;
+      }
+
+      // ===== THEME DROPDOWN =====
+      function renderThemeDropdown() {
+        const taxonomy = NM_DATA.theme_taxonomy;
+        document.getElementById("theme-dropdown-panel").innerHTML =
+          Object.entries(taxonomy)
+            .map(
+              ([code, info]) =>
+                `<label class="theme-check-item">
+              <input type="checkbox" value="${code}" onchange="toggleThemeFilter(this)">
+              <span>${code} — ${info.name_no}</span>
+            </label>`,
+            )
+            .join("");
+      }
+
+      function toggleThemeDropdown() {
+        document.getElementById("theme-dropdown").classList.toggle("open");
+      }
+
+      document.addEventListener("click", function (e) {
+        const dd = document.getElementById("theme-dropdown");
+        if (dd && !dd.contains(e.target)) {
+          dd.classList.remove("open");
+        }
+      });
+
+      function toggleThemeFilter(checkbox) {
+        if (checkbox.checked) {
+          FILTER_STATE.themes.add(checkbox.value);
+        } else {
+          FILTER_STATE.themes.delete(checkbox.value);
+        }
+        updateThemeDropdownLabel();
+        applyFilters();
+      }
+
+      function updateThemeDropdownLabel() {
+        const btn = document.querySelector(".theme-dropdown-btn");
+        const count = FILTER_STATE.themes.size;
+        btn.innerHTML =
+          count > 0
+            ? `${count} tema valgt <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`
+            : `Alle temaer <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>`;
+      }
+
+      function toggleSeverity(btn) {
+        const sev = btn.dataset.severity;
+        btn.classList.toggle("active");
+        if (btn.classList.contains("active")) {
+          FILTER_STATE.severities.add(sev);
+        } else {
+          FILTER_STATE.severities.delete(sev);
+        }
+        applyFilters();
+      }
+
+      function toggleType(btn) {
+        const type = btn.dataset.type;
+        btn.classList.toggle("active");
+        if (btn.classList.contains("active")) {
+          FILTER_STATE.types.add(type);
+        } else {
+          FILTER_STATE.types.delete(type);
+        }
+        applyFilters();
+      }
+
+      function clearFilters() {
+        FILTER_STATE.themes.clear();
+        FILTER_STATE.severities.clear();
+        FILTER_STATE.types.clear();
+        FILTER_STATE.search = "";
+        document.getElementById("search-input").value = "";
+        document
+          .querySelectorAll(".toggle-btn.active")
+          .forEach((b) => b.classList.remove("active"));
+        document
+          .querySelectorAll("#theme-dropdown-panel input")
+          .forEach((cb) => (cb.checked = false));
+        updateThemeDropdownLabel();
+        applyFilters();
+      }
+
+      function applyFilters() {
+        FILTER_STATE.search = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        const tbody = document.getElementById("remarks-tbody");
+        const rows = tbody.querySelectorAll("tr[data-id]");
+        let visibleCount = 0;
+
+        rows.forEach((row) => {
+          const id = row.dataset.id;
+          const remark = NM_DATA.remarks.find((r) => r.id === id);
+          if (!remark) return;
+
+          let visible = true;
+
+          if (FILTER_STATE.themes.size > 0) {
+            const hasTheme = remark.themes.some((t) =>
+              FILTER_STATE.themes.has(t),
+            );
+            if (!hasTheme) visible = false;
+          }
+
+          if (
+            FILTER_STATE.severities.size > 0 &&
+            !FILTER_STATE.severities.has(remark.severity)
+          ) {
+            visible = false;
+          }
+
+          if (
+            FILTER_STATE.types.size > 0 &&
+            !FILTER_STATE.types.has(remark.type)
+          ) {
+            visible = false;
+          }
+
+          if (
+            FILTER_STATE.search &&
+            !remark.submitter.toLowerCase().includes(FILTER_STATE.search)
+          ) {
+            visible = false;
+          }
+
+          row.style.display = visible ? "" : "none";
+          const detailRow = row.nextElementSibling;
+          if (detailRow && detailRow.classList.contains("detail-row")) {
+            if (!visible) {
+              detailRow.classList.remove("visible");
+              row.classList.remove("expanded");
+            }
+          }
+
+          if (visible) visibleCount++;
+        });
+
+        document.getElementById("result-count").textContent =
+          `Viser ${visibleCount} av ${NM_DATA.remarks.length} merknader`;
+        document.getElementById("no-results").style.display =
+          visibleCount === 0 ? "" : "none";
+      }
+
+      // ===== REMARKS TABLE =====
+      function renderRemarks() {
+        const remarks = NM_DATA.remarks;
+        const taxonomy = NM_DATA.theme_taxonomy;
+
+        document.getElementById("remarks-tbody").innerHTML = remarks
+          .map((r) => {
+            const themeTags = r.themes
+              .map((t) => `<span class="theme-tag">${t}</span>`)
+              .join("");
+
+            const claimsHtml =
+              r.key_claims && r.key_claims.length > 0
+                ? `<ul>${r.key_claims.map((c) => `<li>${c}</li>`).join("")}</ul>`
+                : '<p style="color:var(--text-muted)">Ingen spesifikke krav registrert.</p>';
+
+            const legalHtml =
+              r.legal_refs && r.legal_refs.length > 0
+                ? `<ul>${r.legal_refs.map((l) => `<li>${l}</li>`).join("")}</ul>`
+                : '<p style="color:var(--text-muted)">Ingen juridiske referanser.</p>';
+
+            return `
+            <tr data-id="${r.id}" onclick="toggleDetail(this)">
+              <td>${r.id}</td>
+              <td>${r.submitter}</td>
+              <td>${r.address || "—"}</td>
+              <td>${r.date}</td>
+              <td>${themeTags}</td>
+              <td><span class="severity-badge ${r.severity}">${SEVERITY_LABELS[r.severity]}</span></td>
+            </tr>
+            <tr class="detail-row">
+              <td colspan="6">
+                <div class="detail-panel">
+                  <div class="detail-section">
+                    <h4>Sammendrag</h4>
+                    <p>${r.summary_no}</p>
+                    <h4 style="margin-top:0.75rem">Hovedkrav</h4>
+                    ${claimsHtml}
+                  </div>
+                  <div class="detail-section">
+                    <h4>Juridiske referanser</h4>
+                    ${legalHtml}
+                    <h4 style="margin-top:0.75rem">Kilde</h4>
+                    <p class="detail-source">${r.source_file || "—"}</p>
+                    <p style="margin-top:0.25rem"><strong>Type:</strong> ${TYPE_LABELS[r.type] || r.type} &middot; <strong>Kanal:</strong> ${CHANNEL_LABELS[r.channel] || r.channel}</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          `;
+          })
+          .join("");
+
+        document.getElementById("result-count").textContent =
+          `Viser ${remarks.length} av ${remarks.length} merknader`;
+      }
+
+      function toggleDetail(row) {
+        const detailRow = row.nextElementSibling;
+        if (!detailRow || !detailRow.classList.contains("detail-row")) return;
+        const isOpen = detailRow.classList.contains("visible");
+        detailRow.classList.toggle("visible");
+        row.classList.toggle("expanded");
+      }
+
+      // ===== METADATA FOOTER =====
+      function renderMetaFooter() {
+        const meta = NM_DATA.metadata;
+        document.getElementById("meta-footer").innerHTML = `
+          <div><strong>PBE saksnr:</strong> ${meta.pbe_saksnr}</div>
+          <div><strong>Nabovarsel sendt:</strong> ${meta.nabovarsel_date}</div>
+          <div><strong>Opprinnelig frist:</strong> ${meta.merknad_frist}</div>
+          <div><strong>Utvidet frist:</strong> ${meta.extended_frist}</div>
+          <div><strong>Datakilde:</strong> ${meta.content_classification.source_document}</div>
+          <div><strong>Versjon:</strong> ${meta.version} (${meta.created})</div>
+        `;
+      }
+
+      // ===== INIT =====
+      document.addEventListener("DOMContentLoaded", loadData);
+    </script>
+  </body>
+</html>

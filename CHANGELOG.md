@@ -2,6 +2,23 @@
 
 All notable changes to this project database.
 
+## [3.01.3] - 2026-02-10
+
+### Dashboard: Nabomerknader analyse-side
+
+Ny interaktiv dashboard-side `dashboard/nabomerknader.html` for 52 nabomerknader:
+
+- 4 KPI-kort (merknader, avsendere, temaer, hoy alvorlighet)
+- Temafrekvens, geografisk fordeling, avsendertype og alvorlighetsgrad (CSS-diagrammer)
+- 15 tematiske responsargument-accordion med bekymring, svar, motdata, innrommelser
+- 4 overordnede argumentkort (rivning, Omsorg+, sirkulaerokonomi, regulatorisk vakuum)
+- Risikovurderingsmatriser (sterkeste/svakeste temaer)
+- Filtrert merknadsregister med utvidbar detaljvisning
+- A4 PDF-utskrift via print-stiler
+- Registrert i `page-config.js` under produksjon > analyser
+
+---
+
 ## [3.01.2] - 2026-02-10
 
 ### Phase 80: Nabomerknader — Analyse & Responsargumenter

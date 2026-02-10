@@ -197,7 +197,8 @@
     "themes_count": 15,
     "high_severity_count": 10,
     "top_theme": "SOL (88%)",
-    "pbe_saksnr": "2025/21699"
+    "pbe_saksnr": "2025/21699",
+    "dashboard_page": "nabomerknader.html"
   },
   "orret": {
     "status": "in_progress",
