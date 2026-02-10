@@ -2,6 +2,43 @@
 
 All notable changes to this project database.
 
+## [3.01.2] - 2026-02-10
+
+### Phase 80: Nabomerknader — Analyse & Responsargumenter
+
+**Status:** COMPLETE
+
+Komplett analyse av 52 nabomerknader fra 49 unike avsendere (saksnr 2025/21699). Systematisk klassifisering i 15 temaer, strukturerte responsargumenter, risikovurdering, og utkast til følgebrev/redegjørelse til PBE.
+
+**Nye filer:**
+
+| Fil                                 | Innhold                                                                         |
+| ----------------------------------- | ------------------------------------------------------------------------------- |
+| `data/themes/nabomerknader.json`    | Master-register: 53 merknader med full metadata, temaklassifisering, statistikk |
+| `data/themes/nabomerknad-svar.json` | Responsargumenter for 15 temaer + 4 tverrgående argumenter                      |
+| `documents/nabomerknad-analyse.md`  | Lesbar analyserapport med statistikk, risikovurdering og anbefalinger           |
+| `documents/folgebrev-utkast.md`     | Utkast til redegjørelse/følgebrev til PBE med § 19-2 dispensasjonsargumentasjon |
+
+**Nøkkeltall:**
+
+| Metrikk                    | Verdi                                            |
+| -------------------------- | ------------------------------------------------ |
+| Totalt innsendte merknader | 52                                               |
+| Unike avsendere            | 49 (46 privatpersoner, 3 borettslag, 1 forening) |
+| Temaer klassifisert        | 15                                               |
+| Høy alvorlighetsgrad       | 10 merknader                                     |
+| Mest frekvente tema        | SOL (88%), HOYDE (73%), BOKVAL (67%)             |
+| Responsargumenter          | 15 temaer × 4–6 argumenter + 4 tverrgående       |
+
+**Metrikk-oppdateringer:**
+
+| Endring       | Før → Etter      |
+| ------------- | ---------------- |
+| Documents     | 276 → 278        |
+| Nabomerknader | 0 → 52 analysert |
+
+---
+
 ## [3.01.1] - 2026-02-03
 
 ### Dialogmøte #2 — Utskrivbar prosjektrapport

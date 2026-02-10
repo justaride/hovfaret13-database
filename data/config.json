@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "2.99.0",
+    "version": "3.01.2",
     "created": "2025-12-03",
-    "last_updated": "2026-02-02",
+    "last_updated": "2026-02-10",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 79
+    "database_phase": 80
   },
   "auth": {
     "enabled": true,
@@ -30,7 +30,7 @@
   },
   "metrics": {
     "meetings_total": 62,
-    "documents_total": 276,
+    "documents_total": 278,
     "deliverables_total": 37,
     "stakeholders": {
       "people": 27,
@@ -108,7 +108,8 @@
     "neighbor_notice": "2025-10-16",
     "konseptskisse_2": "2025-12-01",
     "dialogmote_2": "2026-01-29",
-    "professor_outreach": "2026-01-29"
+    "professor_outreach": "2026-01-29",
+    "nabomerknader_analysert": "2026-02-10"
   },
   "regulatory_status": {
     "nabovarsel": {
@@ -184,6 +185,19 @@
     "nin_types_mapped": 3,
     "invasive_species_count": 4,
     "biodiversity_measures_count": 5
+  },
+  "nabomerknader": {
+    "status": "complete",
+    "content_file": "themes/nabomerknader.json",
+    "response_file": "themes/nabomerknad-svar.json",
+    "analyse_report": "documents/nabomerknad-analyse.md",
+    "folgebrev_draft": "documents/folgebrev-utkast.md",
+    "total_submissions": 52,
+    "unique_submitters": 49,
+    "themes_count": 15,
+    "high_severity_count": 10,
+    "top_theme": "SOL (88%)",
+    "pbe_saksnr": "2025/21699"
   },
   "orret": {
     "status": "in_progress",

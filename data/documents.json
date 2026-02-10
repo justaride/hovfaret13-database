@@ -2,10 +2,10 @@
   "metadata": {
     "version": "2.2",
     "created": "2025-11-21",
-    "last_updated": "2026-01-30",
+    "last_updated": "2026-02-10",
     "description": "Document registry for Hovfaret 13 project",
-    "total": 276,
-    "total_documents": 276,
+    "total": 278,
+    "total_documents": 278,
     "by_category": {
       "analysis_notes": 94,
       "architecture": 10,
@@ -2799,6 +2799,28 @@
       "source_folder": "Upload 30.01",
       "description": "Nabomerknad fra Elizabeth Sellevold og Halvor Fosli (Damliveien 2) til nabovarsel. Videresendt av Liv Thorsnes (Byggesaksrådgivning AS).",
       "related_people": ["elizabeth_sellevold", "halvor_fosli"],
+      "has_error": false
+    },
+    {
+      "id": "doc_nabomerknader_analyse",
+      "file_name": "nabomerknad-analyse.md",
+      "file_type": "markdown",
+      "document_type": "analysis",
+      "category": "analysis_notes",
+      "date": "2026-02-10",
+      "source_folder": "documents/",
+      "description": "Komplett analyse av 52 nabomerknader for Hovfaret 13 (saksnr 2025/21699). Tematisk klassifisering, statistikk, risikovurdering og anbefalinger.",
+      "has_error": false
+    },
+    {
+      "id": "doc_folgebrev_utkast",
+      "file_name": "folgebrev-utkast.md",
+      "file_type": "markdown",
+      "document_type": "regulatory_submission",
+      "category": "regulatory",
+      "date": "2026-02-10",
+      "source_folder": "documents/",
+      "description": "Utkast til redegjørelse for nabomerknader / følgebrev til PBE. Tematisk tilsvar og PBL § 19-2 dispensasjonsargumentasjon.",
       "has_error": false
     }
   ]

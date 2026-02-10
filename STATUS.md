@@ -1,8 +1,8 @@
 # Project Status
 
-**Last Updated:** 2026-02-03
-**Dashboard Version:** 3.01.1
-**Status:** Phase 79 COMPLETE - Dialogmøte #2 Transkripsjon + Prosjektrapport
+**Last Updated:** 2026-02-10
+**Dashboard Version:** 3.01.2
+**Status:** Phase 80 COMPLETE - Nabomerknader Analyse & Responsargumenter
 **Coolify:** https://hovfaret13.naturalstateproject.com
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 **Auth Password:** `h13-skøyen-2025`
@@ -14,16 +14,45 @@
 | Data            | Count                              |
 | --------------- | ---------------------------------- |
 | Meetings        | 62                                 |
-| Documents       | 276                                |
+| Documents       | 278                                |
 | People          | 27                                 |
 | Organizations   | 19                                 |
 | Deliverables    | 37                                 |
 | Timeline events | 34 (10 strategic + 24 operational) |
 | Dashboard pages | 40                                 |
+| Nabomerknader   | 52 (49 unike avsendere)            |
 
 ---
 
 ## Current Phase
+
+**Phase 80: Nabomerknader — Analyse & Responsargumenter COMPLETE**
+
+Komplett analyse av 52 nabomerknader fra 49 unike avsendere (saksnr 2025/21699):
+
+- **52 merknader** klassifisert i 15 temaer (SOL 88%, HOYDE 73%, BOKVAL 67%)
+- **15 responsargumenter** med evidens og kildhenvisninger fra prosjektdatabasen
+- **4 tverrgående argumenter** (rivningssammenligning, Omsorg+-behov, sirkulærøkonomi, regulatorisk vakuum)
+- **Følgebrev-utkast** til PBE med § 19-2 dispensasjonsargumentasjon
+
+### Leveranser
+
+| Fil                                 | Innhold                          |
+| ----------------------------------- | -------------------------------- |
+| `data/themes/nabomerknader.json`    | Master-register (53 poster)      |
+| `data/themes/nabomerknad-svar.json` | Responsargumenter (15 temaer)    |
+| `documents/nabomerknad-analyse.md`  | Analyserapport (norsk)           |
+| `documents/folgebrev-utkast.md`     | Følgebrev-utkast til PBE (norsk) |
+
+### Aktive oppfølgingspunkter
+
+- **Professor Vøllestad**: Avventer svar på fagvurdering sjøørret (sendt 2026-01-29)
+- **Supplerende solstudier**: Nov–feb vinterstudier forpliktet
+- **Perspektivtegninger**: Inkl. småhusbebyggelse — R21 ansvarlig
+- **Lengdesnitt**: Gjennom H13 og nabobebyggelse — R21 ansvarlig
+- **Søknad til PBE**: Skal sendes etter supplerende dokumentasjon er ferdig
+
+---
 
 **Phase 79: Dialogmøte #2 — Transkripsjon & Strukturert Referat COMPLETE**
 
@@ -33,12 +62,6 @@ Integrert full auto-transkripsjon (~863 linjer) fra Dialogmøte #2. Strukturert 
 - **8 handlingspunkter** (solstudier, perspektivtegninger, biolog-vurdering, m.m.)
 - **4 nabolagsønsker** (bibliotek, forsamlingshus, fastighetskontor, detaljerte solstudier)
 - **8 nøkkelfakta** (5-års horisont, 70 enheter minimum, regulatorisk kaos, 30+ deltakere)
-
-### Aktive oppfølgingspunkter
-
-- **Professor Vøllestad**: Avventer svar på fagvurdering (sendt 2026-01-29)
-- **Nabomerknad Sellevold/Fosli**: Mottatt, skal behandles
-- **Søknad til PBE**: Skal sendes 1-2 uker etter dialogmøtet (ca. uke 6-7 2026)
 
 ---
 
