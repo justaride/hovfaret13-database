@@ -602,22 +602,33 @@
       }
 
       async function init() {
-        const [nabRes, svarRes] = await Promise.all([
-          fetch("data/themes/nabomerknader.json"),
-          fetch("data/themes/nabomerknad-svar.json"),
-        ]);
-        const nab = await nabRes.json();
-        const svar = await svarRes.json();
+        try {
+          const [nabRes, svarRes] = await Promise.all([
+            fetch("../data/themes/nabomerknader.json"),
+            fetch("../data/themes/nabomerknad-svar.json"),
+          ]);
+          if (!nabRes.ok || !svarRes.ok)
+            throw new Error(
+              "Fetch failed: " + nabRes.status + "/" + svarRes.status,
+            );
+          const nab = await nabRes.json();
+          const svar = await svarRes.json();
 
-        const remarks = nab.remarks;
-        const stats = nab.statistics;
-        const taxonomy = nab.theme_taxonomy;
-        const svarThemes = {};
-        svar.themes.forEach((t) => (svarThemes[t.theme_code] = t));
-        const cross = svar.cross_theme_arguments;
+          const remarks = nab.remarks;
+          const stats = nab.statistics;
+          const taxonomy = nab.theme_taxonomy;
+          const svarThemes = {};
+          svar.themes.forEach((t) => (svarThemes[t.theme_code] = t));
+          const cross = svar.cross_theme_arguments;
 
-        const el = document.getElementById("rapport");
-        el.innerHTML = renderAll(remarks, stats, taxonomy, svarThemes, cross);
+          const el = document.getElementById("rapport");
+          el.innerHTML = renderAll(remarks, stats, taxonomy, svarThemes, cross);
+        } catch (e) {
+          document.getElementById("rapport").innerHTML =
+            '<p style="color:red;padding:40px">Feil ved lasting av data: ' +
+            e.message +
+            "</p>";
+        }
       }
 
       function renderAll(remarks, stats, taxonomy, svarThemes, cross) {
