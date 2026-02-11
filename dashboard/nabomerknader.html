@@ -816,6 +816,170 @@
         color: var(--text-secondary);
       }
 
+      /* ===== SECTION DESCRIPTIONS ===== */
+      .section-desc {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin-top: -0.5rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.5;
+      }
+
+      /* ===== RAPPORT-STYLE BOXES ===== */
+      .summary-box {
+        background: var(--green-50);
+        border-left: 4px solid var(--green-600);
+        padding: 1rem 1.25rem;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        margin-bottom: 1.5rem;
+      }
+
+      .summary-box p {
+        color: var(--text-primary);
+        margin-bottom: 0.4rem;
+        font-size: 0.88rem;
+        line-height: 1.55;
+      }
+
+      .summary-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .summary-box strong {
+        color: var(--green-900);
+      }
+
+      .amber-box {
+        background: var(--amber-50);
+        border-left: 4px solid var(--amber-600);
+        padding: 0.75rem 1rem;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        margin-bottom: 0.75rem;
+        margin-top: 0.5rem;
+      }
+
+      .amber-box p {
+        color: var(--text-primary);
+        margin-bottom: 0;
+        font-size: 0.85rem;
+      }
+
+      .amber-label {
+        font-weight: 600;
+        color: var(--amber-700);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.15rem;
+      }
+
+      .next-box {
+        background: var(--blue-100);
+        border-left: 4px solid var(--blue-600);
+        padding: 0.9rem 1.25rem;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      }
+
+      .next-box p {
+        color: var(--text-primary);
+        margin-bottom: 0.25rem;
+        font-size: 0.88rem;
+      }
+
+      .next-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.82rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .data-table th {
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-muted);
+        padding: 0.4rem 0.65rem;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .data-table td {
+        padding: 0.4rem 0.65rem;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        vertical-align: top;
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .data-table .metric-val {
+        font-weight: 600;
+        color: var(--green-800);
+      }
+
+      .signal-list {
+        list-style: disc;
+        padding-left: 1.25rem;
+      }
+
+      .signal-list li {
+        margin-bottom: 0.25rem;
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+      }
+
+      /* ===== DEEP ASSESSMENT SECTIONS ===== */
+      .assessment-section {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .assessment-section h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--green-800);
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .assessment-section h4 {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-top: 0.75rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .assessment-section p {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.55;
+        margin-bottom: 0.5rem;
+      }
+
+      .assessment-section ul {
+        list-style: disc;
+        padding-left: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .assessment-section li {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.25rem;
+      }
+
       /* ===== RESPONSIVE ===== */
       @media (max-width: 900px) {
         .kpi-row {
@@ -894,6 +1058,13 @@
           display: none;
         }
 
+        .summary-box,
+        .amber-box,
+        .next-box,
+        .assessment-section {
+          break-inside: avoid;
+        }
+
         * {
           -webkit-print-color-adjust: exact;
           print-color-adjust: exact;
@@ -932,11 +1103,19 @@
         </button>
       </div>
 
-      <!-- 2. KPI Cards -->
+      <!-- 2. Sammendrag -->
+      <div id="sammendrag"></div>
+
+      <!-- 3. KPI Cards -->
       <div class="kpi-row" id="kpi-row"></div>
 
-      <!-- 3. Charts Section -->
+      <!-- 4. Charts Section -->
       <h2 class="section-heading">Tematisk analyse</h2>
+      <p class="section-desc">
+        Viser hvor mange av de 52 merknadene som nevner hvert tema. En merknad
+        kan berøre flere temaer. F.eks. betyr «46» at 46 av 52 merknader nevner
+        sol/dagslys/skygge.
+      </p>
 
       <!-- Row 1: Theme + Geographic -->
       <div class="charts-row">
@@ -966,20 +1145,42 @@
         </div>
       </div>
 
-      <!-- 4. Theme Response Cards -->
+      <!-- 5. Theme Response Cards -->
       <h2 class="section-heading">Tematiske svar og argumenter</h2>
+      <p class="section-desc">
+        Klikk på et tema for å se hva naboene er bekymret for, våre
+        svarargumenter, innrømmelser og anbefalte tiltak.
+      </p>
       <div class="theme-cards" id="theme-cards"></div>
 
-      <!-- 5. Cross-Theme Arguments -->
+      <!-- 6. Dypere vurderinger -->
+      <h2 class="section-heading">Dypere vurderinger</h2>
+      <p class="section-desc">
+        Detaljerte vurderinger av de tre viktigste tverrgående temaene:
+        dispensasjon, sol og innsyn.
+      </p>
+      <div id="deep-assessments"></div>
+
+      <!-- 7. Cross-Theme Arguments -->
       <h2 class="section-heading">Overordnede argumenter</h2>
       <div class="cross-theme-grid" id="cross-theme-grid"></div>
 
-      <!-- 6. Risk Assessment -->
-      <h2 class="section-heading">Risikovurdering</h2>
+      <!-- 8. Temaprioritet -->
+      <h2 class="section-heading">Temaprioritet basert på frekvens</h2>
+      <p class="section-desc">
+        Temaene er rangert etter hvor mange av de 52 merknadene som nevner hvert
+        tema. Høy frekvens = nevnt i 30+ merknader · Middels = 15–29 · Lav =
+        under 15. Dette viser hva naboene er mest opptatt av, ikke juridisk
+        alvorlighetsgrad.
+      </p>
       <div class="risk-tables" id="risk-tables"></div>
 
-      <!-- 7. Remarks Registry -->
+      <!-- 9. Remarks Registry -->
       <h2 class="section-heading">Register over nabomerknader</h2>
+      <p class="section-desc">
+        Søk og filtrer alle 52 merknader etter tema, alvorlighetsgrad eller
+        fritekst.
+      </p>
       <div class="no-print">
         <div class="filters-bar" id="filters-bar">
           <div class="filter-group">
@@ -1086,7 +1287,10 @@
         </div>
       </div>
 
-      <!-- 8. Metadata Footer -->
+      <!-- 10. Neste steg -->
+      <div id="neste-steg"></div>
+
+      <!-- 11. Metadata Footer -->
       <div class="meta-footer" id="meta-footer"></div>
     </div>
 
@@ -1141,6 +1345,7 @@
       }
 
       function renderAll() {
+        renderSammendrag();
         renderKPIs();
         renderThemeFreqChart();
         renderGeoChart();
@@ -1148,11 +1353,154 @@
         renderSeverityDonut();
         renderChannelChart();
         renderThemeCards();
+        renderDeepAssessments();
         renderCrossTheme();
         renderRiskTables();
         renderThemeDropdown();
         renderRemarks();
+        renderNesteSteg();
         renderMetaFooter();
+      }
+
+      // ===== SAMMENDRAG =====
+      function renderSammendrag() {
+        const stats = NM_DATA.statistics;
+        document.getElementById("sammendrag").innerHTML = `
+          <div class="summary-box">
+            <p><strong>52 merknader fra 49 unike avsendere</strong> fordelt på 15 temaer. Merknadene ble mottatt mellom ${stats.date_range.earliest} og ${stats.date_range.latest}.</p>
+            <p><strong>Sol/skygge er hyppigst</strong> (88% av alle merknader), og 10 merknader har alvorlighetsgrad «høy» — med juridisk funderte innvendinger mot dispensasjon og vassdragsvern.</p>
+            <p><strong>Geografisk konsentrasjon:</strong> ~30 merknader fra Skøyen Terrasse (nedre og øvre rekke). Sterkest motstand fra beboere nærmest bygget.</p>
+            <p>Hovedfunn: sterk konsensus om sol/høyde-bekymringer, juridisk substansielle DISP- og VASSDRAG-innvendinger som krever solid motargumentasjon.</p>
+          </div>`;
+      }
+
+      // ===== DEEP ASSESSMENTS =====
+      function renderDeepAssessments() {
+        const svarByCode = {};
+        SVAR_DATA.themes.forEach((t) => (svarByCode[t.theme_code] = t));
+        const cross = SVAR_DATA.cross_theme_arguments;
+        const remarks = NM_DATA.remarks;
+
+        document.getElementById("deep-assessments").innerHTML = [
+          renderDisp(svarByCode, cross),
+          renderSol(svarByCode),
+          renderInnsyn(svarByCode, remarks),
+        ].join("");
+      }
+
+      function renderDisp(svarByCode, cross) {
+        const disp = svarByCode["DISP"];
+        const cd = disp.counter_data;
+        const b = cd.pbl_19_2_benefits;
+
+        return `
+          <div class="assessment-section">
+            <h3>Dispensasjonsvurdering — PBL § 19-2</h3>
+            <p>${disp.concern_summary_no}</p>
+
+            <h4>Motargumentasjon</h4>
+            <ul>${disp.response_arguments_no.map((a) => "<li>" + a + "</li>").join("")}</ul>
+
+            <h4>Kvantifiserte fordeler</h4>
+            <table class="data-table">
+              <thead><tr><th>Måltall</th><th>Verdi</th></tr></thead>
+              <tbody>
+                <tr><td>CO₂-reduksjon</td><td class="metric-val">${b.co2_reduction_percent}% (${b.co2_savings_tonnes} tonn spart)</td></tr>
+                <tr><td>Materialbesparelse</td><td class="metric-val">${b.material_savings_percent}%</td></tr>
+                <tr><td>Omsorg+-boliger</td><td class="metric-val">${b.omsorg_plus_units} enheter</td></tr>
+                <tr><td>Bydelsbehov dekket</td><td class="metric-val">${b.district_need_coverage_percent}% av 160 enheter</td></tr>
+                <tr><td>Avfallsreduksjon</td><td class="metric-val">${b.waste_reduction_percent}%</td></tr>
+                <tr><td>Biodiversitetstiltak</td><td class="metric-val">${b.biodiversity_measures} aktive tiltak</td></tr>
+              </tbody>
+            </table>
+
+            <h4>Planstatus</h4>
+            <p>Områdereguleringsplanen er <strong>vedtatt men IKKE rettskraftig</strong> (stadfestet) grunnet innsigelser fra ${cd.blocking_objections.join(" og ")}. Den rettslige bindingseffekten er svekket.</p>
+            <p>Ny lovgivning: ${cd.ombruk_requirement}</p>
+
+            <div class="summary-box" style="margin-top:0.75rem">
+              <p><strong>Regulatorisk vakuum:</strong> ${cross.regulatory_vacuum.argument_no}</p>
+            </div>
+
+            ${disp.concessions_no ? '<div class="amber-box"><div class="amber-label">Innrømmelse</div><p>' + disp.concessions_no + "</p></div>" : ""}
+          </div>`;
+      }
+
+      function renderSol(svarByCode) {
+        const sol = svarByCode["SOL"];
+        const cd = sol.counter_data;
+
+        return `
+          <div class="assessment-section">
+            <h3>Solvurdering</h3>
+            <p>Sentral problemstilling: vise om eiendommen blir vesentlig berørt av endrede solforhold.</p>
+
+            <h4>Dokumentasjonsstatus</h4>
+            <ul>
+              <li>Gjennomført: ${cd.sol_studies_count} solstudier for ${cd.seasons_covered}</li>
+              <li>Forpliktet: ${cd.supplementary_commitment}</li>
+              <li>${cd.marginal_shadow_note}</li>
+            </ul>
+
+            <h4>Sammenligningsargument</h4>
+            <p>Rivningsalternativet (områdeplanen) medfører CO₂-utslipp på ${cd.demolition_alternative_co2}. Den marginale skyggeøkningen fra påbygget må veies mot de massive klimakostnadene ved riving.</p>
+
+            <h4>Forpliktelser fra Dialogmøte #2</h4>
+            <ul class="signal-list">
+              <li>Publisere alle solstudier (X varianter) på hovfaret13.no med adresser</li>
+              <li>Utarbeide supplerende solstudier for november–februar</li>
+              <li>Inkludere sammenligningsdiagram: eksisterende skygge vs. etter påbygg</li>
+              <li>Spesifikk solanalyse for barnehagens uteområde</li>
+            </ul>
+
+            ${sol.concessions_no ? '<div class="amber-box"><div class="amber-label">Innrømmelse</div><p>' + sol.concessions_no + "</p></div>" : ""}
+          </div>`;
+      }
+
+      function renderInnsyn(svarByCode, remarks) {
+        const innsyn = svarByCode["INNSYN"];
+        const cd = innsyn.counter_data;
+        const innsynRemarks = remarks.filter((r) =>
+          r.themes.includes("INNSYN"),
+        );
+
+        return `
+          <div class="assessment-section">
+            <h3>Innsynsvurdering</h3>
+            <p>Sentral problemstilling: om innsynsproblematikken øker vesentlig med tre ekstra etasjer.</p>
+
+            <h4>Hvem reiser innsyn</h4>
+            <p>${innsynRemarks.length} merknader nevner innsyn spesifikt:</p>
+            <ul class="signal-list">
+              ${innsynRemarks.map((r) => "<li><strong>" + r.submitter + "</strong>" + (r.address ? " — " + r.address : "") + "</li>").join("")}
+            </ul>
+
+            <h4>Designtiltak</h4>
+            <ul>${cd.design_measures.map((m) => "<li>" + m + "</li>").join("")}</ul>
+
+            <h4>Beboerprofil</h4>
+            <p>${cd.occupant_profile} — rolig aktivitetsmønster med begrenset bruk av balkonger kveld/helg sammenlignet med ordinære boliger.</p>
+
+            <h4>Forpliktet dokumentasjon</h4>
+            <ul class="signal-list">
+              <li>Innsyn-illustrasjoner fra berørte naboeiendommer</li>
+              <li>Lengdesnitt som inkluderer Hoffsbyen Hageby og Engebrets vei</li>
+            </ul>
+
+            ${innsyn.concessions_no ? '<div class="amber-box"><div class="amber-label">Innrømmelse</div><p>' + innsyn.concessions_no + "</p></div>" : ""}
+          </div>`;
+      }
+
+      // ===== NESTE STEG =====
+      function renderNesteSteg() {
+        document.getElementById("neste-steg").innerHTML = `
+          <h2 class="section-heading">Neste steg</h2>
+          <div class="next-box">
+            <p><strong>Publisere solstudier</strong> (X varianter) på hovfaret13.no med adresser</p>
+            <p><strong>Utarbeide supplerende dokumentasjon:</strong> vinterstudier (nov–feb), perspektivtegninger, lengdesnitt, innsyn-illustrasjoner</p>
+            <p><strong>Sende fagvurdering</strong> fra Prof. Asbjørn Vøllestad (UiO/CEES) om sjøørret og skyggeeffekt</p>
+            <p><strong>Sende følgebrev til PBE</strong> med systematisk § 19-2 redegjørelse og kvantifiserte fordeler</p>
+          </div>`;
       }
 
       // ===== KPIs =====
@@ -1452,7 +1800,7 @@
         function makeTable(items) {
           return `
             <table class="risk-table">
-              <thead><tr><th>Tema</th><th>Frekvens</th><th>Alvorlighet</th></tr></thead>
+              <thead><tr><th>Tema</th><th>Frekvens</th><th>Frekvens-nivå</th></tr></thead>
               <tbody>
                 ${items
                   .map((t) => {
@@ -1472,11 +1820,11 @@
 
         document.getElementById("risk-tables").innerHTML = `
           <div class="risk-table-wrap">
-            <div class="risk-table-title strong">Sterkeste nabotemaer (frekvens >= 20)</div>
+            <div class="risk-table-title strong">Hyppigst nevnte temaer (20+ merknader)</div>
             ${makeTable(strong)}
           </div>
           <div class="risk-table-wrap">
-            <div class="risk-table-title weak">Svakeste nabotemaer (frekvens < 10)</div>
+            <div class="risk-table-title weak">Sjeldnest nevnte temaer (under 10)</div>
             ${makeTable(weak)}
           </div>
         `;

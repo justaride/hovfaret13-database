@@ -204,14 +204,8 @@ const PAGE_CONFIG = {
             {
               id: "nabomerknader",
               name: "Nabomerknader",
-              desc: "52 merknader analysert",
+              desc: "Analyse, svar og vurderinger",
               href: "nabomerknader.html",
-            },
-            {
-              id: "nabomerknader-rapport",
-              name: "Nabomerknader Rapport",
-              desc: "Delbar analyse A-G",
-              href: "nabomerknader-rapport.html",
             },
             {
               id: "orret",

@@ -30,7 +30,7 @@
       "rank": 1,
       "concern_summary_no": "Naboer er bekymret for redusert sollys og økt skygge fra tre ekstra etasjer (~12 meter tilleggshøyde). Spesielt berørte er beboere på vestsiden av Hoffsbyen Hageby og i Skøyen Terrasse. Flere krever solstudier for vintersesongen (november–februar), utover plan-kravet om 1. mars til 1. juni.",
       "response_arguments_no": [
-        "Solstudier er utført av R21 Arkitekter i ca. 100 varianter for fire årstider (vår, sommer, høst, vinter) med tre tidspunkter per dag. Disse publiseres på hovfaret13.no med adresser påført for enkel navigering.",
+        "Solstudier er utført av R21 Arkitekter i X varianter for tre årstider (vår, sommer, høst) med tre tidspunkter per dag. Disse publiseres på hovfaret13.no med adresser påført for enkel navigering.",
         "Prosjektet forplikter seg til å utarbeide supplerende solstudier for vintersesongen (november–februar), selv om dette går utover det regulære plan-kravet.",
         "Den eksisterende bygningen kaster allerede betydelig skygge over nabolaget. Påbygget øker skyggen, men den marginale endringen er mindre enn totalt skyggeareal fra eksisterende bygg.",
         "Alternativet i områdeplanen — riving og nybygg 2 meter lenger fra elven — ville også medføre skygge fra en ny bygningskropp, men med langt høyere klimautslipp (5.343 tonn CO₂ vs. 4.161 tonn).",
@@ -38,19 +38,19 @@
       ],
       "evidence_refs": [
         "themes/sustainability.json — klimagassberegninger (Vill Energi AS, 2025)",
-        "themes/dialogmote-2-referat.json — R21 bekrefter ~100 solstudievarianter publiseres",
+        "themes/dialogmote-2-referat.json — R21 bekrefter solstudievarianter publiseres",
         "R21 Arkitekter soldiagrammer (vedlegg til rammesøknad)"
       ],
       "counter_data": {
-        "sol_studies_count": "~100 varianter",
-        "seasons_covered": "4 årstider, 3 tidspunkter per dag",
+        "sol_studies_count": "X varianter",
+        "seasons_covered": "3 årstider (vår/sommer/høst), 3 tidspunkter per dag. Vinterstudier (nov–feb) forpliktet, ikke produsert.",
         "supplementary_commitment": "Vinterstudier (nov–feb) utarbeides i tillegg",
         "demolition_alternative_co2": "5.343 tonn (vs. 4.161 for påbygg)",
         "marginal_shadow_note": "Eksisterende bygg (5 etasjer) kaster allerede dominerende skygge; 3 ekstra etasjer = inkrementell økning"
       },
       "concessions_no": "Vi anerkjenner at påbygget vil medføre økt skygge for de nærmeste naboene, særlig i vinterhalvåret. Vi forplikter oss til å dokumentere dette grundig gjennom utvidede solstudier og vil arbeide med utforming av påbygget (materialer, tilbaketrekning, fasadedesign) for å minimere skyggevirkninger.",
       "recommended_actions": [
-        "Publisere alle solstudier (~100 varianter) på hovfaret13.no med adresser",
+        "Publisere alle solstudier (X varianter) på hovfaret13.no med adresser",
         "Utarbeide supplerende solstudier for november–februar",
         "Vurdere tilbaketrekning av øverste etasjer for å redusere skyggekast",
         "Inkludere sammenligningsdiagram: eksisterende skygge vs. etter påbygg"
@@ -343,7 +343,7 @@
       "response_arguments_no": [
         "Nabovarsel er et tidligfasevarsel som signaliserer tiltakets art og omfang. Fullstendig dokumentasjon følger med rammesøknaden.",
         "Prosjektet har allerede forpliktet seg til supplerende dokumentasjon basert på tilbakemeldinger fra dialogmøte #2: utvidede solstudier (vintermåneder), perspektivtegninger mot småhus, lengdesnitt, og fagvurdering av vassdragseffekter.",
-        "R21 Arkitekter har bekreftet at ~100 solstudievarianter publiseres på hovfaret13.no med adresser for enkel navigering.",
+        "R21 Arkitekter har bekreftet at solstudievarianter publiseres på hovfaret13.no med adresser for enkel navigering.",
         "Fagvurdering fra ferskvannsbiolog (Prof. Vøllestad, UiO) er bestilt og inngår i supplerende dokumentasjon."
       ],
       "evidence_refs": [
@@ -359,7 +359,7 @@
           "Naturmangfoldvurdering",
           "Støyutredning"
         ],
-        "sol_studies_existing": "~100 varianter (4 årstider, 3 tidspunkter)"
+        "sol_studies_existing": "X varianter (3 årstider, 3 tidspunkter)"
       },
       "concessions_no": "Vi anerkjenner at nabovarslet ikke inneholdt all ønsket dokumentasjon. Dette er vanlig i tidligfasen. Vi forplikter oss til å utarbeide og publisere all etterspurt tilleggsdokumentasjon før rammesøknaden sendes inn.",
       "recommended_actions": [
