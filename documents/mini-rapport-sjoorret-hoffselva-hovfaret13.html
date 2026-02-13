@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini-rapport: Sjøørret og skyggeeffekt (Hovfaret 13)</title>
+    <style>
+      :root {
+        --page-w: 210mm;
+        --page-h: 297mm;
+        --page-pad: 16mm;
+        --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+          sans-serif;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font);
+        color: #111;
+        background: #e9eaee;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      .sheet {
+        width: var(--page-w);
+        min-height: var(--page-h);
+        margin: 12mm auto;
+        background: #fff;
+        padding: var(--page-pad);
+        box-shadow: 0 10px 28px rgba(16, 24, 40, 0.12);
+        break-after: page;
+      }
+
+      .sheet:last-child {
+        break-after: auto;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .sheet {
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+
+      h1 {
+        margin: 0 0 6mm;
+        line-height: 1.12;
+        font-size: 24px;
+        letter-spacing: -0.01em;
+      }
+
+      h2 {
+        margin: 6mm 0 2mm;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0 0 3mm;
+        font-size: 12px;
+        line-height: 1.42;
+      }
+
+      ul {
+        margin: 0 0 3mm;
+        padding-left: 5mm;
+        font-size: 12px;
+        line-height: 1.42;
+      }
+
+      li {
+        margin: 0 0 1.2mm;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2mm 8mm;
+        padding: 4mm;
+        border: 1px solid #e6e7ee;
+        border-radius: 2mm;
+        background: #fafafb;
+      }
+
+      .meta .k {
+        font-size: 10px;
+        color: #4b5563;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 1mm;
+      }
+
+      .meta .v {
+        font-size: 12px;
+        line-height: 1.3;
+      }
+
+      .pill {
+        display: inline-block;
+        padding: 0.8mm 2.2mm;
+        border-radius: 999px;
+        background: #eef2ff;
+        border: 1px solid #e0e7ff;
+        font-size: 11px;
+      }
+
+      blockquote {
+        margin: 0;
+        padding: 3mm 4mm;
+        border-left: 3px solid #111827;
+        background: #f8fafc;
+        font-size: 12px;
+        line-height: 1.42;
+      }
+
+      .callout {
+        padding: 4mm;
+        border: 1px solid #e6e7ee;
+        border-radius: 2mm;
+        background: #fcfcfd;
+      }
+
+      .small {
+        font-size: 10px;
+        color: #4b5563;
+      }
+
+      .refs {
+        font-size: 10px;
+        color: #374151;
+        line-height: 1.35;
+      }
+
+      .refs a {
+        color: inherit;
+        word-break: break-word;
+      }
+
+      .appendix-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 6mm;
+        padding-bottom: 3mm;
+        border-bottom: 1px solid #e6e7ee;
+        margin-bottom: 4mm;
+      }
+
+      .appendix-title h1 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .email {
+        font-family: var(--mono);
+        font-size: 10.5px;
+        line-height: 1.45;
+        white-space: pre-wrap;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      figcaption {
+        margin-top: 2mm;
+        font-size: 10px;
+        color: #4b5563;
+        line-height: 1.35;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #e6e7ee;
+        border-radius: 2mm;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Side 1 -->
+    <section class="sheet" aria-label="Mini-rapport side 1">
+      <h1>Mini-rapport: Sjøørret og skyggeeffekt ved Hoffselva (Hovfaret 13)</h1>
+
+      <div class="meta" role="group" aria-label="Metadata">
+        <div>
+          <div class="k">Dato</div>
+          <div class="v">9. februar 2026</div>
+        </div>
+        <div>
+          <div class="k">Mottaker</div>
+          <div class="v">PBE / byggesak (vedlegg til nabomerknadssvar)</div>
+        </div>
+        <div>
+          <div class="k">Tema</div>
+          <div class="v"><span class="pill">Hoffselva</span> <span class="pill">Sjøørret</span> <span class="pill">Skygge</span></div>
+        </div>
+        <div>
+          <div class="k">Grunnlag</div>
+          <div class="v">Uavhengig fagvurdering fra Prof. L. Asbjørn Vøllestad (UiO) datert 4. februar 2026</div>
+        </div>
+      </div>
+
+      <h2>1. Bakgrunn</h2>
+      <p>
+        Hoffvassdragets venner har i innspill (datert 11.11.2025) uttrykt bekymring for at et
+        planlagt påbygg på Hovfaret 13 vil gi økt skygge over elveløpet og dermed kunne påvirke
+        sjøørret (Salmo trutta) i Hoffselva negativt.
+      </p>
+      <p>
+        Formålet med denne mini-rapporten er å sammenstille kort kunnskapsgrunnlag og en
+        uavhengig fagvurdering for å svare ut bekymringen på en etterprøvbar måte.
+      </p>
+
+      <h2>2. Tiltaket (kort)</h2>
+      <ul>
+        <li>Eksisterende kontorbygg (1989) rehabiliteres og endrer funksjon.</li>
+        <li>Påbygg: 3 etasjer (lettere konstruksjon). Byggets fotavtrykk endres ikke, kun høyde.</li>
+        <li>Bygget ligger langs Hoffselva ved Skøyen, Oslo.</li>
+      </ul>
+
+      <h2>3. Kjernefunn</h2>
+      <div class="callout">
+        <ul>
+          <li>
+            Prof. Vøllestad konkluderer med at økt bygningshøyde gir <strong>liten direkte effekt</strong>
+            på fisken, gitt at byggets lengde på strekningen er relativt beskjeden (Vedlegg A).
+          </li>
+          <li>
+            Den viktigste risikoen knyttet til fisk er <strong>indirekte</strong>: tiltak som svekker
+            kantsonens trevegetasjon kan redusere insektnedfall, rotskjul og stabilitet i elvekant.
+          </li>
+          <li>
+            For å holde risiko lav må det sikres <strong>fungerende kantsone</strong> og <strong>unngaas inngrep i elvekanten</strong>
+            (erosjon/sediment).
+          </li>
+        </ul>
+        <p class="small" style="margin: 0">
+          Solstudie (R21 Arkitekter) er del av søknadsgrunnlaget; en representativ figur er vedlagt (Vedlegg B).
+        </p>
+      </div>
+
+      <h2>4. Uavhengig fagvurdering (UiO)</h2>
+      <p>
+        Prof. L. Asbjørn Vøllestad (Universitetet i Oslo) har vurdert beskrivelsen av tiltaket og
+        sett på tilgjengelige bilder (Google Maps, ukjent opptaksdato). Han forutsetter at det er
+        betydelig kantvegetasjon med trær langs elva forbi bygget, og vektlegger at dette er viktig.
+      </p>
+      <blockquote>
+        "Siden lengden av bygningen er relativt beskjeden vil skyggingen ha liten effekt for fisken ...
+        Totalt vil en heving av høyden ha liten direkte effekt på fisken."
+      </blockquote>
+      <p style="margin-top: 3mm">
+        Samtidig understrekes at kantsone og elvekant er de sentrale forholdene som må ivaretas:
+      </p>
+      <blockquote>
+        "Det viktigste ved en slik utbygging er å sikre en fungerende kantsone med tre-vegetasjon ... Ut over dette
+        er det viktig å unngå inngrep i elvekanten, noe som kan føre til erosjon."
+      </blockquote>
+    </section>
+
+    <!-- Side 2 -->
+    <section class="sheet" aria-label="Mini-rapport side 2">
+      <h2>5. Kort kunnskapsgrunnlag (utdrag)</h2>
+      <p>
+        Generelt for laksefisk i mindre vassdrag er det godt dokumentert at kantvegetasjon og skygge kan påvirke
+        temperatur, oksygen og energitilførsel i næringsnettet. Dette er generelle mekanismer, og erstatter ikke
+        stedsspesifikk vurdering.
+      </p>
+      <ul>
+        <li>
+          <strong>Temperatur:</strong> Fjerning av ripariansk vegetasjon kan gi betydelig sommertemperatur-økning i vannløp (USDA). Høy
+          temperatur kan stresse laksefisk.
+        </li>
+        <li>
+          <strong>Oksygen:</strong> Kaldt vann holder mer oppløst oksygen enn varmt vann (USGS).
+        </li>
+        <li>
+          <strong>Kantsonefunksjon:</strong> Trevegetasjon bidrar med organisk materiale (insekter/blad) og rotsystemer som stabiliserer elvebredder
+          (USDA). Dette gir indirekte fordeler for fisk utover selve skyggen.
+        </li>
+      </ul>
+
+      <h2>6. Forutsetninger for lav risiko</h2>
+      <p>
+        Professorens konklusjon hviler på at kantsonen fungerer og at tiltaket ikke medfører inngrep som svekker elvekant.
+        Prosjektet legger til grunn følgende forutsetninger:
+      </p>
+      <ul>
+        <li>Vegetasjon langs elven skal ikke berøres (ingen felling/beskjæring, ingen skade på rotsone).</li>
+        <li>Anleggsprosess/logistikk skal holdes unna elven og kantsonen (rigg, lagring, transport, stillasplanlegging).</li>
+        <li>Ingen inngrep i elvekant/elveløp; erosjon og sedimentavrenning skal forebygges.</li>
+      </ul>
+
+      <h2>7. Samlet vurdering og konklusjon</h2>
+      <p>
+        Med grunnlag i prof. Vøllestads uavhengige fagvurdering (04.02.2026) vurderes økt bygningshøyde å ha
+        <strong>liten direkte negativ effekt</strong> på sjøørret i denne strekningen av Hoffselva. Potensiell risiko er primært knyttet til
+        indirekte effekter via kantsone (vegetasjon) og til anleggsrelaterte inngrep i elvekant (erosjon/sediment). Siden prosjektet
+        forutsetter bevaring av kantsone og ingen inngrep i elvekant/elveløp, anses bekymringen knyttet til skyggeeffekt på sjøørret
+        som <strong>tilstrekkelig vurdert og håndtert</strong>.
+      </p>
+
+      <h2>Referanser</h2>
+      <div class="refs">
+        <p>
+          1. Vøllestad, L.A. (UiO): E-post til tiltakshaver/prosjekt, datert 04.02.2026 (Vedlegg A).<br />
+          2. Norconsult: <em>13_Naturmiljoe.pdf</em> (Hoff-prosjektet, naturmiljø) – omtale av anadrom strekning (sjøørret/laks).<br />
+          3. USDA National Agroforestry Center (USDA Forest Service): Riparian shading / stream buffers.
+          <a href="https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html">https://www.fs.usda.gov/nac/buffers/guidelines/2_streams/5.html</a><br />
+          4. USGS Water Science School: Dissolved oxygen and water.
+          <a href="https://www.usgs.gov/special-topics/water-science-school/science/dissolved-oxygen-and-water">https://www.usgs.gov/special-topics/water-science-school/science/dissolved-oxygen-and-water</a><br />
+          5. Washington Dept. of Fish &amp; Wildlife (WDFW): Temperaturintervall og habitatveiledning for laksefisk.
+          <a href="https://wdfw.wa.gov/sites/default/files/publications/00003/wdfw00003.pdf">https://wdfw.wa.gov/sites/default/files/publications/00003/wdfw00003.pdf</a><br />
+          6. R21 Arkitekter: Solstudie/skyggedata (se Vedlegg B og søknadsunderlag).
+        </p>
+      </div>
+    </section>
+
+    <!-- Vedlegg A -->
+    <section class="sheet" aria-label="Vedlegg A">
+      <div class="appendix-title">
+        <h1>Vedlegg A: E-post fra Prof. L. Asbjørn Vøllestad (UiO)</h1>
+        <div class="small">Datert 04.02.2026</div>
+      </div>
+      <div class="email">
+Leif Asbjørn Vøllestad &lt;l.a.vollestad@ibv.uio.no&gt;
+Onsdag 4. februar 2026 15:32
+
+Hei,
+
+Jeg har sett på beskrivelsen, samt bilder fra Google maps (veit ikke når disse er tatt). Bildene synes å vise at det er betydelig kantvegetasjon langs elva forbi bygget (på begge sider). Jeg forutsetter at dette stemmer. Og vegetasjonen ser ut til å bestå av trær (ukjent art ut fra bilde). Dette er isåfall viktig.
+
+En økning av høyden vil føre til mer skygge over lenger tid. Siden lengden av bygningen er relativt beskjeden vil skyggingen ha liten effekt for fisken. Som det sies nedenfor vil det ikke gi mer skjul (skjul er positivt for fisken), men det kan medføre redusert oppvarming om sommeren (kan være positivt for fisken). Totalt vil en heving av høyden ha liten direkte effekt på fisken.
+
+Det viktigste ved en slik utbygging er å sikre en fungerende kantsone med tre-vegetasjon. Økt skygge (redusert solinnstråling) kan tenkes å ha en negativ effekt på vegetasjonen (redusert vekst og livskraft), noen som kan ha indirekte negativ effekt på fisk (redusert nedfall av insekter, redusert skjulmulighet siden røtter kan bidra til å danne skjul). Jeg ville derfor vært mest skeptisk til om det blir negative effekter på kantvegetasjonen, og argumentere for å dette må unngås.
+
+Ut over dette er det viktig å unngå inngrep i elvekanten, noe som kan føre til erosjon.
+
+Mvh
+
+Asbjørn
+
+
+L. Asbjørn Vøllestad, professor
+University of Oslo
+Department of Biosciences
+Center for Ecological and Evolutionary Synthesis CEES
+Post Office Box 1066 Blindern
+NO-0316 Oslo
+Norway
+
+http://www.mn.uio.no/cees/english/people/core/avollest/index.html
+http://publicationslist.org/avollest
+https://www.researchgate.net/profile/Leif_Vollestad
+A career working on fish
+      </div>
+      <p class="small" style="margin-top: 4mm">
+        Merk: Teksten over er gjengitt i sin helhet slik den ble mottatt pr e-post.
+      </p>
+    </section>
+
+    <!-- Vedlegg B -->
+    <section class="sheet" aria-label="Vedlegg B">
+      <div class="appendix-title">
+        <h1>Vedlegg B: Solstudie (R21 Arkitekter)</h1>
+        <div class="small">20. juni kl. 20:00</div>
+      </div>
+
+      <figure>
+        <img
+          src="../dashboard/assets/solstudie/frames/20juni-2000.png"
+          alt="Solstudie 20. juni kl. 20:00 (eksisterende vs planlagt, med og uten trær)"
+        />
+        <figcaption>
+          Figuren viser 4-panel solstudie: eksisterende og planlagt situasjon, med og uten trær. Full solstudieserie inngår i
+          søknadsunderlaget og kan ettersendes ved behov.
+        </figcaption>
+      </figure>
+    </section>
+  </body>
+</html>

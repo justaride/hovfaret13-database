@@ -1,0 +1,558 @@
+{
+  "bundle": {
+    "name": "områderegulering",
+    "source_dir": "/Users/gabrielboen/Downloads/områderegulering",
+    "imported_to": "documents/omraderegulering-skoyen-vedtakspunkt6",
+    "file_count": 16
+  },
+  "generated_at": "2026-02-11T11:10:41",
+  "documents": [
+    {
+      "id": "DOC-001",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (1).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-001__2026-02-11__politisk_sak__byradssak-213-2025-forslag-om-opphevelse-av-bystyrets-vedtakspunkt-6-i.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-001.txt",
+      "sha256": "3e81a5972ea861096aaee6f8a85840e43792db4ab198e5ca0c91a848d0e49234",
+      "bytes": 47878,
+      "doc_type": "politisk_sak",
+      "date": "2026-02-11",
+      "title": "Byrådssak 213/2025 - Forslag om opphevelse av bystyrets vedtakspunkt 6 i områderegulering for Skøyen",
+      "1line_summary": "2026-02-11: Politisk behandling/oversendelse til utvalg og bystyre (oppheving av vedtakspunkt 6).",
+      "key_topics": [
+        "vedtakspunkt6",
+        "utnyttelse-og-formal",
+        "omraderegulering-skoyen",
+        "kdd-innsigelse",
+        "planinitiativ-stopp",
+        "alternative-planforslag",
+        "byradet",
+        "byutviklingsutvalget",
+        "bystyret",
+        "hoff-village",
+        "hovfaret-13",
+        "engebrets-vei-3",
+        "oma-skoyen-omradeforum"
+      ],
+      "pages": 3,
+      "pdf_title": "Byrådssak 213/2025 - Forslag om opphevelse av bystyrets vedtakspunkt 6 i områderegulering for Skøyen",
+      "pdf_author": "Frode Edvin Nøstvik",
+      "pdf_creation_date": "2024-10-23",
+      "pdf_mod_date": "2025-10-03",
+      "quotes": [
+        {
+          "text": "ommune Bystyret Arkivsak: 25/2639 - 2 Politisk behandling av: Byrådssak 213/2025 - Forslag om opphevelse av bystyrets vedtakspunkt 6 i områderegulering for Skøyen Sak Utvalg Møtedato 25/26 Byutviklingsutvalget 11.02.2026 Bystyret Byrådet…",
+          "page": 1
+        },
+        {
+          "text": "ide 2 av 3 skape ny usikkerhet om hvordan «avvikende» planforslag skal behandles. Byrådet mener følgelig at det er best å oppheve hele vedtakspunkt 6 slik at man kommer tilbake til en «normalsituasjon» om hvordan slike avvikende forslag…",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "DOC-002",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (10).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-002__2025-06-25__presentasjon__oslo-kommune-byutvikling-25-06-25-hovfaret-13.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-002.txt",
+      "sha256": "6e76b113d8dc24d29ee7a0fd1d4f6be7b28409c35b6981d03ec594724cc2caa8",
+      "bytes": 7487388,
+      "doc_type": "presentasjon",
+      "date": "2025-06-25",
+      "title": "Oslo Kommune Byutvikling 25.06.25 - Hovfaret 13",
+      "1line_summary": "2025-06-25: Presentasjon om områderegulering Skøyen og praktiske konsekvenser (inkl. alternative planer/vedtakspunkt 6).",
+      "key_topics": [
+        "pbe",
+        "byradet",
+        "trikk",
+        "ombruk",
+        "hovfaret-13"
+      ],
+      "pages": 20,
+      "pdf_title": "Oslo Kommune Byutvikling 25.06.25 - Hovfaret 13",
+      "pdf_author": "DRIFT333404",
+      "pdf_creation_date": "2025-06-27",
+      "pdf_mod_date": "2025-06-27",
+      "quotes": []
+    },
+    {
+      "id": "DOC-003",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (11).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-003__2025-05-26__presentasjon__omraderegulering-skoyen.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-003.txt",
+      "sha256": "ef80923f392bb6d766185e2188b4646b0128cd1b92a5bb4c625979371f1f562f",
+      "bytes": 723317,
+      "doc_type": "presentasjon",
+      "date": "2025-05-26",
+      "title": "Områderegulering Skøyen",
+      "1line_summary": "2025-05-26: Presentasjon om områderegulering Skøyen og praktiske konsekvenser (inkl. alternative planer/vedtakspunkt 6).",
+      "key_topics": [
+        "utnyttelse-og-formal",
+        "omraderegulering-skoyen",
+        "kdd-innsigelse",
+        "planinitiativ-stopp",
+        "alternative-planforslag",
+        "pbe",
+        "byradet",
+        "bystyret",
+        "fornebubanen",
+        "trikk",
+        "ombruk",
+        "oma-skoyen-omradeforum"
+      ],
+      "pages": 7,
+      "pdf_title": "PowerPoint-presentasjon",
+      "pdf_author": "Rongved, Magnus Hellerud",
+      "pdf_creation_date": "2025-06-03",
+      "pdf_mod_date": "2025-06-03",
+      "quotes": [
+        {
+          "text": "Det skal tillates fremmet detaljreguleringer med avvik fra denne plan knyttet til utnyttelsesgrad, formål og utforming, derso m det bedre møter miljømessig, sosial bærekraft og stedstilpasset byutvikling. Det gjelder særlig forslag som l…",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "DOC-004",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (12).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-004__2024-03-18__presentasjon__omraderegulering-skoyen.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-004.txt",
+      "sha256": "590c0b4961fd63fc2612bd8c749d69aec391954eaed790e7d8bc11e8d9667f15",
+      "bytes": 1140811,
+      "doc_type": "presentasjon",
+      "date": "2024-03-18",
+      "title": "Områderegulering Skøyen",
+      "1line_summary": "2024-03-18: Presentasjon om områderegulering Skøyen og praktiske konsekvenser (inkl. alternative planer/vedtakspunkt 6).",
+      "key_topics": [
+        "utnyttelse-og-formal",
+        "omraderegulering-skoyen",
+        "kdd-innsigelse",
+        "alternative-planforslag",
+        "pbe",
+        "byradet",
+        "bystyret",
+        "trikk",
+        "ombruk",
+        "hoff-village",
+        "oma-skoyen-omradeforum"
+      ],
+      "pages": 22,
+      "pdf_title": "PowerPoint-presentasjon",
+      "pdf_author": "Rongved, Magnus Hellerud",
+      "pdf_creation_date": "2024-03-20",
+      "pdf_mod_date": "2024-03-21",
+      "quotes": [
+        {
+          "text": "Det skal tillates fremmet detaljreguleringer med avvik fra denne plan knyttet til utnyttelsesgrad, formål og utforming, dersom det bedre møter miljømessig, sosial bærekraft og stedstilpasset byutvikling. Det gjelder særlig forslag som le…",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "id": "DOC-005",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (13).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-005__2025-05-14__e-post__vs-hoff-village-folkemote-og-apning-av-utstillingen-bydel-ullern-2035.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-005.txt",
+      "sha256": "67f3a213200cc8676df47fdffee1a2943345e7eefb39b27892cb51e0d5288cdd",
+      "bytes": 128745,
+      "doc_type": "e-post",
+      "date": "2025-05-14",
+      "title": "VS: Hoff Village - Folkemøte og åpning av utstillingen Bydel Ullern 2035",
+      "1line_summary": "2025-05-14: E-post/videresending knyttet til områderegulering Skøyen og vedtakspunkt 6.",
+      "key_topics": [
+        "pbe",
+        "byradet",
+        "trikk",
+        "hoff-village"
+      ],
+      "pages": 2,
+      "pdf_title": null,
+      "pdf_author": "DRIFT333404",
+      "pdf_creation_date": "2025-12-11",
+      "pdf_mod_date": "2025-12-11",
+      "quotes": []
+    },
+    {
+      "id": "DOC-006",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (14).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-006__2024-09-16__brev__var-ref-hofbr012.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-006.txt",
+      "sha256": "848c57807ca83071cf5e4a313ec932b31d63d94bc7a1d2216742f31c8d0f8ed9",
+      "bytes": 421128,
+      "doc_type": "brev",
+      "date": "2024-09-16",
+      "title": "Vår ref:             hofBR012",
+      "1line_summary": "2024-09-16: Brev/innspill knyttet til stoppet planinitiativ og/eller tolkning av vedtakspunkt 6.",
+      "key_topics": [
+        "vedtakspunkt6",
+        "planinitiativ-stopp",
+        "pbe",
+        "byradet",
+        "bystyret",
+        "trikk",
+        "ombruk",
+        "hoff-village",
+        "hoffsveien-13"
+      ],
+      "pages": 2,
+      "pdf_title": "Vår ref:",
+      "pdf_author": "Svev Øyvind Neslein",
+      "pdf_creation_date": "2024-09-16",
+      "pdf_mod_date": "2024-09-18",
+      "quotes": [
+        {
+          "text": "punkte ne i forhold til etatens avslag . I møtet ble det redegjor t for hvordan planinitiativet tilfredsstiller vilkårene i bystyrets vedtakspunkt 6 til områdeplanen , som åpner for at planinitiativet bør tillates fremmet som detaljregul…",
+          "page": 1
+        },
+        {
+          "text": "t alternativ t planforslag, bør omfanget av dokumentasjonskrav begrenses kraftig. Vi be r om Byrådets tilslutning til vårt ønske om at planinitiativet oversendes til Plan - og bygningsetaten for videre behandling. Med vennlig hilsen NIEL…",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "DOC-007",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (15).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-007__2024-09-06__presentasjon__microsoft-powerpoint-presentasjon-fra-mote-den-06-09-2024-l-1239544-sk.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-007.txt",
+      "sha256": "90894f05683a6edb3b3336c49536dc8def531d0b40cbe415e568c95465aade8c",
+      "bytes": 11479570,
+      "doc_type": "presentasjon",
+      "date": "2024-09-06",
+      "title": "Microsoft PowerPoint - Presentasjon fra møte den 06.09.2024 (L)(1239544) [Skrivebeskyttet]",
+      "1line_summary": "2024-09-06: Presentasjon om områderegulering Skøyen og praktiske konsekvenser (inkl. alternative planer/vedtakspunkt 6).",
+      "key_topics": [
+        "vedtakspunkt6",
+        "omraderegulering-skoyen",
+        "planinitiativ-stopp",
+        "pbe",
+        "byradet",
+        "bystyret",
+        "hoff-village"
+      ],
+      "pages": 12,
+      "pdf_title": "Microsoft PowerPoint - Presentasjon fra møte den 06.09.2024 (L)(1239544) [Skrivebeskyttet]",
+      "pdf_author": "Arne Myklemyr",
+      "pdf_creation_date": "2024-10-16",
+      "pdf_mod_date": "2024-10-16",
+      "quotes": [
+        {
+          "text": "nelsefor å stoppe planinitiativet PBE mener at planinitiativet avviker vesentlig fra områderegulering Skøyen på disse punkter: Vilkårene i vedtakspunkt 6 om miljømessig, sosial bærekraft og stedstilpasset utvikling er ikke oppfylt- Absol…",
+          "page": 2
+        },
+        {
+          "text": "Bolig: opprinnelig planinitiativ Hoffsveien 15- Kontor Boligandel: 33% Utnyttelse: 394% Totalt BRA felt S1: ca. 42.500 m2KONTOR KONTORTotalt BRA Bolig : ca. 13.650 m2 Totalt antall leiligheter: 197 stk. (Gjennomsnitt leilighet ca. 60m2)",
+          "page": 4
+        },
+        {
+          "text": "Boligandel: 58% Utnyttelse: 375% Totalt BRA felt S1: ca. 40.500 m2 Bolig: justertplaninitiativ Hoffsveien 15- BoligBOLIG BOLIGTotalt BRA Bolig : ca. 23.250 m2 Totalt antall leiligheter: 307 stk. (Gjennomsnitt leilighet ca. 65m2)",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "DOC-008",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (2).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-008__2025-12-17__byrådssak__forslag-om-opphevelse-av-bystyrets-vedtakspunkt-6-i-omraderegulering-f.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-008.txt",
+      "sha256": "8a3835ce0bb0a71a5245c7d2e94ecbb76a9442e24fae6aff214236bb3da99e20",
+      "bytes": 155480,
+      "doc_type": "byrådssak",
+      "date": "2025-12-17",
+      "title": "Forslag om opphevelse av bystyrets vedtakspunkt 6 i områderegulering for Skøyen",
+      "1line_summary": "2025-12-17: Byrådssak om oppheving av vedtakspunkt 6 i områderegulering for Skøyen.",
+      "key_topics": [
+        "vedtakspunkt6",
+        "utnyttelse-og-formal",
+        "omraderegulering-skoyen",
+        "kdd-innsigelse",
+        "planinitiativ-stopp",
+        "alternative-planforslag",
+        "pbe",
+        "byradet",
+        "byutviklingsutvalget",
+        "bystyret",
+        "ombruk",
+        "hoff-village",
+        "hovfaret-13",
+        "engebrets-vei-3",
+        "hoffsveien-13",
+        "oma-skoyen-omradeforum"
+      ],
+      "pages": 6,
+      "pdf_title": "Forslag om opphevelse av bystyrets vedtakspunkt 6 i områderegulering for Skøyen",
+      "pdf_author": "Magnhild Opdahl",
+      "pdf_creation_date": "2025-12-17",
+      "pdf_mod_date": "2025-12-17",
+      "quotes": [
+        {
+          "text": "yret Oslo kommune Saksnr: 20/1989 -526 Byrådssak 213/25 Forslag om opphevelse av bystyrets vedtakspunkt 6 i områderegulering for Skøyen Sammendrag: Bystyret vedtok områderegulering for Skøyen 27. september 2023, sak 332/23 med et vedtaks…",
+          "page": 1
+        },
+        {
+          "text": "2 Saksnr:: 20/1989 -526 Flere detaljreguleringer i området er igangsatt og bystyrets vedtakspunkt 6 har blitt et tema i flere av disse sakene. Vedtakspunkt 6 lyder: «Utnyttelse og formål Det skal tillates fremmet detaljreguleringer med a…",
+          "page": 2
+        },
+        {
+          "text": "ppfattes å ha vært bystyrets intensjon om å åpne for alternative planforslag sammenlignet med områdereguleringens løsninger. En endring av vedtakspunkt 6 vil imidlertid åpne for nye tolkninger og eventuelle vilkår, og kan skape ny usikke…",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "DOC-009",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (3).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-009__2025-10-30__e-post__vs-201805357-omraderegulering-skoyen-anmodning-om-politisk.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-009.txt",
+      "sha256": "1a335e1e91e60857d04e20a0493034319372912fc6feefdb5e5ccd4e75466216",
+      "bytes": 175526,
+      "doc_type": "e-post",
+      "date": "2025-10-30",
+      "title": "VS: 201805357- Områderegulering Skøyen – Anmodning om politisk",
+      "1line_summary": "2025-10-30: E-post/videresending knyttet til områderegulering Skøyen og vedtakspunkt 6.",
+      "key_topics": [
+        "omraderegulering-skoyen",
+        "pbe",
+        "byradet",
+        "fornebubanen",
+        "trikk"
+      ],
+      "pages": 3,
+      "pdf_title": null,
+      "pdf_author": "DRIFT333404",
+      "pdf_creation_date": "2025-12-11",
+      "pdf_mod_date": "2025-12-11",
+      "quotes": []
+    },
+    {
+      "id": "DOC-010",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (4).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-010__2025-09-01__presentasjon__omraderegulering-skoyen.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-010.txt",
+      "sha256": "54189db3b552321f1410399aa58e45c4a54684e71d31e4d60bef7a463abc128a",
+      "bytes": 985044,
+      "doc_type": "presentasjon",
+      "date": "2025-09-01",
+      "title": "Områderegulering Skøyen",
+      "1line_summary": "2025-09-01: Presentasjon om områderegulering Skøyen og praktiske konsekvenser (inkl. alternative planer/vedtakspunkt 6).",
+      "key_topics": [
+        "vedtakspunkt6",
+        "omraderegulering-skoyen",
+        "kdd-innsigelse",
+        "planinitiativ-stopp",
+        "alternative-planforslag",
+        "pbe",
+        "byradet",
+        "bystyret",
+        "fornebubanen",
+        "trikk",
+        "hoff-village",
+        "oma-skoyen-omradeforum"
+      ],
+      "pages": 6,
+      "pdf_title": "PowerPoint-presentasjon",
+      "pdf_author": "Rongved, Magnus Hellerud",
+      "pdf_creation_date": "2025-09-29",
+      "pdf_mod_date": "2025-09-29",
+      "quotes": [
+        {
+          "text": "Dagens tema: Alternative planer, Vedtakspunkt 6 i områderegulering Skøyen PBE sendt ut likelydende brev til alle fagkyndige på Skøyen, 1.09.25",
+          "page": 3
+        },
+        {
+          "text": "dhusets side, ei heller ønsket tatt opp under samhandlingsmøter •Innebærer at beslutning flyttes fra politisk nivå til etatsnivå •PBE kan avvise alternative planer før politisk behandling •Kostnadsmessig svært krevende å stille to fullve…",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "DOC-011",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (5).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-011__2024-09-10__brev__var-ref-engbr004.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-011.txt",
+      "sha256": "eb9cd3ddd0f71851505c3c96b508e00cff88914d9527a88dcc5ff61dfcf9b5b2",
+      "bytes": 231696,
+      "doc_type": "brev",
+      "date": "2024-09-10",
+      "title": "Vår ref:             engBR004",
+      "1line_summary": "2024-09-10: Brev/innspill knyttet til stoppet planinitiativ og/eller tolkning av vedtakspunkt 6.",
+      "key_topics": [
+        "vedtakspunkt6",
+        "utnyttelse-og-formal",
+        "planinitiativ-stopp",
+        "alternative-planforslag",
+        "pbe",
+        "byradet",
+        "byutviklingsutvalget",
+        "bystyret",
+        "ombruk",
+        "engebrets-vei-3"
+      ],
+      "pages": 3,
+      "pdf_title": "Vår ref:",
+      "pdf_author": "Svev Øyvind Neslein",
+      "pdf_creation_date": "2024-09-11",
+      "pdf_mod_date": "2024-09-12",
+      "quotes": [
+        {
+          "text": "tre hovedpunkter som grunnlag for å stoppe planinitiativet : 1) Avvik fra maks tillatt utnyttelse, høyder, og andel bolig. 2) Vilkår i vedtakspunkt 6 for avvik , grunnet miljømessig, sosial bærekraft og stedstilpasset utvikling , er ikke…",
+          "page": 1
+        },
+        {
+          "text": "i utviklingsområder U -2 (som Skøyen er en del av) i PBEs forslag til ny KPA 2025- 2040 som var ute til høring i 2023. 2) Vilkår i vedtakspunkt 6 for avvik, grunnet miljømessig, sosial bærekraft og stedstilpasset utvikling, er ikke oppfy…",
+          "page": 2
+        },
+        {
+          "text": "Dato: 10.09.2024 Dokument: engBR004 Side 3 av 3 Vi vil be om bystyrets tilslutning til vårt ønske om at planinitiativet kan bli tatt opp til en konkret vurdering i en åpen planprosess hos etaten . På bakgrunn av ovenstående vil vi be om…",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "DOC-012",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (6).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-012__2024-11-29__brev__var-ref-engbr005.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-012.txt",
+      "sha256": "18cee19beb429a6df6fe26163f62053f88bb716d3bcf8b0c8cd847f2c1c38c30",
+      "bytes": 230187,
+      "doc_type": "brev",
+      "date": "2024-11-29",
+      "title": "Vår ref:            engBR005",
+      "1line_summary": "2024-11-29: Brev/innspill knyttet til stoppet planinitiativ og/eller tolkning av vedtakspunkt 6.",
+      "key_topics": [
+        "vedtakspunkt6",
+        "omraderegulering-skoyen",
+        "planinitiativ-stopp",
+        "pbe",
+        "byradet",
+        "bystyret",
+        "trikk",
+        "ombruk",
+        "hoff-village",
+        "engebrets-vei-3"
+      ],
+      "pages": 3,
+      "pdf_title": "Vår ref:",
+      "pdf_author": "Svev Øyvind Neslein",
+      "pdf_creation_date": "2024-11-29",
+      "pdf_mod_date": "2024-12-02",
+      "quotes": [
+        {
+          "text": "ektivtknutepunkt og oppgradering av utearealer langs Hoffselva. Planinitiativet tilfredsstiller etter vår mening vilkårene i by styrets vedtakspunkt 6 til områdeplanen , som åpner for at planinitiative r som avviker fra områdeplanen bør…",
+          "page": 1
+        },
+        {
+          "text": "andel, legger områdeplanen til grunn at det skal etableres 21.270 m2 boligareal for alle tre feltene til sammen. F oreslått boligareal i planinitiativet for Hoff Village er ca. 10 % høyere enn dette . • Utnyttelsesgrad : Felt BKB3 og BKB…",
+          "page": 2
+        },
+        {
+          "text": "Dato: 29.11.2024 Dokument: engBR005 Side 3 av 3 Det er svært ressurskrevende å utvikle flere planalternativer, og vi ber om at planinitiativ et vurderes opp mot nullalternativet, det vil si ingen endring av dagens situasjon, og at vi ikk…",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "DOC-013",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (7).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-013__2025-06-27__e-post__fw-james-lorentzen-mote-25-juni-oppfolging.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-013.txt",
+      "sha256": "22231f47df3236c2497dfd01400473c55f1a3f545c4948eaf39279e56319be50",
+      "bytes": 100219,
+      "doc_type": "e-post",
+      "date": "2025-06-27",
+      "title": "Fw: James Lorentzen - Møte 25 Juni Oppfølging",
+      "1line_summary": "2025-06-27: E-post/videresending knyttet til områderegulering Skøyen og vedtakspunkt 6.",
+      "key_topics": [
+        "byradet",
+        "hovfaret-13"
+      ],
+      "pages": 1,
+      "pdf_title": null,
+      "pdf_author": "DRIFT333404",
+      "pdf_creation_date": "2025-12-11",
+      "pdf_mod_date": "2025-12-11",
+      "quotes": []
+    },
+    {
+      "id": "DOC-014",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (8).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-014__2023-12-22__notat__hovfaret-13.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-014.txt",
+      "sha256": "d3380eaad93774942eefd0ab750d090daa010e9b8cf6fdf727e65a139908bcb4",
+      "bytes": 2206547,
+      "doc_type": "notat",
+      "date": "2023-12-22",
+      "title": "Hovfaret 13",
+      "1line_summary": "2023-12-22: Notat/utdrag med Hovfaret 13 som eksempel på vedtakspunkt 6-problematikken.",
+      "key_topics": [
+        "utnyttelse-og-formal",
+        "omraderegulering-skoyen",
+        "kdd-innsigelse",
+        "alternative-planforslag",
+        "pbe",
+        "bystyret",
+        "trikk",
+        "ombruk",
+        "hovfaret-13"
+      ],
+      "pages": 4,
+      "pdf_title": null,
+      "pdf_author": "DRIFT333404",
+      "pdf_creation_date": "2024-11-06",
+      "pdf_mod_date": "2025-06-27",
+      "quotes": [
+        {
+          "text": "Det skal tillates fremmet detaljreguleringer med avvik fra denne plan knyttet til utnyttelsesgrad, formål og utforming, dersom det bedre møter miljømessig, sosial bærekraft og stedstilpasset byutvikling. Det gjelder særlig forslag som le…",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "DOC-015",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/fil (9).pdf",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-015__2023-02-23__notat__1-3-0-attra-ktiv-e-boliger-la-ngs-ho-ffs-elva.pdf",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-015.txt",
+      "sha256": "1d6d3419a6e30395b22f8952f9003df69e593c513307e096f089163b2815e17a",
+      "bytes": 4732864,
+      "doc_type": "notat",
+      "date": "2023-02-23",
+      "title": "1 3 0 ATTRA KTIV E BOLIGER LA NGS HO FFS ELVA",
+      "1line_summary": "2023-02-23: 1 3 0 ATTRA KTIV E BOLIGER LA NGS HO FFS ELVA",
+      "key_topics": [],
+      "pages": 2,
+      "pdf_title": null,
+      "pdf_author": "DRIFT333404",
+      "pdf_creation_date": "2023-02-23",
+      "pdf_mod_date": "2025-06-27",
+      "quotes": []
+    },
+    {
+      "id": "DOC-016",
+      "original_path": "/Users/gabrielboen/Downloads/områderegulering/Fwd_ Skøyen Områdeforum_ Skøyen Områdeplan pkt.md",
+      "imported_path": "documents/omraderegulering-skoyen-vedtakspunkt6/raw/DOC-016__2026-02-10__e-post__fwd-skoyen-omradeforum-skoyen-omradeplan-pkt-6-behandles-i-byutvikling.md",
+      "extract_text_path": "documents/omraderegulering-skoyen-vedtakspunkt6/extract/text/DOC-016.txt",
+      "sha256": "1c702091759af846b3f158330812c8b23d63307289cb29e911973cce5fed50bb",
+      "bytes": 6238,
+      "doc_type": "e-post",
+      "date": "2026-02-10",
+      "title": "Fwd: Skøyen Områdeforum: Skøyen Områdeplan pkt. 6 behandles i Byutviklingsvalget",
+      "1line_summary": "2026-02-10: E-post/videresending knyttet til områderegulering Skøyen og vedtakspunkt 6.",
+      "key_topics": [
+        "vedtakspunkt6",
+        "utnyttelse-og-formal",
+        "omraderegulering-skoyen",
+        "kdd-innsigelse",
+        "alternative-planforslag",
+        "byradet",
+        "byutviklingsutvalget",
+        "bystyret",
+        "oma-skoyen-omradeforum"
+      ],
+      "pages": null,
+      "pdf_title": null,
+      "pdf_author": null,
+      "pdf_creation_date": null,
+      "pdf_mod_date": null,
+      "quotes": []
+    }
+  ]
+}
