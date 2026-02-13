@@ -1498,8 +1498,8 @@
       async function loadData() {
         try {
           const [nmResp, svarResp] = await Promise.all([
-            fetch("../data/themes/nabomerknader.json"),
-            fetch("../data/themes/nabomerknad-svar.json"),
+            fetch("data/themes/nabomerknader.json"),
+            fetch("data/themes/nabomerknad-svar.json"),
           ]);
           NM_DATA = await nmResp.json();
           SVAR_DATA = await svarResp.json();

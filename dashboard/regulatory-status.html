@@ -878,7 +878,7 @@
       // Load config data to ensure consistency
       async function loadConfig() {
         try {
-          const response = await fetch("../data/config.json");
+          const response = await fetch("data/config.json");
           const config = await response.json();
 
           // Update any dynamic values from config if needed

@@ -19,7 +19,7 @@
 | Organizations   | 19                                 |
 | Deliverables    | 37                                 |
 | Timeline events | 34 (10 strategic + 24 operational) |
-| Dashboard pages | 41                                 |
+| Dashboard pages | 52                                 |
 | Nabomerknader   | 53 (52 unike avsendere)            |
 
 ---

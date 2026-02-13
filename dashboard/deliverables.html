@@ -1194,7 +1194,7 @@
       async function init() {
         try {
           // Load deliverables
-          const delResponse = await fetch("../data/deliverables.json");
+          const delResponse = await fetch("data/deliverables.json");
           const delData = await delResponse.json();
           allDeliverables = delData.deliverables || [];
           categories = delData.categories || [];
@@ -1202,7 +1202,7 @@
           // Load people for responsible mapping
           try {
             const peopleResponse = await fetch(
-              "../data/stakeholders/people.json",
+              "data/stakeholders/people.json",
             );
             const peopleData = await peopleResponse.json();
             const peopleSource = peopleData.people || peopleData || {};

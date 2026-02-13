@@ -4,7 +4,12 @@
     "created": "2026-01-27",
     "description": "Teknisk utdypet miljøargumentasjon med full rapportreferanse",
     "purpose": "Rammesøknad og dispensasjonsgrunnlag",
-    "base_document": "environmental-arguments.json"
+    "base_document": "environmental-arguments.json",
+    "content_classification": {
+      "type": "project_data",
+      "deliverable_id": null,
+      "source_document": "Teknisk miljøargumentasjon for rammesøknad"
+    }
   },
   "report_sources": {
     "primary": [

@@ -5,7 +5,7 @@
     "last_updated": "2026-02-13",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 80
+    "database_phase": 81
   },
   "auth": {
     "enabled": true,
@@ -121,6 +121,10 @@
       "target_date": "2025-11",
       "responsible": "Byggesaksrådgivning AS"
     },
+    "dialogmote_2": {
+      "status": "completed",
+      "date": "2026-01-29"
+    },
     "rammesoknad": {
       "status": "not_started",
       "target_date": null
@@ -195,8 +199,8 @@
     "response_file": "themes/nabomerknad-svar.json",
     "analyse_report": "documents/nabomerknad-analyse.md",
     "folgebrev_draft": "documents/folgebrev-utkast.md",
-    "total_submissions": 52,
-    "unique_submitters": 49,
+    "total_submissions": 53,
+    "unique_submitters": 52,
     "themes_count": 15,
     "high_severity_count": 10,
     "top_theme": "SOL (88%)",
