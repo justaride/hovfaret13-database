@@ -1,0 +1,463 @@
+{
+  "generated_at": "2026-02-13T14:09:57",
+  "batch_id": "mailgreier_2026-02-13",
+  "source_folder": "hovfaret13mailgreier. 13.02",
+  "summary": {
+    "total_files": 49,
+    "by_extension": {
+      "eml": 28,
+      "pdf": 15,
+      "docx": 3,
+      "ics": 3
+    },
+    "by_category": {
+      "stakeholder_engagement": 17,
+      "communications": 15,
+      "regulatory": 8,
+      "meetings": 9
+    }
+  },
+  "files": [
+    {
+      "file_name": " Hovfaret 13 - Forslag til følgebrev, beskrivelse, dispensasjoner.eml",
+      "extension": "eml",
+      "size_bytes": 66247,
+      "checksum_sha256": "02b378bf3795e04b8f27667dab81c2fafe14166efd2a9f1aad7c15116dbdb39c",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "@.pdf",
+      "extension": "pdf",
+      "size_bytes": 445206,
+      "checksum_sha256": "5001fe8ea209e5d74eb8092ded7d4940f3ee5c0c0951ab295a7c5eec7d8faacc",
+      "category": "communications",
+      "document_type": "supporting_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Fremdrift for søknaden i Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 51953,
+      "checksum_sha256": "f96918b43c0c161e6c56aaf2b1223e51d496a6ba3e3e9e85889b567e8adef929",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Fwd_ Beboerpresentasjon og tegninger til Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 17418,
+      "checksum_sha256": "0a845aff8e087ddd7bd5ba32438590eee9cce38da5dcce564c9635fe4818b727",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Fwd_ Dispensasjoner Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 17392,
+      "checksum_sha256": "3fcc27f7d445ecfa225b9c69a58c53c30a991b35591328d177038bd989b31241",
+      "category": "regulatory",
+      "document_type": "regulatory_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Fwd_ Hovfaret 13, verdivurdering.eml",
+      "extension": "eml",
+      "size_bytes": 74181,
+      "checksum_sha256": "6c23bd4c6e8d37a89268bdcbf6928b27f2f8c2ebb615dd7aeaffc8bc362b56a6",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Fwd_ Høydeberegning Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 22068,
+      "checksum_sha256": "00a79ff50ddef794305cbf72f073b32f66e908d83f33e0703e980434f0de1cb1",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Fwd_ Rekkverk Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 21911,
+      "checksum_sha256": "4f3d180cf67e6ea6bfd619fc958c500c16aadb3b24a2bd89ccd54ee30c0ca250",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Fwd_ Skøyen Områdeforum_ Skøyen Områdeplan pkt. 6 behandles i Byutviklingsvalget.eml",
+      "extension": "eml",
+      "size_bytes": 58597,
+      "checksum_sha256": "71c47c828cefe2689eaf080957b253491e2e6c2c02b1ecfd90ae24a62a6fb142",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Fwd_ Videresend_ Svar_ Nabovarsel Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 47449,
+      "checksum_sha256": "bc89aa76adf8db6cd3475c9ca1e049568457db7b1145b27faa1d127188c283d4",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Henvendelse om fagvurdering_ Sjøørret og skyggeeffekt ved Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 29610,
+      "checksum_sha256": "ab15f38f8a2f4e672f18f9fb25e4f74ef24f0954b4a8132442381951a1c94c8a",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Hovfaret 13 - Byggesaksrådgivning.eml",
+      "extension": "eml",
+      "size_bytes": 37848,
+      "checksum_sha256": "c2c04ea837466992cef6c933d1246ca9c0c8fdad609834613e1e4df68a6f9c1d",
+      "category": "regulatory",
+      "document_type": "regulatory_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Hovfaret 13 - Merknad fra Hoffsgrenda borettslag.eml",
+      "extension": "eml",
+      "size_bytes": 21771,
+      "checksum_sha256": "278c650d92e920768ae310ee0aef34691f61874b2e24484f099b8b311010b761",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 3585,
+      "checksum_sha256": "7ae67e49090398fb3a6555e78ee2adb0151c0f697d8b83445361d1ccd8f3c297",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Hovfaret_13_Beskrivelse_Optimert.docx",
+      "extension": "docx",
+      "size_bytes": 22467,
+      "checksum_sha256": "5099471be69f406515264fd8a09ae0e2d02b3d978e640de04ff79a5073ca7df5",
+      "category": "regulatory",
+      "document_type": "regulatory_document",
+      "derived_from": "docx"
+    },
+    {
+      "file_name": "Informasjonsmøtet - Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 42544,
+      "checksum_sha256": "7957b330621d2de11fe330d35b3b773ecdb01d99b47b845c542a057bd57dce96",
+      "category": "meetings",
+      "document_type": "meeting_invitation_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Informasjonsmøtet - Hovfaret 13_1.eml",
+      "extension": "eml",
+      "size_bytes": 33178,
+      "checksum_sha256": "2af734f013ca27b25a0b7c3679fc79ec7b9070a0db29eb310627a2348d806706",
+      "category": "meetings",
+      "document_type": "meeting_invitation_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Invitation_ Einar _ Gabriel _ Kamran - Hovfaret 13 @ Tue Jan 27, 2026 4_15pm - 4_45pm (CET) (Gabriel B Freeman).eml",
+      "extension": "eml",
+      "size_bytes": 50392,
+      "checksum_sha256": "b4697a845119f4ba3ff14a0406f9c854093a0ae9032a43670188e58df88ad9f8",
+      "category": "meetings",
+      "document_type": "meeting_invitation_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Invitation_ Hovfaret 13 - Ekstra møte med nabolaget_Styret @ Thu Jan 29, 2026 5_30pm - 7pm (CET) (Gabriel B Freeman).eml",
+      "extension": "eml",
+      "size_bytes": 52114,
+      "checksum_sha256": "a1d75d4e016b494c3924434ba3a0517cf969fd459dc50df8f9a37471bc09aa19",
+      "category": "meetings",
+      "document_type": "meeting_invitation_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "invite.ics",
+      "extension": "ics",
+      "size_bytes": 2399,
+      "checksum_sha256": "3379e914ec7ac2097e7ec9506a94e5594d15dc29194f0348b1493aee32b2f77c",
+      "category": "meetings",
+      "document_type": "calendar_invitation",
+      "derived_from": "ics"
+    },
+    {
+      "file_name": "invite_1.ics",
+      "extension": "ics",
+      "size_bytes": 2436,
+      "checksum_sha256": "2e4c6d42088f699e3f3c7276eea8a63cdb18229f11cb53866eda8ab3d9b407a0",
+      "category": "meetings",
+      "document_type": "calendar_invitation",
+      "derived_from": "ics"
+    },
+    {
+      "file_name": "invite_2.ics",
+      "extension": "ics",
+      "size_bytes": 2441,
+      "checksum_sha256": "7ad868327fe6de5162e4950073dbb347eeaf3628594f6725c3a1c6c325286d1a",
+      "category": "meetings",
+      "document_type": "calendar_invitation",
+      "derived_from": "ics"
+    },
+    {
+      "file_name": "Merkn ad fra Monica Syrdal, Engebrets vei 2.pdf",
+      "extension": "pdf",
+      "size_bytes": 116496,
+      "checksum_sha256": "6958636b45d38c4a9c9cd1dd466c131da174c9cdd988113489e3d6c5136b3230",
+      "category": "communications",
+      "document_type": "supporting_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Merknad-til-nabovarsel-1-20251230-BORETTSLAGET-HOFFSBYEN-HAGEBY.pdf",
+      "extension": "pdf",
+      "size_bytes": 110138,
+      "checksum_sha256": "1c7434a1a1343155fe43b7ad4a2206f34ef60d1783898685e4c9db24bf3d2f15",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Merknader fra Færøvik og Stangnes.pdf",
+      "extension": "pdf",
+      "size_bytes": 225346,
+      "checksum_sha256": "e6e3c79cc68023ed8830be3ee079b20c5665c849d235a4e3f1cc6072057ce23f",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Merknader fra Lenka og Michael Magnussen Engebretsvei 6B.pdf",
+      "extension": "pdf",
+      "size_bytes": 94258,
+      "checksum_sha256": "0b270105c1267dfc6d5213398ccd095a09df514b525dbc1f7b6cd5a20c9dfbef",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Fremdrift for søknaden i Hovfaret 13.pdf",
+      "extension": "pdf",
+      "size_bytes": 347076,
+      "checksum_sha256": "c78005951409b810883bb6ecc8114073c134b7cfa9d26ece5e37d2a190a59692",
+      "category": "regulatory",
+      "document_type": "regulatory_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Fwd_ Dispensasjoner Hovfaret 13.pdf",
+      "extension": "pdf",
+      "size_bytes": 130095,
+      "checksum_sha256": "492c05694a43850eed95a3606b590045ab880382fffbb9529790ee3ac587711c",
+      "category": "regulatory",
+      "document_type": "regulatory_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Fwd_ Høydeberegning Hovfaret 13.pdf",
+      "extension": "pdf",
+      "size_bytes": 154995,
+      "checksum_sha256": "53dce1c09cd793dd0fa9ef121b4f4932e5ece4920694b2a09a2742c3634d60af",
+      "category": "regulatory",
+      "document_type": "regulatory_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Fwd_ Rekkverk Hovfaret 13.pdf",
+      "extension": "pdf",
+      "size_bytes": 152423,
+      "checksum_sha256": "c578e602d9fc00db1e1b5e761e6b39f737a4fbb47f16488cd1ac0c6cc4ee0e78",
+      "category": "regulatory",
+      "document_type": "regulatory_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Fwd_ Skøyen Områdeforum_ Skøyen Områdeplan pkt. 6 behandles i Byutviklingsvalget.pdf",
+      "extension": "pdf",
+      "size_bytes": 551711,
+      "checksum_sha256": "624623d17c3a9a2c9668fc6fadbd8c32d3cf460b442534906cdcb3cdba24f9ee",
+      "category": "communications",
+      "document_type": "supporting_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Henvendelse om fagvurdering_ Sjøørret og skyggeeffekt ved Hovfaret 13.pdf",
+      "extension": "pdf",
+      "size_bytes": 389510,
+      "checksum_sha256": "f4e71cf362ca102b4bb28b99af55d7942e7508294ae595b7c48f57e6ebb6f4a4",
+      "category": "communications",
+      "document_type": "supporting_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Hovfaret 13 - Forslag til følgebrev, beskrivelse, dispensasjoner.pdf",
+      "extension": "pdf",
+      "size_bytes": 396839,
+      "checksum_sha256": "e8145266d822999156a9241e6c81290018237e21f21ea26713b7e62f984098dc",
+      "category": "regulatory",
+      "document_type": "regulatory_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Informasjonsmøtet - Hovfaret 13.pdf",
+      "extension": "pdf",
+      "size_bytes": 214661,
+      "checksum_sha256": "10a0ad9ae3ce6ef365ada488eae9197b2fa1a7edda4bbcb2a3ec52c879768227",
+      "category": "communications",
+      "document_type": "supporting_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Natural State AS Mail - Ved. Hovfaret.pdf",
+      "extension": "pdf",
+      "size_bytes": 322226,
+      "checksum_sha256": "646b07fe97dc8042cf843318feecbea99c435b65b93c208a1da2d55e59393d5a",
+      "category": "communications",
+      "document_type": "supporting_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Oppsummering av merknadene fra Engebretsvei 2 og 6.docx",
+      "extension": "docx",
+      "size_bytes": 15152,
+      "checksum_sha256": "fbcc4fa9c683934fe512e15ea58345a6d7fde3e5e868aca48c365df8a9a6c533",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_document",
+      "derived_from": "docx"
+    },
+    {
+      "file_name": "Oppsummering fra meknader i saksnr 202521699.docx",
+      "extension": "docx",
+      "size_bytes": 15747,
+      "checksum_sha256": "7acd42b0afb9c7cb924854645c2e7c59bcf06c0a84dca6370b4d00b2050b2255",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_document",
+      "derived_from": "docx"
+    },
+    {
+      "file_name": "Svar_ Hovfaret 13 - Nabomerknader.eml",
+      "extension": "eml",
+      "size_bytes": 72527,
+      "checksum_sha256": "d9727c17e66eb3279f228b7dc946e0eac4225abf931a71f0d3913bedbc791be2",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Svar_ Hovfaret 13 - Oppdatering.eml",
+      "extension": "eml",
+      "size_bytes": 65837,
+      "checksum_sha256": "4baef3af6ec9c630bac67d617ed7070169a713107f3ca8eedd3158400fcaa7eb",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Svar_ Presentasjon vist i Skøyen Områdeforum om Hovfaret 13 .eml",
+      "extension": "eml",
+      "size_bytes": 317762,
+      "checksum_sha256": "a913cc53185dd40a277e66943a3401bcead0d0765e2045b7b7091099e8ecfd8c",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Svar_ Skøyen Områdeforum_ Skøyen Områdeplan pkt. 6 behandles i Byutviklingsvalget.eml",
+      "extension": "eml",
+      "size_bytes": 56612,
+      "checksum_sha256": "019a9d4b1ed1078c6c4d02ce0276736b5eb144253b41502ee2999f585866cbdb",
+      "category": "communications",
+      "document_type": "email_correspondence",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Svar_ Svar_ Hovfaret 13 - Oppdatering.eml",
+      "extension": "eml",
+      "size_bytes": 75165,
+      "checksum_sha256": "f1a1e4c77f92c83612fc8383ee96dbaeb52167d1efe06d18b46ddae1d79bfa58",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Svar_ Ved. Hovfaret - nabomerknader uttalelser.eml",
+      "extension": "eml",
+      "size_bytes": 993384,
+      "checksum_sha256": "e4b984c58fdca580a57123d9ddb9e3e4734b14b8e24259bbb2c31cd1e8e677e9",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "SvarPaaNabovarsel - Hoffsgrenda Borettslag 2026-01-16T175240.265.pdf",
+      "extension": "pdf",
+      "size_bytes": 109150,
+      "checksum_sha256": "b2663d2badd1ef2517862637e0c3aead567c741690f75bc26b1d4b09efe84baa",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_document",
+      "derived_from": "pdf"
+    },
+    {
+      "file_name": "Updated invitation_ Hovfaret 13 - Ekstramøte med nabolaget_Styret @ Thu Jan 29, 2026 5_30pm - 7pm (CET) (Gabriel B Freeman).eml",
+      "extension": "eml",
+      "size_bytes": 52978,
+      "checksum_sha256": "c41b235bc7de1aca97132db307454f34e044493f9c1c2525f36bb9ec6ca0cf3d",
+      "category": "meetings",
+      "document_type": "meeting_invitation_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Ved. Hovfaret.eml",
+      "extension": "eml",
+      "size_bytes": 23991,
+      "checksum_sha256": "73b3187e2973e2afad9e9ecc4b2c10ffc0bfc404200578721c947b3ace166616",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Velkommen til informasjonsmøtet.eml",
+      "extension": "eml",
+      "size_bytes": 37775,
+      "checksum_sha256": "a3991aadcd28ca26a3b7e45c8660bba0eabc2ae5a343df245c748e644f89c370",
+      "category": "meetings",
+      "document_type": "meeting_invitation_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Videresend_ Merknad til nabovarsel Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 38853,
+      "checksum_sha256": "b7b981911ca96dd40a7b7a6e1f3b3ad50850a9fd022b926fb8f61ccde59210ae",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    },
+    {
+      "file_name": "Videresend_ Svar_ Nabovarsel Hovfaret 13.eml",
+      "extension": "eml",
+      "size_bytes": 19285,
+      "checksum_sha256": "75f127e8162595e8927572a656c32866dd818ffefa65d409abe52345e0335f5f",
+      "category": "stakeholder_engagement",
+      "document_type": "neighbor_remarks_email",
+      "derived_from": "eml"
+    }
+  ]
+}

@@ -99,7 +99,7 @@
       /* ===== KPI CARDS ===== */
       .kpi-row {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 1rem;
         margin-bottom: 2rem;
       }
@@ -1533,11 +1533,29 @@
       // ===== SAMMENDRAG =====
       function renderSammendrag() {
         const stats = NM_DATA.statistics;
+        const total = stats.total_submissions || NM_DATA.remarks.length;
+        const submitters = stats.unique_submitters || 0;
+        const topThemeEntry = Object.entries(stats.theme_frequency || {}).sort(
+          (a, b) => b[1] - a[1],
+        )[0];
+        const topThemeCode = topThemeEntry ? topThemeEntry[0] : null;
+        const topThemeCount = topThemeEntry ? topThemeEntry[1] : 0;
+        const topThemeName = topThemeCode
+          ? NM_DATA.theme_taxonomy[topThemeCode]?.name_no || topThemeCode
+          : "Ukjent";
+        const highCount = NM_DATA.remarks.filter(
+          (r) => r.severity === "high",
+        ).length;
+        const topPct = total > 0 ? Math.round((topThemeCount / total) * 100) : 0;
+        const batchLinked = NM_DATA.remarks.filter(
+          (r) => r.source_batch === "mailgreier_2026-02-13",
+        ).length;
+
         document.getElementById("sammendrag").innerHTML = `
           <div class="summary-box">
-            <p><strong>52 merknader fra 49 unike avsendere</strong> fordelt på 15 temaer. Merknadene ble mottatt mellom ${stats.date_range.earliest} og ${stats.date_range.latest}.</p>
-            <p><strong>Sol/skygge er hyppigst</strong> (88% av alle merknader), og 10 merknader har alvorlighetsgrad «høy» — med juridisk funderte innvendinger mot dispensasjon og vassdragsvern.</p>
-            <p><strong>Geografisk konsentrasjon:</strong> ~30 merknader fra Skøyen Terrasse (nedre og øvre rekke). Sterkest motstand fra beboere nærmest bygget.</p>
+            <p><strong>${total} merknader fra ${submitters} unike avsendere</strong> fordelt på ${Object.keys(stats.theme_frequency || {}).length} temaer. Merknadene ble mottatt mellom ${stats.date_range?.earliest || "ukjent"} og ${stats.date_range?.latest || "ukjent"}.</p>
+            <p><strong>${topThemeName} er hyppigst</strong> (${topPct}% av alle merknader), og ${highCount} merknader har alvorlighetsgrad «høy» — med juridisk funderte innvendinger mot dispensasjon og vassdragsvern.</p>
+            <p><strong>Batch-sporing:</strong> ${batchLinked} merknader er koblet til kildefiler fra importbatch `mailgreier_2026-02-13`.</p>
             <p>Hovedfunn: sterk konsensus om sol/høyde-bekymringer, juridisk substansielle DISP- og VASSDRAG-innvendinger som krever solid motargumentasjon.</p>
           </div>`;
       }
@@ -1677,14 +1695,18 @@
         const highCount = NM_DATA.remarks.filter(
           (r) => r.severity === "high",
         ).length;
+        const batchLinked = NM_DATA.remarks.filter(
+          (r) => r.source_batch === "mailgreier_2026-02-13",
+        ).length;
         document.getElementById("kpi-row").innerHTML = [
-          { value: stats.total_submissions, label: "Merknader mottatt" },
+          { value: stats.total_submissions || NM_DATA.remarks.length, label: "Merknader mottatt" },
           { value: stats.unique_submitters, label: "Unike avsendere" },
           {
             value: Object.keys(stats.theme_frequency).length,
             label: "Temaer klassifisert",
           },
           { value: highCount, label: "Hoy alvorlighetsgrad", red: true },
+          { value: batchLinked, label: "Batch-koblede merknader" },
         ]
           .map(
             (k) => `
@@ -2119,7 +2141,19 @@
 
           if (
             FILTER_STATE.search &&
-            !remark.submitter.toLowerCase().includes(FILTER_STATE.search)
+            !(
+              (remark.submitter || "")
+                .toLowerCase()
+                .includes(FILTER_STATE.search) ||
+              (remark.address || "").toLowerCase().includes(FILTER_STATE.search) ||
+              (remark.source_file || "")
+                .toLowerCase()
+                .includes(FILTER_STATE.search) ||
+              (remark.source_documents || [])
+                .join(" ")
+                .toLowerCase()
+                .includes(FILTER_STATE.search)
+            )
           ) {
             visible = false;
           }
@@ -2163,6 +2197,11 @@
                 ? `<ul>${r.legal_refs.map((l) => `<li>${l}</li>`).join("")}</ul>`
                 : '<p style="color:var(--text-muted)">Ingen juridiske referanser.</p>';
 
+            const sourceDocsHtml =
+              r.source_documents && r.source_documents.length > 0
+                ? `<ul>${r.source_documents.map((s) => `<li>${s}</li>`).join("")}</ul>`
+                : '<p style="color:var(--text-muted)">Ingen ekstra kildefiler koblet.</p>';
+
             return `
             <tr data-id="${r.id}" onclick="toggleDetail(this)">
               <td>${r.id}</td>
@@ -2186,6 +2225,9 @@
                     ${legalHtml}
                     <h4 style="margin-top:0.75rem">Kilde</h4>
                     <p class="detail-source">${r.source_file || "—"}</p>
+                    <h4 style="margin-top:0.75rem">Kildedokumenter</h4>
+                    ${sourceDocsHtml}
+                    ${r.source_batch ? `<p style="margin-top:0.5rem"><strong>Batch:</strong> ${r.source_batch}</p>` : ""}
                     <p style="margin-top:0.25rem"><strong>Type:</strong> ${TYPE_LABELS[r.type] || r.type} &middot; <strong>Kanal:</strong> ${CHANNEL_LABELS[r.channel] || r.channel}</p>
                   </div>
                 </div>

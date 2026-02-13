@@ -14,8 +14,8 @@ Komplett prosjektdatabase med interaktivt dashboard for Hovfaret 13 transformasj
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | 62 |
-| Dokumenter | 278 |
+| Møter | 63 |
+| Dokumenter | 327 |
 | Leveranser | 37 |
 | Personer | 27 |
 | Organisasjoner | 19 |
@@ -56,9 +56,9 @@ CI/Deploy:
 |-----------|-----|-------------|
 | Hjemmeside | `index.html` | Navigasjon til alle dashboards |
 | Oversikt | `overview.html` | Prosjekthelse og KPIer |
-| Møter | `meetings.html` | 62 møter med notater |
+| Møter | `meetings.html` | 63 møter med notater |
 | Tidslinje | `timeline.html` | Kronologisk oversikt |
-| Dokumenter | `documents.html` | 278 dokumenter |
+| Dokumenter | `documents.html` | 327 dokumenter |
 | Interessenter | `stakeholders.html` | 27 personer, 19 organisasjoner |
 | Scenarier | `scenarios.html` | 3 utviklingsscenarier |
 | Bærekraft | `sustainability.html` | Miljø og klima |
@@ -69,8 +69,8 @@ CI/Deploy:
 ```
 data/
 ├── project.json              # Masterprosjekt
-├── meetings.json             # 62 møter
-├── documents.json            # 278 dokumenter
+├── meetings.json             # 63 møter
+├── documents.json            # 327 dokumenter
 ├── config.json               # Sentralkonfigurasjon
 ├── deliverables.json         # 37 leveranser
 ├── timeline.json             # Tidslinje

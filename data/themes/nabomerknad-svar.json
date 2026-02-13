@@ -9,7 +9,11 @@
       "deliverable_id": null,
       "source_document": "Project database analysis cross-referenced with nabomerknader registry",
       "is_primary_source": true
-    }
+    },
+    "last_updated": "2026-02-13",
+    "source_batches": [
+      "mailgreier_2026-02-13"
+    ]
   },
   "response_strategy": {
     "overall_approach": "Balansert tilnærming: anerkjenn bekymringer, presenter dokumentert motargumentasjon, forplikt til tilleggsdokumentasjon der det mangler",
@@ -39,7 +43,8 @@
       "evidence_refs": [
         "themes/sustainability.json — klimagassberegninger (Vill Energi AS, 2025)",
         "themes/dialogmote-2-referat.json — R21 bekrefter solstudievarianter publiseres",
-        "R21 Arkitekter soldiagrammer (vedlegg til rammesøknad)"
+        "R21 Arkitekter soldiagrammer (vedlegg til rammesøknad)",
+        "hovfaret13mailgreier. 13.02/Merknad-til-nabovarsel-1-20251230-BORETTSLAGET-HOFFSBYEN-HAGEBY.pdf"
       ],
       "counter_data": {
         "sol_studies_count": "X varianter",
@@ -210,7 +215,8 @@
         "themes/naturpositivitet.json — kantvegetasjon, fiskesperre, fremmedarter",
         "themes/dialogmote-2-referat.json — Einar: riving ødelegger elveleiet",
         "USDA NAC: Riparian Shading — usjaterte elver 5–11°C varmere",
-        "USGS: Cold water holds more dissolved oxygen"
+        "USGS: Cold water holds more dissolved oxygen",
+        "hovfaret13mailgreier. 13.02/Henvendelse om fagvurdering_ Sjøørret og skyggeeffekt ved Hovfaret 13.eml"
       ],
       "counter_data": {
         "shadow_effect_on_river": "Primært positivt — temperaturregulering",
@@ -282,7 +288,11 @@
         "invasive_species_to_remove": 4,
         "nature_positive_target": 2030,
         "building_footprint_change": "Ingen — påbygg oppover, ikke utover",
-        "partners": ["NIBIO", "KVANN", "Prof. Vøllestad (UiO)"]
+        "partners": [
+          "NIBIO",
+          "KVANN",
+          "Prof. Vøllestad (UiO)"
+        ]
       },
       "concessions_no": "Vi tar naturmangfold alvorlig og anerkjenner at økt beboermasse kan medføre økt belastning på grønndraget. Vi forplikter oss til å gjennomføre en naturmangfoldvurdering i henhold til naturmangfoldloven og å implementere de foreslåtte biodiversitetstiltakene som del av prosjektet.",
       "recommended_actions": [
@@ -310,7 +320,9 @@
         "themes/omsorg-plus.json — 73 enheter, 46% av 160-enhets behov",
         "themes/regulatory.json — plan_status: not rettskraftig, blocking_issues",
         "PBL § 19-2 (fordeler klart større enn ulemper)",
-        "Ny ombrukskrav i lovgivningen"
+        "Ny ombrukskrav i lovgivningen",
+        "hovfaret13mailgreier. 13.02/Oppsummering fra meknader i saksnr 202521699.docx",
+        "hovfaret13mailgreier. 13.02/Svar_ Ved. Hovfaret - nabomerknader uttalelser.eml"
       ],
       "counter_data": {
         "pbl_19_2_benefits": {
@@ -323,7 +335,10 @@
           "biodiversity_measures": 5
         },
         "plan_status": "Vedtatt men IKKE rettskraftig",
-        "blocking_objections": ["Bane NOR", "Statens vegvesen"],
+        "blocking_objections": [
+          "Bane NOR",
+          "Statens vegvesen"
+        ],
         "ombruk_requirement": "Ny lovgivning krever utredning av ombruksalternativ"
       },
       "concessions_no": "Vi anerkjenner at prosjektet krever dispensasjoner og at dette er et vesentlig spørsmål. Vi vil utarbeide en grundig § 19-2 redegjørelse som systematisk dokumenterer hvorfor fordelene klart overstiger ulempene. Vi respekterer PBEs rolle som reguleringsmyndighet og vil legge til rette for en åpen og transparent vurderingsprosess.",
@@ -348,7 +363,9 @@
       ],
       "evidence_refs": [
         "themes/dialogmote-2-referat.json — 8 action_items for supplerende dokumentasjon",
-        "themes/orret.json — professor_outreach sendt 2026-01-29"
+        "themes/orret.json — professor_outreach sendt 2026-01-29",
+        "hovfaret13mailgreier. 13.02/Oppsummering av merknadene fra Engebretsvei 2 og 6.docx",
+        "hovfaret13mailgreier. 13.02/Svar_ Hovfaret 13 - Nabomerknader.eml"
       ],
       "counter_data": {
         "committed_supplements": [

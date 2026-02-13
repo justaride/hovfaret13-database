@@ -330,6 +330,42 @@
         text-transform: uppercase;
       }
 
+      .source-batch-badge {
+        display: inline-flex;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.6rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        background: rgba(37, 99, 235, 0.12);
+        color: var(--text-accent);
+      }
+
+      .confidence-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 0.7rem;
+        font-weight: 600;
+      }
+
+      .confidence-high {
+        background: rgba(34, 197, 94, 0.14);
+        color: #15803d;
+      }
+
+      .confidence-medium {
+        background: rgba(245, 158, 11, 0.16);
+        color: #b45309;
+      }
+
+      .confidence-low {
+        background: rgba(239, 68, 68, 0.14);
+        color: #b91c1c;
+      }
+
       .type-internal {
         background: rgba(139, 92, 246, 0.15);
         color: var(--type-internal);
@@ -833,6 +869,9 @@
               <select class="filter-select" id="filter-org">
                 <option value="all">Alle org.</option>
               </select>
+              <select class="filter-select" id="filter-source-batch">
+                <option value="all">Alle batcher</option>
+              </select>
               <select class="filter-select" id="filter-sort">
                 <option value="newest">Nyeste</option>
                 <option value="oldest">Eldste</option>
@@ -884,6 +923,7 @@
         search: "",
         type: "all",
         org: "all",
+        sourceBatch: "all",
         sort: "newest",
       };
 
@@ -993,6 +1033,12 @@
           meetings = meetings.filter(
             (m) =>
               (m.title || "").toLowerCase().includes(query) ||
+              (m.source_batch || "").toLowerCase().includes(query) ||
+              (m.source_files || []).some((f) =>
+                String(f || "")
+                  .toLowerCase()
+                  .includes(query),
+              ) ||
               (m.participants || []).some(
                 (p) =>
                   (p.name || "").toLowerCase().includes(query) ||
@@ -1010,6 +1056,12 @@
         if (currentFilters.org !== "all") {
           meetings = meetings.filter((m) =>
             getUniqueOrgs(m).includes(currentFilters.org),
+          );
+        }
+
+        if (currentFilters.sourceBatch !== "all") {
+          meetings = meetings.filter(
+            (m) => (m.source_batch || "") === currentFilters.sourceBatch,
           );
         }
 
@@ -1094,6 +1146,7 @@
         const participantCount = (meeting.participants || []).length;
         const hasReport = meeting.report || meeting.report_link;
         const isSelected = meeting.id === selectedMeetingId;
+        const batch = meeting.source_batch;
 
         return `
         <div class="meeting-item ${isSelected ? "selected" : ""}" data-id="${meeting.id}">
@@ -1105,6 +1158,7 @@
             <div class="meeting-title">${sanitize(meeting.title)}</div>
             <div class="meeting-meta">
               <span class="type-badge type-${type}">${typeLabel}</span>
+              ${batch ? `<span class="source-batch-badge">${sanitize(batch)}</span>` : ""}
               ${participantCount > 0 ? `<span>${participantCount} delt.</span>` : ""}
               ${hasReport ? `<span class="has-report-badge">✓ Rapport</span>` : ""}
             </div>
@@ -1132,6 +1186,8 @@
         const topics = meeting.topics_discussed || [];
         const actions = meeting.action_items || [];
         const decisions = meeting.decisions || [];
+        const sourceFiles = meeting.source_files || [];
+        const ingestConfidence = (meeting.ingest_confidence || "").toLowerCase();
         const quotes =
           hasReport && meeting.report.quotes ? meeting.report.quotes : [];
         const discussion =
@@ -1147,6 +1203,11 @@
           <div class="meeting-type-row">
             <span class="detail-type-badge type-${type}">${typeLabel}</span>
             <span class="detail-date">${formatDateLong(meeting.date)}</span>
+            ${
+              ingestConfidence
+                ? `<span class="confidence-badge confidence-${sanitize(ingestConfidence)}">${sanitize(ingestConfidence.toUpperCase())}</span>`
+                : ""
+            }
           </div>
           <h2 class="detail-title">${sanitize(meeting.title)}</h2>
           ${
@@ -1165,6 +1226,27 @@
           }
         </div>
       `;
+
+        if (meeting.source_batch || sourceFiles.length > 0) {
+          html += `
+          <div class="info-card full-width">
+            <div class="info-card-header">
+              <svg class="info-card-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+                <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+                <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+                <polyline points="12 22.08 12 16.89 16.5 14.6"/>
+                <polyline points="12 16.89 7.5 14.6"/>
+                <polyline points="12 11.71 12 6.81"/>
+              </svg>
+              <span class="info-card-title">Kildesporing</span>
+            </div>
+            ${meeting.source_batch ? `<p class="summary-text" style="margin-bottom:0.5rem;"><strong>Batch:</strong> ${sanitize(meeting.source_batch)}</p>` : ""}
+            ${sourceFiles.length > 0 ? `<ul class="item-list">${sourceFiles.map((f) => `<li class="item-row"><span class="item-bullet orange"></span><span class="item-text">${sanitize(f)}</span></li>`).join("")}</ul>` : "<p class=\"summary-text\">Ingen kildefiler registrert.</p>"}
+          </div>
+        `;
+        }
 
         // Summary (if available) - Full width
         if (hasReport && meeting.report.summary) {
@@ -1415,6 +1497,17 @@
             orgSelect.appendChild(option);
           });
 
+          const batches = [
+            ...new Set(allMeetings.map((m) => m.source_batch).filter(Boolean)),
+          ].sort();
+          const batchSelect = document.getElementById("filter-source-batch");
+          batches.forEach((batch) => {
+            const option = document.createElement("option");
+            option.value = batch;
+            option.textContent = batch;
+            batchSelect.appendChild(option);
+          });
+
           applyFilters();
 
           // Event listeners
@@ -1440,6 +1533,13 @@
             .getElementById("filter-org")
             .addEventListener("change", (e) => {
               currentFilters.org = e.target.value;
+              applyFilters();
+            });
+
+          document
+            .getElementById("filter-source-batch")
+            .addEventListener("change", (e) => {
+              currentFilters.sourceBatch = e.target.value;
               applyFilters();
             });
 

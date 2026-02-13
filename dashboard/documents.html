@@ -196,6 +196,7 @@
 
       .filter-row {
         display: flex;
+        flex-wrap: wrap;
         gap: var(--space-2);
       }
 
@@ -650,6 +651,12 @@
               <select class="filter-select" id="filter-type">
                 <option value="all">Alle typer</option>
               </select>
+              <select class="filter-select" id="filter-derived">
+                <option value="all">Alle kilder</option>
+              </select>
+              <select class="filter-select" id="filter-batch">
+                <option value="all">Alle batcher</option>
+              </select>
             </div>
           </div>
           <div class="results-info" id="results-info">Laster dokumenter...</div>
@@ -685,12 +692,37 @@
       let searchQuery = "";
       let categoryFilter = "all";
       let typeFilter = "all";
+      let derivedFilter = "all";
+      let batchFilter = "all";
 
       // ===== HELPERS =====
       function getFileExtension(filename) {
         if (!filename) return "";
-        const parts = filename.split(".");
+        const parts = String(filename).split(".");
         return parts.length > 1 ? parts.pop().toLowerCase() : "";
+      }
+
+      function getDocFileName(doc) {
+        return doc.file_name || doc.filename || "";
+      }
+
+      function getDocDerived(doc) {
+        return (
+          String(doc.derived_from || getFileExtension(getDocFileName(doc)) || "")
+            .toLowerCase()
+            .trim()
+        );
+      }
+
+      function getDocDate(doc) {
+        return (
+          doc.date_modified ||
+          doc.extraction_date ||
+          doc.date_created ||
+          doc.event_date ||
+          doc.email_date ||
+          ""
+        );
       }
 
       function getFileIcon(filename) {
@@ -726,10 +758,20 @@
 
       function getCategoryMeta(category) {
         const meta = {
+          analysis_notes: { label: "Analysenotater", emoji: "🧠" },
+          architecture: { label: "Arkitektur", emoji: "🏗️" },
           correspondence: { label: "Korrespondanse", emoji: "📧" },
+          communications: { label: "Kommunikasjon", emoji: "💬" },
           technical: { label: "Teknisk", emoji: "🔧" },
           meeting: { label: "Møte", emoji: "📋" },
+          meetings: { label: "Møter", emoji: "📋" },
           report: { label: "Rapport", emoji: "📊" },
+          presentations: { label: "Presentasjoner", emoji: "🖥️" },
+          regulatory: { label: "Regulatorisk", emoji: "⚖️" },
+          stakeholder_engagement: { label: "Interessentdialog", emoji: "🤝" },
+          sustainability: { label: "Bærekraft", emoji: "🌱" },
+          omsorg_plus: { label: "Omsorg+", emoji: "🏠" },
+          other: { label: "Annet", emoji: "📎" },
           image: { label: "Bilde", emoji: "🖼️" },
           contract: { label: "Kontrakt", emoji: "📝" },
           financial: { label: "Økonomi", emoji: "💰" },
@@ -760,9 +802,12 @@
           const query = searchQuery.toLowerCase();
           docs = docs.filter(
             (d) =>
-              (d.filename || "").toLowerCase().includes(query) ||
+              getDocFileName(d).toLowerCase().includes(query) ||
               (d.category || "").toLowerCase().includes(query) ||
-              (d.source_folder || "").toLowerCase().includes(query),
+              (d.source_folder || "").toLowerCase().includes(query) ||
+              (d.source_batch || "").toLowerCase().includes(query) ||
+              (d.email_subject || "").toLowerCase().includes(query) ||
+              (d.event_summary || "").toLowerCase().includes(query),
           );
         }
 
@@ -773,15 +818,23 @@
 
         // Type filter
         if (typeFilter !== "all") {
-          docs = docs.filter(
-            (d) => getFileExtension(d.filename) === typeFilter,
-          );
+          docs = docs.filter((d) => getFileExtension(getDocFileName(d)) === typeFilter);
+        }
+
+        // Derived source filter
+        if (derivedFilter !== "all") {
+          docs = docs.filter((d) => getDocDerived(d) === derivedFilter);
+        }
+
+        // Batch filter
+        if (batchFilter !== "all") {
+          docs = docs.filter((d) => (d.source_batch || "") === batchFilter);
         }
 
         // Sort by date (newest first)
         docs.sort((a, b) => {
-          const dateA = a.date_modified || a.date_created || "";
-          const dateB = b.date_modified || b.date_created || "";
+          const dateA = getDocDate(a);
+          const dateB = getDocDate(b);
           return dateB.localeCompare(dateA);
         });
 
@@ -857,16 +910,19 @@
 
       function renderDocumentItem(doc) {
         const isSelected = doc.id === selectedDocId;
-        const icon = getFileIcon(doc.filename);
-        const typeClass = getFileTypeClass(doc.filename);
-        const ext = getFileExtension(doc.filename);
+        const fileName = getDocFileName(doc);
+        const icon = getFileIcon(fileName);
+        const typeClass = getFileTypeClass(fileName);
+        const ext = getFileExtension(fileName);
+        const derived = getDocDerived(doc);
+        const date = getDocDate(doc);
 
         return `
         <div class="document-item ${isSelected ? "selected" : ""}" data-id="${doc.id}">
           <div class="document-icon ${typeClass}">${icon}</div>
           <div class="document-content">
-            <div class="document-name">${sanitize(doc.filename)}</div>
-            <div class="document-meta">${ext.toUpperCase()} ${doc.date_modified ? "• " + doc.date_modified : ""}</div>
+            <div class="document-name">${sanitize(fileName)}</div>
+            <div class="document-meta">${ext.toUpperCase()}${derived ? " • " + derived.toUpperCase() : ""}${date ? " • " + date.slice(0, 10) : ""}</div>
           </div>
         </div>
       `;
@@ -889,15 +945,17 @@
 
       function renderDocumentDetail(doc) {
         const panel = document.getElementById("detail-panel");
-        const icon = getFileIcon(doc.filename);
+        const fileName = getDocFileName(doc);
+        const icon = getFileIcon(fileName);
         const catMeta = getCategoryMeta(doc.category);
-        const ext = getFileExtension(doc.filename);
+        const ext = getFileExtension(fileName);
+        const derived = getDocDerived(doc);
 
         let html = `
         <div class="detail-content">
           <div class="detail-header">
             <div class="detail-icon">${icon}</div>
-            <h2 class="detail-title">${sanitize(doc.filename)}</h2>
+            <h2 class="detail-title">${sanitize(fileName)}</h2>
 
             <div class="detail-meta-grid">
               <div class="meta-item">
@@ -909,21 +967,41 @@
                 <span class="category-badge">${catMeta.emoji} ${catMeta.label}</span>
               </div>
               ${
-                doc.date_modified
+                derived
                   ? `
                 <div class="meta-item">
-                  <span class="meta-label">Sist endret</span>
-                  <span class="meta-value">${doc.date_modified}</span>
+                  <span class="meta-label">Kildeformat</span>
+                  <span class="meta-value">${sanitize(derived.toUpperCase())}</span>
                 </div>
               `
                   : ""
               }
               ${
-                doc.date_created
+                doc.source_batch
                   ? `
                 <div class="meta-item">
-                  <span class="meta-label">Opprettet</span>
-                  <span class="meta-value">${doc.date_created}</span>
+                  <span class="meta-label">Batch</span>
+                  <span class="meta-value">${sanitize(doc.source_batch)}</span>
+                </div>
+              `
+                  : ""
+              }
+              ${
+                getDocDate(doc)
+                  ? `
+                <div class="meta-item">
+                  <span class="meta-label">Dato</span>
+                  <span class="meta-value">${getDocDate(doc).slice(0, 10)}</span>
+                </div>
+              `
+                  : ""
+              }
+              ${
+                doc.checksum_sha256
+                  ? `
+                <div class="meta-item">
+                  <span class="meta-label">SHA-256</span>
+                  <span class="meta-value">${sanitize(doc.checksum_sha256.slice(0, 16))}…</span>
                 </div>
               `
                   : ""
@@ -948,6 +1026,11 @@
               </div>
               <div class="section-content">
                 <div class="source-path">${sanitize(doc.source_folder)}</div>
+                ${
+                  doc.duplicate_group
+                    ? `<p style="margin-top:0.75rem;color:var(--text-secondary);font-size:0.8rem;">Duplikatgruppe: <code>${sanitize(doc.duplicate_group)}</code>${doc.variant_of_doc_id ? ` • Variant av <code>${sanitize(doc.variant_of_doc_id)}</code>` : " • Primærvariant"}</p>`
+                    : ""
+                }
               </div>
             </div>
           `
@@ -1042,7 +1125,7 @@
         const types = [
           ...new Set(
             allDocuments
-              .map((d) => getFileExtension(d.filename))
+              .map((d) => getFileExtension(getDocFileName(d)))
               .filter(Boolean),
           ),
         ].sort();
@@ -1052,6 +1135,30 @@
           option.value = type;
           option.textContent = type.toUpperCase();
           typeSelect.appendChild(option);
+        });
+
+        // Derived source format
+        const derivedFormats = [
+          ...new Set(allDocuments.map((d) => getDocDerived(d)).filter(Boolean)),
+        ].sort();
+        const derivedSelect = document.getElementById("filter-derived");
+        derivedFormats.forEach((derived) => {
+          const option = document.createElement("option");
+          option.value = derived;
+          option.textContent = derived.toUpperCase();
+          derivedSelect.appendChild(option);
+        });
+
+        // Batch IDs
+        const batches = [
+          ...new Set(allDocuments.map((d) => d.source_batch).filter(Boolean)),
+        ].sort();
+        const batchSelect = document.getElementById("filter-batch");
+        batches.forEach((batch) => {
+          const option = document.createElement("option");
+          option.value = batch;
+          option.textContent = batch;
+          batchSelect.appendChild(option);
         });
       }
 
@@ -1081,6 +1188,20 @@
           .getElementById("filter-type")
           .addEventListener("change", (e) => {
             typeFilter = e.target.value;
+            applyFilters();
+          });
+
+        document
+          .getElementById("filter-derived")
+          .addEventListener("change", (e) => {
+            derivedFilter = e.target.value;
+            applyFilters();
+          });
+
+        document
+          .getElementById("filter-batch")
+          .addEventListener("change", (e) => {
+            batchFilter = e.target.value;
             applyFilters();
           });
       }

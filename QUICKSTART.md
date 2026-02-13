@@ -16,9 +16,9 @@ open http://localhost:8888/index.html
 |------|-----|-------------|
 | Hjemmeside | http://localhost:8888/index.html | Hovednavigasjon |
 | Oversikt | http://localhost:8888/overview.html | Prosjekthelse, KPIer |
-| Møter | http://localhost:8888/meetings.html | 62 møter med notater |
+| Møter | http://localhost:8888/meetings.html | 63 møter med notater |
 | Tidslinje | http://localhost:8888/timeline.html | Kronologisk oversikt |
-| Dokumenter | http://localhost:8888/documents.html | 278 dokumenter |
+| Dokumenter | http://localhost:8888/documents.html | 327 dokumenter |
 | Interessenter | http://localhost:8888/stakeholders.html | 27 personer, 19 org |
 | Scenarier | http://localhost:8888/scenarios.html | CO₂-analyse |
 | Bærekraft | http://localhost:8888/sustainability.html | Miljødata |
@@ -45,8 +45,8 @@ open http://localhost:8888/index.html
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | 62 |
-| Dokumenter | 278 |
+| Møter | 63 |
+| Dokumenter | 327 |
 | Leveranser | 37 |
 | Personer | 27 |
 | Organisasjoner | 19 |

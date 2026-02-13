@@ -12,7 +12,17 @@
       "deliverable_id": null,
       "source_document": "PBE nabomerknader + Byggesaksrådgivning submissions",
       "is_primary_source": true
-    }
+    },
+    "last_updated": "2026-02-13",
+    "source_batches": [
+      {
+        "id": "mailgreier_2026-02-13",
+        "source_folder": "hovfaret13mailgreier. 13.02",
+        "ingested_date": "2026-02-13",
+        "files_total": 49,
+        "files_linked_to_remarks": 5
+      }
+    ]
   },
   "theme_taxonomy": {
     "SOL": {
@@ -23,7 +33,10 @@
       "name_no": "Innsyn/privatliv",
       "name_en": "Privacy/overlooking"
     },
-    "UTSIKT": { "name_no": "Tap av utsikt", "name_en": "Loss of view" },
+    "UTSIKT": {
+      "name_no": "Tap av utsikt",
+      "name_en": "Loss of view"
+    },
     "HOYDE": {
       "name_no": "Byggehøyde/skala",
       "name_en": "Building height/scale"
@@ -40,7 +53,10 @@
       "name_no": "Kulturmiljø/vern",
       "name_en": "Heritage protection"
     },
-    "VERDI": { "name_no": "Verditap bolig", "name_en": "Property value loss" },
+    "VERDI": {
+      "name_no": "Verditap bolig",
+      "name_en": "Property value loss"
+    },
     "DISP": {
       "name_no": "Dispensasjon/juridisk",
       "name_en": "Dispensation/legal"
@@ -61,44 +77,44 @@
       "name_no": "Barnehage påvirkning",
       "name_en": "Kindergarten impact"
     },
-    "TRAFIKK": { "name_no": "Trafikk/støy", "name_en": "Traffic/noise" },
+    "TRAFIKK": {
+      "name_no": "Trafikk/støy",
+      "name_en": "Traffic/noise"
+    },
     "BOKVAL": {
       "name_no": "Bokvalitet generelt",
       "name_en": "Living quality general"
     }
   },
   "statistics": {
-    "total_submissions": 52,
-    "unique_submitters": 49,
+    "total_submissions": 53,
+    "unique_submitters": 52,
     "by_type": {
-      "privatperson": 46,
-      "borettslag": 3,
-      "forening": 1,
-      "summary_doc": 2
+      "privatperson": 50,
+      "borettslag": 2,
+      "forening": 1
     },
     "by_channel": {
-      "pbe_post_i_sak": 41,
-      "byggesaksradgivning_direct": 7,
+      "byggesaksradgivning_direct": 5,
       "email_to_pbe": 1,
-      "summary_from_byggesaksradgivning": 2,
-      "email_thread": 1
+      "pbe_post_i_sak": 47
     },
     "theme_frequency": {
-      "SOL": 46,
-      "HOYDE": 38,
-      "INNSYN": 30,
-      "BOKVAL": 35,
-      "UTSIKT": 24,
-      "VERDI": 20,
+      "SOL": 48,
+      "BOKVAL": 31,
+      "INNSYN": 25,
+      "HOYDE": 22,
       "VASSDRAG": 22,
-      "NATUR": 20,
-      "DISP": 12,
+      "NATUR": 19,
+      "UTSIKT": 18,
+      "VERDI": 17,
+      "DISP": 15,
+      "ALT": 10,
       "DOK": 10,
-      "ALT": 9,
-      "KULTUR": 7,
+      "KULTUR": 6,
       "SAMLET": 6,
       "BHAGE": 5,
-      "TRAFIKK": 5
+      "TRAFIKK": 4
     },
     "geographic_distribution": {
       "Skøyen Terrasse 2-8 (nedre rekke)": 18,
@@ -155,7 +171,14 @@
         "KPA § 13.3",
         "PBL § 29-2"
       ],
-      "severity": "high"
+      "severity": "high",
+      "source_documents": [
+        "Merkn ad fra Monica Syrdal, Engebrets vei 2.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_6958636b45d38c4a"
+      ],
+      "source_batch": "mailgreier_2026-02-13"
     },
     {
       "id": "nm_002",
@@ -187,7 +210,14 @@
         "Manglende utredning av miljøkonsekvenser for Hoffselva"
       ],
       "legal_refs": [],
-      "severity": "high"
+      "severity": "high",
+      "source_documents": [
+        "Merknad-til-nabovarsel-1-20251230-BORETTSLAGET-HOFFSBYEN-HAGEBY.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_1c7434a1a1343155"
+      ],
+      "source_batch": "mailgreier_2026-02-13"
     },
     {
       "id": "nm_003",
@@ -232,7 +262,14 @@
         "PBL § 5-1",
         "PBL § 21-3"
       ],
-      "severity": "high"
+      "severity": "high",
+      "source_documents": [
+        "Merknader fra Færøvik og Stangnes.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_e6e3c79cc68023ed"
+      ],
+      "source_batch": "mailgreier_2026-02-13"
     },
     {
       "id": "nm_004",
@@ -245,7 +282,15 @@
       "date": "2026-01-12",
       "pbe_ref": null,
       "channel": "byggesaksradgivning_direct",
-      "themes": ["DOK", "DISP", "ALT", "HOYDE", "INNSYN", "SOL", "BOKVAL"],
+      "themes": [
+        "DOK",
+        "DISP",
+        "ALT",
+        "HOYDE",
+        "INNSYN",
+        "SOL",
+        "BOKVAL"
+      ],
       "summary_no": "Svært juridisk strukturert merknad (8 punkter). Argumenterer at dispensasjon etter PBL § 19-2 ikke kan gis på foreliggende grunnlag. Påpeker mangelfull utredning (mangler vinter sol/skygge), manglende alternativvurdering, at fortetting ikke er dokumentert nødvendig, randsoneproblematikk, konkret innsyn (stue, terrasse, balkong, soverom), og at MUA-dokumentasjon er irrelevant for nabovurdering.",
       "key_claims": [
         "Dispensasjon etter PBL § 19-2 kan ikke gis",
@@ -256,8 +301,18 @@
         "Maks kotehøyde ca +34, byggehøyde 28,5m inkl. trappehus",
         "MUA-dokumentasjon (1. mai kl 09-13) irrelevant for nabovurdering"
       ],
-      "legal_refs": ["PBL § 19-2", "PBL § 29-2"],
-      "severity": "high"
+      "legal_refs": [
+        "PBL § 19-2",
+        "PBL § 29-2"
+      ],
+      "severity": "high",
+      "source_documents": [
+        "Merknader fra Lenka og Michael Magnussen Engebretsvei 6B.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_0b270105c1267dfc"
+      ],
+      "source_batch": "mailgreier_2026-02-13"
     },
     {
       "id": "nm_005",
@@ -270,7 +325,15 @@
       "date": "2026-01-14",
       "pbe_ref": null,
       "channel": "byggesaksradgivning_direct",
-      "themes": ["DOK", "SAMLET", "HOYDE", "SOL", "VERDI", "DISP", "VASSDRAG"],
+      "themes": [
+        "DOK",
+        "SAMLET",
+        "HOYDE",
+        "SOL",
+        "VERDI",
+        "DISP",
+        "VASSDRAG"
+      ],
       "summary_no": "Balansert merknad fra borettslaget. Positiv til Omsorg+ og gjenbruk, men ber om at maks kotehøyde reduseres til 34 (fra 37,6). Påpeker manglende dokumentasjon (soldiagrammer for Skøyen Terrasse 2-29), kumulativ belastning med Nedre Skøyenvei 24-26, og 20m-kravet langs vassdrag. Viktig: anerkjenner positive elementer i prosjektet.",
       "key_claims": [
         "Positiv til Omsorg+ og gjenbruk av bygningsmasse",
@@ -280,8 +343,18 @@
         "KPA §13.3: 20m fra vannkant",
         "Byrådserklæring 24.10.2023 skjerpet vassdragskrav"
       ],
-      "legal_refs": ["KPA § 13.3", "Byrådserklæring 24.10.2023"],
-      "severity": "medium"
+      "legal_refs": [
+        "KPA § 13.3",
+        "Byrådserklæring 24.10.2023"
+      ],
+      "severity": "medium",
+      "source_documents": [
+        "SvarPaaNabovarsel - Hoffsgrenda Borettslag 2026-01-16T175240.265.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_b2663d2badd1ef25"
+      ],
+      "source_batch": "mailgreier_2026-02-13"
     },
     {
       "id": "nm_006",
@@ -294,7 +367,11 @@
       "date": "2025-11-11",
       "pbe_ref": null,
       "channel": "email_to_pbe",
-      "themes": ["VASSDRAG", "NATUR", "HOYDE"],
+      "themes": [
+        "VASSDRAG",
+        "NATUR",
+        "HOYDE"
+      ],
       "summary_no": "Tidlig innspill fra Hoffvassdragets venner. Motsetter seg påbygg av tre etasjer. Peker på ørretgyting, gråhegre, trusselbilde langs elva (utbyggere, bilverksteder, ulovlig parkering). Påpeker at økt høyde gir mer skygge over elveløpet og er intimiderende for tursti A5. Viser til KPA §13.3 20m-krav.",
       "key_claims": [
         "Ørreten gyter i denne delen av elva om høsten",
@@ -304,7 +381,9 @@
         "Intimiderende for tursti A5",
         "KPA §13.3: 20m/12m krav"
       ],
-      "legal_refs": ["KPA § 13.3"],
+      "legal_refs": [
+        "KPA § 13.3"
+      ],
       "severity": "high"
     },
     {
@@ -389,9 +468,13 @@
       "date": "2026-01-19",
       "pbe_ref": "PBE-D829-DSPZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL"],
+      "themes": [
+        "SOL"
+      ],
       "summary_no": "Kort uttalelse. Bor i laveste leilighet Skøyen Terrasse 4, bekymret for enda mindre sol. Mener 8 etasjer er for mye, foreslår 6 etasjer.",
-      "key_claims": ["Foreslår maks 6 etasjer"],
+      "key_claims": [
+        "Foreslår maks 6 etasjer"
+      ],
       "legal_refs": [],
       "severity": "low"
     },
@@ -406,7 +489,10 @@
       "date": "2026-01-21",
       "pbe_ref": "PBE-D829-DUHZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "VERDI"],
+      "themes": [
+        "SOL",
+        "VERDI"
+      ],
       "summary_no": "Kort uttalelse. Bekymret for redusert lys/sollys og verditap.",
       "key_claims": [],
       "legal_refs": [],
@@ -423,9 +509,18 @@
       "date": "2026-01-21",
       "pbe_ref": "PBE-D829-DULZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "INNSYN", "UTSIKT", "BOKVAL", "VERDI", "VASSDRAG"],
+      "themes": [
+        "SOL",
+        "INNSYN",
+        "UTSIKT",
+        "BOKVAL",
+        "VERDI",
+        "VASSDRAG"
+      ],
       "summary_no": "Punktvis merknad. Mister sol/skyggelagt ettermiddag og kveld, direkte innsyn til alle rom, mister utsikt, redusert bokvalitet, risiko for verdinedgang, vassdragshensyn ikke ivaretatt.",
-      "key_claims": ["Direkte innsyn til alle rom i leiligheten"],
+      "key_claims": [
+        "Direkte innsyn til alle rom i leiligheten"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -440,9 +535,14 @@
       "date": "2026-01-21",
       "pbe_ref": "PBE-D829-DUUZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["HOYDE", "BOKVAL"],
+      "themes": [
+        "HOYDE",
+        "BOKVAL"
+      ],
       "summary_no": "Emosjonell merknad. Reagerer på at 4 nye etasjer ødelegger nabolaget. Mener bygget bryter med helhetlig lav bebyggelse. Foreslår oppussing av fasade uten høydeøkning.",
-      "key_claims": ["Foreslår alternativ uten høydeøkning"],
+      "key_claims": [
+        "Foreslår alternativ uten høydeøkning"
+      ],
       "legal_refs": [],
       "severity": "low"
     },
@@ -457,7 +557,14 @@
       "date": "2026-01-21",
       "pbe_ref": "PBE-D829-DUYZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT", "INNSYN", "NATUR", "VERDI", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "UTSIKT",
+        "INNSYN",
+        "NATUR",
+        "VERDI",
+        "BOKVAL"
+      ],
       "summary_no": "Sterk motstand. Bor 3.etasje vis-a-vis bygget. Påpeker tap av utsikt, sol, innsyn rett inn i leilighet og terrasse. Refererer til naturverdier (hegre, ørretyngel, ekorn, spurvehauk). Viser til naturkrise.",
       "key_claims": [
         "Hegre fisker etter ørretyngel i Hoffselva",
@@ -478,7 +585,13 @@
       "date": "2026-01-21",
       "pbe_ref": "PBE-D829-DVAZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT", "INNSYN", "VERDI", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "UTSIKT",
+        "INNSYN",
+        "VERDI",
+        "BOKVAL"
+      ],
       "summary_no": "Drastisk reduksjon i bokvalitet for Skøyen Terrasse 2-6. Utsikt mot sør/vest borte, drastisk færre soltimer, mye mer innsyn, verdinedgang. Ber kommunen veie utbyggers behov mot hensynet til mange familier.",
       "key_claims": [],
       "legal_refs": [],
@@ -495,7 +608,13 @@
       "date": "2026-01-21",
       "pbe_ref": "PBE-D829-DVBZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["HOYDE", "UTSIKT", "SOL", "BOKVAL", "INNSYN"],
+      "themes": [
+        "HOYDE",
+        "UTSIKT",
+        "SOL",
+        "BOKVAL",
+        "INNSYN"
+      ],
       "summary_no": "Motstand mot 3 nye etasjer. Valgte leilighet pga lav bebyggelse, ro og stille bomiljø. Påpeker ødelagt utsikt, reduserte lysforhold, økt støy og innsyn.",
       "key_claims": [],
       "legal_refs": [],
@@ -529,7 +648,11 @@
         "Manglende naturmangfoldvurdering §§8-12",
         "Positiv til omsorgsboliger men i eksisterende byggmasse"
       ],
-      "legal_refs": ["PBL § 29-2", "PBL §§ 1-1", "Naturmangfoldloven §§ 8-12"],
+      "legal_refs": [
+        "PBL § 29-2",
+        "PBL §§ 1-1",
+        "Naturmangfoldloven §§ 8-12"
+      ],
       "severity": "high"
     },
     {
@@ -543,9 +666,16 @@
       "date": "2026-01-22",
       "pbe_ref": "PBE-D829-DVSZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "INNSYN", "VERDI", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "INNSYN",
+        "VERDI",
+        "BOKVAL"
+      ],
       "summary_no": "Ber om at høyden reduseres til dagens nivå. Kun vinduer mot dette bygget i stuen. Forringet bomiljø med mindre lys/sol, mer innsyn, redusert livskvalitet og verdi.",
-      "key_claims": ["Kun vinduer mot Hovfaret 13 i stuen"],
+      "key_claims": [
+        "Kun vinduer mot Hovfaret 13 i stuen"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -560,7 +690,10 @@
       "date": "2026-01-22",
       "pbe_ref": "PBE-D829-DVTZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "BOKVAL"
+      ],
       "summary_no": "Kort uttalelse. Tap av lys og redusert livskvalitet. Ber om at bygget ikke blir høyere enn i dag.",
       "key_claims": [],
       "legal_refs": [],
@@ -577,7 +710,11 @@
       "date": "2026-01-22",
       "pbe_ref": "PBE-D829-DWGZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["HOYDE", "DISP", "VERDI"],
+      "themes": [
+        "HOYDE",
+        "DISP",
+        "VERDI"
+      ],
       "summary_no": "Delvis positiv merknad. Ser mange positive elementer i prosjektet. Begrensninger: ikke i strid med reguleringsplan, maks kote 34, frykt for verditap.",
       "key_claims": [
         "Ser positive elementer i prosjektet",
@@ -598,9 +735,16 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DWKZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT", "VERDI", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "UTSIKT",
+        "VERDI",
+        "BOKVAL"
+      ],
       "summary_no": "Bor 1. underetasje Skøyen Terrasse 17. Allerede dårlige lysforhold. Påbygg tar enda mer sol og fjerner utsikt mot Ullerenåsen. Bekymret for mental helse og verditap.",
-      "key_claims": ["Allerede dårlige lysforhold i 1. underetasje"],
+      "key_claims": [
+        "Allerede dårlige lysforhold i 1. underetasje"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -615,9 +759,15 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DWMZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "BOKVAL", "DOK"],
+      "themes": [
+        "SOL",
+        "BOKVAL",
+        "DOK"
+      ],
       "summary_no": "Markert i rødt i skyggediagrammer. Vesentlig forverring av solforhold med økt skygge store deler av dagen. Mener konsekvensene for naboer ikke er tilstrekkelig belyst — skyggevirkninger dokumentert men uten reell vurdering.",
-      "key_claims": ["Leilighet markert i rødt i skyggediagrammer"],
+      "key_claims": [
+        "Leilighet markert i rødt i skyggediagrammer"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -632,7 +782,10 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DWVZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "SAMLET"],
+      "themes": [
+        "SOL",
+        "SAMLET"
+      ],
       "summary_no": "Bor i Skøyen Terrasse 3, nest nederst. Foreslått byggehøyde tar bort mye ettermiddagssol. Ser i sammenheng med Nedre Skøyen vei 24-26 — samlet sett vesentlig mørkere. Ønsker maks 2 etasjer til, helst ingen.",
       "key_claims": [
         "Kumulativ påvirkning med Nedre Skøyen vei 24-26",
@@ -652,7 +805,12 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DWSZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "BOKVAL", "INNSYN", "SAMLET"],
+      "themes": [
+        "SOL",
+        "BOKVAL",
+        "INNSYN",
+        "SAMLET"
+      ],
       "summary_no": "Bodd 44 år i øverste etasje. Setter spørsmålstegn ved bærekraft/miljøbesparelse ved å plusse på 5 etasjer. Bekymret for sammenhengende bebyggelse med Nordrs utbygging. Forringe bokvalitet og privatliv.",
       "key_claims": [
         "Bodd 44 år i leiligheten",
@@ -673,7 +831,15 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DWQZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "INNSYN", "VASSDRAG", "NATUR", "DISP", "ALT", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "INNSYN",
+        "VASSDRAG",
+        "NATUR",
+        "DISP",
+        "ALT",
+        "BOKVAL"
+      ],
       "summary_no": "Strukturert merknad med 4 punkter. Ber om avslag etter PBL §19-2. Påpeker manglende hensyn til vassdrag (~10m fra Hoffselva), manglende faglige miljøvurderinger (gyteområder, fugleliv), og at Omsorg+ kan etableres i eksisterende bygningsvolum uten påbygg.",
       "key_claims": [
         "PBL §19-2: fordeler ikke klart større enn ulemper",
@@ -681,7 +847,9 @@
         "Omsorg+ mulig innenfor eksisterende volum",
         "Manglende vurdering av gyteområder for ørret"
       ],
-      "legal_refs": ["PBL § 19-2"],
+      "legal_refs": [
+        "PBL § 19-2"
+      ],
       "severity": "high"
     },
     {
@@ -695,7 +863,13 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DWTZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "INNSYN", "NATUR", "VERDI", "SAMLET"],
+      "themes": [
+        "SOL",
+        "INNSYN",
+        "NATUR",
+        "VERDI",
+        "SAMLET"
+      ],
       "summary_no": "Positiv til bruksendring til omsorgsboliger, men kan ikke godta flere etasjer. Terrasse mot vest, stor glede av kveldssol. Bekymret for natur nær elva, verditap, og planlagt utbygging på nabotomten i tillegg.",
       "key_claims": [
         "Positiv til omsorgsboliger",
@@ -716,7 +890,10 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DWXZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT"],
+      "themes": [
+        "SOL",
+        "UTSIKT"
+      ],
       "summary_no": "Kort merknad. Betydelig mindre sollys og tap av utsikt.",
       "key_claims": [],
       "legal_refs": [],
@@ -749,7 +926,9 @@
         "Mulig innenfor eksisterende bygningsrammer",
         "Sol/skyggediagram uten reell konsekvensvurdering"
       ],
-      "legal_refs": ["PBL § 19-2"],
+      "legal_refs": [
+        "PBL § 19-2"
+      ],
       "severity": "medium"
     },
     {
@@ -763,7 +942,14 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DXAZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "INNSYN", "VERDI", "VASSDRAG", "BHAGE", "ALT"],
+      "themes": [
+        "SOL",
+        "INNSYN",
+        "VERDI",
+        "VASSDRAG",
+        "BHAGE",
+        "ALT"
+      ],
       "summary_no": "Bekymret for tap av all ettermiddagssol, økt innsyn, redusert eiendomsverdi. Peker på vassdragshensyn. Bekymret for barnehagen i nærheten (støy, solforhold). Mener omsorgsboliger mulig uten 9 etasjer.",
       "key_claims": [
         "Fjerner all ettermiddagssol",
@@ -784,7 +970,13 @@
       "date": "2026-01-23",
       "pbe_ref": "PBE-D829-DWUZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["BHAGE", "SOL", "VERDI", "VASSDRAG", "BOKVAL"],
+      "themes": [
+        "BHAGE",
+        "SOL",
+        "VERDI",
+        "VASSDRAG",
+        "BOKVAL"
+      ],
       "summary_no": "Fokuserer på barnehagekonsekvenser: 30 barn i Hoffsgrenda barnehage direkte påvirket, permanent skygge. Omsorg+ beboere og Skøyen Terrasse 1-5 mister livskvalitet og eiendomsverdi. Potensielt katastrofal påvirkning på Hoffselva. Anslår 130 personer frarøves sollys permanent, ytterligere 100 indirekte.",
       "key_claims": [
         "30 barn i Hoffsgrenda barnehage direkte berørt",
@@ -835,7 +1027,10 @@
       "date": "2026-01-24",
       "pbe_ref": "PBE-D829-DXDZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "HOYDE"],
+      "themes": [
+        "SOL",
+        "HOYDE"
+      ],
       "summary_no": "Kort merknad. Nabo i Skøyen Terrasse 5 nedre rekke. Vesentlig dårligere solforhold på veranda, ettermiddags- og kveldssolen når ikke lenger frem. Bryter med lavbebyggelsen i Konventveien.",
       "key_claims": [],
       "legal_refs": [],
@@ -852,7 +1047,12 @@
       "date": "2026-01-24",
       "pbe_ref": "PBE-D829-DXGZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "HOYDE", "NATUR", "DOK"],
+      "themes": [
+        "SOL",
+        "HOYDE",
+        "NATUR",
+        "DOK"
+      ],
       "summary_no": "Bor 3. etasje Skøyen Terrasse 5. Betydelig tap av solforhold. Mener utbyggers skyggediagram ikke realistisk — undervurderer omfang og varighet. Bygget vesentlig høyere enn omgivelsene, dårlig tilpasset skala/terreng. Bekymret for dyreliv i elven og naturkvaliteter.",
       "key_claims": [
         "Skyggediagram undervurderer konsekvensene",
@@ -872,7 +1072,10 @@
       "date": "2026-01-25",
       "pbe_ref": "PBE-D829-DXNZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["HOYDE", "ALT"],
+      "themes": [
+        "HOYDE",
+        "ALT"
+      ],
       "summary_no": "Kort merknad. 4 nye etasjer er alt for massivt. 2 etasjer kunne vært mulig. Foreslår seniorboliger på tom naboeiend i stedet.",
       "key_claims": [
         "2 ekstra etasjer akseptabelt, 4 for mye",
@@ -892,7 +1095,15 @@
       "date": "2026-01-25",
       "pbe_ref": "PBE-D829-DXPZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["HOYDE", "SOL", "INNSYN", "SAMLET", "BHAGE", "ALT", "BOKVAL"],
+      "themes": [
+        "HOYDE",
+        "SOL",
+        "INNSYN",
+        "SAMLET",
+        "BHAGE",
+        "ALT",
+        "BOKVAL"
+      ],
       "summary_no": "9 etasjer ruvende, bygges nært 4-etasjes blokker. I sammenheng med Nedre Skøyen vei 26 blir det en 'vegg' uten sol. Ikke tatt hensyn til Skøyen Terrasse barnehage som fryktes å ligge helt i skyggen. Håper lavere bygg er mulig.",
       "key_claims": [
         "Kumulativ 'vegg' med Nedre Skøyen vei 26",
@@ -913,9 +1124,14 @@
       "date": "2026-01-25",
       "pbe_ref": "PBE-D829-DXUZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["UTSIKT", "DISP"],
+      "themes": [
+        "UTSIKT",
+        "DISP"
+      ],
       "summary_no": "Kort merknad. Utsikt mot Ullern kirke var viktig grunn for boligvalg. Hadde sjekket byggegrense i området. Trist at dispensasjon kan gi mye høyere bygg.",
-      "key_claims": ["Sjekket byggehøyde-begrensning før boligkjøp"],
+      "key_claims": [
+        "Sjekket byggehøyde-begrensning før boligkjøp"
+      ],
       "legal_refs": [],
       "severity": "low"
     },
@@ -930,14 +1146,24 @@
       "date": "2026-01-26",
       "pbe_ref": "PBE-D829-DXWZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["VASSDRAG", "SOL", "HOYDE", "TRAFIKK", "DISP"],
+      "themes": [
+        "VASSDRAG",
+        "SOL",
+        "HOYDE",
+        "TRAFIKK",
+        "DISP"
+      ],
       "summary_no": "Strukturert merknad. Brudd med KPA §13.1 (blågrønn struktur, 20m vassdrag). Krever uavhengig sol/skyggeanalyse (TEK17). Manglende tilpasning PBL §29-2. Trafikksikkerhet: Hovfaret allerede presset gate med myke trafikanter.",
       "key_claims": [
         "KPA §13.1 brudd: blågrønn struktur",
         "Krever uavhengig sol/skyggeanalyse",
         "Hovfaret allerede presset gate"
       ],
-      "legal_refs": ["KPA § 13.1", "TEK17", "PBL § 29-2"],
+      "legal_refs": [
+        "KPA § 13.1",
+        "TEK17",
+        "PBL § 29-2"
+      ],
       "severity": "medium"
     },
     {
@@ -951,7 +1177,14 @@
       "date": "2026-01-26",
       "pbe_ref": "PBE-D829-DYMZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT", "INNSYN", "NATUR", "VASSDRAG", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "UTSIKT",
+        "INNSYN",
+        "NATUR",
+        "VASSDRAG",
+        "BOKVAL"
+      ],
       "summary_no": "Klar tilbakemelding mot påbygg. Store negative konsekvenser for solforhold/dagslys. Redusert utsikt, økt innsyn, mindre privatliv. Natur langs vassdraget under press, svekker naturverdier og områdekvalitet.",
       "key_claims": [],
       "legal_refs": [],
@@ -968,7 +1201,13 @@
       "date": "2026-01-26",
       "pbe_ref": "PBE-D829-DYNZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "BOKVAL", "HOYDE", "ALT", "VERDI"],
+      "themes": [
+        "SOL",
+        "BOKVAL",
+        "HOYDE",
+        "ALT",
+        "VERDI"
+      ],
       "summary_no": "Sterkt imot høydeøkning. Bor 1.etg Skøyen Terrasse 6 på andre side av elven. Bygget skyggelegger terrassen mange timer per dag hele året. Omsorgsboliger ikke argument for å ødelegge bokvaliteten for 100-vis av beboere. Foreslår omsorgsboliger i eksisterende bebyggelse.",
       "key_claims": [
         "Skyggelegger terrassen mange timer per dag hele året",
@@ -989,9 +1228,16 @@
       "date": "2026-01-27",
       "pbe_ref": "PBE-D829-EAAZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["HOYDE", "SOL", "NATUR", "BOKVAL"],
+      "themes": [
+        "HOYDE",
+        "SOL",
+        "NATUR",
+        "BOKVAL"
+      ],
       "summary_no": "Emosjonell protest. Hovfaret 13 er nabo i sør, kun plen og Hoffselven mellom. Alt grønt og vakkert forsvinner gradvis. Små hus kan ikke ha store hus rett foran. Krever forsiktig gradvis økning i høyde og avstand.",
-      "key_claims": ["Hovfaret 13 er nabo i sør med kun plen/elv mellom"],
+      "key_claims": [
+        "Hovfaret 13 er nabo i sør med kun plen/elv mellom"
+      ],
       "legal_refs": [],
       "severity": "low"
     },
@@ -1006,7 +1252,11 @@
       "date": "2026-01-27",
       "pbe_ref": "PBE-D829-DYWZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT", "TRAFIKK"],
+      "themes": [
+        "SOL",
+        "UTSIKT",
+        "TRAFIKK"
+      ],
       "summary_no": "Kort merknad. Forringet solforhold og utsikt fra terrasse. Bekymret for støy i byggeperioden.",
       "key_claims": [],
       "legal_refs": [],
@@ -1023,9 +1273,17 @@
       "date": "2026-01-27",
       "pbe_ref": "PBE-D829-EAHZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "NATUR", "VASSDRAG", "KULTUR", "DISP"],
+      "themes": [
+        "SOL",
+        "NATUR",
+        "VASSDRAG",
+        "KULTUR",
+        "DISP"
+      ],
       "summary_no": "Mer skygge påvirker nabolaget og elv/naturområdets vegetasjon. Vegområdet på Gul liste med strenge regler. Ser ingen grunn til unntak fra kommunens retningslinjer.",
-      "key_claims": ["Vegområdet på Gul liste"],
+      "key_claims": [
+        "Vegområdet på Gul liste"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -1040,7 +1298,12 @@
       "date": "2026-01-27",
       "pbe_ref": "PBE-D829-EAGZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["DOK", "VASSDRAG", "INNSYN", "SOL"],
+      "themes": [
+        "DOK",
+        "VASSDRAG",
+        "INNSYN",
+        "SOL"
+      ],
       "summary_no": "Påpeker manglende utredning av konsekvenser for Hoffselva og for naboene mht innsyn og sol. Ber om skikkelig utredning.",
       "key_claims": [],
       "legal_refs": [],
@@ -1057,9 +1320,17 @@
       "date": "2026-01-27",
       "pbe_ref": "PBE-D829-EAJZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT", "INNSYN", "BOKVAL", "DOK"],
+      "themes": [
+        "SOL",
+        "UTSIKT",
+        "INNSYN",
+        "BOKVAL",
+        "DOK"
+      ],
       "summary_no": "Mister sol og utsikt, svært uheldig innsyn, klart redusert bokvalitet. Mener saksgrunnlaget er ikke grundig nok vurdert.",
-      "key_claims": ["Saksgrunnlaget ikke grundig nok vurdert"],
+      "key_claims": [
+        "Saksgrunnlaget ikke grundig nok vurdert"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -1107,7 +1378,11 @@
       "date": "2026-01-28",
       "pbe_ref": "PBE-D829-EAYZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "VERDI", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "VERDI",
+        "BOKVAL"
+      ],
       "summary_no": "Bor nederste etasje Skøyen Terrasse 17. Forhøyelse gjør bygget høyere enn blokkene i nedre rekke, mister mye sollys. Ikke sol etter kl 19 på kvelden. Redusert trivsel og verdiforringelse.",
       "key_claims": [
         "Ikke sol etter kl 19 om kvelden",
@@ -1127,7 +1402,13 @@
       "date": "2026-01-28",
       "pbe_ref": "PBE-D829-EAWZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT", "INNSYN", "VERDI", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "UTSIKT",
+        "INNSYN",
+        "VERDI",
+        "BOKVAL"
+      ],
       "summary_no": "Kort merknad fra Konventveien 71. Mister sol/lys, utsikt, bokvalitet. Mer innsyn til bolig og hage. Stor risiko for verdinedgang.",
       "key_claims": [],
       "legal_refs": [],
@@ -1144,9 +1425,18 @@
       "date": "2026-01-29",
       "pbe_ref": "PBE-D829-EBFZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["HOYDE", "DISP", "SOL", "INNSYN", "VASSDRAG", "NATUR"],
+      "themes": [
+        "HOYDE",
+        "DISP",
+        "SOL",
+        "INNSYN",
+        "VASSDRAG",
+        "NATUR"
+      ],
       "summary_no": "Peker på at dispensasjonskravet sier sitt om prosjektets avvik. Forringe bokvalitet: mer skygge, tap sol/dagslys, innsyn = redusert privatliv. Nærhet til Hoffselva ødeleggende for liv i elva og fugle-/dyreliv.",
-      "key_claims": ["Dispensasjonskravet 'sier sitt'"],
+      "key_claims": [
+        "Dispensasjonskravet 'sier sitt'"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -1161,7 +1451,13 @@
       "date": "2026-01-29",
       "pbe_ref": "PBE-D829-EBSZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "NATUR", "VASSDRAG", "HOYDE", "KULTUR"],
+      "themes": [
+        "SOL",
+        "NATUR",
+        "VASSDRAG",
+        "HOYDE",
+        "KULTUR"
+      ],
       "summary_no": "Bor i Konventveien 74 i hagebyen. Hovfaret 13 skygger allerede for lyset vår/høst/vinter. Ytterligere etasjer gjør det enda dårligere og korter ned hagesesongen. Bekymret for Hoffsbekken (ender, hegre). Heissjakt og aircondition oppå 9 etasjer ytterligere forringelse. Hagebyen trenger større avstand til høy bebyggelse.",
       "key_claims": [
         "Allerede skyggelagt høst/vår/vinter",
@@ -1182,9 +1478,18 @@
       "date": "2026-01-29",
       "pbe_ref": "PBE-D829-EBWZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["UTSIKT", "SOL", "INNSYN", "HOYDE", "TRAFIKK", "BOKVAL"],
+      "themes": [
+        "UTSIKT",
+        "SOL",
+        "INNSYN",
+        "HOYDE",
+        "TRAFIKK",
+        "BOKVAL"
+      ],
       "summary_no": "Personlig merknad. Barna ser ut stuevinduet mot himmelen — etter påbygg ser de kun inn i et bygg. Bekymret for innsyn, skygge, støy. Kraftig høydeøkning bryter med områdets eksisterende karakter.",
-      "key_claims": ["Barna mister utsikt mot himmelen fra stuevinduet"],
+      "key_claims": [
+        "Barna mister utsikt mot himmelen fra stuevinduet"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -1199,7 +1504,11 @@
       "date": "2026-02-01",
       "pbe_ref": "PBE-D829-EDDZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "UTSIKT", "BHAGE"],
+      "themes": [
+        "SOL",
+        "UTSIKT",
+        "BHAGE"
+      ],
       "summary_no": "Bekymret for redusert sollys, tap av utsikt, og redusert soltilgang for Skøyen Terrasse Barnehage som allerede ligger skyggelagt. Solforhold avgjørende for barns uteopphold, trivsel og helse.",
       "key_claims": [
         "Barnehagen allerede i skyggelagt område",
@@ -1219,9 +1528,17 @@
       "date": "2026-02-01",
       "pbe_ref": "PBE-D829-EDCZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "NATUR", "VASSDRAG", "HOYDE", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "NATUR",
+        "VASSDRAG",
+        "HOYDE",
+        "BOKVAL"
+      ],
       "summary_no": "Påvirker sollys på balkong og dagslys i leilighet. Påvirker natur ved Hoffselva — pleier å kaste pinner med toåringen, sett ender. 4 etasjer harmonerer visuelt dårlig med omgivelsene. Ber kommunen gi rammer for mer bærekraftig løsning.",
-      "key_claims": ["Bruker Hoffselva rekreativt med barn"],
+      "key_claims": [
+        "Bruker Hoffselva rekreativt med barn"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -1236,9 +1553,16 @@
       "date": "2026-01-31",
       "pbe_ref": "PBE-D829-ECWZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "INNSYN", "SAMLET", "BOKVAL"],
+      "themes": [
+        "SOL",
+        "INNSYN",
+        "SAMLET",
+        "BOKVAL"
+      ],
       "summary_no": "Etasjeforhøyelsen kombinert med potensielle nye bygg vil omkranse beboerne som en mørk vegg. Tydelig påvirkning på lysforhold, bokvalitet og innsyn.",
-      "key_claims": ["Kombinert med nye bygg = mørk vegg rundt beboere"],
+      "key_claims": [
+        "Kombinert med nye bygg = mørk vegg rundt beboere"
+      ],
       "legal_refs": [],
       "severity": "medium"
     },
@@ -1253,11 +1577,356 @@
       "date": "2026-02-04",
       "pbe_ref": "PBE-D829-EFTZ",
       "channel": "pbe_post_i_sak",
-      "themes": ["SOL", "INNSYN", "UTSIKT", "VERDI"],
+      "themes": [
+        "SOL",
+        "INNSYN",
+        "UTSIKT",
+        "VERDI"
+      ],
       "summary_no": "Vesentlig mer skygge på terrasse og i leilighet. Økt innsyn, redusert utsikt. Vesentlig redusert verdi på leiligheten.",
       "key_claims": [],
       "legal_refs": [],
       "severity": "medium"
+    }
+  ],
+  "source_index": [
+    {
+      "remark_id": "nm_001",
+      "source_file": "Merkn ad fra Monica Syrdal, Engebrets vei 2.pdf",
+      "source_documents": [
+        "Merkn ad fra Monica Syrdal, Engebrets vei 2.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_6958636b45d38c4a"
+      ]
+    },
+    {
+      "remark_id": "nm_002",
+      "source_file": "Merknad-til-nabovarsel-1-20251230-BORETTSLAGET-HOFFSBYEN-HAGEBY.pdf",
+      "source_documents": [
+        "Merknad-til-nabovarsel-1-20251230-BORETTSLAGET-HOFFSBYEN-HAGEBY.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_1c7434a1a1343155"
+      ]
+    },
+    {
+      "remark_id": "nm_003",
+      "source_file": "Merknader fra Færøvik og Stangnes.pdf",
+      "source_documents": [
+        "Merknader fra Færøvik og Stangnes.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_e6e3c79cc68023ed"
+      ]
+    },
+    {
+      "remark_id": "nm_004",
+      "source_file": "Merknader fra Lenka og Michael Magnussen Engebretsvei 6B.pdf",
+      "source_documents": [
+        "Merknader fra Lenka og Michael Magnussen Engebretsvei 6B.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_0b270105c1267dfc"
+      ]
+    },
+    {
+      "remark_id": "nm_005",
+      "source_file": "SvarPaaNabovarsel - Hoffsgrenda Borettslag 2026-01-16T175240.265.pdf",
+      "source_documents": [
+        "SvarPaaNabovarsel - Hoffsgrenda Borettslag 2026-01-16T175240.265.pdf"
+      ],
+      "source_doc_ids": [
+        "doc_mail_b2663d2badd1ef25"
+      ]
+    },
+    {
+      "remark_id": "nm_006",
+      "source_file": "Nabomerknader/Uttalelse-4.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_007",
+      "source_file": "Nabomerknader/Foelgebrev_PBE-D829-DUJZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_008",
+      "source_file": "Nabomerknader/Uttalelse-2.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_009",
+      "source_file": "Nabomerknader/Kontaktskjema_PBE-D829-DSPZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_010",
+      "source_file": "Nabomerknader/Uttalelse-3.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_011",
+      "source_file": "Nabomerknader/Uttalelse_PBE-D829-DULZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_012",
+      "source_file": "Nabomerknader/Uttalelse_PBE-D829-DUUZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_013",
+      "source_file": "Nabomerknader/Uttalelse_PBE-D829-DUYZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_014",
+      "source_file": "Nabomerknader/Uttalelse_PBE-D829-DVAZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_015",
+      "source_file": "Nabomerknader/Uttalelse_PBE-D829-DVBZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_016",
+      "source_file": "Nabomerknader/Uttalelse_PBE-D829-DVFZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_017",
+      "source_file": "Nabomerknader/Kontaktskjema_PBE-D829-DVSZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_018",
+      "source_file": "Nabomerknader/Kontaktskjema_PBE-D829-DVTZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_019",
+      "source_file": "Nabomerknader/Kontaktskjema_PBE-D829-DWGZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_020",
+      "source_file": "Nabomerknader/Kontaktskjema_PBE-D829-DWKZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_021",
+      "source_file": "Nabomerknader/Kontaktskjema_PBE-D829-DWMZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_022",
+      "source_file": "Nabomerknader/Kontaktskjema-11.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_023",
+      "source_file": "Nabomerknader/Kontaktskjema-12.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_024",
+      "source_file": "Nabomerknader/Kontaktskjema-13.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_025",
+      "source_file": "Nabomerknader/PBE-D829-DWTZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_026",
+      "source_file": "Nabomerknader/Kontaktskjema-9.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_027",
+      "source_file": "Nabomerknader/Kontaktskjema-8.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_028",
+      "source_file": "Nabomerknader/Kontaktskjema-7.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_029",
+      "source_file": "Nabomerknader/Kontaktskjema-10.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_030",
+      "source_file": "Nabomerknader/Kontaktskjema-5.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_031",
+      "source_file": "Nabomerknader/Kontaktskjema-6.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_032",
+      "source_file": "Nabomerknader/PBE-D829-DXGZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_033",
+      "source_file": "Nabomerknader/Kontaktskjema-4.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_034",
+      "source_file": "Nabomerknader/Kontaktskjema-3.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_035",
+      "source_file": "Nabomerknader/Kontaktskjema-2.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_036",
+      "source_file": "Nabomerknader/Kontaktskjema.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_037",
+      "source_file": "Nabomerknader/Merknad-15.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_038",
+      "source_file": "Nabomerknader/Merknad-14.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_039",
+      "source_file": "Nabomerknader/Protest.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_040",
+      "source_file": "Nabomerknader/Merknad-13.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_041",
+      "source_file": "Nabomerknader/Merknad-11.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_042",
+      "source_file": "Nabomerknader/Merknad-12.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_043",
+      "source_file": "Nabomerknader/Merknad-10.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_044",
+      "source_file": "Nabomerknader/Merknad-7.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_045",
+      "source_file": "Nabomerknader/Merknad-8.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_046",
+      "source_file": "Nabomerknader/Merknad-9.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_047",
+      "source_file": "Nabomerknader/Merknad-6.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_048",
+      "source_file": "Nabomerknader/Merknad-5.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_049",
+      "source_file": "Nabomerknader/Merknad-4.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_050",
+      "source_file": "Nabomerknader/Merknad.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_051",
+      "source_file": "Nabomerknader/Merknad-2.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_052",
+      "source_file": "Nabomerknader/Merknad-3.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
+    },
+    {
+      "remark_id": "nm_053",
+      "source_file": "Nabomerknader/PBE-D829-EFTZ.pdf",
+      "source_documents": [],
+      "source_doc_ids": []
     }
   ]
 }

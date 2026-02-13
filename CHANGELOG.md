@@ -2,6 +2,59 @@
 
 All notable changes to this project database.
 
+## [3.02.0] - 2026-02-13
+
+### Phase 81: Mailgreier Batch Import (Database + Dashboard)
+
+Full integrasjon av batchmappen `hovfaret13mailgreier. 13.02` i data- og dashboardlag.
+
+**Dataintegrasjon:**
+
+- Ny pipeline: `scripts/import-mailgreier-20260213.py`
+- Ingestet **49 filer** (28 EML, 15 PDF, 3 DOCX, 3 ICS)
+- `data/documents.json`: **278 → 327** dokumenter
+- `data/meetings.json`: **62 → 63** møter
+  - +1 nytt møte (27.01.2026)
+  - 29.01.2026-invitasjon merged inn i eksisterende Dialogmøte #2
+- `data/themes/nabomerknader.json` beriket med:
+  - `source_documents`
+  - `source_doc_ids`
+  - `source_batch`
+  - `source_index`
+- `data/themes/nabomerknad-svar.json`: oppdatert evidensreferanser for DISP/DOK/SOL/VASSDRAG
+- `data/config.json` synkronisert:
+  - `metadata.version`: `3.02.0`
+  - `metrics.meetings_total`: `63`
+  - `metrics.documents_total`: `327`
+
+**Analyseartefakter:**
+
+- `analysis/2026-02-13_mailgreier_inventory.json`
+- `analysis/2026-02-13_mailgreier_mapping_report.md`
+
+**Dashboard-oppdateringer:**
+
+- `dashboard/documents.html`
+  - Støtter både `file_name` og `filename`
+  - Nytt filter: `Kildeformat` (`derived_from`)
+  - Nytt filter: `Batch` (`source_batch`)
+  - Utvidet detaljvisning med checksum + variantkoblinger
+- `dashboard/meetings.html`
+  - Nytt filter: `Batch`
+  - Kildesporingskort i detaljvisning (`source_files`, `ingest_confidence`)
+- `dashboard/nabomerknader.html`
+  - Dynamisk sammendrag/KPI (ikke hardkodet antall)
+  - KPI for batch-koblede merknader
+  - Detaljvisning av `source_documents` per merknad
+
+**Metrikk-konsistens:**
+
+- Oppdaterte nøkkeltall i:
+  - `README.md`
+  - `QUICKSTART.md`
+  - `dashboard/lib/page-config.js`
+  - `dashboard/index.html`
+
 ## [3.01.3] - 2026-02-10
 
 ### Dashboard: Nabomerknader analyse-side

@@ -1,8 +1,8 @@
 # Project Status
 
-**Last Updated:** 2026-02-10
-**Dashboard Version:** 3.01.2
-**Status:** Phase 80 COMPLETE - Nabomerknader Analyse & Responsargumenter
+**Last Updated:** 2026-02-13
+**Dashboard Version:** 3.02.0
+**Status:** Phase 81 COMPLETE - Mailgreier Batch Import (Database + Dashboard)
 **Coolify:** https://hovfaret13.naturalstateproject.com
 **GitHub Pages:** https://justaride.github.io/hovfaret13-database/
 **Auth Password:** `h13-skøyen-2025`
@@ -13,18 +13,41 @@
 
 | Data            | Count                              |
 | --------------- | ---------------------------------- |
-| Meetings        | 62                                 |
-| Documents       | 278                                |
+| Meetings        | 63                                 |
+| Documents       | 327                                |
 | People          | 27                                 |
 | Organizations   | 19                                 |
 | Deliverables    | 37                                 |
 | Timeline events | 34 (10 strategic + 24 operational) |
 | Dashboard pages | 41                                 |
-| Nabomerknader   | 52 (49 unike avsendere)            |
+| Nabomerknader   | 53 (52 unike avsendere)            |
 
 ---
 
 ## Current Phase
+
+**Phase 81: Mailgreier Batch Import COMPLETE**
+
+Integrert full batch `hovfaret13mailgreier. 13.02` med sporbarhet til database og dashboard:
+
+- **49 filer ingestet** (28 EML, 15 PDF, 3 DOCX, 3 ICS)
+- **+49 dokumentposter** i `documents.json` (278 → 327)
+- **+1 møte** i `meetings.json` (62 → 63), samt merge av 29.01-invitasjon inn i eksisterende dialogmøte
+- **Kildesporing lagt til** (`source_batch`, `derived_from`, `checksum_sha256`, `source_files`, `ingest_confidence`)
+- **Nabomerknader beriket** med batch-koblinger og kildedokumentlister
+
+### Leveranser
+
+| Fil                                           | Innhold                                                             |
+| --------------------------------------------- | ------------------------------------------------------------------- |
+| `scripts/import-mailgreier-20260213.py`       | Full ingest-pipeline for batch                                     |
+| `analysis/2026-02-13_mailgreier_inventory.json` | Filinventar med checksum og klassifisering                         |
+| `analysis/2026-02-13_mailgreier_mapping_report.md` | Mapping- og merge-rapport                                       |
+| `dashboard/documents.html`                    | Nye filtre (batch + kildeformat) og utvidet kildesporing          |
+| `dashboard/meetings.html`                     | Batchfilter + detaljert kildesporing på møtekort                  |
+| `dashboard/nabomerknader.html`                | Dynamiske KPI-er + visning av kildedokumenter per merknad         |
+
+---
 
 **Phase 80: Nabomerknader — Analyse & Responsargumenter COMPLETE**
 

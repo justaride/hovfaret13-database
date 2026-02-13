@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "version": "3.01.2",
+    "version": "3.02.0",
     "created": "2025-12-03",
-    "last_updated": "2026-02-10",
+    "last_updated": "2026-02-13",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
     "database_phase": 80
@@ -29,8 +29,8 @@
     "_note": "Page counts and structure details are in the content files, not here"
   },
   "metrics": {
-    "meetings_total": 62,
-    "documents_total": 278,
+    "meetings_total": 63,
+    "documents_total": 327,
     "deliverables_total": 37,
     "stakeholders": {
       "people": 27,
@@ -129,7 +129,10 @@
   "utleie": {
     "status": "in_progress",
     "content_file": "themes/utleie.json",
-    "channels": ["hovfaret13.no", "FINN.no"],
+    "channels": [
+      "hovfaret13.no",
+      "FINN.no"
+    ],
     "priority_task": "FINN-annonse for kontorlokale"
   },
   "natur_miljo": {
@@ -204,7 +207,11 @@
     "status": "in_progress",
     "content_file": "themes/orret.json",
     "dashboard_page": "orret.html",
-    "research_partners": ["NIVA", "Oslomarka Fiskeadministrasjon", "UiO"],
+    "research_partners": [
+      "NIVA",
+      "Oslomarka Fiskeadministrasjon",
+      "UiO"
+    ],
     "species": "Salmo trutta"
   },
   "key_deliverables": {
