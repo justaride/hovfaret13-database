@@ -792,7 +792,8 @@ def build_inventory(parsed_files: list[ParsedFile]) -> dict[str, Any]:
             }
         )
     return {
-        "generated_at": now_iso(),
+        # Keep inventory deterministic across reruns on the same batch/day.
+        "generated_at": TODAY,
         "batch_id": BATCH_ID,
         "source_folder": SOURCE_FOLDER_LABEL,
         "summary": {
