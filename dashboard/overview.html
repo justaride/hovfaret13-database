@@ -690,7 +690,11 @@
           const data = await DataLoader.loadAllData();
           const meetings = data.meetings || [];
           const documents = data.documents || [];
-          const organizations = data.organizations || [];
+          const organizations = DataLoader.getOrganizationsArray
+            ? DataLoader.getOrganizationsArray(data.organizations || {})
+            : Array.isArray(data.organizations)
+              ? data.organizations
+              : Object.values(data.organizations || {});
 
           renderHealthIndicators(meetings);
           renderKeyStats(meetings, documents, organizations);

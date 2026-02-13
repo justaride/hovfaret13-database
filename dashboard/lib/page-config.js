@@ -19,13 +19,13 @@ const PAGE_CONFIG = {
         {
           id: "meetings",
           name: "Møter",
-          desc: "70 møter med rapporter",
+          desc: "62 møter med rapporter",
           href: "meetings.html",
         },
         {
           id: "stakeholders",
           name: "Interessenter",
-          desc: "23 personer, 16 org",
+          desc: "27 personer, 19 org",
           href: "stakeholders.html",
         },
         {
@@ -70,7 +70,7 @@ const PAGE_CONFIG = {
             {
               id: "documents",
               name: "Dokumenter",
-              desc: "271 dokumenter",
+              desc: "278 dokumenter",
               href: "documents.html",
             },
           ],

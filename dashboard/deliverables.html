@@ -1205,7 +1205,12 @@
               "../data/stakeholders/people.json",
             );
             const peopleData = await peopleResponse.json();
-            (peopleData.people || []).forEach((p) => {
+            const peopleSource = peopleData.people || peopleData || {};
+            const people = Array.isArray(peopleSource)
+              ? peopleSource
+              : Object.values(peopleSource);
+            people.forEach((p) => {
+              if (!p || !p.id) return;
               peopleMap[p.id] = p;
             });
           } catch (e) {

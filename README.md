@@ -14,11 +14,11 @@ Komplett prosjektdatabase med interaktivt dashboard for Hovfaret 13 transformasj
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | 61 |
-| Dokumenter | 271 |
+| Møter | 62 |
+| Dokumenter | 278 |
 | Leveranser | 37 |
-| Personer | 23 |
-| Organisasjoner | 16 |
+| Personer | 27 |
+| Organisasjoner | 19 |
 | CO₂-besparelse | 48% |
 | Omsorg+ enheter | 73 |
 
@@ -30,16 +30,36 @@ python3 -m http.server 8888
 open http://localhost:8888/index.html
 ```
 
+## Kvalitetssjekk før push
+
+Kjør metrikk-konsistenskontroll før commit/push:
+
+```bash
+node scripts/check-metrics-consistency.js
+```
+
+Sjekken validerer at nøkkeltall i:
+- `README.md`
+- `QUICKSTART.md`
+- `dashboard/lib/page-config.js`
+- `dashboard/index.html`
+
+matcher `data/config.json` og faktiske datafiler.
+
+CI/Deploy:
+- Workflow `Metrics Consistency` kjører på PR/push mot `main`.
+- `Deploy to GitHub Pages` stopper hvis sjekken feiler.
+
 ## Dashboards
 
 | Dashboard | Fil | Beskrivelse |
 |-----------|-----|-------------|
 | Hjemmeside | `index.html` | Navigasjon til alle dashboards |
 | Oversikt | `overview.html` | Prosjekthelse og KPIer |
-| Møter | `meetings.html` | 60 møter med notater |
+| Møter | `meetings.html` | 62 møter med notater |
 | Tidslinje | `timeline.html` | Kronologisk oversikt |
-| Dokumenter | `documents.html` | 271 dokumenter |
-| Interessenter | `stakeholders.html` | 23 personer, 16 organisasjoner |
+| Dokumenter | `documents.html` | 278 dokumenter |
+| Interessenter | `stakeholders.html` | 27 personer, 19 organisasjoner |
 | Scenarier | `scenarios.html` | 3 utviklingsscenarier |
 | Bærekraft | `sustainability.html` | Miljø og klima |
 | Konseptskisse 2.0 | `konseptskisse-2.html` | 123 sider presentasjon |
@@ -49,14 +69,14 @@ open http://localhost:8888/index.html
 ```
 data/
 ├── project.json              # Masterprosjekt
-├── meetings.json             # 60 møter
-├── documents.json            # 271 dokumenter
+├── meetings.json             # 62 møter
+├── documents.json            # 278 dokumenter
 ├── config.json               # Sentralkonfigurasjon
 ├── deliverables.json         # 37 leveranser
 ├── timeline.json             # Tidslinje
 ├── stakeholders/
-│   ├── organizations.json    # 16 organisasjoner
-│   └── people.json           # 23 personer
+│   ├── organizations.json    # 19 organisasjoner
+│   └── people.json           # 27 personer
 └── themes/
     ├── sustainability.json   # Energi, klima, sirkulært
     ├── regulatory.json       # Søknader, regulering

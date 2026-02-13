@@ -16,10 +16,10 @@ open http://localhost:8888/index.html
 |------|-----|-------------|
 | Hjemmeside | http://localhost:8888/index.html | Hovednavigasjon |
 | Oversikt | http://localhost:8888/overview.html | Prosjekthelse, KPIer |
-| Møter | http://localhost:8888/meetings.html | 60 møter med notater |
+| Møter | http://localhost:8888/meetings.html | 62 møter med notater |
 | Tidslinje | http://localhost:8888/timeline.html | Kronologisk oversikt |
-| Dokumenter | http://localhost:8888/documents.html | 271 dokumenter |
-| Interessenter | http://localhost:8888/stakeholders.html | 23 personer, 16 org |
+| Dokumenter | http://localhost:8888/documents.html | 278 dokumenter |
+| Interessenter | http://localhost:8888/stakeholders.html | 27 personer, 19 org |
 | Scenarier | http://localhost:8888/scenarios.html | CO₂-analyse |
 | Bærekraft | http://localhost:8888/sustainability.html | Miljødata |
 
@@ -45,11 +45,11 @@ open http://localhost:8888/index.html
 
 | Metrikk | Verdi |
 |---------|-------|
-| Møter | 60 |
-| Dokumenter | 271 |
+| Møter | 62 |
+| Dokumenter | 278 |
 | Leveranser | 37 |
-| Personer | 23 |
-| Organisasjoner | 16 |
+| Personer | 27 |
+| Organisasjoner | 19 |
 | CO₂-besparelse | 48% |
 | Omsorg+ enheter | 73 |
 | Bydelsbehov | 150-200 |
@@ -84,6 +84,18 @@ Alle dashboards har tema-bytte i navigasjonen:
 | `STATUS.md` | Gjeldende status |
 | `ARCHITECTURE.md` | Prosjektarkitektur |
 | `data/config.json` | Nøkkeltall |
+
+## Kvalitetskontroll
+
+Kjør før push:
+
+```bash
+node scripts/check-metrics-consistency.js
+```
+
+GitHub Actions:
+- `Metrics Consistency` kjører på PR/push mot `main`.
+- Deploy-workflowen stopper hvis sjekken feiler.
 
 ## Feilsøking
 
