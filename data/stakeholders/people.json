@@ -405,14 +405,20 @@
     },
     "asbjorn_vollestad": {
       "id": "asbjorn_vollestad",
-      "name": "Asbjørn Vøllestad",
+      "name": "L. Asbjørn Vøllestad",
+      "email": "l.a.vollestad@ibv.uio.no",
       "organization_id": "uio",
       "organization": "Universitetet i Oslo (UiO)",
-      "title": "Professor — Freshwater Ecology",
+      "title": "Professor — Department of Biosciences / CEES",
       "role_in_project": "Independent expert — fagvurdering av skyggeeffekt på sjøørret i Hoffselva",
       "expertise": ["Fish ecology", "Freshwater biology", "Salmonid research"],
       "category": "Consultant",
-      "notes": "Formell henvendelse sendt 2026-01-29. Avventer svar."
+      "engagement": {
+        "inquiry_sent": "2026-01-29",
+        "response_received": "2026-02-04",
+        "status": "complete"
+      },
+      "notes": "Fagvurdering mottatt 04.02.2026. Konklusjon: liten direkte negativ effekt på sjøørret fra økt bygningshøyde. Forutsetter bevart kantsone og ingen inngrep i elvekant."
     },
     "elizabeth_sellevold": {
       "id": "elizabeth_sellevold",

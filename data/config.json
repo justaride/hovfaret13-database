@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "3.02.0",
+    "version": "3.03.0",
     "created": "2025-12-03",
-    "last_updated": "2026-02-13",
+    "last_updated": "2026-02-24",
     "description": "Central configuration - single source of truth for key metrics",
     "purpose": "All dashboards and JSON files should reference these values for consistency",
-    "database_phase": 81
+    "database_phase": 82
   },
   "auth": {
     "enabled": true,
@@ -30,18 +30,18 @@
   },
   "metrics": {
     "meetings_total": 63,
-    "documents_total": 327,
+    "documents_total": 329,
     "deliverables_total": 37,
     "stakeholders": {
       "people": 27,
-      "organizations": 19,
-      "total": 46
+      "organizations": 20,
+      "total": 47
     },
     "project_duration_months": 21,
     "timeline": {
       "strategic_events": 10,
-      "operational_events": 24,
-      "total_events": 34,
+      "operational_events": 27,
+      "total_events": 37,
       "sustainability_events": 17
     },
     "notion": {
@@ -109,7 +109,10 @@
     "konseptskisse_2": "2025-12-01",
     "dialogmote_2": "2026-01-29",
     "professor_outreach": "2026-01-29",
-    "nabomerknader_analysert": "2026-02-10"
+    "professor_response": "2026-02-04",
+    "mini_rapport_sjoørret": "2026-02-09",
+    "nabomerknader_analysert": "2026-02-10",
+    "beskrivelse_r2": "2026-02-20"
   },
   "regulatory_status": {
     "nabovarsel": {
@@ -126,8 +129,9 @@
       "date": "2026-01-29"
     },
     "rammesoknad": {
-      "status": "not_started",
-      "target_date": null
+      "status": "in_progress",
+      "target_date": "2026-Q1",
+      "description_r2_date": "2026-02-20"
     }
   },
   "utleie": {
@@ -151,9 +155,11 @@
       "sources"
     ],
     "pending_tasks": [
-      "biologist_consultation",
       "school_site_docs_review",
       "hoffselva_data"
+    ],
+    "completed_tasks": [
+      "biologist_consultation"
     ]
   },
   "environmental_arguments": {
@@ -208,7 +214,7 @@
     "dashboard_page": "nabomerknader.html"
   },
   "orret": {
-    "status": "in_progress",
+    "status": "complete",
     "content_file": "themes/orret.json",
     "dashboard_page": "orret.html",
     "research_partners": [

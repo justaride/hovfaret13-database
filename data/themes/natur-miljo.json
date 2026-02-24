@@ -18,8 +18,8 @@
       {
         "id": "w1",
         "task": "Engasjere biolog",
-        "status": "in_progress",
-        "notes": "Henvendelse sendt til Prof. Asbjørn Vøllestad (UiO) 2026-01-29. Avventer svar."
+        "status": "complete",
+        "notes": "Henvendelse sendt 2026-01-29. Svar mottatt 04.02.2026. Konklusjon: liten direkte negativ effekt. Mini-rapport (N3) ferdigstilt 09.02.2026. Se orret.json for detaljer."
       },
       {
         "id": "w2",

@@ -2,10 +2,10 @@
   "metadata": {
     "version": "2.2",
     "created": "2025-11-21",
-    "last_updated": "2026-02-13",
+    "last_updated": "2026-02-24",
     "description": "Document registry for Hovfaret 13 project",
-    "total": 327,
-    "total_documents": 327,
+    "total": 329,
+    "total_documents": 329,
     "by_category": {
       "analysis_notes": 95,
       "architecture": 10,
@@ -14,9 +14,9 @@
       "omsorg_plus": 25,
       "other": 11,
       "presentations": 62,
-      "regulatory": 15,
+      "regulatory": 16,
       "stakeholder_engagement": 23,
-      "sustainability": 8
+      "sustainability": 9
     }
   },
   "categories": {
@@ -4276,6 +4276,134 @@
         }
       ],
       "duplicate_group": "mg_dup_009"
+    },
+    {
+      "id": "doc_beskrivelse_forelopig_r2",
+      "file_name": "23.12.25_Hovfaret 13 beskrivelse foreløpig.docx",
+      "file_type": "docx",
+      "document_type": "building_description",
+      "category": "regulatory",
+      "title": "Beskrivelse / redegjørelse – Hovfaret 13",
+      "title_no": "Beskrivelse / redegjørelse – Hovfaret 13",
+      "date": "2026-02-20",
+      "date_r1": "2025-12-23",
+      "date_r2": "2026-02-20",
+      "revision": "R2",
+      "description": "Hoveddokument til rammesøknad. Redegjør for tiltaket (bruksendring til Omsorg+, 73-83 boliger, 8 etasjer), dispensasjonsargumentasjon (KP § 3.1.1, S-2656), naturmangfoldloven §§ 7-12, vassdrag § 13.3, geoteknikk, overvann/flomrisiko, støy/luftkvalitet, medvirkning og nabodialog.",
+      "authors": [
+        "Urbania AS",
+        "R21 Arkitekter",
+        "Byggesaksrådgivning AS",
+        "Natural State"
+      ],
+      "sections": [
+        "Innledning og bakgrunn",
+        "Tiltaket (bruksendring, bygningsvolum, funksjonsfordeling)",
+        "Eksisterende situasjon",
+        "Reguleringsforhold",
+        "Dispensasjon (KP § 3.1.1, S-2656)",
+        "Medvirkning og nabodialog",
+        "Bærekraft, sosial kvalitet og målsetting",
+        "Natur (naturmangfoldloven §§ 7-12)",
+        "Miljø - støy og luftkvalitet",
+        "Klima - overvann og flomrisiko",
+        "Vassdrag (KPA § 13.3, vannressursloven § 11)",
+        "Geoteknisk analyse",
+        "Demontering og avfall",
+        "Nabovarsel"
+      ],
+      "key_arguments": [
+        "Transformasjon gir 48% lavere CO₂ vs rivning/nybygg",
+        "73-83 Omsorg+ boliger dekker akutt behov i Bydel Ullern",
+        "Tiltaket følger intensjoner i vedtatt (ikke stadfestet) områdeplan",
+        "Eksisterende fotavtrykk - ingen nye terrenginngrep i vassdragsbelte",
+        "Naturmangfoldloven §§ 8-12 systematisk vurdert og ivaretatt",
+        "Geoteknisk: rehabilitering er sikrere enn rivning pga kvikkleire/områdestabilitet"
+      ],
+      "source_path": "/Users/gabrielboen/Downloads/23.12.25_Hovfaret 13 beskrivelse foreløpig.docx",
+      "related_documents": [
+        "doc_mail_e8145266d8229991",
+        "doc_fagvurdering_sjoørret_vollestad",
+        "doc_mini_rapport_sjoørret_n3"
+      ],
+      "extraction_date": "2026-02-24"
+    },
+    {
+      "id": "doc_mini_rapport_sjoørret_n3",
+      "file_name": "N3 mini-rapport-sjoorret-hoffselva-hovfaret13.pdf",
+      "file_type": "pdf",
+      "document_type": "environmental_assessment",
+      "category": "sustainability",
+      "title": "Mini-rapport: Sjøørret og skyggeeffekt ved Hoffselva (Hovfaret 13)",
+      "title_no": "Mini-rapport: Sjøørret og skyggeeffekt ved Hoffselva (Hovfaret 13)",
+      "date": "2026-02-09",
+      "description": "Sammenstilling av kunnskapsgrunnlag og uavhengig fagvurdering (Prof. Vøllestad, UiO) for å svare på bekymring fra Hoffvassdragets venner om skyggeeffekt på sjøørret. Konklusjon: liten direkte negativ effekt, potensiell risiko er indirekte via kantsone og elvekant.",
+      "authors": [
+        "Natural State"
+      ],
+      "recipient": "PBE / byggesak (vedlegg til nabomerknadssvar)",
+      "pages": 4,
+      "sections": [
+        "Bakgrunn",
+        "Tiltaket (kort)",
+        "Kjernefunn",
+        "Uavhengig fagvurdering (UiO)",
+        "Kort kunnskapsgrunnlag (utdrag)",
+        "Forutsetninger for lav risiko",
+        "Samlet vurdering og konklusjon"
+      ],
+      "appendices": [
+        {
+          "id": "A",
+          "title": "E-post fra Prof. L. Asbjørn Vøllestad (UiO)",
+          "date": "2026-02-04",
+          "type": "fagvurdering"
+        },
+        {
+          "id": "B",
+          "title": "Solstudie (R21 Arkitekter)",
+          "date_scenario": "20. juni kl. 20:00",
+          "type": "solstudie"
+        }
+      ],
+      "key_conclusions": [
+        "Økt bygningshøyde gir liten direkte effekt på sjøørret (Prof. Vøllestad)",
+        "Viktigste risiko er indirekte: tiltak som svekker kantsonens trevegetasjon",
+        "Forutsetninger: fungerende kantsone og unngå inngrep i elvekanten",
+        "Bekymringen anses tilstrekkelig vurdert og håndtert"
+      ],
+      "references": [
+        {
+          "id": 1,
+          "text": "Vøllestad, L.A. (UiO): E-post til tiltakshaver/prosjekt, datert 04.02.2026 (Vedlegg A)"
+        },
+        {
+          "id": 2,
+          "text": "Norconsult: 13_Naturmiljoe.pdf (Hoff-prosjektet, naturmiljø) – omtale av anadrom strekning (sjøørret/laks)"
+        },
+        {
+          "id": 3,
+          "text": "USDA National Agroforestry Center: Riparian shading / stream buffers"
+        },
+        {
+          "id": 4,
+          "text": "USGS Water Science School: Dissolved oxygen and water"
+        },
+        {
+          "id": 5,
+          "text": "Washington Dept. of Fish & Wildlife: Temperaturintervall og habitatveiledning for laksefisk"
+        },
+        {
+          "id": 6,
+          "text": "R21 Arkitekter: Solstudie/skyggedata (Vedlegg B)"
+        }
+      ],
+      "source_path": "/Users/gabrielboen/Downloads/N3 mini-rapport-sjoorret-hoffselva-hovfaret13.pdf",
+      "related_documents": [
+        "doc_fagvurdering_sjoørret_vollestad",
+        "doc_beskrivelse_forelopig_r2"
+      ],
+      "extraction_date": "2026-02-24"
     }
   ]
 }

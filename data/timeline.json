@@ -24,7 +24,7 @@
       "name": "Operational Timeline",
       "name_no": "Operasjonell tidslinje",
       "description": "Key decisions, deliverables, and stakeholder engagements",
-      "event_count": 24,
+      "event_count": 27,
       "use_case": "Project management, team updates, progress tracking"
     },
     "detailed": {
@@ -375,6 +375,36 @@
         "description": "Formell henvendelse sendt til Prof. Asbjørn Vøllestad (UiO) om uavhengig fagvurdering av skyggeeffekt på sjøørret i Hoffselva.",
         "title_no": "Professorhenvendelse — sjøørret fagvurdering",
         "related_document": "doc_fagvurdering_sjoørret_vollestad"
+      },
+      {
+        "id": "o_025",
+        "date": "2026-02-04",
+        "title": "Professor Response — Sjøørret Assessment Received",
+        "phase": "phase_6",
+        "category": "technical",
+        "description": "Prof. Vøllestad (UiO) svarer: liten direkte negativ effekt på sjøørret fra økt bygningshøyde. Forutsetter bevart kantsone og ingen inngrep i elvekant.",
+        "title_no": "Professorsvar — sjøørret-vurdering mottatt",
+        "related_document": "doc_mini_rapport_sjoørret_n3"
+      },
+      {
+        "id": "o_026",
+        "date": "2026-02-09",
+        "title": "Mini-rapport Sjøørret Completed",
+        "phase": "phase_6",
+        "category": "technical",
+        "description": "N3 mini-rapport om sjøørret og skyggeeffekt ved Hoffselva ferdigstilt. Vedlegg til nabomerknadssvar / PBE.",
+        "title_no": "Mini-rapport sjøørret ferdigstilt",
+        "related_document": "doc_mini_rapport_sjoørret_n3"
+      },
+      {
+        "id": "o_027",
+        "date": "2026-02-20",
+        "title": "Beskrivelse / Redegjørelse R2 Updated",
+        "phase": "phase_6",
+        "category": "regulatory",
+        "description": "R2-utkast av hoveddokument til rammesøknad ferdigstilt. Dekker tiltaksbeskrivelse, dispensasjoner, naturmangfoldlov, geoteknikk, vassdrag, støy/luft, overvann.",
+        "title_no": "Beskrivelse/redegjørelse R2 oppdatert",
+        "related_document": "doc_beskrivelse_forelopig_r2"
       }
     ]
   },

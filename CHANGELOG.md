@@ -2,6 +2,49 @@
 
 All notable changes to this project database.
 
+## [3.03.0] - 2026-02-24
+
+### Phase 82: Rammesøknad-beskrivelse og sjøørret-fagvurdering
+
+Registrering av to nye dokumenter og oppdatering av fagvurderingsstatus.
+
+**Nye dokumenter (327 → 329):**
+
+- `doc_beskrivelse_forelopig_r2`: Hoveddokument til rammesøknad (R2-utkast, 20.02.2026)
+  - 16 seksjoner: tiltaksbeskrivelse, dispensasjoner, naturmangfoldlov §§ 7-12, geoteknikk, vassdrag, støy, overvann
+  - Kategori: regulatory
+- `doc_mini_rapport_sjoørret_n3`: Mini-rapport sjøørret og skyggeeffekt (09.02.2026)
+  - Prof. Vøllestad (UiO) fagvurdering: liten direkte negativ effekt
+  - Vedlegg A: E-post fra professor (04.02.2026), Vedlegg B: Solstudie R21
+  - Kategori: sustainability
+
+**Fagvurdering sjøørret (themes/orret.json):**
+
+- Prof. Vøllestad-svar registrert (04.02.2026) — status: awaiting_response → complete
+- Mini-rapport-seksjon lagt til med kjernefunn, forutsetninger og samlet vurdering
+- Direkte sitater fra professorens e-post inkludert
+
+**Stakeholders:**
+
+- `people.json`: Vøllestad oppdatert med e-post, avdeling, engagement-status
+- `organizations.json`: +1 ny org — Hoffvassdragets venner (19 → 20)
+- `natur-miljo.json`: Biolog-oppgave markert som complete
+
+**Timeline (24 → 27 operative hendelser):**
+
+- o_025: Professorsvar mottatt (04.02.2026)
+- o_026: Mini-rapport sjøørret ferdigstilt (09.02.2026)
+- o_027: Beskrivelse/redegjørelse R2 oppdatert (20.02.2026)
+
+**Config:**
+
+- `documents_total`: 327 → 329
+- `organizations`: 19 → 20, `total stakeholders`: 46 → 47
+- `operational_events`: 24 → 27, `total_events`: 34 → 37
+- `rammesoknad.status`: not_started → in_progress
+- `orret.status`: in_progress → complete
+- `natur_miljo.pending_tasks`: biologist_consultation → completed_tasks
+
 ## [3.02.0] - 2026-02-13
 
 ### Phase 81: Mailgreier Batch Import (Database + Dashboard)

@@ -3,7 +3,7 @@
     "version": "2.2",
     "created": "2025-11-21",
     "last_updated": "2026-01-30",
-    "total": 19,
+    "total": 20,
     "description": "Organizations involved in Hovfaret 13 project"
   },
   "organizations": {
@@ -272,6 +272,24 @@
       "role_in_project": "Neighbor organization — dialogmøte participant",
       "engagement_level": "stakeholder",
       "first_involvement": "2025-10-14"
+    },
+    "hoffvassdragets_venner": {
+      "id": "hoffvassdragets_venner",
+      "name": "Hoffvassdragets venner",
+      "type": "interest_group",
+      "category": "Community / Neighbors",
+      "description": "Interesseorganisasjon for vern av Hoffselva/Hoffsbekken. Sendte innspill 11.11.2025 med bekymring for gyting, fugleliv, skyggeeffekt og avstandskrav § 13.3.",
+      "role_in_project": "Stakeholder — raised concerns about impact on sea trout and river ecology",
+      "engagement_level": "stakeholder",
+      "first_involvement": "2025-11-11",
+      "key_concerns": [
+        "Sjøørret-gyting i Hoffselva",
+        "Skyggeeffekt fra økt bygningshøyde",
+        "Avstandskrav § 13.3 (20m/12m byggefritt belte)",
+        "Fugleliv ved kulvertutløp"
+      ],
+      "response_status": "addressed",
+      "response_document": "doc_mini_rapport_sjoørret_n3"
     }
   },
   "organization_categories": {
@@ -293,7 +311,8 @@
         "skoyen_omradeforum",
         "fram_eiendom",
         "hoffsgrenda_borettslag",
-        "hoffsbyen_hageby"
+        "hoffsbyen_hageby",
+        "hoffvassdragets_venner"
       ]
     },
     "Academic / Research": {

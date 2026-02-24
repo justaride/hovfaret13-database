@@ -28,8 +28,8 @@
     "work_items": [
       {
         "task": "Engasjere ferskvannsbiolog",
-        "status": "in_progress",
-        "result": "Formell henvendelse sendt til Prof. Asbjørn Vøllestad (UiO) 2026-01-29. Avventer svar."
+        "status": "complete",
+        "result": "Formell henvendelse sendt 2026-01-29. Svar mottatt 2026-02-04. Konklusjon: liten direkte negativ effekt på sjøørret. Mini-rapport ferdigstilt 2026-02-09."
       },
       {
         "task": "Verifisere gyteforhold (høst)",
@@ -293,14 +293,16 @@
   ],
   "professor_outreach": {
     "contact": {
-      "name": "Prof. Asbjørn Vøllestad",
+      "name": "Prof. L. Asbjørn Vøllestad",
       "institution": "Universitetet i Oslo (UiO)",
-      "department": "Freshwater Ecology / CEES",
+      "department": "Department of Biosciences / CEES",
+      "email": "l.a.vollestad@ibv.uio.no",
       "person_id": "asbjorn_vollestad",
       "org_id": "uio"
     },
     "date_sent": "2026-01-29",
-    "status": "awaiting_response",
+    "date_response": "2026-02-04",
+    "status": "complete",
     "request_scope": [
       "Vurdering av skyggeeffekt fra 3-etasjers påbygg på sjøørret i Hoffselva",
       "Prosjektbeskrivelse med bygningsdata og koordinater",
@@ -310,6 +312,29 @@
       "7 spesifikke fagspørsmål",
       "Vedlegg: R21 Arkitekter soldiagram"
     ],
+    "response": {
+      "date": "2026-02-04",
+      "format": "E-post",
+      "key_conclusions": [
+        "Betydelig kantvegetasjon langs elva forbi bygget (begge sider) — dette er viktig",
+        "Bygningens lengde er relativt beskjeden — skyggingen vil ha liten effekt for fisken",
+        "Økt høyde gir mer skygge over lengre tid, men skjul er positivt, og redusert oppvarming om sommeren kan være positivt",
+        "Totalt vil en heving av høyden ha liten direkte effekt på fisken",
+        "Viktigst: sikre fungerende kantsone med trevegetasjon",
+        "Økt skygge kan ha negativ effekt på vegetasjonen (redusert vekst/livskraft) — indirekte negativt for fisk",
+        "Viktig å unngå inngrep i elvekanten — erosjonsfare"
+      ],
+      "direct_quotes": [
+        {
+          "text": "Siden lengden av bygningen er relativt beskjeden vil skyggingen ha liten effekt for fisken ... Totalt vil en heving av høyden ha liten direkte effekt på fisken.",
+          "context": "Hovedkonklusjon om direkte effekt"
+        },
+        {
+          "text": "Det viktigste ved en slik utbygging er å sikre en fungerende kantsone med tre-vegetasjon ... Ut over dette er det viktig å unngå inngrep i elvekanten, noe som kan føre til erosjon.",
+          "context": "Forutsetninger for lav risiko"
+        }
+      ]
+    },
     "building_parameters": {
       "address": "Hovfaret 13, 0275 Oslo",
       "coordinates": "59.9210°N, 10.6635°E",
@@ -318,7 +343,54 @@
       "planned_extension": 3,
       "planned_use": "Omsorg+ (73 omsorgsboliger)"
     },
-    "related_documents": ["doc_fagvurdering_sjoørret_vollestad"]
+    "related_documents": [
+      "doc_fagvurdering_sjoørret_vollestad",
+      "doc_mini_rapport_sjoørret_n3"
+    ]
+  },
+  "mini_rapport": {
+    "id": "doc_mini_rapport_sjoørret_n3",
+    "title": "Mini-rapport: Sjøørret og skyggeeffekt ved Hoffselva (Hovfaret 13)",
+    "date": "2026-02-09",
+    "recipient": "PBE / byggesak (vedlegg til nabomerknadssvar)",
+    "trigger": "Hoffvassdragets venner innspill datert 2025-11-11 om at påbygg vil gi økt skygge over elveløpet og påvirke sjøørret negativt",
+    "status": "complete",
+    "key_findings": [
+      {
+        "category": "Direkte effekt",
+        "conclusion": "Liten direkte negativ effekt på sjøørret — bygningens lengde er relativt beskjeden",
+        "source": "Prof. Vøllestad (UiO), Vedlegg A"
+      },
+      {
+        "category": "Indirekte risiko",
+        "conclusion": "Viktigste risiko er indirekte: tiltak som svekker kantsonens trevegetasjon kan redusere insektnedfall, rotskjul og stabilitet i elvekant",
+        "source": "Prof. Vøllestad (UiO), Vedlegg A"
+      },
+      {
+        "category": "Forutsetninger",
+        "conclusion": "Lav risiko forutsetter: (1) vegetasjon langs elven berøres ikke, (2) anlegg holdes unna kantsonen, (3) ingen inngrep i elvekant/elveløp",
+        "source": "Mini-rapport seksjon 6"
+      }
+    ],
+    "overall_assessment": "Med grunnlag i prof. Vøllestads uavhengige fagvurdering (04.02.2026) vurderes økt bygningshøyde å ha liten direkte negativ effekt på sjøørreten. Potensiell risiko er primært knyttet til indirekte effekter via kantsone (vegetasjon) og til anleggsrelaterte inngrep i elvekant (erosjon/sediment). Siden prosjektet forutsetter bevaring av kantsone og ingen inngrep i elvekant/elveløp, anses bekymringen knyttet til skyggeeffekt på sjøørreten som tilstrekkelig vurdert og håndtert.",
+    "prerequisites_low_risk": [
+      "Vegetasjon langs elven skal ikke berøres (ingen felling/beskjæring, ingen skade på rotsone)",
+      "Anleggsprosess/logistikk skal holdes unna elven og kantsonen (rigg, lagring, transport, stillasplanlegging)",
+      "Ingen inngrep i elvekant/elveløp; erosjon og sedimentavrenning skal forebygges"
+    ],
+    "knowledge_base": {
+      "temperature": "Fjerning av ripariansk vegetasjon kan gi betydelig sommertemperatur-økning i vannløp (USDA). Høy temperatur kan stresse laksefisk.",
+      "oxygen": "Kaldt vann holder mer oppløst oksygen enn varmt vann (USGS).",
+      "riparian_function": "Trevegetasjon bidrar med organisk materiale (insekter/blad) og rotsystemer som stabiliserer elvebredder (USDA)."
+    },
+    "references": [
+      "Vøllestad, L.A. (UiO): E-post datert 04.02.2026 (Vedlegg A)",
+      "Norconsult: 13_Naturmiljoe.pdf — omtale av anadrom strekning",
+      "USDA National Agroforestry Center: Riparian shading / stream buffers",
+      "USGS Water Science School: Dissolved oxygen and water",
+      "WDFW: Temperaturintervall og habitatveiledning for laksefisk",
+      "R21 Arkitekter: Solstudie/skyggedata (Vedlegg B)"
+    ]
   },
   "sources": [
     {
