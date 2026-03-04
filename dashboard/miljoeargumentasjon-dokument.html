@@ -574,7 +574,7 @@
     </script>
 
     <div class="toolbar no-print">
-      <button onclick="window.print()">🖨️ Skriv ut / PDF</button>
+      <button onclick="exportPDF()">🖨️ Skriv ut / PDF</button>
       <button onclick="toggleAllSections()">📖 Vis alle seksjoner</button>
     </div>
 
@@ -1620,8 +1620,81 @@
 
     <script>
       function toggleAllSections() {
-        // Scroll to top for print view
         window.scrollTo(0, 0);
+      }
+
+      function exportPDF() {
+        const doc = document.getElementById('document');
+        const styleEl = document.querySelector('style');
+        const styles = styleEl ? styleEl.textContent : '';
+
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(`<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<title>Miljøargumentasjon - Hovfaret 13</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+${styles}
+
+body {
+  background: white !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.document {
+  box-shadow: none !important;
+  margin: 1rem auto !important;
+  max-width: 850px;
+}
+.toolbar, .content-header, .no-print {
+  display: none !important;
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm 18mm 25mm 18mm;
+  }
+  body {
+    font-size: 11pt;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .document {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .page-break { break-before: page; }
+  h2, h3, h4 { break-after: avoid; }
+  h2 { border-bottom: none; }
+  .highlight-box, .reference, .comparison-grid,
+  .data-grid, .executive-summary, .toc,
+  .argument-section, .lead, footer {
+    break-inside: avoid;
+  }
+  table { break-inside: auto; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  p { orphans: 3; widows: 3; }
+  a { color: inherit !important; text-decoration: none !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+</style>
+</head>
+<body>
+${doc.outerHTML}
+</body>
+</html>`);
+        printWindow.document.close();
+
+        printWindow.onload = function() {
+          setTimeout(function() {
+            printWindow.focus();
+            printWindow.print();
+          }, 600);
+        };
       }
     </script>
   </body>
