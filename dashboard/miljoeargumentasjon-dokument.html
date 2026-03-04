@@ -14,25 +14,123 @@
     <link rel="stylesheet" href="css/tabs.css" />
     <style>
       @media print {
-        .no-print {
+        @page {
+          size: A4;
+          margin: 20mm 18mm 25mm 18mm;
+        }
+
+        .no-print,
+        .toolbar,
+        .content-header {
           display: none !important;
         }
+
         body {
-          padding: 0;
+          padding: 0 !important;
+          margin: 0 !important;
           font-size: 11pt;
+          background: white !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
         }
+
         .document {
-          box-shadow: none;
-          max-width: 100%;
+          box-shadow: none !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          border: none !important;
         }
+
+        /* Override base.css hiding all nav — keep our TOC */
+        nav.toc {
+          display: block !important;
+        }
+
+        /* Override base.css break-inside on .section — sections are too large */
+        .section {
+          break-inside: auto !important;
+          border: none !important;
+        }
+
+        /* Page breaks between major sections */
         .page-break {
-          page-break-before: always;
+          break-before: page;
         }
+
+        /* Prevent orphaned headings */
+        h2, h3, h4 {
+          break-after: avoid;
+          break-inside: avoid;
+        }
+
+        /* Remove h2 bottom border in print to avoid stray lines */
         h2 {
-          page-break-after: avoid;
+          border-bottom: none;
+          padding-bottom: 0.25rem;
         }
-        .argument-section {
-          page-break-inside: avoid;
+
+        /* Keep these blocks together — they're small enough to fit a page */
+        .highlight-box,
+        .reference,
+        .data-grid,
+        .data-item,
+        .executive-summary,
+        .toc,
+        .argument-section,
+        .source-item,
+        .summary-stats,
+        .lead,
+        footer {
+          break-inside: avoid;
+        }
+
+        /* Tables: avoid break inside rows, allow break in large tables */
+        table {
+          break-inside: auto;
+        }
+        thead {
+          display: table-header-group;
+        }
+        tr {
+          break-inside: avoid;
+        }
+
+        /* Keep heading + following content together */
+        h3 + p,
+        h3 + table,
+        h3 + .highlight-box,
+        h3 + .comparison-grid,
+        h3 + .data-grid,
+        h3 + ul,
+        h4 + p,
+        h4 + ul {
+          break-before: avoid;
+        }
+
+        /* Comparison grids — avoid splitting the two columns */
+        .comparison-grid {
+          break-inside: avoid;
+        }
+
+        /* Ensure colored text prints */
+        td[style*="color"],
+        .value,
+        .key-finding {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        /* Links: no underline in formal document */
+        a {
+          color: inherit !important;
+          text-decoration: none !important;
+        }
+
+        /* Widows & orphans */
+        p {
+          orphans: 3;
+          widows: 3;
         }
       }
 
