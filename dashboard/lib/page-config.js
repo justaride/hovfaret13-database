@@ -294,6 +294,18 @@ const PAGE_CONFIG = {
               desc: "Redigering",
               href: "barekraftsrapport-2.html",
             },
+            {
+              id: "barekraftsrapport-dokument",
+              name: "Rapport dokument",
+              desc: "Formell A4-rapport",
+              href: "barekraftsrapport-dokument.html",
+            },
+            {
+              id: "barekraftsrapport",
+              name: "Rapport dashboard",
+              desc: "Interaktiv TBL-rapport",
+              href: "barekraftsrapport.html",
+            },
           ],
         },
         annet: {

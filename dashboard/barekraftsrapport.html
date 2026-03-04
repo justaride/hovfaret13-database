@@ -1,0 +1,1792 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bærekraftsrapport - Hovfaret 13</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+        --text-primary: #1e293b;
+        --text-secondary: #475569;
+        --text-muted: #94a3b8;
+        --border-light: #e2e8f0;
+        --green-900: #14532d;
+        --green-800: #166534;
+        --green-700: #15803d;
+        --green-600: #16a34a;
+        --green-500: #22c55e;
+        --green-400: #4ade80;
+        --green-100: #dcfce7;
+        --green-50: #f0fdf4;
+        --blue: #3b82f6;
+        --blue-light: #dbeafe;
+        --amber: #f59e0b;
+        --amber-light: #fef3c7;
+        --red: #ef4444;
+        --red-light: #fee2e2;
+        --purple: #8b5cf6;
+        --purple-light: #ede9fe;
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 14px;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family: "Inter", -apple-system, sans-serif;
+        background: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+        padding-top: 48px;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, var(--green-800) 0%, var(--green-900) 100%);
+        color: white;
+        padding: 4rem 2rem;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-overline {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--green-400);
+        margin-bottom: 0.75rem;
+      }
+
+      .hero h2 {
+        font-size: 2.75rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.75rem;
+        line-height: 1.1;
+      }
+
+      .hero-tagline {
+        font-size: 1.125rem;
+        opacity: 0.85;
+        max-width: 640px;
+        margin: 0 auto 2.5rem;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+      }
+
+      .hero-stat {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 1.25rem 1rem;
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .hero-stat-value {
+        font-size: 2rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #4ade80, #22d3ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-stat-label {
+        font-size: 0.75rem;
+        opacity: 0.7;
+        margin-top: 0.25rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+      }
+
+      .btn-pdf {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: white;
+        border-radius: var(--radius-sm);
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.15s;
+        text-decoration: none;
+      }
+
+      .btn-pdf:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      /* Tab Bar */
+      .tab-bar {
+        position: sticky;
+        top: 48px;
+        z-index: 90;
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border-light);
+        padding: 0 2rem;
+      }
+
+      .tab-bar-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        gap: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .tab-bar-content::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tab-btn {
+        padding: 0.875rem 1.25rem;
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.15s;
+        font-family: inherit;
+      }
+
+      .tab-btn:hover {
+        color: var(--text-primary);
+        background: var(--bg-main);
+      }
+
+      .tab-btn.active {
+        color: var(--green-700);
+        border-bottom-color: var(--green-700);
+        font-weight: 600;
+      }
+
+      /* Main */
+      .main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem;
+      }
+
+      .tab-panel {
+        display: none;
+      }
+
+      .tab-panel.active {
+        display: block;
+      }
+
+      /* Section */
+      .section {
+        margin-bottom: 3rem;
+      }
+
+      .section-header {
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        background: var(--bg-main);
+        border-radius: var(--radius-md);
+        transition: background 0.15s;
+      }
+
+      .section-header:hover {
+        background: var(--green-50);
+      }
+
+      .section-header-left {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .section-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      .section-icon.green { background: var(--green-100); }
+      .section-icon.blue { background: var(--blue-light); }
+      .section-icon.amber { background: var(--amber-light); }
+      .section-icon.purple { background: var(--purple-light); }
+      .section-icon.red { background: var(--red-light); }
+
+      .section-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+
+      .section-subtitle {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+      }
+
+      .section-chevron {
+        width: 20px;
+        height: 20px;
+        color: var(--text-muted);
+        transition: transform 0.2s;
+        flex-shrink: 0;
+      }
+
+      .section.expanded .section-chevron {
+        transform: rotate(180deg);
+      }
+
+      .section-body {
+        display: none;
+        padding: 0.5rem 0 0 0;
+      }
+
+      .section.expanded .section-body {
+        display: block;
+      }
+
+      /* Cards */
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .card-title {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      /* Highlight box */
+      .highlight-box {
+        background: var(--green-50);
+        border: 1px solid var(--green-100);
+        border-left: 4px solid var(--green-600);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .highlight-box.amber {
+        background: var(--amber-light);
+        border-color: var(--amber);
+        border-left-color: var(--amber);
+      }
+
+      .highlight-box.blue {
+        background: var(--blue-light);
+        border-color: var(--blue);
+        border-left-color: var(--blue);
+      }
+
+      .highlight-box-title {
+        font-weight: 600;
+        font-size: 0.9375rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .highlight-box p {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* Model Cards (scenarios) */
+      .model-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .model-card {
+        background: var(--bg-main);
+        border-radius: var(--radius-lg);
+        padding: 1.75rem;
+        text-align: center;
+        border: 1px solid var(--border-light);
+      }
+
+      .model-card.highlight {
+        background: var(--green-50);
+        border: 2px solid var(--green-500);
+      }
+
+      .model-badge {
+        display: inline-block;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.25rem 0.625rem;
+        border-radius: 100px;
+        margin-bottom: 0.75rem;
+      }
+
+      .model-badge.red { background: var(--red-light); color: var(--red); }
+      .model-badge.green { background: var(--green-100); color: var(--green-800); }
+      .model-badge.blue { background: var(--blue-light); color: var(--blue); }
+
+      .model-title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .model-value {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      .model-card.highlight .model-value {
+        color: var(--green-800);
+      }
+
+      .model-label {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+      }
+
+      .model-description {
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        margin-top: 0.75rem;
+        line-height: 1.6;
+      }
+
+      /* Data Table */
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border-light);
+        margin-bottom: 1.5rem;
+        font-size: 0.875rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .data-table th {
+        background: var(--bg-main);
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--text-secondary);
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .data-table .highlight-row {
+        background: var(--green-50);
+      }
+
+      .data-table .positive { color: var(--green-800); font-weight: 600; }
+      .data-table .negative { color: var(--red); font-weight: 600; }
+      .data-table .value { font-weight: 600; }
+
+      /* Quote Card */
+      .quote-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        border-left: 4px solid var(--green-500);
+        box-shadow: var(--shadow-sm);
+        margin-bottom: 1rem;
+      }
+
+      .quote-card.purple { border-left-color: var(--purple); }
+      .quote-card.blue { border-left-color: var(--blue); }
+      .quote-card.amber { border-left-color: var(--amber); }
+
+      .quote-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        font-style: italic;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+
+      .quote-source {
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+
+      /* Stats Grid */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .stat-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--green-800);
+      }
+
+      .stat-label {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        margin-top: 0.25rem;
+      }
+
+      /* Badge */
+      .badge {
+        display: inline-block;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        padding: 0.2rem 0.5rem;
+        border-radius: 100px;
+      }
+
+      .badge.green { background: var(--green-100); color: var(--green-800); }
+      .badge.amber { background: var(--amber-light); color: #92400e; }
+      .badge.red { background: var(--red-light); color: var(--red); }
+      .badge.blue { background: var(--blue-light); color: var(--blue); }
+      .badge.purple { background: var(--purple-light); color: var(--purple); }
+
+      /* TBL Visual */
+      .tbl-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .tbl-card {
+        border-radius: var(--radius-lg);
+        padding: 2rem 1.5rem;
+        text-align: center;
+        border: 1px solid var(--border-light);
+      }
+
+      .tbl-card.klima { background: var(--green-50); border-color: var(--green-500); }
+      .tbl-card.sosial { background: var(--purple-light); border-color: var(--purple); }
+      .tbl-card.okonomi { background: var(--blue-light); border-color: var(--blue); }
+
+      .tbl-icon {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .tbl-name {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .tbl-desc {
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* Data Grid */
+      .data-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .data-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.625rem 0.875rem;
+        background: var(--bg-main);
+        border-radius: var(--radius-sm);
+        font-size: 0.875rem;
+      }
+
+      .data-item-label {
+        color: var(--text-secondary);
+      }
+
+      .data-item-value {
+        font-weight: 600;
+      }
+
+      /* Filter Toggle */
+      .filter-bar {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--border-light);
+        background: var(--bg-card);
+        border-radius: var(--radius-sm);
+        font-size: 0.8125rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 0.15s;
+      }
+
+      .filter-btn:hover {
+        border-color: var(--green-500);
+        color: var(--green-800);
+      }
+
+      .filter-btn.active {
+        background: var(--green-800);
+        color: white;
+        border-color: var(--green-800);
+      }
+
+      /* Key Findings List */
+      .findings-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .findings-list li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border-light);
+        font-size: 0.875rem;
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+
+      .findings-list li:last-child {
+        border-bottom: none;
+      }
+
+      .finding-icon {
+        width: 24px;
+        height: 24px;
+        background: var(--green-100);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        margin-top: 0.125rem;
+      }
+
+      .finding-category {
+        font-weight: 600;
+        color: var(--green-800);
+        font-size: 0.8125rem;
+        display: block;
+        margin-bottom: 0.125rem;
+      }
+
+      /* Concerns List */
+      .concern-item {
+        background: var(--bg-card);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-md);
+        padding: 1rem 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .concern-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.375rem;
+      }
+
+      .concern-topic {
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+
+      .concern-detail {
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* Risk Table */
+      .risk-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.75rem;
+        padding: 0.875rem 0;
+        border-bottom: 1px solid var(--border-light);
+        font-size: 0.8125rem;
+      }
+
+      .risk-row:last-child {
+        border-bottom: none;
+      }
+
+      /* Source List */
+      .source-list {
+        list-style: none;
+        padding: 0;
+        counter-reset: source;
+      }
+
+      .source-list li {
+        counter-increment: source;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-light);
+        font-size: 0.8125rem;
+        color: var(--text-secondary);
+      }
+
+      .source-list li::before {
+        content: counter(source) ". ";
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .source-list li:last-child {
+        border-bottom: none;
+      }
+
+      /* Footer */
+      .footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        border-top: 1px solid var(--border-light);
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h2 { font-size: 1.75rem; }
+        .hero-stats { grid-template-columns: repeat(2, 1fr); }
+        .model-grid { grid-template-columns: 1fr; }
+        .tbl-grid { grid-template-columns: 1fr; }
+        .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        .data-grid { grid-template-columns: 1fr; }
+        .tab-bar { padding: 0 1rem; }
+        .main { padding: 1.5rem 1rem; }
+        .hero { padding: 2.5rem 1rem; }
+      }
+
+      @media print {
+        .tab-bar, .content-header, .hero-actions, .filter-bar { display: none !important; }
+        .tab-panel { display: block !important; }
+        .section-body { display: block !important; }
+        .section-chevron { display: none !important; }
+        body { padding-top: 0; }
+      }
+    </style>
+    <link rel="stylesheet" href="css/tabs.css" />
+    <script src="lib/page-config.js"></script>
+    <script src="lib/tab-router.js"></script>
+    <script src="components/content-header.js"></script>
+    <script src="lib/data-loader.js"></script>
+  </head>
+  <body>
+    <script>
+      ContentHeader.inject("barekraftsrapport");
+    </script>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-overline">Hovfaret 13 — Triple Bottom Line</div>
+        <h2>Bærekraftsrapport</h2>
+        <p class="hero-tagline">
+          Rehabilitering fremfor riving: en helhetlig vurdering av klima, sosial og økonomisk bærekraft
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value" id="stat-co2">48%</div>
+            <div class="hero-stat-label">CO₂-reduksjon</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">85%</div>
+            <div class="hero-stat-label">Mindre avfall</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">73</div>
+            <div class="hero-stat-label">Omsorgsboliger</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">80%</div>
+            <div class="hero-stat-label">Materialbesparelse</div>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="barekraftsrapport-dokument.html" target="_blank" class="btn-pdf" onclick="event.preventDefault(); const w = window.open('barekraftsrapport-dokument.html','_blank'); if(w) setTimeout(() => w.print(), 1500);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Last ned PDF
+          </a>
+          <a href="barekraftsrapport-dokument.html" target="_blank" class="btn-pdf">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Åpne formelt dokument
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="tab-bar">
+      <div class="tab-bar-content">
+        <button class="tab-btn active" data-tab="introduksjon">Introduksjon</button>
+        <button class="tab-btn" data-tab="klima">Klima & Miljø</button>
+        <button class="tab-btn" data-tab="sosial">Sosial</button>
+        <button class="tab-btn" data-tab="okonomi">Økonomi</button>
+        <button class="tab-btn" data-tab="vurdering">Vurdering</button>
+      </div>
+    </nav>
+
+    <div class="main">
+      <!-- Tab 1: Introduksjon -->
+      <div class="tab-panel active" id="tab-introduksjon">
+        <div class="section expanded">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">📋</div>
+              <div>
+                <div class="section-title">Sammendrag</div>
+                <div class="section-subtitle">Hovedfunn fra bærekraftsvurderingen</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="highlight-box">
+              <div class="highlight-box-title">Konklusjon</div>
+              <p id="exec-summary-conclusion">Rehabilitering av eksisterende bygg er det mest bærekraftige alternativet</p>
+            </div>
+            <ul class="findings-list" id="key-findings">
+              <li>
+                <div class="finding-icon">✓</div>
+                <div><span class="finding-category">Klimaavtrykk</span>Rehabilitering reduserer de totale klimagassutslippene med 48% sammenlignet med riving og nybygg</div>
+              </li>
+              <li>
+                <div class="finding-icon">✓</div>
+                <div><span class="finding-category">Materialbruk</span>Bevaring av bygningskroppen reduserer behovet for nye materialer med over 85%</div>
+              </li>
+              <li>
+                <div class="finding-icon">✓</div>
+                <div><span class="finding-category">Avfall</span>Rehabilitering reduserer avfallsmengden fra 800–1200 kg/m² til kun 100–200 kg/m²</div>
+              </li>
+              <li>
+                <div class="finding-icon">✓</div>
+                <div><span class="finding-category">Energieffektivitet</span>Oppgradering kan redusere energibehovet med ca. 50%, og oppnå TEK17-nivå</div>
+              </li>
+              <li>
+                <div class="finding-icon">✓</div>
+                <div><span class="finding-category">Risikoreduksjon</span>Riving unngås, som reduserer geotekniske risikoer i et kvikkleire-utsatt område</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon blue">🏢</div>
+              <div>
+                <div class="section-title">Prosjektfakta</div>
+                <div class="section-subtitle">Hovfaret 13, Skøyen, Oslo</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="data-grid" id="project-facts">
+              <div class="data-item"><span class="data-item-label">Adresse</span><span class="data-item-value">Hovfaret 13, Skøyen</span></div>
+              <div class="data-item"><span class="data-item-label">Byggeår</span><span class="data-item-value">1989</span></div>
+              <div class="data-item"><span class="data-item-label">Areal BTA</span><span class="data-item-value">6 100 m²</span></div>
+              <div class="data-item"><span class="data-item-label">Areal BRA</span><span class="data-item-value">5 800 m²</span></div>
+              <div class="data-item"><span class="data-item-label">Etasjer (eksist.)</span><span class="data-item-value">5</span></div>
+              <div class="data-item"><span class="data-item-label">Påbygg kapasitet</span><span class="data-item-value">+3 etasjer</span></div>
+              <div class="data-item"><span class="data-item-label">Eier</span><span class="data-item-value">Urbania Eiendom AS</span></div>
+              <div class="data-item"><span class="data-item-label">Konsept</span><span class="data-item-value">Omsorg+ bolig</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">🎯</div>
+              <div>
+                <div class="section-title">Rammeverk: Triple Bottom Line</div>
+                <div class="section-subtitle">Tre dimensjoner av bærekraft</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="tbl-grid">
+              <div class="tbl-card klima">
+                <div class="tbl-icon">🌍</div>
+                <div class="tbl-name">Klima og miljø</div>
+                <div class="tbl-desc">Klimagassutslipp, ressursbruk, avfallshåndtering, konsekvenser for økosystemer og biologisk mangfold</div>
+              </div>
+              <div class="tbl-card sosial">
+                <div class="tbl-icon">👥</div>
+                <div class="tbl-name">Sosial</div>
+                <div class="tbl-desc">Universell utforming, sosiale møteplasser, folkehelse, livskvalitet, medvirkning</div>
+              </div>
+              <div class="tbl-card okonomi">
+                <div class="tbl-icon">💰</div>
+                <div class="tbl-name">Økonomi</div>
+                <div class="tbl-desc">Finansiell levedyktighet, kostnadseffektivitet, risikoredusering, arbeidsplasser og verdiskaping</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon amber">⚖️</div>
+              <div>
+                <div class="section-title">Regulatorisk status</div>
+                <div class="section-subtitle">Plan- og bygningslovgivning</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <table class="data-table" id="regulatory-table">
+              <thead>
+                <tr><th>Prosess</th><th>Status</th><th>Dato / Mål</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Områderegulering Skøyen</td><td><span class="badge amber">Ikke rettskraftig</span></td><td>Vedtatt sep 2023</td></tr>
+                <tr><td>Nabovarsel</td><td><span class="badge green">Fullført</span></td><td>2025-10-16</td></tr>
+                <tr><td>Dialogmøte #2</td><td><span class="badge green">Fullført</span></td><td>2026-01-29</td></tr>
+                <tr><td>Bruksendringssøknad</td><td><span class="badge blue">Pågår</span></td><td>Mål Q4 2025</td></tr>
+                <tr><td>Rammesøknad</td><td><span class="badge blue">Pågår</span></td><td>Mål Q1 2026</td></tr>
+              </tbody>
+            </table>
+            <div class="highlight-box amber">
+              <div class="highlight-box-title">Regulatorisk situasjon</div>
+              <p>Områdeplanen krever riving, men planen er ikke rettskraftig pga. innsigelser fra Bane NOR og Statens vegvesen. Prosjektet søker dispensasjon gjennom rammesøknad, med argumenter for bærekraftig transformasjon.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon purple">📊</div>
+              <div>
+                <div class="section-title">Demografisk behov</div>
+                <div class="section-subtitle">Bydel Ullern eldrebølge</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="stat-card">
+                <div class="stat-value">160</div>
+                <div class="stat-label">Omsorg+ enheter behov 2040</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">73</div>
+                <div class="stat-label">H13 dekker (46%)</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">67+</div>
+                <div class="stat-label">Aldersgruppe</div>
+              </div>
+            </div>
+            <div class="quote-card purple">
+              <div class="quote-text">"Bydel Ullern har identifisert et behov for minimum 160 Omsorg+ enheter innen 2040. Hovfaret 13 kan dekke 46% av dette behovet med 73 enheter."</div>
+              <div class="quote-source">— Bydel Ullern, behovsanalyse</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Klima & Miljø -->
+      <div class="tab-panel" id="tab-klima">
+        <div class="section expanded">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">🏗️</div>
+              <div>
+                <div class="section-title">Klimagassberegninger — 3 scenarier</div>
+                <div class="section-subtitle">LCA over 50 år — Vill Energi AS</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body" id="scenarios-body">
+            <div class="model-grid" id="scenario-cards"></div>
+            <table class="data-table" id="scenario-comparison" style="display:none;">
+              <thead>
+                <tr><th>Parameter</th><th>Sc. 1: Nybygg</th><th>Sc. 2: Rehab</th><th>Sc. 3: Påbygg</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <div class="filter-bar">
+              <button class="filter-btn active" onclick="showScenarioView('cards', this)">Kort-visning</button>
+              <button class="filter-btn" onclick="showScenarioView('table', this)">Sammenligning</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon blue">📊</div>
+              <div>
+                <div class="section-title">Livsløpsfaser (A1–C4)</div>
+                <div class="section-subtitle">kg CO₂-ekv./m² BTA per fase</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <table class="data-table" id="lifecycle-table">
+              <thead>
+                <tr><th>Modul</th><th>Fase</th><th>Sc. 1</th><th>Sc. 2</th><th>Sc. 3</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">🧱</div>
+              <div>
+                <div class="section-title">Bygningsdeler</div>
+                <div class="section-subtitle">kg CO₂-ekv./m² BTA per bygningsdel</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <table class="data-table" id="building-parts-table">
+              <thead>
+                <tr><th>Bygningsdel</th><th>Sc. 1</th><th>Sc. 2</th><th>Sc. 3</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon amber">⚡</div>
+              <div>
+                <div class="section-title">Energitiltak</div>
+                <div class="section-subtitle">10 vurderte tiltak med NPV — Vill Energi</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="filter-bar" id="energy-filter">
+              <button class="filter-btn active" onclick="filterEnergy('all', this)">Alle tiltak</button>
+              <button class="filter-btn" onclick="filterEnergy('recommended', this)">Kun anbefalte</button>
+            </div>
+            <table class="data-table" id="energy-table">
+              <thead>
+                <tr><th>Tiltak</th><th>Investering</th><th>Besparelse/år</th><th>NPV 25 år</th><th>Status</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <div style="margin-top:1.5rem;">
+              <div class="card-title" style="margin-bottom:0.75rem;">Anbefalte pakker</div>
+              <div id="energy-packages" style="display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">🌿</div>
+              <div>
+                <div class="section-title">Naturpositivitet</div>
+                <div class="section-subtitle">NiN-kartlegging, fremmedarter og tiltak</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body" id="nature-body">
+            <div class="card-title">NiN-kartlegging</div>
+            <table class="data-table" id="nin-table">
+              <thead>
+                <tr><th>Kode</th><th>Naturtype</th><th>Andel</th><th>Verdi</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <div class="card-title" style="margin-top:1.5rem;">Fremmedarter</div>
+            <table class="data-table" id="invasive-table">
+              <thead>
+                <tr><th>Art</th><th>Latin</th><th>Risiko</th><th>Tiltak</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon blue">🐟</div>
+              <div>
+                <div class="section-title">Sjøørret i Hoffselva</div>
+                <div class="section-subtitle">Faglig vurdering fra NMBU</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="quote-card">
+              <div class="quote-text">"Sjøørreten i Hoffselva er spesielt sensitiv for endringer i lysforhold og temperaturforhold i elvemiljøet. Skygge fra vegetasjon og bygninger langs elven er viktig for å opprettholde egnede temperaturforhold for ørretbestanden."</div>
+              <div class="quote-source">— Faglig vurdering, NMBU</div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-box-title">Prosjektets tilnærming</div>
+              <p>Hovfaret 13 beholder eksisterende bygningskropp — ingen endring i skyggeforhold for eksisterende del. Påbygg på 3 etasjer har minimal påvirkning da bygget ligger vest for elven og skyggefall primært går nordover.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon red">⚠️</div>
+              <div>
+                <div class="section-title">Geoteknisk risiko</div>
+                <div class="section-subtitle">Kvikkleire og fundamentering</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem;">
+              <div class="card">
+                <div class="card-title" style="color: var(--red);">Riving (Scenario 1)</div>
+                <ul style="padding-left:1.25rem; font-size:0.875rem; color: var(--text-secondary);">
+                  <li>Masseutgraving ved kvikkleire-utsatt grunn</li>
+                  <li>Fundamentet skal flyttes 2m fra elven</li>
+                  <li>Betydelig risiko for utglidning</li>
+                  <li>Krev spesialmaskineri og overvåkning</li>
+                </ul>
+              </div>
+              <div class="card" style="border-color: var(--green-500);">
+                <div class="card-title" style="color: var(--green-800);">Rehabilitering (Scenario 2/3)</div>
+                <ul style="padding-left:1.25rem; font-size:0.875rem; color: var(--text-secondary);">
+                  <li>Eksisterende fundament beholdes</li>
+                  <li>Ingen masseutgraving nødvendig</li>
+                  <li>Fundamentet har reservekapasitet for +3 etasjer</li>
+                  <li>Vesentlig lavere geoteknisk risiko</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Sosial -->
+      <div class="tab-panel" id="tab-sosial">
+        <div class="section expanded">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon purple">🏠</div>
+              <div>
+                <div class="section-title">Omsorg+ konsept</div>
+                <div class="section-subtitle">73 eldreboliger med fellesfasiliteter</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-value">73</div>
+                <div class="stat-label">Enheter totalt</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">12/12</div>
+                <div class="stat-label">Husbanken-krav oppfylt</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">31%</div>
+                <div class="stat-label">Serviceareal</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="stat-label">Boligtyper</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon blue">🏗️</div>
+              <div>
+                <div class="section-title">Etasjefordeling</div>
+                <div class="section-subtitle">8 etasjer + takterrasse</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <table class="data-table" id="floors-table">
+              <thead>
+                <tr><th>Etasje</th><th>Type</th><th>Funksjoner</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">☕</div>
+              <div>
+                <div class="section-title">Fellesfunksjoner</div>
+                <div class="section-subtitle">Kafé, aktiviteter, helsetjenester</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body" id="facilities-body"></div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon amber">🤝</div>
+              <div>
+                <div class="section-title">Dialogmøte #2</div>
+                <div class="section-subtitle">29. januar 2026 — 30+ deltakere</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="stat-card">
+                <div class="stat-value">30+</div>
+                <div class="stat-label">Deltakere</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">10</div>
+                <div class="stat-label">Bekymringer kartlagt</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">25</div>
+                <div class="stat-label">RSVP</div>
+              </div>
+            </div>
+            <div class="quote-card amber">
+              <div class="quote-text">"Forventet 5–6 deltakere, ble over 30 i rommet. Mange naboer hadde spredt ordet seg imellom."</div>
+              <div class="quote-source">— Møtereferat, dialogmøte #2</div>
+            </div>
+            <div id="concerns-list" style="margin-top:1rem;"></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon blue">📬</div>
+              <div>
+                <div class="section-title">Nabomerknader</div>
+                <div class="section-subtitle">Innspill fra nabovarsel-prosessen</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="stat-card">
+                <div class="stat-value">53</div>
+                <div class="stat-label">Innspill totalt</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">15</div>
+                <div class="stat-label">Temaer identifisert</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">88%</div>
+                <div class="stat-label">Omhandler sol/skygge</div>
+              </div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-box-title">Hovedtema: Sol og skyggeforhold</div>
+              <p>Det dominerende temaet i nabomerknadene er bekymring for sol- og skyggeforhold. 88% av innspillene nevner dette. Solstudier viser at påbygget har begrenset påvirkning i den kritiske perioden 1. mars – 1. juni.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Økonomi -->
+      <div class="tab-panel" id="tab-okonomi">
+        <div class="section expanded">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon blue">🏪</div>
+              <div>
+                <div class="section-title">Stedsøkonomi</div>
+                <div class="section-subtitle">Verdi per etasje og funksjon</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <table class="data-table">
+              <thead>
+                <tr><th>Etasje</th><th>Funksjon</th><th>Areal</th><th>Verdi-bidrag</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1. etasje</td><td>Kafé, resepsjon, tjenester</td><td>~1 080 m²</td><td>Sosial infrastruktur</td></tr>
+                <tr><td>2.–5. etasje</td><td>Omsorg+ boliger (48 enh.)</td><td>~2 960 m²</td><td>Boliginntekter</td></tr>
+                <tr class="highlight-row"><td>6.–8. etasje</td><td>Omsorg+ boliger (25 enh.)</td><td>~2 100 m²</td><td>Tilleggsinntekt fra påbygg</td></tr>
+                <tr><td>U1</td><td>Trim, sykkel, boder</td><td>~1 400 m²</td><td>Fellesfunksjoner</td></tr>
+                <tr><td>U2</td><td>Parkering, teknisk</td><td>~1 000 m²</td><td>Drift/infrastruktur</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">📈</div>
+              <div>
+                <div class="section-title">Identitetsverdi</div>
+                <div class="section-subtitle">Merverdi fra bærekraftsprofil</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="highlight-box">
+              <div class="highlight-box-title">+89 MNOK over 20 år</div>
+              <p>Beregnet merverdi fra prosjektets bærekraftsprofil inkluderer høyere utleieverdi, lavere vedlikeholdskostnader, og verdien av å unngå karbonkostnader.</p>
+            </div>
+            <div class="data-grid">
+              <div class="data-item"><span class="data-item-label">Grønn premie utleie</span><span class="data-item-value">+5–8%</span></div>
+              <div class="data-item"><span class="data-item-label">Lavere driftskost.</span><span class="data-item-value">-15–20%</span></div>
+              <div class="data-item"><span class="data-item-label">Unngått karbonkost.</span><span class="data-item-value">~12 MNOK</span></div>
+              <div class="data-item"><span class="data-item-label">Tidshorisont</span><span class="data-item-value">20 år</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon amber">⚡</div>
+              <div>
+                <div class="section-title">Energiinvestering ROI</div>
+                <div class="section-subtitle">Anbefalte tiltakspakker</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="stat-card">
+                <div class="stat-value">9,7M</div>
+                <div class="stat-label">Investering (pakke 2)</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color: var(--green-600);">+3,8M</div>
+                <div class="stat-label">NPV 25 år</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">F→B</div>
+                <div class="stat-label">Energimerke (2026-regler)</div>
+              </div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-box-title">Anbefalt: Pakke 2</div>
+              <p>VAV + nye aggregater + vinduer plan 1 + varmepumpe. Reduserer energiforbruk fra 232 til 116 kWh/m², med positiv NPV på 3,8 MNOK over 25 år. Energimerke forbedres fra F til B etter 2026-regler.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon purple">🏦</div>
+              <div>
+                <div class="section-title">Husbanken-finansiering</div>
+                <div class="section-subtitle">Tilskudd og lån for Omsorg+</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="data-grid">
+              <div class="data-item"><span class="data-item-label">Tilskuddsandel</span><span class="data-item-value">Opptil 45%</span></div>
+              <div class="data-item"><span class="data-item-label">Maks per enhet</span><span class="data-item-value">2,1 MNOK</span></div>
+              <div class="data-item"><span class="data-item-label">73 enheter totalt</span><span class="data-item-value">~155 MNOK</span></div>
+              <div class="data-item"><span class="data-item-label">Husbanken-krav</span><span class="data-item-value">12/12 oppfylt</span></div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-box-title">Full Husbanken-compliance</div>
+              <p>Prosjektet oppfyller alle 12 Husbanken-krav for Omsorg+ boliger, inkludert krav til universell utforming, serviceareal, og fellesfunksjoner. Dette kvalifiserer for maksimal tilskuddsandel.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon red">⚠️</div>
+              <div>
+                <div class="section-title">Risikomatrise</div>
+                <div class="section-subtitle">6 kategorier med tiltak</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <table class="data-table">
+              <thead>
+                <tr><th>Risiko</th><th>Nivå</th><th>Tiltak</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Regulatorisk avslag</td><td><span class="badge red">Høy</span></td><td>Forhåndsdialog med PBE, dispensasjonsargumenter</td></tr>
+                <tr><td>Geoteknisk kvikkleire</td><td><span class="badge amber">Medium</span></td><td>Beholde eksisterende fundament, unngå graving</td></tr>
+                <tr><td>Nabomotstand</td><td><span class="badge amber">Medium</span></td><td>Dialogmøter, solstudier, transparens</td></tr>
+                <tr><td>Kostnadsoverskridelse</td><td><span class="badge amber">Medium</span></td><td>Fasedelt gjennomføring, buffere i budsjett</td></tr>
+                <tr><td>Husbanken avslag</td><td><span class="badge green">Lav</span></td><td>12/12 krav oppfylt, tidlig dialog</td></tr>
+                <tr><td>Konstruktiv kapasitet</td><td><span class="badge green">Lav</span></td><td>Fundament dimensjonert for +3 etasjer</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 5: Vurdering -->
+      <div class="tab-panel" id="tab-vurdering">
+        <div class="section expanded">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">✅</div>
+              <div>
+                <div class="section-title">TBL Scorecard</div>
+                <div class="section-subtitle">Triple Bottom Line — samlet vurdering</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="tbl-grid">
+              <div class="tbl-card klima">
+                <div class="tbl-icon" style="font-size:2.5rem;">✓</div>
+                <div class="tbl-name">Klima & Miljø</div>
+                <div class="tbl-desc">48% CO₂-reduksjon, 85% avfallsreduksjon, 80% materialbesparelse. Naturpositive tiltak planlagt.</div>
+              </div>
+              <div class="tbl-card sosial">
+                <div class="tbl-icon" style="font-size:2.5rem;">✓</div>
+                <div class="tbl-name">Sosial</div>
+                <div class="tbl-desc">73 Omsorg+ enheter dekker 46% av bydelens behov. 12/12 Husbanken-krav. Universell utforming.</div>
+              </div>
+              <div class="tbl-card okonomi">
+                <div class="tbl-icon" style="font-size:2.5rem;">✓</div>
+                <div class="tbl-name">Økonomi</div>
+                <div class="tbl-desc">Positiv NPV på energitiltak. Husbanken-tilskudd ~155 MNOK. +89 MNOK identitetsverdi over 20 år.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section expanded">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon green">🎯</div>
+              <div>
+                <div class="section-title">Konklusjon</div>
+                <div class="section-subtitle">Helhetlig anbefaling</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <div class="highlight-box">
+              <div class="highlight-box-title">Rehabilitering er det mest bærekraftige alternativet</div>
+              <p>Bærekraftsvurderingen viser at rehabilitering og transformasjon av Hovfaret 13 er klart bedre enn riving og nybygg på alle tre dimensjoner av bærekraft. Prosjektet har potensial til å bli et forbilde for bærekraftig bytransformasjon i Oslo.</p>
+            </div>
+            <div class="card">
+              <div class="card-title">Anbefaling</div>
+              <ul style="padding-left:1.25rem; font-size:0.875rem; color: var(--text-secondary); line-height: 2;">
+                <li><strong>Unngå riving</strong> — 48% lavere CO₂-utslipp ved rehabilitering</li>
+                <li><strong>Scenario 3 foretrukket</strong> — Påbygg maksimerer samfunnsnytte med 73 Omsorg+ enheter</li>
+                <li><strong>Energipakke 2 anbefales</strong> — Positiv NPV og energimerke F→B</li>
+                <li><strong>Naturpositive tiltak</strong> — Regional eng, froskedam, fuglekasser</li>
+                <li><strong>Sirkulær tilnærming</strong> — Bevare bæresystem, innervegger og dekker</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-header-left">
+              <div class="section-icon blue">📚</div>
+              <div>
+                <div class="section-title">Kilder</div>
+                <div class="section-subtitle">15 referanser</div>
+              </div>
+            </div>
+            <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>
+          </div>
+          <div class="section-body">
+            <ol class="source-list">
+              <li>Klimagassberegninger Hovfaret 13 v2 — Vill Energi AS, 22.04.2025</li>
+              <li>Energikartlegging Hovfaret 13 — Vill Energi AS, 11.04.2025</li>
+              <li>R21 Arkitekter — Omsorg+ konseptpresentasjon, 21.05.2025</li>
+              <li>Husbanken — Krav til omsorgsboliger og tilskudd</li>
+              <li>Oslo kommune — Områderegulering Skøyen, september 2023</li>
+              <li>Byplangrep Skøyen — Oslo kommune, 23.09.2015</li>
+              <li>Plan- og bygningsloven — Dispensasjonsbestemmelser</li>
+              <li>NiN-kartlegging — Eirik Obrestad / Natural State, 2026</li>
+              <li>Naturmiljø Hoffselva — Norconsult, konsekvensutredning</li>
+              <li>Sjøørret fagvurdering — NMBU professor-henvendelse</li>
+              <li>Dialogmøte #2 referat — 29. januar 2026</li>
+              <li>Nabomerknader analyse — 53 innspill fra nabovarsel</li>
+              <li>Oslo klimastrategi 2030 — Fossilfri byggevirksomhet</li>
+              <li>SN-NSPEK 3031:2023 — Energikartleggingsstandard</li>
+              <li>Kunming-Montreal Global Biodiversity Framework — Nature Positive</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Bærekraftsrapport v3.01 — Hovfaret 13, Skøyen, Oslo — Natural State &copy; 2025–2026</p>
+    </footer>
+
+    <script>
+      // Tab switching with URL hash
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+      const tabRendered = {};
+
+      function switchTab(tabId) {
+        tabBtns.forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
+        tabPanels.forEach(p => p.classList.toggle('active', p.id === 'tab-' + tabId));
+        if (!tabRendered[tabId]) {
+          tabRendered[tabId] = true;
+          renderTabData(tabId);
+        }
+        history.replaceState(null, '', '#' + tabId);
+      }
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+      });
+
+      // Hash-based deep linking
+      function initFromHash() {
+        const hash = location.hash.replace('#', '');
+        const validTabs = ['introduksjon', 'klima', 'sosial', 'okonomi', 'vurdering'];
+        if (validTabs.includes(hash)) {
+          switchTab(hash);
+        } else {
+          tabRendered['introduksjon'] = true;
+        }
+      }
+
+      window.addEventListener('hashchange', initFromHash);
+
+      // Section expand/collapse
+      function toggleSection(header) {
+        header.closest('.section').classList.toggle('expanded');
+      }
+
+      // Scenario view toggle
+      function showScenarioView(view, btn) {
+        const cards = document.getElementById('scenario-cards');
+        const table = document.getElementById('scenario-comparison');
+        btn.closest('.filter-bar').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (view === 'cards') {
+          cards.style.display = '';
+          table.style.display = 'none';
+        } else {
+          cards.style.display = 'none';
+          table.style.display = '';
+        }
+      }
+
+      // Energy filter
+      function filterEnergy(mode, btn) {
+        btn.closest('.filter-bar').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const rows = document.querySelectorAll('#energy-table tbody tr');
+        rows.forEach(row => {
+          if (mode === 'all') {
+            row.style.display = '';
+          } else {
+            row.style.display = row.dataset.recommended === 'true' ? '' : 'none';
+          }
+        });
+      }
+
+      // Format number
+      function fmtNOK(n) {
+        if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(1).replace('.', ',') + ' M';
+        if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(0) + ' k';
+        return n.toString();
+      }
+
+      // Lazy data rendering
+      async function renderTabData(tabId) {
+        try {
+          if (tabId === 'klima') await renderKlimaTab();
+          if (tabId === 'sosial') await renderSosialTab();
+        } catch (e) {
+          console.error('Tab render error:', e);
+        }
+      }
+
+      async function renderKlimaTab() {
+        const sust = await DataLoader.loadJSON('../data/themes/sustainability.json');
+        const nat = await DataLoader.loadJSON('../data/themes/naturpositivitet.json');
+
+        // Scenario cards
+        const scenarios = sust.klimagassberegninger.scenarios;
+        const cardHTML = Object.values(scenarios).map(s => {
+          const isHighlight = s.id === 'scenario_3';
+          const badge = s.id === 'scenario_1' ? 'red' : s.id === 'scenario_2' ? 'green' : 'blue';
+          return `
+            <div class="model-card ${isHighlight ? 'highlight' : ''}">
+              <span class="model-badge ${badge}">${s.status}</span>
+              <div class="model-title">${s.name}</div>
+              <div class="model-value">${s.totals.total_tonnes.toLocaleString('nb-NO')}</div>
+              <div class="model-label">tonn CO₂-ekv. totalt</div>
+              <div class="model-description">${s.description}</div>
+            </div>`;
+        }).join('');
+        document.getElementById('scenario-cards').innerHTML = cardHTML;
+
+        // Scenario comparison table
+        const compTbody = document.querySelector('#scenario-comparison tbody');
+        const rows = [
+          ['Materialer (tonn)', scenarios.scenario_1.totals.materials_tonnes, scenarios.scenario_2.totals.materials_tonnes, scenarios.scenario_3.totals.materials_tonnes],
+          ['Energi (tonn)', scenarios.scenario_1.totals.energy_tonnes, scenarios.scenario_2.totals.energy_tonnes, scenarios.scenario_3.totals.energy_tonnes],
+          ['Totalt (tonn)', scenarios.scenario_1.totals.total_tonnes, scenarios.scenario_2.totals.total_tonnes, scenarios.scenario_3.totals.total_tonnes],
+          ['Per m² BTA (kg)', scenarios.scenario_1.per_bta.total_kg_m2, scenarios.scenario_2.per_bta.total_kg_m2, scenarios.scenario_3.per_bta.total_kg_m2],
+        ];
+        compTbody.innerHTML = rows.map(r => `
+          <tr${r[0].startsWith('Totalt') ? ' class="highlight-row"' : ''}>
+            <td>${r[0]}</td>
+            <td class="value">${r[1].toLocaleString('nb-NO')}</td>
+            <td class="value positive">${r[2].toLocaleString('nb-NO')}</td>
+            <td class="value">${r[3].toLocaleString('nb-NO')}</td>
+          </tr>`).join('');
+
+        // Lifecycle table
+        const lcModules = sust.klimagassberegninger.lifecycle_modules.modules;
+        document.querySelector('#lifecycle-table tbody').innerHTML = Object.entries(lcModules).map(([code, m]) => `
+          <tr>
+            <td class="value">${code}</td>
+            <td>${m.name}</td>
+            <td>${m.scenario_1}</td>
+            <td class="positive">${m.scenario_2}</td>
+            <td>${m.scenario_3}</td>
+          </tr>`).join('');
+
+        // Building parts table
+        const parts = sust.klimagassberegninger.building_parts.parts;
+        document.querySelector('#building-parts-table tbody').innerHTML = parts.map(p => `
+          <tr>
+            <td>${p.name}</td>
+            <td>${p.scenario_1}</td>
+            <td class="positive">${p.scenario_2}</td>
+            <td>${p.scenario_3}</td>
+          </tr>`).join('');
+
+        // Energy measures table
+        const measures = sust.energikartlegging.measures.all_measures;
+        document.querySelector('#energy-table tbody').innerHTML = measures.map(m => {
+          const isRec = m.recommended !== false && m.npv_25_years_nok > 0;
+          return `
+            <tr data-recommended="${isRec}" ${isRec ? 'class="highlight-row"' : ''}>
+              <td>${m.name}</td>
+              <td>${fmtNOK(m.investment_nok)} NOK</td>
+              <td>${fmtNOK(m.annual_savings_nok)} NOK</td>
+              <td class="${m.npv_25_years_nok >= 0 ? 'positive' : 'negative'}">${fmtNOK(m.npv_25_years_nok)} NOK</td>
+              <td>${isRec ? '<span class="badge green">Anbefalt</span>' : '<span class="badge amber">Valgfritt</span>'}</td>
+            </tr>`;
+        }).join('');
+
+        // Energy packages
+        const packages = sust.energikartlegging.recommended_packages;
+        document.getElementById('energy-packages').innerHTML = packages.map(p => `
+          <div class="card" style="border-color: var(--green-500);">
+            <div class="card-title">${p.name}</div>
+            <div class="data-grid" style="grid-template-columns:1fr; gap:0.5rem; margin-top:0.75rem;">
+              <div class="data-item"><span class="data-item-label">Investering</span><span class="data-item-value">${fmtNOK(p.investment_nok)} NOK</span></div>
+              <div class="data-item"><span class="data-item-label">Forbruk etter</span><span class="data-item-value">${p.consumption_after_kwh_m2} kWh/m²</span></div>
+              <div class="data-item"><span class="data-item-label">NPV 25 år</span><span class="data-item-value positive">${fmtNOK(p.npv_25_years_nok)} NOK</span></div>
+              <div class="data-item"><span class="data-item-label">Energimerke (2026)</span><span class="data-item-value">${p.energy_rating['2026'] || p.energy_rating.current}</span></div>
+            </div>
+          </div>`).join('');
+
+        // NiN mapping table
+        document.querySelector('#nin-table tbody').innerHTML = nat.nin_mapping.nature_types.map(t => `
+          <tr>
+            <td class="value">${t.code}</td>
+            <td>${t.name}</td>
+            <td>${t.area_share}</td>
+            <td>${t.ecological_value}</td>
+          </tr>`).join('');
+
+        // Invasive species table
+        document.querySelector('#invasive-table tbody').innerHTML = nat.invasive_species.species.map(s => `
+          <tr>
+            <td class="value">${s.name}</td>
+            <td><em>${s.latin}</em></td>
+            <td><span class="badge ${s.risk_category.includes('svært') ? 'red' : 'amber'}">${s.risk_category}</span></td>
+            <td>${s.method}</td>
+          </tr>`).join('');
+      }
+
+      async function renderSosialTab() {
+        const omsorg = await DataLoader.loadJSON('../data/themes/omsorg-plus.json');
+        const dialog = await DataLoader.loadJSON('../data/themes/dialogmote-2-referat.json');
+
+        // Floors table
+        document.querySelector('#floors-table tbody').innerHTML = omsorg.floors.map(f => {
+          const funcs = Array.isArray(f.functions)
+            ? f.functions.join(', ')
+            : typeof f.functions === 'object'
+              ? Object.values(f.functions).flat().join(', ')
+              : f.functions || '';
+          const typeBadge = f.type === 'residential' ? 'purple'
+            : f.type === 'service' ? 'green'
+            : f.type === 'common' ? 'blue' : 'amber';
+          return `
+            <tr>
+              <td class="value">${f.name_no}</td>
+              <td><span class="badge ${typeBadge}">${f.type}</span></td>
+              <td style="font-size:0.8125rem;">${funcs}</td>
+            </tr>`;
+        }).join('');
+
+        // Common facilities
+        const facilities = omsorg.common_facilities;
+        let facHTML = '<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem;">';
+        if (facilities.aktivitetssenter) {
+          facHTML += `<div class="card"><div class="card-title">Aktivitetssenter</div><ul style="padding-left:1.25rem; font-size:0.8125rem; color: var(--text-secondary); line-height: 1.8;">${
+            facilities.aktivitetssenter.components.map(c => `<li>${typeof c === 'string' ? c : c.name}</li>`).join('')
+          }</ul></div>`;
+        }
+        if (facilities.cafe) {
+          facHTML += `<div class="card"><div class="card-title">Kafé & Servering</div><p style="font-size:0.8125rem; color: var(--text-secondary); margin-bottom:0.5rem;">${facilities.cafe.service}</p><ul style="padding-left:1.25rem; font-size:0.8125rem; color: var(--text-secondary); line-height: 1.8;">${
+            facilities.cafe.components.map(c => `<li>${c}</li>`).join('')
+          }</ul></div>`;
+        }
+        if (facilities.servicedel) {
+          facHTML += `<div class="card"><div class="card-title">Helsetjenester</div><ul style="padding-left:1.25rem; font-size:0.8125rem; color: var(--text-secondary); line-height: 1.8;">${
+            facilities.servicedel.components.map(c => `<li>${typeof c === 'string' ? c : c.name}</li>`).join('')
+          }</ul></div>`;
+        }
+        facHTML += `<div class="card"><div class="card-title">Sosiale møteplasser</div><p style="font-size:0.8125rem; color: var(--text-secondary);">${facilities.social_meeting_places?.description || 'Fellesrom i hver etasje'}</p></div>`;
+        facHTML += '</div>';
+        document.getElementById('facilities-body').innerHTML = facHTML;
+
+        // Dialogmøte concerns
+        const concerns = dialog.neighbor_concerns;
+        document.getElementById('concerns-list').innerHTML = concerns.map(c => {
+          const sev = c.severity === 'high' ? 'red' : 'amber';
+          return `
+            <div class="concern-item">
+              <div class="concern-header">
+                <span class="concern-topic">${c.topic}</span>
+                <span class="badge ${sev}">${c.severity === 'high' ? 'Høy' : 'Middels'}</span>
+              </div>
+              <div class="concern-detail">${c.detail}</div>
+            </div>`;
+        }).join('');
+      }
+
+      // Init
+      initFromHash();
+    </script>
+  </body>
+</html>
